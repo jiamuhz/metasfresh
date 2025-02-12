@@ -263,7 +263,6 @@
             <groupId>com.azure</groupId>
             <artifactId>azure-identity</artifactId>
             <version>1.7.2</version>
-            <scope>compile</scope>
         </dependency>
 
         <dependency>
