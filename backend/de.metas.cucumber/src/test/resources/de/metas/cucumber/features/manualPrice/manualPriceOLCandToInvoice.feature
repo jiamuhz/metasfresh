@@ -28,10 +28,6 @@ Feature: Process order candidate and automatically generate shipment and invoice
       | Identifier | Name                      | IsStocked |
       | p_1        | noPriceProduct_10052022_1 | true      |
 
-    And metasfresh contains M_ProductPrices
-      | Identifier | M_PriceList_Version_ID.Identifier | M_Product_ID.Identifier | PriceStd | C_UOM_ID.X12DE355 | C_TaxCategory_ID.InternalName |
-      | pp_1       | plv_SO                            | p_1                     | 10.0     | PCE               | Normal                        |
-
     And load C_BPartner:
       | C_BPartner_ID.Identifier | OPT.C_BPartner_ID |
       | bpartner_1               | 2156425           |
