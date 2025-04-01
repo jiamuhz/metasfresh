@@ -5,11 +5,15 @@ import de.metas.adempiere.model.I_C_InvoiceLine;
 import de.metas.bpartner.BPartnerId;
 import de.metas.bpartner_product.IBPartnerProductBL;
 import de.metas.invoice.InvoiceId;
+import de.metas.invoice.InvoiceLineId;
+import de.metas.invoice.detail.InvoiceWithDetailsService;
 import de.metas.invoice.service.IInvoiceBL;
 import de.metas.invoice.service.IInvoiceLineBL;
 import de.metas.lang.SOTrx;
 import de.metas.product.ProductId;
 import de.metas.util.Services;
+import lombok.NonNull;
+import lombok.RequiredArgsConstructor;
 import org.adempiere.ad.dao.IQueryBL;
 import org.adempiere.ad.modelvalidator.annotations.ModelChange;
 import org.adempiere.ad.modelvalidator.annotations.Validator;
@@ -20,8 +24,11 @@ import org.springframework.stereotype.Component;
 
 @Validator(I_C_InvoiceLine.class)
 @Component
+@RequiredArgsConstructor
 public class C_InvoiceLine
 {
+	@NonNull
+	private final InvoiceWithDetailsService invoiceWithDetailsService;
 
 	private final IQueryBL queryBL = Services.get(IQueryBL.class);
 	private final IInvoiceBL invoiceBL = Services.get(IInvoiceBL.class);
@@ -83,5 +90,11 @@ public class C_InvoiceLine
 		final BPartnerId partnerId = BPartnerId.ofRepoId(invoice.getC_BPartner_ID());
 		final SOTrx soTrx = SOTrx.ofBooleanNotNull(invoice.isSOTrx());
 		partnerProductBL.assertNotExcludedFromTransaction(soTrx, productId, partnerId);
+	}
+
+	@ModelChange(timings = ModelValidator.TYPE_BEFORE_DELETE)
+	public void deleteInvoiceDetails(@NonNull final I_C_InvoiceLine invoiceLine)
+	{
+		invoiceWithDetailsService.deleteReferencingInvoiceDetails(InvoiceLineId.ofRepoId(invoiceLine.getC_InvoiceLine_ID()));
 	}
 }

@@ -11,6 +11,7 @@ import de.metas.common.util.time.SystemTime;
 import de.metas.document.engine.DocStatus;
 import de.metas.document.location.IDocumentLocationBL;
 import de.metas.invoice.InvoiceId;
+import de.metas.invoice.detail.InvoiceWithDetailsService;
 import de.metas.invoice.export.async.C_Invoice_CreateExportData;
 import de.metas.invoice.location.InvoiceLocationsUpdater;
 import de.metas.invoice.service.IInvoiceBL;
@@ -59,6 +60,7 @@ public class C_Invoice // 03771
 	private final IPriceListDAO priceListDAO = Services.get(IPriceListDAO.class);
 
 	private final IDocumentLocationBL documentLocationBL;
+	private final InvoiceWithDetailsService invoiceWithDetailsService;
 	private final IPaymentDAO paymentDAO = Services.get(IPaymentDAO.class);
 	private final IPaymentBL paymentBL = Services.get(IPaymentBL.class);
 	private final IAllocationBL allocationBL = Services.get(IAllocationBL.class);
@@ -69,10 +71,12 @@ public class C_Invoice // 03771
 
 	public C_Invoice(
 			@NonNull final PaymentReservationService paymentReservationService,
-			@NonNull final IDocumentLocationBL documentLocationBL)
+			@NonNull final IDocumentLocationBL documentLocationBL,
+			@NonNull final InvoiceWithDetailsService invoiceWithDetailsService)
 	{
 		this.paymentReservationService = paymentReservationService;
 		this.documentLocationBL = documentLocationBL;
+		this.invoiceWithDetailsService = invoiceWithDetailsService;
 	}
 
 	@DocValidate(timings = { ModelValidator.TIMING_AFTER_COMPLETE })
@@ -407,5 +411,11 @@ public class C_Invoice // 03771
 	public void updateInvoiceLinesTax(@NonNull final I_C_Invoice invoice)
 	{
 		invoiceBL.setInvoiceLineTaxes(invoice);
+	}
+
+	@ModelChange(timings = ModelValidator.TYPE_BEFORE_DELETE)
+	public void deleteInvoiceDetails(@NonNull final I_C_Invoice invoice)
+	{
+		invoiceWithDetailsService.deleteReferencingInvoiceDetails(InvoiceId.ofRepoId(invoice.getC_Invoice_ID()));
 	}
 }
