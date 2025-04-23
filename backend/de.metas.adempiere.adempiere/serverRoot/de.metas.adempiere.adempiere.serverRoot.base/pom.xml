@@ -78,11 +78,13 @@
 		</dependency>
 
 		<!-- in development, used to disable thymeleaf caching etc -->
+<!--
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-devtools</artifactId>
 			<optional>true</optional>
 		</dependency>
+-->
 
 		<dependency>
 			<groupId>javax.servlet</groupId>
@@ -146,6 +148,14 @@
 			<groupId>org.codehaus.janino</groupId>
 			<artifactId>janino</artifactId>
 		</dependency>
+
+
+		<dependency>
+			<groupId>de.metas.fresh</groupId>
+			<artifactId>de.metas.fresh.base</artifactId>
+			<version>${metasfresh.version}</version>
+		</dependency>
+
     </dependencies>
 
 </project>
