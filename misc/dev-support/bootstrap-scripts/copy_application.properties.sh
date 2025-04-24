@@ -1,2 +1,2 @@
 
-cp --recursive --verbose ../application.properties/metasfresh/* ../../..
+cp -Rv ../application.properties/metasfresh/* ../../..
