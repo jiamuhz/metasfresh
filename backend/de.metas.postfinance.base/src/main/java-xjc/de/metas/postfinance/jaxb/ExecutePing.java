@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -52,7 +52,7 @@ public class ExecutePing {
     protected JAXBElement<Boolean> exceptionTest;
 
     /**
-     * Gets the value of the billerID property.
+     * 获取billerID属性的值。
      * 
      * @return
      *     possible object is
@@ -64,7 +64,7 @@ public class ExecutePing {
     }
 
     /**
-     * Sets the value of the billerID property.
+     * 设置billerID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -76,7 +76,7 @@ public class ExecutePing {
     }
 
     /**
-     * Gets the value of the eBillAccountID property.
+     * 获取eBillAccountID属性的值。
      * 
      * @return
      *     possible object is
@@ -88,7 +88,7 @@ public class ExecutePing {
     }
 
     /**
-     * Sets the value of the eBillAccountID property.
+     * 设置eBillAccountID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -100,7 +100,7 @@ public class ExecutePing {
     }
 
     /**
-     * Gets the value of the errorTest property.
+     * 获取errorTest属性的值。
      * 
      * @return
      *     possible object is
@@ -112,7 +112,7 @@ public class ExecutePing {
     }
 
     /**
-     * Sets the value of the errorTest property.
+     * 设置errorTest属性的值。
      * 
      * @param value
      *     allowed object is
@@ -124,7 +124,7 @@ public class ExecutePing {
     }
 
     /**
-     * Gets the value of the exceptionTest property.
+     * 获取exceptionTest属性的值。
      * 
      * @return
      *     possible object is
@@ -136,7 +136,7 @@ public class ExecutePing {
     }
 
     /**
-     * Sets the value of the exceptionTest property.
+     * 设置exceptionTest属性的值。
      * 
      * @param value
      *     allowed object is

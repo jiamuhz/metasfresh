@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for BillRecipient complex type.
+ * <p>BillRecipient complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="BillRecipient"&gt;
@@ -52,7 +52,7 @@ public class BillRecipient {
     protected SubmissionStatus submissionStatus;
 
     /**
-     * Gets the value of the ebillAccountID property.
+     * 获取ebillAccountID属性的值。
      * 
      * @return
      *     possible object is
@@ -64,7 +64,7 @@ public class BillRecipient {
     }
 
     /**
-     * Sets the value of the ebillAccountID property.
+     * 设置ebillAccountID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -76,7 +76,7 @@ public class BillRecipient {
     }
 
     /**
-     * Gets the value of the emailAddress property.
+     * 获取emailAddress属性的值。
      * 
      * @return
      *     possible object is
@@ -88,7 +88,7 @@ public class BillRecipient {
     }
 
     /**
-     * Sets the value of the emailAddress property.
+     * 设置emailAddress属性的值。
      * 
      * @param value
      *     allowed object is
@@ -100,7 +100,7 @@ public class BillRecipient {
     }
 
     /**
-     * Gets the value of the uidhr property.
+     * 获取uidhr属性的值。
      * 
      * @return
      *     possible object is
@@ -112,7 +112,7 @@ public class BillRecipient {
     }
 
     /**
-     * Sets the value of the uidhr property.
+     * 设置uidhr属性的值。
      * 
      * @param value
      *     allowed object is
@@ -124,7 +124,7 @@ public class BillRecipient {
     }
 
     /**
-     * Gets the value of the submissionStatus property.
+     * 获取submissionStatus属性的值。
      * 
      * @return
      *     possible object is
@@ -136,7 +136,7 @@ public class BillRecipient {
     }
 
     /**
-     * Sets the value of the submissionStatus property.
+     * 设置submissionStatus属性的值。
      * 
      * @param value
      *     allowed object is

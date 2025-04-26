@@ -1,6 +1,7 @@
 
 package de.metas.postfinance.jaxb;
 
+import java.math.BigDecimal;
 import javax.xml.bind.JAXBElement;
 import javax.xml.bind.annotation.XmlAccessType;
 import javax.xml.bind.annotation.XmlAccessorType;
@@ -9,13 +10,12 @@ import javax.xml.bind.annotation.XmlElementRef;
 import javax.xml.bind.annotation.XmlSchemaType;
 import javax.xml.bind.annotation.XmlType;
 import javax.xml.datatype.XMLGregorianCalendar;
-import java.math.BigDecimal;
 
 
 /**
- * <p>Java class for SearchInvoiceParameter complex type.
+ * <p>SearchInvoiceParameter complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="SearchInvoiceParameter"&gt;
@@ -81,7 +81,7 @@ public class SearchInvoiceParameter {
     protected XMLGregorianCalendar paymentDueDateTo;
 
     /**
-     * Gets the value of the billerID property.
+     * 获取billerID属性的值。
      * 
      * @return
      *     possible object is
@@ -93,7 +93,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Sets the value of the billerID property.
+     * 设置billerID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -105,7 +105,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Gets the value of the transactionID property.
+     * 获取transactionID属性的值。
      * 
      * @return
      *     possible object is
@@ -117,7 +117,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Sets the value of the transactionID property.
+     * 设置transactionID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -129,7 +129,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Gets the value of the eBillAccountID property.
+     * 获取eBillAccountID属性的值。
      * 
      * @return
      *     possible object is
@@ -141,7 +141,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Sets the value of the eBillAccountID property.
+     * 设置eBillAccountID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -153,7 +153,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Gets the value of the amountFrom property.
+     * 获取amountFrom属性的值。
      * 
      * @return
      *     possible object is
@@ -165,7 +165,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Sets the value of the amountFrom property.
+     * 设置amountFrom属性的值。
      * 
      * @param value
      *     allowed object is
@@ -177,7 +177,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Gets the value of the amountTo property.
+     * 获取amountTo属性的值。
      * 
      * @return
      *     possible object is
@@ -189,7 +189,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Sets the value of the amountTo property.
+     * 设置amountTo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -201,7 +201,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Gets the value of the state property.
+     * 获取state属性的值。
      * 
      * @return
      *     possible object is
@@ -213,7 +213,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Sets the value of the state property.
+     * 设置state属性的值。
      * 
      * @param value
      *     allowed object is
@@ -225,7 +225,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Gets the value of the deliveryDateFrom property.
+     * 获取deliveryDateFrom属性的值。
      * 
      * @return
      *     possible object is
@@ -237,7 +237,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Sets the value of the deliveryDateFrom property.
+     * 设置deliveryDateFrom属性的值。
      * 
      * @param value
      *     allowed object is
@@ -249,7 +249,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Gets the value of the deliveryDateTo property.
+     * 获取deliveryDateTo属性的值。
      * 
      * @return
      *     possible object is
@@ -261,7 +261,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Sets the value of the deliveryDateTo property.
+     * 设置deliveryDateTo属性的值。
      * 
      * @param value
      *     allowed object is
@@ -273,7 +273,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Gets the value of the paymentDueDateFrom property.
+     * 获取paymentDueDateFrom属性的值。
      * 
      * @return
      *     possible object is
@@ -285,7 +285,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Sets the value of the paymentDueDateFrom property.
+     * 设置paymentDueDateFrom属性的值。
      * 
      * @param value
      *     allowed object is
@@ -297,7 +297,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Gets the value of the paymentDueDateTo property.
+     * 获取paymentDueDateTo属性的值。
      * 
      * @return
      *     possible object is
@@ -309,7 +309,7 @@ public class SearchInvoiceParameter {
     }
 
     /**
-     * Sets the value of the paymentDueDateTo property.
+     * 设置paymentDueDateTo属性的值。
      * 
      * @param value
      *     allowed object is

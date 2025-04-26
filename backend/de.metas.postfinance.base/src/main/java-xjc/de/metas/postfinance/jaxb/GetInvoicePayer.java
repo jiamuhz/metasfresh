@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -50,7 +50,7 @@ public class GetInvoicePayer {
     protected String fileType;
 
     /**
-     * Gets the value of the eBillAccountID property.
+     * 获取eBillAccountID属性的值。
      * 
      * @return
      *     possible object is
@@ -62,7 +62,7 @@ public class GetInvoicePayer {
     }
 
     /**
-     * Sets the value of the eBillAccountID property.
+     * 设置eBillAccountID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -74,7 +74,7 @@ public class GetInvoicePayer {
     }
 
     /**
-     * Gets the value of the billerID property.
+     * 获取billerID属性的值。
      * 
      * @return
      *     possible object is
@@ -86,7 +86,7 @@ public class GetInvoicePayer {
     }
 
     /**
-     * Sets the value of the billerID property.
+     * 设置billerID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -98,7 +98,7 @@ public class GetInvoicePayer {
     }
 
     /**
-     * Gets the value of the transactionID property.
+     * 获取transactionID属性的值。
      * 
      * @return
      *     possible object is
@@ -110,7 +110,7 @@ public class GetInvoicePayer {
     }
 
     /**
-     * Sets the value of the transactionID property.
+     * 设置transactionID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -122,7 +122,7 @@ public class GetInvoicePayer {
     }
 
     /**
-     * Gets the value of the fileType property.
+     * 获取fileType属性的值。
      * 
      * @return
      *     possible object is
@@ -134,7 +134,7 @@ public class GetInvoicePayer {
     }
 
     /**
-     * Sets the value of the fileType property.
+     * 设置fileType属性的值。
      * 
      * @param value
      *     allowed object is

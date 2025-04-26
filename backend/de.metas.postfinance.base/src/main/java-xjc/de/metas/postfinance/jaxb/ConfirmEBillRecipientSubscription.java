@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -46,7 +46,7 @@ public class ConfirmEBillRecipientSubscription {
     protected String subscriptionInitiationActivationCode;
 
     /**
-     * Gets the value of the billerID property.
+     * 获取billerID属性的值。
      * 
      * @return
      *     possible object is
@@ -58,7 +58,7 @@ public class ConfirmEBillRecipientSubscription {
     }
 
     /**
-     * Sets the value of the billerID property.
+     * 设置billerID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -70,7 +70,7 @@ public class ConfirmEBillRecipientSubscription {
     }
 
     /**
-     * Gets the value of the subscriptionInitiationToken property.
+     * 获取subscriptionInitiationToken属性的值。
      * 
      * @return
      *     possible object is
@@ -82,7 +82,7 @@ public class ConfirmEBillRecipientSubscription {
     }
 
     /**
-     * Sets the value of the subscriptionInitiationToken property.
+     * 设置subscriptionInitiationToken属性的值。
      * 
      * @param value
      *     allowed object is
@@ -94,7 +94,7 @@ public class ConfirmEBillRecipientSubscription {
     }
 
     /**
-     * Gets the value of the subscriptionInitiationActivationCode property.
+     * 获取subscriptionInitiationActivationCode属性的值。
      * 
      * @return
      *     possible object is
@@ -106,7 +106,7 @@ public class ConfirmEBillRecipientSubscription {
     }
 
     /**
-     * Sets the value of the subscriptionInitiationActivationCode property.
+     * 设置subscriptionInitiationActivationCode属性的值。
      * 
      * @param value
      *     allowed object is

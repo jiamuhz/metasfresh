@@ -12,9 +12,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for BillerReport complex type.
+ * <p>BillerReport complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="BillerReport"&gt;
@@ -45,7 +45,7 @@ public class BillerReport {
     protected JAXBElement<String> reportType;
 
     /**
-     * Gets the value of the createDate property.
+     * 获取createDate属性的值。
      * 
      * @return
      *     possible object is
@@ -57,7 +57,7 @@ public class BillerReport {
     }
 
     /**
-     * Sets the value of the createDate property.
+     * 设置createDate属性的值。
      * 
      * @param value
      *     allowed object is
@@ -69,7 +69,7 @@ public class BillerReport {
     }
 
     /**
-     * Gets the value of the reportType property.
+     * 获取reportType属性的值。
      * 
      * @return
      *     possible object is
@@ -81,7 +81,7 @@ public class BillerReport {
     }
 
     /**
-     * Sets the value of the reportType property.
+     * 设置reportType属性的值。
      * 
      * @param value
      *     allowed object is

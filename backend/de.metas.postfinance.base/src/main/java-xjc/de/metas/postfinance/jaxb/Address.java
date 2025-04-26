@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for Address complex type.
+ * <p>Address complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="Address"&gt;
@@ -61,7 +61,7 @@ public class Address {
     protected JAXBElement<String> country;
 
     /**
-     * Gets the value of the companyName property.
+     * 获取companyName属性的值。
      * 
      * @return
      *     possible object is
@@ -73,7 +73,7 @@ public class Address {
     }
 
     /**
-     * Sets the value of the companyName property.
+     * 设置companyName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -85,7 +85,7 @@ public class Address {
     }
 
     /**
-     * Gets the value of the familyName property.
+     * 获取familyName属性的值。
      * 
      * @return
      *     possible object is
@@ -97,7 +97,7 @@ public class Address {
     }
 
     /**
-     * Sets the value of the familyName property.
+     * 设置familyName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -109,7 +109,7 @@ public class Address {
     }
 
     /**
-     * Gets the value of the givenName property.
+     * 获取givenName属性的值。
      * 
      * @return
      *     possible object is
@@ -121,7 +121,7 @@ public class Address {
     }
 
     /**
-     * Sets the value of the givenName property.
+     * 设置givenName属性的值。
      * 
      * @param value
      *     allowed object is
@@ -133,7 +133,7 @@ public class Address {
     }
 
     /**
-     * Gets the value of the address1 property.
+     * 获取address1属性的值。
      * 
      * @return
      *     possible object is
@@ -145,7 +145,7 @@ public class Address {
     }
 
     /**
-     * Sets the value of the address1 property.
+     * 设置address1属性的值。
      * 
      * @param value
      *     allowed object is
@@ -157,7 +157,7 @@ public class Address {
     }
 
     /**
-     * Gets the value of the zip property.
+     * 获取zip属性的值。
      * 
      * @return
      *     possible object is
@@ -169,7 +169,7 @@ public class Address {
     }
 
     /**
-     * Sets the value of the zip property.
+     * 设置zip属性的值。
      * 
      * @param value
      *     allowed object is
@@ -181,7 +181,7 @@ public class Address {
     }
 
     /**
-     * Gets the value of the city property.
+     * 获取city属性的值。
      * 
      * @return
      *     possible object is
@@ -193,7 +193,7 @@ public class Address {
     }
 
     /**
-     * Sets the value of the city property.
+     * 设置city属性的值。
      * 
      * @param value
      *     allowed object is
@@ -205,7 +205,7 @@ public class Address {
     }
 
     /**
-     * Gets the value of the country property.
+     * 获取country属性的值。
      * 
      * @return
      *     possible object is
@@ -217,7 +217,7 @@ public class Address {
     }
 
     /**
-     * Sets the value of the country property.
+     * 设置country属性的值。
      * 
      * @param value
      *     allowed object is

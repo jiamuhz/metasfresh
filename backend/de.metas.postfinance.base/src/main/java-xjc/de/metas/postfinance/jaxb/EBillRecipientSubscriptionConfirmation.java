@@ -11,9 +11,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for EBillRecipientSubscriptionConfirmation complex type.
+ * <p>EBillRecipientSubscriptionConfirmation complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="EBillRecipientSubscriptionConfirmation"&gt;
@@ -64,7 +64,7 @@ public class EBillRecipientSubscriptionConfirmation {
     protected JAXBElement<String> message;
 
     /**
-     * Gets the value of the ebillAccountID property.
+     * 获取ebillAccountID属性的值。
      * 
      * @return
      *     possible object is
@@ -76,7 +76,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Sets the value of the ebillAccountID property.
+     * 设置ebillAccountID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -88,7 +88,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Gets the value of the emailAddress property.
+     * 获取emailAddress属性的值。
      * 
      * @return
      *     possible object is
@@ -100,7 +100,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Sets the value of the emailAddress property.
+     * 设置emailAddress属性的值。
      * 
      * @param value
      *     allowed object is
@@ -112,7 +112,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Gets the value of the uidhr property.
+     * 获取uidhr属性的值。
      * 
      * @return
      *     possible object is
@@ -124,7 +124,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Sets the value of the uidhr property.
+     * 设置uidhr属性的值。
      * 
      * @param value
      *     allowed object is
@@ -136,7 +136,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Gets the value of the type property.
+     * 获取type属性的值。
      * 
      * @return
      *     possible object is
@@ -148,7 +148,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Sets the value of the type property.
+     * 设置type属性的值。
      * 
      * @param value
      *     allowed object is
@@ -160,7 +160,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Gets the value of the language property.
+     * 获取language属性的值。
      * 
      * @return
      *     possible object is
@@ -172,7 +172,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Sets the value of the language property.
+     * 设置language属性的值。
      * 
      * @param value
      *     allowed object is
@@ -184,7 +184,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Gets the value of the party property.
+     * 获取party属性的值。
      * 
      * @return
      *     possible object is
@@ -196,7 +196,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Sets the value of the party property.
+     * 设置party属性的值。
      * 
      * @param value
      *     allowed object is
@@ -208,7 +208,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Gets the value of the message property.
+     * 获取message属性的值。
      * 
      * @return
      *     possible object is
@@ -220,7 +220,7 @@ public class EBillRecipientSubscriptionConfirmation {
     }
 
     /**
-     * Sets the value of the message property.
+     * 设置message属性的值。
      * 
      * @param value
      *     allowed object is

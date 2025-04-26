@@ -10,9 +10,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for SearchInvoicesResponse complex type.
+ * <p>SearchInvoicesResponse complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="SearchInvoicesResponse"&gt;
@@ -46,7 +46,7 @@ public class SearchInvoicesResponse2 {
     protected JAXBElement<ArrayOfSearchInvoice> invoiceList;
 
     /**
-     * Gets the value of the invoiceCount property.
+     * 获取invoiceCount属性的值。
      * 
      * @return
      *     possible object is
@@ -58,7 +58,7 @@ public class SearchInvoicesResponse2 {
     }
 
     /**
-     * Sets the value of the invoiceCount property.
+     * 设置invoiceCount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -70,7 +70,7 @@ public class SearchInvoicesResponse2 {
     }
 
     /**
-     * Gets the value of the totalInvoiceCount property.
+     * 获取totalInvoiceCount属性的值。
      * 
      * @return
      *     possible object is
@@ -82,7 +82,7 @@ public class SearchInvoicesResponse2 {
     }
 
     /**
-     * Sets the value of the totalInvoiceCount property.
+     * 设置totalInvoiceCount属性的值。
      * 
      * @param value
      *     allowed object is
@@ -94,7 +94,7 @@ public class SearchInvoicesResponse2 {
     }
 
     /**
-     * Gets the value of the invoiceList property.
+     * 获取invoiceList属性的值。
      * 
      * @return
      *     possible object is
@@ -106,7 +106,7 @@ public class SearchInvoicesResponse2 {
     }
 
     /**
-     * Sets the value of the invoiceList property.
+     * 设置invoiceList属性的值。
      * 
      * @param value
      *     allowed object is

@@ -9,7 +9,7 @@
        If you have more than one local (eclipse-)workspace, it might make sense to have one local repo per-workspace, to avoid inconsistencies.
     -->
     <!-- have a dedicated local repo for java-17 that we introduce into more and more projects-->
-    <localRepository>${user.home}\.m2\repositoryjava17</localRepository>
+    <localRepository>${user.home}/.m2/repositoryjava17</localRepository>
     <profiles>
         <profile>
             <id>env-dev</id>

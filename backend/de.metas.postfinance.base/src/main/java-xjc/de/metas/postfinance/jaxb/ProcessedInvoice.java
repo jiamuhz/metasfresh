@@ -12,9 +12,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for ProcessedInvoice complex type.
+ * <p>ProcessedInvoice complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="ProcessedInvoice"&gt;
@@ -53,7 +53,7 @@ public class ProcessedInvoice {
     protected JAXBElement<String> processingState;
 
     /**
-     * Gets the value of the fileType property.
+     * 获取fileType属性的值。
      * 
      * @return
      *     possible object is
@@ -65,7 +65,7 @@ public class ProcessedInvoice {
     }
 
     /**
-     * Sets the value of the fileType property.
+     * 设置fileType属性的值。
      * 
      * @param value
      *     allowed object is
@@ -77,7 +77,7 @@ public class ProcessedInvoice {
     }
 
     /**
-     * Gets the value of the submitDate property.
+     * 获取submitDate属性的值。
      * 
      * @return
      *     possible object is
@@ -89,7 +89,7 @@ public class ProcessedInvoice {
     }
 
     /**
-     * Sets the value of the submitDate property.
+     * 设置submitDate属性的值。
      * 
      * @param value
      *     allowed object is
@@ -101,7 +101,7 @@ public class ProcessedInvoice {
     }
 
     /**
-     * Gets the value of the transactionID property.
+     * 获取transactionID属性的值。
      * 
      * @return
      *     possible object is
@@ -113,7 +113,7 @@ public class ProcessedInvoice {
     }
 
     /**
-     * Sets the value of the transactionID property.
+     * 设置transactionID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -125,7 +125,7 @@ public class ProcessedInvoice {
     }
 
     /**
-     * Gets the value of the processingState property.
+     * 获取processingState属性的值。
      * 
      * @return
      *     possible object is
@@ -137,7 +137,7 @@ public class ProcessedInvoice {
     }
 
     /**
-     * Sets the value of the processingState property.
+     * 设置processingState属性的值。
      * 
      * @param value
      *     allowed object is

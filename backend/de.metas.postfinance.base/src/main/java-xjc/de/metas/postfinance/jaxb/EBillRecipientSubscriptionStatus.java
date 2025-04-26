@@ -9,9 +9,9 @@ import javax.xml.bind.annotation.XmlType;
 
 
 /**
- * <p>Java class for EBillRecipientSubscriptionStatus complex type.
+ * <p>EBillRecipientSubscriptionStatus complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType name="EBillRecipientSubscriptionStatus"&gt;
@@ -49,7 +49,7 @@ public class EBillRecipientSubscriptionStatus {
     protected JAXBElement<String> message;
 
     /**
-     * Gets the value of the ebillAccountID property.
+     * 获取ebillAccountID属性的值。
      * 
      * @return
      *     possible object is
@@ -61,7 +61,7 @@ public class EBillRecipientSubscriptionStatus {
     }
 
     /**
-     * Sets the value of the ebillAccountID property.
+     * 设置ebillAccountID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -73,7 +73,7 @@ public class EBillRecipientSubscriptionStatus {
     }
 
     /**
-     * Gets the value of the emailAddress property.
+     * 获取emailAddress属性的值。
      * 
      * @return
      *     possible object is
@@ -85,7 +85,7 @@ public class EBillRecipientSubscriptionStatus {
     }
 
     /**
-     * Sets the value of the emailAddress property.
+     * 设置emailAddress属性的值。
      * 
      * @param value
      *     allowed object is
@@ -97,7 +97,7 @@ public class EBillRecipientSubscriptionStatus {
     }
 
     /**
-     * Gets the value of the uidhr property.
+     * 获取uidhr属性的值。
      * 
      * @return
      *     possible object is
@@ -109,7 +109,7 @@ public class EBillRecipientSubscriptionStatus {
     }
 
     /**
-     * Sets the value of the uidhr property.
+     * 设置uidhr属性的值。
      * 
      * @param value
      *     allowed object is
@@ -121,7 +121,7 @@ public class EBillRecipientSubscriptionStatus {
     }
 
     /**
-     * Gets the value of the message property.
+     * 获取message属性的值。
      * 
      * @return
      *     possible object is
@@ -133,7 +133,7 @@ public class EBillRecipientSubscriptionStatus {
     }
 
     /**
-     * Sets the value of the message property.
+     * 设置message属性的值。
      * 
      * @param value
      *     allowed object is

@@ -11,9 +11,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
 
 
 /**
- * <p>Java class for anonymous complex type.
+ * <p>anonymous complex type的 Java 类。
  * 
- * <p>The following schema fragment specifies the expected content contained within this class.
+ * <p>以下模式片段指定包含在此类中的预期内容。
  * 
  * <pre>
  * &lt;complexType&gt;
@@ -49,7 +49,7 @@ public class GetRegistrationProtocol {
     protected boolean archiveData;
 
     /**
-     * Gets the value of the billerID property.
+     * 获取billerID属性的值。
      * 
      * @return
      *     possible object is
@@ -61,7 +61,7 @@ public class GetRegistrationProtocol {
     }
 
     /**
-     * Sets the value of the billerID property.
+     * 设置billerID属性的值。
      * 
      * @param value
      *     allowed object is
@@ -73,7 +73,7 @@ public class GetRegistrationProtocol {
     }
 
     /**
-     * Gets the value of the createDate property.
+     * 获取createDate属性的值。
      * 
      * @return
      *     possible object is
@@ -85,7 +85,7 @@ public class GetRegistrationProtocol {
     }
 
     /**
-     * Sets the value of the createDate property.
+     * 设置createDate属性的值。
      * 
      * @param value
      *     allowed object is
@@ -97,7 +97,7 @@ public class GetRegistrationProtocol {
     }
 
     /**
-     * Gets the value of the archiveData property.
+     * 获取archiveData属性的值。
      * 
      */
     public boolean isArchiveData() {
@@ -105,7 +105,7 @@ public class GetRegistrationProtocol {
     }
 
     /**
-     * Sets the value of the archiveData property.
+     * 设置archiveData属性的值。
      * 
      */
     public void setArchiveData(boolean value) {
