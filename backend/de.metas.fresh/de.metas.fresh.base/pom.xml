@@ -275,7 +275,7 @@
 			<groupId>de.metas.report</groupId>
 			<artifactId>metasfresh-report-service</artifactId>
 			<version>${metasfresh.version}</version>
-			<scope>provided</scope>
+			<!--<scope>provided</scope>-->
 		</dependency>
 
 		<dependency>
