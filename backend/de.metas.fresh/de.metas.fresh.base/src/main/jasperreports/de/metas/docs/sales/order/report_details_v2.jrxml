@@ -53,9 +53,11 @@
 	<field name="stdprecision" class="java.math.BigDecimal">
 		<property name="com.jaspersoft.studio.field.label" value="stdprecision"/>
 	</field>
+<!--
 	<field name="qtypattern" class="java.lang.String">
 		<property name="com.jaspersoft.studio.field.label" value="qtypattern"/>
 	</field>
+-->
 	<field name="linenetamt" class="java.math.BigDecimal">
 		<property name="com.jaspersoft.studio.field.label" value="linenetamt"/>
 	</field>
