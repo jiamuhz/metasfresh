@@ -194,7 +194,19 @@
 
 		<dependency>
 			<groupId>de.metas.vertical.pharma</groupId>
+			<artifactId>metasfresh-pharma</artifactId>
+			<version>${metasfresh.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>de.metas.vertical.pharma</groupId>
 			<artifactId>metasfresh-pharma.securpharm</artifactId>
+			<version>${metasfresh.version}</version>
+		</dependency>
+
+		<dependency>
+			<groupId>de.metas.vertical.pharma</groupId>
+			<artifactId>metasfresh-pharma.msv3.server-peer-metasfresh</artifactId>
 			<version>${metasfresh.version}</version>
 		</dependency>
 
