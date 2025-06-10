@@ -1,2 +1,2 @@
 
-cp --recursive --verbose ../intellij-idea/.idea/* ../../../../.idea
+cp -Rv ../intellij-idea/.idea/* ../../../../.idea

@@ -1,2 +1,2 @@
 
-cp --verbose ../maven/settings.xml  ../../../..
+cp -v ../maven/settings.xml  ../../../..
