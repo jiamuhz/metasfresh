@@ -1,0 +1,2 @@
+
+这是metasfresh项目，在sql中把 name, description, webui_namebrowse, webui_namenew, webui_namenewbreadcrumb 内容翻译成中文，保持单行，输出全部翻译结果
