@@ -63,6 +63,6 @@ public class PostMaterialEventService
 	public void enqueueEventNow(final MaterialEvent event)
 	{
 		materialEventService.enqueueEvent(event);
-		logger.info("Posted MaterialEvent={}, Timestamp={}, ThreadId={}", event, Instant.now(), Thread.currentThread().getId());
+		logger.info("<<- Posted MaterialEvent={}, Timestamp={}, ThreadId={}", event, Instant.now(), Thread.currentThread().getId());
 	}
 }

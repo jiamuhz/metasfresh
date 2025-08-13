@@ -13,6 +13,7 @@ import org.springframework.stereotype.Service;
 
 import java.util.Collection;
 import java.util.Optional;
+import java.util.stream.Collectors;
 
 /*
  * #%L
@@ -79,6 +80,9 @@ public class MaterialEventHandlerRegistry
 	public final void onEvent(@NonNull final MaterialEvent event)
 	{
 		final ImmutableList<MaterialEventHandler> handlersForEventClass = eventType2Handler.get(event.getClass());
+
+		logger.info("  MaterialEvent Handlers : {} {} {}", handlersForEventClass.size(), event.getClass().getName(),
+			handlersForEventClass.stream().map((it)->it.getClass().getSimpleName()).collect(Collectors.joining(", ")));
 
 		for (final MaterialEventHandler handler : handlersForEventClass)
 		{

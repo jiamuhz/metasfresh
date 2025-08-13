@@ -223,6 +223,8 @@ public abstract class QueueProcessorPlanner implements Runnable
 
 		for (final I_C_Queue_WorkPackage workPackage : workPackages)
 		{
+			logger.info("--> Handle WorkPackage - {} workPackage={} {} {}", isValid(workPackage), workPackage.getC_Queue_WorkPackage_ID(), workPackage.getC_Queue_PackageProcessor_ID(), workPackage.getC_Queue_PackageProcessor().getClassname());
+
 			if (!isValid(workPackage))
 			{
 				WorkPackageLockHelper.unlockNoFail(workPackage);
