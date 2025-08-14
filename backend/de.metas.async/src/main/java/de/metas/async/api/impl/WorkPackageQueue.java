@@ -365,7 +365,7 @@ public class WorkPackageQueue implements IWorkPackageQueue
 		final IMutableQueueProcessorStatistics workpackageProcessorStatistics = workpackageProcessorFactory.getWorkpackageProcessorStatistics(queuePackageProcessor);
 		workpackageProcessorStatistics.incrementQueueSize();
 
-		logger.info( "<-- Enqueue WorkPackage: {} {}", queuePackageProcessor.getQueuePackageProcessorId().getRepoId(), queuePackageProcessor.getClassname() );
+		logger.info( "<-- Enqueue WorkPackage: {} {} {}", workPackage.getC_Queue_WorkPackage_ID(), queuePackageProcessor.getQueuePackageProcessorId().getRepoId(), queuePackageProcessor.getClassname() );
 
 		return workPackage;
 	}
