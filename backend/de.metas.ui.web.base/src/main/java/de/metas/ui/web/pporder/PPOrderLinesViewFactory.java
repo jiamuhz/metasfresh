@@ -49,6 +49,7 @@ import de.metas.ui.web.window.datatypes.WindowId;
 import de.metas.ui.web.window.descriptor.factory.standard.LayoutFactory;
 import de.metas.util.Services;
 import lombok.NonNull;
+import org.adempiere.ad.window.api.IADWindowDAO;
 import org.adempiere.exceptions.AdempiereException;
 import org.eevolution.api.IPPOrderBL;
 import org.eevolution.api.PPOrderDocBaseType;
@@ -147,7 +148,7 @@ public class PPOrderLinesViewFactory implements IViewFactory
 	{
 		return ViewLayout.builder()
 				.setWindowId(windowId)
-				.setCaption("PP Order Issue/Receipt")
+				.setCaption(Services.get(IADWindowDAO.class).retrieveWindowName(windowId.toAdWindowId())) 
 				.setEmptyResultText(msgBL.getTranslatableMsgText(LayoutFactory.TAB_EMPTY_RESULT_TEXT))
 				.setEmptyResultHint(msgBL.getTranslatableMsgText(LayoutFactory.TAB_EMPTY_RESULT_HINT))
 				//
