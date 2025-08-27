@@ -119,7 +119,7 @@ class TableContainer extends PureComponent {
     const { openModal, windowId, tabId } = this.props;
 
     openModal({
-      title: 'Add new',
+      title: counterpart.translate('window.addNew.caption'),
       windowId,
       modalType: 'window',
       tabId,
