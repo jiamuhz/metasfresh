@@ -1,0 +1,26 @@
+{
+  "HU": "物料搬运单元",
+  "qrCode": "二维码",
+  "locator": "库位",
+  "HUStatus": "状态",
+  "product": "产品",
+  "clearanceStatus": "审核状态",
+  "clearanceNote": "审核备注",
+  "qty": "数量",
+  "disposePendingStatus": "待处置",
+  "action": {
+    "dispose": {
+      "buttonCaption": "处置"
+    },
+    "move": {
+      "buttonCaption": "移动",
+      "scanTarget": "扫描目标位置"
+    },
+    "scanAgain": {
+      "buttonCaption": "重新扫描"
+    },
+    "setClearance": {
+      "buttonCaption": "更改HU审核状态"
+    }
+  }
+}

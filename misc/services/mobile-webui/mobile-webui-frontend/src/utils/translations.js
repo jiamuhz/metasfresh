@@ -1,6 +1,7 @@
 import counterpart from 'counterpart';
 import translations_en from './translations_en';
 import translations_de from './translations_de';
+import translations_zh from './translations_zh';
 
 import { getApplicationMessages } from '../apps';
 
@@ -15,6 +16,7 @@ export const setupCounterpart = () => {
   counterpart.setMissingEntryGenerator(generateMissingTranslation);
   counterpart.registerTranslations('en', translations_en);
   counterpart.registerTranslations('de', translations_de);
+  counterpart.registerTranslations('zh', translations_zh);
 
   const applicationsMessages = getApplicationMessages();
   Object.keys(applicationsMessages).forEach((locale) => {
