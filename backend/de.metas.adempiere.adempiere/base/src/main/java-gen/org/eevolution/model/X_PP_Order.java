@@ -1,6 +1,9 @@
 // Generated Model - DO NOT CHANGE
 package org.eevolution.model;
 
+import de.metas.util.NumberUtils;
+import org.compiere.model.copy.ValueToCopy;
+
 import javax.annotation.Nullable;
 import java.math.BigDecimal;
 import java.sql.ResultSet;
@@ -1270,8 +1273,20 @@ public class X_PP_Order extends org.compiere.model.PO implements I_PP_Order, org
 	@Override
 	public BigDecimal getQtyOrdered() 
 	{
+		/* 原先的实现，未处理 ValueToCopy Bug
 		final BigDecimal bd = get_ValueAsBigDecimal(COLUMNNAME_QtyOrdered);
 		return bd != null ? bd : BigDecimal.ZERO;
+		 */
+
+		final Object valueObj = get_Value(COLUMNNAME_QtyOrdered);
+		if (valueObj == null)
+			return BigDecimal.ZERO;
+
+		if (valueObj instanceof ValueToCopy) {
+			return NumberUtils.asBigDecimal(((ValueToCopy) valueObj).getExplicitValueToSet());
+		}
+
+		return 	NumberUtils.asBigDecimal(valueObj);
 	}
 
 	@Override

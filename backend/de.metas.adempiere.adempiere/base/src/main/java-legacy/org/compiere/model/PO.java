@@ -60,10 +60,7 @@ import org.adempiere.exceptions.FillMandatoryException;
 import org.adempiere.model.InterfaceWrapperHelper;
 import org.adempiere.util.lang.impl.TableRecordReference;
 import org.compiere.Adempiere;
-import org.compiere.model.copy.POValuesCopyStrategies;
-import org.compiere.model.copy.POValuesCopyStrategy;
-import org.compiere.model.copy.ValueToCopyResolveContext;
-import org.compiere.model.copy.ValueToCopyResolved;
+import org.compiere.model.copy.*;
 import org.compiere.util.DB;
 import org.compiere.util.DisplayType;
 import org.compiere.util.Env;
@@ -3400,6 +3397,16 @@ public abstract class PO
 				else if (value instanceof Integer || value instanceof BigDecimal)
 				{
 					sqlValues.append(encrypt(i, value));
+				}
+				else if (value instanceof ValueToCopy)  // 新增的处理: 解决 qtyOrdered字段值 ValueToCopy 逻辑
+				{
+					Object inner_value = ((ValueToCopy)value).getExplicitValueToSet();
+					if (inner_value instanceof Integer || inner_value instanceof BigDecimal)
+					{
+						sqlValues.append(encrypt(i, inner_value));
+					} else {
+						sqlValues.append(saveNewSpecial(value, i));
+					}
 				}
 				else if (c == Boolean.class)
 				{
