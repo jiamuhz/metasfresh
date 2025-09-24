@@ -41,7 +41,7 @@ public class CompleteDistributionWFActivityHandler implements WFActivityHandler,
 	{
 		return UserConfirmationSupportUtil.createUIComponent(
 				UserConfirmationSupportUtil.UIComponentProps.builderFrom(wfActivity)
-						.question("Are you sure?")
+						.question("确定吗？")
 						.build());
 	}
 

@@ -47,7 +47,7 @@ public class RequestReviewWFActivityHandler implements WFActivityHandler, UserCo
 	{
 		return UserConfirmationSupportUtil.createUIComponent(
 				UserConfirmationSupportUtil.UIComponentProps.builder()
-						.question("Are you sure?")
+						.question("确定吗？")
 						.confirmed(wfActivity.getStatus().isCompleted())
 						.build());
 	}
