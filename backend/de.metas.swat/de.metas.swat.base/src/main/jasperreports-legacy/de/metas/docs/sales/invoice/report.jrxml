@@ -139,7 +139,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font fontName="SansSerif" size="48" isBold="true" isItalic="true" pdfFontName="Helvetica" pdfEncoding="Cp1250"/>
+					<font fontName="NotoSansSC" size="48" isBold="true" isItalic="true"   />
 				</textElement>
 				<textFieldExpression><![CDATA[(($F{invoice_docstatus}.equals("DR")) ? $R{drafted} :
 (($F{invoice_docstatus}.equals("IN")) ? $R{invalid} : ""))]]></textFieldExpression>

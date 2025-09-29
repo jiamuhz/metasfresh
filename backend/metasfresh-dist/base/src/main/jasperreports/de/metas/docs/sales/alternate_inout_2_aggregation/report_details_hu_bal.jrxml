@@ -68,14 +68,14 @@ $P{ad_language}.equals("it_CH")?"Unterschrift":
 			<textField>
 				<reportElement uuid="9d78b242-91b6-4f5c-9e4e-88e8ae98b0e4" key="textField-16" x="37" y="10" width="284" height="12" forecolor="#000000"/>
 				<textElement markup="none">
-					<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="9" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{GoodsNote}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="ab33be9e-c19c-4e94-a0ef-90cbfff49049" key="textField-16" x="37" y="36" width="125" height="12" forecolor="#000000"/>
 				<textElement markup="none">
-					<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="9" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Signature} + ":"]]></textFieldExpression>
 			</textField>

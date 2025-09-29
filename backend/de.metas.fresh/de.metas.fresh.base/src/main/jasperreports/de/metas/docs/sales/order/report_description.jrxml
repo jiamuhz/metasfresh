@@ -152,7 +152,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
@@ -180,7 +180,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{printname}]]></textFieldExpression>
 			</textField>
@@ -255,7 +255,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{EORI}]]></textFieldExpression>
 			</textField>
@@ -270,7 +270,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{eori}]]></textFieldExpression>
 			</textField>

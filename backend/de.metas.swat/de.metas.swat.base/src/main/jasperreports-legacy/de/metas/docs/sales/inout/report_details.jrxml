@@ -258,7 +258,7 @@ order by
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica"/>
+						<font fontName="NotoSansSC" size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$F{order_docno} + " " + $R{ofdate} + " " + java.text.DateFormat.getDateInstance().format($F{order_date})]]></textFieldExpression>
 				</textField>
@@ -271,7 +271,7 @@ order by
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica"/>
+						<font fontName="NotoSansSC" size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[($F{order_poreference} == null ? "" : $F{order_poreference})]]></textFieldExpression>
 				</textField>
@@ -284,7 +284,7 @@ order by
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica"/>
+						<font fontName="NotoSansSC" size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$R{orderno}]]></textFieldExpression>
 				</textField>
@@ -299,7 +299,7 @@ order by
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica"/>
+						<font fontName="NotoSansSC" size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$R{reforderno}]]></textFieldExpression>
 				</textField>
@@ -391,7 +391,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font fontName="NotoSansSC" size="9" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyentered}]]></textFieldExpression>
 			</textField>
@@ -417,7 +417,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font fontName="NotoSansSC" size="9" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[( $F{source}.equals("CMT")||$F{source}.equals("BO") ? null : $F{line} )]]></textFieldExpression>
 			</textField>
@@ -465,7 +465,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font fontName="NotoSansSC" size="9" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtybackordered}]]></textFieldExpression>
 			</textField>

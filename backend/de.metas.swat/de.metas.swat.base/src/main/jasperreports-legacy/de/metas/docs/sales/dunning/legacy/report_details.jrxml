@@ -167,7 +167,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-67"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="true"/>
+						<font fontName="NotoSansSC"  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{sum}]]></textFieldExpression>
 				</textField>
@@ -183,7 +183,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-68"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="true"/>
+						<font fontName="NotoSansSC"  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{openamt}]]></textFieldExpression>
 				</textField>
@@ -199,7 +199,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-69"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="true"/>
+						<font fontName="NotoSansSC"  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -215,7 +215,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-80"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="true"/>
+						<font fontName="NotoSansSC"  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -231,7 +231,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-81"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="true"/>
+						<font fontName="NotoSansSC"  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{paidamt}]]></textFieldExpression>
 				</textField>
@@ -247,7 +247,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-87"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="true"/>
+						<font fontName="NotoSansSC"  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -263,7 +263,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-88"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="true"/>
+						<font fontName="NotoSansSC"  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{grandtotal}]]></textFieldExpression>
 				</textField>
@@ -394,7 +394,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{carry}]]></textFieldExpression>
 				</textField>
@@ -412,7 +412,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{openamt}]]></textFieldExpression>
 				</textField>
@@ -430,7 +430,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -448,7 +448,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -480,7 +480,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{paidamt}]]></textFieldExpression>
 				</textField>
@@ -498,7 +498,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -530,7 +530,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{grandtotal}]]></textFieldExpression>
 				</textField>
@@ -564,7 +564,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-47"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{documentno}]]></textFieldExpression>
 				</textField>
@@ -580,7 +580,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-58"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{dateinvoiced}]]></textFieldExpression>
 				</textField>
@@ -596,7 +596,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-59"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{tag}.equals("FEE")? $R{dunningfee} : $F{printname}]]></textFieldExpression>
 				</textField>
@@ -612,7 +612,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-60"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{daysdue}]]></textFieldExpression>
 				</textField>
@@ -628,7 +628,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-61"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{openamt}]]></textFieldExpression>
 				</textField>
@@ -644,7 +644,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-62"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -660,7 +660,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-71"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{duedate}]]></textFieldExpression>
 				</textField>
@@ -676,7 +676,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-78"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -692,7 +692,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-79"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{paidamt}]]></textFieldExpression>
 				</textField>
@@ -708,7 +708,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-85"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -724,7 +724,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-86"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{grandtotal}]]></textFieldExpression>
 				</textField>
@@ -740,7 +740,7 @@ order by foo.position, foo.daysdue desc, foo.dateinvoiced, foo.documentno
 						key="textField-90"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="SansSerif"  size="8" isBold="false"/>
+						<font fontName="NotoSansSC"  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{timesdunned}]]></textFieldExpression>
 				</textField>

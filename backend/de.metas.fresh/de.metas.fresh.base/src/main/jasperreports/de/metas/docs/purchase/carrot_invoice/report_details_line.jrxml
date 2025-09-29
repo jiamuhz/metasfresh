@@ -68,7 +68,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -98,7 +98,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtytu}]]></textFieldExpression>
 			</textField>
@@ -111,7 +111,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{huname}]]></textFieldExpression>
 			</textField>
@@ -139,7 +139,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{percentage}]]></textFieldExpression>
 			</textField>
@@ -154,7 +154,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
 			</textField>
@@ -169,7 +169,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
 			</textField>
@@ -184,7 +184,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
 			</textField>

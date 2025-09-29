@@ -87,7 +87,7 @@ order by m_product_category_id, p.value
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+						<font size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{category_name}]]></textFieldExpression>
 				</textField>
@@ -100,7 +100,7 @@ order by m_product_category_id, p.value
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+						<font size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sum_umsatz_kat}]]></textFieldExpression>
 				</textField>
@@ -113,7 +113,7 @@ order by m_product_category_id, p.value
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+						<font size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}]]></textFieldExpression>
 				</textField>
@@ -126,7 +126,7 @@ order by m_product_category_id, p.value
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+						<font size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sum_absatz_kat}]]></textFieldExpression>
 				</textField>
@@ -167,7 +167,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[Produkt-Kategorie]]></text>
 			</staticText>
@@ -180,7 +180,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[Umsatz]]></text>
 			</staticText>
@@ -193,7 +193,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[Absatz/ Stck.]]></text>
 			</staticText>
@@ -208,7 +208,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[/ Produktdetails]]></text>
 			</staticText>
@@ -282,7 +282,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="12" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold"/>
+					<font size="12" isBold="true" isItalic="false" />
 				</textElement>
 				<text><![CDATA[Gesamtsumme]]></text>
 			</staticText>
@@ -295,7 +295,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="12" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold"/>
+					<font size="12" isBold="true" isItalic="false" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sum_absatz}]]></textFieldExpression>
 			</textField>
@@ -308,7 +308,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="12" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold"/>
+					<font size="12" isBold="true" isItalic="false" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sum_umsatz}]]></textFieldExpression>
 			</textField>
@@ -321,7 +321,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="12" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold"/>
+					<font size="12" isBold="true" isItalic="false" />
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}]]></textFieldExpression>
 			</textField>

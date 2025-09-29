@@ -21,10 +21,10 @@
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
-	<style name="StyleBOLD" mode="Opaque" forecolor="#F4834F" fill="Solid" pattern="" fontName="Arial" fontSize="9" isBold="false">
+	<style name="StyleBOLD" mode="Opaque" forecolor="#F4834F" fill="Solid" pattern="" fontName="NotoSansSC" fontSize="9" isBold="false">
 		<conditionalStyle>
 			<conditionExpression><![CDATA[Boolean.valueOf($F{hasaltprice}.intValue() > 0 && $F{pricestd}.compareTo($F{altpricestd}) != 0)]]></conditionExpression>
-			<style fontName="Arial" fontSize="9" isBold="true"/>
+			<style fontName="NotoSansSC" fontSize="9" isBold="true"/>
 		</conditionalStyle>
 	</style>
 	<parameter name="C_BPartner_ID" class="java.lang.Integer">
@@ -202,14 +202,14 @@
 				<textField>
 					<reportElement key="textField-16" x="37" y="12" width="133" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 					<textElement markup="none">
-						<font fontName="Arial" size="10" isBold="false"/>
+						<font fontName="NotoSansSC" size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{BPartner}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-16" x="169" y="12" width="134" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 					<textElement markup="none">
-						<font fontName="Arial" size="10" isBold="false"/>
+						<font fontName="NotoSansSC" size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{bp_value}]]></textFieldExpression>
 				</textField>
@@ -222,14 +222,14 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font fontName="Arial" size="10" isBold="false"/>
+						<font fontName="NotoSansSC" size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{Date}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-20" x="423" y="0" width="91" height="12" forecolor="#000000" uuid="0945443b-def7-4253-a6e1-6a6d932f115c"/>
 					<textElement textAlignment="Right" markup="none">
-						<font fontName="Arial" size="10" isBold="false"/>
+						<font fontName="NotoSansSC" size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[new SimpleDateFormat("dd.MM.yyyy").format(new java.util.Date())]]></textFieldExpression>
 				</textField>
@@ -242,28 +242,28 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font fontName="Arial" size="10" isBold="false"/>
+						<font fontName="NotoSansSC" size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[( $R{price_validity})]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-20" x="423" y="12" width="91" height="12" forecolor="#000000" uuid="fdf874a4-3c0e-44a3-93bb-9fbe92aea8e9"/>
 					<textElement textAlignment="Right" markup="none">
-						<font fontName="Arial" size="10" isBold="false"/>
+						<font fontName="NotoSansSC" size="10" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[new SimpleDateFormat("dd.MM.yyyy").format($F{validfromplv2})]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-16" x="37" y="0" width="133" height="12" forecolor="#000000" uuid="ef32425f-72eb-4296-a44d-40c2cd66ed1b"/>
 					<textElement markup="none">
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{Pricelist}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-16" x="169" y="0" width="179" height="12" forecolor="#000000" uuid="1f2b7aa1-e820-49af-beda-2942a3a679f8"/>
 					<textElement markup="none">
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{nameplv2}]]></textFieldExpression>
 				</textField>
@@ -279,35 +279,35 @@
 				<textField>
 					<reportElement key="textField-20" x="480" y="33" width="47" height="12" forecolor="#000000" uuid="0945443b-def7-4253-a6e1-6a6d932f115c"/>
 					<textElement textAlignment="Right" markup="none">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{Price}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-17" x="333" y="33" width="107" height="12" forecolor="#000000" uuid="70fa6b18-edb1-4cc9-9e5c-30b428399a6d"/>
 					<textElement markup="none">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{Pack_Inst}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-20" x="444" y="33" width="36" height="12" forecolor="#000000" uuid="0945443b-def7-4253-a6e1-6a6d932f115c"/>
 					<textElement textAlignment="Left" markup="none">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{Unit}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-16" x="34" y="33" width="45" height="12" forecolor="#000000" uuid="4ef95306-20b2-4f43-ba5f-5961c590703f"/>
 					<textElement markup="none">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{Number}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-16" x="81" y="33" width="178" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 					<textElement markup="none">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{P_Name}]]></textFieldExpression>
 				</textField>
@@ -318,21 +318,21 @@
     && $F{altpricestd}.floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right" markup="none">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{Price_New}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-13" x="259" y="33" width="73" height="12" forecolor="#000000" uuid="9a577c3e-9c95-4400-8830-18891deb0757"/>
 					<textElement markup="none">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{Attributes}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-20" x="480" y="45" width="47" height="12" forecolor="#000000" uuid="b666a1ef-6a1b-48c2-ac91-f6a5e3316d7b"/>
 					<textElement textAlignment="Right" markup="none">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{currency2}]]></textFieldExpression>
 				</textField>
@@ -342,7 +342,7 @@
     && $F{altpricestd}.floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right" markup="none">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{currency}]]></textFieldExpression>
 				</textField>
@@ -365,7 +365,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{productcategory}]]></textFieldExpression>
 				</textField>
@@ -386,7 +386,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{productname}]]></textFieldExpression>
@@ -400,7 +400,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{itemproductname}]]></textFieldExpression>
 			</textField>
@@ -413,7 +413,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{attributes}]]></textFieldExpression>
 			</textField>
@@ -426,7 +426,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 			</textField>
@@ -439,7 +439,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pricestd}]]></textFieldExpression>
 				<patternExpression><![CDATA[$F{pricepattern1}]]></patternExpression>
@@ -453,7 +453,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
 			</textField>
@@ -469,7 +469,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{altpricestd}]]></textFieldExpression>
 				<patternExpression><![CDATA[$F{pricepattern2}]]></patternExpression>
@@ -487,7 +487,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Page}]]></textFieldExpression>
 			</textField>
@@ -500,7 +500,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right" markup="html">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>

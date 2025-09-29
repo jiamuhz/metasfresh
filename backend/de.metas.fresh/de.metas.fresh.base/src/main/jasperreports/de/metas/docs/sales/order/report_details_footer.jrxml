@@ -103,7 +103,7 @@ WHERE o.c_order_id = $P{c_order_id}]]>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" markup="styled">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{subject}]]></textFieldExpression>
 			</textField>
@@ -116,7 +116,7 @@ WHERE o.c_order_id = $P{c_order_id}]]>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" markup="styled">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{textsnippet}]]></textFieldExpression>
 			</textField>

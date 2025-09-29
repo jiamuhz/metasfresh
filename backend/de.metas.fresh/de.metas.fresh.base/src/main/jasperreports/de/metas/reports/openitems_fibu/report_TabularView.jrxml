@@ -212,14 +212,14 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{totalsum} + " CHF"]]></textFieldExpression>
 				</textField>
 				<textField pattern="#,##0.00">
 					<reportElement x="447" y="0" width="70" height="12" uuid="4f15bb51-ed82-4f38-a7b8-1e554f4a86b7"/>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{total_fa_currency}]]></textFieldExpression>
 				</textField>
@@ -242,7 +242,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{total_currency}]]></textFieldExpression>
 				</textField>
@@ -255,7 +255,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{paid_currency}]]></textFieldExpression>
 				</textField>
@@ -268,7 +268,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{open_currency}]]></textFieldExpression>
 				</textField>
@@ -281,7 +281,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{totalsum} + " " + $F{iso_code}]]></textFieldExpression>
 				</textField>
@@ -294,7 +294,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 				</textField>
@@ -317,7 +317,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{open_bpartner}]]></textFieldExpression>
 				</textField>
@@ -330,7 +330,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{total_bpartner}]]></textFieldExpression>
 				</textField>
@@ -343,7 +343,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
@@ -356,7 +356,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
 				</textField>
@@ -369,7 +369,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{paid_bpartner}]]></textFieldExpression>
 				</textField>
@@ -382,7 +382,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{sum}]]></textFieldExpression>
 				</textField>
@@ -395,7 +395,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 				</textField>
@@ -408,7 +408,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{total_fa_bpartner}]]></textFieldExpression>
 				</textField>
@@ -462,7 +462,7 @@ ORDER BY
 			<staticText>
 				<reportElement key="textField-1" x="37" y="28" width="205" height="19" uuid="0ba00d35-11c8-46c2-8b18-6052f7ffe473"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="14" isBold="true"/>
+					<font fontName="NotoSansSC" size="14" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Offene Posten Fibu]]></text>
 			</staticText>
@@ -476,21 +476,21 @@ ORDER BY
 			<textField>
 				<reportElement x="0" y="0" width="37" height="14" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="37" y="0" width="178" height="14" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="37" y="14" width="178" height="14" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
@@ -503,7 +503,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{customerno}]]></textFieldExpression>
 			</textField>
@@ -516,7 +516,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{fatotal}]]></textFieldExpression>
 			</textField>
@@ -529,7 +529,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{discountdays}]]></textFieldExpression>
 			</textField>
@@ -542,7 +542,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{nettodate}]]></textFieldExpression>
 			</textField>
@@ -555,7 +555,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{discountdate}]]></textFieldExpression>
 			</textField>
@@ -568,7 +568,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{due.days}]]></textFieldExpression>
 			</textField>
@@ -581,7 +581,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{open}]]></textFieldExpression>
 			</textField>
@@ -594,7 +594,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{customername}]]></textFieldExpression>
 			</textField>
@@ -607,7 +607,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{nettodays}]]></textFieldExpression>
 			</textField>
@@ -620,14 +620,14 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{paid}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement key="textField-72" x="727" y="94" width="47" height="12" forecolor="#000000" uuid="24e2f765-435a-40d8-96f0-917ab8bd9fc0"/>
 				<textElement markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Währung]]></text>
 			</staticText>
@@ -640,7 +640,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{invoice}]]></textFieldExpression>
 			</textField>
@@ -653,7 +653,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{date}]]></textFieldExpression>
 			</textField>
@@ -666,7 +666,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{acctname}]]></textFieldExpression>
 			</textField>
@@ -679,7 +679,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{total}]]></textFieldExpression>
 			</textField>

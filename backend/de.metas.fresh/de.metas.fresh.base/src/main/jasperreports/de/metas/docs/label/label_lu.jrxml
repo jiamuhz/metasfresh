@@ -12,7 +12,7 @@
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
-	<style name="Barcode" forecolor="#000000" fontName="Arial" fontSize="11"/>
+	<style name="Barcode" forecolor="#000000" fontName="NotoSansSC" fontSize="11"/>
 	<parameter name="M_HU_ID" class="java.math.BigDecimal"/>
 	<parameter name="ad_language" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[$P{REPORT_LOCALE}.toString()]]></defaultValueExpression>
@@ -74,42 +74,42 @@
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="21" y="7" width="128" height="20" uuid="8ebe2c93-35a4-4f24-bc63-99bca1bc1d76"/>
 				<textElement textAlignment="Left" verticalAlignment="Top">
-					<font fontName="Arial" size="14" isBold="true"/>
+					<font fontName="NotoSansSC" size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{prod_value}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="21" y="32" width="200" height="12" uuid="990ff94b-cf88-40e3-87f0-a446821e1a56"/>
 				<textElement textAlignment="Left" verticalAlignment="Bottom">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="21" y="48" width="200" height="12" uuid="bf799176-fbe3-40bb-9ad4-9269314dff7c"/>
 				<textElement textAlignment="Left" verticalAlignment="Bottom">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{prod_desc}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="95" y="67" width="126" height="14" uuid="3a5398c8-1c6b-42b7-aaf6-0de7c17a883f"/>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{weight}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyy" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="95" y="86" width="126" height="14" uuid="76020f0e-89f6-49d9-a24d-57009c4195c6"/>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{mhd}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="95" y="105" width="126" height="14" uuid="4ab4be41-6b4f-4976-9168-9d70a513523a"/>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 					<paragraph lineSpacing="Single"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{lotno}]]></textFieldExpression>
@@ -127,21 +127,21 @@
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="21" y="67" width="74" height="14" uuid="7ef19713-44e0-4dd9-89ee-53577ffc7538"/>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Nettogewicht: "]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="21" y="86" width="74" height="14" uuid="62ba3be6-184b-4734-98ae-d29007782d01"/>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["MHD: "]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="21" y="105" width="74" height="14" uuid="063f78db-304c-4027-8c22-d7f769883c45"/>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Charge: "]]></textFieldExpression>
 			</textField>
@@ -188,7 +188,7 @@
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="FixRelativeToBottom" x="0" y="128" width="230" height="12" uuid="0ae1a31d-65f4-4c9d-bb9a-084c86cf5b4e"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font fontName="Arial" size="7" isBold="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{displayableqrcode}]]></textFieldExpression>
 			</textField>

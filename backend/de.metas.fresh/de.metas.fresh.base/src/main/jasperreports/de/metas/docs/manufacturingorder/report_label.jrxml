@@ -45,7 +45,7 @@ where s.ad_pinstance_id=$P{AD_PInstance_ID}]]>
 			<textField isBlankWhenNull="true">
 				<reportElement x="8" y="80" width="140" height="12" uuid="e66e65da-d363-4774-a4bd-bfdd3a8fc1f1"/>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{p_value} +"  "+ $F{prod_value}]]></textFieldExpression>
 			</textField>
@@ -54,7 +54,7 @@ where s.ad_pinstance_id=$P{AD_PInstance_ID}]]>
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement verticalAlignment="Bottom">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>

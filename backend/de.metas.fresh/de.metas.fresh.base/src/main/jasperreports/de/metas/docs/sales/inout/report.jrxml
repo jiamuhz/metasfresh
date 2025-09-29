@@ -50,7 +50,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Root( $P{RECORD_ID}, $
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="48" isBold="true" isItalic="true" pdfEncoding="Cp1250"/>
+					<font fontName="NotoSansSC" size="48" isBold="true" isItalic="true"  />
 				</textElement>
 				<textFieldExpression><![CDATA[(($F{docstatus}.equals("DR")) ? "Entwurf" :
 (($F{docstatus}.equals("IN")) ? "Ungültig" : null))]]></textFieldExpression>

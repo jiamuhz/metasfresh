@@ -139,7 +139,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Kunde]]></text>
 			</staticText>
@@ -152,7 +152,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Summe Bestand]]></text>
 			</staticText>
@@ -165,7 +165,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Kunden-Nr.]]></text>
 			</staticText>
@@ -178,7 +178,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Summe Plan]]></text>
 			</staticText>
@@ -191,7 +191,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Summe Auftrag]]></text>
 			</staticText>
@@ -330,7 +330,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{total_sum}]]></textFieldExpression>
 			</textField>
@@ -343,7 +343,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$V{currency}]]></textFieldExpression>
 			</textField>
@@ -356,7 +356,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{total_sum_ap}]]></textFieldExpression>
 			</textField>
@@ -369,7 +369,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$V{currency}]]></textFieldExpression>
 			</textField>
@@ -382,7 +382,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{total_sum_ordered}]]></textFieldExpression>
 			</textField>
@@ -395,7 +395,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$V{currency}]]></textFieldExpression>
 			</textField>

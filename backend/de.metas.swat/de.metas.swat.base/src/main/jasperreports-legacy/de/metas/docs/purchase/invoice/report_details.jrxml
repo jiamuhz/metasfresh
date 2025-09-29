@@ -420,7 +420,7 @@ order by invoiceline.line
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica"/>
+						<font fontName="NotoSansSC" size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$R{shipmentno} + " " + $F{inout_docno} + " " +  $R{ofdate} + " " + java.text.DateFormat.getDateInstance().format($F{inout_date}) +
 "\n" + $R{deliverto} + " " + $F{bp_addressblock}]]></textFieldExpression>
@@ -578,7 +578,7 @@ order by invoiceline.line
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isItalic="true"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{LINESUM_SUM}]]></textFieldExpression>
 			</textField>
@@ -623,7 +623,7 @@ order by invoiceline.line
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{qtyinvoiced}]]></textFieldExpression>
 			</textField>
@@ -649,7 +649,7 @@ order by invoiceline.line
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{priceenteredlist}]]></textFieldExpression>
 			</textField>
@@ -662,7 +662,7 @@ order by invoiceline.line
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{discount}]]></textFieldExpression>
 			</textField>
@@ -675,7 +675,7 @@ order by invoiceline.line
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{priceactual}]]></textFieldExpression>
 			</textField>
@@ -688,7 +688,7 @@ order by invoiceline.line
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{linenetamt}]]></textFieldExpression>
 			</textField>
@@ -729,7 +729,7 @@ order by invoiceline.line
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[( $F{m_product_id}.intValue() > 0 ? $F{line} : null )]]></textFieldExpression>
 			</textField>
@@ -841,7 +841,7 @@ order by invoiceline.line
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isItalic="true"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{LINESUM_SUM}]]></textFieldExpression>
 			</textField>

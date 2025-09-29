@@ -44,7 +44,7 @@
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy">
 				<reportElement x="39" y="85" width="82" height="13" forecolor="#FFFFFF" uuid="7c019e3c-8dae-4c0a-ba31-564c7d79a695"/>
 				<textElement>
-					<font fontName="Arial" isBold="true"/>
+					<font fontName="NotoSansSC" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{value}]]></textFieldExpression>
@@ -52,28 +52,28 @@
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy">
 				<reportElement x="127" y="85" width="179" height="13" forecolor="#FFFFFF" uuid="0b0fa642-a9d4-4505-8287-31748df1b6d4"/>
 				<textElement>
-					<font fontName="Arial" isBold="true"/>
+					<font fontName="NotoSansSC" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{product}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy">
 				<reportElement x="308" y="85" width="81" height="13" forecolor="#FFFFFF" uuid="4f8c92a0-c8d8-424e-9b6d-0c1dbd915030"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" isBold="true"/>
+					<font fontName="NotoSansSC" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QtyRceived}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy">
 				<reportElement x="410" y="85" width="80" height="13" forecolor="#FFFFFF" uuid="bff4f035-6d08-4b35-b2f3-91394d2d18a8"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" isBold="true"/>
+					<font fontName="NotoSansSC" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QtyShipped}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy">
 				<reportElement x="504" y="85" width="51" height="13" forecolor="#FFFFFF" uuid="83648ff0-1298-49ca-ab82-4665f23cbc72"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" isBold="true"/>
+					<font fontName="NotoSansSC" isBold="true"/>
 					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Balance}]]></textFieldExpression>
@@ -81,7 +81,7 @@
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="38" y="60" width="40" height="13" uuid="1006feab-5554-45e5-a3a9-53236dc57a4b"/>
 				<textElement>
-					<font fontName="Arial" isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Date}+": "]]></textFieldExpression>
@@ -89,21 +89,21 @@
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement x="75" y="60" width="53" height="13" uuid="279b4c72-6fda-4765-aefb-f5d1769b1014"/>
 				<textElement>
-					<font fontName="Arial" isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{DateFrom}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement x="138" y="60" width="90" height="13" uuid="39df7450-92f6-4133-bfe1-f17117ec6737"/>
 				<textElement>
-					<font fontName="Arial" isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{DateTo}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="126" y="60" width="13" height="13" uuid="17a6a386-ede1-41d0-86ab-97ee271d3809"/>
 				<textElement>
-					<font fontName="Arial" isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[" - "]]></textFieldExpression>
 			</textField>
@@ -116,7 +116,7 @@
 			<textField>
 				<reportElement x="0" y="35" width="595" height="20" uuid="29523cce-0443-490d-81ce-af579a7351cc"/>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="14" isBold="true"/>
+					<font fontName="NotoSansSC" size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Name}]]></textFieldExpression>
 			</textField>
@@ -135,28 +135,28 @@
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement x="126" y="0" width="179" height="11" uuid="13803c8b-5c02-4922-9218-6139ab7429c1"/>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{productname}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="307" y="0" width="81" height="11" uuid="00ff8edf-c2ef-4041-bdd0-73fb9a1cb524"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{received}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="409" y="0" width="80" height="11" uuid="6c388441-356e-4858-aa72-63b2e3fb8acd"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{shipped}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="504" y="0" width="51" height="11" uuid="9fc3ca8e-96fa-4115-82db-304df5387b08"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{balance}]]></textFieldExpression>
@@ -164,7 +164,7 @@
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement x="38" y="0" width="82" height="11" uuid="13d25d3e-e0fb-4c61-a98d-6bae4a60daf0"/>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{productvalue}]]></textFieldExpression>
@@ -196,7 +196,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>

@@ -68,7 +68,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BP_Value}]]></textFieldExpression>
 			</textField>
@@ -81,7 +81,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{printname}]]></textFieldExpression>
 			</textField>
@@ -94,7 +94,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Date}]]></textFieldExpression>
 			</textField>
@@ -109,7 +109,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_value}]]></textFieldExpression>
 			</textField>
@@ -122,7 +122,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateinvoiced}]]></textFieldExpression>
 			</textField>
@@ -135,7 +135,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
@@ -150,7 +150,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{VAT_ID} +" "+ $F{vataxid}]]></textFieldExpression>
 			</textField>
@@ -165,7 +165,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{inout_bpartneraddress}]]></textFieldExpression>
 			</textField>

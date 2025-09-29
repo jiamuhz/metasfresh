@@ -84,7 +84,7 @@ $P{printSingleSelection}
 					<printWhenExpression><![CDATA[$F{isdraft}]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Center" markup="none">
-					<font fontName="Arial" size="48" isBold="true" isItalic="true" isStrikeThrough="false"/>
+					<font fontName="NotoSansSC" size="48" isBold="true" isItalic="true" isStrikeThrough="false"/>
 				</textElement>
 				<text><![CDATA[Entwurf]]></text>
 			</staticText>
@@ -143,7 +143,7 @@ $P{printSingleSelection}
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + "/ "]]></textFieldExpression>
 			</textField>
@@ -156,7 +156,7 @@ $P{printSingleSelection}
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{page}]]></textFieldExpression>
 			</textField>
@@ -169,7 +169,7 @@ $P{printSingleSelection}
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>

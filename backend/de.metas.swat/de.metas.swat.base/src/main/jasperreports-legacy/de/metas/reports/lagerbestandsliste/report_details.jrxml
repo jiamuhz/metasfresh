@@ -139,7 +139,7 @@ ORDER BY
 						key="textField-17"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true" isUnderline="false"/>
+						<font  size="9" isBold="false" isItalic="true" isUnderline="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyreserved_sum}]]></textFieldExpression>
 				</textField>
@@ -153,7 +153,7 @@ ORDER BY
 						key="textField-18"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+						<font  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyreserved_sum}]]></textFieldExpression>
 				</textField>
@@ -166,7 +166,7 @@ ORDER BY
 						key="textField-19"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true" isUnderline="false"/>
+						<font  size="9" isBold="false" isItalic="true" isUnderline="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{subtotal}]]></textFieldExpression>
 				</textField>
@@ -180,7 +180,7 @@ ORDER BY
 						key="textField-20"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font  size="9" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{totalsum}]]></textFieldExpression>
 				</textField>
@@ -193,7 +193,7 @@ ORDER BY
 						key="textField-21"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true" isUnderline="false"/>
+						<font  size="9" isBold="false" isItalic="true" isUnderline="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyavailable_sum}]]></textFieldExpression>
 				</textField>
@@ -207,7 +207,7 @@ ORDER BY
 						key="textField-22"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+						<font  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyavailable_sum}]]></textFieldExpression>
 				</textField>
@@ -220,7 +220,7 @@ ORDER BY
 						key="textField-23"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true" isUnderline="false"/>
+						<font  size="9" isBold="false" isItalic="true" isUnderline="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyonhand_sum}]]></textFieldExpression>
 				</textField>
@@ -234,7 +234,7 @@ ORDER BY
 						key="textField-24"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+						<font  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyonhand_sum}]]></textFieldExpression>
 				</textField>
@@ -366,7 +366,7 @@ ORDER BY
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyreserved_sum}]]></textFieldExpression>
 				</textField>
@@ -391,7 +391,7 @@ ORDER BY
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{carry}]]></textFieldExpression>
 				</textField>
@@ -416,7 +416,7 @@ ORDER BY
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyavailable_sum}]]></textFieldExpression>
 				</textField>
@@ -441,7 +441,7 @@ ORDER BY
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyonhand_sum}]]></textFieldExpression>
 				</textField>
@@ -526,7 +526,7 @@ ORDER BY
 						key="textField-15"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{qtyavailable}]]></textFieldExpression>
 				</textField>
@@ -539,7 +539,7 @@ ORDER BY
 						key="textField-16"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{qtyonhand}]]></textFieldExpression>
 				</textField>
@@ -560,7 +560,7 @@ ORDER BY
 						key="textField-25"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyreserved_sum}]]></textFieldExpression>
 				</textField>
@@ -573,7 +573,7 @@ ORDER BY
 						key="textField-26"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{subtotal}]]></textFieldExpression>
 				</textField>
@@ -586,7 +586,7 @@ ORDER BY
 						key="textField-27"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyavailable_sum}]]></textFieldExpression>
 				</textField>
@@ -599,7 +599,7 @@ ORDER BY
 						key="textField-28"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyonhand_sum}]]></textFieldExpression>
 				</textField>

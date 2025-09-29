@@ -63,7 +63,7 @@ group by vatcode, taxname;]]>
 			<textField>
 				<reportElement x="1" y="0" width="79" height="20" uuid="ab05efaf-1e02-4b58-8859-672d5a58a1e2"/>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{recap}]]></textFieldExpression>
 			</textField>
@@ -80,28 +80,28 @@ group by vatcode, taxname;]]>
 			<textField>
 				<reportElement x="1" y="4" width="70" height="12" forecolor="#FFFFFF" uuid="9ce82332-fbd5-4b30-b809-ed7aa1ce68b2"/>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{vatcode}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="580" y="4" width="96" height="12" forecolor="#FFFFFF" uuid="9ce82332-fbd5-4b30-b809-ed7aa1ce68b2"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{balancePeriod}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="676" y="4" width="100" height="12" forecolor="#FFFFFF" uuid="58475cb0-76ef-46d3-8440-818898eb1ce8"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{balance}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="71" y="4" width="278" height="12" forecolor="#FFFFFF" uuid="aff6cbcc-29bc-4a99-a1b7-da1ddbf1630a"/>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{tax}]]></textFieldExpression>
 			</textField>
@@ -121,28 +121,28 @@ group by vatcode, taxname;]]>
 			<textField isBlankWhenNull="true">
 				<reportElement x="0" y="2" width="70" height="15" uuid="9179a5e9-e70e-4d0e-9840-ca3a3ba424ee"/>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{vatcode}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="70" y="2" width="279" height="15" uuid="5de14448-7069-4dc1-beba-f9b49d8b7d24"/>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxname}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00">
 				<reportElement x="580" y="2" width="96" height="15" uuid="cbdf57d5-daba-424a-97be-5fda474189ae"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00">
 				<reportElement x="676" y="0" width="100" height="15" uuid="4667c47d-5055-48c9-9a38-6de63514fa63"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balanceyear}]]></textFieldExpression>
 			</textField>

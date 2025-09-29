@@ -383,7 +383,7 @@ new Boolean(true)]]></printWhenExpression>
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica"/>
+						<font fontName="NotoSansSC" size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$R{deliverto} + " " + $F{bpartneraddress}]]></textFieldExpression>
 				</textField>
@@ -462,7 +462,7 @@ new Boolean(true)]]></printWhenExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font fontName="NotoSansSC" size="9" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyordered}]]></textFieldExpression>
 			</textField>
@@ -488,7 +488,7 @@ new Boolean(true)]]></printWhenExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font fontName="NotoSansSC" size="9" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[( $F{source}.equals("CMT") || $F{source}.equals("BO")? null : $F{line} )]]></textFieldExpression>
 			</textField>

@@ -103,7 +103,7 @@ ORDER BY bpb.isDefault DESC
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="7" isBold="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
 			</textField>
@@ -133,7 +133,7 @@ $F{org_bank_name}.equals("") ? ("" + (($F{org_bank_swift}==null || $F{org_bank_s
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="false" pdfFontName="Helvetica"/>
+					<font size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{conditions}]]></textFieldExpression>
 			</textField>

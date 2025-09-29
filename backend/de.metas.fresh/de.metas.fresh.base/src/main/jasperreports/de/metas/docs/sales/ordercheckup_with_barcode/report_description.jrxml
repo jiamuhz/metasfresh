@@ -64,7 +64,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{order_no}]]></textFieldExpression>
 			</textField>
@@ -77,7 +77,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{reference}]]></textFieldExpression>
 			</textField>
@@ -90,7 +90,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{PreparationDate}]]></textFieldExpression>
 			</textField>
@@ -103,7 +103,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{DatePromised}]]></textFieldExpression>
 			</textField>
@@ -116,7 +116,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{order_no}]]></textFieldExpression>
 			</textField>
@@ -129,7 +129,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{reference}]]></textFieldExpression>
 			</textField>
@@ -142,7 +142,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{preparationdate}]]></textFieldExpression>
 			</textField>
@@ -155,21 +155,21 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{datepromised}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-6" x="35" y="13" width="300" height="13" forecolor="#000000" uuid="9f67bbc4-0d59-4ded-aebf-fd8c8e03f405"/>
 				<textElement textAlignment="Left" markup="none">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{title}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-6" x="348" y="13" width="130" height="13" forecolor="#000000" uuid="2101a16d-1421-48a3-a5bf-9e505c8da126"/>
 				<textElement textAlignment="Left" markup="none">
-					<font fontName="Arial" size="10" isBold="true" isUnderline="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="true" isUnderline="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{deliverto}]]></textFieldExpression>
 			</textField>
@@ -182,7 +182,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{warehouse}]]></textFieldExpression>
 			</textField>
@@ -195,7 +195,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{warehousename}]]></textFieldExpression>
 			</textField>
@@ -208,7 +208,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Plant}]]></textFieldExpression>
 			</textField>
@@ -221,7 +221,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{plantname}]]></textFieldExpression>
 			</textField>
@@ -234,7 +234,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{DeliveryTo}]]></textFieldExpression>
 			</textField>
@@ -247,7 +247,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{handoverlocation}]]></textFieldExpression>
 			</textField>
@@ -260,7 +260,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpvalue}]]></textFieldExpression>
 			</textField>

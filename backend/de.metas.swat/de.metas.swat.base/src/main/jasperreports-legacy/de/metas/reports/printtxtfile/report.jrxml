@@ -54,7 +54,7 @@ WHERE AD_PInstance_ID = $P{AD_PINSTANCE_ID}]]>
 					<rightPen lineWidth="0.0" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
 			</textField>

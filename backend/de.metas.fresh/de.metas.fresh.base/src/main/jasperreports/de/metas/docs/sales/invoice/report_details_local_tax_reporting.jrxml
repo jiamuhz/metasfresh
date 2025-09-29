@@ -39,56 +39,56 @@
 			<textField>
 				<reportElement x="41" y="4" width="70" height="12" uuid="89835b74-765e-4e56-b7bc-b5eb2e3a7284"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{NetTotal} + " " + $F{local_iso_code} + ": "]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="41" y="16" width="70" height="12" uuid="7ce7ebd8-e55a-40f8-ab77-13720b99995f"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{VAT_Amount} + " " + $F{local_iso_code} + ": "]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="41" y="28" width="70" height="12" uuid="a39cebad-86ff-4bae-84cf-9ffd19e1d2ab"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Rate} + ": "]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="41" y="41" width="70" height="12" uuid="52d3f429-465b-4aef-9050-184d0817a117"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{RateDate} + ": "]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00">
 				<reportElement x="111" y="4" width="100" height="12" uuid="d8ea2c91-9eb7-4653-a73e-b6bf24fdcaf3"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{local_taxbaseamt}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00">
 				<reportElement x="111" y="16" width="100" height="12" uuid="db274f66-ef42-427f-ae0a-f78e765cb835"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{local_taxamt}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="111" y="28" width="100" height="12" uuid="03036b61-80ff-42ec-b443-fe075e5392f3"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{conversion_rate}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="111" y="41" width="100" height="12" uuid="771acc7f-f5a4-4a25-89a8-799c8a8d7489"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{conversion_date}]]></textFieldExpression>
 			</textField>

@@ -43,14 +43,14 @@ FROM
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="11"/>
+					<font fontName="NotoSansSC" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="FixRelativeToBottom" x="40" y="24" width="176" height="12" uuid="28b124c8-7a94-4ce5-90df-7e978c7fbfab"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
 			</textField>
@@ -61,7 +61,7 @@ FROM
 :new Boolean(true)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{orgphone} + " " + $F{phone}]]></textFieldExpression>
 			</textField>
@@ -72,14 +72,14 @@ FROM
 	:new Boolean(true)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{orgfax} + " " + $F{fax}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="FixRelativeToBottom" x="40" y="68" width="176" height="12" uuid="63844d65-924b-417a-b6a3-52eb03cc7a72"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
 			</textField>
@@ -90,14 +90,14 @@ FROM
 :new Boolean(true)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{vataxid} + " " + $F{vataxid}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="FixRelativeToBottom" x="40" y="35" width="176" height="12" uuid="382642ff-3a69-4cd5-ae1c-f374c3c8226d"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{postal} + " " + $F{city}]]></textFieldExpression>
 			</textField>

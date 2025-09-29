@@ -133,7 +133,7 @@ ORDER BY source
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font fontName="SansSerif" size="48" isBold="true" isItalic="true" pdfFontName="Helvetica" pdfEncoding="Cp1250"/>
+					<font fontName="NotoSansSC" size="48" isBold="true" isItalic="true"   />
 				</textElement>
 				<textFieldExpression><![CDATA[(($F{inout_docstatus}.equals("DR")) ? $R{invoice.watermark.drafted} :
 (($F{inout_docstatus}.equals("IN")) ? $R{report.watermark.invalid} : null))]]></textFieldExpression>
@@ -263,7 +263,7 @@ ORDER BY source
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" pdfFontName="Helvetica"/>
+					<font size="8" />
 				</textElement>
 				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
@@ -276,7 +276,7 @@ ORDER BY source
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" pdfFontName="Helvetica"/>
+					<font size="8" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + "/ "]]></textFieldExpression>
 			</textField>
@@ -289,7 +289,7 @@ ORDER BY source
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" pdfFontName="Helvetica"/>
+					<font size="8" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{page}]]></textFieldExpression>
 			</textField>

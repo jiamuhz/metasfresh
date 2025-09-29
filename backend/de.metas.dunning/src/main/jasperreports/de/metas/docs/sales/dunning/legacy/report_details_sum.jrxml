@@ -85,7 +85,7 @@ GROUP BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{totalsum}]]></textFieldExpression>
 			</textField>
@@ -98,7 +98,7 @@ GROUP BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 			</textField>
@@ -111,7 +111,7 @@ GROUP BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalamt}]]></textFieldExpression>
 			</textField>
@@ -124,7 +124,7 @@ GROUP BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{feeamt}]]></textFieldExpression>
 			</textField>
@@ -137,7 +137,7 @@ GROUP BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="8" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{openamt}]]></textFieldExpression>
 			</textField>

@@ -54,7 +54,7 @@ where s.ad_pinstance_id=$P{AD_PInstance_ID};]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="76" y="34" width="52" height="10" uuid="7fde2959-85e7-48ba-9215-bdaa594769a0"/>
 				<textElement textAlignment="Left" markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{hu}]]></textFieldExpression>
 			</textField>

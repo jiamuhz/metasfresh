@@ -50,7 +50,7 @@ FROM M_ShipperTransportation st
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="56" isBold="true" isItalic="true" pdfEncoding="Cp1250"/>
+					<font fontName="NotoSansSC" size="56" isBold="true" isItalic="true"  />
 				</textElement>
 				<textFieldExpression><![CDATA["CANCELLED"]]></textFieldExpression>
 			</textField>

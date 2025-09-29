@@ -101,7 +101,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 				<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
 					<reportElement key="textField-13" x="579" y="4" width="100" height="16" forecolor="#000000" uuid="cae18e76-d403-45b9-8ce4-d08027c92cc2"/>
 					<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 						<paragraph rightIndent="4"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{SUM_GrandTotal_BP}]]></textFieldExpression>
@@ -109,7 +109,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 				<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
 					<reportElement key="textField-13" x="687" y="4" width="100" height="16" forecolor="#000000" uuid="fb7e1616-3f56-4b1b-acb8-fc06b3938871"/>
 					<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 						<paragraph rightIndent="4"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{SUM_EURO_BP}]]></textFieldExpression>
@@ -117,7 +117,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 				<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 					<reportElement key="textField-13" x="100" y="4" width="470" height="15" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="b43bb423-b2d1-48c8-9fd6-ab6baa3931c4"/>
 					<textElement verticalAlignment="Top" markup="none">
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 						<paragraph leftIndent="5"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Total " + $F{bpname}]]></textFieldExpression>
@@ -133,7 +133,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<pen lineWidth="0.5"/>
 				</box>
 				<textElement verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{CreditorValue}]]></textFieldExpression>
@@ -144,7 +144,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<pen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{CustomerAddr}]]></textFieldExpression>
@@ -155,7 +155,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<pen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{VAT}]]></textFieldExpression>
 			</textField>
@@ -165,7 +165,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<pen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{InvoiceDate}]]></textFieldExpression>
 			</textField>
@@ -175,7 +175,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<pen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{InvoiceNo}]]></textFieldExpression>
 			</textField>
@@ -185,7 +185,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<pen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Currency}]]></textFieldExpression>
 			</textField>
@@ -195,7 +195,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<pen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Amount}]]></textFieldExpression>
 			</textField>
@@ -205,28 +205,28 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<pen lineWidth="0.5"/>
 				</box>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Euro_Amount}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="23" y="83" width="547" height="14" uuid="dabf32c7-dcf1-4188-b1c1-4e1ffca83928"/>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Month}+" " + $F{period}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="23" y="100" width="663" height="14" uuid="20d3ca8f-b29b-4e8d-8324-d4137000b945"/>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Partner}+"  " + ( $P{C_BPartner_ID}!=null ? $F{bpname} : "")]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="23" y="117" width="267" height="14" uuid="97825f94-3c21-449a-84e5-d448c582d930"/>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{EU_InvoiceOnly}+"  "
 + ($P{IsToEULocation}!=null ? ($F{iseutax}.equals("Y") ? "Ja" : "Nein" ) : "")]]></textFieldExpression>
@@ -234,7 +234,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="0" y="32" width="841" height="20" uuid="504b1783-260d-46c0-a0ec-9305418411ff"/>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="14" isBold="false"/>
+					<font fontName="NotoSansSC" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Title}]]></textFieldExpression>
 			</textField>
@@ -243,7 +243,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{orgname}]]></textFieldExpression>
 			</textField>
@@ -254,14 +254,14 @@ join C_Period p on i.dateinvoiced >= p.startdate
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" isPrintRepeatedValues="false" x="23" y="3" width="77" height="18" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="c310c802-c0b8-4e49-870b-75dd9077e6bc"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" isPrintRepeatedValues="false" x="100" y="3" width="170" height="18" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="4cf99bf0-cf6a-478f-bd1a-ceb2cd04497a"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartneraddress}]]></textFieldExpression>
@@ -269,35 +269,35 @@ join C_Period p on i.dateinvoiced >= p.startdate
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" isPrintRepeatedValues="false" x="270" y="3" width="86" height="18" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="bcbe7aeb-b014-40a5-8b31-cc5304adb400"/>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{vataxid}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="356" y="3" width="86" height="18" forecolor="#000000" uuid="f3aa571d-d11b-47b5-8834-74eb7d1af134"/>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateinvoiced}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="442" y="3" width="78" height="18" forecolor="#000000" uuid="b82d2407-f945-497f-807f-3e4595aeb8d7"/>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="520" y="3" width="59" height="18" forecolor="#000000" uuid="6732eee0-6c6f-48f8-bcd0-38cfeea4402a"/>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="579" y="3" width="100" height="18" forecolor="#000000" uuid="01e2caa7-dc56-4b7c-8372-20790b1d3b01"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 					<paragraph rightIndent="4"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{grandtotal}]]></textFieldExpression>
@@ -305,7 +305,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="687" y="3" width="100" height="18" forecolor="#000000" uuid="9f0b3d71-0a87-4692-9eb9-c54d42557ab4"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 					<paragraph rightIndent="4"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{euro_amt}]]></textFieldExpression>
@@ -317,7 +317,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="579" y="8" width="100" height="16" forecolor="#000000" uuid="bbcac802-9f29-40d1-9f06-52b865590a29"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 					<paragraph rightIndent="4"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{SUM_GrandTotal}]]></textFieldExpression>
@@ -325,7 +325,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="687" y="8" width="100" height="16" forecolor="#000000" uuid="759da7dc-68f9-445f-893c-ad8496854f5f"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 					<paragraph rightIndent="4"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{SUM_EURO}]]></textFieldExpression>
@@ -333,7 +333,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="100" y="8" width="170" height="15" forecolor="#000000" uuid="d8c53280-7a01-4ccb-abf2-9a6da49d8abc"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Total "]]></textFieldExpression>
@@ -351,7 +351,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + "       /"]]></textFieldExpression>
 			</textField>
@@ -364,7 +364,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
@@ -375,7 +375,7 @@ join C_Period p on i.dateinvoiced >= p.startdate
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="100" y="14" width="255" height="15" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="22e15ab0-e3c8-43f7-8ade-61f02692f125"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="12" isBold="true"/>
+					<font fontName="NotoSansSC" size="12" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Recap}]]></textFieldExpression>

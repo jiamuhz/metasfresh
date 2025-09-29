@@ -53,21 +53,21 @@ where IsPrintWhenPackingMaterial='Y'
 			<textField>
 				<reportElement key="textField-16" x="37" y="0" width="160" height="12" forecolor="#000000" uuid="142bbe9f-777c-4879-ba97-2b347192bce4"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{PackingMaterial}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-20" x="417" y="0" width="40" height="12" forecolor="#000000" uuid="f93f9ef8-2629-458c-ab2a-7fc91a2a8307"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Unit}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-19" x="369" y="0" width="46" height="12" forecolor="#000000" uuid="66821000-4e7b-4f69-b099-73eff29e9bd5"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Quantity}]]></textFieldExpression>
 			</textField>
@@ -84,7 +84,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -110,7 +110,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{movementqty}]]></textFieldExpression>
 			</textField>
@@ -127,7 +127,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{description} + "\n"]]></textFieldExpression>
 			</textField>

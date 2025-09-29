@@ -49,7 +49,7 @@
 					<pen lineWidth="0.5"/>
 				</box>
 				<textElement markup="styled">
-					<font fontName="Arial"/>
+					<font fontName="NotoSansSC"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{value}.equals("Text from Left 1") ? $P{SQL_VALUE} : $F{value}]]></textFieldExpression>
 			</textField>

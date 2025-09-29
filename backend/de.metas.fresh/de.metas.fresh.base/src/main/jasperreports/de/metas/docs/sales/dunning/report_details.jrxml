@@ -176,7 +176,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="fd32f53b-3a9b-471f-ba96-747c6f748a0e" key="textField-53" mode="Transparent" x="57" y="0" width="68" height="11" forecolor="#000000"/>
 				<textElement markup="none">
-					<font fontName="SansSerif" size="8" isBold="false" pdfFontName="Helvetica"/>
+					<font fontName="NotoSansSC" size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{printname}]]></textFieldExpression>
 			</textField>
@@ -274,7 +274,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="c180e3e7-35df-46c4-8b53-ec49039f850c" key="textField-53" mode="Transparent" x="125" y="0" width="37" height="11" isPrintWhenDetailOverflows="true" forecolor="#000000"/>
 				<textElement markup="none">
-					<font fontName="SansSerif" size="8" isBold="false" pdfFontName="Helvetica"/>
+					<font fontName="NotoSansSC" size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>

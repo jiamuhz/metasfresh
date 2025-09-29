@@ -175,7 +175,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" isItalic="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{priceactual}]]></textFieldExpression>
 				</textField>
@@ -188,7 +188,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font size="8" isBold="false" isItalic="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" isItalic="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}+"/Stück(VK.)"]]></textFieldExpression>
 				</textField>
@@ -201,7 +201,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" isItalic="false" pdfFontName="Helvetica-Bold"/>
+						<font size="8" isBold="false" isItalic="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{produktnr} + " " + $F{produktname}]]></textFieldExpression>
 				</textField>
@@ -214,7 +214,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" isItalic="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{einkaufspreis}]]></textFieldExpression>
 				</textField>
@@ -227,7 +227,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<text><![CDATA[Verfügbar:]]></text>
 				</staticText>
@@ -240,7 +240,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{qtyavailable}]]></textFieldExpression>
 				</textField>
@@ -253,7 +253,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<text><![CDATA[Bestand:]]></text>
 				</staticText>
@@ -266,7 +266,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{qtyonhand}]]></textFieldExpression>
 				</textField>
@@ -279,7 +279,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA["Erschienen: "+$F{datepublication}]]></textFieldExpression>
 				</textField>
@@ -292,7 +292,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font size="8" isBold="false" isItalic="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" isItalic="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}+"/Stück(EK.)"]]></textFieldExpression>
 				</textField>
@@ -312,7 +312,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{total_sum}]]></textFieldExpression>
 				</textField>
@@ -325,7 +325,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$V{currency}]]></textFieldExpression>
 				</textField>
@@ -338,7 +338,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" isItalic="false" />
 					</textElement>
 					<text><![CDATA[Summe:]]></text>
 				</staticText>
@@ -351,7 +351,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{qty_sum}]]></textFieldExpression>
 				</textField>
@@ -364,7 +364,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[($F{artlieferbar}.equals("N")?"Nein":"Ja")]]></textFieldExpression>
 				</textField>
@@ -377,7 +377,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$V{currency}]]></textFieldExpression>
 				</textField>
@@ -390,7 +390,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" pdfFontName="Helvetica"/>
+						<font size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{total_sum_eink}]]></textFieldExpression>
 				</textField>
@@ -428,7 +428,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[Produktname]]></text>
 			</staticText>
@@ -441,7 +441,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[Produktnr.]]></text>
 			</staticText>
@@ -454,7 +454,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[Auftrag]]></text>
 			</staticText>
@@ -467,7 +467,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[Datum]]></text>
 			</staticText>
@@ -480,7 +480,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[Kunden Nr.]]></text>
 			</staticText>
@@ -493,7 +493,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[Kunden Name]]></text>
 			</staticText>
@@ -506,7 +506,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[EK. Wert]]></text>
 			</staticText>
@@ -519,7 +519,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" />
 				</textElement>
 				<text><![CDATA[Rückst. Wert]]></text>
 			</staticText>
@@ -532,7 +532,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" isItalic="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" isItalic="false" />
 				</textElement>
 				<text><![CDATA[lfb.]]></text>
 			</staticText>
@@ -545,7 +545,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" isItalic="false" pdfFontName="Helvetica"/>
+					<font size="9" isBold="false" isItalic="false" />
 				</textElement>
 				<text><![CDATA[Rückst.]]></text>
 			</staticText>
@@ -674,7 +674,7 @@ order by world.Produktnr, world.KundenNr
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="8" isBold="false" pdfFontName="Helvetica"/>
+					<font size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[($F{lieferbar}.equals("N")?"Nein":"Ja")]]></textFieldExpression>
 			</textField>

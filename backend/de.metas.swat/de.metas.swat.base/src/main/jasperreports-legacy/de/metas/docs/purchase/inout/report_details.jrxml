@@ -235,7 +235,7 @@ order by
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="SansSerif" size="9" isBold="true" pdfFontName="Helvetica"/>
+						<font fontName="NotoSansSC" size="9" isBold="true" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$R{orderno} + " " + $F{order_docno} + " " + $R{ofdate} + " " + java.text.DateFormat.getDateInstance().format($F{order_date}) +
 "\n" + $R{reforderno} + ($F{order_poreference} == null ? "" : $F{order_poreference})]]></textFieldExpression>
@@ -338,7 +338,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{qtyentered}]]></textFieldExpression>
 			</textField>
@@ -364,7 +364,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[( $F{m_product_id}.intValue() > 0  ? $F{line} : null )]]></textFieldExpression>
 			</textField>
@@ -408,7 +408,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{qtybackordered}]]></textFieldExpression>
 			</textField>

@@ -64,14 +64,14 @@ order by productname]]>
 			<textField>
 				<reportElement x="39" y="1" width="465" height="19" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="14" isBold="true"/>
+					<font fontName="NotoSansSC" size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{headline}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="39" y="62" width="170" height="12" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{periodrange}]]></textFieldExpression>
 			</textField>
@@ -80,14 +80,14 @@ order by productname]]>
 					<printWhenExpression><![CDATA[!$P{IsSOTrx}.equals( "" ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{IsSOTrx}.equals("Y") ? $R{sales} : $R{purchase}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="39" y="40" width="170" height="12" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{bpartner}]]></textFieldExpression>
 			</textField>
@@ -96,7 +96,7 @@ order by productname]]>
 					<printWhenExpression><![CDATA[!$F{startdate}.equals( "" ) || !$F{enddate}.equals( "" ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{startdate} + " - " + $F{enddate}]]></textFieldExpression>
 			</textField>
@@ -105,7 +105,7 @@ order by productname]]>
 					<printWhenExpression><![CDATA[!$F{bpartnername}.equals( "" ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartnername}.equals("alle") ?
 $R{all} : $F{bpartnername}]]></textFieldExpression>
@@ -113,7 +113,7 @@ $R{all} : $F{bpartnername}]]></textFieldExpression>
 			<textField isBlankWhenNull="true">
 				<reportElement x="209" y="73" width="295" height="12" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{attributes}.equals("alle") ?
 $R{all} : $F{attributes}]]></textFieldExpression>
@@ -121,21 +121,21 @@ $R{all} : $F{attributes}]]></textFieldExpression>
 			<textField>
 				<reportElement x="39" y="73" width="170" height="12" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{attributes}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="39" y="51" width="170" height="12" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{issotrx}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="39" y="20" width="465" height="19" uuid="e66f3312-d698-4f25-b500-67ef43459b84"/>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{org}+" "+ ($F{org} !=null ? $F{org} : $R{all})]]></textFieldExpression>
 			</textField>
@@ -158,7 +158,7 @@ $R{all} : $F{attributes}]]></textFieldExpression>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="39" y="0" width="165" height="13" forecolor="#FFFFFF" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 					<paragraph leftIndent="2"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{product}]]></textFieldExpression>
@@ -166,14 +166,14 @@ $R{all} : $F{attributes}]]></textFieldExpression>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="204" y="0" width="156" height="13" forecolor="#FFFFFF" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{sameperiodsum}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="380" y="0" width="124" height="13" forecolor="#FFFFFF" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{productcategory}]]></textFieldExpression>
@@ -192,7 +192,7 @@ $R{all} : $F{attributes}]]></textFieldExpression>
 					<printWhenExpression><![CDATA[!$F{productname}.equals( "" ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 					<paragraph leftIndent="2"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{productname}]]></textFieldExpression>
@@ -202,7 +202,7 @@ $R{all} : $F{attributes}]]></textFieldExpression>
 					<printWhenExpression><![CDATA[!$F{sameperiodsum}.equals( "" ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" verticalAlignment="Middle">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sameperiodsum}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -211,7 +211,7 @@ $R{all} : $F{attributes}]]></textFieldExpression>
 					<printWhenExpression><![CDATA[!$F{productcategory}.equals( "" ) ? Boolean.TRUE : Boolean.FALSE]]></printWhenExpression>
 				</reportElement>
 				<textElement verticalAlignment="Middle" markup="none">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{productcategory}]]></textFieldExpression>
@@ -229,7 +229,7 @@ $R{all} : $F{attributes}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
@@ -242,7 +242,7 @@ $R{all} : $F{attributes}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{page} + " " +$V{PAGE_NUMBER} +" " + $R{of}]]></textFieldExpression>
 			</textField>
@@ -255,7 +255,7 @@ $R{all} : $F{attributes}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
 			</textField>

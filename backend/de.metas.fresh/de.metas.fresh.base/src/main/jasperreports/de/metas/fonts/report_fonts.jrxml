@@ -17,7 +17,7 @@
 			<textField>
 				<reportElement x="0" y="3" width="555" height="30" uuid="2a40d81d-f2dc-4339-8f73-e6d19b28c678"/>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="20"/>
+					<font fontName="NotoSansSC" size="20"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Available Fonts"]]></textFieldExpression>
 			</textField>
@@ -28,7 +28,7 @@
 			<textField isStretchWithOverflow="true">
 				<reportElement x="0" y="0" width="180" height="30" uuid="4cc5ef64-c704-49e1-907a-8b20d210b252"/>
 				<textElement>
-					<font fontName="Arial" size="12" isBold="true"/>
+					<font fontName="NotoSansSC" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Fonts retrieved using jasper FontUtil class"]]></textFieldExpression>
 			</textField>
@@ -38,7 +38,7 @@
 			<textField isStretchWithOverflow="true" evaluationTime="Band">
 				<reportElement x="0" y="0" width="180" height="40" uuid="077a0e38-38e1-4574-a5ef-f68d76105fb7"/>
 				<textElement markup="styled">
-					<font fontName="Arial"/>
+					<font fontName="NotoSansSC"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{RetrieveAvailableFonts_SCRIPTLET}.retrieveAvailableFontsUsingFontUtil()]]></textFieldExpression>
 			</textField>
@@ -47,7 +47,7 @@
 			<textField isStretchWithOverflow="true">
 				<reportElement positionType="Float" x="0" y="0" width="180" height="30" uuid="37738902-b200-48f3-9f9b-de0a33f6821c"/>
 				<textElement>
-					<font fontName="Arial" size="12" isBold="true"/>
+					<font fontName="NotoSansSC" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Fonts retrieved using GraphicsEnvironment class"]]></textFieldExpression>
 			</textField>
@@ -56,7 +56,7 @@
 			<textField isStretchWithOverflow="true">
 				<reportElement positionType="Float" x="0" y="0" width="180" height="40" uuid="ae1376ee-81c4-4daf-a03b-6fdfb2c0f96c"/>
 				<textElement markup="styled">
-					<font fontName="Arial"/>
+					<font fontName="NotoSansSC"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{RetrieveAvailableFonts_SCRIPTLET}.retrieveAvailableFontsUsingGraphicsEnvironment()]]></textFieldExpression>
 			</textField>

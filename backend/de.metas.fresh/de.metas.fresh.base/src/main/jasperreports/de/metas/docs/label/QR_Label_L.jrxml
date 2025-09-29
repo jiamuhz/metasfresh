@@ -54,35 +54,35 @@ where s.ad_pinstance_id=$P{AD_PInstance_ID};]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="115" y="28" width="286" height="18" uuid="9ca36b70-e8b8-46ae-86ea-1667ec6270f6"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="14" isBold="true"/>
+					<font fontName="NotoSansSC" size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{prod_name}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="115" y="3" width="286" height="18" uuid="88fc1e12-5d5b-4a16-bc62-4bf4dd0b6461"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="14" isBold="true"/>
+					<font fontName="NotoSansSC" size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{prod_value}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="5" y="3" width="110" height="18" uuid="1415ffa8-2f48-4e64-b03b-ac781bb3bd42"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="14" isBold="true"/>
+					<font fontName="NotoSansSC" size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{prodno}+" : "]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="5" y="28" width="110" height="18" uuid="eebd7a7d-451e-4133-84bd-6041ab691046"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="14" isBold="true"/>
+					<font fontName="NotoSansSC" size="14" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{prodname}+" : "]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement positionType="FixRelativeToBottom" x="11" y="261" width="169" height="14" uuid="7fde2959-85e7-48ba-9215-bdaa594769a0"/>
 				<textElement textAlignment="Center" markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{hu}]]></textFieldExpression>
 			</textField>
@@ -92,42 +92,42 @@ where s.ad_pinstance_id=$P{AD_PInstance_ID};]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="185" y="120" width="70" height="18" uuid="f4edc7b4-1b38-4322-85a6-8214833326f3"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{proddate}+" : "]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="185" y="149" width="70" height="18" uuid="5f3702c2-e931-4153-916a-2a3f844b005b"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{vendor}+" : "]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="257" y="149" width="144" height="18" uuid="4c46d1f0-3781-48c4-b99f-0e5c1e744c6b"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{vendorname}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement x="257" y="120" width="144" height="18" uuid="013766d3-9f4c-475d-a1f7-431b1b67643c"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{proddate}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="185" y="174" width="70" height="18" uuid="8f323ccf-c760-4b18-a608-590311e33c9d"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{receiptdate}+" : "]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="257" y="174" width="144" height="18" uuid="859efbcc-fd5f-48b9-a389-36e52c45ad6a"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{receiptdate}]]></textFieldExpression>
 			</textField>

@@ -81,7 +81,7 @@ order by vatcode, kontono, taxname
 				<textField pattern="#,##0.00">
 					<reportElement x="185" y="0" width="96" height="12" uuid="5b41f040-1901-4a34-8495-336384161f4c"/>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{taxbaseamt_sum}]]></textFieldExpression>
 				</textField>

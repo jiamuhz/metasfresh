@@ -38,7 +38,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="48" isBold="true" isItalic="true"/>
+					<font fontName="NotoSansSC" size="48" isBold="true" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[(($F{docstatus}.equals("DR")) ? "Entwurf" :
 (($F{docstatus}.equals("IN")) ? "Ungültig" : null))]]></textFieldExpression>
@@ -249,7 +249,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + "     / "]]></textFieldExpression>
 			</textField>
@@ -262,7 +262,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Page}]]></textFieldExpression>
 			</textField>
@@ -275,7 +275,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>

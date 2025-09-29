@@ -64,14 +64,14 @@ where s.ad_pinstance_id=$P{AD_PInstance_ID}]]>
 			<staticText>
 				<reportElement x="14" y="78" width="66" height="20" uuid="0ed57ae5-5609-48ed-bcb5-00f7552cb3c9"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="16" isBold="true"/>
+					<font fontName="NotoSansSC" size="16" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Typ:]]></text>
 			</staticText>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="80" y="78" width="133" height="20" uuid="aa2f9d6c-354d-460b-8b09-0cbf84de7142"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="16" isBold="true"/>
+					<font fontName="NotoSansSC" size="16" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{prod_value}]]></textFieldExpression>
 			</textField>
@@ -93,7 +93,7 @@ where s.ad_pinstance_id=$P{AD_PInstance_ID}]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="81" y="124" width="133" height="11" uuid="aca94a6e-f9a6-4a09-8925-53ad9a1370ab"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{serialno}]]></textFieldExpression>
 			</textField>
@@ -105,7 +105,7 @@ where s.ad_pinstance_id=$P{AD_PInstance_ID}]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="14" y="125" width="67" height="11" uuid="7b3bf292-f090-49e9-8229-41fb053cf65d"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{SerialNo}]]></textFieldExpression>
 			</textField>
@@ -114,14 +114,14 @@ where s.ad_pinstance_id=$P{AD_PInstance_ID}]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="6" y="9" width="98" height="11" uuid="6cae7586-0a61-44b8-8dff-5ba04b1ac4c8"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="7" isBold="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{serialno}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="121" y="-2" width="60" height="10" uuid="d5b05629-69e6-4c75-949c-9a5395e5e707"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{prod_value}]]></textFieldExpression>
 			</textField>
@@ -138,7 +138,7 @@ where s.ad_pinstance_id=$P{AD_PInstance_ID}]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="185" y="-2" width="67" height="11" uuid="c957d23a-2c59-4418-9c32-a35867caf5b9"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{serialno}]]></textFieldExpression>
 			</textField>

@@ -54,56 +54,56 @@ ORDER BY value
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<text><![CDATA[HU-Nr.]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="61" y="13" width="150" height="15" uuid="54ffa156-bd0d-4cc6-bc9b-068802965c61"/>
 				<textElement textAlignment="Center" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="11" isBold="false"/>
+					<font fontName="NotoSansSC" size="11" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="24" y="33" width="66" height="11" uuid="b192d775-fe1e-4f72-8136-6bdd73210e42"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Artikelnummer]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="90" y="33" width="117" height="11" uuid="06fb32e0-ab2e-4a64-bf35-9a2a3d5fc104"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{prod_value}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="90" y="44" width="117" height="11" uuid="b0a5ab0c-75b8-418f-9472-251d7316084e"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="24" y="44" width="66" height="11" uuid="085446c4-29f0-4722-9b43-fea50fe50d32"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Artikelname]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="24" y="55" width="66" height="11" uuid="75c43e17-9a8f-4dcf-9918-a42d402fb9ef"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<text><![CDATA[Seriennummer]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement x="90" y="55" width="117" height="11" uuid="773f5518-b39d-47b9-bdd4-59efefb9551f"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{serialno}]]></textFieldExpression>
 			</textField>

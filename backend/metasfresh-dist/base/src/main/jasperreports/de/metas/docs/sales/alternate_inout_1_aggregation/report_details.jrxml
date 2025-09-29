@@ -177,84 +177,84 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 			<textField>
 				<reportElement uuid="556066b9-32bd-4253-9cef-dcb9c261152e" key="textField-19" positionType="FixRelativeToBottom" x="352" y="11" width="90" height="13" forecolor="#000000"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{QuantityOrdered}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="931d2194-a53e-4c55-992c-8bb07b2c918a" key="textField-13" positionType="FixRelativeToBottom" x="84" y="23" width="116" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Description}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="5ab854ae-ecbe-43e0-88b4-534ae0c73786" key="textField-13" positionType="FixRelativeToBottom" x="84" y="11" width="116" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Article}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="d75f4caa-fb47-4cea-bc83-97c904e110bf" key="textField-20" positionType="FixRelativeToBottom" x="445" y="11" width="70" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{HUUnit}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="d8fe0e91-e6b8-4e4c-b332-58a860a9dbc8" key="textField-20" positionType="FixRelativeToBottom" x="445" y="23" width="70" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Unit}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="6ff26657-6119-4cb7-8018-e5d609e54b16" key="textField-31" positionType="FixRelativeToBottom" mode="Transparent" x="321" y="11" width="47" height="13" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#FFFFFF"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<text><![CDATA[VE/BE]]></text>
 			</staticText>
 			<textField>
 				<reportElement uuid="0e2e425f-cee9-425a-9489-b7db3f9d8c2f" key="textField-17" positionType="FixRelativeToBottom" x="200" y="11" width="121" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{EANNo}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="ed371fcd-88f4-433d-844e-690932460015" key="textField-16" positionType="FixRelativeToBottom" x="37" y="23" width="48" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Origin}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="3fd96532-8ffd-411f-900a-666bbc7ebbbc" key="textField-31" positionType="FixRelativeToBottom" mode="Transparent" x="200" y="23" width="121" height="13" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#FFFFFF"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PriceList}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="f0424bea-807a-4819-b1eb-2112bfd18eef" key="textField-31" positionType="FixRelativeToBottom" mode="Transparent" x="321" y="23" width="47" height="13" isPrintWhenDetailOverflows="true" forecolor="#000000" backcolor="#FFFFFF"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="SansSerif" size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<text><![CDATA[EP/VE]]></text>
 			</staticText>
 			<textField>
 				<reportElement uuid="c3bfffea-887a-45c8-a7c2-1c70185d5207" key="textField-16" positionType="FixRelativeToBottom" x="37" y="11" width="48" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Line}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="2eef1ffe-7c23-41d6-b9c3-ace89f9a24d1" key="textField-20" positionType="FixRelativeToBottom" x="515" y="11" width="50" height="13" forecolor="#000000"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" pdfFontName="Helvetica-Bold"/>
+					<font size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Total}]]></textFieldExpression>
 			</textField>
@@ -274,14 +274,14 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="10" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font fontName="NotoSansSC" size="10" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{LINESUM_SUM}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="5532d787-c1b7-4b0e-b779-d47279aa279f" key="textField-49" mode="Transparent" x="37" y="0" width="150" height="13" forecolor="#000000"/>
 				<textElement markup="none">
-					<font size="10" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font size="10" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Carry}]]></textFieldExpression>
 			</textField>
@@ -299,7 +299,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{line}]]></textFieldExpression>
 			</textField>
@@ -312,7 +312,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ean}]]></textFieldExpression>
 			</textField>
@@ -325,7 +325,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{capacity}]]></textFieldExpression>
 			</textField>
@@ -338,7 +338,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -351,7 +351,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyenteredtu}]]></textFieldExpression>
 			</textField>
@@ -364,7 +364,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{attributes}]]></textFieldExpression>
 			</textField>
@@ -377,7 +377,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{container}]]></textFieldExpression>
 			</textField>
@@ -390,7 +390,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
 			</textField>
@@ -403,7 +403,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 			</textField>
@@ -416,7 +416,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyentered}]]></textFieldExpression>
 			</textField>
@@ -431,7 +431,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pricelist}]]></textFieldExpression>
 			</textField>
@@ -444,7 +444,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{priceentered}]]></textFieldExpression>
 			</textField>
@@ -459,7 +459,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="10" isItalic="false" pdfFontName="Helvetica-Oblique"/>
+					<font fontName="NotoSansSC" size="10" isItalic="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{lineamt}]]></textFieldExpression>
 			</textField>
@@ -481,7 +481,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="10" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font fontName="NotoSansSC" size="10" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{LINESUM_SUM}]]></textFieldExpression>
 			</textField>
@@ -490,7 +490,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<printWhenExpression><![CDATA[( $V{LINESUM_SUM}.intValue() > 0 ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="10" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font size="10" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{SubTotal}]]></textFieldExpression>
 			</textField>
@@ -509,7 +509,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="10" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold"/>
+					<font fontName="NotoSansSC" size="10" isBold="true" isItalic="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{LINESUM_SUM}]]></textFieldExpression>
 			</textField>
@@ -518,7 +518,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 					<printWhenExpression><![CDATA[new Boolean($V{LINESUM_SUM}.intValue() > 0 )]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="10" isBold="true" isItalic="false" pdfFontName="Helvetica-Bold"/>
+					<font size="10" isBold="true" isItalic="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{GrandTotal}]]></textFieldExpression>
 			</textField>

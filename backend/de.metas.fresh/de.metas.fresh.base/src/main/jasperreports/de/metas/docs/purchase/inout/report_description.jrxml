@@ -62,7 +62,7 @@
 			<textField>
 				<reportElement key="textField-6" x="37" y="137" width="140" height="13" forecolor="#000000" uuid="09ec774b-e26e-40a0-8143-f09a53cb9b0a"/>
 				<textElement textAlignment="Left" markup="none">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{printname}]]></textFieldExpression>
 			</textField>
@@ -84,7 +84,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
@@ -136,7 +136,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{eori}]]></textFieldExpression>
 			</textField>
@@ -145,7 +145,7 @@
 					<printWhenExpression><![CDATA[new Boolean($F{eori}!=null)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Left" markup="none">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{EORI}]]></textFieldExpression>
 			</textField>

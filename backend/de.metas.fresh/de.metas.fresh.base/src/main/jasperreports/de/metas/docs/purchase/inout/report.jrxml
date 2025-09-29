@@ -252,7 +252,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + "     / "]]></textFieldExpression>
 			</textField>
@@ -265,7 +265,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Page}]]></textFieldExpression>
 			</textField>
@@ -278,7 +278,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
@@ -328,14 +328,14 @@
 			<textField>
 				<reportElement x="26" y="7" width="147" height="13" uuid="02b7b566-3ec1-453d-823a-bce6f71fe49d"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{RecipientSignature}+":"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="26" y="44" width="143" height="13" uuid="2c6ae606-0cb0-43d7-85eb-9684da7dadbc"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{ShipperSignature}+":"]]></textFieldExpression>
 			</textField>

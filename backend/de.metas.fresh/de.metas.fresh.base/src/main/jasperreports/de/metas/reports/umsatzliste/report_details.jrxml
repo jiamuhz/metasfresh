@@ -72,7 +72,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="10" fontName="Arial" isBold="true" />
+						<font size="10" fontName="NotoSansSC" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$F{month}]]></textFieldExpression>
 				</textField>
@@ -85,7 +85,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="10" fontName="Arial" isBold="true" />
+						<font size="10" fontName="NotoSansSC" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$V{MonthInvoiced}]]></textFieldExpression>
 				</textField>
@@ -98,7 +98,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="10" fontName="Arial" isBold="true" />
+						<font size="10" fontName="NotoSansSC" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$V{MonthShipped}]]></textFieldExpression>
 				</textField>
@@ -111,7 +111,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="10" fontName="Arial" isBold="true" />
+						<font size="10" fontName="NotoSansSC" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$V{MonthOrdered}]]></textFieldExpression>
 				</textField>
@@ -124,7 +124,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="10" fontName="Arial" isBold="true" isItalic="false" />
+						<font size="10" fontName="NotoSansSC" isBold="true" isItalic="false" />
 					</textElement>
 					<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 				</textField>
@@ -144,7 +144,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" fontName="Arial" isBold="true" />
+						<font size="8" fontName="NotoSansSC" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$F{bp_value}]]></textFieldExpression>
 				</textField>
@@ -157,7 +157,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" fontName="Arial" isBold="true" />
+						<font size="8" fontName="NotoSansSC" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$F{bp_name}]]></textFieldExpression>
 				</textField>
@@ -170,7 +170,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" fontName="Arial" isBold="true" />
+						<font size="8" fontName="NotoSansSC" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$V{BPinvoiced}]]></textFieldExpression>
 				</textField>
@@ -183,7 +183,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" fontName="Arial" isBold="true" />
+						<font size="8" fontName="NotoSansSC" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$V{BPshipped}]]></textFieldExpression>
 				</textField>
@@ -196,7 +196,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" fontName="Arial" isBold="true" />
+						<font size="8" fontName="NotoSansSC" isBold="true" />
 					</textElement>
 					<textFieldExpression><![CDATA[$V{BPordered}]]></textFieldExpression>
 				</textField>
@@ -209,7 +209,7 @@
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" fontName="Arial" isBold="true" isItalic="false" />
+						<font size="8" fontName="NotoSansSC" isBold="true" isItalic="false" />
 					</textElement>
 					<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 				</textField>
@@ -305,35 +305,35 @@
 			<staticText>
 				<reportElement key="textField-68" x="49" y="0" width="45" height="12" forecolor="#FFFFFF" uuid="9fe86762-e9e4-4e74-acc6-282224c7279c"/>
 				<textElement textAlignment="Left" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Kundennr.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-69" x="96" y="0" width="139" height="12" forecolor="#FFFFFF" uuid="72dc2162-d088-406c-881d-c495aafdb9c3"/>
 				<textElement textAlignment="Left" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Kundenname]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-70" x="267" y="0" width="70" height="12" forecolor="#FFFFFF" uuid="90f301bf-b84a-4eb4-a7ba-296ba2d55a11"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Berechnet]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-71" x="342" y="0" width="70" height="12" forecolor="#FFFFFF" uuid="ad4f80d4-84bf-4d95-91a5-508acf6a1c98"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Geliefert]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-72" x="417" y="0" width="70" height="12" forecolor="#FFFFFF" uuid="d4995998-095a-4b8f-ae4c-98cbfbf41c7a"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Beauftragt]]></text>
 			</staticText>
@@ -348,7 +348,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{MonthOrdered}]]></textFieldExpression>
 			</textField>
@@ -363,7 +363,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{MonthShipped}]]></textFieldExpression>
 			</textField>
@@ -378,7 +378,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{MonthInvoiced}]]></textFieldExpression>
 			</textField>
@@ -393,14 +393,14 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{carry}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement key="textField-72" x="498" y="0" width="47" height="12" forecolor="#FFFFFF" uuid="24e2f765-435a-40d8-96f0-917ab8bd9fc0"/>
 				<textElement markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Währung]]></text>
 			</staticText>

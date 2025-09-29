@@ -63,49 +63,49 @@ ORDER BY
 			<staticText>
 				<reportElement key="textField-16" x="37" y="0" width="300" height="12" forecolor="#000000" uuid="ae6b9054-e9e0-47c1-bd00-0ed156301f00"/>
 				<textElement markup="none">
-					<font size="9" fontName="Arial" isBold="true" />
+					<font size="9" fontName="NotoSansSC" isBold="true" />
 				</textElement>
 				<text><![CDATA[Artikel]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="557" y="0" width="13" height="12" uuid="c7acd6de-af63-42ec-a530-5ed4496aa666"/>
 				<textElement textAlignment="Right">
-					<font size="9" fontName="Arial" isBold="true" />
+					<font size="9" fontName="NotoSansSC" isBold="true" />
 				</textElement>
 				<text><![CDATA[%]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-16" x="355" y="0" width="60" height="12" forecolor="#000000" uuid="ae6b9054-e9e0-47c1-bd00-0ed156301f00"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" fontName="Arial" isBold="true" />
+					<font size="9" fontName="NotoSansSC" isBold="true" />
 				</textElement>
 				<text><![CDATA[Gewicht]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-16" x="355" y="12" width="60" height="12" forecolor="#000000" uuid="ae6b9054-e9e0-47c1-bd00-0ed156301f00"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" fontName="Arial" isBold="true" />
+					<font size="9" fontName="NotoSansSC" isBold="true" />
 				</textElement>
 				<text><![CDATA[Waschprobe]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-16" x="415" y="0" width="60" height="12" forecolor="#000000" uuid="ae6b9054-e9e0-47c1-bd00-0ed156301f00"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" fontName="Arial" isBold="true" />
+					<font size="9" fontName="NotoSansSC" isBold="true" />
 				</textElement>
 				<text><![CDATA[Gewicht]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-16" x="415" y="12" width="60" height="12" forecolor="#000000" uuid="ae6b9054-e9e0-47c1-bd00-0ed156301f00"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" fontName="Arial" isBold="true" />
+					<font size="9" fontName="NotoSansSC" isBold="true" />
 				</textElement>
 				<text><![CDATA[Lieferung]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-16" x="480" y="0" width="40" height="12" forecolor="#000000" uuid="ae6b9054-e9e0-47c1-bd00-0ed156301f00"/>
 				<textElement markup="none">
-					<font size="9" fontName="Arial" isBold="true" />
+					<font size="9" fontName="NotoSansSC" isBold="true" />
 				</textElement>
 				<text><![CDATA[Einheit]]></text>
 			</staticText>
@@ -122,7 +122,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 			</textField>
@@ -135,7 +135,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -148,7 +148,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{percentage}]]></textFieldExpression>
 			</textField>
@@ -163,7 +163,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyprojected}]]></textFieldExpression>
 			</textField>
@@ -178,7 +178,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyprojected}]]></textFieldExpression>
 			</textField>
@@ -193,7 +193,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyprojected}]]></textFieldExpression>
 			</textField>
@@ -208,7 +208,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
 			</textField>
@@ -223,7 +223,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
 			</textField>
@@ -238,7 +238,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
 			</textField>
@@ -253,7 +253,7 @@ ORDER BY
 			<staticText>
 				<reportElement key="textField-16" x="37" y="24" width="160" height="12" forecolor="#000000" uuid="ae6b9054-e9e0-47c1-bd00-0ed156301f00"/>
 				<textElement markup="none">
-					<font size="9" fontName="Arial" isBold="true" />
+					<font size="9" fontName="NotoSansSC" isBold="true" />
 				</textElement>
 				<text><![CDATA[Qualitätsbewertung]]></text>
 			</staticText>
@@ -272,7 +272,7 @@ ORDER BY
 			<staticText>
 				<reportElement key="textField-16" x="37" y="24" width="160" height="12" forecolor="#000000" uuid="ae6b9054-e9e0-47c1-bd00-0ed156301f00"/>
 				<textElement markup="none">
-					<font size="9" fontName="Arial" isBold="true" />
+					<font size="9" fontName="NotoSansSC" isBold="true" />
 				</textElement>
 				<text><![CDATA[Qualitätsbewertung]]></text>
 			</staticText>

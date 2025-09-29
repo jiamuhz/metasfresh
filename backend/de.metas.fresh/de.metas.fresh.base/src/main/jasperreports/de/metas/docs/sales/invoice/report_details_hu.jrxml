@@ -76,42 +76,42 @@ where IsPrintWhenPackingMaterial='Y'
 			<textField>
 				<reportElement key="textField-16" x="37" y="0" width="160" height="12" forecolor="#000000" uuid="743f68ba-ff0c-4320-b5d5-47e666b38490"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{PackingMaterial}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-19" x="436" y="0" width="31" height="12" forecolor="#000000" uuid="abf845aa-feb5-4936-9920-5f767128c6e3"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Price}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-20" x="406" y="0" width="37" height="12" forecolor="#000000" uuid="ab85f5d6-b118-45bb-b5ec-dc863e51b7bf"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Unit}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-20" x="493" y="0" width="50" height="12" forecolor="#000000" uuid="bf46f72e-5d4d-4f1a-a45a-0a46bbe56e51"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Amount}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-19" x="359" y="0" width="46" height="12" forecolor="#000000" uuid="ff1b3d6c-bd7e-4888-821c-e2f84cd91664"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Return}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-19" x="312" y="0" width="46" height="12" forecolor="#000000" uuid="9e1558f1-316c-48dc-9e8c-9cb1ddd3660f"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Delivered}]]></textFieldExpression>
 			</textField>
@@ -120,7 +120,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<printWhenExpression><![CDATA[new Boolean ($F{isprinttax}.equals( "Y" ))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Tax}]]></textFieldExpression>
 			</textField>
@@ -140,14 +140,14 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font fontName="NotoSansSC" size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{LINESUM_SUM}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-49" mode="Transparent" x="37" y="0" width="160" height="12" forecolor="#000000" uuid="f793542a-4c76-40c3-a9ef-44637bd79be6"/>
 				<textElement markup="none">
-					<font size="9" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Carry}]]></textFieldExpression>
 			</textField>
@@ -164,7 +164,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -177,7 +177,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{linenetamt}]]></textFieldExpression>
 			</textField>
@@ -203,7 +203,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{price}]]></textFieldExpression>
 			</textField>
@@ -216,7 +216,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{retour}]]></textFieldExpression>
 			</textField>
@@ -229,7 +229,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{shipped}]]></textFieldExpression>
 			</textField>
@@ -244,7 +244,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{rate}]]></textFieldExpression>
 			</textField>
@@ -260,7 +260,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<printWhenExpression><![CDATA[( $V{LINESUM_SUM}.intValue() > 0 ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{SubTotal}]]></textFieldExpression>
 			</textField>
@@ -275,7 +275,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font fontName="NotoSansSC" size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{LINESUM_SUM}]]></textFieldExpression>
 			</textField>
@@ -286,7 +286,7 @@ where IsPrintWhenPackingMaterial='Y'
 			<textField>
 				<reportElement key="textField-52" mode="Transparent" x="37" y="0" width="160" height="12" forecolor="#000000" uuid="e18298cf-f16b-4ab0-a298-7862184914d4"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="9" isBold="true" isItalic="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="true" isItalic="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{TotalAmount}]]></textFieldExpression>
 			</textField>
@@ -299,7 +299,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="true" isItalic="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="true" isItalic="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{LINESUM_SUM}]]></textFieldExpression>
 			</textField>

@@ -88,7 +88,7 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 					<paragraph leftIndent="0"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Pos."]]></textFieldExpression>
@@ -99,7 +99,7 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{commoditynumber}]]></textFieldExpression>
@@ -110,7 +110,7 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{deliverycountry}]]></textFieldExpression>
 			</textField>
@@ -120,7 +120,7 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{origincountry}]]></textFieldExpression>
 			</textField>
@@ -130,7 +130,7 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Qty}]]></textFieldExpression>
 			</textField>
@@ -140,7 +140,7 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Currency}]]></textFieldExpression>
 			</textField>
@@ -150,7 +150,7 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Amount}]]></textFieldExpression>
 			</textField>
@@ -160,7 +160,7 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Unit}]]></textFieldExpression>
 			</textField>
@@ -170,21 +170,21 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{deliveredfromcountry}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="50" y="56" width="523" height="14" uuid="285aba6a-0a15-4208-af82-b6562c35578b"/>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{orgname}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="0" y="32" width="594" height="20" uuid="f3b07e64-f172-4ce1-84e7-9287af047df0"/>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="14" isBold="false"/>
+					<font fontName="NotoSansSC" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Title}]]></textFieldExpression>
 			</textField>
@@ -194,7 +194,7 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Product}]]></textFieldExpression>
@@ -205,7 +205,7 @@ order by row_number;]]>
 					<pen lineWidth="0.0"/>
 				</box>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Product}]]></textFieldExpression>
@@ -213,7 +213,7 @@ order by row_number;]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="50" y="71" width="523" height="14" uuid="07d48a3c-c365-45a1-8223-a1b741ea1d76"/>
 				<textElement>
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Month}+"  " + $F{period}]]></textFieldExpression>
 			</textField>
@@ -224,42 +224,42 @@ order by row_number;]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="50" y="3" width="26" height="12" isPrintInFirstWholeBand="true" forecolor="#000000" uuid="a1f526a6-350f-413e-9baa-e62fb56196d1"/>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{row_number}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="301" y="3" width="46" height="12" forecolor="#000000" uuid="5a1388b5-bf52-4855-aa8b-99f7a395cf25"/>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{deliverycountry}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="348" y="3" width="52" height="12" forecolor="#000000" uuid="6ecb8b31-4bcc-4d75-a0b0-af40f3a11b29"/>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{origincountry}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="0.00" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="399" y="3" width="41" height="12" forecolor="#000000" uuid="563802ec-c3b9-413e-a78f-4ade8c235ea0"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{movementqty}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="441" y="3" width="28" height="12" forecolor="#000000" uuid="f0c0bdf5-7df1-4372-9cf3-47b6ae0ac340"/>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="462" y="3" width="67" height="12" forecolor="#000000" uuid="e0ba4494-7037-48fc-8d67-ba4db300af27"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 					<paragraph rightIndent="4"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{grandtotal}]]></textFieldExpression>
@@ -267,7 +267,7 @@ order by row_number;]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="531" y="3" width="51" height="12" forecolor="#000000" uuid="477d16f8-7827-4cf0-b690-2ed35025be16"/>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 					<paragraph rightIndent="4"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
@@ -275,21 +275,21 @@ order by row_number;]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="256" y="3" width="45" height="12" forecolor="#000000" uuid="7cd0acbf-6ab2-4347-a51c-44f6498ce7a8"/>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{deliveredfromcountry}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="200" y="3" width="56" height="12" forecolor="#000000" uuid="3cbb6b7b-5808-46ec-81e8-104a1e9615d8"/>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{commoditynumber}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-13" x="76" y="3" width="124" height="12" forecolor="#000000" uuid="1d77ad21-8fda-48eb-95da-66101aebf43a"/>
 				<textElement textAlignment="Left" verticalAlignment="Top" markup="none">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{productname}+
 ($F{productdescription} != null ?  ("\n" + $F{productdescription}) : "")]]></textFieldExpression>
@@ -307,7 +307,7 @@ order by row_number;]]>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + "       /"]]></textFieldExpression>
 			</textField>
@@ -320,7 +320,7 @@ order by row_number;]]>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>

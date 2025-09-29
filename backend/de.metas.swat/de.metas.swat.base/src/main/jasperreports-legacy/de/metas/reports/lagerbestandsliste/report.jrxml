@@ -127,7 +127,7 @@
 						key="textField-12"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font fontName="Helvetica" size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{page}+" "+$V{PAGE_NUMBER}+" "+$R{of}+" "]]></textFieldExpression>
 				</textField>
@@ -142,7 +142,7 @@
 						key="textField-13"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left" verticalAlignment="Top" rotation="None" lineSpacing="Single">
-						<font fontName="Helvetica" pdfFontName="Helvetica" size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" pdfEncoding ="CP1252" isStrikeThrough="false" />
+						<font fontName="NotoSansSC"  size="8" isBold="false" isItalic="false" isUnderline="false"   isStrikeThrough="false" />
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
 				</textField>

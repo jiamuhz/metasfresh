@@ -12,7 +12,7 @@
 	<property name="com.jaspersoft.studio.unit.rightMargin" value="mm"/>
 	<property name="com.jaspersoft.studio.unit.columnWidth" value="mm"/>
 	<property name="com.jaspersoft.studio.unit.columnSpacing" value="mm"/>
-	<style name="BarcodeStyle" fill="Solid" hTextAlign="Center" hImageAlign="Center" fontName="Arial" fontSize="6"/>
+	<style name="BarcodeStyle" fill="Solid" hTextAlign="Center" hImageAlign="Center" fontName="NotoSansSC" fontSize="6"/>
 	<parameter name="C_BPartner_Location_ID" class="java.math.BigDecimal"/>
 	<parameter name="Copies" class="java.math.BigDecimal">
 		<defaultValueExpression><![CDATA[new BigDecimal(1)]]></defaultValueExpression>
@@ -49,7 +49,7 @@
 					<property name="com.jaspersoft.studio.unit.width" value="mm"/>
 				</reportElement>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
 			</textField>
@@ -59,14 +59,14 @@
 			<textField isBlankWhenNull="true">
 				<reportElement x="25" y="27" width="258" height="10" uuid="6d529c23-ecb4-4d98-a8a6-21e77ab5a9de"/>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_gln}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="25" y="40" width="50" height="15" uuid="f57f4587-5a39-4194-8275-279f829378d9"/>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="12" isBold="true"/>
+					<font fontName="NotoSansSC" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_gln_9_12}]]></textFieldExpression>
 			</textField>
@@ -75,7 +75,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="mm"/>
 				</reportElement>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="12" isBold="true"/>
+					<font fontName="NotoSansSC" size="12" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{addr_name}]]></textFieldExpression>
 			</textField>
@@ -89,7 +89,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="mm"/>
 				</reportElement>
 				<textElement textAlignment="Center">
-					<font fontName="Arial" size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
 			</textField>

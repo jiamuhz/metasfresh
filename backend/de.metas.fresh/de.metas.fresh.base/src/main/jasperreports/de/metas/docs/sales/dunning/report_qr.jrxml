@@ -69,7 +69,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[($F{cr_qr_iban}!=null && !$F{cr_qr_iban}.isEmpty()) ? $F{cr_qr_iban} 
 :( ($F{cr_iban} != null && !$F{cr_iban}.isEmpty()) ? $F{cr_iban} : "QR IBAN / IBAN ERROR"  )]]></textFieldExpression>
@@ -88,7 +88,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cr_name}]]></textFieldExpression>
 			</textField>
@@ -97,7 +97,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="6" isBold="true"/>
+					<font fontName="NotoSansSC" size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_PayableBy}]]></textFieldExpression>
 			</textField>
@@ -106,14 +106,14 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dr_address}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement mode="Transparent" x="15" y="17" width="141" height="18" uuid="1670afe4-fead-4382-94cd-ea343b14d009"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_ReceiptPart}]]></textFieldExpression>
 			</textField>
@@ -122,7 +122,7 @@
 					<property name="com.jaspersoft.studio.unit.y" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="11" isBold="true"/>
+					<font fontName="NotoSansSC" size="11" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_PaymentPart}]]></textFieldExpression>
 			</textField>
@@ -139,7 +139,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="6" isBold="true"/>
+					<font fontName="NotoSansSC" size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_PayableTo}]]></textFieldExpression>
 			</textField>
@@ -148,7 +148,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_PayableTo}]]></textFieldExpression>
 			</textField>
@@ -157,7 +157,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 					<paragraph lineSpacing="Single" lineSpacingSize="1.0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[($F{cr_qr_iban}!=null && !$F{cr_qr_iban}.isEmpty()) ? $F{cr_qr_iban} 
@@ -169,7 +169,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cr_name}]]></textFieldExpression>
 			</textField>
@@ -178,7 +178,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 					<paragraph lineSpacing="Single" lineSpacingSize="1.0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{referenceno}]]></textFieldExpression>
@@ -188,7 +188,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 					<paragraph lineSpacing="Single" lineSpacingSize="1.0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_PayableBy}]]></textFieldExpression>
@@ -198,7 +198,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 					<paragraph lineSpacing="Single" lineSpacingSize="1.0"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dr_address}]]></textFieldExpression>
@@ -210,7 +210,7 @@
 					<printWhenExpression><![CDATA[$F{referenceno} != null && !$F{referenceno}.isEmpty()]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_Reference}]]></textFieldExpression>
 			</textField>
@@ -220,7 +220,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cr_addres}]]></textFieldExpression>
 			</textField>
@@ -229,7 +229,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="6" isBold="true"/>
+					<font fontName="NotoSansSC" size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_Reference}]]></textFieldExpression>
 			</textField>
@@ -238,7 +238,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{referenceno}]]></textFieldExpression>
 			</textField>
@@ -269,7 +269,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_Currency}]]></textFieldExpression>
 			</textField>
@@ -278,28 +278,28 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_Amount}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement mode="Transparent" x="15" y="210" width="60" height="14" uuid="707c834e-211f-4347-9a08-0685daecbb59"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{currency}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="###0.00" isBlankWhenNull="true">
 				<reportElement mode="Transparent" x="72" y="210" width="80" height="14" uuid="4f58cf8d-7382-4cb9-83bd-dbedbdd499aa"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement mode="Transparent" x="38" y="239" width="122" height="14" uuid="4f97ad10-770e-4204-9d86-93ea3e7c84a3"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="6" isBold="true"/>
+					<font fontName="NotoSansSC" size="6" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_Acceptance_point}]]></textFieldExpression>
 			</textField>
@@ -309,7 +309,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{currency}]]></textFieldExpression>
 			</textField>
@@ -319,7 +319,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_Currency}]]></textFieldExpression>
 			</textField>
@@ -329,7 +329,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="8" isBold="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{QR_Amount}]]></textFieldExpression>
 			</textField>
@@ -339,7 +339,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
 			</textField>
@@ -349,7 +349,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="px"/>
 				</reportElement>
 				<textElement markup="none">
-					<font fontName="Arial" size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cr_addres}]]></textFieldExpression>
 			</textField>

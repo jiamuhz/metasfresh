@@ -117,7 +117,7 @@ order by vatcode, kontono, taxname, DateAcct
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="0" y="0" width="70" height="12" uuid="dfd5727d-fc81-4b4b-9fb9-13ed7a8cf830"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 					<paragraph leftIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateacct}]]></textFieldExpression>
@@ -125,28 +125,28 @@ order by vatcode, kontono, taxname, DateAcct
 			<textField>
 				<reportElement x="70" y="0" width="59" height="12" uuid="19c279ed-5e02-498d-9f9f-2c9571c30b89"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="249" y="0" width="131" height="12" uuid="3be0201f-0fe0-4acb-98a1-ad5efa157a49"/>
 				<textElement>
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxname}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00">
 				<reportElement x="383" y="0" width="55" height="12" uuid="54f96ea7-b31a-4158-9037-be149c76287d"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxrate}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00">
 				<reportElement x="625" y="0" width="106" height="12" uuid="340f6297-1764-4b1c-b30b-c217e46eeaba"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 					<paragraph rightIndent="5"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxamt}]]></textFieldExpression>
@@ -154,28 +154,28 @@ order by vatcode, kontono, taxname, DateAcct
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="128" y="0" width="120" height="12" uuid="9ce82332-fbd5-4b30-b809-ed7aa1ce68b2"/>
 				<textElement>
-					<font fontName="Arial" size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpname}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00">
 				<reportElement x="438" y="0" width="91" height="12" uuid="1f45bf74-d605-4c4d-b3f0-e5876ba9a6ba"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxbaseamt}.add($F{taxamt})]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00">
 				<reportElement x="529" y="0" width="96" height="12" uuid="32b42174-c631-4ec9-82f0-de6bcf560eb9"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxbaseamt}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00">
 				<reportElement x="529" y="0" width="26" height="12" uuid="5ea4aa31-5b4b-464b-b429-27bebb8ee8c2"/>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 			</textField>

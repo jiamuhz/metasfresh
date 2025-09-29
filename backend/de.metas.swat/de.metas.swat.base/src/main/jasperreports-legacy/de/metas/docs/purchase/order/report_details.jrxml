@@ -455,7 +455,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{carry}]]></textFieldExpression>
 			</textField>
@@ -470,7 +470,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font fontName="NotoSansSC" size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{LINESUM_SUM}]]></textFieldExpression>
 			</textField>
@@ -485,7 +485,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 			</textField>
@@ -517,7 +517,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font fontName="NotoSansSC" size="9" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyordered}]]></textFieldExpression>
 			</textField>
@@ -543,7 +543,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{priceenteredlist}]]></textFieldExpression>
 			</textField>
@@ -559,7 +559,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{discount}]]></textFieldExpression>
 			</textField>
@@ -572,7 +572,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{priceentered}]]></textFieldExpression>
 			</textField>
@@ -585,7 +585,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{linenetamt}]]></textFieldExpression>
 			</textField>
@@ -611,7 +611,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font fontName="SansSerif" size="9" isBold="false" pdfFontName="Helvetica"/>
+					<font fontName="NotoSansSC" size="9" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[( $F{m_product_id}.intValue() > 0 ? $F{line} : null )]]></textFieldExpression>
 			</textField>
@@ -707,7 +707,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="7" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{priceactual}]]></textFieldExpression>
 			</textField>
@@ -741,7 +741,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{subtotal}]]></textFieldExpression>
 			</textField>
@@ -756,7 +756,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="9" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font fontName="NotoSansSC" size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{LINESUM_SUM}]]></textFieldExpression>
 			</textField>
@@ -771,7 +771,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isItalic="true" pdfFontName="Helvetica-Oblique"/>
+					<font size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 			</textField>

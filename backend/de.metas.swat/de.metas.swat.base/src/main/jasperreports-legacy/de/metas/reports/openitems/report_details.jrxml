@@ -163,7 +163,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -180,7 +180,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{open_sum}]]></textFieldExpression>
 				</textField>
@@ -198,7 +198,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -215,7 +215,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{paid_sum}]]></textFieldExpression>
 				</textField>
@@ -233,7 +233,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -250,7 +250,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{total_sum}]]></textFieldExpression>
 				</textField>
@@ -405,7 +405,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-BoldOblique" size="9" isBold="true" isItalic="true"/>
+						<font  size="9" isBold="true" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{subtotal}]]></textFieldExpression>
 				</textField>
@@ -676,7 +676,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -705,7 +705,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{open_sum}]]></textFieldExpression>
 				</textField>
@@ -735,7 +735,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -764,7 +764,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{paid_sum}]]></textFieldExpression>
 				</textField>
@@ -794,7 +794,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -823,7 +823,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{total_sum}]]></textFieldExpression>
 				</textField>
@@ -852,7 +852,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-BoldOblique" size="9" isBold="true" isItalic="true"/>
+						<font  size="9" isBold="true" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{carry}]]></textFieldExpression>
 				</textField>
@@ -891,7 +891,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{documentno}]]></textFieldExpression>
 				</textField>
@@ -909,7 +909,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.sql.Timestamp"><![CDATA[$F{dateinvoiced}]]></textFieldExpression>
 				</textField>
@@ -926,7 +926,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{value}]]></textFieldExpression>
 				</textField>
@@ -943,7 +943,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
@@ -960,7 +960,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{grandtotal}]]></textFieldExpression>
 				</textField>
@@ -977,7 +977,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -994,7 +994,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{openamt}]]></textFieldExpression>
 				</textField>
@@ -1011,7 +1011,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1028,7 +1028,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{paidamt}]]></textFieldExpression>
 				</textField>
@@ -1045,7 +1045,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1063,7 +1063,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{discountdays}]]></textFieldExpression>
 				</textField>
@@ -1081,7 +1081,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{daysdue}]]></textFieldExpression>
 				</textField>
@@ -1099,7 +1099,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.sql.Timestamp"><![CDATA[$F{discountdate}]]></textFieldExpression>
 				</textField>
@@ -1117,7 +1117,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Integer"><![CDATA[$F{netdays}]]></textFieldExpression>
 				</textField>
@@ -1135,7 +1135,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.sql.Timestamp"><![CDATA[$F{duedate}]]></textFieldExpression>
 				</textField>
@@ -1161,7 +1161,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1178,7 +1178,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{open_sum}]]></textFieldExpression>
 				</textField>
@@ -1196,7 +1196,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1213,7 +1213,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{paid_sum}]]></textFieldExpression>
 				</textField>
@@ -1231,7 +1231,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1248,7 +1248,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{total_sum}]]></textFieldExpression>
 				</textField>
@@ -1277,7 +1277,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-BoldOblique" size="9" isBold="true" isItalic="true"/>
+						<font  size="9" isBold="true" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{subtotal}]]></textFieldExpression>
 				</textField>

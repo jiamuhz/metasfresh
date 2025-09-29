@@ -80,7 +80,7 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{combination} + " " + $F{description}]]></textFieldExpression>
 				</textField>
@@ -93,14 +93,14 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{Account_LineSum}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-106" x="0" y="0" width="50" height="15" uuid="5de18e02-d8d7-4e4b-ba20-b1df1c1d6e52"/>
 					<textElement markup="none">
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{account}]]></textFieldExpression>
 				</textField>
@@ -123,7 +123,7 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{activity} != null ? $F{activity} : $R{none}]]></textFieldExpression>
 				</textField>
@@ -136,14 +136,14 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{Activity_LineSum}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-106" x="50" y="0" width="75" height="15" uuid="2ea699ac-1ba1-4012-8774-0f8269c48285"/>
 					<textElement markup="none">
-						<font fontName="Arial" size="10" isBold="true"/>
+						<font fontName="NotoSansSC" size="10" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{activity}]]></textFieldExpression>
 				</textField>
@@ -166,7 +166,7 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{wh_name}]]></textFieldExpression>
 				</textField>
@@ -179,7 +179,7 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="8" isBold="true"/>
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{Warehouse_LineSum}]]></textFieldExpression>
 				</textField>
@@ -306,7 +306,7 @@ $P{ad_language}
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="SansSerif" size="8" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Warehouse_LineSum}]]></textFieldExpression>
 			</textField>
@@ -322,21 +322,21 @@ $P{ad_language}
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8" isBold="true" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{carry}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-68" x="208" y="0" width="50" height="12" forecolor="#FFFFFF" uuid="8bb169c1-b0e1-4830-a16e-c5387ab31b5c"/>
 				<textElement textAlignment="Left" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{articleno}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-69" x="258" y="0" width="149" height="12" forecolor="#FFFFFF" uuid="a0463faa-c117-4ec8-9678-cbbf50fffcb3"/>
 				<textElement textAlignment="Left" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{articlename}]]></textFieldExpression>
 			</textField>
@@ -345,14 +345,14 @@ $P{ad_language}
 					<printWhenExpression><![CDATA[new Boolean(false)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{HUs}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-70" x="458" y="0" width="60" height="12" forecolor="#FFFFFF" uuid="94b7d933-c56e-4794-9087-933cc5d97169"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{qty}]]></textFieldExpression>
 			</textField>
@@ -360,21 +360,21 @@ $P{ad_language}
 				<reportElement key="textField-71" x="518" y="0" width="60" height="12" forecolor="#FFFFFF" uuid="d3e364c9-6f14-4b39-87d4-d1f7caf5deba"/>
 				<box leftPadding="5"/>
 				<textElement markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{uom}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-72" x="578" y="0" width="90" height="12" forecolor="#FFFFFF" uuid="624a767b-88eb-4341-bb65-23ce11790f6c"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{averagesum}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-72" x="668" y="0" width="60" height="12" forecolor="#FFFFFF" uuid="eb5f6938-a2ca-47a8-a215-fe301fb17ab7"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="SansSerif" size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{totalsum}]]></textFieldExpression>
 			</textField>
@@ -454,7 +454,7 @@ $P{ad_language}
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8" isBold="true" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isBold="true" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{subtotal}]]></textFieldExpression>
 			</textField>

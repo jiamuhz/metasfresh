@@ -130,7 +130,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-29"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
-						<font fontName="SansSerif" pdfFontName="Helvetica-BoldOblique" size="36" isBold="true" isItalic="true"/>
+						<font fontName="NotoSansSC"  size="36" isBold="true" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{report.financial.watermark}]]></textFieldExpression>
 				</textField>
@@ -435,7 +435,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-31"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isPdfEmbedded ="false" isStrikeThrough="false" />
+						<font size="8" isBold="false" isItalic="false" isUnderline="false"  isStrikeThrough="false" />
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
 				</textField>

@@ -142,7 +142,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="false"/>
+						<font size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"  />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
@@ -155,7 +155,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="false"/>
+						<font size="10" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"  />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{description}]]></textFieldExpression>
 				</textField>
@@ -179,7 +179,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
@@ -192,7 +192,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{description}]]></textFieldExpression>
 				</textField>
@@ -226,7 +226,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="false"/>
+						<font size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"  />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_0}]]></textFieldExpression>
 				</textField>
@@ -239,7 +239,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="false"/>
+						<font size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"  />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_2}]]></textFieldExpression>
 				</textField>
@@ -252,7 +252,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold" isPdfEmbedded="false"/>
+						<font size="8" isBold="true" isItalic="false" isUnderline="false" isStrikeThrough="false"  />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_1}]]></textFieldExpression>
 				</textField>
@@ -265,7 +265,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_3}]]></textFieldExpression>
 				</textField>
@@ -278,7 +278,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_4}]]></textFieldExpression>
 				</textField>
@@ -291,7 +291,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_5}]]></textFieldExpression>
 				</textField>
@@ -304,7 +304,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_6}]]></textFieldExpression>
 				</textField>
@@ -317,7 +317,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_7}]]></textFieldExpression>
 				</textField>
@@ -330,7 +330,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{description}]]></textFieldExpression>
 				</textField>
@@ -343,7 +343,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
@@ -421,7 +421,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{description}]]></textFieldExpression>
 			</textField>
@@ -434,7 +434,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -447,7 +447,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_0}]]></textFieldExpression>
 			</textField>
@@ -460,7 +460,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_1}]]></textFieldExpression>
 			</textField>
@@ -473,7 +473,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_2}]]></textFieldExpression>
 			</textField>
@@ -486,7 +486,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_3}]]></textFieldExpression>
 			</textField>
@@ -499,7 +499,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_4}]]></textFieldExpression>
 			</textField>
@@ -512,7 +512,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_5}]]></textFieldExpression>
 			</textField>
@@ -525,7 +525,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_6}]]></textFieldExpression>
 			</textField>
@@ -538,7 +538,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" isPdfEmbedded="false"/>
+					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{col_7}]]></textFieldExpression>
 			</textField>

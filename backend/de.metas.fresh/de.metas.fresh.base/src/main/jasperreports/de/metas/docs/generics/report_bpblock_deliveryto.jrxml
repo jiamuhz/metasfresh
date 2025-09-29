@@ -39,14 +39,14 @@ WHERE C_Order_ID = $P{RECORD_ID} AND isActive = 'Y';]]>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="0" y="16" width="309" height="93" uuid="6622332f-b31d-40fc-add3-777b8f875905"/>
 				<textElement>
-					<font fontName="Arial" size="11" isBold="false"/>
+					<font fontName="NotoSansSC" size="11" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{deliverytoaddress}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="0" y="0" width="309" height="12" uuid="30a39dc2-6248-4173-b7d5-6c62017c0721"/>
 				<textElement>
-					<font fontName="Arial" size="9" isBold="false" isUnderline="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="false" isUnderline="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{org_addressline}]]></textFieldExpression>
 			</textField>

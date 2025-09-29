@@ -51,7 +51,7 @@ $P{ad_language}.equals("it_CH")?"Seite":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font fontName="SansSerif" size="48" isBold="true" isItalic="true" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1250"/>
+					<font fontName="NotoSansSC" size="48" isBold="true" isItalic="true"   />
 				</textElement>
 				<textFieldExpression><![CDATA[(($F{docstatus}.equals("DR")) ? "Entwurf" :
 (($F{docstatus}.equals("IN")) ? "Ungültig" : null))]]></textFieldExpression>

@@ -157,7 +157,7 @@ order by i.documentno, i.created
 						key="textField-40"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{overlimit_sum_total}]]></textFieldExpression>
 				</textField>
@@ -170,7 +170,7 @@ order by i.documentno, i.created
 						key="textField-41"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{discounter_sum_total}]]></textFieldExpression>
 				</textField>
@@ -183,7 +183,7 @@ order by i.documentno, i.created
 						key="textField-42"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{amt_sum_total}]]></textFieldExpression>
 				</textField>
@@ -197,7 +197,7 @@ order by i.documentno, i.created
 						key="textField-43"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font  size="9" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{totalsum}]]></textFieldExpression>
 				</textField>
@@ -211,7 +211,7 @@ order by i.documentno, i.created
 						key="textField-44"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font  size="9" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{discounter_sum_total}]]></textFieldExpression>
 				</textField>
@@ -225,7 +225,7 @@ order by i.documentno, i.created
 						key="textField-45"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font  size="9" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{overlimit_sum_total}]]></textFieldExpression>
 				</textField>
@@ -239,7 +239,7 @@ order by i.documentno, i.created
 						key="textField-46"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font  size="9" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{amt_sum_total}]]></textFieldExpression>
 				</textField>
@@ -252,7 +252,7 @@ order by i.documentno, i.created
 						key="textField-51"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{subtotal}]]></textFieldExpression>
 				</textField>
@@ -265,7 +265,7 @@ order by i.documentno, i.created
 						key="textField-59"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -279,7 +279,7 @@ order by i.documentno, i.created
 						key="textField-64"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -292,7 +292,7 @@ order by i.documentno, i.created
 						key="textField-69"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -306,7 +306,7 @@ order by i.documentno, i.created
 						key="textField-70"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -319,7 +319,7 @@ order by i.documentno, i.created
 						key="textField-77"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -333,7 +333,7 @@ order by i.documentno, i.created
 						key="textField-78"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -354,7 +354,7 @@ order by i.documentno, i.created
 						key="textField-53"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font pdfFontName="Helvetica-Bold" size="9" isBold="true"/>
+						<font  size="9" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{monat}]]></textFieldExpression>
 				</textField>
@@ -448,7 +448,7 @@ order by i.documentno, i.created
 						key="textField-61"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -462,7 +462,7 @@ order by i.documentno, i.created
 						key="textField-68"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -476,7 +476,7 @@ order by i.documentno, i.created
 						key="textField-76"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -497,7 +497,7 @@ order by i.documentno, i.created
 						key="textField-54"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+						<font  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.Double"><![CDATA[$F{weekcreated}]]></textFieldExpression>
 				</textField>
@@ -519,7 +519,7 @@ order by i.documentno, i.created
 						key="textField-56"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Bold" size="8" isBold="true"/>
+						<font  size="8" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[". " + $R{weekofyear}]]></textFieldExpression>
 				</textField>
@@ -614,7 +614,7 @@ order by i.documentno, i.created
 						key="textField-62"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -628,7 +628,7 @@ order by i.documentno, i.created
 						key="textField-67"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -642,7 +642,7 @@ order by i.documentno, i.created
 						key="textField-75"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -663,7 +663,7 @@ order by i.documentno, i.created
 						key="textField-57"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[$F{daycreated}]]></textFieldExpression>
 				</textField>
@@ -758,7 +758,7 @@ order by i.documentno, i.created
 						key="textField-63"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -772,7 +772,7 @@ order by i.documentno, i.created
 						key="textField-66"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -786,7 +786,7 @@ order by i.documentno, i.created
 						key="textField-74"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="9" isBold="false" isItalic="false"/>
+						<font  size="9" isBold="false" isItalic="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -912,7 +912,7 @@ $V{amt_sum_total}.intValue() != 0?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{discounter_sum_total}]]></textFieldExpression>
 				</textField>
@@ -973,7 +973,7 @@ $V{amt_sum_total}.intValue() != 0?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{overlimit_sum_total}]]></textFieldExpression>
 				</textField>
@@ -992,7 +992,7 @@ $V{amt_sum_total}.intValue() != 0?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{amt_sum_total}]]></textFieldExpression>
 				</textField>
@@ -1011,7 +1011,7 @@ $V{amt_sum_total}.intValue() != 0?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{carry}]]></textFieldExpression>
 				</textField>
@@ -1030,7 +1030,7 @@ $V{amt_sum_total}.intValue() != 0?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1049,7 +1049,7 @@ $V{amt_sum_total}.intValue() != 0?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1068,7 +1068,7 @@ $V{amt_sum_total}.intValue() != 0?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1101,7 +1101,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-13"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{documentno}]]></textFieldExpression>
 				</textField>
@@ -1115,7 +1115,7 @@ $V{amt_sum_total}.intValue() != 0?
 						isRemoveLineWhenBlank="true"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.sql.Timestamp"><![CDATA[$F{created}]]></textFieldExpression>
 				</textField>
@@ -1128,7 +1128,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-15"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{value}]]></textFieldExpression>
 				</textField>
@@ -1141,7 +1141,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-16"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
@@ -1154,7 +1154,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-17"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{linediscountamt}]]></textFieldExpression>
 				</textField>
@@ -1167,7 +1167,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-18"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{linediscount}]]></textFieldExpression>
 				</textField>
@@ -1180,7 +1180,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-19"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1206,7 +1206,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-20"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{lineoverlimitamt}]]></textFieldExpression>
 				</textField>
@@ -1219,7 +1219,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-21"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1232,7 +1232,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-22"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{lineoverlimit}]]></textFieldExpression>
 				</textField>
@@ -1259,7 +1259,7 @@ $V{amt_sum_total}.intValue() != 0?
 						isRemoveLineWhenBlank="true"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{linenetamt}]]></textFieldExpression>
 				</textField>
@@ -1272,7 +1272,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-73"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica" size="8" isBold="false"/>
+						<font  size="8" isBold="false"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1293,7 +1293,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-47"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{overlimit_sum_total}]]></textFieldExpression>
 				</textField>
@@ -1306,7 +1306,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-48"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{discounter_sum_total}]]></textFieldExpression>
 				</textField>
@@ -1319,7 +1319,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-49"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{amt_sum_total}]]></textFieldExpression>
 				</textField>
@@ -1332,7 +1332,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-52"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font pdfFontName="Helvetica-Oblique" size="9" isItalic="true"/>
+						<font  size="9" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{subtotal}]]></textFieldExpression>
 				</textField>
@@ -1345,7 +1345,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-60"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1358,7 +1358,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-71"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -1371,7 +1371,7 @@ $V{amt_sum_total}.intValue() != 0?
 						key="textField-79"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font pdfFontName="Helvetica-Oblique" size="9" isBold="false" isItalic="true"/>
+						<font  size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>

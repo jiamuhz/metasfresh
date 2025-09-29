@@ -49,7 +49,7 @@ ORDER BY componentName;]]>
 			<textField>
 				<reportElement isPrintRepeatedValues="false" x="0" y="5" width="180" height="14" uuid="c58e81c9-237f-4152-9114-98b1c96b0be3"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Detail_3}]]></textFieldExpression>
 			</textField>
@@ -60,14 +60,14 @@ ORDER BY componentName;]]>
 			<textField>
 				<reportElement isPrintRepeatedValues="false" x="0" y="2" width="136" height="12" uuid="12ebebf1-22ce-4f6e-9277-b0f9ab06e0f6"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{PackagingMaterial}+":"]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="136" y="2" width="455" height="12" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true" uuid="8411332e-a884-4413-9983-9958387ee1b9"/>
 				<textElement textAlignment="Left" verticalAlignment="Middle">
-					<font fontName="Arial" size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bomproduct}]]></textFieldExpression>
 			</textField>

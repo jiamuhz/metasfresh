@@ -149,7 +149,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement>
-						<font fontName="Arial" size="12" isBold="true"/>
+						<font fontName="NotoSansSC" size="12" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{parentvalue1}]]></textFieldExpression>
 				</textField>
@@ -158,7 +158,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement>
-						<font fontName="Arial" size="12" isBold="true"/>
+						<font fontName="NotoSansSC" size="12" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{parentname1}]]></textFieldExpression>
 				</textField>
@@ -167,7 +167,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="12" isBold="true"/>
+						<font fontName="NotoSansSC" size="12" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l1_sameyearsum}]]></textFieldExpression>
 				</textField>
@@ -176,7 +176,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="12" isBold="true"/>
+						<font fontName="NotoSansSC" size="12" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l1_lastyearsum}]]></textFieldExpression>
 				</textField>
@@ -200,7 +200,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement>
-						<font fontName="Arial" size="11" isBold="true"/>
+						<font fontName="NotoSansSC" size="11" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{parentvalue2}]]></textFieldExpression>
 				</textField>
@@ -209,7 +209,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement>
-						<font fontName="Arial" size="11" isBold="true"/>
+						<font fontName="NotoSansSC" size="11" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{parentname2}]]></textFieldExpression>
 				</textField>
@@ -218,7 +218,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="11" isBold="true"/>
+						<font fontName="NotoSansSC" size="11" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_sameyearsum}]]></textFieldExpression>
 				</textField>
@@ -227,7 +227,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="11" isBold="true"/>
+						<font fontName="NotoSansSC" size="11" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_lastyearsum}]]></textFieldExpression>
 				</textField>
@@ -250,7 +250,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement>
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{parentname3}]]></textFieldExpression>
 				</textField>
@@ -259,7 +259,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement>
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{parentvalue3}]]></textFieldExpression>
 				</textField>
@@ -270,7 +270,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.pattern" value="#,##0.00"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l3_sameyearsum}]]></textFieldExpression>
 				</textField>
@@ -279,7 +279,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l3_lastyearsum}]]></textFieldExpression>
 				</textField>
@@ -300,28 +300,28 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 				<textField isBlankWhenNull="true">
 					<reportElement x="37" y="0" width="50" height="12" uuid="321fdb14-4211-4505-84d5-666c08dd77f8"/>
 					<textElement>
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{parentvalue4}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="87" y="0" width="259" height="12" uuid="d813c35b-c720-4be2-8754-cec15bb25f6f"/>
 					<textElement>
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{parentname4}]]></textFieldExpression>
 				</textField>
 				<textField pattern="#,##0.00" isBlankWhenNull="true">
 					<reportElement x="353" y="0" width="102" height="12" uuid="9dede801-8988-467c-b0f7-1af6f577e4fc"/>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l4_sameyearsum}]]></textFieldExpression>
 				</textField>
 				<textField pattern="#,##0.00" isBlankWhenNull="true">
 					<reportElement x="455" y="0" width="102" height="12" uuid="d65c2267-a3fe-4406-a127-987d26a3e3d0"/>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="9" isBold="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l4_lastyearsum}]]></textFieldExpression>
 				</textField>
@@ -392,7 +392,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<printWhenExpression><![CDATA[!($F{parentvalue1}.equals($F{namevalue}))]]></printWhenExpression>
 					</reportElement>
 					<textElement>
-						<font fontName="Arial" size="9" isBold="true" isItalic="false"/>
+						<font fontName="NotoSansSC" size="9" isBold="true" isItalic="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{activityname}==null ? $R{NoActivity} : ($R{Activity}+" :  "+ $F{activityname})]]></textFieldExpression>
 				</textField>
@@ -401,7 +401,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 						<printWhenExpression><![CDATA[!($F{parentvalue1}.equals($F{namevalue}))]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font fontName="Arial" size="9" isBold="true" isItalic="false"/>
+						<font fontName="NotoSansSC" size="9" isBold="true" isItalic="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{activity_sum}]]></textFieldExpression>
 				</textField>
@@ -416,35 +416,35 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 			<textField>
 				<reportElement x="206" y="10" width="73" height="13" uuid="5ae2e5f1-5733-48e3-802c-73bb5f5a6893"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="10" isBold="true"/>
+					<font fontName="NotoSansSC" size="10" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Balance}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="37" y="47" width="50" height="12" uuid="8982ea2c-0e75-4070-beb9-713cc6eedb97"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Number}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="87" y="47" width="259" height="12" uuid="21c2a674-61a4-4668-b689-b0264221a282"/>
 				<textElement markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="353" y="47" width="102" height="12" uuid="dfad107d-84ff-4ee3-b0d4-477487fad9c2"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{SameYearSum}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="454" y="47" width="102" height="12" uuid="c0c76cb0-674a-4a38-a820-3eecd76b2a74"/>
 				<textElement textAlignment="Right" markup="none">
-					<font fontName="Arial" size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{LastYearSum}]]></textFieldExpression>
 			</textField>
@@ -458,7 +458,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="279" y="10" width="90" height="13" uuid="68f3a29c-8833-4395-b12e-542c09097be4"/>
 				<textElement>
-					<font fontName="Arial" isBold="true"/>
+					<font fontName="NotoSansSC" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
 			</textField>
@@ -480,7 +480,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 					<printWhenExpression><![CDATA[!($F{parentvalue1}.equals($F{namevalue}))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font fontName="Arial" size="8" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sameyearsum}]]></textFieldExpression>
 			</textField>
@@ -489,7 +489,7 @@ order by parentValue1, parentValue2, parentValue3, parentValue4, namevalue, leve
 					<printWhenExpression><![CDATA[!($F{parentvalue1}.equals($F{namevalue}))]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font fontName="Arial" size="8" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{productname} == null ? $R{NoProduct} : ($R{Product}+" :  "+  $F{productname})]]></textFieldExpression>
 			</textField>

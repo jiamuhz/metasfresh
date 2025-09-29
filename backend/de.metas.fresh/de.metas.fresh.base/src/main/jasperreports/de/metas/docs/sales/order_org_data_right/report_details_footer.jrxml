@@ -41,7 +41,7 @@
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
 				<textElement>
-					<font fontName="Arial" isBold="true"/>
+					<font fontName="NotoSansSC" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{payment_term}]]></textFieldExpression>
 			</textField>

@@ -21,7 +21,7 @@
 	<import value="net.sf.jasperreports.engine.*"/>
 	<import value="java.util.*"/>
 	<import value="net.sf.jasperreports.engine.data.*"/>
-	<style name="Barcode" forecolor="#000000" fontName="Arial" fontSize="11"/>
+	<style name="Barcode" forecolor="#000000" fontName="NotoSansSC" fontSize="11"/>
 	<parameter name="M_Product_ID" class="java.math.BigDecimal"/>
 	<parameter name="ad_language" class="java.lang.String" isForPrompting="false">
 		<defaultValueExpression><![CDATA[$P{REPORT_LOCALE}.toString()]]></defaultValueExpression>
@@ -66,7 +66,7 @@ FROM  M_Product_HazardSymbol ph
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement positionType="Float" x="0" y="29" width="45" height="10" uuid="6bcbb446-fc06-4966-b842-e43ba5a19491"/>
 				<textElement textAlignment="Left">
-					<font fontName="Arial" size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{hazard_name}]]></textFieldExpression>
 			</textField>
