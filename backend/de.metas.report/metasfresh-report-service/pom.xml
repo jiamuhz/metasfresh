@@ -167,6 +167,12 @@
 			<version>1.0.0</version>
 		</dependency>
 
+		<dependency>
+			<groupId>de.metas.report.jasper</groupId>
+			<artifactId>noto-sans-sc-fonts</artifactId>
+			<version>2.0.0</version>
+		</dependency>
+
  		<!-- JXls integration -->
 		<dependency>
 			<groupId>org.jxls</groupId>
