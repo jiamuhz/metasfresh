@@ -65,6 +65,12 @@ public class PPOrderCandidateAdvisedEventCreator
 		this.ppOrderCandidatePojoSupplier = ppOrderCandidatePojoSupplier;
 	}
 
+	/**
+	 * 会根据 每个订单的最大数量，分成多个订单，所以返回的是 Event List
+	 * @param supplyRequiredDescriptor
+	 * @param mrpContext
+	 * @return
+	 */
 	@NonNull
 	public ImmutableList<PPOrderCandidateAdvisedEvent> createPPOrderCandidateAdvisedEvents(
 			@NonNull final SupplyRequiredDescriptor supplyRequiredDescriptor,
