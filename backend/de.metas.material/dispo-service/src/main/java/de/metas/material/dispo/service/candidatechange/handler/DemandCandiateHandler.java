@@ -274,7 +274,7 @@ public class DemandCandiateHandler implements CandidateHandler
 			supplyRequiredEvent = SupplyRequiredEventCreator.createSupplyRequiredEvent(demandCandidateWithId, requiredQty, null);
 		}
 
-			materialEventService.enqueueEventAfterNextCommit(supplyRequiredEvent);
-			Loggables.addLog("Fire supplyRequiredEvent after next commit; event={}", supplyRequiredEvent);
-		}
+		materialEventService.enqueueEventAfterNextCommit(supplyRequiredEvent);
+		Loggables.addLog("Fire supplyRequiredEvent after next commit; event={}", supplyRequiredEvent);
 	}
+}
