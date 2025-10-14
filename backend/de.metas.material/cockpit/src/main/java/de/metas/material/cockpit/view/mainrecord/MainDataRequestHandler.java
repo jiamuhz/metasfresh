@@ -20,6 +20,10 @@
  * #L%
  */
 
+/**
+ * 主数据 是指 物料驾驶舱数据
+ */
+
 package de.metas.material.cockpit.view.mainrecord;
 
 import com.google.common.annotations.VisibleForTesting;
