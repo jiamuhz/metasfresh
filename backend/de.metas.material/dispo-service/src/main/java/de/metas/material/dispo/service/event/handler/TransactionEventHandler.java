@@ -7,17 +7,15 @@ import com.google.common.collect.ImmutableList.Builder;
 import com.google.common.collect.ImmutableSet;
 import de.metas.Profiles;
 import de.metas.common.util.CoalesceUtil;
+import de.metas.inventory.InventoryId;
+import de.metas.inventory.InventoryLineId;
 import de.metas.logging.LogManager;
 import de.metas.material.dispo.commons.candidate.Candidate;
 import de.metas.material.dispo.commons.candidate.Candidate.CandidateBuilder;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.TransactionDetail;
-import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
-import de.metas.material.dispo.commons.candidate.businesscase.DistributionDetail;
-import de.metas.material.dispo.commons.candidate.businesscase.Flag;
-import de.metas.material.dispo.commons.candidate.businesscase.ProductionDetail;
-import de.metas.material.dispo.commons.candidate.businesscase.PurchaseDetail;
+import de.metas.material.dispo.commons.candidate.businesscase.*;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
 import de.metas.material.dispo.commons.repository.query.CandidatesQuery;
 import de.metas.material.dispo.commons.repository.query.DemandDetailsQuery;
@@ -139,11 +137,10 @@ public class TransactionEventHandler implements MaterialEventHandler<AbstractTra
 
 			candidates.addAll(candidateForDDorder);
 		}
-		// TODO: make "inventory a real business case, such as e.g. production
-		// else if (event.getInventoryLineId() > 0)
-		// {
-		// 	candidates.addAll(prepareCandidateForInventory(event));
-		// }
+		else if (event.getInventoryLineId() > 0)
+		{
+		 	candidates.addAll(prepareCandidateForInventory(event));
+		}
 		else
 		{
 			candidates.addAll(prepareUnrelatedCandidate(event));
@@ -220,6 +217,54 @@ public class TransactionEventHandler implements MaterialEventHandler<AbstractTra
 								 candidate.getBusinessCase(), candidate);
 		}
 		return pickDirectlyIfFeasible;
+	}
+
+  /**
+   * 原本实现中 盘点没有专门的处理，走的是 prepareUnrelatedCandidate 逻辑
+   * 目前 仅仅在 prepareUnrelatedCandidate 的逻辑中加入了 Stock_Change 的 businesscase
+   * @param event
+   * @return
+   */
+	@NonNull
+	private List<Candidate> prepareCandidateForInventory(@NonNull final AbstractTransactionEvent event)
+	{
+    final List<Candidate> candidates;
+    final TransactionDetail transactionDetailOfEvent = createTransactionDetail(event);
+
+    final CandidatesQuery query = CandidatesQuery.builder()
+      .transactionDetail(TransactionDetail.forQuery(event.getTransactionId()))
+      .build();
+    final Candidate existingCandidate = candidateRepository.retrieveLatestMatchOrNull(query);
+
+    final boolean unrelatedNewTransaction = existingCandidate == null && event instanceof TransactionCreatedEvent;
+    if (unrelatedNewTransaction)
+    {
+      final StockChangeDetail stockChangeDetail = StockChangeDetail.builder()
+        .eventDate(event.getMaterialDescriptor().getDate())
+        .inventoryId(InventoryId.ofRepoIdOrNull(event.getInventoryId()))
+        .inventoryLineId(InventoryLineId.ofRepoIdOrNull(event.getInventoryLineId()))
+        .isReverted(false)
+        .build();
+
+      final Candidate candidate = createBuilderForNewUnrelatedCandidate((TransactionCreatedEvent)event, event.getQuantity())
+        .businessCase(CandidateBusinessCase.STOCK_CHANGE)
+        .businessCaseDetail(stockChangeDetail)
+        .transactionDetail(transactionDetailOfEvent)
+        .build();
+      candidates = ImmutableList.of(candidate);
+    }
+    else if (existingCandidate != null)
+    {
+      candidates = createOneOrTwoCandidatesWithChangedTransactionDetailAndQuantity(
+        existingCandidate,
+        transactionDetailOfEvent,
+        event);
+    }
+    else
+    {
+      throw createExceptionForUnexpectedEvent(event);
+    }
+    return candidates;
 	}
 
 	@NonNull
