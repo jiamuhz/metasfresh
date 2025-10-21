@@ -39,6 +39,11 @@ import lombok.Value;
  * #L%
  */
 
+/**
+ * 定价条件: 融合下列内容
+ *     1. 价格表方案  对应菜单是 /定价/设置/价格表方案
+ *     2. 业务伙伴（客户|供应商）的折扣方案
+ */
 @Value
 public class PricingConditions
 {
