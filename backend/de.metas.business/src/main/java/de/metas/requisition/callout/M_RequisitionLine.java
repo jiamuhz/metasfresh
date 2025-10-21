@@ -22,6 +22,9 @@
 
 package de.metas.requisition.callout;
 
+import de.metas.bpartner.BPartnerLocationId;
+import de.metas.bpartner.service.IBPartnerDAO;
+import de.metas.location.CountryId;
 import de.metas.organization.OrgId;
 import de.metas.product.IProductBL;
 import de.metas.uom.UomId;
@@ -70,11 +73,16 @@ public class M_RequisitionLine
 		final int C_BPartner_ID = line.getC_BPartner_ID();
 		final BigDecimal Qty = line.getQty();
 		final boolean isSOTrx = false;
+
+		final CountryId countryId = line.getC_BPartner_Location_ID() > 0
+				? Services.get(IBPartnerDAO.class).getCountryId(BPartnerLocationId.ofRepoId(line.getC_BPartner_ID(), line.getC_BPartner_Location_ID()))
+				: null;
+
 		final MProductPricing pp = new MProductPricing(
 				OrgId.ofRepoId(line.getAD_Org_ID()),
 				line.getM_Product_ID(),
 				C_BPartner_ID,
-				null,
+				countryId,
 				Qty,
 				isSOTrx);
 
