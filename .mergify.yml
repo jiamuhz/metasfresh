@@ -1,6 +1,9 @@
-queue_rules:
+merge_protections:
   - name: default
-    conditions:
+    if:
+      - check-success=testspace-analytics
+      - check-success=continuous-integration/jenkins/branch
+    success_conditions:
       - check-success=testspace-analytics
       - check-success=continuous-integration/jenkins/branch
 
@@ -12,12 +15,12 @@ pull_request_rules:
 
   - name: After UAT-PR is integrated, add branch-label and delete the PR-branch
     conditions:
-      - merged-at > '2023-03-15 00:00Z' # don't jump on every merged PR throughout history
+      - merged
+      - merged-at>2023-03-15T00:00:00Z # don't jump on every merged PR throughout history
       - or: &ALL_BASE_BRANCHES # this rule should apply to both the project-branches from above, and master
           - or: &PROJECT_BRANCHES_UAT # look 'ma, i'm doing https://docs.mergify.com/configuration/#yaml-anchors-and-aliases !
               # Please keep in sync with the branches at .testspace.yml
-              # UAT BRANCH. COMMENT FOR NEW CUSTOMER AUTOMATION. DO NOT EDIT THIS LINE IN ANY WAY. The script will insert new branches below this line.
-              - base=gray_knight_hotfix
+              # UAT BRANCH. THIS LINE IS A COMMENT FOR NEW CUSTOMER AUTOMATION. DO NOT EDIT THIS LINE IN ANY WAY. The script will insert new branches below this line.
               - base=keen_hawk_uat
               - base=task_force_uat
               - base=electric_light_uat
@@ -53,39 +56,57 @@ pull_request_rules:
               - base=vampire_textbook_uat
               - base=yoyo_uat
           - or: &PROJECT_BRANCHES_HOTFIX
+              # HOTFIX BRANCH. THIS LINE IS A COMMENT FOR NEW CUSTOMER AUTOMATION. DO NOT EDIT THIS LINE IN ANY WAY. The script will insert new branches below this line.
+              - base=task_force_hotfix
+              - base=temporary_test202510_hotfix
+              - base=keen_hawk_hotfix
+              - base=game_time_hotfix
+              - base=ghost_rider_hotfix
+              - base=gray_knight_hotfix
               - base=hard_encoded_hotfix
               - base=inner_silence_hotfix
               - base=intensive_care_hotfix
               - base=mad_orange_hotfix
               - base=massive_entropy_hotfix
               - base=memorable_shiny_hotfix
+              - base=modus_operandi_hotfix
               - base=pink_rooster_hotfix
+              - base=science_vessel_hotfix
               - base=secondary_opinion_hotfix
               - base=soft_panda_hotfix
               - base=tasty_ham_hotfix
               - base=vampire_textbook_hotfix
               - base=yoyo_hotfix
           - or: &PROJECT_BRANCHES_RELEASE
+              # RELEASE BRANCH. THIS LINE IS A COMMENT FOR NEW CUSTOMER AUTOMATION. DO NOT EDIT THIS LINE IN ANY WAY. The script will insert new branches below this line.
+              - base=task_force_release
+              - base=temporary_test202510_release
+              - base=keen_hawk_release
+              - base=game_time_release
+              - base=ghost_rider_release
               - base=intensive_care_release
+              - base=modus_operandi_release
               - base=soft_panda_release
               - base=vampire_textbook_release
+              - base=science_vessel_release
 
     actions:
       label:
         add:
           - "branch:{{base}}"
-      delete_head_branch:
+      delete_head_branch: {}
 
   - name: After master-PR is integrated, add two labels branch:master and in:5.177_master; also, delete the PR-branch
     conditions:
-      - merged-at > '2024-07-09 00:00Z' # don't jump on every merged PR throughout history
+      - merged
+      - merged-at>2024-07-09T00:00:00Z # don't jump on every merged PR throughout history
       - base=master
     actions:
       label:
         add:
           - "branch:{{base}}"
           - "in:5.178_master"
-      delete_head_branch:
+      delete_head_branch: {}
 
   - name: Automatic squash-merge successful PRs into the respective base-branch
     conditions:
@@ -99,9 +120,8 @@ pull_request_rules:
           - "#approved-reviews-by>=1"
           - label=ops:without_review_approval
     actions:
-      queue:
-        name: default
-        method: squash
+      merge:
+        method: merge
 
   - name: Automatic merge commit (not squash) successful PRs
     conditions:
@@ -115,7 +135,6 @@ pull_request_rules:
           - "#approved-reviews-by>=1"
           - label=ops:without_review_approval
     actions:
-      queue:
-        name: default
-        method: merge
+      merge:
+        method: squash
 
