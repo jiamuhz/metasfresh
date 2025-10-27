@@ -82,6 +82,9 @@ import static org.adempiere.model.InterfaceWrapperHelper.isNew;
  * #L%
  */
 
+/**
+ * 这里的 Candidate 是指 MD_Candidate
+ */
 @Service
 public class CandidateRepositoryRetrieval
 {

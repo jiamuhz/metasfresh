@@ -39,6 +39,7 @@ import javax.annotation.Nullable;
 
 /**
  * Please keep in sync with the values of {@link X_MD_Candidate#MD_CANDIDATE_BUSINESSCASE_AD_Reference_ID}
+ * 这里的 Candidate 是指 MD_Candidate
  */
  public enum CandidateBusinessCase implements ReferenceListAwareEnum
 {

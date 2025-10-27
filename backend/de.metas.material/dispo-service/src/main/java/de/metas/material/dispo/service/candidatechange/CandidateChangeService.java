@@ -38,6 +38,10 @@ import java.util.Map;
  * <http://www.gnu.org/licenses/gpl-2.0.html>.
  * #L%
  */
+
+/**
+ * 这里的 Candidate 是指 MD_Candidate
+ */
 @Service
 @Profile(Profiles.PROFILE_MaterialDispo)
 public class CandidateChangeService

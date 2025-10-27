@@ -47,6 +47,9 @@ import java.util.List;
  * #L%
  */
 
+/**
+ * 这里的 Candidate 是指 MD_Candidate
+ */
 @With
 @Value
 @EqualsAndHashCode(doNotUseGetters = true)
@@ -169,6 +172,9 @@ public class Candidate
 		this.deltaQuantity = deltaQuantity;
 	}
 
+  /**
+   * 这里的 Candidate 是指 MD_Candidate
+   */
 	public static class CandidateBuilder
 	{
 		public CandidateBuilder quantity(final BigDecimal quantity)

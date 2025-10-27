@@ -34,6 +34,9 @@ import javax.annotation.Nullable;
  * #L%
  */
 
+/**
+ * 这里的 Candidate 是指 MD_Candidate
+ */
 @Value
 @EqualsAndHashCode(doNotUseGetters = true)
 @ToString(doNotUseGetters = true)

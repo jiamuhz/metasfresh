@@ -86,7 +86,8 @@ public class RequestMaterialOrderService
 	 * Creates and fires an event to request the creation of a particular material order (production, distribution or purchase).
 	 *
 	 * @param groupId of the candidates that are used to derive the material order to be requested.
-	 */
+   * 这里的 Candidate 是指 MD_Candidate
+   */
 	public void requestMaterialOrderForCandidates(
 			@NonNull final MaterialDispoGroupId groupId,
 			@Nullable final String traceId)
