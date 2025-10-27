@@ -67,7 +67,7 @@ public abstract class PurchaseCandidateCreatedOrUpdatedHandler<T extends Purchas
 
 		final CandidateBuilder candidateBuilder;
 		final PurchaseDetailBuilder purchaseDetailBuilder;
-		if (existingCandidteOrNull != null)
+		if (existingCandidteOrNull != null && existingCandidteOrNull.getBusinessCaseDetail() instanceof PurchaseDetail)
 		{
 			candidateBuilder = existingCandidteOrNull.toBuilder();
 			purchaseDetailBuilder = PurchaseDetail
