@@ -204,12 +204,11 @@ class PurchaseRowsSaver
 		}
 		//
 		// If there is remaining qty to purchase then add it to last changed purchase candidate line
-		else if (!candidatesToUpdate.isEmpty())
+		else if (!candidatesChanged.isEmpty())
 		{
-			final PurchaseCandidate lastCandidate = candidatesToUpdate.get(candidatesToUpdate.size() - 1);
+			final PurchaseCandidate lastCandidate = candidatesChanged.get(candidatesChanged.size() - 1);
 			lastCandidate.setQtyToPurchase(lastCandidate.getQtyToPurchase().add(qtyToPurchaseRemainingOfGroup));
 			lastCandidate.setPurchaseDatePromised(purchaseDatePromised);
-
 		}
 		//
 		// If there is remaining qty to purchase but no purchase candidate to add to then create a new candidate
@@ -293,7 +292,7 @@ class PurchaseRowsSaver
 		else
 		{
 			// TODO: handle this case
-			return candidate.getQtyToPurchase().toZero();
+			return candidate.getQtyToPurchase();
 		}
 	}
 }
