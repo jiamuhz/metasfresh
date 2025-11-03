@@ -62,6 +62,9 @@ import de.metas.util.Services;
 import lombok.NonNull;
 import lombok.ToString;
 
+/**
+ * 过账请求构建器
+ */
 @ToString(of = { "_force", "_clientId", "_documentRef", "_postImmediate", "_postWithoutServer", "_failOnError" })
 /* package */class PostingRequestBuilder implements IPostingRequestBuilder
 {

@@ -45,9 +45,11 @@ public class MaterialDescriptorQuery
 	public enum CustomerIdOperator
 	{
 		/** This is the default; query for records with the given customer id where zero means "none" and null means "any" */
+    /** 0 --> 为空白或NULL 的记录    null --> 任意的记录  */
 		GIVEN_ID_ONLY,
 
 		/** Like {@link #GIVEN_ID_ONLY}, but also include records that have no customerId */
+    /** 包含 为 空 或 null 的记录 */
 		GIVEN_ID_OR_NULL
 	}
 

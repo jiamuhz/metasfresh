@@ -71,6 +71,7 @@ public class MaterialDescriptor extends ProductDescriptor
 
 	/**
 	 * The projected date at which we expect this candidate's {@link #getQuantity()}.
+   * 计划的日期
 	 */
 	@Getter
 	Instant date;

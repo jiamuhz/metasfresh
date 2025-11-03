@@ -37,6 +37,9 @@ import lombok.ToString;
  * #L%
  */
 
+/**
+ * 采购报价创建事件
+ */
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)
 @Getter

@@ -126,13 +126,13 @@ public class PPOrderCandidateAdvisedEventCreator
 		if(requiredQty.compareTo(finalQtyUsed) != 0)
 		{
 			final BigDecimal deltaToApply = finalQtyUsed.subtract(requiredQty);
-			SupplyRequiredHandlerUtils.updateMainDataWithQty(supplyRequiredDescriptorToUse, deltaToApply);
+			SupplyRequiredHandlerUtils.updateMainDataWithQty(supplyRequiredDescriptorToUse, deltaToApply);  // 更新 md_cockpit
 		}
 
 		final MaterialRequest completeRequest = SupplyRequiredHandlerUtils.mkRequest(supplyRequiredDescriptorToUse, mrpContext);
 
 		final Quantity maxQtyPerOrder = extractMaxQuantityPerOrder(productPlanning);
-		final Quantity maxQtyPerOrderConv = convertQtyToRequestUOM(mrpContext, completeRequest, maxQtyPerOrder);
+		final Quantity maxQtyPerOrderConv = convertQtyToRequestUOM(mrpContext, completeRequest, maxQtyPerOrder);  // Conv 指 单位转换的意思
 		final ImmutableList<MaterialRequest> partialRequests = createMaterialRequests(completeRequest, maxQtyPerOrderConv);
 
 		final ImmutableList.Builder<PPOrderCandidateAdvisedEvent> result = ImmutableList.builder();

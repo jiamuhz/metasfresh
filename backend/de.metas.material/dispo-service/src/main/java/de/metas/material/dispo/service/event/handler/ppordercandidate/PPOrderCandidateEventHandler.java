@@ -63,6 +63,9 @@ public abstract class PPOrderCandidateEventHandler
 		this.candidateRepositoryRetrieval = candidateRepositoryRetrieval;
 	}
 
+  /**
+   * Header Candidate 就是 MD_Candidate 表的记录
+   */
 	@NonNull
 	protected Candidate createHeaderCandidate(
 			@NonNull final AbstractPPOrderCandidateEvent event,

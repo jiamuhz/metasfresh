@@ -7,7 +7,7 @@ import de.metas.adempiere.form.IClientUIInvoker;
 import de.metas.user.UserId;
 
 /**
- * Posting request builder: a helper class which assist the developer to Post a document.
+ * Posting request builder (过账请求构建器): a helper class which assist the developer to Post a document.
  * 
  * This shall be the right and ONLY way to access the Document Posting API.
  * 

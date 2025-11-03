@@ -65,6 +65,7 @@ public class PPOrderData
 
 	/**
 	 * In a build-to-order scenario, this is the ID of the order line which this all is about.
+   * 在按订单生产（BTO）的场景下
 	 */
 	int orderLineId;
 
@@ -75,10 +76,14 @@ public class PPOrderData
 	 */
 	Instant datePromised;
 
+  /**
+   * 同个业务组
+   */
 	MaterialDispoGroupId materialDispoGroupId;
 
 	/**
 	 * This is usually the respective demand candidates' date value.
+   * 开始计划的日期，比如生产开始的日期
 	 */
 	Instant dateStartSchedule;
 

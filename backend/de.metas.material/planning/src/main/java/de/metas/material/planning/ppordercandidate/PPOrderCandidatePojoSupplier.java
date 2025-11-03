@@ -134,11 +134,13 @@ public class PPOrderCandidatePojoSupplier
 		final Instant datePromised;
 		final Instant dateStartSchedule;
 
+    // 赶不上 需求的日期
 		if (request.getDemandDate().minus(durationDays, ChronoUnit.DAYS).isBefore(earliestDateStartSchedule))
 		{
 			dateStartSchedule = earliestDateStartSchedule;
 			datePromised = dateStartSchedule.plus(durationDays, ChronoUnit.DAYS);
 		}
+    // 能赶上 需求的日期
 		else
 		{
 			datePromised = request.getDemandDate();

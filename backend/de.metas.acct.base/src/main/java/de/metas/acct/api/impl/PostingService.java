@@ -6,6 +6,9 @@ import de.metas.acct.api.IPostingRequestBuilder;
 import de.metas.acct.api.IPostingService;
 import de.metas.util.Services;
 
+/**
+ * 过账服务
+ */
 public class PostingService implements IPostingService
 {
 	@Override
