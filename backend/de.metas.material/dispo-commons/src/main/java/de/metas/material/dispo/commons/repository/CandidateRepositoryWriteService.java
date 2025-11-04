@@ -93,6 +93,9 @@ import static org.adempiere.model.InterfaceWrapperHelper.saveRecord;
  * #L%
  */
 
+/**
+ * 这里 Candidate 是指 MD_Candidate
+ */
 @Service
 public class CandidateRepositoryWriteService
 {
@@ -312,6 +315,9 @@ public class CandidateRepositoryWriteService
 				oldCandidateRecord,
 				candidate,
 				preserveExistingSeqNoAndParentId);
+
+    // 下列语句 保存 candidate 和 candidate details 到DB
+
 		save(syncedRecord); // save now, because we need to have MD_Candidate_ID > 0
 
 		setFallBackSeqNoAndGroupIdIfNeeded(syncedRecord);
@@ -346,8 +352,10 @@ public class CandidateRepositoryWriteService
 
 	/**
 	 * Writes the given {@code candidate}'s properties to the given {@code candidateRecord}, but does not save that record.
+   * 仅仅用 candidate 的值 更新 candidateRecord 的值
 	 *
 	 * @return either returns the record contained in the given candidateRecord (but updated) or a new record.
+   * 返回值： 更新后的 candidateRecord 或者 更新后的 全新的 I_MD_Candidate 对象
 	 */
 	private I_MD_Candidate updateOrCreateCandidateRecord(
 			@Nullable final I_MD_Candidate candidateRecord,
@@ -727,6 +735,9 @@ public class CandidateRepositoryWriteService
 		stockChangeDetailRepo.saveOrUpdate(stockChangeDetail, synchedRecord);
 	}
 
+  /**
+   *  内存中 创建新的 Candidate 用 candidate 值 和 candidateRecord 值
+   */
 	private Candidate createNewCandidateWithIdsFromRecord(
 			@NonNull final Candidate candidate,
 			@NonNull final I_MD_Candidate candidateRecord)

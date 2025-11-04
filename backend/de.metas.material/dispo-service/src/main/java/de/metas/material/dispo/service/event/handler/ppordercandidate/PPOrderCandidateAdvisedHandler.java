@@ -330,6 +330,9 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 		return Optional.of(result);
 	}
 
+  /**
+   *  返回 Candidate List, 从 前 到 后 顺序
+   */
 	@NonNull
 	private List<Candidate> getStockCandidatesBetweenDemandAndSupply(
 			@NonNull final SupplyRequiredDescriptor supplyRequiredDescriptor,
