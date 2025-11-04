@@ -115,7 +115,9 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 
 		// check if SupplyCandidate didn't get created in DemandCandidateHandler#postSupplyRequiredEvent() if required Qty was 0
 		final SupplyRequiredDescriptor supplyRequiredDescriptor = event.getSupplyRequiredDescriptor();
-		final PPOrderCandidateAdvisedEvent updatedEvent;
+		final PPOrderCandidateAdvisedEvent updatedEvent = event;
+
+  /*
 		if(supplyRequiredDescriptor != null && supplyRequiredDescriptor.getSupplyCandidateId() <= 0)
 		{
 			final Candidate supplyCandidate = Candidate.builderForClientAndOrgId(event.getEventDescriptor().getClientAndOrgId())
@@ -139,6 +141,7 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 		{
 			updatedEvent = event;
 		}
+  */
 
 		final PPOrderCandidateAdvisedEvent eventWithRecomputedQty = getEventWithRecomputedQtyAndDate(updatedEvent);
 
@@ -357,7 +360,12 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 
 		final Candidate unspecifiedSupplyCandidate = getUnspecifiedSupplyCandidate(supplyRequiredDescriptor);
 
-		return stockCandidatesCollector.build()
+    if (null ==  unspecifiedSupplyCandidate)
+      return stockCandidatesCollector.build()
+        .stream()
+        .collect(ImmutableList.toImmutableList());
+
+    return stockCandidatesCollector.build()
 				.stream()
 				.filter(stockCandidate -> !isStockForSupplyCandidate(stockCandidate, unspecifiedSupplyCandidate))
 				.collect(ImmutableList.toImmutableList());
@@ -468,6 +476,9 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 	@NonNull
 	private Candidate getUnspecifiedSupplyCandidate(@NonNull final SupplyRequiredDescriptor supplyRequiredDescriptor)
 	{
+    if (supplyRequiredDescriptor.getSupplyCandidateId() <= 0)
+      return null;
+
 		final CandidateId supplyCandidateId = CandidateId.ofRepoId(supplyRequiredDescriptor.getSupplyCandidateId());
 
 		return candidateRepositoryRetrieval.retrieveLatestMatch(CandidatesQuery.fromId(supplyCandidateId))

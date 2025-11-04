@@ -249,7 +249,9 @@ public class DemandCandiateHandler implements CandidateHandler
 	private void postSupplyRequiredEvent(@NonNull final Candidate demandCandidateWithId, @NonNull final BigDecimal requiredQty)
 	{
 
-		final SupplyRequiredEvent supplyRequiredEvent;
+		final SupplyRequiredEvent supplyRequiredEvent = SupplyRequiredEventCreator.createSupplyRequiredEvent(demandCandidateWithId, requiredQty, null);
+
+  /*
 		if(requiredQty.signum() != 0)
 		{
 			// create supply record now! otherwise if e.g. a new shipmentschedule-event comes in before the planner responded to the current one (and if we are not lot-4-lot), the next demand-event's qty will be too high
@@ -273,6 +275,7 @@ public class DemandCandiateHandler implements CandidateHandler
 		{ // fire the event anyway, because it might be lot4lot
 			supplyRequiredEvent = SupplyRequiredEventCreator.createSupplyRequiredEvent(demandCandidateWithId, requiredQty, null);
 		}
+  */
 
 		materialEventService.enqueueEventAfterNextCommit(supplyRequiredEvent);
 		Loggables.addLog("Fire supplyRequiredEvent after next commit; event={}", supplyRequiredEvent);
