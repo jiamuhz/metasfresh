@@ -225,7 +225,7 @@ public class StockCandidateService
 
 		final MaterialDescriptorQuery materialDescriptorQuery = query.getMaterialDescriptorQuery();
 		final MaterialDescriptorQuery materialDescriptToQueryAfterRange = materialDescriptorQuery.toBuilder()
-				.timeRangeStart(materialDescriptorQuery.getTimeRangeEnd())
+				.timeRangeStart(materialDescriptorQuery.getTimeRangeEnd().withOperator(materialDescriptorQuery.getTimeRangeEnd().getOperator().equals(Operator.INCLUSIVE) ? Operator.EXCLUSIVE : Operator.INCLUSIVE))
 				.timeRangeEnd(null)
 				.build();
 		final CandidatesQuery queryAfterRange = query.withMaterialDescriptorQuery(materialDescriptToQueryAfterRange);
