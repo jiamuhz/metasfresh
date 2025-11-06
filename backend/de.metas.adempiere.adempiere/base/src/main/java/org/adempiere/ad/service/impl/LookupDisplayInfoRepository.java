@@ -27,6 +27,10 @@ class LookupDisplayInfoRepository
 
 	private final static String COLUMNNAME_Value = "Value";
 
+  /**
+   * 这个方法用于 获取显示列列表，后续用 concat_ws 组合这个列表 (joinDisplayColumnSqls)，显示在界面上的一个表格字段中
+   * ADRefTable表  ad_key列  ad_table列所指业务表的key列   ad_display列  ad_table列所指业务表的 显示所用的列
+   */
 	public LookupDisplayInfo getLookupDisplayInfo(@NonNull final ADRefTable tableRefInfo)
 	{
 		//

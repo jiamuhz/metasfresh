@@ -65,6 +65,7 @@ public class SupplyRequiredDescriptor
 	/**
 	 * Used in case LotForLot to override the materialDescriptor Quantity,
 	 * which is initialized with requiredQty based on ATP
+   * 原始的需求数量，比如 销售订单 产生的供应，就是 销售订单的物料数量
 	 */
 	BigDecimal fullDemandQty;
 
