@@ -97,7 +97,7 @@ final class PPOrderBOMCreateCommand
 		final List<I_PP_Product_BOMLine> productBOMLines = productBOMsRepo.retrieveLines(productBOM);
 		for (final I_PP_Product_BOMLine productBOMLine : productBOMLines)
 		{
-			if (!productBOMsBL.isValidFromTo(productBOMLine, dateStartSchedule))
+			if (!productBOMsBL.isValidFromTo(productBOM, dateStartSchedule))
 			{
 				logger.debug("BOM Line skipped - {}", productBOMLine);
 				continue;
