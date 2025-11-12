@@ -449,7 +449,7 @@ public interface I_PP_Order_BOM
 	String COLUMNNAME_Processing = "Processing";
 
 	/**
-	 * Set Revision.
+	 * Set Revision.  BOM版本
 	 *
 	 * <br>Type: String
 	 * <br>Mandatory: false
@@ -458,7 +458,7 @@ public interface I_PP_Order_BOM
 	void setRevision (@Nullable java.lang.String Revision);
 
 	/**
-	 * Get Revision.
+	 * Get Revision.  BOM版本
 	 *
 	 * <br>Type: String
 	 * <br>Mandatory: false
