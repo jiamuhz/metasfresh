@@ -171,7 +171,7 @@ const Attributes = ({
           showHideDropdown(false);
         } else {
           /** the generic case  */
-          if (window.confirm('Do you really want to leave?')) {
+          if (window.confirm('您确定要离开吗？')) {
             showHideDropdown(false);
           }
         }

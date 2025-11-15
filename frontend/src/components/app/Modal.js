@@ -408,7 +408,7 @@ class Modal extends Component {
       return this.closeModal(modalSaveStatus);
     }
 
-    if (modalSaveStatus || window.confirm('Do you really want to leave?')) {
+    if (modalSaveStatus || window.confirm('您确定要离开吗？')) {
       this.closeModal(modalSaveStatus);
     }
   };

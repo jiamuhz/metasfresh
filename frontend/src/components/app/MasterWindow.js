@@ -113,7 +113,7 @@ export default class MasterWindow extends PureComponent {
     this.removeEventListeners();
 
     if (isDocumentNotSaved && !isDeleted) {
-      const result = window.confirm('Do you really want to leave?');
+      const result = window.confirm('您确定要离开吗？');
 
       if (result) {
         // discardNewRequest({ windowType, documentId });
