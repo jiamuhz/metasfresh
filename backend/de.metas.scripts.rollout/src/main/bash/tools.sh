@@ -209,7 +209,7 @@ stop_metasfresh()
 	trace stop_metasfresh END
 }
 
-start_metasfresh-webui-api()
+start_metasfresh_webui_api()
 {
 	if [ -e /etc/init.d/metasfresh-webui-api ]; 
 	then
@@ -222,7 +222,7 @@ start_metasfresh-webui-api()
 	fi
 }
 
-stop_metasfresh-webui-api()
+stop_metasfresh_webui_api()
 {
 	if [ -e /etc/init.d/metasfresh-webui-api ]; 
 	then
