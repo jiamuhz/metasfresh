@@ -1,0 +1,16 @@
+#
+# systemd service file for metasfresh_server
+# to install it, copy it to /etc/systemd/system and chmod it to 0644
+#
+[Unit]
+Description=metasfresh_server
+After=syslog.target
+
+[Service]
+User=root
+ExecStart=/opt/metasfresh/start_metasfresh_server.sh
+SuccessExitStatus=143
+PIDFile=/opt/metasfresh/metasfresh_server.service.pid
+
+[Install]
+WantedBy=multi-user.target

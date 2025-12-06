@@ -7,10 +7,10 @@ Description=metasfresh-webui-api
 After=syslog.target
 
 [Service]
-User=metasfresh
-ExecStart=/opt/metasfresh/metasfresh-webui-api/metasfresh-webui-api.jar
+User=root
+ExecStart=/opt/metasfresh/start_metasfresh-webui-api.sh
 SuccessExitStatus=143
-PIDFile=/opt/metasfresh/metasfresh-webui-api/metasfresh-webui-api/metasfresh-webui-api.service.pid
+PIDFile=/opt/metasfresh/metasfresh-webui-api/metasfresh-webui-api.service.pid
 
 [Install]
 WantedBy=multi-user.target
