@@ -876,6 +876,7 @@
                     </execution>
 
                     <!-- Build dist/sources: add sources of all of involved artifacts -->
+                    <!--
                     <execution>
                         <id>copy-sources</id>
                         <phase>prepare-package</phase>
@@ -891,6 +892,7 @@
                             <outputDirectory>${project.build.directory}/dist/sources</outputDirectory>
                         </configuration>
                     </execution>
+                    -->
 
                     <!-- Build dist/doc: Write the project dependency tree -->
                     <execution>
