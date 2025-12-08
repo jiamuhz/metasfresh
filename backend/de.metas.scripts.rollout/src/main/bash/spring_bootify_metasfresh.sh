@@ -1,7 +1,7 @@
 #!/bin/bash
 
-set -o nounset  #don't allow access to unset variables
-set -o errexit  #don't allow any command to exit with an error code !=0
+set -e
+set -u
 
 TOOLS=$(dirname $0)/tools.sh
 if [ -f $TOOLS ] && [ -r $TOOLS ]; then
@@ -19,7 +19,7 @@ fi
 
 ROLLOUT_DIR=$LOCAL_DIR/..
 
-DEFAULT_LOCAL_SETTINGS_FILE=~metasfresh/local_settings.properties
+DEFAULT_LOCAL_SETTINGS_FILE=../../configs/local_settings.properties
 LOCAL_SETTINGS_FILE=$DEFAULT_LOCAL_SETTINGS_FILE
 
 #
@@ -47,16 +47,23 @@ main()
 	fi
 	
 	trace main "Stopping the old metasfresh server"
-	service metasfresh_server stop
+	if [ -f /etc/systemd/system/metasfresh_server.service ]; then
+		systemctl stop metasfresh_server
+	fi
 
 	trace main "Moving the old metasfresh directory out of the way"
-	mv -v ${METASFRESH_HOME} ${METASFRESH_HOME}_old
+	if [ -d ${METASFRESH_HOME} ]; then
+		rm -rf ${METASFRESH_HOME}_old
+		mv -v ${METASFRESH_HOME} ${METASFRESH_HOME}_old
+	fi	
 	
 	trace main "Creating the new metasfresh home directory and its pid file directory"
-	mkdir -vp ${METASFRESH_HOME}/metasfresh_server
+	mkdir -vp ${METASFRESH_HOME}
 	
 	trace main "Salvaging the existing metasfresh.properties file from the old directory"
-	cp -v ${METASFRESH_HOME}_old/metasfresh.properties ${METASFRESH_HOME}
+	if [ -f ${METASFRESH_HOME}_old/metasfresh.properties ]; then
+		cp -v ${METASFRESH_HOME}_old/metasfresh.properties ${METASFRESH_HOME}
+	fi
 	
 	if [ -f /home/${ROLLOUT_USER}/update_app_client.sh ]; then
 		trace main "Installing a new update_app_client.sh file"
@@ -76,12 +83,24 @@ main()
 	cp -v ${ROLLOUT_DIR}/misc/metasfresh_server.conf ${METASFRESH_HOME}
 	chmod -v 400 ${METASFRESH_HOME}/metasfresh_server.conf
 
+	trace main "Copying start_metasfresh_server.sh"
+	cp -v ${ROLLOUT_DIR}/install/start_metasfresh_server.sh ${METASFRESH_HOME}
+	chmod -v 700 ${METASFRESH_HOME}/start_metasfresh_server.sh
+
 	trace main "Making sure that everything so far is owned by ${ROLLOUT_USER}"
 	chown -Rv ${ROLLOUT_USER}:${ROLLOUT_USER} ${METASFRESH_HOME}
 
-	trace main "Linking metasfresh_server.jar as service"
-	rm -v /etc/init.d/metasfresh_server
-	ln -vs /opt/metasfresh/metasfresh_server.jar /etc/init.d/metasfresh_server
+	trace main "Installing metasfresh_server service"
+	local SYSTEM_SERVICE_FILE=/etc/systemd/system/metasfresh_server.service
+	if [[ -f ${SYSTEM_SERVICE_FILE} ]]; then
+		rm -v ${SYSTEM_SERVICE_FILE}
+	fi
+	cp -v ${ROLLOUT_DIR}/../configs/metasfresh_server.service ${SYSTEM_SERVICE_FILE}
+
+	chmod 0644 ${SYSTEM_SERVICE_FILE}
+	systemctl daemon-reload
+	systemctl start metasfresh_server
+	systemctl enable metasfresh_server
 	
 	trace main "Done! Please run the script minor_remote.sh as user ${ROLLOUT_USER} to finish the update."
 	trace main END

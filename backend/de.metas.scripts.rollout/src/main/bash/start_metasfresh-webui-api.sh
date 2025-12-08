@@ -1,6 +1,7 @@
-﻿#!/bin/bash
+#!/bin/bash
 
 set -e
+set -u
 
 # postgres
 db_host=${DB_HOST:-localhost}

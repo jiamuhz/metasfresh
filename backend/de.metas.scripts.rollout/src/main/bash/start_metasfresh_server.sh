@@ -7,21 +7,21 @@ set -u
 # Also see https://docs.docker.com/engine/reference/builder/#environment-replacement
 
 # postgres
-db_host=${DB_HOST:-db}
+db_host=${DB_HOST:-localhost}
 db_port=${DB_PORT:-5432}
 db_name=${DB_NAME:-metasfresh}
 db_user=${DB_USER:-metasfresh}
-db_password=${DB_PASSWORD:-$(echo $secret_db_password)}
+db_password=${DB_PASSWORD:-metasfresh}
 db_connection_pool_max_size=${DB_CONNECTION_POOL_MAX_SIZE:-UNSET}
 
 # rabbitmq
 rabbitmq_host=${RABBITMQ_HOST:-localhost}
 rabbitmq_port=${RABBITMQ_PORT:-5672}
 rabbitmq_user=${RABBITMQ_USER:-guest}
-rabbitmq_password=${RABBITMQ_PASSWORD:-$(echo $secret_rabbitmq_password)}
+rabbitmq_password=${RABBITMQ_PASSWORD:-guest}
 
 # elastic search
-es_host=${ES_HOST:-search}
+es_host=${ES_HOST:-localhost}
 es_port=${ES_PORT:-9300}
 es_enable=${ES_ENABLE:-UNSET}
 

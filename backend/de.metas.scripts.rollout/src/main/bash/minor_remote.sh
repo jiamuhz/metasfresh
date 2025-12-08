@@ -1,7 +1,7 @@
 #!/bin/bash
 
-set -o nounset  #don't allow access to unset variables
-set -o errexit  #don't allow any command to exit with an error code !=0
+set -e
+set -u
 
 TOOLS=$(dirname $0)/tools.sh
 if [ -f $TOOLS ] && [ -r $TOOLS ]; then
@@ -22,7 +22,7 @@ HOSTNAME=$(hostname)
 
 RELEASE_TIME=$(date "+%Y%m%d_%H%M%S")
 
-DEFAULT_LOCAL_SETTINGS_FILE=~/local_settings.properties
+DEFAULT_LOCAL_SETTINGS_FILE=../../configs/local_settings.properties
 
 # by default, this script will stop and start metasfrresh
 SKIP_START_STOP=false
@@ -291,7 +291,7 @@ prepare
 
 install_metasfresh 
 
-install_service metasfresh-admin
+#install_service metasfresh-admin
 
 # we now have the option to run material-dispo as a part of metasfresh(-app), so in order to ease the local admin's life we do just that
 # install_service metasfresh-material-dispo 
@@ -304,3 +304,4 @@ install_metasfresh-webui-frontend
 invoke_customer_script
 
 trace $(basename $0) "END"
+ΩΩ

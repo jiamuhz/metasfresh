@@ -1,7 +1,7 @@
 #!/bin/bash
 
-set -o nounset  #don't allow access to unset variables
-set -o errexit  #don't allow any command to exit with an error code !=0
+set -e
+set -u
 
 #
 # This script does things that the user metasfresh is not allowed to do.
@@ -11,9 +11,12 @@ set -o errexit  #don't allow any command to exit with an error code !=0
 #Thanks to http://stackoverflow.com/questions/6643853/how-to-convert-in-path-names-to-absolute-name-in-a-bash-script for the readlink tip
 LOCAL_DIR=$(readlink -m $(dirname $0))
 #Note: ROLLOUT_DIR can be overridden from cmdline using -d
-ROLLOUT_DIR=$(readlink -m LOCAL_DIR/..)
+ROLLOUT_DIR=$(readlink -m ${LOCAL_DIR}/..)
 
-DEFAULT_LOCAL_SETTINGS_FILE=~/local_settings.properties
+echo $LOCAL_DIR
+echo $ROLLOUT_DIR
+
+DEFAULT_LOCAL_SETTINGS_FILE=../../configs/local_settings.properties
 
 prepare_service_superuser()
 {
@@ -21,48 +24,20 @@ prepare_service_superuser()
 
 	local SYSTEM_DEPLOY_SOURCE_FOLDER=${ROLLOUT_DIR}/deploy/services
 	local SYSTEM_DEPLOY_TARGET_FOLDER=${METASFRESH_HOME}/${service_name}
-    local service_isrunning=NOTSET	
+  local service_isrunning=NOTSET
 
-	echo "Checking if /opt/${service_name} needs to be migrated"
-	if [[ -d /opt/${service_name} ]]; 
-	then
+  echo "Copying start_metasfresh-webui-api.sh"
+  cp -v ${ROLLOUT_DIR}/install/start_metasfresh-webui-api.sh ${METASFRESH_HOME}
+  chmod -v 700 ${METASFRESH_HOME}/start_metasfresh-webui-api.sh
 
-		local INIT_D_FILE=/etc/init.d/${service_name}
-		if [[ -x "${INIT_D_FILE}" ]]; then
-
-            # check if service is currently running. If so, start it after migrating to systemd service
-            # starting the service is necessary to signal the "minor_remote.sh" script, that this service
-            # shall be restarted after rollout as well
-            #
-            if [[ $(${INIT_D_FILE} status | grep "Running" | wc -l) -gt "0" ]]; then
-                local service_isrunning=yes
-            fi
-            
-			echo "Found executable file ${INIT_D_FILE}; Going to try and stop ${service_name}"
-			${INIT_D_FILE} stop
-			unlink ${INIT_D_FILE}
-		fi
-
-		echo "!!! Copying /opt/${service_name} to $SYSTEM_DEPLOY_TARGET_FOLDER (excluding /opt/${service_name}/log) !!! "
-		rsync -av --exclude='log' /opt/${service_name}/ ${SYSTEM_DEPLOY_TARGET_FOLDER}
-		
-		if [[ -f ${SYSTEM_DEPLOY_TARGET_FOLDER}/metasfresh-webui-api.conf ]];
-		then
-			# will be replaced with a new version.
-			mv -v ${SYSTEM_DEPLOY_TARGET_FOLDER}/metasfresh-webui-api.conf ${SYSTEM_DEPLOY_TARGET_FOLDER}/metasfresh-webui-api.conf_BKP
-		fi
-		mv /opt/${service_name} /opt/${service_name}_BKP
-		echo "!!!  Done !!!"
-	else
-		echo "OK"
-	fi
-	
 	local SYSTEM_SERVICE_FILE=/etc/systemd/system/${service_name}.service
 	echo "Checking if $SYSTEM_SERVICE_FILE exists"
 	if [[ ! -f $SYSTEM_SERVICE_FILE ]]; 
 	then
 		echo "!!! Installing service unit file !!!"
 		cd $(pwd)
+
+		echo ${SYSTEM_DEPLOY_SOURCE_FOLDER}/${service_name}-configs.zip
 		
 		# gh #1640: a service's artifact name might end with "-service" and we need to acomodate for that unzipping the configs file
 		local CONFIGS_ZIP_FILENAME=NOTSET
@@ -77,6 +52,7 @@ prepare_service_superuser()
 		fi
 		
 		unzip $CONFIGS_ZIP_FILENAME -d ./${service_name}-configs
+		cp -v ./${service_name}-configs/configs/metasfresh.properties ${SYSTEM_DEPLOY_TARGET_FOLDER}/
 		cp -v ./${service_name}-configs/configs/${service_name}.service ${SYSTEM_SERVICE_FILE}
 		chmod 0644 ${SYSTEM_SERVICE_FILE}
 		systemctl daemon-reload
@@ -99,22 +75,7 @@ prepare_service_superuser()
 	else
 		echo "OK"
 	fi
-	
-	local SYSTEM_SUDOERS_FILE="/etc/sudoers.d/${service_name}"
-	echo "Checking if $SYSTEM_SUDOERS_FILE exists"
-	if [[ ! -f $SYSTEM_SUDOERS_FILE ]];
-	then
-		echo "!!! Installing sudoers file !!! "
-		echo "metasfresh ALL=(root)NOPASSWD: /bin/systemctl stop ${service_name}.service" > ${SYSTEM_SUDOERS_FILE}
-		echo "metasfresh ALL=(root)NOPASSWD: /bin/systemctl start ${service_name}.service" >> ${SYSTEM_SUDOERS_FILE}
-		echo "metasfresh ALL=(root)NOPASSWD: /bin/systemctl status ${service_name}.service" >> ${SYSTEM_SUDOERS_FILE}
-		echo "metasfresh ALL=(root)NOPASSWD: /bin/systemctl restart ${service_name}.service" >> ${SYSTEM_SUDOERS_FILE}
-		chown root:root ${SYSTEM_SUDOERS_FILE}
-		chmod 0440 ${SYSTEM_SUDOERS_FILE}
-		echo "!!! Done !!!"
-	else
-		echo "OK"
-	fi
+
 }
 
 LOCAL_SETTINGS_FILE=$DEFAULT_LOCAL_SETTINGS_FILE
@@ -134,6 +95,4 @@ done
 
 source $LOCAL_SETTINGS_FILE
 
-prepare_service_superuser metasfresh-admin
-prepare_service_superuser metasfresh-material-dispo
 prepare_service_superuser metasfresh-webui-api
