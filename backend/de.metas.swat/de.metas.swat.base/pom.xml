@@ -36,7 +36,7 @@
 	<artifactId>de.metas.swat.base</artifactId>
 	<packaging>jar</packaging>
 
-	<description>Swat base project</description>
+	<description>Swat (Sales and Warehouse Automation Tools) base project</description>
 
 	<properties>
 		<!-- empty property because the sql migration dir already contains a list 

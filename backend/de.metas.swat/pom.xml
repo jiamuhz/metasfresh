@@ -12,6 +12,8 @@
 	<artifactId>de.metas.swat</artifactId>
 	<packaging>pom</packaging>
 
+    <description>SWAT (Sales and Warehouse Automation Tools) 销售和仓库自动化扩展模块，提供增强的销售流程、仓库管理和物流功能。</description>
+
 	<modules>
 		<module>de.metas.swat.base</module>
 	</modules>
