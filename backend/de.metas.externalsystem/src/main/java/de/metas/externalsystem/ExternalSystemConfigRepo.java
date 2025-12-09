@@ -27,8 +27,6 @@ import de.metas.bpartner.BPartnerId;
 import de.metas.common.util.EmptyUtil;
 import de.metas.common.util.StringUtils;
 import de.metas.document.DocTypeId;
-import de.metas.externalsystem.alberta.ExternalSystemAlbertaConfig;
-import de.metas.externalsystem.alberta.ExternalSystemAlbertaConfigId;
 import de.metas.externalsystem.amazon.ExternalSystemAmazonConfig;
 import de.metas.externalsystem.amazon.ExternalSystemAmazonConfigId;
 import de.metas.externalsystem.ebay.ApiMode;
@@ -48,7 +46,6 @@ import de.metas.externalsystem.leichmehl.TargetFieldType;
 import de.metas.externalsystem.metasfresh.ExternalSystemMetasfreshConfig;
 import de.metas.externalsystem.metasfresh.ExternalSystemMetasfreshConfigId;
 import de.metas.externalsystem.model.I_ExternalSystem_Config;
-import de.metas.externalsystem.model.I_ExternalSystem_Config_Alberta;
 import de.metas.externalsystem.model.I_ExternalSystem_Config_Amazon;
 import de.metas.externalsystem.model.I_ExternalSystem_Config_Ebay;
 import de.metas.externalsystem.model.I_ExternalSystem_Config_Ebay_Mapping;
@@ -130,8 +127,6 @@ public class ExternalSystemConfigRepo
 	{
 		switch (id.getType())
 		{
-			case Alberta:
-				return getById(ExternalSystemAlbertaConfigId.cast(id));
 			case Shopware6:
 				return getById(ExternalSystemShopware6ConfigId.cast(id));
 			case Other:
@@ -162,9 +157,6 @@ public class ExternalSystemConfigRepo
 	{
 		switch (type)
 		{
-			case Alberta:
-				return getAlbertaConfigByValue(value)
-						.map(this::getExternalSystemParentConfig);
 			case Shopware6:
 				return getShopware6ConfigByValue(value)
 						.map(this::getExternalSystemParentConfig);
@@ -206,8 +198,6 @@ public class ExternalSystemConfigRepo
 	{
 		switch (externalSystemType)
 		{
-			case Alberta:
-				return getAlbertaConfigByParentId(id);
 			case Shopware6:
 				return getShopware6ConfigByParentId(id);
 			case Other:
@@ -252,9 +242,6 @@ public class ExternalSystemConfigRepo
 
 		switch (externalSystemType)
 		{
-			case Alberta:
-				result = getAllByTypeAlberta();
-				break;
 			case RabbitMQ:
 				result = getAllByTypeRabbitMQ();
 				break;
@@ -311,8 +298,6 @@ public class ExternalSystemConfigRepo
 	{
 		switch (externalSystemType)
 		{
-			case Alberta:
-				return getAlbertaConfigByQuery(query);
 			case Shopware6:
 				return getShopware6ConfigByQuery(query);
 			case Ebay:
@@ -320,16 +305,6 @@ public class ExternalSystemConfigRepo
 			default:
 				throw Check.fail("Unsupported IExternalSystemChildConfigId.type={}", externalSystemType);
 		}
-	}
-
-	@NonNull
-	private Optional<I_ExternalSystem_Config_Alberta> getAlbertaConfigByValue(@NonNull final String value)
-	{
-		return queryBL.createQueryBuilder(I_ExternalSystem_Config_Alberta.class)
-				.addOnlyActiveRecordsFilter()
-				.addEqualsFilter(I_ExternalSystem_Config_Alberta.COLUMNNAME_ExternalSystemValue, value)
-				.create()
-				.firstOnlyOptional(I_ExternalSystem_Config_Alberta.class);
 	}
 
 	@NonNull
@@ -355,12 +330,7 @@ public class ExternalSystemConfigRepo
 	@NonNull
 	private Optional<IExternalSystemChildConfig> getAlbertaConfigByParentId(@NonNull final ExternalSystemParentConfigId id)
 	{
-		return queryBL.createQueryBuilder(I_ExternalSystem_Config_Alberta.class)
-				.addOnlyActiveRecordsFilter()
-				.addEqualsFilter(I_ExternalSystem_Config_Alberta.COLUMNNAME_ExternalSystem_Config_ID, id.getRepoId())
-				.create()
-				.firstOnlyOptional(I_ExternalSystem_Config_Alberta.class)
-				.map(ex -> buildExternalSystemAlbertaConfig(ex, id));
+    return Optional.empty();
 	}
 
 	@NonNull
@@ -385,24 +355,6 @@ public class ExternalSystemConfigRepo
 				.map(this::buildExternalSystemRabbitMQConfig);
 	}
 
-	private ExternalSystemParentConfig getById(@NonNull final ExternalSystemAlbertaConfigId id)
-	{
-		final I_ExternalSystem_Config_Alberta config = InterfaceWrapperHelper.load(id, I_ExternalSystem_Config_Alberta.class);
-
-		return getExternalSystemParentConfig(config);
-	}
-
-	private ExternalSystemParentConfig getExternalSystemParentConfig(@NonNull final I_ExternalSystem_Config_Alberta config)
-	{
-		final ExternalSystemParentConfigId parentConfigId = ExternalSystemParentConfigId.ofRepoId(config.getExternalSystem_Config_ID());
-
-		final ExternalSystemAlbertaConfig child = buildExternalSystemAlbertaConfig(config, parentConfigId);
-
-		return getById(parentConfigId)
-				.childConfig(child)
-				.build();
-	}
-
 	@NonNull
 	private ExternalSystemParentConfig getExternalSystemParentConfig(@NonNull final I_ExternalSystem_Config_RabbitMQ_HTTP config)
 	{
@@ -412,22 +364,6 @@ public class ExternalSystemConfigRepo
 
 		return getById(parentConfigId)
 				.childConfig(child)
-				.build();
-	}
-
-	@NonNull
-	private ExternalSystemAlbertaConfig buildExternalSystemAlbertaConfig(final @NonNull I_ExternalSystem_Config_Alberta config,
-			@NonNull final ExternalSystemParentConfigId parentConfigId)
-	{
-		return ExternalSystemAlbertaConfig.builder()
-				.id(ExternalSystemAlbertaConfigId.ofRepoId(config.getExternalSystem_Config_Alberta_ID()))
-				.parentId(parentConfigId)
-				.apiKey(config.getApiKey())
-				.baseUrl(config.getBaseURL())
-				.value(config.getExternalSystemValue())
-				.tenant(config.getTenant())
-				.pharmacyPriceListId(PriceListId.ofRepoIdOrNull(config.getPharmacy_PriceList_ID()))
-				.rootBPartnerIdForUsers(BPartnerId.ofRepoIdOrNull(config.getC_Root_BPartner_ID()))
 				.build();
 	}
 
@@ -586,17 +522,6 @@ public class ExternalSystemConfigRepo
 		return getById(id.getParentConfigId())
 				.childConfig(childConfig)
 				.build();
-	}
-
-	@NonNull
-	private ImmutableList<ExternalSystemParentConfig> getAllByTypeAlberta()
-	{
-		return queryBL.createQueryBuilder(I_ExternalSystem_Config_Alberta.class)
-				.addOnlyActiveRecordsFilter()
-				.create()
-				.stream()
-				.map(this::getExternalSystemParentConfig)
-				.collect(ImmutableList.toImmutableList());
 	}
 
 	@NonNull
@@ -796,26 +721,6 @@ public class ExternalSystemConfigRepo
 				.stream()
 				.map(this::getExternalSystemParentConfig)
 				.collect(ImmutableList.toImmutableList());
-	}
-
-	@NonNull
-	private Optional<ExternalSystemParentConfig> getAlbertaConfigByQuery(@NonNull final ExternalSystemConfigQuery query)
-	{
-		final IQueryBuilder<I_ExternalSystem_Config_Alberta> queryBuilder = queryBL.createQueryBuilder(I_ExternalSystem_Config_Alberta.class);
-
-		queryBuilder.addEqualsFilter(I_ExternalSystem_Config_Shopware6.COLUMNNAME_ExternalSystem_Config_ID, query.getParentConfigId().getRepoId());
-
-		if (query.getIsActive() != null)
-		{
-			queryBuilder.addEqualsFilter(I_ExternalSystem_Config_Shopware6.COLUMNNAME_IsActive, query.getIsActive());
-		}
-
-		return queryBuilder
-				.create()
-				.firstOnlyOptional(I_ExternalSystem_Config_Alberta.class)
-				.map(ex -> buildExternalSystemAlbertaConfig(ex, query.getParentConfigId()))
-				.map(shopwareConfig -> getById(query.getParentConfigId())
-						.childConfig(shopwareConfig).build());
 	}
 
 	@NonNull

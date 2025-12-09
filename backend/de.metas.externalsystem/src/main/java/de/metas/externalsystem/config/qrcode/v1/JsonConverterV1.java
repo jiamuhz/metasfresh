@@ -24,7 +24,6 @@ package de.metas.externalsystem.config.qrcode.v1;
 
 import de.metas.externalsystem.ExternalSystemType;
 import de.metas.externalsystem.IExternalSystemChildConfigId;
-import de.metas.externalsystem.alberta.ExternalSystemAlbertaConfigId;
 import de.metas.externalsystem.config.qrcode.ExternalSystemConfigQRCode;
 import de.metas.externalsystem.config.qrcode.ExternalSystemConfigQRCodeJsonConverter;
 import de.metas.externalsystem.grssignum.ExternalSystemGRSSignumConfigId;
@@ -80,8 +79,6 @@ public class JsonConverterV1
 	{
 		switch (externalSystemType)
 		{
-			case Alberta:
-				return ExternalSystemAlbertaConfigId.ofRepoId(repoId);
 			case Shopware6:
 				return ExternalSystemShopware6ConfigId.ofRepoId(repoId);
 			// case Other:

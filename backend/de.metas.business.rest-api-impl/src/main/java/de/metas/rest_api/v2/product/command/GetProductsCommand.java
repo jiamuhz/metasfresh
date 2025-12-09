@@ -38,7 +38,6 @@ import de.metas.common.util.CoalesceUtil;
 import de.metas.externalreference.ExternalIdentifier;
 import de.metas.externalsystem.ExternalSystemParentConfig;
 import de.metas.externalsystem.ExternalSystemType;
-import de.metas.externalsystem.alberta.ExternalSystemAlbertaConfig;
 import de.metas.externalsystem.audit.ExternalSystemExportAudit;
 import de.metas.i18n.IModelTranslationMap;
 import de.metas.organization.IOrgDAO;
@@ -287,8 +286,6 @@ public class GetProductsCommand
 			loadedProductIds.add(ProductId.ofRepoId(product.getM_Product_ID()));
 		});
 
-		loadAndSetAlbertaRelatedInfo(productRecordsBuilder, loadedProductIds);
-
 		return productRecordsBuilder.build();
 	}
 
@@ -372,21 +369,6 @@ public class GetProductsCommand
 		}
 	}
 
-	@Nullable
-	private PriceListId getPharmacyPriceListIdOrNull()
-	{
-		if (!ExternalSystemType.Alberta.equals(externalSystemType) || Check.isBlank(externalSystemConfigValue))
-		{
-			return null;
-		}
-
-		return externalSystemService.getByTypeAndValue(ExternalSystemType.Alberta, externalSystemConfigValue)
-				.map(ExternalSystemParentConfig::getChildConfig)
-				.map(ExternalSystemAlbertaConfig::cast)
-				.map(ExternalSystemAlbertaConfig::getPharmacyPriceListId)
-				.orElse(null);
-	}
-
 	@NonNull
 	private JsonAlbertaPackagingUnit mapToJsonAlbertaPackagingUnit(@NonNull final AlbertaPackagingUnit albertaPackagingUnit)
 	{
@@ -394,35 +376,6 @@ public class GetProductsCommand
 				.quantity(albertaPackagingUnit.getQuantity())
 				.unit(albertaPackagingUnit.getUnit())
 				.build();
-	}
-
-	private void loadAndSetAlbertaRelatedInfo(
-			@NonNull final ImmutableList.Builder<I_M_Product> productRecordsBuilder,
-			@NonNull final HashSet<ProductId> loadedProductIds)
-	{
-		if (!ExternalSystemType.Alberta.equals(externalSystemType))
-		{
-			return;
-		}
-
-		final Instant since = isSingleExport()
-				? Instant.now().plus(1, ChronoUnit.YEARS) //dev-note: lazy way of saying we are interested only in our product
-				: this.since;
-
-		final GetAlbertaProductsInfoRequest getAlbertaProductsInfoRequest = GetAlbertaProductsInfoRequest.builder()
-				.since(since)
-				.productIdSet(loadedProductIds)
-				.pharmacyPriceListId(getPharmacyPriceListIdOrNull())
-				.build();
-
-		productId2AlbertaInfo = albertaProductService.getAlbertaInfoByProductId(getAlbertaProductsInfoRequest);
-		final ImmutableSet<ProductId> productIdsLeftToLoaded = productId2AlbertaInfo
-				.keySet()
-				.stream()
-				.filter(productId -> !loadedProductIds.contains(productId))
-				.collect(ImmutableSet.toImmutableSet());
-
-		servicesFacade.getProductsById(productIdsLeftToLoaded).forEach(productRecordsBuilder::add);
 	}
 
 	@NonNull

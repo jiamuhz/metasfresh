@@ -12,7 +12,7 @@
     <artifactId>de.metas.payment.esr</artifactId>
     <packaging>jar</packaging>
 
-    <description>ESR Payments</description>
+    <description>ESR Payments - ESR (Einzahlungsschein mit Referenznummer) 是瑞士的标准支付系统</description>
 
     <properties>
         <migration-sql-basedir>70-de.metas.payment.esr</migration-sql-basedir>

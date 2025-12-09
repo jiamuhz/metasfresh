@@ -3,8 +3,6 @@ package de.metas.purchasecandidate.interceptor;
 import org.adempiere.ad.modelvalidator.AbstractModuleInterceptor;
 import org.adempiere.ad.modelvalidator.IModelValidationEngine;
 
-import de.metas.vertical.pharma.vendor.gateway.msv3.model.I_I_BPartner;
-
 /*
  * #%L
  * de.metas.purchasecandidate.base
@@ -38,6 +36,5 @@ public class Main extends AbstractModuleInterceptor
 	@Override
 	protected void registerInterceptors(final IModelValidationEngine engine)
 	{
-		engine.addImportInterceptor(I_I_BPartner.Table_Name, BPPurchaseScheduleImportPartnerInterceptor.instance);
 	}
 }

@@ -140,7 +140,6 @@
         <module>de.metas.handlingunits.webui</module>
 
         <module>de.metas.payment.esr</module>
-        <module>de.metas.payment.sepa</module>
         <module>de.metas.payment.paypal</module>
         <module>de.metas.payment.revolut</module>
 
@@ -179,22 +178,6 @@
 
         <module>de.metas.datev</module>
 
-        <module>de.metas.vertical.creditscore</module>
-
-        <module>de.metas.vertical.healthcare.alberta</module>
-
-        <module>de.metas.vertical.pharma</module>
-        <module>de.metas.vertical.pharma.msv3.commons</module>
-        <module>de.metas.vertical.pharma.msv3.schema.v1</module>
-        <module>de.metas.vertical.pharma.msv3.schema.v2</module>
-        <module>de.metas.vertical.pharma.msv3.server</module>
-        <module>de.metas.vertical.pharma.msv3.server-peer</module>
-        <module>de.metas.vertical.pharma.msv3.server-peer-metasfresh</module>
-        <module>de.metas.vertical.pharma.vendor.gateway.msv3</module>
-
-        <module>de.metas.vertical.pharma.securpharm</module>
-
-        <module>vertical-healthcare_ch</module>
         <module>de.metas.issue.tracking.github</module>
         <module>de.metas.issue.tracking.everhour</module>
 

@@ -25,7 +25,6 @@ package de.metas.externalsystem;
 import au.com.origin.snapshots.Expect;
 import au.com.origin.snapshots.junit5.SnapshotExtension;
 import com.google.common.collect.ImmutableList;
-import de.metas.externalsystem.alberta.ExternalSystemAlbertaConfigId;
 import de.metas.externalsystem.ebay.ApiMode;
 import de.metas.externalsystem.ebay.ExternalSystemEbayConfigId;
 import de.metas.externalsystem.grssignum.ExternalSystemGRSSignumConfigId;
@@ -34,7 +33,6 @@ import de.metas.externalsystem.leichmehl.ReplacementSource;
 import de.metas.externalsystem.leichmehl.TargetFieldType;
 import de.metas.externalsystem.metasfresh.ExternalSystemMetasfreshConfigId;
 import de.metas.externalsystem.model.I_ExternalSystem_Config;
-import de.metas.externalsystem.model.I_ExternalSystem_Config_Alberta;
 import de.metas.externalsystem.model.I_ExternalSystem_Config_Ebay;
 import de.metas.externalsystem.model.I_ExternalSystem_Config_Ebay_Mapping;
 import de.metas.externalsystem.model.I_ExternalSystem_Config_GRSSignum;
@@ -87,30 +85,6 @@ class ExternalSystemConfigRepoTest
 		externalSystemConfigRepo = new ExternalSystemConfigRepo(new ExternalSystemOtherConfigRepository());
 	}
 
-	@Test
-	void externalSystem_Config_Alberta_getById()
-	{
-		// given
-		final I_ExternalSystem_Config parentRecord = ExternalSystemTestUtil.createI_ExternalSystem_ConfigBuilder()
-				.type(X_ExternalSystem_Config.TYPE_Alberta)
-				.build();
-
-		final I_ExternalSystem_Config_Alberta childRecord = newInstance(I_ExternalSystem_Config_Alberta.class);
-		childRecord.setApiKey("apiKey");
-		childRecord.setBaseURL("baseUrl");
-		childRecord.setTenant("tenant");
-		childRecord.setExternalSystemValue("testAlbertaValue");
-		childRecord.setExternalSystem_Config_ID(parentRecord.getExternalSystem_Config_ID());
-		saveRecord(childRecord);
-
-		// when
-		final ExternalSystemAlbertaConfigId id = ExternalSystemAlbertaConfigId.ofRepoId(childRecord.getExternalSystem_Config_Alberta_ID());
-		final ExternalSystemParentConfig result = externalSystemConfigRepo.getById(id);
-
-		// then
-		assertThat(result).isNotNull();
-		expect.serializer("orderedJson").toMatchSnapshot(result);
-	}
 
 	@Test
 	void externalSystem_Config_Shopware6_getById()
@@ -250,32 +224,6 @@ class ExternalSystemConfigRepoTest
 		expect.serializer("orderedJson").toMatchSnapshot(result);
 	}
 
-	@Test
-	void externalSystem_Config_Alberta_getByTypeAndValue()
-	{
-		// given
-		final I_ExternalSystem_Config parentRecord = ExternalSystemTestUtil.createI_ExternalSystem_ConfigBuilder()
-				.type(X_ExternalSystem_Config.TYPE_Alberta)
-				.build();
-
-		final String value = "testAlbertaValue";
-
-		final I_ExternalSystem_Config_Alberta childRecord = newInstance(I_ExternalSystem_Config_Alberta.class);
-		childRecord.setApiKey("apiKey");
-		childRecord.setBaseURL("baseUrl");
-		childRecord.setTenant("tenant");
-		childRecord.setExternalSystemValue(value);
-		childRecord.setExternalSystem_Config_ID(parentRecord.getExternalSystem_Config_ID());
-		saveRecord(childRecord);
-
-		// when
-		final ExternalSystemParentConfig result = externalSystemConfigRepo.getByTypeAndValue(ExternalSystemType.Alberta, value)
-				.orElseThrow(() -> new RuntimeException("Something went wrong, no ExternalSystemParentConfig found!"));
-
-		// then
-		assertThat(result).isNotNull();
-		expect.serializer("orderedJson").toMatchSnapshot(result);
-	}
 
 	@Test
 	void externalSystem_Config_Metasfresh_getTypeAndValue()
@@ -328,59 +276,6 @@ class ExternalSystemConfigRepoTest
 
 		// then
 		assertThat(result).isNotNull();
-		expect.serializer("orderedJson").toMatchSnapshot(result);
-	}
-
-	@Test
-	void externalSystem_Config_Alberta_getByTypeAndValue_wrongType()
-	{
-		// given
-		final I_ExternalSystem_Config parentRecord = ExternalSystemTestUtil.createI_ExternalSystem_ConfigBuilder()
-				.type(X_ExternalSystem_Config.TYPE_Alberta)
-				.build();
-
-		final String value = "testAlbertaValue";
-
-		final I_ExternalSystem_Config_Alberta childRecord = newInstance(I_ExternalSystem_Config_Alberta.class);
-		childRecord.setApiKey("apiKey");
-		childRecord.setBaseURL("baseUrl");
-		childRecord.setTenant("tenant");
-		childRecord.setExternalSystemValue(value);
-		childRecord.setExternalSystem_Config_ID(parentRecord.getExternalSystem_Config_ID());
-		saveRecord(childRecord);
-
-		// when
-		final Optional<ExternalSystemParentConfig> externalSystemParentConfig = externalSystemConfigRepo.getByTypeAndValue(ExternalSystemType.Shopware6, value);
-
-		assertThat(externalSystemParentConfig).isEmpty();
-	}
-
-	@Test
-	void externalSystem_Config_Alberta_getByTypeAndParent()
-	{
-		// given
-		final I_ExternalSystem_Config parentRecord = ExternalSystemTestUtil.createI_ExternalSystem_ConfigBuilder()
-				.type(X_ExternalSystem_Config.TYPE_Alberta)
-				.build();
-
-		final String value = "testAlbertaValue";
-
-		final I_ExternalSystem_Config_Alberta childRecord = newInstance(I_ExternalSystem_Config_Alberta.class);
-		childRecord.setApiKey("apiKey");
-		childRecord.setBaseURL("baseUrl");
-		childRecord.setTenant("tenant");
-		childRecord.setExternalSystemValue(value);
-		childRecord.setExternalSystem_Config_ID(parentRecord.getExternalSystem_Config_ID());
-		saveRecord(childRecord);
-
-		final ExternalSystemParentConfigId externalSystemParentConfigId = ExternalSystemParentConfigId.ofRepoId(parentRecord.getExternalSystem_Config_ID());
-		// when
-		final IExternalSystemChildConfig result = externalSystemConfigRepo.getChildByParentIdAndType(externalSystemParentConfigId, ExternalSystemType.Alberta)
-				.orElseThrow(() -> new RuntimeException("Something went wrong, no ExternalSystemChildConfig found!"));
-
-		// then
-		assertThat(result).isNotNull();
-		assertThat(result.getId().getRepoId()).isEqualTo(childRecord.getExternalSystem_Config_Alberta_ID());
 		expect.serializer("orderedJson").toMatchSnapshot(result);
 	}
 
@@ -623,7 +518,7 @@ class ExternalSystemConfigRepoTest
 		saveRecord(childRecord);
 
 		// when
-		final Optional<ExternalSystemParentConfig> externalSystemParentConfig = externalSystemConfigRepo.getByTypeAndValue(ExternalSystemType.Alberta, value);
+		final Optional<ExternalSystemParentConfig> externalSystemParentConfig = externalSystemConfigRepo.getByTypeAndValue(ExternalSystemType.Ebay, value);
 
 		assertThat(externalSystemParentConfig).isEmpty();
 	}
@@ -990,7 +885,7 @@ class ExternalSystemConfigRepoTest
 				.build();
 
 		// when
-		final ImmutableList<ExternalSystemParentConfig> result = externalSystemConfigRepo.getActiveByType(ExternalSystemType.Alberta);
+		final ImmutableList<ExternalSystemParentConfig> result = externalSystemConfigRepo.getActiveByType(ExternalSystemType.RabbitMQ);
 
 		// then
 		assertThat(result).isEmpty();
@@ -1158,7 +1053,7 @@ class ExternalSystemConfigRepoTest
 				.build();
 
 		// when
-		final ImmutableList<ExternalSystemParentConfig> result = externalSystemConfigRepo.getActiveByType(ExternalSystemType.Alberta);
+		final ImmutableList<ExternalSystemParentConfig> result = externalSystemConfigRepo.getActiveByType(ExternalSystemType.SAP);
 
 		// then
 		assertThat(result).isEmpty();
