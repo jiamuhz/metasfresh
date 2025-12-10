@@ -139,9 +139,7 @@
         <module>de.metas.handlingunits.base</module>
         <module>de.metas.handlingunits.webui</module>
 
-        <module>de.metas.payment.esr</module>
         <module>de.metas.payment.paypal</module>
-        <module>de.metas.payment.revolut</module>
 
         <module>de.metas.printing</module>
         <module>de.metas.printing.rest-api-impl</module>
