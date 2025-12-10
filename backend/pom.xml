@@ -171,8 +171,6 @@
 
         <module>de.metas.vendor.gateway.api</module>
 
-        <module>de.metas.datev</module>
-
         <module>de.metas.issue.tracking.github</module>
         <module>de.metas.issue.tracking.everhour</module>
 
