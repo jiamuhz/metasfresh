@@ -12,6 +12,8 @@
 	<groupId>de.metas.device.scales</groupId>
 	<artifactId>de.metas.device.scales</artifactId>
 
+    <description>集成电子秤和称重设备的模块</description>
+
 	<dependencies>
 		<dependency>
 			<groupId>de.metas.device.api</groupId>

@@ -11,6 +11,8 @@
 	<groupId>de.metas.forex</groupId>
 	<artifactId>de.metas.forex.webui</artifactId>
 
+    <description>外汇交易（Forex/FX Trading）模块，用于管理货币兑换、外汇交易、汇率风险管理</description>
+
 	<properties>
 		<migration-sql-basedir/>
 	</properties>

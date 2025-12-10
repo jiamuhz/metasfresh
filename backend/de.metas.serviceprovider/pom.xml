@@ -11,6 +11,8 @@
 	<groupId>de.metas.serviceprovider</groupId>
 	<artifactId>de.metas.serviceprovider.base</artifactId>
 
+    <description>管理 外部服务提供商和服务交付 的模块，支持外包服务、项目管理、服务级别协议（SLA）和计费管理</description>
+
 	<properties>
 		<migration-sql-basedir/>
 		<metasfresh.version>10.0.0</metasfresh.version>

@@ -36,6 +36,8 @@
     <version>10.0.0</version>
     <packaging>jar</packaging>
 
+    <description>Cucumber: 支持Behavior-Driven Development(BDD)的测试框架</description>
+
     <properties>
         <metasfresh.version>10.0.0</metasfresh.version>
         <cucumber.version>7.5.0</cucumber.version>

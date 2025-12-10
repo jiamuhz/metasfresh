@@ -12,6 +12,8 @@
     <groupId>de.metas.issue.tracking.everhour</groupId>
     <artifactId>de.metas.issue.tracking.everhour</artifactId>
 
+    <description>用于与 Everhour 时间追踪工具 集成的模块，实现项目时间管理、工时跟踪和计费的自动化</description>
+
     <properties>
         <migration-sql-basedir/>
         <metasfresh.version>10.0.0</metasfresh.version>

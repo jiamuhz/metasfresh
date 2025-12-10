@@ -12,6 +12,8 @@
 	<groupId>de.metas.rfq</groupId>
 	<artifactId>de.metas.rfq</artifactId>
 
+    <description>询价（Request for Quotation）管理的核心模块，支持采购和销售询价流程的自动化管理。</description>
+
 	<properties>
 		<migration-sql-basedir>43-de.metas.rfq</migration-sql-basedir>
 		<metasfresh.version>10.0.0</metasfresh.version>
