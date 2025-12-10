@@ -166,9 +166,7 @@
 
         <module>de.metas.shipper.gateway.commons</module>
         <module>de.metas.shipper.gateway.spi</module>
-        <module>de.metas.shipper.gateway.go</module>
         <module>de.metas.shipper.gateway.dhl</module>
-        <module>de.metas.shipper.gateway.dpd</module>
 
         <module>de.metas.util</module>
         <module>de.metas.util.web</module>
