@@ -57,6 +57,18 @@ public class AttachmentEntryCreateRequest
 				.build();
 	}
 
+	public static AttachmentEntryCreateRequest fromLocalFileURI(
+			@NonNull final String fileName,
+			@NonNull final URI uri)
+	{
+		return AttachmentEntryCreateRequest.builder()
+				.type(AttachmentEntryType.LocalFileURL)
+				.filename(fileName)
+				.contentType(MimeType.getMimeType(fileName))
+				.url(uri)
+				.build();
+	}
+
 	public static AttachmentEntryCreateRequest fromByteArray(
 			@NonNull final String fileName,
 			final byte[] data)

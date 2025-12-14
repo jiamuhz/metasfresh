@@ -38,7 +38,8 @@ public class CalloutClient extends CalloutEngine
 	 */
 	public String storeAttachmentOnFileSystem (Properties ctx, int WindowNo, GridTab mTab, GridField mField, Object value)
 	{
-		return "StoreAttachmentWarning";
+		//return "StoreAttachmentWarning";
+		return NO_ERROR;
 	}	//	storeAttachmentOnFilesystem
 	
 	/**
@@ -52,7 +53,8 @@ public class CalloutClient extends CalloutEngine
 	 */
 	public String storeArchiveOnFileSystem (Properties ctx, int WindowNo, GridTab mTab, GridField mField, Object value)
 	{
-		return "StoreArchiveWarning";
+		//return "StoreArchiveWarning";
+    return NO_ERROR;
 	}	//	storeArchiveOnFileSystem
 	
 }	//	CalloutClient

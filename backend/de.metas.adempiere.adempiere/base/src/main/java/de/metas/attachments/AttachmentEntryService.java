@@ -7,19 +7,28 @@ import de.metas.attachments.automaticlinksharing.RecordToReferenceProviderServic
 import de.metas.attachments.listener.TableAttachmentListenerRepository;
 import de.metas.attachments.listener.TableAttachmentListenerService;
 import de.metas.attachments.migration.AttachmentMigrationService;
+import de.metas.attachments.storeattachment.StoreAttachmentService;
+import de.metas.cache.CCache;
 import de.metas.i18n.AdMessageKey;
 import de.metas.util.Check;
+import de.metas.util.FileUtil;
 import de.metas.util.collections.CollectionUtils;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.Singular;
 import lombok.Value;
 import org.adempiere.exceptions.AdempiereException;
+import org.adempiere.model.InterfaceWrapperHelper;
+import org.adempiere.service.ClientId;
 import org.adempiere.util.lang.impl.TableRecordReference;
+import org.apache.commons.io.FileUtils;
+import org.compiere.model.I_AD_Client;
+import org.compiere.util.Env;
 import org.springframework.stereotype.Service;
 
 import javax.annotation.Nullable;
 import java.io.File;
+import java.io.IOException;
 import java.net.URI;
 import java.nio.file.Path;
 import java.util.Collection;
@@ -61,6 +70,18 @@ public class AttachmentEntryService
 	private final RecordToReferenceProviderService attachmentHandlerRegistry;
 
 	private static final AdMessageKey MSG_EXPECTED_ONE_ATTACHMENT_FOR_RECORD_REF = AdMessageKey.of("de.metas.attachments.ExpectedOneAttachmentForRecordRef");
+
+	private final CCache<ClientId, String> attachmentStoreLocationCCache = CCache.<ClientId, String>builder()
+		.tableName(I_AD_Client.Table_Name)
+		.cacheMapType(CCache.CacheMapType.LRU)
+		.initialCapacity(5)
+		.build();
+
+	private final CCache<ClientId, Boolean> storeattachmentsonfilesystemCCache = CCache.<ClientId, Boolean>builder()
+		.tableName(I_AD_Client.Table_Name)
+		.cacheMapType(CCache.CacheMapType.LRU)
+		.initialCapacity(5)
+		.build();
 
 	@VisibleForTesting
 	public static AttachmentEntryService createInstanceForUnitTesting()
@@ -125,7 +146,29 @@ public class AttachmentEntryService
 			final byte[] bytes)
 	{
 		final TableRecordReference modelReference = TableRecordReference.of(referencedRecord);
-		final AttachmentEntryCreateRequest request = AttachmentEntryCreateRequest.fromByteArray(name, bytes);
+
+		int clientId = Env.getAD_Client_ID();
+
+		Boolean storeattachmentsonfilesystem = storeattachmentsonfilesystemCCache.getOrLoad(ClientId.ofRepoId(clientId), this::retrieveAttachmentEntryTypeCCache);
+
+		AttachmentEntryCreateRequest request = null;
+		if (!storeattachmentsonfilesystem)
+		{
+			request = AttachmentEntryCreateRequest.fromByteArray(name, bytes);
+		}
+		else
+		{
+			String attachmentStoreRoot = attachmentStoreLocationCCache.getOrLoad(ClientId.ofRepoId(clientId), this::retrieveAttachmentStoreLocationCCache);
+			final File testFile = new File(attachmentStoreRoot + name);
+
+			try {
+				FileUtils.writeByteArrayToFile(testFile, bytes);
+			} catch (IOException e) {
+				throw new RuntimeException(e);
+			}
+
+			request = AttachmentEntryCreateRequest.fromLocalFileURI(name, testFile.toPath().toUri());
+		}
 
 		return createNewAttachment(modelReference, request);
 	}
@@ -473,4 +516,57 @@ public class AttachmentEntryService
 		}
 
 	}
+
+	private String retrieveAttachmentStoreLocationCCache(@NonNull final ClientId clientId)
+	{
+		final I_AD_Client record = InterfaceWrapperHelper.load(clientId.getRepoId(), I_AD_Client.class);
+		return getAttachmentPath(record);
+	}
+
+	private Boolean retrieveAttachmentEntryTypeCCache(@NonNull final ClientId clientId)
+	{
+		final I_AD_Client record = InterfaceWrapperHelper.load(clientId.getRepoId(), I_AD_Client.class);
+
+		if (record.isStoreAttachmentsOnFileSystem())
+			return Boolean.TRUE;
+
+		return Boolean.FALSE;
+	}
+
+	private static final String getAttachmentPath(final I_AD_Client config)
+	{
+		String attachmentPathRoot;
+		if (File.separatorChar == '\\')
+		{
+			attachmentPathRoot = config.getWindowsAttachmentPath();
+		}
+		else
+		{
+			attachmentPathRoot = config.getUnixAttachmentPath();
+		}
+
+		if (Check.isEmpty(attachmentPathRoot, true))
+		{
+			throw new AdempiereException("No attachement path defined for " + config);
+		}
+
+		// Fix path separator
+		if (File.separatorChar == '\\')
+		{
+			attachmentPathRoot = attachmentPathRoot.replace('/', File.separatorChar);
+		}
+		else
+		{
+			attachmentPathRoot = attachmentPathRoot.replace('\\', File.separatorChar);
+		}
+
+		if (!attachmentPathRoot.endsWith(File.separator))
+		{
+			// log.warn("archive path doesn't end with " + File.separator);
+			attachmentPathRoot += File.separator;
+		}
+
+		return attachmentPathRoot;
+	}
+
 }

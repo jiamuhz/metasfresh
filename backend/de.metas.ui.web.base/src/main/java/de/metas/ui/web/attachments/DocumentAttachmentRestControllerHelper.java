@@ -33,9 +33,12 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.servlet.mvc.method.annotation.StreamingResponseBody;
 
 import java.io.IOException;
+import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 
 @UtilityClass
 public class DocumentAttachmentRestControllerHelper
@@ -82,17 +85,9 @@ public class DocumentAttachmentRestControllerHelper
 	{
 		final String contentType = attachmentEntry.getContentType();
 		final String filename = attachmentEntry.getFilename();
-		URL url = null;
 		StreamingResponseBody responseBody = null;
-		try
-		{
-			url = attachmentEntry.getUrl().toURL();
-			responseBody = streamFile(url);
-		}
-		catch (IOException e)
-		{
-			e.printStackTrace();
-		}
+		responseBody = streamFile(attachmentEntry.getUrl());
+
 		final HttpHeaders headers = new HttpHeaders();
 		headers.setContentType(MediaType.parseMediaType(contentType));
 		headers.set(HttpHeaders.CONTENT_DISPOSITION, "inline; filename=\"" + filename + "\"");
@@ -101,9 +96,8 @@ public class DocumentAttachmentRestControllerHelper
 	}
 
 	@NonNull
-	private StreamingResponseBody streamFile(@NonNull final URL url) throws IOException
-	{
-		final Path filePath = FileUtil.getFilePath(url);
+	private StreamingResponseBody streamFile(@NonNull final URI uri) {
+		final Path filePath = Paths.get(uri); // 关键： 这里会对 中文 URL编码 进行解码
 
 		final StreamingResponseBody responseBody = outputStream -> {
 			Files.copy(filePath, outputStream);
