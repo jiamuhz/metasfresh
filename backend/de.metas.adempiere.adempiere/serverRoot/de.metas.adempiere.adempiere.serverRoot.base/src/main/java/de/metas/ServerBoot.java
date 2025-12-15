@@ -195,6 +195,11 @@ public class ServerBoot implements InitializingBean
 
 	private static void setDefaultSystemProperties()
 	{
+		if (de.metas.util.Check.isEmpty(System.getProperty("PropertyFile"), true))
+		{
+			System.setProperty("PropertyFile", "./metasfresh.properties");
+		}
+
 		if (System.getProperty("user.country") == null || System.getProperty("user.language") == null)
 		{
 			System.setProperty("user.country", Locale.US.getCountry());
