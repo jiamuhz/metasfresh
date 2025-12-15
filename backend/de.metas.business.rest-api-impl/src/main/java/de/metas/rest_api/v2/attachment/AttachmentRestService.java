@@ -57,8 +57,10 @@ import org.springframework.stereotype.Service;
 import javax.annotation.Nullable;
 import java.io.IOException;
 import java.net.URI;
+import java.net.URISyntaxException;
 import java.net.URL;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Base64;
 import java.util.List;
 
@@ -108,7 +110,7 @@ public class AttachmentRestService
 				break;
 			case LocalFileURL:
 				url = URI.create(attachment.getData());
-				validateLocalFileURL(url.toURL());
+				validateLocalFileURL(url);
 				break;
 			default:
 				throw new AdempiereException("Unknown AttachmentEntryType = " + type);
@@ -222,18 +224,18 @@ public class AttachmentRestService
 		return TableRecordReference.of(reference.getTableName(), reference.getRecordId().getValue());
 	}
 
-	private static void validateLocalFileURL(@NonNull final URL url)
+	private static void validateLocalFileURL(@NonNull final URI uri)
 	{
-		if (!url.getProtocol().equals("file"))
+		if (!uri.getScheme().equals("file"))
 		{
-			throw new AdempiereException("Protocol " + url.getProtocol() + " not supported!");
+			throw new AdempiereException("Protocol " + uri.getScheme() + " not supported!");
 		}
 
-		final Path filePath = FileUtil.getFilePath(url);
+		final Path filePath = Paths.get(uri);  // 关键： 这里会对 中文 URL编码 进行解码
 
 		if (!filePath.toFile().isFile())
 		{
-			throw new AdempiereException("Provided local file with URL: " + url + " is not accessible!")
+			throw new AdempiereException("Provided local file with URL: " + uri + " is not accessible!")
 					.appendParametersToMessage()
 					.setParameter("ParsedPath", filePath.toString());
 		}

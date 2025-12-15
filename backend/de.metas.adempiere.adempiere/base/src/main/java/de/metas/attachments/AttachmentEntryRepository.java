@@ -22,6 +22,7 @@ import java.net.URI;
 import java.net.URL;
 import java.nio.file.Files;
 import java.nio.file.Path;
+import java.nio.file.Paths;
 import java.util.Collection;
 import java.util.HashSet;
 import java.util.List;
@@ -303,9 +304,7 @@ public class AttachmentEntryRepository
 	private static byte[] getBinaryDataFromLocalFileURL(@NonNull final URI uri){
 		try
 		{
-			final URL url = uri.toURL();
-
-			final Path filePath = FileUtil.getFilePath(url);
+			final Path filePath = Paths.get(uri); // 关键： 这里会对 中文 URL编码 进行解码
 
 			return Files.readAllBytes(filePath);
 		}
