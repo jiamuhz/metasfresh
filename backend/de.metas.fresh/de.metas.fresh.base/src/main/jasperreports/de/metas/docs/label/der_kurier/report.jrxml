@@ -4,7 +4,7 @@
 	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="metasfresh"/>
 	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
 	<property name="com.jaspersoft.studio.unit." value="cm"/>
-	<style name="Barcode_Style" hTextAlign="Center" hImageAlign="Center"/>
+	<style name="Barcode_Style" hTextAlign="Center" hImageAlign="Center" fontName="NotoSansSC"/>
 	<parameter name="DerKurier_DeliveryOrderLine_ID" class="java.math.BigDecimal"/>
 	<queryString>
 		<![CDATA[SELECT * FROM report.DerKurier_Label($P{DerKurier_DeliveryOrderLine_ID});]]>
