@@ -67,3 +67,4 @@ misc/services/camel/de-metas-camel-shipping/tmp/
  **/*.snap.debug
 *.jasper
 /frontend/dist.tar.gz
+/misc/services/mobile-webui/mobile-webui-frontend/build.zip
