@@ -33,12 +33,12 @@ console.log('[ServiceWorker] - What Workbox would inject during compile time:', 
 // will do further customisation in next commits
 
 precacheAndRoute([
-  { revision: null, url: '/mobile/index.html' },
-  { revision: null, url: '/mobile/config.js' },
-  { revision: null, url: '/mobile/manifest.json' },
-  { revision: null, url: '/mobile/favicon.ico' },
-  { revision: null, url: '/mobile/logo192.png' },
-  { revision: null, url: '/mobile/logo512.png' },
+  { revision: null, url: '/index.html' },
+  { revision: null, url: '/config.js' },
+  { revision: null, url: '/manifest.json' },
+  { revision: null, url: '/favicon.ico' },
+  { revision: null, url: '/logo192.png' },
+  { revision: null, url: '/logo512.png' },
 ]);
 
 // Set up App Shell-style routing, so that all navigation requests

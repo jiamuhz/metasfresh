@@ -49,7 +49,7 @@
   },
   "scripts": {
     "start": "export PORT=3001; export NODE_OPTIONS=--openssl-legacy-provider; react-scripts start",
-    "build": "react-scripts build",
+    "build": "export NODE_OPTIONS=--openssl-legacy-provider; react-scripts build",
     "lint": "./node_modules/eslint/bin/eslint.js 'src/**/*.{js,jsx}' --quiet",
     "lintfix": "./node_modules/eslint/bin/eslint.js 'src/**/*.{js,jsx}' --fix",
     "test": "react-scripts test",
@@ -98,6 +98,5 @@
   },
   "resolutions": {
     "@babel/core": "^7.16.0"
-  },
-  "homepage": "/mobile"
+  }
 }

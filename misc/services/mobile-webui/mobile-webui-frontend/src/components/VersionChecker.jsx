@@ -33,7 +33,7 @@ const VersionChecker = ({ updateIntervalMillis }) => {
            */
           // let fullUrl = window.location.href;
           // if (fullUrl.includes('/login')) {
-          //   window.location.href = '/mobile/';
+          //   window.location.href = '/';
           // } else {
           //   window.location.reload();
           // }
