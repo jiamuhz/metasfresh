@@ -40,6 +40,8 @@ import lombok.NonNull;
  *
  * @author metas-dev <dev@metasfresh.com>
  *
+ * 表单布局，用于 Header Tab  and  Advanced Edit Dialog
+ * @作者  嘉木
  */
 public class DocumentLayoutSingleRow
 {

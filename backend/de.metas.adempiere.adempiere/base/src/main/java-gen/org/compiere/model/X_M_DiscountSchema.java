@@ -157,13 +157,13 @@ public class X_M_DiscountSchema extends org.compiere.model.PO implements I_M_Dis
 	 * Reference name: M_Discount Type
 	 */
 	public static final int DISCOUNTTYPE_AD_Reference_ID=247;
-	/** Flat Percent = F */
+	/** Flat Percent = F   固定折扣*/
 	public static final String DISCOUNTTYPE_FlatPercent = "F";
-	/** Formula = S */
+	/** Formula = S  公式计算折扣*/
 	public static final String DISCOUNTTYPE_Formula = "S";
-	/** Breaks = B */
+	/** Breaks = B  阶梯折扣*/
 	public static final String DISCOUNTTYPE_Breaks = "B";
-	/** Pricelist = P */
+	/** Pricelist = P  切换价格表实现折扣*/
 	public static final String DISCOUNTTYPE_Pricelist = "P";
 	/** Set Rabatt Art.
 		@param DiscountType 

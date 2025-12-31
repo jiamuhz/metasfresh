@@ -460,7 +460,7 @@ public class GridTabVO implements Evaluatee, Serializable
 
 	private String entityType = null;
 	/**
-	 * Single Row
+	 * Single Row  是否单行视图（表单视图）  多行视图（表格视图）
 	 */
 	public boolean IsSingleRow = false;
 	/**
@@ -468,7 +468,7 @@ public class GridTabVO implements Evaluatee, Serializable
 	 */
 	private boolean IsReadOnly = false;
 	/**
-	 * Insert Record
+	 * Insert Record   是否允许新增
 	 */
 	private boolean IsInsertRecord = true;
 	/**
@@ -480,15 +480,15 @@ public class GridTabVO implements Evaluatee, Serializable
 	 */
 	public int AD_Table_ID;
 	/**
-	 * Primary Link Column  (from this tab)
+	 * Primary Link Column  (from this tab)  比如 当前的TAB是订单行TAB 该值指向 c_orderline表 的 c_order_id列
 	 */
 	private int AD_Column_ID = 0;
 	/**
-	 * Parent Tab's Link Column (i.e. the AD_Column_ID from parent tab)
+	 * Parent Tab's Link Column (i.e. the AD_Column_ID from parent tab)  比如 当前的TAB是订单行TAB 该值指向 c_order表 的 c_order_id列
 	 */
 	private int Parent_Column_ID = 0;
 	/**
-	 * Table Name
+	 * Table Name   当前TAB对应的数据库表
 	 */
 	public String TableName;
 	/**
@@ -508,7 +508,7 @@ public class GridTabVO implements Evaluatee, Serializable
 	 */
 	private boolean IsDeleteable = false;
 	/**
-	 * Table High Volume
+	 * Table High Volume   是否 高数据量标签页（需要特殊处理）
 	 */
 	public boolean IsHighVolume = false;
 	/**
