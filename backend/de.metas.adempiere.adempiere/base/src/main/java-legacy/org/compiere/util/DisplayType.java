@@ -49,7 +49,7 @@ public final class DisplayType
 	public static final int List = 17;
 	/** Display Type 18	Table	*/
 	public static final int Table = 18;
-	/** Display Type 19	TableDir	*/
+	/** Display Type 19	TableDir	直接表 */
 	public static final int TableDir = 19;
 	/** Display Type 20	YN	*/
 	public static final int YesNo = 20;
@@ -61,7 +61,7 @@ public final class DisplayType
 	public static final int Binary = 23;
 	/** Display Type 24	Time	*/
 	public static final int Time = 24;
-	/** Display Type 25	Account	*/
+	/** Display Type 25	Account	会计科目 */
 	public static final int Account = 25;
 	/** Display Type 26	RowID	*/
 	public static final int RowID = 26;
@@ -71,7 +71,7 @@ public final class DisplayType
 	public static final int Button = 28;
 	/** Display Type 29	Quantity	*/
 	public static final int Quantity = 29;
-	/** Display Type 30	Search	*/
+	/** Display Type 30	Search	搜索输入框 */
 	public static final int Search = 30;
 	/** Display Type 31	Locator	*/
 	public static final int Locator = 31;
@@ -81,11 +81,11 @@ public final class DisplayType
 	public static final int Assignment = 33;
 	/** Display Type 34	Memo	*/
 	public static final int Memo = 34;
-	/** Display Type 35	PAttribute	*/
+	/** Display Type 35	PAttribute	产品属性 */
 	public static final int PAttribute = 35;
 	/** Display Type 36	CLOB	*/
 	public static final int TextLong = 36;
-	/** Display Type 37	CostPrice	*/
+	/** Display Type 37	CostPrice	成本价格 */
 	public static final int CostPrice = 37;
 	/** Display Type 38	File Path	*/
 	public static final int FilePath = 38;
