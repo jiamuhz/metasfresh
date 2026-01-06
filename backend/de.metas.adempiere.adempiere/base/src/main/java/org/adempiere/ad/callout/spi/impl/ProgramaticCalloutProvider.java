@@ -44,16 +44,16 @@ public class ProgramaticCalloutProvider implements ICalloutProvider, IProgramati
 		//
 		// Add the new callout to our internal map
 		final AtomicBoolean registered = new AtomicBoolean(false);
-		registeredCalloutsByTableId.compute(tableNameToUse, (tableNameKey, currentTabCalloutsMap) -> {
-			if (currentTabCalloutsMap == null)
+		registeredCalloutsByTableId.compute(tableNameToUse, (tableNameKey, currentTableCalloutsMap) -> {
+			if (currentTableCalloutsMap == null)
 			{
 				registered.set(true);
 				return TableCalloutsMap.of(columnName, callout);
 			}
 			else
 			{
-				final TableCalloutsMap newTabCalloutsMap = currentTabCalloutsMap.compose(columnName, callout);
-				registered.set(newTabCalloutsMap != currentTabCalloutsMap);
+				final TableCalloutsMap newTabCalloutsMap = currentTableCalloutsMap.compose(columnName, callout);
+				registered.set(newTabCalloutsMap != currentTableCalloutsMap);
 				return newTabCalloutsMap;
 			}
 		});
