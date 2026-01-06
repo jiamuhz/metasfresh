@@ -48,7 +48,7 @@ import de.metas.util.Check;
 /**
  * Convenient immutable AD_Column_ID to {@link ICalloutInstance} list.
  *
- * 一个数据库表中 callout column <-> callout instance [MAP]
+ * 一个数据库表中 callout column <-> callout instance list  [MAP]
  * 
  * @author metas-dev <dev@metasfresh.com>
  *
