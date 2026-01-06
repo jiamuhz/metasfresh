@@ -154,6 +154,9 @@ public class POFromRequisitionAggregator
 		final I_M_PriceList priceList = priceListDAO.getById(key.getPriceListId());
 		order.setC_Currency_ID(priceList.getC_Currency_ID()); // task 05914 : currency is mandatory
 
+		// pricing system id
+		order.setM_PricingSystem_ID(priceList.getM_PricingSystem_ID());
+
 		// default po document type
 		if (!Check.isBlank(key.getRequisitionDocumentNo()))
 		{
