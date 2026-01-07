@@ -199,7 +199,7 @@ public class OrderBL implements IOrderBL
 	}
 
 	@Override
-	public void setM_PricingSystem_ID(final I_C_Order order, final boolean overridePricingSystemAndDontThrowExIfNotFound)
+	public void setM_PricingSystem_ID_And_PriceList(final I_C_Order order, final boolean overridePricingSystemAndDontThrowExIfNotFound)
 	{
 		final int previousPricingSystemId = order.getM_PricingSystem_ID();
 

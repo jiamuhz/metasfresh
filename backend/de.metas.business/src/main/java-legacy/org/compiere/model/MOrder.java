@@ -956,7 +956,7 @@ public class MOrder extends X_C_Order implements IDocument
 		//
 		// Default Price List
 		// metas: bpartner's pricing system (instead of price list)
-		orderBL.setM_PricingSystem_ID(this, false); // overridePricingSystem=false
+		orderBL.setM_PricingSystem_ID_And_PriceList(this, false); // overridePricingSystem=false
 
 		//
 		// Default Currency

@@ -151,7 +151,7 @@ public interface IOrderBL extends ISingletonService
 	 *
 	 * @param overridePricingSystem true if pricing system shall be set even if is already set
 	 */
-	void setM_PricingSystem_ID(I_C_Order order, boolean overridePricingSystem);
+	void setM_PricingSystem_ID_And_PriceList(I_C_Order order, boolean overridePricingSystem);
 
 	PriceListId retrievePriceListId(I_C_Order order, PricingSystemId pricingSystemIdOverride);
 

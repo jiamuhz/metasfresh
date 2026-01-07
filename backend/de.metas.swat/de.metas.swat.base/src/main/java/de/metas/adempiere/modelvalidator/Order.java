@@ -123,7 +123,7 @@ public class Order implements ModelValidator
 			if (type.isBeforeSaveTrx() || (type.isBefore() && type.isNewOrChange()))
 			{
 				final boolean overridePricingSystem = false;
-				orderBL.setM_PricingSystem_ID(order, overridePricingSystem);
+				orderBL.setM_PricingSystem_ID_And_PriceList(order, overridePricingSystem);
 			}
 
 			if (type.isAfter() && type.isNewOrChange())
