@@ -104,7 +104,7 @@
 			<textField>
 				<reportElement key="textField-49" mode="Transparent" x="37" y="0" width="160" height="12" forecolor="#000000" uuid="bc27f91e-53ac-4f92-b6d1-8ede0a2bba9a"/>
 				<textElement markup="none">
-					<font size="9" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Carry}]]></textFieldExpression>
 			</textField>
@@ -147,7 +147,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 			</textField>
@@ -206,7 +206,7 @@
 					<printWhenExpression><![CDATA[( $V{LINESUM_SUM}.intValue() > 0 ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{SubTotal}]]></textFieldExpression>
 			</textField>

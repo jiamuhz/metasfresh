@@ -53,7 +53,7 @@
 			<textField>
 				<reportElement key="textField-16" x="37" y="0" width="236" height="12" forecolor="#000000" uuid="69138c8f-d6b0-4e0c-b76e-c51ad7dbdc2d"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{NetTotal}]]></textFieldExpression>
 			</textField>
@@ -66,7 +66,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nonhulines}]]></textFieldExpression>
 			</textField>

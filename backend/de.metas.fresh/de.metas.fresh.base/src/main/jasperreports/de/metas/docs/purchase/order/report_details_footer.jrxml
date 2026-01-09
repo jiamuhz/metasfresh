@@ -62,9 +62,9 @@ WHERE o.c_order_id = $P{c_order_id} ]]>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement markup="html">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
-				<textFieldExpression><![CDATA[$R{PaymentCond}+": " +$F{payment_term}]]></textFieldExpression>
+				<textFieldExpression><![CDATA[$R{PaymentCond}+":: " +$F{payment_term}]]></textFieldExpression>
 			</textField>
 		</band>
 		<band height="12">
@@ -79,7 +79,7 @@ WHERE o.c_order_id = $P{c_order_id} ]]>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" markup="html">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{descriptionbottom}]]></textFieldExpression>
 			</textField>
