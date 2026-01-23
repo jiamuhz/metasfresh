@@ -99,7 +99,7 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Tab Model.
+ * Tab Model.  Just For Swing UI
  * - a combination of AD_Tab (the display attributes) and AD_Table information.
  * <p>
  * The Tab owns also it's Table model and listens to data changes to update the Field values.

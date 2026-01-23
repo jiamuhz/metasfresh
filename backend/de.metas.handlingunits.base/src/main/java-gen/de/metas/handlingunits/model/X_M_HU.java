@@ -151,11 +151,11 @@ public class X_M_HU extends org.compiere.model.PO implements I_M_HU, org.compier
 	public static final String HUSTATUS_Active = "A";
 	/** Destroyed = D */
 	public static final String HUSTATUS_Destroyed = "D";
-	/** Picked = S */
+	/** Picked = S 已拣配*/
 	public static final String HUSTATUS_Picked = "S";
-	/** Shipped = E */
+	/** Shipped = E 已发货 */
 	public static final String HUSTATUS_Shipped = "E";
-	/** Issued = I */
+	/** Issued = I  已发放*/
 	public static final String HUSTATUS_Issued = "I";
 	/** Repair = R */
 	public static final String HUSTATUS_Repair = "R";

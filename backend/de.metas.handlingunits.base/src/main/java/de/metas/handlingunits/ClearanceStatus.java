@@ -31,6 +31,9 @@ import lombok.NonNull;
 import javax.annotation.Nullable;
 import java.util.Optional;
 
+/**
+ * HU 审核状态  字面含义: 清关状态
+ */
 public enum ClearanceStatus implements ReferenceListAwareEnum
 {
 	Cleared(X_M_HU.CLEARANCESTATUS_Cleared),

@@ -42,9 +42,9 @@ public class X_M_HU_Item extends org.compiere.model.PO implements I_M_HU_Item, o
 	public static final int ITEMTYPE_AD_Reference_ID=540699;
 	/** HandlingUnit = HU */
 	public static final String ITEMTYPE_HandlingUnit = "HU";
-	/** Material = MI */
+	/** Material = MI  物料 */
 	public static final String ITEMTYPE_Material = "MI";
-	/** PackingMaterial = PM */
+	/** PackingMaterial = PM 包装材料 */
 	public static final String ITEMTYPE_PackingMaterial = "PM";
 	/** HUAggregate = HA */
 	public static final String ITEMTYPE_HUAggregate = "HA";
