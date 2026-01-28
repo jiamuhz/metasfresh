@@ -3,6 +3,7 @@ package de.metas.order.process;
 import java.util.Collection;
 import java.util.Comparator;
 import java.util.List;
+import java.util.Optional;
 
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
@@ -124,6 +125,11 @@ public class C_Order_CreateCompensationMultiGroups extends OrderCompensationGrou
 		}
 		
 		final IProductDAO productsRepo = Services.get(IProductDAO.class);
+		Optional<GroupTemplateId>  optionalGroupTemplateId = productsRepo.getGroupTemplateIdByProductId(productId);
+		if (optionalGroupTemplateId.isPresent()) {
+			return groupTemplateRepo.getById(optionalGroupTemplateId.get());
+		}
+
 		final ProductCategoryId productCategoryId = productsRepo.retrieveProductCategoryByProductId(productId);
 		final I_M_Product_Category productCategory = productsRepo.getProductCategoryById(productCategoryId, I_M_Product_Category.class);
 		final GroupTemplateId groupTemplateId = GroupTemplateId.ofRepoIdOrNull(productCategory.getC_CompensationGroup_Schema_ID());
