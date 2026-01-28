@@ -22,6 +22,11 @@ package org.adempiere.ad.wrapper;
  * #L%
  */
 
+/**
+ * 内存数据库 实现
+ * 2026-01-25
+ */
+
 import com.google.common.collect.ImmutableSet;
 import de.metas.cache.CacheMgt;
 import de.metas.common.util.time.SystemTime;
