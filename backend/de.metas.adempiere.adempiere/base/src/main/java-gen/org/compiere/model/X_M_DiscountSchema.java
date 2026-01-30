@@ -163,7 +163,7 @@ public class X_M_DiscountSchema extends org.compiere.model.PO implements I_M_Dis
 	public static final String DISCOUNTTYPE_Formula = "S";
 	/** Breaks = B  阶梯折扣*/
 	public static final String DISCOUNTTYPE_Breaks = "B";
-	/** Pricelist = P  切换价格表实现折扣*/
+	/** Pricelist = P  切换价格表实现折扣  跟价格表方案相关 已经弃用 !! */
 	public static final String DISCOUNTTYPE_Pricelist = "P";
 	/** Set Rabatt Art.
 		@param DiscountType 
