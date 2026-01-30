@@ -107,7 +107,7 @@ public class PickingSlotViewFactory implements IViewFactory
 
 		return ViewLayout.builder()
 				.setWindowId(windowId)
-				.setCaption("Picking slots")
+				.setCaption("拣货位")     //Picking slots
 				.addElementsFromViewRowClass(PickingSlotRow.class, viewDataType)
 				.setHasTreeSupport(true)
 				.setTreeCollapsible(true)
