@@ -721,12 +721,14 @@ public class LayoutFactory
 	@Nullable
 	private QuickInputSupportDescriptor extractQuickInputSupport(final DocumentEntityDescriptor.Builder entityDescriptor)
 	{
+		// 来自 AD_Tab表的信息 allowquickinput
 		final QuickInputSupportDescriptor quickInputSupport = entityDescriptor.getQuickInputSupport();
 		if (quickInputSupport == null)
 		{
 			return null;
 		}
 
+		// 代码中 判断该文档 有没有支持QuickInput的 IQuickInputDescriptorFactory (由 QuickInputDescriptorFactoryService 构造方法采集)
 		if (!quickInputDescriptors.hasQuickInputEntityDescriptor(
 				entityDescriptor.getDocumentType(),
 				entityDescriptor.getDocumentTypeId(),
