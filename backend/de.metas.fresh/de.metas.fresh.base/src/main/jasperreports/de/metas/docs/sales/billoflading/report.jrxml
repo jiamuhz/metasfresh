@@ -131,7 +131,7 @@ ORDER BY
 				<staticText>
 					<reportElement x="10" y="3" width="71" height="12" uuid="4371e6d9-22e2-4bca-a888-f61915d85726"/>
 					<textElement markup="none">
-						<font size="9" isBold="false"/>
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<text><![CDATA[Total Menge]]></text>
 				</staticText>
@@ -170,7 +170,7 @@ ORDER BY
 				<textField>
 					<reportElement x="123" y="0" width="23" height="13" uuid="0f815414-e1cd-4074-80d2-5ac195829c87"/>
 					<textElement>
-						<font size="9" isBold="false"/>
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 				</textField>
@@ -184,7 +184,7 @@ ORDER BY
 				<textField isBlankWhenNull="true">
 					<reportElement x="469" y="0" width="80" height="13" uuid="fa1849a0-afe4-49bc-bd32-d0bab7799f80"/>
 					<textElement>
-						<font size="9" isBold="false" isItalic="false"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{upc}]]></textFieldExpression>
 				</textField>
@@ -202,21 +202,21 @@ ORDER BY
 			<textField>
 				<reportElement x="12" y="0" width="100" height="14" uuid="37f1394d-4394-44f9-a5c6-119969a8611e"/>
 				<textElement markup="none">
-					<font size="11"/>
+					<font fontName="NotoSansSC" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{orgname}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="12" y="13" width="100" height="14" uuid="32461493-d96b-4c08-90b1-a69e60686740"/>
 				<textElement markup="none">
-					<font size="11"/>
+					<font fontName="NotoSansSC" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{address1}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="12" y="26" width="100" height="14" uuid="5319623a-c1f9-4b2d-ba8a-d52efec55664"/>
 				<textElement markup="none">
-					<font size="11"/>
+					<font fontName="NotoSansSC" size="11"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{address2}]]></textFieldExpression>
 			</textField>
@@ -244,21 +244,21 @@ ORDER BY
 			<textField>
 				<reportElement x="418" y="0" width="123" height="10" uuid="478ee8e5-9d28-40b9-9ca6-bc47e22ba1a6"/>
 				<textElement textAlignment="Right">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Seite " + $V{PAGE_NUMBER}+ " / "]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
 				<reportElement x="540" y="0" width="13" height="10" uuid="68623e3f-d555-48d1-8ab3-87e22d9f7610"/>
 				<textElement textAlignment="Right">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="450" y="10" width="35" height="10" uuid="0e4e8fbe-6305-4d7c-bd9e-34e494df3fe7"/>
 				<textElement markup="none">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<text><![CDATA[Druckzeit:]]></text>
 			</staticText>
