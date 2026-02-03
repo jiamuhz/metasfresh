@@ -67,63 +67,63 @@
 			<textField>
 				<reportElement x="0" y="24" width="187" height="20" uuid="b0aca348-a1f6-40ea-b527-752a684fa23c"/>
 				<textElement>
-					<font size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{referencedate}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="187" y="24" width="239" height="20" uuid="10860cf3-d395-405e-94d8-386769700156"/>
 				<textElement>
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="44" width="187" height="20" uuid="b0aca348-a1f6-40ea-b527-752a684fa23c"/>
 				<textElement>
-					<font size="10" isBold="false" />
+					<font fontName="NotoSansSC" size="10" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BPartner}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="187" y="44" width="239" height="20" uuid="84450a67-d68f-4283-8897-811897b68d95"/>
 				<textElement>
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartner_param} !=null ? $F{bpartner_param} : $R{all}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="187" y="64" width="239" height="20" uuid="426dba01-ccc3-43bf-8dd0-6b8018e3a6e0"/>
 				<textElement>
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartner_group_param} !=null ? $F{bpartner_group_param} : $R{all}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="187" y="84" width="239" height="20" uuid="81096bf1-c290-46d0-9405-d8282d79787e"/>
 				<textElement>
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{product_param} != null ? $F{product_param} : $R{all}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="64" width="187" height="20" uuid="b0aca348-a1f6-40ea-b527-752a684fa23c"/>
 				<textElement>
-					<font size="10" isBold="false" />
+					<font fontName="NotoSansSC" size="10" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BPartnergroup}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="84" width="187" height="20" uuid="b0aca348-a1f6-40ea-b527-752a684fa23c"/>
 				<textElement>
-					<font size="10" isBold="false" />
+					<font fontName="NotoSansSC" size="10" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{packageart}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="104" width="187" height="20" uuid="b0aca348-a1f6-40ea-b527-752a684fa23c"/>
 				<textElement>
-					<font size="10" isBold="false" />
+					<font fontName="NotoSansSC" size="10" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{IsRefundableConditions}]]></textFieldExpression>
 			</textField>
@@ -222,35 +222,35 @@
 			<textField isBlankWhenNull="true">
 				<reportElement x="0" y="0" width="50" height="20" uuid="d6b20533-4171-4973-a384-8e7590d03fa4"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartnerno}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="50" y="0" width="161" height="20" uuid="b58c67c3-9fa1-456e-889f-d1ece1b1e3e9"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartner}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="211" y="0" width="149" height="20" uuid="cb4c538c-119e-424d-b8fb-5d32f5a698e8"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartner_group}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="360" y="0" width="149" height="20" uuid="63f13e70-0621-49b6-b1d3-e687a90af824"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{art_contract}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="509" y="0" width="130" height="20" uuid="25b9ac7f-76f3-462d-b1af-d3a57529c2f6"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{art_name}]]></textFieldExpression>
 			</textField>
@@ -261,7 +261,7 @@
 .floatValue() >= 0]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{incoming}
 .subtract($F{outgoing})]]></textFieldExpression>
@@ -273,7 +273,7 @@
 .floatValue() >= 0]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{outgoing}
  .subtract($F{incoming})]]></textFieldExpression>

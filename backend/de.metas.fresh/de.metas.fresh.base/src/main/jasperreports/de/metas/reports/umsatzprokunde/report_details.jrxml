@@ -412,7 +412,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression><![CDATA[$F{pc_name}]]></textFieldExpression>
 				</textField>
@@ -425,7 +425,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression><![CDATA[$V{prodkat_summe1}]]></textFieldExpression>
 				</textField>
@@ -438,7 +438,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression><![CDATA[$V{prodkat_summe2}]]></textFieldExpression>
 				</textField>
@@ -451,7 +451,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font size="8" isBold="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -464,7 +464,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression><![CDATA[$V{prodkat_summe3}]]></textFieldExpression>
 				</textField>
@@ -477,7 +477,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font size="8" isBold="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -490,7 +490,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Left">
-						<font size="8" isBold="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" />
 					</textElement>
 					<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -528,7 +528,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{customerno}]]></textFieldExpression>
 			</textField>
@@ -541,7 +541,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{customername}]]></textFieldExpression>
 			</textField>
@@ -560,7 +560,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{gesamt_summe1}]]></textFieldExpression>
 			</textField>
@@ -579,7 +579,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{gesamt_summe2}]]></textFieldExpression>
 			</textField>
@@ -598,7 +598,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{gesamt_summe3}]]></textFieldExpression>
 			</textField>
@@ -617,7 +617,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{carry}]]></textFieldExpression>
 			</textField>
@@ -630,7 +630,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{umsatz}]]></textFieldExpression>
 			</textField>
@@ -643,7 +643,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{currentyear}]]></textFieldExpression>
 			</textField>
@@ -656,7 +656,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{lastyear}]]></textFieldExpression>
 			</textField>
@@ -669,7 +669,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{yearbeforelast}]]></textFieldExpression>
 			</textField>
@@ -688,7 +688,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 			</textField>
@@ -707,7 +707,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 			</textField>
@@ -726,7 +726,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 			</textField>
@@ -755,7 +755,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{p_value}]]></textFieldExpression>
 			</textField>
@@ -768,7 +768,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{p_name}]]></textFieldExpression>
 			</textField>
@@ -781,7 +781,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{priceactual_now}]]></textFieldExpression>
 			</textField>
@@ -794,7 +794,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{priceactual_last}]]></textFieldExpression>
 			</textField>
@@ -807,7 +807,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="8" isBold="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 			</textField>
@@ -820,7 +820,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{priceactual_before_last}]]></textFieldExpression>
 			</textField>
@@ -833,7 +833,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="8" isBold="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 			</textField>
@@ -846,7 +846,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="8" isBold="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 			</textField>
@@ -866,7 +866,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{gesamt_summe2}]]></textFieldExpression>
 			</textField>
@@ -879,7 +879,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{gesamt_summe1}]]></textFieldExpression>
 			</textField>
@@ -892,7 +892,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{gesamt_summe3}]]></textFieldExpression>
 			</textField>
@@ -905,7 +905,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{subtotal}]]></textFieldExpression>
 			</textField>
@@ -918,7 +918,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 			</textField>
@@ -931,7 +931,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 			</textField>
@@ -944,7 +944,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cursymbol}]]></textFieldExpression>
 			</textField>
