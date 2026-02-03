@@ -76,21 +76,21 @@ report.bpartner_pricing_conditions ($P{C_BPartner_ID}, $P{C_BPartner_Location_ID
 			<textField pattern="dd.MM.YYYY">
 				<reportElement x="514" y="32" width="291" height="20" forecolor="#000000" uuid="968771dd-e5ad-442c-8837-504a578263b4"/>
 				<textElement textAlignment="Right">
-					<font size="14" isBold="false"/>
+					<font fontName="NotoSansSC" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{Date}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="30" y="62" width="350" height="20" forecolor="#000000" uuid="65d30738-c452-4faa-af5b-07fa13f521a5"/>
 				<textElement>
-					<font size="14" isBold="false"/>
+					<font fontName="NotoSansSC" size="14" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="30" y="82" width="283" height="48" forecolor="#000000" uuid="98564e96-8a8a-446c-885a-1e600d0a412a"/>
 				<textElement>
-					<font size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{addressline}]]></textFieldExpression>
 			</textField>
@@ -175,21 +175,21 @@ report.bpartner_pricing_conditions ($P{C_BPartner_ID}, $P{C_BPartner_Location_ID
 			<textField isBlankWhenNull="true">
 				<reportElement x="30" y="0" width="60" height="14" uuid="0c9b3dcb-d382-4467-b955-bf93c061c29a"/>
 				<textElement textAlignment="Left">
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{p_value}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="94" y="0" width="180" height="14" uuid="76496c4f-6586-43a4-9bdf-b7ca32703c5c"/>
 				<textElement textAlignment="Left">
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{p_name}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="274" y="0" width="36" height="14" uuid="37ba6336-b818-4fac-ac41-df85cee80a5a"/>
 				<textElement textAlignment="Left">
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{op}]]></textFieldExpression>
 			</textField>
@@ -203,7 +203,7 @@ report.bpartner_pricing_conditions ($P{C_BPartner_ID}, $P{C_BPartner_Location_ID
 			<textField isBlankWhenNull="true">
 				<reportElement x="684" y="0" width="48" height="14" uuid="8d5951de-843b-485c-a59b-5131cf5cbaec"/>
 				<textElement textAlignment="Right">
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{discount} == null ? "" : new java.text.DecimalFormat("#,##0.00").format($F{discount})
 + "%"]]></textFieldExpression>
@@ -211,28 +211,28 @@ report.bpartner_pricing_conditions ($P{C_BPartner_ID}, $P{C_BPartner_Location_ID
 			<textField isBlankWhenNull="true">
 				<reportElement x="310" y="0" width="36" height="14" uuid="c24f7eea-55e5-4817-81da-c6a64b69afc1"/>
 				<textElement textAlignment="Left">
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{me}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="348" y="0" width="180" height="14" uuid="c27b6e6c-ef98-4a1d-abc0-4162c794f0c7"/>
 				<textElement textAlignment="Left">
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{manufacturer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="529" y="0" width="55" height="14" uuid="801b60bd-3fbc-4aa1-b856-72e0cc95fd29"/>
 				<textElement textAlignment="Left">
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{base_ps}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="584" y="0" width="50" height="14" uuid="852024f7-a0b8-471c-b243-fc4a2741b20b"/>
 				<textElement textAlignment="Right">
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($F{breakdiscount})
  + "%"]]></textFieldExpression>
@@ -240,7 +240,7 @@ report.bpartner_pricing_conditions ($P{C_BPartner_ID}, $P{C_BPartner_Location_ID
 			<textField isBlankWhenNull="true">
 				<reportElement x="634" y="0" width="50" height="14" uuid="42b68139-a4ff-454f-b10d-5356edc7ec08"/>
 				<textElement textAlignment="Right">
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($F{fixum})]]></textFieldExpression>
 			</textField>
@@ -251,7 +251,7 @@ report.bpartner_pricing_conditions ($P{C_BPartner_ID}, $P{C_BPartner_Location_ID
 			<textField evaluationTime="Master">
 				<reportElement x="675" y="50" width="129" height="14" uuid="bd27da1b-01ed-4904-a6fa-ec3d7270531e"/>
 				<textElement textAlignment="Right">
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{page} +" " + $V{MASTER_CURRENT_PAGE} +" " + $R{of} +" " +  $V{MASTER_TOTAL_PAGES}]]></textFieldExpression>
 			</textField>

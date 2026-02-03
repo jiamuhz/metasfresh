@@ -162,7 +162,7 @@
 				<textField>
 					<reportElement x="22" y="8" width="555" height="12" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 					<textElement>
-						<font size="8" isBold="false"/>
+						<font fontName="NotoSansSC" size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{overallcount} > 150000 ?
     $R{info} + " "  +$F{overallcount} + " " + $R{info2} :
@@ -180,42 +180,42 @@
 					<reportElement x="7" y="106" width="33" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<box rightPadding="3"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{dateacct}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="426" y="106" width="58" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{amtcr}]]></textFieldExpression>
 				</textField>
 				<textField pattern="MM.yyyy" isBlankWhenNull="true">
 					<reportElement x="130" y="106" width="60" height="9" uuid="563908a3-7488-4625-b0e5-d89de1d56c16"/>
 					<textElement>
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{description}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="518" y="30" width="30" height="9" uuid="d3e7678f-3696-4ffe-8e20-3db62c351a39"/>
 					<textElement textAlignment="Right">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}+" " + $R{of}]]></textFieldExpression>
 				</textField>
 				<textField pattern="MM.yyyy" isBlankWhenNull="true">
 					<reportElement x="73" y="106" width="57" height="9" uuid="563908a3-7488-4625-b0e5-d89de1d56c16"/>
 					<textElement>
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{bp_name}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="368" y="106" width="58" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{amtdr}]]></textFieldExpression>
 				</textField>
@@ -229,28 +229,28 @@
 				<textField pattern="dd.MM.yyyy HH:mm">
 					<reportElement x="465" y="22" width="103" height="9" uuid="82a28042-ab56-435b-9547-dfe5fc99f4cf"/>
 					<textElement textAlignment="Right">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="40" y="106" width="33" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement>
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{record_id}]]></textFieldExpression>
 				</textField>
 				<textField evaluationTime="Group" evaluationGroup="All">
 					<reportElement x="547" y="30" width="21" height="9" uuid="20fa10dc-ece0-4d33-bc24-b87118cf1609"/>
 					<textElement textAlignment="Right">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="484" y="106" width="58" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{balance}]]></textFieldExpression>
 				</textField>
@@ -299,14 +299,14 @@
 				<textField>
 					<reportElement x="494" y="30" width="25" height="9" uuid="d3e7678f-3696-4ffe-8e20-3db62c351a39"/>
 					<textElement textAlignment="Right">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{page}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="324" y="106" width="44" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{activity}]]></textFieldExpression>
 				</textField>
@@ -329,28 +329,28 @@
 				<textField isBlankWhenNull="true">
 					<reportElement x="280" y="106" width="44" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement>
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{counter_account}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="542" y="106" width="45" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{docstatus}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="190" y="106" width="40" height="9" uuid="6c4a6a90-b02a-4fba-b553-32fe6b6fde32"/>
 					<textElement>
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{vatcode}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="230" y="106" width="50" height="9" uuid="eab5c09d-6d1e-43dd-983b-d87e84847360"/>
 					<textElement>
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{tax_rate_name}]]></textFieldExpression>
 				</textField>
@@ -361,70 +361,70 @@
 					<reportElement x="7" y="60" width="33" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<box rightPadding="3"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{dateacct}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="426" y="60" width="58" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{amtcr}]]></textFieldExpression>
 				</textField>
 				<textField pattern="MM.yyyy" isBlankWhenNull="true">
 					<reportElement x="130" y="60" width="60" height="9" uuid="563908a3-7488-4625-b0e5-d89de1d56c16"/>
 					<textElement>
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{description}]]></textFieldExpression>
 				</textField>
 				<textField pattern="MM.yyyy" isBlankWhenNull="true">
 					<reportElement x="73" y="60" width="57" height="9" uuid="563908a3-7488-4625-b0e5-d89de1d56c16"/>
 					<textElement>
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{bp_name}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="368" y="60" width="58" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{amtdr}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="40" y="60" width="33" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement>
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{record_id}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="484" y="60" width="58" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{balance}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="537" y="50" width="30" height="9" uuid="d3e7678f-3696-4ffe-8e20-3db62c351a39"/>
 					<textElement textAlignment="Right">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{PAGE_NUMBER}+" " + $R{of}]]></textFieldExpression>
 				</textField>
 				<textField pattern="dd.MM.yyyy HH:mm">
 					<reportElement x="484" y="42" width="103" height="9" uuid="82a28042-ab56-435b-9547-dfe5fc99f4cf"/>
 					<textElement textAlignment="Right">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="513" y="50" width="25" height="9" uuid="d3e7678f-3696-4ffe-8e20-3db62c351a39"/>
 					<textElement textAlignment="Right">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{page}]]></textFieldExpression>
 				</textField>
@@ -433,42 +433,42 @@
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="324" y="60" width="44" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{activity}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="280" y="60" width="44" height="9" uuid="7cf59c05-dd27-465d-8d5d-5025e6c71d18"/>
 					<textElement>
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{counter_account}]]></textFieldExpression>
 				</textField>
 				<textField isBlankWhenNull="true">
 					<reportElement x="542" y="60" width="45" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 					<textElement textAlignment="Right">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{docstatus}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="190" y="60" width="40" height="9" uuid="de55145a-f3db-483d-9bd2-87ca9f28a815"/>
 					<textElement>
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{vatcode}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="230" y="60" width="50" height="9" uuid="dc3549fc-eb36-48ed-bfa8-2326daf22334"/>
 					<textElement>
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{tax_rate_name}]]></textFieldExpression>
 				</textField>
@@ -497,21 +497,21 @@
 				<reportElement x="7" y="0" width="33" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 				<box rightPadding="3"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateacct}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="426" y="0" width="58" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{amtacctcr}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" pattern="MM.yyyy" isBlankWhenNull="true">
 				<reportElement x="130" y="0" width="60" height="9" uuid="563908a3-7488-4625-b0e5-d89de1d56c16"/>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{description}.equals("Anfangssaldo") ? $R{initial_balance} :
 (
@@ -523,63 +523,63 @@
 			<textField pattern="MM.yyyy" isBlankWhenNull="true">
 				<reportElement x="73" y="0" width="57" height="9" uuid="563908a3-7488-4625-b0e5-d89de1d56c16"/>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_name}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="368" y="0" width="58" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{amtacctdr}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0" isBlankWhenNull="true">
 				<reportElement x="40" y="0" width="33" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{fact_acct_id}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="484" y="0" width="58" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{saldo}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="324" y="0" width="44" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{a_value}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="280" y="0" width="44" height="9" uuid="7cf59c05-dd27-465d-8d5d-5025e6c71d18"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{account2_id}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="542" y="0" width="45" height="9" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{docstatus}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="190" y="0" width="40" height="9" uuid="04382bf8-5b1c-46f1-ac10-cbc12a84993b"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{vat_code}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="230" y="0" width="50" height="9" uuid="81425b72-e3f0-470e-a86b-155041149740"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tax_rate_name}]]></textFieldExpression>
 			</textField>

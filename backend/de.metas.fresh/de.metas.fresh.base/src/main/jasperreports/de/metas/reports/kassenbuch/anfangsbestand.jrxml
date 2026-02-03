@@ -92,7 +92,7 @@ group by p.datetrx,p.documentno,p.c_payment_id,p.payamt,d.name,gl.name,c.cursymb
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{datetrx}]]></textFieldExpression>
 				</textField>
@@ -105,7 +105,7 @@ group by p.datetrx,p.documentno,p.c_payment_id,p.payamt,d.name,gl.name,c.cursymb
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{wahrung}]]></textFieldExpression>
 				</textField>
@@ -114,7 +114,7 @@ group by p.datetrx,p.documentno,p.c_payment_id,p.payamt,d.name,gl.name,c.cursymb
 						<printWhenExpression><![CDATA[( $V{anfangsbestand}.equals(null) ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<text><![CDATA[0,00]]></text>
 				</staticText>
@@ -123,14 +123,14 @@ group by p.datetrx,p.documentno,p.c_payment_id,p.payamt,d.name,gl.name,c.cursymb
 						<printWhenExpression><![CDATA[new java.lang.Boolean(($V{Zeile_COUNT}.intValue()%2)==0)]]></printWhenExpression>
 					</reportElement>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<text><![CDATA[€]]></text>
 				</staticText>
 				<textField pattern="###0.00" isBlankWhenNull="true">
 					<reportElement mode="Transparent" x="1" y="0" width="40" height="12" uuid="7fcc9af0-0a9d-488a-a1ce-786d050d0a5c"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{anfangsbestand}]]></textFieldExpression>
 				</textField>

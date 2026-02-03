@@ -94,7 +94,7 @@
 				</reportElement>
 				<box rightPadding="3"/>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{dateacct}]]></textFieldExpression>
 			</textField>
@@ -104,7 +104,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{amtcr}]]></textFieldExpression>
 			</textField>
@@ -115,7 +115,7 @@
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{description}]]></textFieldExpression>
 			</textField>
@@ -124,7 +124,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{bp_name}]]></textFieldExpression>
 			</textField>
@@ -133,7 +133,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{amtdr}]]></textFieldExpression>
 			</textField>
@@ -155,7 +155,7 @@
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Center">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
@@ -164,7 +164,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{record_id}]]></textFieldExpression>
 			</textField>
@@ -173,7 +173,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{balance}]]></textFieldExpression>
 			</textField>
@@ -202,7 +202,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{activity}]]></textFieldExpression>
 			</textField>
@@ -232,7 +232,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{counter_account}]]></textFieldExpression>
 			</textField>
@@ -241,7 +241,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{docstatus}]]></textFieldExpression>
 			</textField>
@@ -278,7 +278,7 @@
 				</reportElement>
 				<box rightPadding="3"/>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{account}]]></textFieldExpression>
 			</textField>
@@ -288,7 +288,7 @@
 				</reportElement>
 				<box rightPadding="3"/>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{accountno}]]></textFieldExpression>
 			</textField>
@@ -315,7 +315,7 @@
 				</reportElement>
 				<box rightPadding="3"/>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateacct}]]></textFieldExpression>
 			</textField>
@@ -325,7 +325,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{amtacctcr}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -334,7 +334,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{description}.equals("Anfangssaldo") ? $R{initial_balance} : 
 (
@@ -348,7 +348,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_name}]]></textFieldExpression>
 			</textField>
@@ -357,7 +357,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{amtacctdr}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -366,7 +366,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{fact_acct_id}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -375,7 +375,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{saldo}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -384,7 +384,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{a_value}]]></textFieldExpression>
 			</textField>
@@ -393,7 +393,7 @@
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{account2_id}]]></textFieldExpression>
 			</textField>
@@ -403,7 +403,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{docstatus}]]></textFieldExpression>
 			</textField>
@@ -413,7 +413,7 @@
 				</reportElement>
 				<box rightPadding="3"/>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{param_acct_name}]]></textFieldExpression>
 			</textField>
@@ -423,7 +423,7 @@
 				</reportElement>
 				<box rightPadding="3"/>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{param_acct_value}]]></textFieldExpression>
 			</textField>

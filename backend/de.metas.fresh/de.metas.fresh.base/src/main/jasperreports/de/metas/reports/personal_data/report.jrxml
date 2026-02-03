@@ -59,21 +59,21 @@
 			<textField>
 				<reportElement x="0" y="0" width="180" height="14" uuid="058a1b91-df3e-4108-a0cd-ad943cb35662"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{tablename}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="180" y="0" width="180" height="14" uuid="66efe823-1ad7-4397-986a-47130a3b8dc3"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{columnname}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="360" y="0" width="180" height="14" uuid="7638e084-d412-41a8-9ed6-098d290989fe"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{personaldatacategory}]]></textFieldExpression>
 			</textField>

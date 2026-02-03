@@ -329,7 +329,7 @@
 			<textField>
 				<reportElement x="122" y="66" width="14" height="12" uuid="b9cfb76b-da35-489d-a9c0-9c178c9ec64b"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[" - "]]></textFieldExpression>
 			</textField>

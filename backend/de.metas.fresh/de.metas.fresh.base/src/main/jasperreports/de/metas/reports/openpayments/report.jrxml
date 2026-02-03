@@ -209,7 +209,7 @@ ORDER BY
 				<textField isBlankWhenNull="true">
 					<reportElement key="textField-3" x="64" y="0" width="308" height="10" uuid="fbca41d3-535f-46dd-8c0b-59cfbd5e5cbe"/>
 					<textElement markup="none">
-						<font size="7" isBold="false"/>
+						<font fontName="NotoSansSC" size="7" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA["Total Kreditor " + $F{bpartner}]]></textFieldExpression>
 				</textField>
@@ -361,14 +361,14 @@ ORDER BY
 			<textField isBlankWhenNull="true">
 				<reportElement key="textField-3" x="37" y="40" width="145" height="10" uuid="ab7e263a-1e7b-41d6-82d7-2429cee962e0"/>
 				<textElement markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{org_name}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd. MMMMM yyyy">
 				<reportElement key="textField-3" x="415" y="30" width="145" height="10" uuid="f8fafb00-bbd0-468f-8375-3ad320176c18"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{paydate}]]></textFieldExpression>
 			</textField>
@@ -381,7 +381,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Page}]]></textFieldExpression>
 			</textField>
@@ -394,7 +394,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER} + "/ "]]></textFieldExpression>
 			</textField>
@@ -407,7 +407,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["" + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
@@ -418,21 +418,21 @@ ORDER BY
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement key="textField-3" x="386" y="0" width="50" height="10" uuid="31b2f7be-9dbf-440a-bbf9-937b5477de9a"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{u_docno}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement key="textField-3" x="527" y="0" width="50" height="10" uuid="d500a2d5-1221-44b7-a60f-194de06df2c6"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{payamt}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement key="textField-3" x="37" y="0" width="160" height="10" uuid="fbca41d3-535f-46dd-8c0b-59cfbd5e5cbe"/>
 				<textElement markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartner}]]></textFieldExpression>
 			</textField>
@@ -441,14 +441,14 @@ ORDER BY
 					<printWhenExpression><![CDATA[new Boolean($F{discountamt}.floatValue() != 0)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{actualdiscountamt}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement key="textField-3" x="182" y="0" width="42" height="10" uuid="787dbba3-a675-4489-a879-37738f32b227"/>
 				<textElement markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateinvoiced}]]></textFieldExpression>
 			</textField>
@@ -457,21 +457,21 @@ ORDER BY
 					<printWhenExpression><![CDATA[new Boolean($F{discountamt}.floatValue() != 0)]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{discountdays}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement key="textField-3" x="223" y="0" width="40" height="10" uuid="787dbba3-a675-4489-a879-37738f32b227"/>
 				<textElement markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{duedate}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement key="textField-3" x="264" y="0" width="32" height="10" uuid="787dbba3-a675-4489-a879-37738f32b227"/>
 				<textElement markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{daysdue}]]></textFieldExpression>
 			</textField>
@@ -480,7 +480,7 @@ ORDER BY
 					<printWhenExpression><![CDATA[new Boolean($F{discountamt}.floatValue() != 0)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{discountamt}]]></textFieldExpression>
 			</textField>
@@ -489,14 +489,14 @@ ORDER BY
 					<printWhenExpression><![CDATA[new Boolean ( $F{afterpay}.floatValue() != 0 )]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{afterpay}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement key="textField-3" x="437" y="0" width="45" height="10" uuid="d500a2d5-1221-44b7-a60f-194de06df2c6"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{beforepay}]]></textFieldExpression>
 			</textField>
