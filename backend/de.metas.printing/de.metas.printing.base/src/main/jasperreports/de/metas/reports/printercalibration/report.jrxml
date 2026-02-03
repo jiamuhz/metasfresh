@@ -52,14 +52,14 @@ WHERE
 			<staticText>
 				<reportElement uuid="8206e8c1-6d53-4955-8144-3a70e0449827" x="190" y="404" width="128" height="24"/>
 				<textElement>
-					<font size="14"/>
+					<font fontName="NotoSansSC" size="14"/>
 				</textElement>
 				<text><![CDATA[x = ______ mm]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="71b1ed1c-6464-40d1-a99f-5f5aeb91d82b" x="281" y="301" width="134" height="24"/>
 				<textElement textAlignment="Right">
-					<font size="14"/>
+					<font fontName="NotoSansSC" size="14"/>
 				</textElement>
 				<text><![CDATA[y = ______ mm]]></text>
 			</staticText>

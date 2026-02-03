@@ -133,7 +133,7 @@ $F{org_bank_name}.equals("") ? ("" + (($F{org_bank_swift}==null || $F{org_bank_s
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font size="8" isBold="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{conditions}]]></textFieldExpression>
 			</textField>

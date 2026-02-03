@@ -167,7 +167,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isBold="false" />
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Produkt-Kategorie]]></text>
 			</staticText>
@@ -180,7 +180,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" />
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Umsatz]]></text>
 			</staticText>
@@ -193,7 +193,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false" />
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Absatz/ Stck.]]></text>
 			</staticText>
@@ -208,7 +208,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isBold="false" />
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<text><![CDATA[/ Produktdetails]]></text>
 			</staticText>

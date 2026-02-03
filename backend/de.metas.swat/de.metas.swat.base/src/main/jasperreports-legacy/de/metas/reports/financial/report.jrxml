@@ -198,7 +198,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-46"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
-						<font size="14"/>
+						<font fontName="NotoSansSC" size="14"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{report_name}]]></textFieldExpression>
 				</textField>

@@ -103,7 +103,7 @@ FROM
 				<textField pattern="dd.MM.yyyy" isBlankWhenNull="true">
 					<reportElement key="textField-16" x="193" y="0" width="71" height="12" forecolor="#000000" uuid="c9657899-0453-4f44-a3fc-b0cbd7eb9126"/>
 					<textElement markup="none">
-						<font size="9" isBold="false" />
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$P{StartDate}]]></textFieldExpression>
 				</textField>
@@ -114,7 +114,7 @@ FROM
 .floatValue() >= 0]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right" markup="none">
-						<font size="9" isBold="false" />
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{carryincoming}
 .subtract($F{carryoutgoing})]]></textFieldExpression>
@@ -126,7 +126,7 @@ FROM
 .floatValue() >= 0]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right" markup="none">
-						<font size="9" isBold="false" />
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{carryoutgoing}
 .subtract($F{carryincoming})]]></textFieldExpression>
@@ -134,14 +134,14 @@ FROM
 				<textField isBlankWhenNull="true">
 					<reportElement key="textField-16" x="263" y="0" width="120" height="12" forecolor="#000000" uuid="b1531e1a-cb5c-4b6a-864e-971e6fd346b7"/>
 					<textElement markup="none">
-						<font size="9" isBold="false" />
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement key="textField-16" x="93" y="0" width="101" height="12" forecolor="#000000" uuid="9b87d719-0673-47b7-8e3e-faeb59bc469f"/>
 					<textElement markup="none">
-						<font size="9" isBold="false" />
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{balance}]]></textFieldExpression>
 				</textField>

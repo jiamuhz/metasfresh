@@ -185,7 +185,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font size="14"/>
+					<font fontName="NotoSansSC" size="14"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{report_name}]]></textFieldExpression>
 			</textField>
