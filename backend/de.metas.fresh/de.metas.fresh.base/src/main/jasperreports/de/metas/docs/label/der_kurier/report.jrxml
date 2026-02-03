@@ -241,7 +241,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement x="20" y="316" width="250" height="14" uuid="7cf0cd16-de8b-472a-8b31-1c6b89773df5"/>
 				<textElement>
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[($F{consignee_street}  != null ? $F{consignee_street} : "")
  + " " + 
@@ -259,7 +259,7 @@
 			<textField isBlankWhenNull="true">
 				<reportElement x="20" y="344" width="250" height="14" uuid="19b6b3e6-8c33-4828-8424-9e11b3c9e717"/>
 				<textElement>
-					<font isBold="false"/>
+					<font fontName="NotoSansSC" isBold="false"/>
 				</textElement>
 			</textField>
 			<image hAlign="Center">

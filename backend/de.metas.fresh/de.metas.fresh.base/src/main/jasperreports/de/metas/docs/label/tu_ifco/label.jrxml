@@ -59,7 +59,7 @@ ORDER BY lotnummer
 			<textField pattern="dd.MM.yy" isBlankWhenNull="true">
 				<reportElement x="23" y="232" width="11" height="162" uuid="884bb213-0bfc-40c1-9195-b5c8ff625e53"/>
 				<textElement rotation="Right" markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{abgepackt}]]></textFieldExpression>
 			</textField>
@@ -76,49 +76,49 @@ ORDER BY lotnummer
 			<staticText>
 				<reportElement x="52" y="119" width="11" height="114" uuid="e8db4a31-69d7-41df-8a88-5e4b91eb872b"/>
 				<textElement rotation="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Gewicht / Poids]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="23" y="119" width="11" height="114" uuid="785d851c-5f18-429e-bf10-d4169240b502"/>
 				<textElement rotation="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Abgepackt am / Emballé le]]></text>
 			</staticText>
 			<textField isBlankWhenNull="true">
 				<reportElement x="66" y="232" width="11" height="162" uuid="bbed02c4-4d61-441a-91ba-16a81385fcef"/>
 				<textElement rotation="Right" markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{herkunft}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="38" y="232" width="11" height="162" uuid="68c93104-0a9b-4aa7-92b1-2fe49caf2516"/>
 				<textElement rotation="Right" markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{org_address}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="79" y="6" width="11" height="100" uuid="69176aa5-4fc2-4ab3-831a-5c45dbda6aff"/>
 				<textElement rotation="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Produzent / Producteur]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="66" y="119" width="11" height="114" uuid="f6199d19-c6bd-4aea-bed8-6bfa9c3a575c"/>
 				<textElement rotation="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Herkunft / Origine]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="38" y="119" width="11" height="114" uuid="8f2dd1fd-c0b2-40d5-bf4b-72fdb5497be5"/>
 				<textElement rotation="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Lieferant / Fournisseur]]></text>
 			</staticText>
@@ -132,7 +132,7 @@ ORDER BY lotnummer
 			<staticText>
 				<reportElement x="79" y="119" width="11" height="114" uuid="d8bff8d0-ea0d-4a1e-8122-4b66d77e84af"/>
 				<textElement rotation="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Anbau / Méthode / Methodo]]></text>
 			</staticText>
@@ -153,21 +153,21 @@ ORDER BY lotnummer
 					<printWhenExpression><![CDATA[new Boolean($F{lotnummer} != null)]]></printWhenExpression>
 				</reportElement>
 				<textElement rotation="Right" markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Lot: " + $F{lotnummer}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="52" y="232" width="11" height="162" uuid="f82c6771-b155-41f7-b4a6-3405f60f32fd"/>
 				<textElement rotation="Right" markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{gewicht} + " kg / kilo"]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="79" y="232" width="11" height="162" uuid="c60b3c5b-4c40-471d-8e29-2db2197f7bfa"/>
 				<textElement rotation="Right" markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{anbau}]]></textFieldExpression>
 			</textField>
@@ -176,7 +176,7 @@ ORDER BY lotnummer
 					<printWhenExpression><![CDATA[new Boolean($F{is_suisse_garantie})]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" rotation="Right" markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Zertifizierung: ProCert Safety AG]]></text>
 			</staticText>
