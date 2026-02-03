@@ -146,14 +146,14 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 			<textField>
 				<reportElement key="textField-16" x="37" y="0" width="160" height="12" forecolor="#000000" uuid="fc26b42d-2aab-4eb2-a537-2c00469b2331"/>
 				<textElement markup="none">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Summary}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-20" x="483" y="0" width="60" height="12" forecolor="#000000" uuid="ed1ae25e-79c3-483b-ae11-3bf61fb619fb"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Amount}]]></textFieldExpression>
 			</textField>
@@ -170,7 +170,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 			<textField>
 				<reportElement x="37" y="0" width="141" height="12" uuid="49c6b8f4-1079-43e5-a01a-67eb7877fbfb"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{TotalAmount}]]></textFieldExpression>
 			</textField>
@@ -183,7 +183,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalentered}]]></textFieldExpression>
 			</textField>
@@ -193,7 +193,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 			<textField>
 				<reportElement x="37" y="0" width="141" height="12" uuid="67444955-82ee-473f-aea9-ca5b3eabd2c8"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{discount} + " % " + $V{Discount}]]></textFieldExpression>
 			</textField>
@@ -206,7 +206,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totaldiscountamt}]]></textFieldExpression>
 			</textField>
@@ -216,7 +216,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 			<textField>
 				<reportElement x="37" y="0" width="141" height="12" uuid="8fc70df0-105a-4dd8-9a94-819d69db75ce"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{TotalIncludingDiscount}]]></textFieldExpression>
 			</textField>
@@ -229,7 +229,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nonhutotal}]]></textFieldExpression>
 			</textField>
@@ -241,7 +241,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 			<textField>
 				<reportElement key="textField-16" x="37" y="0" width="129" height="12" forecolor="#000000" uuid="ae607b6f-184e-4685-a565-7811e27027d2"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{HUTotal}]]></textFieldExpression>
 			</textField>
@@ -254,7 +254,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{hutotal}]]></textFieldExpression>
 			</textField>
@@ -265,7 +265,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 			<textField>
 				<reportElement key="textField-16" x="37" y="0" width="261" height="12" forecolor="#000000" uuid="2602d18d-3edb-4478-9829-4f29d1f4a834"/>
 				<textElement markup="none">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{GrandTotal}]]></textFieldExpression>
 			</textField>
@@ -278,7 +278,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nonhutotal}]]></textFieldExpression>
 			</textField>

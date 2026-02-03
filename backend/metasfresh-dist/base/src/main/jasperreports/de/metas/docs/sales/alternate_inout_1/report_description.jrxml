@@ -73,7 +73,7 @@ $P{ad_language}.equals("it_CH")?"Externe Belegnummer":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Date}]]></textFieldExpression>
 			</textField>
@@ -86,14 +86,14 @@ $P{ad_language}.equals("it_CH")?"Externe Belegnummer":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{movementdate}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="23c583a2-ddf6-465b-b044-9620f40fc994" key="textField-6" x="365" y="8" width="135" height="13" forecolor="#000000"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{printname}]]></textFieldExpression>
 			</textField>
@@ -106,14 +106,14 @@ $P{ad_language}.equals("it_CH")?"Externe Belegnummer":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="44c496d6-bc82-4c9a-b96b-db76a659ebd7" key="textField-6" x="365" y="63" width="97" height="13" forecolor="#000000"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10" isBold="true" isUnderline="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" isUnderline="true" />
 				</textElement>
 				<text><![CDATA[Lieferung an:]]></text>
 			</staticText>
@@ -126,14 +126,14 @@ $P{ad_language}.equals("it_CH")?"Externe Belegnummer":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{reference}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="0d0cde81-c028-48e9-a87b-f481388d5aac" key="textField-6" x="365" y="35" width="135" height="13" forecolor="#000000"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Reference}]]></textFieldExpression>
 			</textField>

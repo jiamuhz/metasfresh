@@ -175,35 +175,35 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 			<textField>
 				<reportElement uuid="556066b9-32bd-4253-9cef-dcb9c261152e" key="textField-19" positionType="FixRelativeToBottom" x="352" y="11" width="90" height="13" forecolor="#000000"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{QuantityOrdered}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="931d2194-a53e-4c55-992c-8bb07b2c918a" key="textField-13" positionType="FixRelativeToBottom" x="84" y="23" width="116" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Description}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="5ab854ae-ecbe-43e0-88b4-534ae0c73786" key="textField-13" positionType="FixRelativeToBottom" x="84" y="11" width="116" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Article}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="d75f4caa-fb47-4cea-bc83-97c904e110bf" key="textField-20" positionType="FixRelativeToBottom" x="445" y="11" width="70" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{HUUnit}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="d8fe0e91-e6b8-4e4c-b332-58a860a9dbc8" key="textField-20" positionType="FixRelativeToBottom" x="445" y="23" width="70" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Unit}]]></textFieldExpression>
 			</textField>
@@ -217,14 +217,14 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 			<textField>
 				<reportElement uuid="0e2e425f-cee9-425a-9489-b7db3f9d8c2f" key="textField-17" positionType="FixRelativeToBottom" x="200" y="11" width="121" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{EANNo}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="ed371fcd-88f4-433d-844e-690932460015" key="textField-16" positionType="FixRelativeToBottom" x="37" y="23" width="48" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Origin}]]></textFieldExpression>
 			</textField>
@@ -245,14 +245,14 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 			<textField>
 				<reportElement uuid="c3bfffea-887a-45c8-a7c2-1c70185d5207" key="textField-16" positionType="FixRelativeToBottom" x="37" y="11" width="48" height="13" forecolor="#000000"/>
 				<textElement verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Line}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="2eef1ffe-7c23-41d6-b9c3-ace89f9a24d1" key="textField-20" positionType="FixRelativeToBottom" x="515" y="11" width="50" height="13" forecolor="#000000"/>
 				<textElement textAlignment="Right" verticalAlignment="Top" markup="none">
-					<font size="10" isBold="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Total}]]></textFieldExpression>
 			</textField>
@@ -279,7 +279,7 @@ $P{ad_language}.equals("it_CH")?"Total Gesamt":
 			<textField>
 				<reportElement uuid="5532d787-c1b7-4b0e-b779-d47279aa279f" key="textField-49" mode="Transparent" x="37" y="0" width="150" height="13" forecolor="#000000"/>
 				<textElement markup="none">
-					<font size="10" isItalic="true" />
+					<font fontName="NotoSansSC" size="10" isItalic="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Carry}]]></textFieldExpression>
 			</textField>
