@@ -95,7 +95,7 @@ $P{ExcludeYearEndBooking}
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Currency} +" "+ $F{currency}]]></textFieldExpression>
 			</textField>
@@ -113,7 +113,7 @@ $P{ExcludeYearEndBooking}
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{IncludePostingTypeStatistical} + " "+ $P{IncludePostingTypeStatistical}]]></textFieldExpression>
 			</textField>

@@ -68,7 +68,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{reference}]]></textFieldExpression>
 			</textField>
@@ -83,14 +83,14 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cont_fax}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="6b535e5a-cf26-4213-aba0-aa76c5ec9643" x="266" y="62" width="283" height="13"/>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cont_name}]]></textFieldExpression>
 			</textField>
@@ -105,7 +105,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{phone}]]></textFieldExpression>
 			</textField>
@@ -120,7 +120,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{fax}]]></textFieldExpression>
 			</textField>
@@ -135,7 +135,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{reference}]]></textFieldExpression>
 			</textField>
@@ -150,7 +150,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sr_email}]]></textFieldExpression>
 			</textField>
@@ -176,7 +176,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{date}]]></textFieldExpression>
 			</textField>
@@ -196,7 +196,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_value}]]></textFieldExpression>
 			</textField>
@@ -211,7 +211,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{fax}]]></textFieldExpression>
 			</textField>
@@ -226,7 +226,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sr_fax}]]></textFieldExpression>
 			</textField>
@@ -239,7 +239,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{docno}]]></textFieldExpression>
 			</textField>
@@ -254,7 +254,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{phone}]]></textFieldExpression>
 			</textField>
@@ -264,7 +264,7 @@ WHERE
 $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{yourdata}]]></textFieldExpression>
 			</textField>
@@ -279,7 +279,7 @@ $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhe
 					<printWhenExpression><![CDATA[new Boolean($F{sr_name} != null)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sr_name}]]></textFieldExpression>
 			</textField>
@@ -294,7 +294,7 @@ $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhe
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{customerno}]]></textFieldExpression>
 			</textField>
@@ -307,7 +307,7 @@ $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhe
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateinvoiced}]]></textFieldExpression>
 			</textField>
@@ -316,7 +316,7 @@ $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhe
 					<printWhenExpression><![CDATA[new Boolean(!$F{sr_name}.equals("") || $F{sr_phone}!=null || $F{sr_fax}!=null || $F{sr_email}!=null)]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{ourdata}]]></textFieldExpression>
 			</textField>
@@ -331,7 +331,7 @@ $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhe
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sr_phone}]]></textFieldExpression>
 			</textField>
@@ -346,7 +346,7 @@ $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhe
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{email}]]></textFieldExpression>
 			</textField>
@@ -359,7 +359,7 @@ $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhe
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left" markup="html">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
 			</textField>
@@ -374,7 +374,7 @@ $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhe
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cont_phone}]]></textFieldExpression>
 			</textField>

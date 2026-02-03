@@ -97,35 +97,35 @@
 			<textField pattern="###0.0;-###0.0" isBlankWhenNull="true">
 				<reportElement uuid="c246c202-77f3-485d-8837-2e91816704e4" x="472" y="1" width="83" height="12"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{differenceqty}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="ca45ed38-e4c4-4d0c-8b26-d7ce1eaa0b76" x="1" y="1" width="169" height="12"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{productname}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.0" isBlankWhenNull="true">
 				<reportElement uuid="2dbd8f29-076d-43ef-a7eb-50c1d8027096" x="290" y="1" width="92" height="12"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyreceived}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.0" isBlankWhenNull="true">
 				<reportElement uuid="d13156fc-255b-4fd2-91c4-f4792ca8da70" x="382" y="1" width="90" height="12"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyissued}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="4e85bb2f-732d-483c-bb8e-bb47b90ccb46" x="170" y="1" width="120" height="12"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
 			</textField>

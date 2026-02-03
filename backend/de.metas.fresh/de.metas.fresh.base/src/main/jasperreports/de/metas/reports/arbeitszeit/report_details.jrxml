@@ -101,35 +101,35 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 				<textField pattern="dd.MM.yyyy">
 					<reportElement x="79" y="1" width="85" height="12" uuid="06127736-8bc3-4db7-a505-3f0014d2c945"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{datum}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="6" y="1" width="68" height="12" uuid="8c354b80-8877-4d32-842f-23f8f07ed210"/>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{partnername}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="251" y="0" width="56" height="12" uuid="322e66f5-5e20-4494-9fcf-83972e53e4d9"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{remote_host}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="185" y="1" width="45" height="12" uuid="6f95f949-5395-4467-b64e-8b89579dc5f0"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{login}]]></textFieldExpression>
 				</textField>
 				<textField evaluationTime="Group" evaluationGroup="datum">
 					<reportElement x="185" y="12" width="45" height="12" uuid="82881338-e90e-4eab-9fee-12302ed64399"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{logout}]]></textFieldExpression>
 				</textField>
@@ -140,7 +140,7 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 				<textField evaluationTime="Group" evaluationGroup="datum">
 					<reportElement x="308" y="1" width="94" height="12" uuid="166a8b2e-b89c-4467-8e95-00404fce6ac7"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{Zeile}]]></textFieldExpression>
 				</textField>
@@ -164,21 +164,21 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 			<staticText>
 				<reportElement x="6" y="0" width="68" height="16" forecolor="#FFFFFF" uuid="54fa4872-798d-43d3-9612-91010a91a0a0"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Mitarbeiter]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="185" y="0" width="45" height="16" forecolor="#FFFFFF" uuid="de49b4b7-1818-41aa-88c8-aed64c54d477"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Login]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="251" y="0" width="56" height="16" forecolor="#FFFFFF" uuid="44f330c7-bbcd-4662-b82a-3d95125ad972"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Remote Host]]></text>
 			</staticText>
@@ -187,7 +187,7 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 					<printWhenExpression><![CDATA[( $P{details}.equals("Y") ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Prozessname]]></text>
 			</staticText>
@@ -196,7 +196,7 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 					<printWhenExpression><![CDATA[( $P{details}.equals("Y") ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Prozessbeschreibung]]></text>
 			</staticText>
@@ -205,14 +205,14 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 					<printWhenExpression><![CDATA[( $P{details}.equals("Y") ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Sitzungszeit(detailliert)]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="81" y="0" width="85" height="16" forecolor="#FFFFFF" uuid="e116ac5e-1e3a-4b88-ae6f-dbc0e210c316"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Datum]]></text>
 			</staticText>
@@ -221,7 +221,7 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 					<printWhenExpression><![CDATA[( $P{details}.equals("Y") ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Neuer Wert]]></text>
 			</staticText>
@@ -230,21 +230,21 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 					<printWhenExpression><![CDATA[( $P{details}.equals("Y") ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Alter Wert]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="185" y="16" width="45" height="16" forecolor="#FFFFFF" uuid="061c8866-255a-4a5d-9ad6-d75ec450791b"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Logout]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="308" y="0" width="94" height="16" forecolor="#FFFFFF" uuid="d3416fdd-4a07-4ccd-b593-676643418e8b"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Anzahl Prozesse]]></text>
 			</staticText>
@@ -269,7 +269,7 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 					<printWhenExpression><![CDATA[( $P{details}.equals("Y") ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{prozessname}]]></textFieldExpression>
 			</textField>
@@ -278,7 +278,7 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 					<printWhenExpression><![CDATA[( $P{details}.equals("Y") ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{p_msg}]]></textFieldExpression>
 			</textField>
@@ -287,7 +287,7 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 					<printWhenExpression><![CDATA[( $P{details}.equals("Y") ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{zeit}]]></textFieldExpression>
 			</textField>
@@ -296,7 +296,7 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 					<printWhenExpression><![CDATA[( $P{details}.equals("Y") ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{alterwert}]]></textFieldExpression>
 			</textField>
@@ -305,7 +305,7 @@ group by   s.created,bp.name,s.remote_host,c.oldvalue,c.newvalue,p.name,pilog.p_
 					<printWhenExpression><![CDATA[( $P{details}.equals("Y") ? new Boolean(true) : new Boolean(false) )]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{neuerwert}]]></textFieldExpression>
 			</textField>

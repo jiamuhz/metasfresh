@@ -135,56 +135,56 @@
 				<textField>
 					<reportElement x="50" y="0" width="131" height="10" uuid="e7be79cc-5801-471b-bb7a-eb5aa1d27a26"/>
 					<textElement>
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{p_name}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="0" y="0" width="49" height="10" uuid="8d9e6a51-2e13-42af-bc79-9eb63ceaf565"/>
 					<textElement>
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{p_value}]]></textFieldExpression>
 				</textField>
 				<textField pattern="">
 					<reportElement x="181" y="0" width="32" height="10" uuid="a4aa5cb8-3e19-483e-ba7f-ef51743662ca"/>
 					<textElement>
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 				</textField>
 				<textField evaluationTime="Group" evaluationGroup="product_group" pattern="#,##0.00">
 					<reportElement x="212" y="0" width="40" height="10" uuid="5bf76ced-6e14-4677-a2bf-d6859fae41ae"/>
 					<textElement>
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{Product_qty}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="466" y="0" width="89" height="10" uuid="4290ba8f-a5ed-4485-988b-1feb0be512de"/>
 					<textElement>
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{account}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="397" y="0" width="69" height="10" uuid="4290ba8f-a5ed-4485-988b-1feb0be512de"/>
 					<textElement textAlignment="Center">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{activity_from} != null ? $F{activity_from} : " - "]]></textFieldExpression>
 				</textField>
 				<textField evaluationTime="Group" evaluationGroup="product_group" pattern="#,##0.00">
 					<reportElement x="252" y="0" width="81" height="10" uuid="0f68c7a5-d975-48ad-8a0f-1c10b80afdb8"/>
 					<textElement textAlignment="Right">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{Product_avg}]]></textFieldExpression>
 				</textField>
 				<textField evaluationTime="Group" evaluationGroup="product_group" pattern="#,##0.00">
 					<reportElement x="333" y="0" width="64" height="10" uuid="eae47dd8-2870-4614-8a2d-6edd9f6c645b"/>
 					<textElement textAlignment="Right">
-						<font size="7"/>
+						<font fontName="NotoSansSC" size="7"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{total}]]></textFieldExpression>
 				</textField>
@@ -209,7 +209,7 @@
 			<textField>
 				<reportElement x="0" y="41" width="145" height="10" uuid="52e0ad27-92b6-45a7-9b12-2c0b14c6407a"/>
 				<textElement markup="none">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new Boolean ($F{param_activity_from_value} != null) ?
 $R{activityFrom} + " "+ $F{param_activity_from_value} + " " + $F{param_activity_from_name}
@@ -218,7 +218,7 @@ $R{activityFrom} + " "+ $F{param_activity_from_value} + " " + $F{param_activity_
 			<textField>
 				<reportElement x="0" y="51" width="145" height="10" uuid="b2236983-4ddf-4d0d-8df3-7200c273a2c3"/>
 				<textElement markup="none">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new Boolean ($F{param_activity_to_value} != null) ?
 $R{activityTo} + " "+ $F{param_activity_to_value} + " " + $F{param_activity_to_name}
@@ -243,7 +243,7 @@ $R{activityTo} + " "+ $F{param_activity_to_value} + " " + $F{param_activity_to_n
 			<textField>
 				<reportElement x="0" y="26" width="43" height="10" uuid="b059b7c6-a022-43dd-a0ce-cce30bca224e"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{period}]]></textFieldExpression>
 			</textField>

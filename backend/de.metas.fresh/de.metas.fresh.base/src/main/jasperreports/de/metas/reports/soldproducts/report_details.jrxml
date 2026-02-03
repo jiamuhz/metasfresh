@@ -78,7 +78,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<text><![CDATA[Summe]]></text>
 				</staticText>
@@ -91,7 +91,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{kunde_sum}]]></textFieldExpression>
 				</textField>
@@ -132,7 +132,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Kundennr.]]></text>
 			</staticText>
@@ -145,7 +145,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Kundenname]]></text>
 			</staticText>
@@ -158,7 +158,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Artikelnr.]]></text>
 			</staticText>
@@ -171,7 +171,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Artikelname]]></text>
 			</staticText>
@@ -184,7 +184,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Menge]]></text>
 			</staticText>
@@ -212,7 +212,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{produktnr}]]></textFieldExpression>
 			</textField>
@@ -225,7 +225,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{produktname}]]></textFieldExpression>
 			</textField>
@@ -238,21 +238,21 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{menge}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="2" y="0" width="61" height="11" uuid="23985298-b496-4218-aa59-54363b109af1"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{kundennr}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="73" y="0" width="179" height="11" uuid="ba23a0be-85d1-4867-9fe5-883abd8cfd83"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{kundenname}]]></textFieldExpression>
 			</textField>

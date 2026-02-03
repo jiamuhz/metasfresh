@@ -105,7 +105,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{tax_name}]]></textFieldExpression>
 				</textField>
@@ -118,7 +118,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{SUM_VST}]]></textFieldExpression>
 				</textField>
@@ -131,7 +131,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{SUM_UST}]]></textFieldExpression>
 				</textField>
@@ -144,7 +144,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 				</textField>
@@ -157,7 +157,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 				</textField>
@@ -170,7 +170,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{SUM_UST_Basis}]]></textFieldExpression>
 				</textField>
@@ -183,7 +183,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 				</textField>
@@ -196,7 +196,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 				</textField>
@@ -209,7 +209,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{SUM_VST_Basis}]]></textFieldExpression>
 				</textField>
@@ -243,7 +243,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{VST}]]></textFieldExpression>
 			</textField>
@@ -256,7 +256,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{UST}]]></textFieldExpression>
 			</textField>
@@ -271,7 +271,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{buchungsdatum}]]></textFieldExpression>
 			</textField>
@@ -359,7 +359,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{zeile}]]></textFieldExpression>
 			</textField>
@@ -374,7 +374,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{beleg}]]></textFieldExpression>
 			</textField>
@@ -462,7 +462,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{UST_basis}]]></textFieldExpression>
 			</textField>
@@ -475,7 +475,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{VST_basis}]]></textFieldExpression>
 			</textField>
@@ -490,7 +490,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{SUM_VST_Basis}]]></textFieldExpression>
 			</textField>
@@ -505,7 +505,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 			</textField>
@@ -520,7 +520,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 			</textField>
@@ -535,7 +535,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{SUM_UST_Basis}]]></textFieldExpression>
 			</textField>
@@ -550,7 +550,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{totalsum_VST_Basis}]]></textFieldExpression>
 			</textField>
@@ -565,7 +565,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 			</textField>
@@ -580,7 +580,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 			</textField>
@@ -595,7 +595,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{totalsum_UST_Basis}]]></textFieldExpression>
 			</textField>
@@ -608,7 +608,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{konto}]]></textFieldExpression>
 			</textField>
@@ -634,7 +634,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateacct}]]></textFieldExpression>
 			</textField>
@@ -643,7 +643,7 @@ ORDER BY
 					<printWhenExpression><![CDATA[new Boolean($F{vst}.floatValue()==0)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[-]]></text>
 			</staticText>
@@ -658,7 +658,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 			</textField>
@@ -673,7 +673,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{vst}]]></textFieldExpression>
 			</textField>
@@ -682,7 +682,7 @@ ORDER BY
 					<printWhenExpression><![CDATA[new Boolean($F{ust}.floatValue()==0)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[-]]></text>
 			</staticText>
@@ -697,7 +697,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 			</textField>
@@ -712,7 +712,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ust}]]></textFieldExpression>
 			</textField>
@@ -721,7 +721,7 @@ ORDER BY
 					<printWhenExpression><![CDATA[new Boolean($F{ust_basis}.floatValue()==0)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[-]]></text>
 			</staticText>
@@ -736,7 +736,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 			</textField>
@@ -751,7 +751,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ust_basis}]]></textFieldExpression>
 			</textField>
@@ -760,7 +760,7 @@ ORDER BY
 					<printWhenExpression><![CDATA[new Boolean($F{vst_basis}.floatValue()==0)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[-]]></text>
 			</staticText>
@@ -775,7 +775,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{symbol}]]></textFieldExpression>
 			</textField>
@@ -790,7 +790,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{vst_basis}]]></textFieldExpression>
 			</textField>
@@ -803,7 +803,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{line}]]></textFieldExpression>
 			</textField>
@@ -816,7 +816,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dt_name} + ": " + $F{docno}]]></textFieldExpression>
 			</textField>
@@ -829,7 +829,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[($F{acct_value} == null || $F{acct_name} == null? "-" : $F{acct_value} + " " + $F{acct_name})]]></textFieldExpression>
 			</textField>

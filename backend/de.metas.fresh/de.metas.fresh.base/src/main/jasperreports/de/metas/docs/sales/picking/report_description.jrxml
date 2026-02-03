@@ -46,7 +46,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_Picking_Description( $P{c_or
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Date}]]></textFieldExpression>
 			</textField>
@@ -59,7 +59,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_Picking_Description( $P{c_or
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{reference}]]></textFieldExpression>
 			</textField>
@@ -74,7 +74,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_Picking_Description( $P{c_or
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_value}]]></textFieldExpression>
 			</textField>
@@ -89,7 +89,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_Picking_Description( $P{c_or
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Reference}]]></textFieldExpression>
 			</textField>
@@ -117,7 +117,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_Picking_Description( $P{c_or
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BP_Value}]]></textFieldExpression>
 			</textField>
@@ -143,7 +143,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_Picking_Description( $P{c_or
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{preparationdate}]]></textFieldExpression>
 			</textField>
@@ -171,7 +171,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_Picking_Description( $P{c_or
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_name}]]></textFieldExpression>
 			</textField>
@@ -186,7 +186,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_Picking_Description( $P{c_or
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BP_Name}]]></textFieldExpression>
 			</textField>

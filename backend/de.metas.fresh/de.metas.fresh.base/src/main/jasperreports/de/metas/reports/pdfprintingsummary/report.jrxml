@@ -60,28 +60,28 @@ order by a.Name]]>
 			<textField>
 				<reportElement uuid="f701cb3e-d321-4a8b-82d5-41efc3917428" x="56" y="14" width="71" height="13"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="c0ffa914-cade-4e34-92da-2cd3efa81e36" x="267" y="14" width="322" height="13"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartneraddress}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="ccae3001-687e-4728-8aec-6cba40788e3e" x="127" y="14" width="140" height="13"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="4a864cb7-e127-4e1d-8d14-12f5d43ca1de" x="0" y="14" width="56" height="13"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
 			</textField>
@@ -130,21 +130,21 @@ order by a.Name]]>
 			<textField>
 				<reportElement uuid="fcb55058-239a-480c-8f57-160a3d16ca50" x="0" y="0" width="50" height="9"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="747ccbd1-9b54-4a75-bd9d-a0efce6dfdb9" x="50" y="0" width="38" height="9"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="25929fe3-2bf3-42e1-a78c-7d3da3af6aa1" x="88" y="0" width="107" height="9"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -155,7 +155,7 @@ order by a.Name]]>
 			<textField>
 				<reportElement uuid="3697b591-851e-4913-9969-151fc0ec51ad" x="56" y="16" width="71" height="13"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
@@ -169,21 +169,21 @@ order by a.Name]]>
 			<textField>
 				<reportElement uuid="620666cc-33c0-4d37-9e94-461074ede087" x="127" y="16" width="140" height="13"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement uuid="50de6efd-6fad-4d3c-bc5a-ff2d5456d462" x="0" y="16" width="56" height="13"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{type}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="0469df71-cb89-4f34-a478-f9d5bb5b7ddc" x="267" y="16" width="322" height="13"/>
 				<textElement>
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartneraddress}]]></textFieldExpression>
 			</textField>

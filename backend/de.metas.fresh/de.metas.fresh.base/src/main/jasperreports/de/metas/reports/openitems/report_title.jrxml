@@ -55,7 +55,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{parm1}]]></textFieldExpression>
 			</textField>
@@ -68,7 +68,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{issotrx}.equals("N") ? $R{no} : ($F{issotrx} .equals("Y") ? $R{yes} : $R{all} )]]></textFieldExpression>
 			</textField>
@@ -81,7 +81,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartner} != null ? $F{bpartner} : $R{all}]]></textFieldExpression>
 			</textField>
@@ -94,7 +94,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{parm2}]]></textFieldExpression>
 			</textField>
@@ -109,7 +109,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{DaysDue}]]></textFieldExpression>
 			</textField>
@@ -122,7 +122,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{parm3}]]></textFieldExpression>
 			</textField>
@@ -135,7 +135,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{invcoltype} != null ? $F{invcoltype} : $R{all}]]></textFieldExpression>
 			</textField>
@@ -148,7 +148,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{parm4}]]></textFieldExpression>
 			</textField>
@@ -161,7 +161,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{org}+" "+ ($F{org} !=null ? $F{org} : $R{all})]]></textFieldExpression>
 			</textField>
@@ -176,7 +176,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{StartDate}]]></textFieldExpression>
 			</textField>
@@ -191,7 +191,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{EndDate}]]></textFieldExpression>
 			</textField>
@@ -206,7 +206,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{EndDate}]]></textFieldExpression>
 			</textField>
@@ -219,14 +219,14 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{Reference_Date}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="406" y="71" width="91" height="12" uuid="d30a58b7-c882-412a-878f-d501e6f307b7"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{switchDate}]]></textFieldExpression>
 			</textField>
@@ -235,14 +235,14 @@
 					<printWhenExpression><![CDATA[new Boolean($P{DaysDue} == null)]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{unlimited}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-5" x="44" y="59" width="90" height="12" uuid="3bc1a839-731c-491e-b9de-b34b5d3c8272"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{timeframe}]]></textFieldExpression>
 			</textField>
@@ -251,7 +251,7 @@
 					<printWhenExpression><![CDATA[new Boolean($P{PassForPayment}.equals( "N" ))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{payment_instruction}]]></textFieldExpression>
 			</textField>
@@ -260,7 +260,7 @@
 					<printWhenExpression><![CDATA[new Boolean($P{PassForPayment}.equals( "N" ))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{no}]]></textFieldExpression>
 			</textField>
@@ -269,7 +269,7 @@
 					<printWhenExpression><![CDATA[new Boolean($P{StartDate} == null && $P{EndDate} == null)]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{unlimited}]]></textFieldExpression>
 			</textField>
@@ -278,7 +278,7 @@
 					<printWhenExpression><![CDATA[new Boolean($P{EndDate} != null && $P{StartDate} == null)]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{to}]]></textFieldExpression>
 			</textField>
@@ -287,7 +287,7 @@
 					<printWhenExpression><![CDATA[new Boolean($P{EndDate} != null && $P{StartDate} != null)]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{to}]]></textFieldExpression>
 			</textField>
@@ -296,21 +296,21 @@
 					<printWhenExpression><![CDATA[new Boolean($P{StartDate} != null)]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{from}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-5" x="303" y="59" width="103" height="12" uuid="2d65a28c-c2d3-4a04-9c09-9bd7d926c8fe"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{duedate}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-5" x="303" y="71" width="103" height="12" uuid="f6aec400-c8bd-4b88-996d-5fe9780c1278"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{bookingdate_comp}]]></textFieldExpression>
 			</textField>

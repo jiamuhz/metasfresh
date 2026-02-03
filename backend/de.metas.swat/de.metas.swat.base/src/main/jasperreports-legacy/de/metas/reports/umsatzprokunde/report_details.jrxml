@@ -567,7 +567,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 						key="textField-3"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{customerno}]]></textFieldExpression>
 				</textField>
@@ -581,7 +581,7 @@ $P{prodkat_drucken}.equals( "Y" )?
 						key="textField-4"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{customername}]]></textFieldExpression>
 				</textField>
@@ -671,7 +671,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-54"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{umsatz}]]></textFieldExpression>
 				</textField>
@@ -685,7 +685,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-77"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{currentyear}]]></textFieldExpression>
 				</textField>
@@ -699,7 +699,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-78"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{lastyear}]]></textFieldExpression>
 				</textField>
@@ -713,7 +713,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-79"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{yearbeforelast}]]></textFieldExpression>
 				</textField>

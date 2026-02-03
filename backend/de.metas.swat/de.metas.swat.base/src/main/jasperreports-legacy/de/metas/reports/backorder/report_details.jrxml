@@ -443,7 +443,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{produktnr}]]></textFieldExpression>
 			</textField>
@@ -469,7 +469,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$P{Kundenliste}.equals("N")&&$P{Liefermenge}.equals("Y")? $F{lieferbaresumme}: $F{lieferbaresummeplan}]]></textFieldExpression>
 			</textField>
@@ -482,7 +482,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}]]></textFieldExpression>
 			</textField>
@@ -495,7 +495,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{erschienen}]]></textFieldExpression>
 			</textField>
@@ -510,7 +510,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{lieferbaremenge}]]></textFieldExpression>
 			</textField>
@@ -525,7 +525,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{priceactual}]]></textFieldExpression>
 			</textField>
@@ -538,7 +538,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}]]></textFieldExpression>
 			</textField>
@@ -551,7 +551,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$P{Kundenliste}.equals("Y")||$P{Liefermenge}.equals("Y")? $F{priceactual}: $F{lieferbaresumme}]]></textFieldExpression>
 			</textField>
@@ -566,7 +566,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}]]></textFieldExpression>
 			</textField>
@@ -579,7 +579,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
@@ -592,7 +592,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.sql.Timestamp"><![CDATA[$F{dateordered}]]></textFieldExpression>
 			</textField>
@@ -605,7 +605,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{qtytodeliver}]]></textFieldExpression>
 			</textField>
@@ -620,7 +620,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{val_number}]]></textFieldExpression>
 			</textField>
@@ -635,7 +635,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{val_number}]]></textFieldExpression>
 			</textField>

@@ -172,7 +172,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 			<textField>
 				<reportElement x="37" y="0" width="141" height="12" uuid="49c6b8f4-1079-43e5-a01a-67eb7877fbfb"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{TotalAmount}]]></textFieldExpression>
 			</textField>
@@ -195,7 +195,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 			<textField>
 				<reportElement x="37" y="0" width="141" height="12" uuid="67444955-82ee-473f-aea9-ca5b3eabd2c8"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{discount} + " % " + $V{Discount}]]></textFieldExpression>
 			</textField>
@@ -218,7 +218,7 @@ $P{ad_language}.equals("it_CH")?"Gesamttotal":
 			<textField>
 				<reportElement x="37" y="0" width="141" height="12" uuid="8fc70df0-105a-4dd8-9a94-819d69db75ce"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{TotalIncludingDiscount}]]></textFieldExpression>
 			</textField>

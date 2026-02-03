@@ -45,7 +45,7 @@ WHERE
 			<textField>
 				<reportElement key="textField-5" x="330" y="154" width="92" height="13" uuid="a68323a7-6e92-4cbe-b0ca-59c458eebbbe"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[((("MMR").equals($F{docbasetype}) || ("MMS").equals($F{docbasetype}))
   &&
@@ -62,7 +62,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{value}]]></textFieldExpression>
 			</textField>
@@ -95,7 +95,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{movementdate}]]></textFieldExpression>
 			</textField>
@@ -104,7 +104,7 @@ WHERE
 					<printWhenExpression><![CDATA[new Boolean($F{value}!=null)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BP_Value}]]></textFieldExpression>
 			</textField>

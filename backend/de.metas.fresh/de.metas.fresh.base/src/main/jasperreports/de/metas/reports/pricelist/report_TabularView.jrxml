@@ -679,35 +679,35 @@ FROM
 			<textField isBlankWhenNull="true">
 				<reportElement x="1053" y="0" width="135" height="12" uuid="d18c1d30-9fec-4164-844d-706d91ce6c52"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{m_hu_pi_item_product_id}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="1188" y="0" width="105" height="12" uuid="e1ada75a-b48f-4504-9051-64d143711f64"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uom_x12de355}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="1293" y="0" width="125" height="12" uuid="8eee619c-d3d4-473c-9d40-526000381b05"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{C_BPartner_Location_ID}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="1418" y="0" width="110" height="12" uuid="8eee619c-d3d4-473c-9d40-526000381b05"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtycuspertu}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="1528" y="0" width="110" height="12" uuid="8eee619c-d3d4-473c-9d40-526000381b05"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{m_product_id}]]></textFieldExpression>
 			</textField>

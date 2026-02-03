@@ -159,7 +159,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{report.org} + ":"]]></textFieldExpression>
 			</textField>
@@ -172,7 +172,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[( $P{Org_ID}.equals("") ? "" : $F{parm_org_name} )]]></textFieldExpression>
 			</textField>
@@ -198,7 +198,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{report.period} + ":"]]></textFieldExpression>
 			</textField>
@@ -211,7 +211,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[( $P{C_Period_ID}.equals("") ? "" : $F{parm_period_name} )]]></textFieldExpression>
 			</textField>
@@ -224,7 +224,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{report.businesspartner} + ":"]]></textFieldExpression>
 			</textField>
@@ -237,7 +237,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[( $P{C_BPartner_ID}.equals("") ? "" : $F{parm_bpartner_name} )]]></textFieldExpression>
 			</textField>
@@ -250,7 +250,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{report.product} + ":"]]></textFieldExpression>
 			</textField>
@@ -263,7 +263,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[( $P{M_Product_ID}.equals("") ? "" : $F{parm_product_name} )]]></textFieldExpression>
 			</textField>
@@ -276,7 +276,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{report.hierarchy} + ":"]]></textFieldExpression>
 			</textField>
@@ -289,7 +289,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[( $P{PA_Hierarchy_ID}.equals("") ? "" : $F{parm_hierarchy_name} )]]></textFieldExpression>
 			</textField>
@@ -302,7 +302,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{report.updatebalances} + ":"]]></textFieldExpression>
 			</textField>
@@ -315,7 +315,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[( $P{UpdateBalances}.equals("") ? "" : $P{UpdateBalances} )]]></textFieldExpression>
 			</textField>
@@ -380,7 +380,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new Date()]]></textFieldExpression>
 			</textField>
@@ -393,7 +393,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Seite " + $V{PAGE_NUMBER} + " von"]]></textFieldExpression>
 			</textField>
@@ -419,7 +419,7 @@ LIMIT
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[( $P{ad_org_id}.equals("") ? "" : $F{org_name} + " " + $F{org_postal_row} + " " + $F{org_country_name})]]></textFieldExpression>
 			</textField>

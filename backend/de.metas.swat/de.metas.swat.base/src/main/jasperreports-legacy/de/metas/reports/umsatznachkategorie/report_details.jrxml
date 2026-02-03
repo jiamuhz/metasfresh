@@ -231,35 +231,35 @@ order by m_product_category_id, p.value
 			<textField>
 				<reportElement x="121" y="0" width="113" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="544" y="0" width="67" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{absatz}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="632" y="0" width="98" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{umsatz}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="8" y="0" width="113" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{value}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="731" y="0" width="33" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}]]></textFieldExpression>
 			</textField>

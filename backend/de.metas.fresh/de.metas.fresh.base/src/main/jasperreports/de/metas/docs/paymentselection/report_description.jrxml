@@ -54,7 +54,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{paydate}]]></textFieldExpression>
 			</textField>
@@ -67,14 +67,14 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{city} + ", "]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement key="textField-3" x="37" y="200" width="487" height="13" uuid="d3fdad98-2a22-4697-9e67-83dcfba69448"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Wir haben unsere Bank beauftragt, in den nächsten Tagen die folgenden Beträge auf Ihr Konto zu überweisen."]]></textFieldExpression>
 			</textField>

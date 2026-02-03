@@ -57,7 +57,7 @@ de_metas_endcustomer_fresh_reports.Docs_Inout_Details_Footer($P{m_inout_id}, $P{
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{textleft}]]></textFieldExpression>
 			</textField>
@@ -72,7 +72,7 @@ de_metas_endcustomer_fresh_reports.Docs_Inout_Details_Footer($P{m_inout_id}, $P{
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center" markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{textcenter}]]></textFieldExpression>
 			</textField>

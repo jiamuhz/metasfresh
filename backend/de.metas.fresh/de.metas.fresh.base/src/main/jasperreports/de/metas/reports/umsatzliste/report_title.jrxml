@@ -54,7 +54,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartner}]]></textFieldExpression>
 			</textField>
@@ -67,7 +67,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BPartner}]]></textFieldExpression>
 			</textField>
@@ -80,21 +80,21 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{StartDate}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement key="textField-5" x="289" y="31" width="21" height="12" uuid="739e1610-e93f-426a-b55b-47fdc1bfc127"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Von]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-5" x="359" y="31" width="21" height="12" uuid="914a1f36-afa9-4d75-82cd-e65f98b99879"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Bis]]></text>
 			</staticText>
@@ -107,14 +107,14 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{EndDate}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-5" x="200" y="31" width="90" height="12" uuid="dd5c33b7-be56-44e8-83d8-8493274d0eb9"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Timeframe}]]></textFieldExpression>
 			</textField>
@@ -127,7 +127,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{IsSOTrx}]]></textFieldExpression>
 			</textField>
@@ -140,7 +140,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{IsSOTrx}.equals( "Y" )? $R{SalesOnly} : $R{PurchaseOnly}]]></textFieldExpression>
 			</textField>

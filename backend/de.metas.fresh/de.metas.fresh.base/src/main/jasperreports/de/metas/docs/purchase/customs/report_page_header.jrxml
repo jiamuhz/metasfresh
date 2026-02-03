@@ -36,7 +36,7 @@ de_metas_endcustomer_fresh_reports.Docs_Purchase_InOut_Customs_Page_Header($P{RE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>
@@ -49,21 +49,21 @@ de_metas_endcustomer_fresh_reports.Docs_Purchase_InOut_Customs_Page_Header($P{RE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{movementdate}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement key="textField-5" x="345" y="12" width="120" height="13" uuid="517f037d-36db-4c1a-a5d5-44191bee35b0"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<text><![CDATA[Datum]]></text>
 			</staticText>
 			<staticText>
 				<reportElement key="textField-6" x="345" y="0" width="120" height="13" uuid="2ce33005-01ac-47f7-8962-92e2b8f658f8"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<text><![CDATA[Produktanlieferung Nr.]]></text>
 			</staticText>

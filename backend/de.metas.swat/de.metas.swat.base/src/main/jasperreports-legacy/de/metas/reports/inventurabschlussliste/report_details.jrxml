@@ -167,7 +167,7 @@ ORDER BY
 						key="textField-11"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{productno}]]></textFieldExpression>
 				</textField>
@@ -181,7 +181,7 @@ ORDER BY
 						key="textField-12"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{productname}]]></textFieldExpression>
 				</textField>
@@ -195,7 +195,7 @@ ORDER BY
 						key="textField-13"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{productcategory}]]></textFieldExpression>
 				</textField>
@@ -209,7 +209,7 @@ ORDER BY
 						key="textField-14"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{tobook}]]></textFieldExpression>
 				</textField>
@@ -272,7 +272,7 @@ ORDER BY
 						key="textField-17"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{value}]]></textFieldExpression>
 				</textField>
@@ -285,7 +285,7 @@ ORDER BY
 						key="textField-18"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
@@ -298,7 +298,7 @@ ORDER BY
 						key="textField-19"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$F{qtytobook}]]></textFieldExpression>
 				</textField>
@@ -311,7 +311,7 @@ ORDER BY
 						key="textField-20"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{kategorie}]]></textFieldExpression>
 				</textField>

@@ -204,14 +204,14 @@ FROM
 			<textField>
 				<reportElement key="textField-11" x="37" y="50" width="214" height="12" uuid="3adde3e6-99c2-4362-8c2a-4ceb2a0f46db"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{bpartner}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-11" x="37" y="63" width="214" height="12" uuid="3adde3e6-99c2-4362-8c2a-4ceb2a0f46db"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{bpgroup}]]></textFieldExpression>
 			</textField>
@@ -224,7 +224,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{productname}]]></textFieldExpression>
 			</textField>
@@ -237,7 +237,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpgroupname}]]></textFieldExpression>
 			</textField>
@@ -250,7 +250,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{StartDate}]]></textFieldExpression>
 			</textField>
@@ -263,14 +263,14 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{now}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-5" x="502" y="37" width="100" height="12" uuid="b0cec862-9647-4feb-a0f4-7db9fc0c21c1"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{date}]]></textFieldExpression>
 			</textField>
@@ -283,14 +283,14 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{EndDate}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-11" x="37" y="76" width="214" height="12" uuid="3adde3e6-99c2-4362-8c2a-4ceb2a0f46db"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{product}]]></textFieldExpression>
 			</textField>
@@ -303,14 +303,14 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{IsRefundableConditions}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-11" x="37" y="25" width="214" height="12" uuid="6ef315de-f03f-4dd2-8d05-6e72b3ce1b5e"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{from}]]></textFieldExpression>
 			</textField>
@@ -330,21 +330,21 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartnername}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-11" x="37" y="89" width="214" height="24" uuid="3adde3e6-99c2-4362-8c2a-4ceb2a0f46db"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{isrefundableconditions}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-11" x="37" y="37" width="214" height="12" uuid="3adde3e6-99c2-4362-8c2a-4ceb2a0f46db"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{to}]]></textFieldExpression>
 			</textField>

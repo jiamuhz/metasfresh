@@ -33,7 +33,7 @@
 			<textField>
 				<reportElement key="textField-5" x="336" y="154" width="64" height="13" uuid="e360a0db-a81f-4ffc-a7c9-2aed99bafaea"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Date}]]></textFieldExpression>
 			</textField>
@@ -46,7 +46,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{io_documentno}]]></textFieldExpression>
 			</textField>
@@ -60,7 +60,7 @@
 			<textField>
 				<reportElement key="textField-11" x="37" y="128" width="140" height="13" uuid="769324e4-2262-4b22-b3a4-b0e46980a0e8"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{io_printname}]]></textFieldExpression>
 			</textField>
@@ -86,14 +86,14 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{inventorydate}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-11" x="37" y="140" width="140" height="13" uuid="769324e4-2262-4b22-b3a4-b0e46980a0e8"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BP_Name}]]></textFieldExpression>
 			</textField>
@@ -106,14 +106,14 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-11" x="37" y="153" width="140" height="13" uuid="ae7f43a4-d47f-4cd7-888f-7701925767eb"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{BP_Value}]]></textFieldExpression>
 			</textField>
@@ -126,14 +126,14 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_value}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-11" x="37" y="166" width="140" height="13" uuid="220aa831-b874-482f-99c6-d90aad6e5a1c"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{ShipmentDate}]]></textFieldExpression>
 			</textField>
@@ -146,7 +146,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="10"/>
+					<font fontName="NotoSansSC" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{movementdate}]]></textFieldExpression>
 			</textField>

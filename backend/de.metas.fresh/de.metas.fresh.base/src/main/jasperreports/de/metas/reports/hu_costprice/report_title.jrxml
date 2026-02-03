@@ -38,7 +38,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{product} != null ? $F{product} : $R{all}]]></textFieldExpression>
 			</textField>
@@ -51,7 +51,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{warehouse} != null ? $F{warehouse} : $R{all}]]></textFieldExpression>
 			</textField>
@@ -64,7 +64,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{keydate}]]></textFieldExpression>
 			</textField>
@@ -78,21 +78,21 @@
 			<textField>
 				<reportElement key="textField-2" x="44" y="22" width="90" height="12" uuid="39425982-21da-40e1-a24d-dbeed9db7d8a"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{product}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-2" x="44" y="33" width="90" height="12" uuid="e6c6d004-0505-491b-9ccf-65b50ad0275d"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{duedate}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-7" x="303" y="22" width="90" height="12" uuid="2ccc70e3-d387-47e4-a8c6-5aa94867b000"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{warehouse}]]></textFieldExpression>
 			</textField>

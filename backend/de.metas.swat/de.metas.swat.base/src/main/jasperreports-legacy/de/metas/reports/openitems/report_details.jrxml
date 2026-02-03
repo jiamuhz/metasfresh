@@ -268,7 +268,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{total_sum}]]></textFieldExpression>
 				</textField>
@@ -286,7 +286,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -304,7 +304,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{paid_sum}]]></textFieldExpression>
 				</textField>
@@ -322,7 +322,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -340,7 +340,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{open_sum}]]></textFieldExpression>
 				</textField>
@@ -358,7 +358,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -376,7 +376,7 @@ order by oi.daysdue desc, oi.dateinvoiced, oi.documentno
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{sum}]]></textFieldExpression>
 				</textField>
@@ -448,7 +448,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{invoice}]]></textFieldExpression>
 				</textField>
@@ -466,7 +466,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{date}]]></textFieldExpression>
 				</textField>
@@ -484,7 +484,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{customerno}]]></textFieldExpression>
 				</textField>
@@ -502,7 +502,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{customername}]]></textFieldExpression>
 				</textField>
@@ -520,7 +520,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{total}]]></textFieldExpression>
 				</textField>
@@ -538,7 +538,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{paid}]]></textFieldExpression>
 				</textField>
@@ -556,7 +556,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{open}]]></textFieldExpression>
 				</textField>
@@ -574,7 +574,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{discountdays}]]></textFieldExpression>
 				</textField>
@@ -592,7 +592,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{discountdate}]]></textFieldExpression>
 				</textField>
@@ -610,7 +610,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{nettodays}]]></textFieldExpression>
 				</textField>
@@ -628,7 +628,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{nettodate}]]></textFieldExpression>
 				</textField>
@@ -646,7 +646,7 @@ $V{total_sum}.equals(null)?
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Right">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{due.days}]]></textFieldExpression>
 				</textField>

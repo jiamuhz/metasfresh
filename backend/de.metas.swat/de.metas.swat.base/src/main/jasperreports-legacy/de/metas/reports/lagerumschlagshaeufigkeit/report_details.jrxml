@@ -513,231 +513,231 @@ g.dld  > $P{nullwerte} and  m_product_category_id = $P{produktkategorie} and m_p
 			<staticText>
 				<reportElement x="0" y="0" width="94" height="14" forecolor="#FFFFFF"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Art-Nr.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="0" y="14" width="94" height="14" forecolor="#FFFFFF"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Art-Name.]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="94" y="0" width="74" height="28" forecolor="#FFFFFF"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Produktkategorie]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="168" y="0" width="18" height="28" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[AB]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="190" y="0" width="30" height="28" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Absatz]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="225" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B0]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="245" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B1]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="265" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B2]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="285" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B3]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="305" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B4]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="324" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B5]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="344" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B6]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="364" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B7]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="384" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B8]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="404" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B9]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="424" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B10]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="444" y="0" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[B11]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="674" y="0" width="25" height="28" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Ø LB]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="699" y="0" width="25" height="28" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[LUH]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="724" y="0" width="35" height="28" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Ø LD]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="225" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A0]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="245" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A1]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="265" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A2]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="285" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A3]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="305" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A4]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="324" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A5]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="344" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A6]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="364" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A7]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="384" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A8]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="404" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A9]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="424" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A10]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="444" y="14" width="20" height="14" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[A11]]></text>
 			</staticText>
 			<staticText>
 				<reportElement x="464" y="0" width="210" height="28" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Center">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[Grafik - Bestand / Absatz]]></text>
 			</staticText>
@@ -919,224 +919,224 @@ g.dld  > $P{nullwerte} and  m_product_category_id = $P{produktkategorie} and m_p
 			<textField>
 				<reportElement x="0" y="0" width="94" height="12"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{value}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="0" y="12" width="94" height="30"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="94" y="0" width="74" height="62"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{cat_name}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="168" y="0" width="18" height="62"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{qtyonhand}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="190" y="31" width="30" height="31"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{absatz}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="224" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb0}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="244" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb1}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="264" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb2}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="284" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb3}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="304" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb4}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="324" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb5}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="344" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb6}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="364" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb7}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="384" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb8}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="404" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb9}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="424" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb10}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="444" y="0" width="20" height="31" forecolor="#FF0000"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{meb11}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="244" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a1}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="264" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a2}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="284" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a3}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="304" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a4}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="324" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a5}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="344" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a6}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="364" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a7}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="384" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a8}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="404" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a9}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="424" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a10}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="444" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a11}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="225" y="31" width="20" height="31" forecolor="#0000FF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{a0}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="674" y="0" width="25" height="75"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{dlb}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##" isBlankWhenNull="true">
 				<reportElement x="699" y="0" width="25" height="75"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{luh}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.##">
 				<reportElement x="724" y="0" width="35" height="75"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{dld}]]></textFieldExpression>
 			</textField>

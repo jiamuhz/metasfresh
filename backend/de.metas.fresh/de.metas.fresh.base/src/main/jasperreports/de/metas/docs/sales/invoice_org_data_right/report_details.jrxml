@@ -213,7 +213,7 @@ new Boolean (false)]]></printWhenExpression>
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.text.DecimalFormat("#,##0.00").format($F{linenetamt}) + " " + $F{cursymbol}]]></textFieldExpression>
 			</textField>
@@ -227,7 +227,7 @@ new Boolean (false)]]></printWhenExpression>
 					<property name="com.jaspersoft.studio.unit.y" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{p_description}]]></textFieldExpression>
 			</textField>
@@ -242,7 +242,7 @@ new Boolean (false)]]></printWhenExpression>
 					<property name="com.jaspersoft.studio.unit.x" value="pixel"/>
 				</reportElement>
 				<textElement textAlignment="Left">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{invoice_description}]]></textFieldExpression>
 			</textField>

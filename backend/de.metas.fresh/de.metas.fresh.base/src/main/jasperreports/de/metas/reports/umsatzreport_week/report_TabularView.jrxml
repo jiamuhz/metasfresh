@@ -256,14 +256,14 @@
 			<textField>
 				<reportElement x="37" y="30" width="65" height="10" uuid="4594c38a-a235-4c6f-b0fc-58753c57728d"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{attributes}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="102" y="30" width="105" height="10" uuid="fc22c106-5cd9-4984-b0c2-39db1c5def5c"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{attributesetinstance} != null ? $F{attributesetinstance} : $R{all}]]></textFieldExpression>
 			</textField>

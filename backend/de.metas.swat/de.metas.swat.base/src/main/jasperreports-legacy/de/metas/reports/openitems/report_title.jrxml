@@ -75,7 +75,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{parm1}]]></textFieldExpression>
 				</textField>
@@ -92,7 +92,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$P{IsSOTrx}]]></textFieldExpression>
 				</textField>
@@ -109,7 +109,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$P{C_BPartner_ID}.intValue()==1?$R{all}:$P{C_BPartner_ID}+""]]></textFieldExpression>
 				</textField>
@@ -126,7 +126,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{parm2}]]></textFieldExpression>
 				</textField>
@@ -143,7 +143,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[( $P{DaysDue}.intValue() == 999999 ? "" : $P{DaysDue} + "" )]]></textFieldExpression>
 				</textField>
@@ -160,7 +160,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{parm3}]]></textFieldExpression>
 				</textField>
@@ -177,7 +177,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$P{InvoiceCollectionType}]]></textFieldExpression>
 				</textField>
@@ -194,7 +194,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{parm4}]]></textFieldExpression>
 				</textField>
@@ -211,7 +211,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 </box>
 					<textElement textAlignment="Left">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{org}+" "+$F{org}]]></textFieldExpression>
 				</textField>

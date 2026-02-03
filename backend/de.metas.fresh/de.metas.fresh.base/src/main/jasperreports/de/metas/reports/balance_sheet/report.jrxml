@@ -207,7 +207,7 @@
 			<textField>
 				<reportElement x="247" y="23" width="100" height="12" uuid="15cb15a1-6dd2-4b73-a4f6-8f0fbce298ae"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Currency} + " " + $F{iso_code}]]></textFieldExpression>
 			</textField>
@@ -221,7 +221,7 @@
 			<textField>
 				<reportElement x="206" y="35" width="163" height="12" uuid="8c9642e4-6a41-4d9a-a336-0037f2d02d8a"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{IncludePostingTypeStatistical} + " "+ $P{IncludePostingTypeStatistical}]]></textFieldExpression>
 			</textField>
@@ -234,7 +234,7 @@
 					<printWhenExpression><![CDATA[!($F{parentvalue1}.equals($F{namevalue}))]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{namevalue}]]></textFieldExpression>
 			</textField>
@@ -243,7 +243,7 @@
 					<printWhenExpression><![CDATA[!($F{parentvalue1}.equals($F{namevalue}))]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -252,7 +252,7 @@
 					<printWhenExpression><![CDATA[!($F{parentvalue1}.equals($F{namevalue}))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sameyearsum}]]></textFieldExpression>
 			</textField>
@@ -261,7 +261,7 @@
 					<printWhenExpression><![CDATA[!($F{parentvalue1}.equals($F{namevalue}))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{lastyearsum}]]></textFieldExpression>
 			</textField>
@@ -281,7 +281,7 @@
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{page} + " " + $V{PAGE_NUMBER} + " " + $R{of}]]></textFieldExpression>
 			</textField>
@@ -301,7 +301,7 @@
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="37" y="0" width="100" height="20" uuid="bc66c4cd-350c-4c34-97cb-15a5775ac715"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>

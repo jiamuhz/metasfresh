@@ -885,7 +885,7 @@ ORDER BY
 			<textField>
 				<reportElement x="752" y="-1" width="30" height="12" uuid="9ffd03e6-b7ef-427f-92b3-9b74c993a523"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{faname}]]></textFieldExpression>
 			</textField>

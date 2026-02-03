@@ -52,7 +52,7 @@ where cmpg_contact.mktg_campaign_id = $P{RECORD_ID}
 			<textField>
 				<reportElement mode="Transparent" x="13" y="40" width="178" height="65" uuid="f142acc8-427c-47a3-942b-1b7e9de84681"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{addressblock}]]></textFieldExpression>
 			</textField>
@@ -80,7 +80,7 @@ where cmpg_contact.mktg_campaign_id = $P{RECORD_ID}
 			<textField>
 				<reportElement x="144" y="13" width="48" height="21" uuid="5308ad17-f0fa-4662-b9e2-dc23059fd191"/>
 				<textElement textAlignment="Center" verticalAlignment="Middle">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{post}]]></textFieldExpression>
 			</textField>

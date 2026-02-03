@@ -429,7 +429,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{parm1}]]></textFieldExpression>
 			</textField>
@@ -442,7 +442,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{Reference_Date}]]></textFieldExpression>
 			</textField>
@@ -455,7 +455,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{issotrx}]]></textFieldExpression>
 			</textField>
@@ -469,7 +469,7 @@ ORDER BY
 			<staticText>
 				<reportElement key="textField-5" x="37" y="59" width="105" height="12" uuid="b69d3780-c577-4309-9ebb-29b8ed5f1177"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Stichtag]]></text>
 			</staticText>
@@ -823,7 +823,7 @@ ORDER BY
 			<textField>
 				<reportElement x="1019" y="0" width="250" height="12" uuid="9ffd03e6-b7ef-427f-92b3-9b74c993a523"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{faname}]]></textFieldExpression>
 			</textField>

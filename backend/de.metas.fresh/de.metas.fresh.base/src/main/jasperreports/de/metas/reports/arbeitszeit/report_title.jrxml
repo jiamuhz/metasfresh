@@ -63,14 +63,14 @@ group by o.ad_org_id,o.name,l.address1,l.city,l.postal]]>
 			<staticText>
 				<reportElement x="1" y="23" width="87" height="12" uuid="2ef2b831-968b-44d8-87cd-4e8cf6c4f9eb"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Organisation:]]></text>
 			</staticText>
 			<textField>
 				<reportElement x="90" y="23" width="240" height="12" uuid="5627aa6a-b80a-492c-9369-39cb98eb65a7"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{orgname}]]></textFieldExpression>
 			</textField>
@@ -81,14 +81,14 @@ group by o.ad_org_id,o.name,l.address1,l.city,l.postal]]>
 			<staticText>
 				<reportElement x="0" y="47" width="90" height="12" uuid="ee78f71b-fec4-40b6-855a-e060d7a77f72"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Datum:]]></text>
 			</staticText>
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="90" y="47" width="100" height="12" uuid="2e207666-9e06-4883-a8e5-775bd8dd15d0"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new Date ()]]></textFieldExpression>
 			</textField>

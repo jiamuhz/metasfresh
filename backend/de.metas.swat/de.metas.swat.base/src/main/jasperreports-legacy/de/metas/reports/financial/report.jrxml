@@ -172,7 +172,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-44"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{report.org} + ":"]]></textFieldExpression>
 				</textField>
@@ -185,7 +185,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-45"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[( $P{Org_ID}.equals("") ? "" : $F{parm_org_name} )]]></textFieldExpression>
 				</textField>
@@ -211,7 +211,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-47"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{report.period} + ":"]]></textFieldExpression>
 				</textField>
@@ -224,7 +224,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-48"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[( $P{C_Period_ID}.equals("") ? "" : $F{parm_period_name} )]]></textFieldExpression>
 				</textField>
@@ -237,7 +237,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-49"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{report.businesspartner} + ":"]]></textFieldExpression>
 				</textField>
@@ -250,7 +250,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-50"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[( $P{C_BPartner_ID}.equals("") ? "" : $F{parm_bpartner_name} )]]></textFieldExpression>
 				</textField>
@@ -263,7 +263,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-51"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{report.product} + ":"]]></textFieldExpression>
 				</textField>
@@ -276,7 +276,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-52"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[( $P{M_Product_ID}.equals("") ? "" : $F{parm_product_name} )]]></textFieldExpression>
 				</textField>
@@ -289,7 +289,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-53"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{report.hierarchy} + ":"]]></textFieldExpression>
 				</textField>
@@ -302,7 +302,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-54"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[( $P{PA_Hierarchy_ID}.equals("") ? "" : $F{parm_hierarchy_name} )]]></textFieldExpression>
 				</textField>
@@ -315,7 +315,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-55"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{report.updatebalances} + ":"]]></textFieldExpression>
 				</textField>
@@ -328,7 +328,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-56"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="9"/>
+						<font fontName="NotoSansSC" size="9"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[( $P{UpdateBalances}.equals("") ? "" : $P{UpdateBalances} )]]></textFieldExpression>
 				</textField>
@@ -405,7 +405,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.util.Date"><![CDATA[new Date()]]></textFieldExpression>
 				</textField>
@@ -419,7 +419,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField-30"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{page} + " " + $V{PAGE_NUMBER} + " of "]]></textFieldExpression>
 				</textField>
@@ -448,7 +448,7 @@ where ad_org.ad_org_id = $P{ad_org_id}
 						key="textField"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Center">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[( $P{ad_org_id}.equals("") ? "" : $F{org_name} + " " + $F{org_postal_row} + " " + $F{org_country_name})]]></textFieldExpression>
 				</textField>

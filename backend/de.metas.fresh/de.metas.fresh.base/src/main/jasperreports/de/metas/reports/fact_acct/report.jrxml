@@ -80,35 +80,35 @@
 			<textField>
 				<reportElement x="121" y="55" width="10" height="12" uuid="6413cfe0-ea66-49ac-b8f5-6177f6cb8bba"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[" - "]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="69" y="55" width="52" height="12" uuid="fff5e7db-5954-434b-ad65-e178c92c157c"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{DateTo}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="134" y="55" width="52" height="12" uuid="1b52ddff-111e-4a00-b0ee-4859df84cf4a"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{DateFrom}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="69" y="43" width="65" height="12" uuid="f7fab61f-3e4e-485a-a1be-e2202ecf31bd"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{accountname}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="34" y="43" width="35" height="12" uuid="f6e9ecf1-c912-4c2f-8258-1e205d39153f"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{account}]]></textFieldExpression>
 			</textField>
@@ -190,49 +190,49 @@
 			<textField isBlankWhenNull="true">
 				<reportElement x="34" y="0" width="45" height="12" uuid="2b595b3d-5919-4758-8a96-b5545d86efe4"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentnumber}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="79" y="0" width="99" height="12" uuid="f55901cc-1bb6-4f26-85a5-bc45c506dbe6"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartnername}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="178" y="0" width="54" height="12" uuid="fa75475b-e5b7-4e00-b5a3-1d6438886acb"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpartnervalue}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="232" y="0" width="142" height="12" uuid="52a42067-8944-4ec2-8784-16f9a45e6d47"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{referencenumber}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="374" y="0" width="51" height="12" uuid="f8c80746-7ae9-4be9-9833-b1b235754dae"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateaccount}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="425" y="0" width="30" height="12" uuid="63b3c4f7-acf9-4848-96c4-8cb908104965"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{lineno}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00">
 				<reportElement x="455" y="0" width="62" height="12" uuid="8a57de3c-0af1-4301-95c9-ca4451e44be4"/>
 				<textElement textAlignment="Right">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
 			</textField>
@@ -243,28 +243,28 @@
 			<textField pattern="dd.MM.yyyy HH:mm">
 				<reportElement x="0" y="23" width="103" height="9" uuid="82a28042-ab56-435b-9547-dfe5fc99f4cf"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="503" y="23" width="32" height="9" uuid="d3e7678f-3696-4ffe-8e20-3db62c351a39"/>
 				<textElement textAlignment="Right">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}+" " + $R{of}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
 				<reportElement x="535" y="23" width="17" height="9" uuid="20fa10dc-ece0-4d33-bc24-b87118cf1609"/>
 				<textElement textAlignment="Right">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="478" y="23" width="25" height="9" uuid="d3e7678f-3696-4ffe-8e20-3db62c351a39"/>
 				<textElement textAlignment="Right">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{page}]]></textFieldExpression>
 			</textField>
@@ -289,28 +289,28 @@
 			<textField pattern="dd.MM.yyyy HH:mm">
 				<reportElement x="0" y="23" width="103" height="9" uuid="82a28042-ab56-435b-9547-dfe5fc99f4cf"/>
 				<textElement>
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="478" y="23" width="25" height="9" uuid="d3e7678f-3696-4ffe-8e20-3db62c351a39"/>
 				<textElement textAlignment="Right">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{page}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="503" y="23" width="32" height="9" uuid="d3e7678f-3696-4ffe-8e20-3db62c351a39"/>
 				<textElement textAlignment="Right">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{PAGE_NUMBER}+" " + $R{of}]]></textFieldExpression>
 			</textField>
 			<textField evaluationTime="Report">
 				<reportElement x="535" y="23" width="17" height="9" uuid="20fa10dc-ece0-4d33-bc24-b87118cf1609"/>
 				<textElement textAlignment="Right">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[" " + $V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>

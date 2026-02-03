@@ -247,21 +247,21 @@
 				<staticText>
 					<reportElement x="37" y="32" width="200" height="12" uuid="0b1339b5-489c-46e8-8352-de5c9dc7c837"/>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<text><![CDATA[]]></text>
 				</staticText>
 				<staticText>
 					<reportElement x="37" y="92" width="200" height="12" uuid="0b1339b5-489c-46e8-8352-de5c9dc7c837"/>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<text><![CDATA[]]></text>
 				</staticText>
 				<staticText>
 					<reportElement x="37" y="116" width="200" height="12" uuid="0b1339b5-489c-46e8-8352-de5c9dc7c837"/>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<text><![CDATA[]]></text>
 				</staticText>
@@ -409,7 +409,7 @@
 				<textField>
 					<reportElement x="37" y="0" width="200" height="12" uuid="760a9d05-04bd-4062-a00e-c66d6a85ff2c"/>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{article}]]></textFieldExpression>
 				</textField>
@@ -548,7 +548,7 @@
 				<staticText>
 					<reportElement x="37" y="0" width="200" height="12" uuid="0b1339b5-489c-46e8-8352-de5c9dc7c837"/>
 					<textElement>
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<text><![CDATA[]]></text>
 				</staticText>

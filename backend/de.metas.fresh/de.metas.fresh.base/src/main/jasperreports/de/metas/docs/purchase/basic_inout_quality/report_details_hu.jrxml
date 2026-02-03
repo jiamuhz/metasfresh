@@ -128,7 +128,7 @@ ORDER BY
 			<textField>
 				<reportElement x="434" y="0" width="162" height="12" uuid="bd7548de-f2ad-44fb-b535-48cfc0f7414f"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[("MMS").equals($F{docbasetype}) && ("EC").equals($F{docsubtype})
 && $F{movementqty}.compareTo(BigDecimal.ZERO) > 0

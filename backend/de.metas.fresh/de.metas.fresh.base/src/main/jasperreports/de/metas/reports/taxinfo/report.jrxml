@@ -49,14 +49,14 @@ WHERE
 			<staticText>
 				<reportElement uuid="5d107bdc-9fa2-432f-9e46-05f69ef0eff1" key="textField-6" x="473" y="33" width="16" height="12"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[bis]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="a9f72df1-d19b-4252-abb3-07832a3ec692" key="textField-8" x="411" y="33" width="16" height="12"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[von]]></text>
 			</staticText>
@@ -69,7 +69,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateto}]]></textFieldExpression>
 			</textField>
@@ -83,7 +83,7 @@ WHERE
 			<staticText>
 				<reportElement uuid="a9195eb0-7f2d-41d8-82bb-97451d0d3fc6" key="textField-2" x="321" y="22" width="90" height="12"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Name]]></text>
 			</staticText>
@@ -96,7 +96,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -109,14 +109,14 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{datefrom}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="945440ed-a2b6-4131-82a6-bbe2ab3dc076" key="textField-4" x="321" y="33" width="90" height="12"/>
 				<textElement markup="none">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Datum]]></text>
 			</staticText>
@@ -135,28 +135,28 @@ WHERE
 			<staticText>
 				<reportElement uuid="8ac7ddd2-48b2-4caa-b36e-2248ad462695" x="52" y="0" width="68" height="11" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Umsatz]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="8ac7ddd2-48b2-4caa-b36e-2248ad462695" x="152" y="0" width="68" height="11" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Steuer]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="8ac7ddd2-48b2-4caa-b36e-2248ad462695" x="102" y="0" width="68" height="11" forecolor="#FFFFFF"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Leistungen]]></text>
 			</staticText>
 			<staticText>
 				<reportElement uuid="8ac7ddd2-48b2-4caa-b36e-2248ad462695" x="2" y="0" width="50" height="11" forecolor="#FFFFFF"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[Position]]></text>
 			</staticText>
@@ -182,119 +182,119 @@ WHERE
 			<staticText>
 				<reportElement uuid="8ac7ddd2-48b2-4caa-b36e-2248ad462695" x="2" y="0" width="50" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[200]]></text>
 			</staticText>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="619d7ec7-b6b2-4319-8fe8-eac732393cb5" x="52" y="0" width="68" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pos200}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="8fa322e7-9226-4ffb-81b9-acb6fc7fe0ce" x="52" y="11" width="68" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pos220}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="1cd6e9ad-9e95-475a-9390-6abf6189836e" x="2" y="11" width="50" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[220]]></text>
 			</staticText>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="619d7ec7-b6b2-4319-8fe8-eac732393cb5" x="102" y="22" width="68" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pos301base}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="8ac7ddd2-48b2-4caa-b36e-2248ad462695" x="2" y="22" width="50" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[301]]></text>
 			</staticText>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="619d7ec7-b6b2-4319-8fe8-eac732393cb5" x="152" y="22" width="68" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pos301tax}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="619d7ec7-b6b2-4319-8fe8-eac732393cb5" x="152" y="33" width="68" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pos311tax}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="8ac7ddd2-48b2-4caa-b36e-2248ad462695" x="2" y="33" width="50" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[311]]></text>
 			</staticText>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="619d7ec7-b6b2-4319-8fe8-eac732393cb5" x="102" y="33" width="68" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pos311base}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="1cd6e9ad-9e95-475a-9390-6abf6189836e" x="2" y="55" width="50" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[400]]></text>
 			</staticText>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="8fa322e7-9226-4ffb-81b9-acb6fc7fe0ce" x="152" y="55" width="68" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pos400}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="1cd6e9ad-9e95-475a-9390-6abf6189836e" x="2" y="66" width="50" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[405]]></text>
 			</staticText>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="8fa322e7-9226-4ffb-81b9-acb6fc7fe0ce" x="152" y="66" width="68" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pos405}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="1cd6e9ad-9e95-475a-9390-6abf6189836e" x="2" y="77" width="50" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[910]]></text>
 			</staticText>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="8fa322e7-9226-4ffb-81b9-acb6fc7fe0ce" x="152" y="77" width="68" height="11"/>
 				<textElement textAlignment="Right">
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pos910}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement uuid="8ac7ddd2-48b2-4caa-b36e-2248ad462695" x="2" y="44" width="50" height="11"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<text><![CDATA[381]]></text>
 			</staticText>

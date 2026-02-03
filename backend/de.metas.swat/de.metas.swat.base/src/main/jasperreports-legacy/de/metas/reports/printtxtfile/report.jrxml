@@ -61,7 +61,7 @@ WHERE AD_PInstance_ID = $P{AD_PINSTANCE_ID}]]>
 			<textField>
 				<reportElement x="435" y="25" width="100" height="12"/>
 				<textElement>
-					<font size="8"/>
+					<font fontName="NotoSansSC" size="8"/>
 				</textElement>
 				<textFieldExpression class="java.lang.Integer"><![CDATA[$V{PAGE_NUMBER}]]></textFieldExpression>
 			</textField>

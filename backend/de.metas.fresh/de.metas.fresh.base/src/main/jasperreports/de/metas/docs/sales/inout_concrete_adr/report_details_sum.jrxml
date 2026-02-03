@@ -56,7 +56,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Details_Sum( $P{m_inou
 			<textField>
 				<reportElement uuid="49c6b8f4-1079-43e5-a01a-67eb7877fbfb" x="37" y="0" width="141" height="12"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{TotalAmount}]]></textFieldExpression>
 			</textField>
@@ -79,7 +79,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Details_Sum( $P{m_inou
 			<textField>
 				<reportElement uuid="67444955-82ee-473f-aea9-ca5b3eabd2c8" x="37" y="0" width="141" height="12"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{discount} + " % " + $R{Discount}]]></textFieldExpression>
 			</textField>
@@ -102,7 +102,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Details_Sum( $P{m_inou
 			<textField>
 				<reportElement uuid="8fc70df0-105a-4dd8-9a94-819d69db75ce" x="37" y="0" width="141" height="12"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{TotalIncludingDiscount}]]></textFieldExpression>
 			</textField>

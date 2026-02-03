@@ -39,14 +39,14 @@ FROM
 			<textField isBlankWhenNull="true">
 				<reportElement x="37" y="0" width="142" height="12" uuid="297463df-7dd0-4d18-adad-c8ac6ee8aaf4"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="37" y="11" width="142" height="12" uuid="28b124c8-7a94-4ce5-90df-7e978c7fbfab"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
 			</textField>
@@ -57,7 +57,7 @@ FROM
 :new Boolean(true)]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{orgphone} + " " + $F{phone}]]></textFieldExpression>
 			</textField>
@@ -68,14 +68,14 @@ FROM
 	:new Boolean(true)]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{orgfax} + " " + $F{fax}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="37" y="55" width="142" height="12" uuid="63844d65-924b-417a-b6a3-52eb03cc7a72"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
 			</textField>
@@ -86,14 +86,14 @@ FROM
 :new Boolean(true)]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{vataxid} + " " + $F{vataxid}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement x="37" y="22" width="142" height="12" uuid="382642ff-3a69-4cd5-ae1c-f374c3c8226d"/>
 				<textElement markup="none">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{postal} + " " + $F{city}]]></textFieldExpression>
 			</textField>

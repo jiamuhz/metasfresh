@@ -90,7 +90,7 @@ ORDER BY bpb.isDefault DESC
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{placeofbusiness} + " " + $F{org_address1} + " | " + $F{org_postal} + " " + $F{org_city}]]></textFieldExpression>
 			</textField>
@@ -116,7 +116,7 @@ ORDER BY bpb.isDefault DESC
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[//$F{org_bank_name} + " | " + $R{swift} + $F{org_bank_swift} + " | " + $R{iban} + $F{org_bank_iban}
 
@@ -140,7 +140,7 @@ $F{org_bank_name}.equals("") ? ("" + (($F{org_bank_swift}==null || $F{org_bank_s
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement x="89" y="31" width="417" height="7" uuid="2697a4df-45de-408d-ac7d-c04709a7df84"/>
 				<textElement textAlignment="Center" verticalAlignment="Top">
-					<font size="7"/>
+					<font fontName="NotoSansSC" size="7"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
 			</textField>

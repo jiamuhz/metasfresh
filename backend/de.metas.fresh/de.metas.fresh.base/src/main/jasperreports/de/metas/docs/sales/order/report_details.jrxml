@@ -268,7 +268,7 @@
 					<printWhenExpression><![CDATA[new Boolean($F{discount} != null && $F{isdiscountprinted}.equals("Y"))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[%]]></text>
 			</staticText>
@@ -292,7 +292,7 @@
 					<printWhenExpression><![CDATA[new Boolean($F{rate} != null && $F{isprinttax}.equals( "Y" ))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<text><![CDATA[%]]></text>
 			</staticText>
