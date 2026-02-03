@@ -158,7 +158,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxbaseamt}]]></textFieldExpression>
 			</textField>
@@ -167,7 +167,7 @@ ORDER BY
 					<printWhenExpression><![CDATA[new Boolean ($F{isprinttax}.equals( "N" ))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Total}]]></textFieldExpression>
 			</textField>
@@ -176,7 +176,7 @@ ORDER BY
 					<printWhenExpression><![CDATA[new Boolean ($F{isprinttax}.equals( "Y" ))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{NetTotal}]]></textFieldExpression>
 			</textField>
@@ -192,28 +192,28 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxamt}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="172" y="0" width="24" height="12" forecolor="#000000" uuid="e4600a6b-bee4-4dc2-b43e-3ca826794585"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxrate}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement key="textField-16" x="197" y="0" width="12" height="12" forecolor="#000000" uuid="effa9ea2-2983-4839-921b-ed1a4cd6cfae"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<text><![CDATA[%]]></text>
 			</staticText>
 			<textField>
 				<reportElement key="textField-16" x="112" y="0" width="60" height="12" forecolor="#000000" uuid="e4600a6b-bee4-4dc2-b43e-3ca826794585"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxrate}.floatValue() == 0 ?
  $R{TaxFree}:
@@ -222,7 +222,7 @@ ORDER BY
 			<textField>
 				<reportElement key="textField-16" x="37" y="0" width="75" height="12" forecolor="#000000" uuid="394c12db-7fcc-4671-be62-1ea27c9c4884"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{VAT_Amount}]]></textFieldExpression>
 			</textField>
@@ -232,14 +232,14 @@ ORDER BY
 			<staticText>
 				<reportElement key="textField-16" x="197" y="0" width="12" height="12" forecolor="#000000" uuid="effa9ea2-2983-4839-921b-ed1a4cd6cfae"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<text><![CDATA[%]]></text>
 			</staticText>
 			<textField>
 				<reportElement key="textField-16" x="172" y="0" width="24" height="12" forecolor="#000000" uuid="e4600a6b-bee4-4dc2-b43e-3ca826794585"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxrate}]]></textFieldExpression>
 			</textField>
@@ -252,14 +252,14 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="112" y="0" width="60" height="12" forecolor="#000000" uuid="e4600a6b-bee4-4dc2-b43e-3ca826794585"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{taxrate}.floatValue() == 0 ?
     $R{TaxFree}:
@@ -268,7 +268,7 @@ ORDER BY
 			<textField>
 				<reportElement key="textField-16" x="37" y="0" width="75" height="12" forecolor="#000000" uuid="1bf2842e-cc3d-45fd-b309-7ae7361b4764"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{HUTotal}]]></textFieldExpression>
 			</textField>

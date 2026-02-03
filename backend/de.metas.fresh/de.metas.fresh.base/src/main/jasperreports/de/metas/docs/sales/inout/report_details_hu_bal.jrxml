@@ -115,7 +115,7 @@ WHERE org.ad_org_id = $P{ad_org_id} AND org.isActive = 'Y']]>
 					<printWhenExpression><![CDATA[new Boolean(("CH").equals($F{countrycode}))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{bottomnote}]]></textFieldExpression>
 			</textField>
@@ -129,7 +129,7 @@ WHERE org.ad_org_id = $P{ad_org_id} AND org.isActive = 'Y']]>
 					<printWhenExpression><![CDATA[new Boolean(("CH").equals($F{countrycode}))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{bottomnote}]]></textFieldExpression>
 			</textField>

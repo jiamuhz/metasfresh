@@ -205,7 +205,7 @@ $F{shiplocation}]]></textFieldExpression>
 						<printWhenExpression><![CDATA[new Boolean ($V{InOutSum}.floatValue() != 0 && $V{InOutSum} != null)]]></printWhenExpression>
 					</reportElement>
 					<textElement markup="none">
-						<font size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$R{SubTotal}]]></textFieldExpression>
 				</textField>
@@ -485,7 +485,7 @@ $F{shiplocation}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{priceuom}]]></textFieldExpression>
 			</textField>
@@ -524,7 +524,7 @@ $F{shiplocation}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{attributes}]]></textFieldExpression>
 			</textField>
@@ -537,7 +537,7 @@ $F{shiplocation}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[(($F{isdiscountprinted}.equals("Y") && $F{discount}.floatValue() > 0 ) ? $F{priceentered} : $F{priceactual} )]]></textFieldExpression>
 			</textField>
@@ -648,7 +648,7 @@ $F{shiplocation}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uom}]]></textFieldExpression>
 			</textField>

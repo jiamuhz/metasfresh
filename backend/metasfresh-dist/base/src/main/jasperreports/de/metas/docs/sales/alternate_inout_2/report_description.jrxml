@@ -157,7 +157,7 @@ $P{ad_language}.equals("it_CH")?"Externe Belegnummer":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno}]]></textFieldExpression>
 			</textField>

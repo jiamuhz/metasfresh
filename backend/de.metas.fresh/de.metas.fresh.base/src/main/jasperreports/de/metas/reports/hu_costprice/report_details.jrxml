@@ -441,7 +441,7 @@ $P{ad_language}
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isItalic="true"/>
+					<font fontName="NotoSansSC" size="8" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{Warehouse_LineSum}]]></textFieldExpression>
 			</textField>

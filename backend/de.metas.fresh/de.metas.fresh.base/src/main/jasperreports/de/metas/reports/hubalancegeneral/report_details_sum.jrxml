@@ -78,7 +78,7 @@ FROM
 			<textField>
 				<reportElement key="textField-16" x="247" y="0" width="126" height="12" forecolor="#000000" uuid="b1531e1a-cb5c-4b6a-864e-971e6fd346b7"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -94,7 +94,7 @@ FROM
    .floatValue() >= 0]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{carryincoming}
     .add($F{incoming})
@@ -114,7 +114,7 @@ FROM
     .floatValue() >= 0]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{carryoutgoing}
     .add($F{outgoing})

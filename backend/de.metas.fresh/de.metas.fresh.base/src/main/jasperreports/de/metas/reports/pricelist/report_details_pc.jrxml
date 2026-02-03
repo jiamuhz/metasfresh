@@ -64,7 +64,7 @@ ORDER BY
 				<textField>
 					<reportElement x="37" y="0" width="200" height="12" uuid="8da9c48e-6cdd-4264-bd4c-1dffdffff9b7"/>
 					<textElement markup="none">
-						<font size="9" isBold="false"/>
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>

@@ -139,7 +139,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Kunde]]></text>
 			</staticText>
@@ -152,7 +152,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Summe Bestand]]></text>
 			</staticText>
@@ -165,7 +165,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Kunden-Nr.]]></text>
 			</staticText>
@@ -178,7 +178,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Summe Plan]]></text>
 			</staticText>
@@ -191,7 +191,7 @@ order by lieferbareSummeAP desc, foo.Kunde asc
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Summe Auftrag]]></text>
 			</staticText>

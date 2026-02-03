@@ -188,56 +188,56 @@ FROM
 			<textField>
 				<reportElement key="textField-16" x="37" y="24" width="183" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="60" width="183" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["CH-" + $F{postal} + " " + $F{city}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="48" width="183" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Postfach 220"]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="36" width="183" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="72" width="183" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Tel " + $F{phone}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="96" width="183" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[( ("").equals($R{mail}) ? $F{email} : $R{mail} )]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="84" width="183" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Fax " + $F{fax}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="108" width="183" height="14" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["UID Nr. " + $F{vataxid}]]></textFieldExpression>
 			</textField>
@@ -251,14 +251,14 @@ FROM
 			<textField>
 				<reportElement key="textField-16" x="37" y="134" width="103" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{customer}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="146" width="103" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{delivery}]]></textFieldExpression>
 			</textField>
@@ -307,7 +307,7 @@ FROM
 			<textField>
 				<reportElement key="textField-16" x="140" y="134" width="80" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_value}]]></textFieldExpression>
 			</textField>
@@ -316,7 +316,7 @@ FROM
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 			</textField>
 			<textField isBlankWhenNull="true">
@@ -324,14 +324,14 @@ FROM
 					<property name="net.sf.jasperreports.export.xls.cell.locked" value="false"/>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="220" y="134" width="358" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bp_name}]]></textFieldExpression>
 			</textField>
@@ -354,56 +354,56 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{price_validity}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-20" x="718" y="206" width="50" height="12" forecolor="#000000" uuid="0945443b-def7-4253-a6e1-6a6d932f115c"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{validfrom}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="140" y="146" width="438" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{bpl_name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="158" width="103" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="122" width="103" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="182" width="103" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="0" width="103" height="24" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="37" y="206" width="103" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[""]]></textFieldExpression>
 			</textField>
@@ -605,7 +605,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{attributes}]]></textFieldExpression>
 			</textField>
@@ -618,7 +618,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 			</textField>
@@ -646,7 +646,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[]]></textFieldExpression>
 			</textField>
@@ -659,7 +659,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{m_productprice_id}]]></textFieldExpression>
 			</textField>
@@ -672,7 +672,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$P{C_BPartner_ID}]]></textFieldExpression>
 			</textField>
@@ -740,7 +740,7 @@ FROM
 			<textField isBlankWhenNull="true">
 				<reportElement key="textField-16" x="140" y="0" width="80" height="12" forecolor="#000000" uuid="c6318e08-fa7a-4683-a880-3bc41fd8deaf"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{customerproductnumber}]]></textFieldExpression>
 			</textField>
@@ -756,7 +756,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{altpricestd}]]></textFieldExpression>
 			</textField>
@@ -769,7 +769,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{pricestd}]]></textFieldExpression>
 			</textField>

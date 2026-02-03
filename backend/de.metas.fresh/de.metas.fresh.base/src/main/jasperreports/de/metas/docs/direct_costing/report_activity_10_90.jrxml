@@ -487,7 +487,7 @@ $P{ad_org_id} )
 					</reportElement>
 					<box rightPadding="1"/>
 					<textElement textAlignment="Right">
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_10}.multiply( $F{l2_multiplicator} )]]></textFieldExpression>
 				</textField>
@@ -497,7 +497,7 @@ $P{ad_org_id} )
 					</reportElement>
 					<box rightPadding="1"/>
 					<textElement textAlignment="Right">
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_20}.multiply( $F{l2_multiplicator} )]]></textFieldExpression>
 				</textField>
@@ -507,7 +507,7 @@ $P{ad_org_id} )
 					</reportElement>
 					<box rightPadding="1"/>
 					<textElement textAlignment="Right">
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_40}.multiply( $F{l2_multiplicator} )]]></textFieldExpression>
 				</textField>
@@ -517,14 +517,14 @@ $P{ad_org_id} )
 					</reportElement>
 					<box rightPadding="1"/>
 					<textElement textAlignment="Right">
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_all}.multiply( $F{l2_multiplicator} )]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="226" y="9" width="25" height="9" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 					<textElement textAlignment="Center">
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_value}]]></textFieldExpression>
 				</textField>
@@ -534,7 +534,7 @@ $P{ad_org_id} )
 					</reportElement>
 					<box rightPadding="1"/>
 					<textElement textAlignment="Right">
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_50}.multiply( $F{l2_multiplicator} )]]></textFieldExpression>
 				</textField>
@@ -543,7 +543,7 @@ $P{ad_org_id} )
 						<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 					</reportElement>
 					<textElement>
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_name}]]></textFieldExpression>
 				</textField>
@@ -553,7 +553,7 @@ $P{ad_org_id} )
 					</reportElement>
 					<box rightPadding="1"/>
 					<textElement textAlignment="Right">
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_other}.multiply( $F{l2_multiplicator} )]]></textFieldExpression>
 				</textField>
@@ -563,7 +563,7 @@ $P{ad_org_id} )
 					</reportElement>
 					<box rightPadding="1"/>
 					<textElement textAlignment="Right">
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_budget_all}.multiply( $F{l2_multiplicator} )]]></textFieldExpression>
 				</textField>
@@ -573,7 +573,7 @@ $P{ad_org_id} )
 					</reportElement>
 					<box rightPadding="1"/>
 					<textElement textAlignment="Right">
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_30}.multiply( $F{l2_multiplicator} )]]></textFieldExpression>
 				</textField>
@@ -583,7 +583,7 @@ $P{ad_org_id} )
 					</reportElement>
 					<box rightPadding="1"/>
 					<textElement textAlignment="Right">
-						<font size="6" isBold="false"/>
+						<font fontName="NotoSansSC" size="6" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_90}.multiply( $F{l2_multiplicator} )]]></textFieldExpression>
 				</textField>
@@ -629,7 +629,7 @@ $P{ad_org_id} )
 			<textField pattern="">
 				<reportElement x="226" y="37" width="25" height="9" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Center">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{account}]]></textFieldExpression>
 			</textField>
@@ -745,14 +745,14 @@ $P{ad_org_id} )
 			<textField>
 				<reportElement x="56" y="0" width="170" height="9" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement>
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{l3_name}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="226" y="0" width="25" height="9" uuid="9d42f643-2a33-45d7-ba5f-180e0f0b0dd6"/>
 				<textElement textAlignment="Center">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{l3_value}]]></textFieldExpression>
 			</textField>
@@ -762,7 +762,7 @@ $P{ad_org_id} )
 				</reportElement>
 				<box rightPadding="1"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance_10}.multiply( $F{l3_multiplicator} )]]></textFieldExpression>
 			</textField>
@@ -772,7 +772,7 @@ $P{ad_org_id} )
 				</reportElement>
 				<box rightPadding="1"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance_20}.multiply( $F{l3_multiplicator} )]]></textFieldExpression>
 			</textField>
@@ -782,7 +782,7 @@ $P{ad_org_id} )
 				</reportElement>
 				<box rightPadding="1"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance_40}.multiply( $F{l3_multiplicator} )]]></textFieldExpression>
 			</textField>
@@ -792,7 +792,7 @@ $P{ad_org_id} )
 				</reportElement>
 				<box rightPadding="1"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance_50}.multiply( $F{l3_multiplicator} )]]></textFieldExpression>
 			</textField>
@@ -802,7 +802,7 @@ $P{ad_org_id} )
 				</reportElement>
 				<box rightPadding="1"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance}.multiply( $F{l3_multiplicator} )]]></textFieldExpression>
 			</textField>
@@ -813,7 +813,7 @@ $P{ad_org_id} )
 				</reportElement>
 				<box rightPadding="1"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance_other}.multiply( $F{l3_multiplicator} )]]></textFieldExpression>
 			</textField>
@@ -823,7 +823,7 @@ $P{ad_org_id} )
 				</reportElement>
 				<box rightPadding="1"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{budget}.multiply( $F{l3_multiplicator} )]]></textFieldExpression>
 			</textField>
@@ -833,7 +833,7 @@ $P{ad_org_id} )
 				</reportElement>
 				<box rightPadding="1"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance_30}.multiply( $F{l3_multiplicator} )]]></textFieldExpression>
 			</textField>
@@ -843,7 +843,7 @@ $P{ad_org_id} )
 				</reportElement>
 				<box rightPadding="1"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{balance_90}.multiply( $F{l3_multiplicator} )]]></textFieldExpression>
 			</textField>

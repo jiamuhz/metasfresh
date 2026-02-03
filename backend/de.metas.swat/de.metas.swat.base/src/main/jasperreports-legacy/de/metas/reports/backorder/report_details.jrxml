@@ -279,7 +279,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Produkt]]></text>
 			</staticText>
@@ -292,7 +292,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Auftrag]]></text>
 			</staticText>
@@ -305,7 +305,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Datum]]></text>
 			</staticText>
@@ -318,7 +318,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[offen]]></text>
 			</staticText>
@@ -333,7 +333,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Preis]]></text>
 			</staticText>
@@ -348,7 +348,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[auf Lager]]></text>
 			</staticText>
@@ -361,7 +361,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Produkt-Nr.]]></text>
 			</staticText>
@@ -374,7 +374,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[erschienen]]></text>
 			</staticText>
@@ -389,7 +389,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<text><![CDATA[Liefermenge]]></text>
 			</staticText>
@@ -402,7 +402,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{Kundenliste}.equals("Y")||$P{Liefermenge}.equals("Y")? "Preis": "Summe"]]></textFieldExpression>
 			</textField>
@@ -415,7 +415,7 @@ $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="true" />
+					<font fontName="NotoSansSC" size="9" isBold="true" />
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$P{Kundenliste}.equals("N")&&$P{Liefermenge}.equals("Y")? "Summe": "Summe\nPlan"]]></textFieldExpression>
 			</textField>

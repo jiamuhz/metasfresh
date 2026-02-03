@@ -120,42 +120,42 @@ GROUP BY
 			<textField isStretchWithOverflow="true">
 				<reportElement key="textField-16" x="37" y="0" width="115" height="12" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="1b4cc2a7-14ad-4b21-8275-fda17943337b"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true">
 				<reportElement key="textField-16" x="151" y="0" width="115" height="12" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="149a75da-bec3-4688-8c75-bf3603956ed6"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{address}]]></textFieldExpression>
 			</textField>
 			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
 				<reportElement key="textField-16" x="437" y="0" width="110" height="12" isPrintWhenDetailOverflows="true" forecolor="#000000" uuid="be68a796-ba69-4dbd-927e-5c7f231caf20"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{notes}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="350" y="0" width="35" height="12" forecolor="#000000" uuid="b97d1f91-d6f3-4150-bef9-9cc656d6510a"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy, HH.mm" isBlankWhenNull="true">
 				<reportElement key="textField-16" x="266" y="0" width="85" height="12" forecolor="#000000" uuid="fa602562-4a5e-4857-95ce-af3a4777aa8f"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{deliverydatetimemax}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement key="textField-16" x="392" y="0" width="45" height="12" forecolor="#000000" uuid="056e2312-4c94-44aa-b184-d3066e7a8b83"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{ispallet}.equals( "Y" )?
     ($F{qty}.intValue() == 1? $R{Palette}: $R{Palettes}):

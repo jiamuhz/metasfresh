@@ -151,21 +151,21 @@ $P{IsAllowESRPayments}
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="31b2f7be-9dbf-440a-bbf9-937b5477de9a" key="textField-3" x="377" y="0" width="60" height="12"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{grandtotal}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="d500a2d5-1221-44b7-a60f-194de06df2c6" key="textField-3" x="495" y="0" width="60" height="12"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{payamt}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="fbca41d3-535f-46dd-8c0b-59cfbd5e5cbe" key="textField-3" x="37" y="0" width="25" height="12"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{line}]]></textFieldExpression>
 			</textField>
@@ -174,42 +174,42 @@ $P{IsAllowESRPayments}
 					<printWhenExpression><![CDATA[new Boolean($F{discountamt}.floatValue() != 0)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{discountamt}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement uuid="787dbba3-a675-4489-a879-37738f32b227" key="textField-3" x="172" y="0" width="55" height="12"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{dateinvoiced}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="758098a1-5dab-4dcf-b7d8-b65c108be9e7" key="textField-3" x="62" y="0" width="110" height="12"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="b8b5796d-a135-4bdf-a6cd-007ab143a2f6" key="textField-3" x="337" y="0" width="40" height="12"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="2b833a5a-b32e-4388-9f51-9dcbacde8821" key="textField-3" x="282" y="0" width="55" height="12"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{u_docno}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="2ed84502-190a-46eb-a11d-0e77d2cb979d" key="textField-3" x="227" y="0" width="55" height="12"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{i_docno}]]></textFieldExpression>
 			</textField>
@@ -219,42 +219,42 @@ $P{IsAllowESRPayments}
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="bd45f277-d30d-4cc5-adfe-b0a9db8f161d" key="textField-3" x="62" y="0" width="110" height="12"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cm_description}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement uuid="4f7d5da6-0b5a-4033-9a32-b7aa19bc4f18" key="textField-3" x="377" y="0" width="60" height="12"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{amount}]]></textFieldExpression>
 			</textField>
 			<textField pattern="dd.MM.yyyy" isBlankWhenNull="true">
 				<reportElement uuid="787dbba3-a675-4489-a879-37738f32b227" key="textField-3" x="172" y="0" width="55" height="12"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cm_date}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="b8b5796d-a135-4bdf-a6cd-007ab143a2f6" key="textField-3" x="337" y="0" width="40" height="12"/>
 				<textElement textAlignment="Right" markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="2b833a5a-b32e-4388-9f51-9dcbacde8821" key="textField-3" x="282" y="0" width="55" height="12"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cm_docno}]]></textFieldExpression>
 			</textField>
 			<textField isBlankWhenNull="true">
 				<reportElement uuid="2ed84502-190a-46eb-a11d-0e77d2cb979d" key="textField-3" x="227" y="0" width="55" height="12"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{cm_refno}]]></textFieldExpression>
 			</textField>

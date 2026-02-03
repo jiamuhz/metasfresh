@@ -57,7 +57,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Shipping_Notification_Description(
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{PhysicalClearanceDate}]]></textFieldExpression>
 			</textField>
@@ -83,7 +83,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Shipping_Notification_Description(
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{POReference}]]></textFieldExpression>
 			</textField>
@@ -148,7 +148,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Shipping_Notification_Description(
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{orderno}]]></textFieldExpression>
 			</textField>
@@ -174,7 +174,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Shipping_Notification_Description(
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="9" isBold="true"/>
+					<font fontName="NotoSansSC" size="9" isBold="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{HarvestingYear}]]></textFieldExpression>
 			</textField>

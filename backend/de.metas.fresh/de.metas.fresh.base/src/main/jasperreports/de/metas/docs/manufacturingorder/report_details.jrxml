@@ -260,7 +260,7 @@ ORDER BY
 			<textField isBlankWhenNull="true">
 				<reportElement key="textField-16" x="196" y="24" width="160" height="12" forecolor="#000000" uuid="8bf8ac01-2a36-471c-843f-4b5a8ec95571"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qualitynote}]]></textFieldExpression>
 			</textField>
@@ -279,7 +279,7 @@ ORDER BY
 			<textField isBlankWhenNull="true">
 				<reportElement key="textField-16" x="196" y="24" width="160" height="12" forecolor="#000000" uuid="dbf82ee9-8b7c-4549-b77d-ba47d5096908"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qualitynote}]]></textFieldExpression>
 			</textField>

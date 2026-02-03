@@ -31,7 +31,7 @@
 					<printWhenExpression><![CDATA[new Boolean($F{isdropship}.equals("Y"))]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{deliverytoaddress}]]></textFieldExpression>
 			</textField>
@@ -41,7 +41,7 @@
 					<printWhenExpression><![CDATA[new Boolean($F{isdropship}.equals("Y"))]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{shipmentaddress}]]></textFieldExpression>
 			</textField>

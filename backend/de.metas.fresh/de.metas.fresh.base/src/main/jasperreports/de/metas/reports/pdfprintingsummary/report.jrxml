@@ -88,7 +88,7 @@ order by a.Name]]>
 			<staticText>
 				<reportElement uuid="f0663d7c-172e-4e5f-acdb-792e44e163a1" x="0" y="1" width="68" height="13"/>
 				<textElement>
-					<font size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Erster Beleg:]]></text>
 			</staticText>
@@ -162,7 +162,7 @@ order by a.Name]]>
 			<staticText>
 				<reportElement uuid="476b1280-ce8e-4d63-9015-f9a1c00be725" x="0" y="3" width="68" height="13"/>
 				<textElement>
-					<font size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<text><![CDATA[Letzer Beleg:]]></text>
 			</staticText>

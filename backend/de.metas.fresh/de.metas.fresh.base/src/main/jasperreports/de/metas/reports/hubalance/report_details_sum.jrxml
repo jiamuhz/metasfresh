@@ -66,7 +66,7 @@ FROM
     .floatValue() >= 0]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right" markup="none">
-						<font size="9" isBold="false"/>
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{carryoutgoing}
     .add($V{TotalOutgoing})
@@ -85,7 +85,7 @@ FROM
     ).floatValue() >= 0]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right" markup="none">
-						<font size="9" isBold="false"/>
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{carryincoming}
     .add($V{TotalIncoming})
@@ -97,7 +97,7 @@ FROM
 				<textField>
 					<reportElement uuid="b1531e1a-cb5c-4b6a-864e-971e6fd346b7" key="textField-16" x="256" y="0" width="126" height="12" forecolor="#000000"/>
 					<textElement markup="none">
-						<font size="9" isBold="false"/>
+						<font fontName="NotoSansSC" size="9" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>

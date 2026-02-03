@@ -69,7 +69,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Details_Sum( $P{m_inou
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalentered}]]></textFieldExpression>
 			</textField>
@@ -92,7 +92,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Details_Sum( $P{m_inou
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totaldiscountamt}]]></textFieldExpression>
 			</textField>
@@ -115,7 +115,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Details_Sum( $P{m_inou
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{nonhutotal}]]></textFieldExpression>
 			</textField>
@@ -127,7 +127,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Details_Sum( $P{m_inou
 			<textField>
 				<reportElement uuid="ae607b6f-184e-4685-a565-7811e27027d2" key="textField-16" x="37" y="0" width="129" height="12" forecolor="#000000"/>
 				<textElement markup="none">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{HUTotal}]]></textFieldExpression>
 			</textField>
@@ -140,7 +140,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Details_Sum( $P{m_inou
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="9" isBold="false"/>
+					<font fontName="NotoSansSC" size="9" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{hutotal}]]></textFieldExpression>
 			</textField>

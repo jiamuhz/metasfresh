@@ -98,7 +98,7 @@ $P{ad_language}.equals("it_CH")?"Externe Belegnummer":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{documentno} +
 ($F{count}.intValue() > 1? " ff." : "")]]></textFieldExpression>
@@ -119,7 +119,7 @@ $P{ad_language}.equals("it_CH")?"Externe Belegnummer":
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="10" isBold="false"/>
+					<font fontName="NotoSansSC" size="10" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{reference}]]></textFieldExpression>
 			</textField>
