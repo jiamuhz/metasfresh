@@ -490,14 +490,14 @@
 				<textField>
 					<reportElement x="38" y="0" width="196" height="9" uuid="909090fe-b971-4832-af32-72940ff5fe6f"/>
 					<textElement>
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_name}]]></textFieldExpression>
 				</textField>
 				<textField>
 					<reportElement x="234" y="0" width="40" height="9" uuid="74e79ade-a7c1-4e52-beab-fc9afd844523"/>
 					<textElement textAlignment="Center">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_value}]]></textFieldExpression>
 				</textField>
@@ -506,7 +506,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_2000}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_2000}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>
@@ -515,7 +515,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_1000}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_1000}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>
@@ -524,7 +524,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_150}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_150}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>
@@ -533,7 +533,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_other}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_other}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>
@@ -542,7 +542,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_all}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_all}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>
@@ -551,7 +551,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_budget_2000}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_budget_2000}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>
@@ -560,7 +560,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_budget_1000}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_budget_1000}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>
@@ -569,7 +569,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_budget_100}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_budget_100}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>
@@ -578,7 +578,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_budget_150}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_budget_150}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>
@@ -587,7 +587,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_budget_all}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_budget_all}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>
@@ -596,7 +596,7 @@
 						<printWhenExpression><![CDATA[new Boolean($F{l2_budget_percentage_all}.floatValue() != 0 ||     $F{l2_budget_all}.floatValue() != 0 )]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_budget_percentage_all}]]></textFieldExpression>
 				</textField>
@@ -608,7 +608,7 @@
 						<printWhenExpression><![CDATA[new Boolean ($F{l2_100}.multiply( $F{l2_multiplicator} ).floatValue() != 0)]]></printWhenExpression>
 					</reportElement>
 					<textElement textAlignment="Right">
-						<font size="6"/>
+						<font fontName="NotoSansSC" size="6"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{l2_100}.multiply( $F{l2_multiplicator} ).setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 				</textField>

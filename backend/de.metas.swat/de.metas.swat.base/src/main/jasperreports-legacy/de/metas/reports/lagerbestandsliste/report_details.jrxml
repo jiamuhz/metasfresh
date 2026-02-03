@@ -366,7 +366,7 @@ ORDER BY
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyreserved_sum}]]></textFieldExpression>
 				</textField>
@@ -391,7 +391,7 @@ ORDER BY
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{carry}]]></textFieldExpression>
 				</textField>
@@ -416,7 +416,7 @@ ORDER BY
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyavailable_sum}]]></textFieldExpression>
 				</textField>
@@ -441,7 +441,7 @@ ORDER BY
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyonhand_sum}]]></textFieldExpression>
 				</textField>
@@ -560,7 +560,7 @@ ORDER BY
 						key="textField-25"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyreserved_sum}]]></textFieldExpression>
 				</textField>
@@ -573,7 +573,7 @@ ORDER BY
 						key="textField-26"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{subtotal}]]></textFieldExpression>
 				</textField>
@@ -586,7 +586,7 @@ ORDER BY
 						key="textField-27"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyavailable_sum}]]></textFieldExpression>
 				</textField>
@@ -599,7 +599,7 @@ ORDER BY
 						key="textField-28"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{qtyonhand_sum}]]></textFieldExpression>
 				</textField>

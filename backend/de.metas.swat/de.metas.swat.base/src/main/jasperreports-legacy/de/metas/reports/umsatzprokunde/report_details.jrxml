@@ -600,7 +600,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{gesamt_summe1}]]></textFieldExpression>
 				</textField>
@@ -619,7 +619,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{gesamt_summe2}]]></textFieldExpression>
 				</textField>
@@ -638,7 +638,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{gesamt_summe3}]]></textFieldExpression>
 				</textField>
@@ -657,7 +657,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{carry}]]></textFieldExpression>
 				</textField>
@@ -732,7 +732,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -751,7 +751,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -770,7 +770,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						</reportElement>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -916,7 +916,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-47"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{gesamt_summe2}]]></textFieldExpression>
 				</textField>
@@ -929,7 +929,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-48"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{gesamt_summe1}]]></textFieldExpression>
 				</textField>
@@ -942,7 +942,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-49"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.math.BigDecimal"><![CDATA[$V{gesamt_summe3}]]></textFieldExpression>
 				</textField>
@@ -955,7 +955,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-52"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Right">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{subtotal}]]></textFieldExpression>
 				</textField>
@@ -968,7 +968,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-83"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -981,7 +981,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-84"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
@@ -994,7 +994,7 @@ $V{gesamt_summe3}.intValue() != 0 ?
 						key="textField-85"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" leftPadding="3" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font  size="9" isBold="false" isItalic="true"/>
+						<font fontName="NotoSansSC" size="9" isBold="false" isItalic="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{cursymbol}]]></textFieldExpression>
 				</textField>
