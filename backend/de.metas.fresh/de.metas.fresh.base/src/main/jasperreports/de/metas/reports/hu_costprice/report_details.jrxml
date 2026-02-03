@@ -213,7 +213,7 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false"/>
+						<font fontName="NotoSansSC" size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{p_value}]]></textFieldExpression>
 				</textField>
@@ -226,7 +226,7 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false"/>
+						<font fontName="NotoSansSC" size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{p_name}]]></textFieldExpression>
 				</textField>
@@ -239,7 +239,7 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false"/>
+						<font fontName="NotoSansSC" size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{Product_qty}]]></textFieldExpression>
 				</textField>
@@ -247,7 +247,7 @@ $P{ad_language}
 					<reportElement key="textField-111" x="518" y="0" width="60" height="12" uuid="60ac9d4d-0abd-45a2-9182-adef037d1212"/>
 					<box leftPadding="5"/>
 					<textElement>
-						<font size="8" isBold="false"/>
+						<font fontName="NotoSansSC" size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 				</textField>
@@ -260,7 +260,7 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false"/>
+						<font fontName="NotoSansSC" size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{Product_LineSum}]]></textFieldExpression>
 				</textField>
@@ -273,7 +273,7 @@ $P{ad_language}
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false"/>
+						<font fontName="NotoSansSC" size="8" isBold="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{Product_avg}]]></textFieldExpression>
 				</textField>
@@ -395,7 +395,7 @@ $P{ad_language}
 				<reportElement key="textField-111" x="518" y="0" width="60" height="12" uuid="60ac9d4d-0abd-45a2-9182-adef037d1212"/>
 				<box leftPadding="5"/>
 				<textElement>
-					<font size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 			</textField>
@@ -408,7 +408,7 @@ $P{ad_language}
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qty}]]></textFieldExpression>
 			</textField>
@@ -421,7 +421,7 @@ $P{ad_language}
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{linesum}]]></textFieldExpression>
 			</textField>

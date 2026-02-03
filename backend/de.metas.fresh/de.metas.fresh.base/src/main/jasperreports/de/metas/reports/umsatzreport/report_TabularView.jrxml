@@ -102,7 +102,7 @@
 			<textField>
 				<reportElement x="37" y="60" width="170" height="10" uuid="d19f9180-4d10-4fff-8863-59b4f655ab2e"/>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{bp_name}]]></textFieldExpression>
 			</textField>
@@ -111,63 +111,63 @@
 					<printWhenExpression><![CDATA[new Boolean (!$V{PAGE_NUMBER}.equals(1))]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{carry}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="207" y="60" width="60" height="10" uuid="563908a3-7488-4625-b0e5-d89de1d56c16"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{periodend}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="267" y="60" width="60" height="10" uuid="612fe2cb-dddc-4eb7-8d4c-22f677db79c7"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{lastyearperiodend}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="327" y="60" width="60" height="10" uuid="9f978343-f230-4e83-a79d-8c5089b5f11c"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{difference}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="387" y="60" width="60" height="10" uuid="537afb78-eaa6-4498-a064-db9a2c2630c8"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["%"]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="507" y="60" width="60" height="10" uuid="612fe2cb-dddc-4eb7-8d4c-22f677db79c7"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{cumulated} + " " + $F{lastyear}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="447" y="60" width="60" height="10" uuid="563908a3-7488-4625-b0e5-d89de1d56c16"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{cumulated} + " " + $F{year}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="627" y="60" width="60" height="10" uuid="537afb78-eaa6-4498-a064-db9a2c2630c8"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA["%"]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="567" y="60" width="60" height="10" uuid="9f978343-f230-4e83-a79d-8c5089b5f11c"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{difference}]]></textFieldExpression>
 			</textField>
@@ -183,7 +183,7 @@
 					<printWhenExpression><![CDATA[new Boolean (!$V{PAGE_NUMBER}.equals(1))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{yeardiffpercentagetotal}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -192,7 +192,7 @@
 					<printWhenExpression><![CDATA[new Boolean (!$V{PAGE_NUMBER}.equals(1))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{sameperiodlastyeartotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -201,7 +201,7 @@
 					<printWhenExpression><![CDATA[new Boolean (!$V{PAGE_NUMBER}.equals(1))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{yeardifferencetotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -210,7 +210,7 @@
 					<printWhenExpression><![CDATA[new Boolean (!$V{PAGE_NUMBER}.equals(1))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{sameyeartotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -219,7 +219,7 @@
 					<printWhenExpression><![CDATA[new Boolean (!$V{PAGE_NUMBER}.equals(1))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{lastyeartotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -228,7 +228,7 @@
 					<printWhenExpression><![CDATA[new Boolean (!$V{PAGE_NUMBER}.equals(1))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{perioddiffpercentagetotal}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -237,7 +237,7 @@
 					<printWhenExpression><![CDATA[new Boolean (!$V{PAGE_NUMBER}.equals(1))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{perioddifferencetotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -246,7 +246,7 @@
 					<printWhenExpression><![CDATA[new Boolean (!$V{PAGE_NUMBER}.equals(1))]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{sameperiodtotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -295,63 +295,63 @@
 			<textField>
 				<reportElement x="37" y="0" width="170" height="10" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="207" y="0" width="60" height="10" uuid="283307ea-42f1-443b-874f-de97d438a639"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sameperiodsum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="267" y="0" width="60" height="10" uuid="2f5a972c-5049-411f-a83c-38a23af84895"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sameperiodlastyearsum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="327" y="0" width="60" height="10" uuid="0f6c1f56-578c-45e9-b557-199fb3c8b0fc"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{perioddifference}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="387" y="0" width="60" height="10" uuid="acfa1c37-3f32-46f6-818a-2fd76d61d4a0"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{perioddiffpercentage}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="627" y="0" width="60" height="10" uuid="acfa1c37-3f32-46f6-818a-2fd76d61d4a0"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{yeardiffpercentage}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="447" y="0" width="60" height="10" uuid="283307ea-42f1-443b-874f-de97d438a639"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{sameyearsum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="567" y="0" width="60" height="10" uuid="0f6c1f56-578c-45e9-b557-199fb3c8b0fc"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{yeardifference}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="507" y="0" width="60" height="10" uuid="2f5a972c-5049-411f-a83c-38a23af84895"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{lastyearsum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -443,63 +443,63 @@
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="447" y="0" width="60" height="10" uuid="563908a3-7488-4625-b0e5-d89de1d56c16"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{sameyeartotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="567" y="0" width="60" height="10" uuid="9f978343-f230-4e83-a79d-8c5089b5f11c"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{yeardifferencetotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="207" y="0" width="60" height="10" uuid="563908a3-7488-4625-b0e5-d89de1d56c16"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{sameperiodtotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="387" y="0" width="60" height="10" uuid="537afb78-eaa6-4498-a064-db9a2c2630c8"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{perioddiffpercentagetotal}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="507" y="0" width="60" height="10" uuid="612fe2cb-dddc-4eb7-8d4c-22f677db79c7"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{lastyeartotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="37" y="0" width="170" height="10" uuid="57ce5783-0241-4a23-9207-b7b7cd151c5f"/>
 				<textElement>
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{subtotal}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="267" y="0" width="60" height="10" uuid="612fe2cb-dddc-4eb7-8d4c-22f677db79c7"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{sameperiodlastyeartotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0" isBlankWhenNull="true">
 				<reportElement x="327" y="0" width="60" height="10" uuid="9f978343-f230-4e83-a79d-8c5089b5f11c"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{perioddifferencetotal}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0.00" isBlankWhenNull="true">
 				<reportElement x="627" y="0" width="60" height="10" uuid="537afb78-eaa6-4498-a064-db9a2c2630c8"/>
 				<textElement textAlignment="Right">
-					<font size="7" isBold="false" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isBold="false" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{yeardiffpercentagetotal}.setScale( 2, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>

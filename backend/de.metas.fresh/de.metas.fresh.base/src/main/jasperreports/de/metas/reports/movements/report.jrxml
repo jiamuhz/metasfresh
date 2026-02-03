@@ -202,7 +202,7 @@
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="92" y="26" width="56" height="10" uuid="daf7846a-bccb-41ac-84e9-86cd4bf8c4b5"/>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{periodenddate}]]></textFieldExpression>
 			</textField>
@@ -229,14 +229,14 @@ $R{activityTo} + " "+ $F{param_activity_to_value} + " " + $F{param_activity_to_n
 					<property name="com.jaspersoft.studio.unit.width" value="pixel"/>
 				</reportElement>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{periodstartdate}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="85" y="26" width="8" height="10" uuid="4dadacb5-0717-49f9-a360-b1c2875d37ee"/>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<text><![CDATA[ - ]]></text>
 			</staticText>

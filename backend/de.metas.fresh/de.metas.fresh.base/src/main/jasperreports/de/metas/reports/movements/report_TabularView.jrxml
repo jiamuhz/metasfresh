@@ -202,7 +202,7 @@
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="170" y="20" width="80" height="10" uuid="daf7846a-bccb-41ac-84e9-86cd4bf8c4b5"/>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{periodenddate}]]></textFieldExpression>
 			</textField>
@@ -227,14 +227,14 @@
 			<textField pattern="dd.MM.yyyy">
 				<reportElement x="80" y="20" width="80" height="10" uuid="daf7846a-bccb-41ac-84e9-86cd4bf8c4b5"/>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{periodstartdate}]]></textFieldExpression>
 			</textField>
 			<staticText>
 				<reportElement x="160" y="20" width="10" height="10" uuid="4dadacb5-0717-49f9-a360-b1c2875d37ee"/>
 				<textElement>
-					<font size="7" isBold="false"/>
+					<font fontName="NotoSansSC" size="7" isBold="false"/>
 				</textElement>
 				<text><![CDATA[ - ]]></text>
 			</staticText>

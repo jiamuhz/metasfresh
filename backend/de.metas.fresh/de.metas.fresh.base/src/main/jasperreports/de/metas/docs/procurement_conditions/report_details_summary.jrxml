@@ -50,7 +50,7 @@
 					<property name="com.jaspersoft.studio.unit.height" value="pixel"/>
 				</reportElement>
 				<textElement markup="none">
-					<font size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{note1}]]></textFieldExpression>
 			</textField>
@@ -66,7 +66,7 @@
 			<textField isStretchWithOverflow="true">
 				<reportElement key="textField-16" x="172" y="0" width="385" height="46" uuid="c4b27b6a-bd83-4bb6-93b2-a814b734c022"/>
 				<textElement markup="none">
-					<font size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{note2}]]></textFieldExpression>
 			</textField>
@@ -82,7 +82,7 @@
 			<textField isStretchWithOverflow="true">
 				<reportElement key="textField-16" x="172" y="0" width="385" height="25" uuid="c4b27b6a-bd83-4bb6-93b2-a814b734c022"/>
 				<textElement markup="none">
-					<font size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{note3}]]></textFieldExpression>
 			</textField>
@@ -99,7 +99,7 @@
 			<textField isStretchWithOverflow="true">
 				<reportElement key="textField-16" x="172" y="0" width="385" height="60" uuid="c4b27b6a-bd83-4bb6-93b2-a814b734c022"/>
 				<textElement markup="none">
-					<font size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{note4}]]></textFieldExpression>
 			</textField>
@@ -108,7 +108,7 @@
 			<textField isStretchWithOverflow="true">
 				<reportElement key="textField-16" x="172" y="0" width="385" height="30" uuid="c4b27b6a-bd83-4bb6-93b2-a814b734c022"/>
 				<textElement markup="none">
-					<font size="8" isBold="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{note5}]]></textFieldExpression>
 			</textField>
