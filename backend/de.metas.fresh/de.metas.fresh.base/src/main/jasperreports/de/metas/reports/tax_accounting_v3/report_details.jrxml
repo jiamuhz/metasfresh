@@ -135,14 +135,14 @@ ORDER BY t.vatcode, t.kontono, t.taxname, t.DateAcct
 				<textField isStretchWithOverflow="true" evaluationTime="Group" evaluationGroup="Group1" pattern="#,##0.00" isBlankWhenNull="true">
 					<reportElement x="555" y="2" width="70" height="12" uuid="f597143b-0e6c-4e57-872f-171cd1882ba5"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{taxbaseamt_vat_sum}]]></textFieldExpression>
 				</textField>
 				<textField isStretchWithOverflow="true" evaluationTime="Group" evaluationGroup="Group1" pattern="#,##0.00" isBlankWhenNull="true">
 					<reportElement x="438" y="2" width="91" height="12" uuid="15b58fce-5286-4696-b31b-f5f5fb5c7813"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{invoice_total_sum}]]></textFieldExpression>
 				</textField>
@@ -150,7 +150,7 @@ ORDER BY t.vatcode, t.kontono, t.taxname, t.DateAcct
 					<reportElement x="625" y="2" width="106" height="12" uuid="166a25f6-7b45-410f-8d4e-c05d87ff8327"/>
 					<box rightPadding="5"/>
 					<textElement textAlignment="Right">
-						<font size="8"/>
+						<font fontName="NotoSansSC" size="8"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{taxamt_vat_sum}]]></textFieldExpression>
 				</textField>

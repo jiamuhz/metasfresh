@@ -217,119 +217,119 @@
 			<textField pattern="MM.yyyy">
 				<reportElement x="283" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col12}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="458" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col7}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="318" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col11}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="353" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col10}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="37" y="17" width="45" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement>
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{ArticleNr}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="81" y="17" width="167" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement>
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Article}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="423" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col8}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="388" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col9}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="703" y="17" width="50" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{TotalQty}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="248" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement>
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Unit}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="668" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col1}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="528" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col5}]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="753" y="17" width="50" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Total} + " " + $F{iso_code}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="598" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col3}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="563" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col4}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="633" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col2}]]></textFieldExpression>
 			</textField>
 			<textField pattern="MM.yyyy">
 				<reportElement x="493" y="17" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col6}]]></textFieldExpression>
 			</textField>
@@ -341,119 +341,119 @@
 			<textField pattern="#,##0">
 				<reportElement x="283" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period12sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="248" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement>
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="598" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period3sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="633" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period2sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="563" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period4sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="703" y="0" width="50" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalsum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="423" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period8sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="753" y="0" width="50" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalamt}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="353" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period10sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="388" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period9sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="37" y="0" width="45" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement>
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{p_value}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="528" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period5sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="668" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period1sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="81" y="0" width="167" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement>
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{p_name}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="318" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period11sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="493" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period6sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="458" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period7sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
@@ -463,112 +463,112 @@
 			<textField pattern="#,##0">
 				<reportElement x="493" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period6sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="388" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period9sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="563" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period4sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="633" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period2sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="318" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period11sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="353" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period10sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="703" y="0" width="50" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalsum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="598" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period3sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="668" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period1sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="458" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period7sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="528" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period5sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="248" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement>
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uomsymbol}]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="753" y="0" width="50" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{totalamt}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="423" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period8sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField pattern="#,##0">
 				<reportElement x="283" y="0" width="35" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement textAlignment="Right">
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{period12sum}.setScale( 0, RoundingMode.HALF_UP )]]></textFieldExpression>
 			</textField>
 			<textField>
 				<reportElement x="37" y="0" width="211" height="8" uuid="b8f331b0-8509-4047-917b-10046463e375"/>
 				<textElement>
-					<font size="6" isBold="false"/>
+					<font fontName="NotoSansSC" size="6" isBold="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Total} + " " + $F{pc_name}]]></textFieldExpression>
 			</textField>

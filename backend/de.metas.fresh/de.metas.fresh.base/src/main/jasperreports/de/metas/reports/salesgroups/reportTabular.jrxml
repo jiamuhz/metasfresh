@@ -153,63 +153,63 @@
 			<textField>
 				<reportElement uuid="f579eef3-a44f-46bb-9884-32b135a7605a" x="62" y="0" width="203" height="12"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{productsalesgroup}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
 				<reportElement uuid="7de6d364-712f-4b96-aa11-af3e4198e6e3" x="455" y="0" width="75" height="12"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{revenuedetailhandel}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
 				<reportElement uuid="995bfa0f-6e14-4d73-8bce-13498c9f477e" x="755" y="0" width="75" height="12"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{revenuegastro}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
 				<reportElement uuid="09a797da-5c63-4452-8a2c-3cf89e3c797d" x="380" y="0" width="75" height="12"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyinvoiceddetailhandel}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
 				<reportElement uuid="fd5ac9e5-a612-450f-9a3d-1691fff8d9c9" x="605" y="0" width="75" height="12"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{revenuediscounter}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
 				<reportElement uuid="09a797da-5c63-4452-8a2c-3cf89e3c797d" x="320" y="0" width="60" height="12"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{uom}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
 				<reportElement uuid="0eb745e3-6d37-40b8-b550-25769116813e" x="530" y="0" width="75" height="12"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyinvoiceddiscounter}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00">
 				<reportElement uuid="8d452622-61da-406c-861c-a6670b0a3c2d" x="680" y="0" width="75" height="12"/>
 				<textElement textAlignment="Right">
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{qtyinvoicedgastro}]]></textFieldExpression>
 			</textField>
 			<textField pattern="###0.00;-###0.00" isBlankWhenNull="true">
 				<reportElement uuid="09a797da-5c63-4452-8a2c-3cf89e3c797d" x="265" y="0" width="55" height="12"/>
 				<textElement>
-					<font size="9"/>
+					<font fontName="NotoSansSC" size="9"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Inland"]]></textFieldExpression>
 			</textField>
