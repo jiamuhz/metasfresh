@@ -354,7 +354,7 @@ ORDER BY line.line
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="true" isStrikeThrough="false"/>
+					<font fontName="NotoSansSC" size="8" isBold="true" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{text}]]></textFieldExpression>
 			</textField>

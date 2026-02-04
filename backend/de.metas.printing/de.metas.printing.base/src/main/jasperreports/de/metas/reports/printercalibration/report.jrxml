@@ -35,7 +35,7 @@ WHERE
 			<textField>
 				<reportElement uuid="42cd6f06-f544-4797-9bef-95e92e1380aa" x="73" y="78" width="343" height="203"/>
 				<textElement>
-					<font size="12"/>
+					<font fontName="NotoSansSC" size="12"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Kalibrierungsausdruck für Ducker " + $F{printername} + " " +
 "und Schacht " + $F{traynumber} + " " +

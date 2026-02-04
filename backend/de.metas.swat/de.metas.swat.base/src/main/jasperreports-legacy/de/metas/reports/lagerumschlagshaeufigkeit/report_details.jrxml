@@ -760,13 +760,13 @@ g.dld  > $P{nullwerte} and  m_product_category_id = $P{produktkategorie} and m_p
 				<chart isShowLegend="false">
 					<reportElement mode="Transparent" x="464" y="0" width="210" height="75" isPrintWhenDetailOverflows="true" forecolor="#000000"/>
 					<chartTitle color="#FFFFFF">
-						<font size="5"/>
+						<font fontName="NotoSansSC" size="5"/>
 					</chartTitle>
 					<chartSubtitle color="#FFFFFF">
-						<font size="5"/>
+						<font fontName="NotoSansSC" size="5"/>
 					</chartSubtitle>
 					<chartLegend textColor="#FFFFFF" backgroundColor="#000000" position="Bottom">
-						<font size="5"/>
+						<font fontName="NotoSansSC" size="5"/>
 					</chartLegend>
 				</chart>
 				<categoryDataset>
@@ -897,20 +897,20 @@ g.dld  > $P{nullwerte} and  m_product_category_id = $P{produktkategorie} and m_p
 					<categoryAxisFormat>
 						<axisFormat>
 							<labelFont>
-								<font size="5"/>
+								<font fontName="NotoSansSC" size="5"/>
 							</labelFont>
 							<tickLabelFont>
-								<font size="5"/>
+								<font fontName="NotoSansSC" size="5"/>
 							</tickLabelFont>
 						</axisFormat>
 					</categoryAxisFormat>
 					<valueAxisFormat>
 						<axisFormat>
 							<labelFont>
-								<font size="5"/>
+								<font fontName="NotoSansSC" size="5"/>
 							</labelFont>
 							<tickLabelFont>
-								<font size="5"/>
+								<font fontName="NotoSansSC" size="5"/>
 							</tickLabelFont>
 						</axisFormat>
 					</valueAxisFormat>

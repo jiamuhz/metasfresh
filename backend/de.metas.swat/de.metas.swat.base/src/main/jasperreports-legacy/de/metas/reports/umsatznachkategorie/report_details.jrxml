@@ -282,7 +282,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="12" isBold="true" isItalic="false" />
+					<font fontName="NotoSansSC" size="12" isBold="true" isItalic="false"/>
 				</textElement>
 				<text><![CDATA[Gesamtsumme]]></text>
 			</staticText>
@@ -295,7 +295,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="12" isBold="true" isItalic="false" />
+					<font fontName="NotoSansSC" size="12" isBold="true" isItalic="false"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sum_absatz}]]></textFieldExpression>
 			</textField>
@@ -308,7 +308,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="12" isBold="true" isItalic="false" />
+					<font fontName="NotoSansSC" size="12" isBold="true" isItalic="false"/>
 				</textElement>
 				<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{sum_umsatz}]]></textFieldExpression>
 			</textField>
@@ -321,7 +321,7 @@ order by m_product_category_id, p.value
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Left">
-					<font size="12" isBold="true" isItalic="false" />
+					<font fontName="NotoSansSC" size="12" isBold="true" isItalic="false"/>
 				</textElement>
 				<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}]]></textFieldExpression>
 			</textField>

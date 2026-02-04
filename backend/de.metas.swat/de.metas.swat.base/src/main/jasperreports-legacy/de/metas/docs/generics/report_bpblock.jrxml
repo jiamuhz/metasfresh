@@ -91,7 +91,7 @@ FROM
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="7" isUnderline="true"/>
+					<font fontName="NotoSansSC" size="7" isUnderline="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{org_addressline}]]></textFieldExpression>
 			</textField>

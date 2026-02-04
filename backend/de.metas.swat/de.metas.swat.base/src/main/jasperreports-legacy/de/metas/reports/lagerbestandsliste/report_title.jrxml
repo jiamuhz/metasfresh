@@ -65,7 +65,7 @@ CASE WHEN $P{AD_Org_ID} = 0
 						key="textField-1"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement>
-						<font  size="14" isBold="true"/>
+						<font fontName="NotoSansSC" size="14" isBold="true"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$R{headline}]]></textFieldExpression>
 				</textField>

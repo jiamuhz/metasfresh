@@ -102,7 +102,7 @@ WHERE
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Center">
-					<font size="7" isBold="false" />
+					<font fontName="NotoSansSC" size="7" isBold="false" />
 				</textElement>
 				<textFieldExpression><![CDATA[$R{conditions}]]></textFieldExpression>
 			</textField>

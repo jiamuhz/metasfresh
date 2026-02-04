@@ -111,7 +111,7 @@ AND description.ad_language = $P{ad_language}
 						key="textField-4"/>
 					<box topBorder="None" topBorderColor="#000000" leftBorder="None" leftBorderColor="#000000" rightBorder="None" rightBorderColor="#000000" bottomBorder="None" bottomBorderColor="#000000"/>
 					<textElement textAlignment="Left">
-						<font size="12"/>
+						<font fontName="NotoSansSC" size="12"/>
 					</textElement>
 				<textFieldExpression   class="java.lang.String"><![CDATA[$F{printname}]]></textFieldExpression>
 				</textField>

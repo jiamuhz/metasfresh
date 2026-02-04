@@ -271,7 +271,7 @@
 			<textField pattern="#,##0.00">
 				<reportElement x="455" y="6" width="62" height="10" uuid="4cf80f1e-44c5-4e6f-9f28-db080e115bb2"/>
 				<textElement textAlignment="Right">
-					<font size="7" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$V{TotalAmt}]]></textFieldExpression>
 			</textField>

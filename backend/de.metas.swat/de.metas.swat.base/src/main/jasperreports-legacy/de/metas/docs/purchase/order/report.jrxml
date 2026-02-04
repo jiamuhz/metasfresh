@@ -180,7 +180,7 @@ ORDER BY source
 			<textField>
 				<reportElement uuid="467185a0-91d6-485b-9bc1-ad46d4fbfec9" x="54" y="237" width="100" height="13"/>
 				<textElement verticalAlignment="Bottom">
-					<font size="7" isUnderline="true"/>
+					<font fontName="NotoSansSC" size="7" isUnderline="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{deliverto}]]></textFieldExpression>
 			</textField>

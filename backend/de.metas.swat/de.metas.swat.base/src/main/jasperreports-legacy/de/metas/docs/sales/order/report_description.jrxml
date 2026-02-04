@@ -272,7 +272,7 @@ $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhe
 $F{cont_phone}!=null || $F{cont_fax}!=null || $F{cont_email}!=null)]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="10" isUnderline="false"/>
+					<font fontName="NotoSansSC" size="10" isUnderline="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{yourdata}]]></textFieldExpression>
 			</textField>

@@ -106,7 +106,7 @@ $P{ad_language}.equals("it_CH")?"Externe Belegnummer":
 			<staticText>
 				<reportElement uuid="44c496d6-bc82-4c9a-b96b-db76a659ebd7" key="textField-6" x="365" y="63" width="97" height="13" forecolor="#000000"/>
 				<textElement textAlignment="Left" markup="none">
-					<font size="10" isBold="true" isUnderline="true" />
+					<font fontName="NotoSansSC" size="10" isBold="true" isUnderline="true" />
 				</textElement>
 				<text><![CDATA[Lieferung an:]]></text>
 			</staticText>

@@ -683,7 +683,7 @@ order by
 					<printWhenExpression><![CDATA[$F{priceactual}.equals(null)?new Boolean(false):new Boolean(true)]]></printWhenExpression>
 				</reportElement>
 				<textElement textAlignment="Right">
-					<font size="7" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA["("]]></textFieldExpression>
 			</textField>
@@ -692,7 +692,7 @@ order by
 					<printWhenExpression><![CDATA[$F{priceactual}.equals(null)?new Boolean(false):new Boolean(true)]]></printWhenExpression>
 				</reportElement>
 				<textElement>
-					<font size="7" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[")"]]></textFieldExpression>
 			</textField>
@@ -722,7 +722,7 @@ order by
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="7" isItalic="true"/>
+					<font fontName="NotoSansSC" size="7" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{iso_code}]]></textFieldExpression>
 			</textField>
