@@ -148,7 +148,7 @@
 			<textField>
 				<reportElement key="textField-49" mode="Transparent" x="37" y="0" width="159" height="12" forecolor="#000000" uuid="7b20c88f-6657-48cf-8f46-787b751daa07"/>
 				<textElement markup="none">
-					<font size="9" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Carry}]]></textFieldExpression>
 			</textField>
@@ -370,7 +370,7 @@
 					<printWhenExpression><![CDATA[( $V{LINESUM_SUM}.intValue() > 0 ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{SubTotal}]]></textFieldExpression>
 			</textField>

@@ -126,7 +126,7 @@ where IsPrintWhenPackingMaterial='Y'
 			<textField>
 				<reportElement key="textField-49" mode="Transparent" x="37" y="0" width="160" height="12" forecolor="#000000" uuid="c50a3f35-35da-4916-ae0d-6685c72f1e5d"/>
 				<textElement markup="none">
-					<font size="9" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Carry}]]></textFieldExpression>
 			</textField>
@@ -231,7 +231,7 @@ where IsPrintWhenPackingMaterial='Y'
 					<printWhenExpression><![CDATA[( $V{LINESUM_SUM}.intValue() > 0 ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{SubTotal}]]></textFieldExpression>
 			</textField>

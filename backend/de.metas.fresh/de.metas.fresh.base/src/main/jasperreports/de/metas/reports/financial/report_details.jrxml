@@ -196,7 +196,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
@@ -209,7 +209,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
 				</textField>
@@ -282,7 +282,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{col_3}]]></textFieldExpression>
 				</textField>
@@ -295,7 +295,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{col_4}]]></textFieldExpression>
 				</textField>
@@ -308,7 +308,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{col_5}]]></textFieldExpression>
 				</textField>
@@ -321,7 +321,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{col_6}]]></textFieldExpression>
 				</textField>
@@ -334,7 +334,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{col_7}]]></textFieldExpression>
 				</textField>
@@ -347,7 +347,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
 				</textField>
@@ -360,7 +360,7 @@ ORDER BY
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 				</textField>
@@ -438,7 +438,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{description}]]></textFieldExpression>
 			</textField>
@@ -451,7 +451,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement>
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{name}]]></textFieldExpression>
 			</textField>
@@ -464,7 +464,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col_0}]]></textFieldExpression>
 			</textField>
@@ -477,7 +477,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col_1}]]></textFieldExpression>
 			</textField>
@@ -490,7 +490,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col_2}]]></textFieldExpression>
 			</textField>
@@ -503,7 +503,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col_3}]]></textFieldExpression>
 			</textField>
@@ -516,7 +516,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col_4}]]></textFieldExpression>
 			</textField>
@@ -529,7 +529,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col_5}]]></textFieldExpression>
 			</textField>
@@ -542,7 +542,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col_6}]]></textFieldExpression>
 			</textField>
@@ -555,7 +555,7 @@ ORDER BY
 					<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 				</box>
 				<textElement textAlignment="Right">
-					<font size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" />
+					<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{col_7}]]></textFieldExpression>
 			</textField>

@@ -183,7 +183,7 @@ order by world.value, world.ProduktNr, world.lieferbar desc
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="true" />
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$V{total_sum}]]></textFieldExpression>
 				</textField>
@@ -198,7 +198,7 @@ order by world.value, world.ProduktNr, world.lieferbar desc
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="true" />
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}]]></textFieldExpression>
 				</textField>
@@ -211,7 +211,7 @@ order by world.value, world.ProduktNr, world.lieferbar desc
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="true" />
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<text><![CDATA[Summe:]]></text>
 				</staticText>
@@ -224,7 +224,7 @@ order by world.value, world.ProduktNr, world.lieferbar desc
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="true" />
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}]]></textFieldExpression>
 				</textField>
@@ -237,7 +237,7 @@ order by world.value, world.ProduktNr, world.lieferbar desc
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="true" />
+						<font fontName="NotoSansSC" size="8" isBold="true"/>
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$P{Kundenliste}.equals("N")&&$P{Liefermenge}.equals("Y")? 
 $V{total_sum}: $V{total_sum_plan}]]></textFieldExpression>

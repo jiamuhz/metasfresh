@@ -126,14 +126,14 @@ group by
 				<textField evaluationTime="Group" evaluationGroup="land">
 					<reportElement x="503" y="0" width="21" height="15" uuid="a175ea83-5d47-42ef-ac67-5dd84501e5ff"/>
 					<textElement textAlignment="Right">
-						<font isItalic="true"/>
+						<font fontName="NotoSansSC" isItalic="true"/>
 					</textElement>
 					<textFieldExpression><![CDATA[$V{land_COUNT}]]></textFieldExpression>
 				</textField>
 				<staticText>
 					<reportElement x="373" y="0" width="131" height="15" uuid="4528ff21-0024-4da2-9a33-e9a09096aeb3"/>
 					<textElement>
-						<font isItalic="true"/>
+						<font fontName="NotoSansSC" isItalic="true"/>
 					</textElement>
 					<text><![CDATA[versendete Pakete pro Land:]]></text>
 				</staticText>

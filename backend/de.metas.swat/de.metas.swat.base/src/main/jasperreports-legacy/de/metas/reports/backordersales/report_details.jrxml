@@ -183,7 +183,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement>
-						<font size="8" isBold="false" isItalic="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{produktnr} + " " + $F{produktname}]]></textFieldExpression>
 				</textField>
@@ -196,7 +196,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false"/>
 					</textElement>
 					<textFieldExpression class="java.math.BigDecimal"><![CDATA[$F{einkaufspreis}]]></textFieldExpression>
 				</textField>
@@ -274,7 +274,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false"/>
 					</textElement>
 					<textFieldExpression class="java.lang.String"><![CDATA[$F{currency}+"/Stk(EK.)"]]></textFieldExpression>
 				</textField>
@@ -294,7 +294,7 @@ order by world.Produktnr, world.KundenNr
 						<rightPen lineWidth="0.0" lineStyle="Solid" lineColor="#000000"/>
 					</box>
 					<textElement textAlignment="Right">
-						<font size="8" isBold="false" isItalic="false" />
+						<font fontName="NotoSansSC" size="8" isBold="false" isItalic="false"/>
 					</textElement>
 					<text><![CDATA[Summe:]]></text>
 				</staticText>

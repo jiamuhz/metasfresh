@@ -122,7 +122,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Details_ConcreteADR( $
 			<textField>
 				<reportElement key="textField-49" mode="Transparent" x="37" y="0" width="150" height="12" forecolor="#000000" uuid="5532d787-c1b7-4b0e-b779-d47279aa279f"/>
 				<textElement markup="none">
-					<font size="9" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{Carry}]]></textFieldExpression>
 			</textField>
@@ -263,7 +263,7 @@ FROM 	de_metas_endcustomer_fresh_reports.Docs_Sales_InOut_Details_ConcreteADR( $
 					<printWhenExpression><![CDATA[( $V{LINESUM_SUM}.intValue() > 0 ? new Boolean(true) : new Boolean(false))]]></printWhenExpression>
 				</reportElement>
 				<textElement markup="none">
-					<font size="9" isItalic="true" />
+					<font fontName="NotoSansSC" size="9" isItalic="true"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$R{SubTotal}]]></textFieldExpression>
 			</textField>
