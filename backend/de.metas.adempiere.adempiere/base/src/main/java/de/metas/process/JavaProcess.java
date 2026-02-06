@@ -647,6 +647,7 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 	abstract protected String doIt() throws Exception;
 
 	/**
+	 * 后处理
 	 * Post process actions (outside trx). Please note that at this point the transaction is committed so you can't rollback. This method is useful if you need to do some custom work when the process
 	 * complete the work (e.g. open some windows).
 	 *
