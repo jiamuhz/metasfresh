@@ -203,7 +203,7 @@ public class PPCostCollectorBL implements IPPCostCollectorBL
 		final Quantity qtyScrapConv = uomConversionBL.convertQuantityTo(request.getQtyScrap(), conversionCtx, bomLineUOM);
 		final Quantity qtyRejectConv = uomConversionBL.convertQuantityTo(request.getQtyReject(), conversionCtx, bomLineUOM);
 
-		return createCollector(
+		return createAndCompleteCostCollector(
 				CostCollectorCreateRequest.builder()
 						.costCollectorType(costCollectorType)
 						.order(order)
@@ -281,7 +281,7 @@ public class PPCostCollectorBL implements IPPCostCollectorBL
 		final LocatorId locatorId = candidate.getLocatorId();
 		final AttributeSetInstanceId asiId = candidate.getAttributeSetInstanceId();
 
-		return createCollector(
+		return createAndCompleteCostCollector(
 				CostCollectorCreateRequest.builder()
 						.costCollectorType(CostCollectorType.MaterialReceipt)
 						.order(order)
@@ -365,7 +365,7 @@ public class PPCostCollectorBL implements IPPCostCollectorBL
 
 		final PPOrderRoutingActivity orderActivity = request.getOrderActivity();
 
-		createCollector(
+		createAndCompleteCostCollector(
 				CostCollectorCreateRequest.builder()
 						.costCollectorType(CostCollectorType.ActivityControl)
 						.order(order)
@@ -423,7 +423,7 @@ public class PPCostCollectorBL implements IPPCostCollectorBL
 		final LocatorId locatorId = warehouseDAO.getLocatorIdByRepoIdOrNull(locatorRepoId);
 
 		//
-		createCollector(
+		createAndCompleteCostCollector(
 				CostCollectorCreateRequest.builder()
 						.costCollectorType(CostCollectorType.UsageVariance)
 						.order(ppOrder)
@@ -468,7 +468,7 @@ public class PPCostCollectorBL implements IPPCostCollectorBL
 			return;
 		}
 		//
-		createCollector(CostCollectorCreateRequest.builder()
+		createAndCompleteCostCollector(CostCollectorCreateRequest.builder()
 				.costCollectorType(CostCollectorType.UsageVariance)
 				.order(ppOrder)
 				.productId(mainProductId)
@@ -556,7 +556,7 @@ public class PPCostCollectorBL implements IPPCostCollectorBL
 	 * Create & Complete Cost Collector
 	 */
 	@NonNull
-	private I_PP_Cost_Collector createCollector(@NonNull final CostCollectorCreateRequest request)
+	private I_PP_Cost_Collector createAndCompleteCostCollector(@NonNull final CostCollectorCreateRequest request)
 	{
 		trxManager.assertThreadInheritedTrxExists();
 
