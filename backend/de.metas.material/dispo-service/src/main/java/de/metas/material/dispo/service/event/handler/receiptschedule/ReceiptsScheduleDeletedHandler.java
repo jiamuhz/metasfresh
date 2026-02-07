@@ -4,7 +4,7 @@ import ch.qos.logback.classic.Level;
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
 import de.metas.logging.LogManager;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
@@ -72,7 +72,7 @@ public class ReceiptsScheduleDeletedHandler
 	public void handleEvent(@NonNull final ReceiptScheduleDeletedEvent event)
 	{
 		final CandidatesQuery query = ReceiptsScheduleHandlerUtil.queryByReceiptScheduleId(event);
-		final Candidate candidateToDelete = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(query);
+		final MDCandidate candidateToDelete = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(query);
 		if (candidateToDelete == null)
 		{
 			Loggables.withLogger(logger, Level.DEBUG).addLog("No deletable candidate found; query={}", query);

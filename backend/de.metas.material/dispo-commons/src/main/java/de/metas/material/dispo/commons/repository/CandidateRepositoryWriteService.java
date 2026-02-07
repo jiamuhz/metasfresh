@@ -5,11 +5,10 @@ import com.google.common.base.Preconditions;
 import de.metas.bpartner.BPartnerId;
 import de.metas.common.util.CoalesceUtil;
 import de.metas.common.util.IdConstants;
-import de.metas.common.util.StringUtils;
 import de.metas.document.dimension.Dimension;
 import de.metas.document.dimension.DimensionService;
 import de.metas.document.engine.DocStatus;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.TransactionDetail;
@@ -119,8 +118,8 @@ public class CandidateRepositoryWriteService
 	/**
 	 * Stores the given {@code candidate}.
 	 * If there is already an existing candidate in the store, it is loaded, its fields are updated and the result is saved.<br>
-	 * To generally find out, which properties are used to search for an existing candidate, check out {@link CandidatesQuery#fromCandidate(Candidate, boolean)}
-	 * If the given {@code candidate} specifies a {@link Candidate#getSeqNo()}, then that value will be persisted, even if there is already a different value stored in the underlying {@link I_MD_Candidate} record.
+	 * To generally find out, which properties are used to search for an existing candidate, check out {@link CandidatesQuery#fromCandidate(MDCandidate, boolean)}
+	 * If the given {@code candidate} specifies a {@link MDCandidate#getSeqNo()}, then that value will be persisted, even if there is already a different value stored in the underlying {@link I_MD_Candidate} record.
 	 *
 	 * @return a candidate with
 	 * <ul>
@@ -131,15 +130,15 @@ public class CandidateRepositoryWriteService
 	 * <li>the quantity <b>delta</b> of the persisted data record before the update was made</li>
 	 * </ul>
 	 */
-	public SaveResult addOrUpdateOverwriteStoredSeqNo(@NonNull final Candidate candidate)
+	public SaveResult addOrUpdateOverwriteStoredSeqNo(@NonNull final MDCandidate candidate)
 	{
 		return addOrUpdate(candidate, false/* preserveExistingSeqNoAndParentId */);
 	}
 
 	/**
-	 * Similar to {@link #addOrUpdateOverwriteStoredSeqNo(Candidate)}, but the given {@code candidate}'s {@code seqNo} (if specified at all!) will only be persisted if none is stored yet.
+	 * Similar to {@link #addOrUpdateOverwriteStoredSeqNo(MDCandidate)}, but the given {@code candidate}'s {@code seqNo} (if specified at all!) will only be persisted if none is stored yet.
 	 */
-	public SaveResult addOrUpdatePreserveExistingSeqNo(@NonNull final Candidate candidate)
+	public SaveResult addOrUpdatePreserveExistingSeqNo(@NonNull final MDCandidate candidate)
 	{
 		return addOrUpdate(candidate, true);
 	}
@@ -147,14 +146,14 @@ public class CandidateRepositoryWriteService
 	/**
 	 * @param candidate candidate that we know does not exist, so there is no existing candidate to update
 	 */
-	public SaveResult add(@NonNull final Candidate candidate)
+	public SaveResult add(@NonNull final MDCandidate candidate)
 	{
 		return addOrUpdate(
 				CandidatesQuery.FALSE /*make sure we don't find anything to update*/,
 				candidate, false/*doesn't matter*/);
 	}
 
-	public SaveResult updateCandidateById(@NonNull final Candidate candidate)
+	public SaveResult updateCandidateById(@NonNull final MDCandidate candidate)
 	{
 		Check.errorIf(candidate.getId().isNull(), "The candidate parameter needs to have an id; candidate={}", candidate);
 		final CandidatesQuery query = CandidatesQuery.fromId(candidate.getId());
@@ -170,7 +169,7 @@ public class CandidateRepositoryWriteService
 		 * The saved candidate.
 		 */
 		@NonNull
-		Candidate candidate;
+		MDCandidate candidate;
 
 		@Nullable
 		DateAndSeqNo previousTime;
@@ -239,12 +238,12 @@ public class CandidateRepositoryWriteService
 		}
 
 		// TODO figure out if we really need this
-		public Candidate toCandidateWithQtyDelta()
+		public MDCandidate toCandidateWithQtyDelta()
 		{
 			return candidate.withQuantity(getQtyDelta());
 		}
 
-		public Candidate toCandidateWithUpdateInfo()
+		public MDCandidate toCandidateWithUpdateInfo()
 		{
 			return candidate.toBuilder()
 					.deltaQuantity(getQtyDelta())
@@ -253,7 +252,7 @@ public class CandidateRepositoryWriteService
 		}
 
 		/**
-		 * Convenience method that returns a new instance whose included {@link Candidate} has the given id.
+		 * Convenience method that returns a new instance whose included {@link MDCandidate} has the given id.
 		 */
 		public SaveResult withCandidateId(@Nullable final CandidateId candidateId)
 		{
@@ -279,7 +278,7 @@ public class CandidateRepositoryWriteService
 		}
 	}
 
-	private SaveResult addOrUpdate(@NonNull final Candidate candidate, final boolean preserveExistingSeqNoAndParentId)
+	private SaveResult addOrUpdate(@NonNull final MDCandidate candidate, final boolean preserveExistingSeqNoAndParentId)
 	{
 		final CandidatesQuery query = CandidatesQuery.fromCandidate(candidate, false/* includeParentId */);
 		return addOrUpdate(query, candidate, preserveExistingSeqNoAndParentId);
@@ -287,7 +286,7 @@ public class CandidateRepositoryWriteService
 
 	private SaveResult addOrUpdate(
 			@NonNull final CandidatesQuery singleCandidateQuery,
-			@NonNull final Candidate candidate,
+			@NonNull final MDCandidate candidate,
 			final boolean preserveExistingSeqNoAndParentId)
 	{
 		final I_MD_Candidate oldCandidateRecord = RepositoryCommons
@@ -334,7 +333,7 @@ public class CandidateRepositoryWriteService
 
 		addOrReplaceStockChangeDetail(candidate, syncedRecord);
 
-		final Candidate savedCandidate = createNewCandidateWithIdsFromRecord(candidate, syncedRecord);
+		final MDCandidate savedCandidate = createNewCandidateWithIdsFromRecord(candidate, syncedRecord);
 
 		// add a log message to be shown in the event log
 		final String verb = oldCandidateRecord == null ? "created" : "updated";
@@ -359,7 +358,7 @@ public class CandidateRepositoryWriteService
 	 */
 	private I_MD_Candidate updateOrCreateCandidateRecord(
 			@Nullable final I_MD_Candidate candidateRecord,
-			@NonNull final Candidate candidate,
+			@NonNull final MDCandidate candidate,
 			final boolean preserveExistingSeqNo)
 	{
 		Preconditions.checkState(
@@ -393,7 +392,7 @@ public class CandidateRepositoryWriteService
 	@VisibleForTesting
 	void updateCandidateRecordFromCandidate(
 			@NonNull final I_MD_Candidate candidateRecord,
-			@NonNull final Candidate candidate,
+			@NonNull final MDCandidate candidate,
 			final boolean preserveExistingSeqNo)
 	{
 		final MaterialDescriptor materialDescriptor = candidate.getMaterialDescriptor();
@@ -548,7 +547,7 @@ public class CandidateRepositoryWriteService
 	}
 
 	private void addOrReplaceProductionDetail(
-			@NonNull final Candidate candidate,
+			@NonNull final MDCandidate candidate,
 			@NonNull final I_MD_Candidate synchedRecord)
 	{
 		final ProductionDetail productionDetail = ProductionDetail.castOrNull(candidate.getBusinessCaseDetail());
@@ -596,7 +595,7 @@ public class CandidateRepositoryWriteService
 	}
 
 	private void addOrReplaceDistributionDetail(
-			@NonNull final Candidate candidate,
+			@NonNull final MDCandidate candidate,
 			@NonNull final I_MD_Candidate synchedRecord)
 	{
 		final DistributionDetail distributionDetail = DistributionDetail.castOrNull(candidate.getBusinessCaseDetail());
@@ -637,7 +636,7 @@ public class CandidateRepositoryWriteService
 	}
 
 	@VisibleForTesting
-	void addOrReplaceDemandDetail(@NonNull final Candidate candidate, @NonNull final I_MD_Candidate synchedRecord)
+	void addOrReplaceDemandDetail(@NonNull final MDCandidate candidate, @NonNull final I_MD_Candidate synchedRecord)
 	{
 		if (candidate.getDemandDetail() == null)
 		{
@@ -670,7 +669,7 @@ public class CandidateRepositoryWriteService
 	}
 
 	private void addOrReplacePurchaseDetail(
-			@NonNull final Candidate candidate,
+			@NonNull final MDCandidate candidate,
 			@NonNull final I_MD_Candidate synchedRecord)
 	{
 		final PurchaseDetail purchaseDetail = PurchaseDetail.castOrNull(candidate.getBusinessCaseDetail());
@@ -679,7 +678,7 @@ public class CandidateRepositoryWriteService
 
 	@VisibleForTesting
 	void addOrReplaceTransactionDetail(
-			@NonNull final Candidate candidate,
+			@NonNull final MDCandidate candidate,
 			@NonNull final I_MD_Candidate synchedRecord)
 	{
 		for (final TransactionDetail transactionDetail : candidate.getTransactionDetails())
@@ -728,7 +727,7 @@ public class CandidateRepositoryWriteService
 	}
 
 	private void addOrReplaceStockChangeDetail(
-			@NonNull final Candidate candidate,
+			@NonNull final MDCandidate candidate,
 			@NonNull final I_MD_Candidate synchedRecord)
 	{
 		final StockChangeDetail stockChangeDetail = StockChangeDetail.castOrNull(candidate.getBusinessCaseDetail());
@@ -738,8 +737,8 @@ public class CandidateRepositoryWriteService
   /**
    *  内存中 创建新的 Candidate 用 candidate 值 和 candidateRecord 值
    */
-	private Candidate createNewCandidateWithIdsFromRecord(
-			@NonNull final Candidate candidate,
+	private MDCandidate createNewCandidateWithIdsFromRecord(
+			@NonNull final MDCandidate candidate,
 			@NonNull final I_MD_Candidate candidateRecord)
 	{
 		return candidate

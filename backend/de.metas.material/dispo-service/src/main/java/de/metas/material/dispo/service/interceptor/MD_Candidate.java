@@ -24,7 +24,7 @@ package de.metas.material.dispo.service.interceptor;
 
 import de.metas.bpartner.BPartnerId;
 import de.metas.material.commons.attributes.clasifiers.BPartnerClassifier;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
 import de.metas.material.dispo.commons.repository.DateAndSeqNo;
@@ -86,7 +86,7 @@ public class MD_Candidate
 		{
 			final CandidatesQuery findPreviousStockQuery = buildCandidateStockQueryForReplacingOld(oldCandidateRecord);
 
-			final Candidate lastMatchingStockForOldMaterialDescriptor = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(findPreviousStockQuery);
+			final MDCandidate lastMatchingStockForOldMaterialDescriptor = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(findPreviousStockQuery);
 
 			final EventDescriptor eventDescriptor = EventDescriptor.ofClientAndOrg(oldCandidateRecord.getAD_Client_ID(), oldCandidateRecord.getAD_Org_ID());
 

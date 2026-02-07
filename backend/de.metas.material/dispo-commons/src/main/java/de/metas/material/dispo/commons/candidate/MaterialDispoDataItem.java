@@ -33,7 +33,7 @@ import java.math.BigDecimal;
 
 /**
  * Candidate model that consolidates a supply/demand candidate with the corresponding stock-candidate.
- * Right now i assume that this will eventually be the "normal" thing and replace the convoluted {@link Candidate}.
+ * Right now i assume that this will eventually be the "normal" thing and replace the convoluted {@link MDCandidate}.
  */
 @Value
 @Builder
@@ -58,8 +58,8 @@ public class MaterialDispoDataItem
 	boolean simulated;
 
 	public static MaterialDispoDataItem of(
-			@NonNull final Candidate dataCandidate,
-			@NonNull final Candidate stockCandidate)
+			@NonNull final MDCandidate dataCandidate,
+			@NonNull final MDCandidate stockCandidate)
 	{
 		return MaterialDispoDataItem.builder()
 				.materialDescriptor(dataCandidate.getMaterialDescriptor())

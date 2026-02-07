@@ -8,7 +8,7 @@ import de.metas.document.dimension.MDCandidateDimensionFactory;
 import de.metas.material.cockpit.view.ddorderdetail.DDOrderDetailRequestHandler;
 import de.metas.material.cockpit.view.mainrecord.MainDataRequestHandler;
 import de.metas.material.dispo.commons.RequestMaterialOrderService;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
@@ -202,7 +202,7 @@ public class SupplyProposalEvaluatorTests
 				.warehouseId(SUPPLY_WAREHOUSE_ID)
 				.build();
 
-		final Candidate supplyCandidate = Candidate.builder()
+		final MDCandidate supplyCandidate = MDCandidate.builder()
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.additionalDemandDetail(createDemandDetail())
 				.type(CandidateType.SUPPLY)
@@ -211,7 +211,7 @@ public class SupplyProposalEvaluatorTests
 				.materialDescriptor(supplyMaterialDescriptor)
 				.build();
 
-		final Candidate supplyCandidateWithId = candidateRepositoryCommands
+		final MDCandidate supplyCandidateWithId = candidateRepositoryCommands
 				.addOrUpdateOverwriteStoredSeqNo(supplyCandidate)
 				.getCandidate();
 
@@ -222,7 +222,7 @@ public class SupplyProposalEvaluatorTests
 				.quantity(BigDecimal.TEN)
 				.build();
 
-		final Candidate demandCandidate = Candidate.builder()
+		final MDCandidate demandCandidate = MDCandidate.builder()
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.parentId(supplyCandidateWithId.getId())
 				.type(CandidateType.DEMAND)

@@ -2,7 +2,7 @@ package de.metas.material.dispo.service.event.handler.ddorder;
 
 import java.util.List;
 
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
 import de.metas.material.dispo.commons.repository.query.CandidatesQuery;
 import de.metas.material.dispo.commons.repository.query.DistributionDetailsQuery;
@@ -34,7 +34,7 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public class DDOrderUtil
 {
-	public List<Candidate> retrieveCandidatesForDDOrderId(
+	public List<MDCandidate> retrieveCandidatesForDDOrderId(
 			@NonNull final CandidateRepositoryRetrieval candidateRepositoryRetrieval,
 			final int ddOrderId)
 	{
@@ -42,7 +42,7 @@ public class DDOrderUtil
 				.distributionDetailsQuery(DistributionDetailsQuery.builder()
 						.ddOrderId(ddOrderId).build())
 				.build();
-		final List<Candidate> candidatesToUpdate = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(query);
+		final List<MDCandidate> candidatesToUpdate = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(query);
 		return candidatesToUpdate;
 	}
 }

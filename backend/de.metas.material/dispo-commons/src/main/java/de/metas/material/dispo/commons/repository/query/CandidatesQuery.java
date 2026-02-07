@@ -1,7 +1,7 @@
 package de.metas.material.dispo.commons.repository.query;
 
 import de.metas.common.util.CoalesceUtil;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -64,7 +64,7 @@ public class CandidatesQuery
 	 * @param includeParentId if true, we include the given candidate's parent ID in the query.
 	 */
 	public static CandidatesQuery fromCandidate(
-			@NonNull final Candidate candidate,
+			@NonNull final MDCandidate candidate,
 			final boolean includeParentId)
 	{
 		if (!candidate.getId().isNull())
@@ -137,7 +137,7 @@ public class CandidatesQuery
 	}
 
 	/**
-	 * If set, then this query is about {@link Candidate}s that have a parent candidate which matches the given material descriptor.
+	 * If set, then this query is about {@link MDCandidate}s that have a parent candidate which matches the given material descriptor.
 	 */
 	MaterialDescriptorQuery parentMaterialDescriptorQuery;
 

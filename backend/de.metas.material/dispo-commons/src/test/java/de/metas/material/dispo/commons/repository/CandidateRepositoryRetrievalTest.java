@@ -4,7 +4,7 @@ import de.metas.common.util.time.SystemTime;
 import de.metas.document.dimension.DimensionFactory;
 import de.metas.document.dimension.DimensionService;
 import de.metas.document.dimension.MDCandidateDimensionFactory;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.repository.repohelpers.StockChangeDetailRepo;
 import de.metas.material.dispo.model.I_MD_Candidate;
 import de.metas.material.dispo.model.I_MD_Candidate_Prod_Detail;
@@ -85,7 +85,7 @@ public class CandidateRepositoryRetrievalTest
 		relatedProductionDetail.setMD_Candidate(candidateWithRelatedProdDetail);
 		save(relatedProductionDetail);
 
-		final List<Candidate> result = candidateRepositoryRetrieval.retrieveCandidatesForPPOrderId(23);
+		final List<MDCandidate> result = candidateRepositoryRetrieval.retrieveCandidatesForPPOrderId(23);
 		assertThat(result).hasSize(1);
 		assertThat(result.get(0).getId().getRepoId()).isEqualTo(relatedProductionDetail.getMD_Candidate_ID());
 	}

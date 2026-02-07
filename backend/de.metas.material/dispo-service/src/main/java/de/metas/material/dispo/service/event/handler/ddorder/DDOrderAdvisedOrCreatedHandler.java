@@ -3,8 +3,8 @@ package de.metas.material.dispo.service.event.handler.ddorder;
 import com.google.common.collect.ImmutableSet;
 import de.metas.material.cockpit.view.ddorderdetail.DDOrderDetailRequestHandler;
 import de.metas.material.cockpit.view.mainrecord.MainDataRequestHandler;
-import de.metas.material.dispo.commons.candidate.Candidate;
-import de.metas.material.dispo.commons.candidate.Candidate.CandidateBuilder;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate.MDCandidateBuilder;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
@@ -166,7 +166,7 @@ public abstract class DDOrderAdvisedOrCreatedHandler<T extends AbstractDDOrderEv
 		final String lotForLot = supplyRequiredDescriptor == null ? "" : supplyRequiredDescriptor.getIsLotForLot();
 
 		// create or update the supply candidate
-		final Candidate supplyCandidate = createSupplyCandidateBuilder(ddOrderEvent, ddOrderLine)
+		final MDCandidate supplyCandidate = createSupplyCandidateBuilder(ddOrderEvent, ddOrderLine)
 				.type(CandidateType.SUPPLY)
 				.businessCase(CandidateBusinessCase.DISTRIBUTION)
 				// .status(candidateStatus)
@@ -177,7 +177,7 @@ public abstract class DDOrderAdvisedOrCreatedHandler<T extends AbstractDDOrderEv
 				.lotForLot(lotForLot)
 				.build();
 
-		final Candidate supplyCandidateWithId = candidateChangeHandler.onCandidateNewOrChange(supplyCandidate);
+		final MDCandidate supplyCandidateWithId = candidateChangeHandler.onCandidateNewOrChange(supplyCandidate);
 
 		// create  or update the demand candidate
 
@@ -188,7 +188,7 @@ public abstract class DDOrderAdvisedOrCreatedHandler<T extends AbstractDDOrderEv
 
 		final MaterialDescriptor demandMaterialDescriptor = createDemandMaterialDescriptor(ddOrderEvent, ddOrderLine);
 
-		final Candidate demandCandidate = createDemandCandidateBuilder(ddOrderEvent, ddOrderLine)
+		final MDCandidate demandCandidate = createDemandCandidateBuilder(ddOrderEvent, ddOrderLine)
 				.type(CandidateType.DEMAND)
 				.groupId(groupId)
 				.parentId(supplyCandidateWithId.getId())
@@ -204,7 +204,7 @@ public abstract class DDOrderAdvisedOrCreatedHandler<T extends AbstractDDOrderEv
 				.build();
 
 		// this might cause 'candidateChangeHandler' to trigger another event
-		final Candidate demandCandidateWithId = candidateChangeHandler.onCandidateNewOrChange(demandCandidate);
+		final MDCandidate demandCandidateWithId = candidateChangeHandler.onCandidateNewOrChange(demandCandidate);
 
 		final int seqNoOfDemand = demandCandidateWithId.getSeqNo();
 		if (expectedSeqNoForDemandCandidate != seqNoOfDemand)
@@ -212,7 +212,7 @@ public abstract class DDOrderAdvisedOrCreatedHandler<T extends AbstractDDOrderEv
 			// update/override the SeqNo of both supplyCandidate and supplyCandidate's stock candidate.
 			candidateRepositoryWrite.updateCandidateById(supplyCandidateWithId.withSeqNo(seqNoOfDemand - 1));
 
-			final Candidate parentOfSupplyCandidate = candidateRepositoryRetrieval
+			final MDCandidate parentOfSupplyCandidate = candidateRepositoryRetrieval
 					.retrieveLatestMatchOrNull(CandidatesQuery.fromId(supplyCandidateWithId.getParentId()));
 			candidateRepositoryWrite.updateCandidateById(parentOfSupplyCandidate.withSeqNo(seqNoOfDemand - 2));
 		}
@@ -225,32 +225,32 @@ public abstract class DDOrderAdvisedOrCreatedHandler<T extends AbstractDDOrderEv
 		return groupId;
 	}
 
-	private CandidateBuilder createDemandCandidateBuilder(final AbstractDDOrderEvent ddOrderEvent, final DDOrderLine ddOrderLine)
+	private MDCandidateBuilder createDemandCandidateBuilder(final AbstractDDOrderEvent ddOrderEvent, final DDOrderLine ddOrderLine)
 	{
 		final CandidatesQuery preExistingDemandQuery = createPreExistingCandidatesQuery(
 				ddOrderEvent,
 				ddOrderLine,
 				CandidateType.DEMAND);
-		final Candidate existingDemandCandidateOrNull = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(preExistingDemandQuery);
+		final MDCandidate existingDemandCandidateOrNull = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(preExistingDemandQuery);
 
-		final CandidateBuilder demandCandidateBuilder = existingDemandCandidateOrNull != null
+		final MDCandidateBuilder demandCandidateBuilder = existingDemandCandidateOrNull != null
 				? existingDemandCandidateOrNull.toBuilder()
-				: Candidate.builderForEventDescr(ddOrderEvent.getEventDescriptor());
+				: MDCandidate.builderForEventDescr(ddOrderEvent.getEventDescriptor());
 		return demandCandidateBuilder;
 	}
 
-	private CandidateBuilder createSupplyCandidateBuilder(final AbstractDDOrderEvent ddOrderEvent, final DDOrderLine ddOrderLine)
+	private MDCandidateBuilder createSupplyCandidateBuilder(final AbstractDDOrderEvent ddOrderEvent, final DDOrderLine ddOrderLine)
 	{
 		final CandidatesQuery preExistingSupplyQuery = createPreExistingCandidatesQuery(
 				ddOrderEvent,
 				ddOrderLine,
 				CandidateType.SUPPLY);
-		final Candidate existingSupplyCandidateOrNull = candidateRepositoryRetrieval
+		final MDCandidate existingSupplyCandidateOrNull = candidateRepositoryRetrieval
 				.retrieveLatestMatchOrNull(preExistingSupplyQuery);
 
-		final CandidateBuilder supplyCandidateBuilder = existingSupplyCandidateOrNull != null
+		final MDCandidateBuilder supplyCandidateBuilder = existingSupplyCandidateOrNull != null
 				? existingSupplyCandidateOrNull.toBuilder()
-				: Candidate.builderForEventDescr(ddOrderEvent.getEventDescriptor());
+				: MDCandidate.builderForEventDescr(ddOrderEvent.getEventDescriptor());
 		return supplyCandidateBuilder;
 	}
 

@@ -24,7 +24,7 @@ package de.metas.material.dispo.service.event.handler.ppordercandidate;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
 import de.metas.material.dispo.commons.repository.query.CandidatesQuery;
 import de.metas.material.dispo.commons.repository.query.ProductionDetailsQuery;
@@ -61,7 +61,7 @@ public class PPOrderCandidateUpdatedEventHandler extends PPOrderCandidateEventHa
 	{
 		final CandidatesQuery preExistingHeaderSupplyQuery = createPreExistingHeaderSupplyCandidateQuery(event);
 
-		final Candidate headerCandidate = createHeaderCandidate(event, preExistingHeaderSupplyQuery);
+		final MDCandidate headerCandidate = createHeaderCandidate(event, preExistingHeaderSupplyQuery);
 
 		final MaterialDispoGroupId groupId = event.getPpOrderCandidate().getPpOrderData().getMaterialDispoGroupId();
 

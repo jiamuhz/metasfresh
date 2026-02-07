@@ -3,7 +3,7 @@ package de.metas.material.dispo.service.candidatechange.handler;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryWriteService;
@@ -77,8 +77,8 @@ public class StockUpCandiateHandler implements CandidateHandler
 	}
 
 	@Override
-	public Candidate onCandidateNewOrChange(
-			@NonNull final Candidate candidate,
+	public MDCandidate onCandidateNewOrChange(
+			@NonNull final MDCandidate candidate,
 			@NonNull final OnNewOrChangeAdvise advise)
 	{
 		if (!advise.isAttemptUpdate())
@@ -92,7 +92,7 @@ public class StockUpCandiateHandler implements CandidateHandler
 
 		final SaveResult candidateSaveResult = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(candidate);
-		final Candidate candidateWithQtyDeltaAndId = candidateSaveResult.toCandidateWithQtyDelta();
+		final MDCandidate candidateWithQtyDeltaAndId = candidateSaveResult.toCandidateWithQtyDelta();
 
 		if (!candidateSaveResult.isQtyChanged() && !candidateSaveResult.isDateChanged())
 		{
@@ -117,7 +117,7 @@ public class StockUpCandiateHandler implements CandidateHandler
 	}
 
 	@Override
-	public void onCandidateDelete(@NonNull final Candidate candidate)
+	public void onCandidateDelete(@NonNull final MDCandidate candidate)
 	{
 		assertCorrectCandidateType(candidate);
 
@@ -125,7 +125,7 @@ public class StockUpCandiateHandler implements CandidateHandler
 		deleteCandidateFunc.apply(candidate.getId());
 	}
 
-	private void assertCorrectCandidateType(@NonNull final Candidate candidate)
+	private void assertCorrectCandidateType(@NonNull final MDCandidate candidate)
 	{
 		Preconditions.checkArgument(candidate.getType() == CandidateType.STOCK_UP,
 									"Given parameter 'candidate' has type=%s; demandCandidate=%s",

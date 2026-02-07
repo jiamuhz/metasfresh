@@ -2,7 +2,7 @@ package de.metas.material.dispo.service.candidatechange.handler;
 
 import com.google.common.base.Preconditions;
 import de.metas.common.util.IdConstants;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -47,7 +47,7 @@ public class SupplyRequiredEventCreator
 {
 	@NonNull
 	public static SupplyRequiredEvent createSupplyRequiredEvent(
-			@NonNull final Candidate demandCandidate,
+			@NonNull final MDCandidate demandCandidate,
 			@NonNull final BigDecimal requiredAdditionalQty,
 			@Nullable final CandidateId supplyCandidateId)
 	{
@@ -63,7 +63,7 @@ public class SupplyRequiredEventCreator
 				.build();
 	}
 
-	private static void verifyCandidateType(final Candidate demandCandidate)
+	private static void verifyCandidateType(final MDCandidate demandCandidate)
 	{
 		final CandidateType candidateType = demandCandidate.getType();
 		Preconditions.checkArgument(candidateType == CandidateType.DEMAND || candidateType == CandidateType.STOCK_UP,
@@ -72,7 +72,7 @@ public class SupplyRequiredEventCreator
 
 	@NonNull
 	private static SupplyRequiredDescriptor createSupplyRequiredDescriptor(
-			@NonNull final Candidate demandCandidate,
+			@NonNull final MDCandidate demandCandidate,
 			@NonNull final BigDecimal requiredAdditionalQty,
 			@Nullable final CandidateId supplyCandidateId)
 	{
@@ -117,7 +117,7 @@ public class SupplyRequiredEventCreator
 
 	@NonNull
 	private static SupplyRequiredDescriptorBuilder createAndInitSupplyRequiredDescriptor(
-			@NonNull final Candidate candidate,
+			@NonNull final MDCandidate candidate,
 			@NonNull final BigDecimal qty)
 	{
 		final String traceId = Optional.ofNullable(candidate.getDemandDetail()).map(DemandDetail::getTraceId).orElse(null);

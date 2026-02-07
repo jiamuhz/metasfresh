@@ -6,7 +6,7 @@ import de.metas.document.dimension.DimensionService;
 import de.metas.document.dimension.MDCandidateDimensionFactory;
 import de.metas.material.dispo.commons.DispoTestUtils;
 import de.metas.material.dispo.commons.RepositoryTestHelper;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -180,13 +180,13 @@ public class CandidateChangeHandlerTests
 			}
 
 			@Override
-			public Candidate onCandidateNewOrChange(Candidate candidate, OnNewOrChangeAdvise advise)
+			public MDCandidate onCandidateNewOrChange(MDCandidate candidate, OnNewOrChangeAdvise advise)
 			{
 				throw new UnsupportedOperationException();
 			}
 
 			@Override
-			public void onCandidateDelete(Candidate candidate)
+			public void onCandidateDelete(MDCandidate candidate)
 			{
 				throw new UnsupportedOperationException();
 			}
@@ -200,9 +200,9 @@ public class CandidateChangeHandlerTests
 	@Test
 	public void applyDeltaToMatchingLaterStockCandidates()
 	{
-		final Candidate earlierCandidate;
-		final Candidate evenLaterCandidate;
-		final Candidate evenLaterCandidateWithDifferentWarehouse;
+		final MDCandidate earlierCandidate;
+		final MDCandidate evenLaterCandidate;
+		final MDCandidate evenLaterCandidateWithDifferentWarehouse;
 
 		// preparations
 		{
@@ -211,7 +211,7 @@ public class CandidateChangeHandlerTests
 			final MaterialDescriptor earlierMaterialDescriptor = materialDescriptor.withDate(t1);
 
 			earlierCandidate = candidateRepositoryCommands
-					.addOrUpdateOverwriteStoredSeqNo(Candidate.builder()
+					.addOrUpdateOverwriteStoredSeqNo(MDCandidate.builder()
 															 .type(CandidateType.STOCK)
 															 .clientAndOrgId(CLIENT_AND_ORG_ID)
 															 .materialDescriptor(earlierMaterialDescriptor)
@@ -220,7 +220,7 @@ public class CandidateChangeHandlerTests
 
 			final MaterialDescriptor laterMaterialDescriptor = materialDescriptor.withDate(t3);
 
-			final Candidate laterCandidate = Candidate.builder()
+			final MDCandidate laterCandidate = MDCandidate.builder()
 					.type(CandidateType.STOCK)
 					.clientAndOrgId(CLIENT_AND_ORG_ID)
 					.materialDescriptor(laterMaterialDescriptor)
@@ -231,7 +231,7 @@ public class CandidateChangeHandlerTests
 					.withQuantity(new BigDecimal("12"))
 					.withDate(t4);
 
-			evenLaterCandidate = Candidate.builder()
+			evenLaterCandidate = MDCandidate.builder()
 					.type(CandidateType.STOCK)
 					.clientAndOrgId(CLIENT_AND_ORG_ID)
 					.materialDescriptor(evenLatermaterialDescriptor)
@@ -241,7 +241,7 @@ public class CandidateChangeHandlerTests
 			final MaterialDescriptor evenLatermaterialDescrWithDifferentWarehouse = evenLatermaterialDescriptor
 					.withWarehouseId(OTHER_WAREHOUSE_ID);
 
-			evenLaterCandidateWithDifferentWarehouse = Candidate.builder()
+			evenLaterCandidateWithDifferentWarehouse = MDCandidate.builder()
 					.type(CandidateType.STOCK)
 					.clientAndOrgId(CLIENT_AND_ORG_ID)
 					.materialDescriptor(evenLatermaterialDescrWithDifferentWarehouse)
@@ -256,7 +256,7 @@ public class CandidateChangeHandlerTests
 				.date(t2)
 				.quantity(THREE)
 				.build();
-		final Candidate candidateWithDelta = Candidate.builder()
+		final MDCandidate candidateWithDelta = MDCandidate.builder()
 				.type(CandidateType.STOCK)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescriptor)
@@ -266,7 +266,7 @@ public class CandidateChangeHandlerTests
 		// assert that every stock record got some groupId
 		assertThat(DispoTestUtils.retrieveAllRecords()).allSatisfy(r -> assertThatModel(r).hasValueGreaterThanZero(I_MD_Candidate.COLUMN_MD_Candidate_GroupId));
 		{
-			final Candidate earlierCandidateAfterChange = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(mkQueryForStockUntilDate(t1, WAREHOUSE_ID));
+			final MDCandidate earlierCandidateAfterChange = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(mkQueryForStockUntilDate(t1, WAREHOUSE_ID));
 			assertThat(earlierCandidateAfterChange).as("Expected canddiate with Date=<%s> and warehouseId=<%s> to exist", t1, WAREHOUSE_ID).isNotNull();
 			assertThat(earlierCandidateAfterChange.getQuantity()).isEqualTo(earlierCandidate.getQuantity()); // quantity shall be unchanged
 			assertThat(earlierCandidateAfterChange.getGroupId()).isEqualTo(earlierCandidate.getGroupId()); // basically the same candidate
@@ -276,7 +276,7 @@ public class CandidateChangeHandlerTests
 			assertThat(candidateRecordAfterChange.getMD_Candidate_GroupId()).isNotEqualTo(earlierCandidate.getGroupId());
 		}
 		{
-			final Candidate laterCandidateAfterChange = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(mkQueryForStockUntilDate(t3, WAREHOUSE_ID));
+			final MDCandidate laterCandidateAfterChange = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(mkQueryForStockUntilDate(t3, WAREHOUSE_ID));
 			assertThat(laterCandidateAfterChange).isNotNull();
 			assertThat(laterCandidateAfterChange.getQuantity()).isEqualByComparingTo("13"); // quantity shall be plus 3
 			assertThat(laterCandidateAfterChange.getGroupId()).isEqualTo(earlierCandidate.getGroupId());
@@ -555,7 +555,7 @@ public class CandidateChangeHandlerTests
 	{
 		createAndAddDemandWithQtyAndDemandDetail(THIRTEEN, BEFORE_BEFORE_NOW, 20);
 		createAndAddDemandWithQtyAndDemandDetail(SEVENTEEN, NOW, 30);
-		final Candidate supplyCandidate = createAndAddSupplyWithQtyAndDemandDetail(THIRTYFIVE, AFTER_NOW, 40);
+		final MDCandidate supplyCandidate = createAndAddSupplyWithQtyAndDemandDetail(THIRTYFIVE, AFTER_NOW, 40);
 
 		{ // guards prior to the actual test
 			final List<I_MD_Candidate> allSupplyCandidates = DispoTestUtils.filter(CandidateType.SUPPLY);
@@ -580,7 +580,7 @@ public class CandidateChangeHandlerTests
 
 		// this is more or less what our transaction-event-handlers do: load an existing candidate, update it and store it.
 		// change the time of the supply candidate with AFTER_NOW to BEFORE_NOW
-		final Candidate candidate = supplyCandidate.toBuilder()
+		final MDCandidate candidate = supplyCandidate.toBuilder()
 				.materialDescriptor(supplyCandidate.getMaterialDescriptor().withDate(BEFORE_NOW))
 				.transactionDetail(TransactionDetail.builder()
 										   .transactionId(50)
@@ -615,7 +615,7 @@ public class CandidateChangeHandlerTests
 	{
 		createAndAddSupplyWithQtyAndDemandDetail(THIRTEEN, BEFORE_BEFORE_NOW, 20);
 		createAndAddSupplyWithQtyAndDemandDetail(SEVENTEEN, NOW, 30);
-		final Candidate supplyCandidate = createAndAddDemandWithQtyAndDemandDetail(THIRTYFIVE, AFTER_NOW, 40);
+		final MDCandidate supplyCandidate = createAndAddDemandWithQtyAndDemandDetail(THIRTYFIVE, AFTER_NOW, 40);
 
 		{ // guards prior to the actual test
 			final List<I_MD_Candidate> allDemandCandidates = DispoTestUtils.filter(CandidateType.DEMAND);
@@ -640,7 +640,7 @@ public class CandidateChangeHandlerTests
 
 		// this is more or less what our transaction-event-handlers do: load an existing candidate, update it and store it.
 		// change the time of the supply candidate with AFTER_NOW to BEFORE_NOW
-		final Candidate candidate = supplyCandidate.toBuilder()
+		final MDCandidate candidate = supplyCandidate.toBuilder()
 				.materialDescriptor(supplyCandidate.getMaterialDescriptor().withDate(BEFORE_NOW))
 				.transactionDetail(TransactionDetail.builder()
 										   .transactionId(50)
@@ -679,7 +679,7 @@ public class CandidateChangeHandlerTests
 		createAndAddDemandWithQtyAndDemandDetail(qty, NOW, shipmentScheduleIdForDemandDetail);
 	}
 
-	private Candidate createAndAddDemandWithQtyAndDemandDetail(
+	private MDCandidate createAndAddDemandWithQtyAndDemandDetail(
 			@NonNull final BigDecimal qty,
 			@NonNull final Instant date,
 			final int shipmentScheduleIdForDemandDetail)
@@ -691,7 +691,7 @@ public class CandidateChangeHandlerTests
 				materialDescr,
 				"0");
 
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.type(CandidateType.DEMAND)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescr)
@@ -719,21 +719,21 @@ public class CandidateChangeHandlerTests
 		return materialDescr;
 	}
 
-	private Candidate createAndAddSupplyWithQtyAndDemandDetail(
+	private MDCandidate createAndAddSupplyWithQtyAndDemandDetail(
 			@NonNull final BigDecimal qty,
 			final int shipmentScheduleIdForDemandDetail)
 	{
 		return createAndAddSupplyWithQtyAndDemandDetail(qty, NOW, shipmentScheduleIdForDemandDetail);
 	}
 
-	private Candidate createAndAddSupplyWithQtyAndDemandDetail(
+	private MDCandidate createAndAddSupplyWithQtyAndDemandDetail(
 			@NonNull final BigDecimal qty,
 			@NonNull final Instant date,
 			final int receiptScheduleIdForSupplyDetail)
 	{
 		final MaterialDescriptor supplyMaterialDescriptor = createMaterialDescriptor(qty, date);
 
-		final Candidate supplyCandidate = Candidate.builder()
+		final MDCandidate supplyCandidate = MDCandidate.builder()
 				.type(CandidateType.SUPPLY)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(supplyMaterialDescriptor)

@@ -3,7 +3,7 @@ package de.metas.material.dispo.service.event.handler.pporder;
 import com.google.common.collect.ImmutableList;
 import de.metas.common.util.time.SystemTime;
 import de.metas.document.engine.DocStatus;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.Flag;
@@ -75,7 +75,7 @@ public class PPOrderChangedHandlerTest
 	public void handleEvent()
 	{
 		// setup a candidate to be updated
-		final Candidate candidateToUpdate = Candidate.builder()
+		final MDCandidate candidateToUpdate = MDCandidate.builder()
 				.clientAndOrgId(ClientAndOrgId.ofClientAndOrg(1, 1))
 				// .status(CandidateStatus.doc_closed)
 				.type(CandidateType.DEMAND)
@@ -118,10 +118,10 @@ public class PPOrderChangedHandlerTest
 
 		//
 		// verify the updated candidate created by the handler
-		final ArgumentCaptor<Candidate> updatedCandidateCaptor = ArgumentCaptor.forClass(Candidate.class);
+		final ArgumentCaptor<MDCandidate> updatedCandidateCaptor = ArgumentCaptor.forClass(MDCandidate.class);
 		verify(candidateChangeService)
 				.onCandidateNewOrChange(updatedCandidateCaptor.capture());
-		final Candidate updatedCandidate = updatedCandidateCaptor.getValue();
+		final MDCandidate updatedCandidate = updatedCandidateCaptor.getValue();
 
 		assertThat(updatedCandidate.getQuantity()).isEqualByComparingTo(BigDecimal.TEN);
 

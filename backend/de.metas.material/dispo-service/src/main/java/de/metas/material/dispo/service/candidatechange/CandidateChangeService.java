@@ -4,7 +4,7 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableMap;
 import de.metas.Profiles;
 import de.metas.logging.LogManager;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.service.candidatechange.handler.CandidateHandler;
 import de.metas.material.dispo.service.candidatechange.handler.CandidateHandler.OnNewOrChangeAdvise;
@@ -56,7 +56,7 @@ public class CandidateChangeService
 		logger.info("Handlers: {}", type2handler);
 	}
 
-	public Candidate onCandidateNewOrChange(@NonNull final Candidate candidate)
+	public MDCandidate onCandidateNewOrChange(@NonNull final MDCandidate candidate)
 	{
 		return onCandidateNewOrChange(candidate, OnNewOrChangeAdvise.DEFAULT);
 	}
@@ -64,8 +64,8 @@ public class CandidateChangeService
 	/**
 	 * Persists the given candidate and decides if further events shall be fired.
 	 */
-	public Candidate onCandidateNewOrChange(
-			@NonNull final Candidate candidate,
+	public MDCandidate onCandidateNewOrChange(
+			@NonNull final MDCandidate candidate,
 			@NonNull final OnNewOrChangeAdvise advise)
 	{
 		candidate.validateNonStockCandidate();
@@ -74,7 +74,7 @@ public class CandidateChangeService
 		return candidateChangeHandler.onCandidateNewOrChange(candidate, advise);
 	}
 
-	public void onCandidateDelete(@NonNull final Candidate candidate)
+	public void onCandidateDelete(@NonNull final MDCandidate candidate)
 	{
 		candidate.validateNonStockCandidate();
 
@@ -82,7 +82,7 @@ public class CandidateChangeService
 		candidateChangeHandler.onCandidateDelete(candidate);
 	}
 
-	private CandidateHandler getHandlerFor(final Candidate candidate)
+	private CandidateHandler getHandlerFor(final MDCandidate candidate)
 	{
 		final CandidateHandler candidateChangeHandler = type2handler.get(candidate.getType());
 		if (candidateChangeHandler == null)

@@ -2,7 +2,7 @@ package de.metas.material.dispo.service.candidatechange;
 
 import de.metas.Profiles;
 import de.metas.material.commons.attributes.clasifiers.BPartnerClassifier;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
@@ -83,9 +83,9 @@ public class StockCandidateService
 	 * <li>groupId of the next younger-candidate (or null if there is none)
 	 * </ul>
 	 */
-	public SaveResult createStockCandidate(@NonNull final Candidate candidate)
+	public SaveResult createStockCandidate(@NonNull final MDCandidate candidate)
 	{
-		final Candidate previousStockOrNull = getPreviousStockForStockCreation(candidate);
+		final MDCandidate previousStockOrNull = getPreviousStockForStockCreation(candidate);
 
 		final BigDecimal newQty;
 		final BigDecimal previousQty;
@@ -108,7 +108,7 @@ public class StockCandidateService
 				? previousStockOrNull.getGroupId()
 				: null;
 
-		final Candidate.CandidateBuilder candidateBuilder = Candidate.builder()
+		final MDCandidate.MDCandidateBuilder candidateBuilder = MDCandidate.builder()
 				.type(CandidateType.STOCK)
 				.clientAndOrgId(candidate.getClientAndOrgId())
 				.seqNo(candidate.getSeqNo())
@@ -130,7 +130,7 @@ public class StockCandidateService
 			candidateBuilder.materialDescriptor(materialDescriptor.withCustomerId(null));
 		}
 
-		final Candidate stockCandidate = candidateBuilder
+		final MDCandidate stockCandidate = candidateBuilder
 				.build();
 
 		return SaveResult.builder()
@@ -145,9 +145,9 @@ public class StockCandidateService
 	 * if there is no existing persisted record, none is created but an exception is thrown.
 	 * Also, it just updates the underlying persisted record of the given {@code candidateToUpdate} and nothing else.
 	 *
-	 * @param candidateToUpdate the candidate to update. Needs to have {@link Candidate#getId()} > 0.
+	 * @param candidateToUpdate the candidate to update. Needs to have {@link MDCandidate#getId()} > 0.
 	 */
-	public SaveResult updateQtyAndDate(@NonNull final Candidate candidateToUpdate)
+	public SaveResult updateQtyAndDate(@NonNull final MDCandidate candidateToUpdate)
 	{
 		Check.errorIf(candidateToUpdate.getId().isNull(),
 					  "Parameter 'candidateToUpdate' needs to have a not-null Id; candidateToUpdate=%s",
@@ -209,8 +209,8 @@ public class StockCandidateService
 			deltaAfterRangeEnd = null;
 		}
 
-		final List<Candidate> candidatesToUpdateWithinRange = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(query);
-		for (final Candidate candidate : candidatesToUpdateWithinRange)
+		final List<MDCandidate> candidatesToUpdateWithinRange = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(query);
+		for (final MDCandidate candidate : candidatesToUpdateWithinRange)
 		{
 			final BigDecimal newQty = candidate.getQuantity().add(deltaUntilRangeEnd);
 
@@ -229,8 +229,8 @@ public class StockCandidateService
 				.timeRangeEnd(null)
 				.build();
 		final CandidatesQuery queryAfterRange = query.withMaterialDescriptorQuery(materialDescriptToQueryAfterRange);
-		final List<Candidate> candidatesToUpdateAfterRange = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(queryAfterRange);
-		for (final Candidate candidate : candidatesToUpdateAfterRange)
+		final List<MDCandidate> candidatesToUpdateAfterRange = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(queryAfterRange);
+		for (final MDCandidate candidate : candidatesToUpdateAfterRange)
 		{
 			final BigDecimal newQty = candidate.getQuantity().add(deltaAfterRangeEnd);
 
@@ -242,7 +242,7 @@ public class StockCandidateService
 
 	@NonNull
 	private CandidatesQuery createStockQueryUntilDate(
-			@NonNull final Candidate candidate)
+			@NonNull final MDCandidate candidate)
 	{
 		final MaterialDescriptorQuery //
 				materialDescriptorQuery = createMaterialDescriptorQueryBuilder(candidate.getMaterialDescriptor())
@@ -359,9 +359,9 @@ public class StockCandidateService
 	}
 
 	@Nullable
-	private Candidate getPreviousStockForStockCreation(@NonNull final Candidate candidate)
+	private MDCandidate getPreviousStockForStockCreation(@NonNull final MDCandidate candidate)
 	{
-		final Candidate previousStockOrNull = getPreviousStockOrNullForCandidate(candidate);
+		final MDCandidate previousStockOrNull = getPreviousStockOrNullForCandidate(candidate);
 
 		if (!candidate.isSimulated() || previousStockOrNull == null)
 		{
@@ -381,7 +381,7 @@ public class StockCandidateService
 	}
 
 	@Nullable
-	private Candidate getPreviousStockOrNullForCandidate(@NonNull final Candidate candidate)
+	private MDCandidate getPreviousStockOrNullForCandidate(@NonNull final MDCandidate candidate)
 	{
 		final CandidatesQuery previousStockQuery = createStockQueryUntilDate(candidate);
 

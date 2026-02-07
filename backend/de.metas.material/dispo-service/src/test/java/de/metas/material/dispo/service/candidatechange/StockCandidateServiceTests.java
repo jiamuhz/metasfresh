@@ -5,8 +5,8 @@ import de.metas.document.dimension.DimensionFactory;
 import de.metas.document.dimension.DimensionService;
 import de.metas.document.dimension.MDCandidateDimensionFactory;
 import de.metas.material.dispo.commons.DispoTestUtils;
-import de.metas.material.dispo.commons.candidate.Candidate;
-import de.metas.material.dispo.commons.candidate.Candidate.CandidateBuilder;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate.MDCandidateBuilder;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
@@ -119,7 +119,7 @@ public class StockCandidateServiceTests
 				.date(NOW)
 				.build();
 
-		final Candidate stockCandidate = Candidate.builder()
+		final MDCandidate stockCandidate = MDCandidate.builder()
 				.type(CandidateType.STOCK)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescr)
@@ -152,7 +152,7 @@ public class StockCandidateServiceTests
 
 	private SaveResult invokeCreateStockCandidate(final MaterialDescriptor materialDescr)
 	{
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.type(CandidateType.STOCK)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescr)
@@ -239,7 +239,7 @@ public class StockCandidateServiceTests
 	@Test
 	void updateQuantity_error_if_missing_candidate_record()
 	{
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.type(CandidateType.DEMAND)
 				.clearTransactionDetails()
@@ -259,7 +259,7 @@ public class StockCandidateServiceTests
 		candidateRecord.setDateProjected(TimeUtil.asTimestamp(t1));
 		save(candidateRecord);
 
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.type(CandidateType.DEMAND)
 				.materialDescriptor(createMaterialDescriptor().withQuantity(BigDecimal.ONE))
@@ -423,10 +423,10 @@ public class StockCandidateServiceTests
 		}
 
 		// now "move" t5 => t2
-		final Candidate t5ToT2Candidate = t5SaveResult.getCandidate().withDate(t2).withQuantity(new BigDecimal("7"));
+		final MDCandidate t5ToT2Candidate = t5SaveResult.getCandidate().withDate(t2).withQuantity(new BigDecimal("7"));
 		final SaveResult t5ToT2SaveResult = stockCandidateService.updateQtyAndDate(t5ToT2Candidate);
 
-		final Candidate persistentStockCandidateWithDelta = t5ToT2SaveResult.getCandidate().withQuantity(new BigDecimal("-3"));
+		final MDCandidate persistentStockCandidateWithDelta = t5ToT2SaveResult.getCandidate().withQuantity(new BigDecimal("-3"));
 
 		final SaveResult appliedSaveResult = SaveResult
 				.builder()
@@ -470,12 +470,12 @@ public class StockCandidateServiceTests
 		}
 
 		// now "move" t2 => t5
-		final Candidate t2ToT5Candidate = t2SaveResult.getCandidate()
+		final MDCandidate t2ToT5Candidate = t2SaveResult.getCandidate()
 				.withQuantity(new BigDecimal("3"))
 				.withDate(t5);
 		final SaveResult t2ToT5SaveResult = stockCandidateService.updateQtyAndDate(t2ToT5Candidate);
 
-		final Candidate persistentStockCandidateWithDelta = t2ToT5SaveResult.getCandidate().withQuantity(new BigDecimal("-3"));
+		final MDCandidate persistentStockCandidateWithDelta = t2ToT5SaveResult.getCandidate().withQuantity(new BigDecimal("-3"));
 
 		final SaveResult appliedSaveResult = SaveResult
 				.builder()
@@ -531,25 +531,25 @@ public class StockCandidateServiceTests
 				.date(date)
 				.build();
 
-		final CandidateBuilder candidateBuilder = Candidate.builder();
+		final MDCandidateBuilder candidateBuilder = MDCandidate.builder();
 		if (seqNo > 0)
 		{
 			candidateBuilder.seqNo(seqNo);
 		}
-		final Candidate stockCandidate = candidateBuilder
+		final MDCandidate stockCandidate = candidateBuilder
 				.type(CandidateType.SUPPLY) // doesn't really matter, but it's important to note that stockCandidateService will create a stock candidate *for* this candidate
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescr)
 				.parentId(CandidateId.ofRepoId(parentIdSequence++)) // don't update stock candidates, but add new ones.
 				.build();
 
-		final Candidate stockCandidateToPersist = stockCandidateService.createStockCandidate(stockCandidate).getCandidate();
+		final MDCandidate stockCandidateToPersist = stockCandidateService.createStockCandidate(stockCandidate).getCandidate();
 
-		final Candidate persistendStockCandidate = candidateRepositoryWriteService
+		final MDCandidate persistendStockCandidate = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(stockCandidateToPersist)
 				.getCandidate();
 
-		final Candidate persistentStockCandidateWithDelta = persistendStockCandidate.withQuantity(new BigDecimal(qty));
+		final MDCandidate persistentStockCandidateWithDelta = persistendStockCandidate.withQuantity(new BigDecimal(qty));
 
 		final SaveResult appliedSaveResult = SaveResult
 				.builder()

@@ -2,8 +2,7 @@ package de.metas.material.dispo.service.event.handler.pporder;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.cockpit.view.mainrecord.MainDataRequestHandler;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
@@ -17,12 +16,9 @@ import de.metas.material.dispo.service.candidatechange.CandidateChangeService;
 import de.metas.material.dispo.service.candidatechange.handler.CandidateHandler;
 import de.metas.material.event.MaterialEventHandler;
 import de.metas.material.event.commons.MaterialDescriptor;
-import de.metas.material.event.pporder.MaterialDispoGroupId;
 import de.metas.material.event.pporder.PPOrder;
 import de.metas.material.event.pporder.PPOrderCreatedEvent;
 import de.metas.material.event.pporder.PPOrderData;
-import de.metas.organization.IOrgDAO;
-import de.metas.util.Services;
 import lombok.NonNull;
 import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
@@ -88,7 +84,7 @@ public final class PPOrderCreatedHandler
 
 	private void handlePPOrderCreatedEvent(@NonNull final PPOrderCreatedEvent ppOrderEvent)
 	{
-		final Candidate headerCandidate = createHeaderCandidate(ppOrderEvent);
+		final MDCandidate headerCandidate = createHeaderCandidate(ppOrderEvent);
 
 		final DemandDetail headerDemandDetail = headerCandidate.getDemandDetail();
 		final ProductionDetail headerProductionDetail = ProductionDetail.cast(headerCandidate.getBusinessCaseDetail());
@@ -106,16 +102,16 @@ public final class PPOrderCreatedHandler
 	}
 
 	@NonNull
-	private Candidate createHeaderCandidate(@NonNull final PPOrderCreatedEvent ppOrderEvent)
+	private MDCandidate createHeaderCandidate(@NonNull final PPOrderCreatedEvent ppOrderEvent)
 	{
 		final PPOrder ppOrder = ppOrderEvent.getPpOrder();
 
-		final Candidate.CandidateBuilder builder = Candidate.builderForClientAndOrgId(ppOrder.getPpOrderData().getClientAndOrgId());
+		final MDCandidate.MDCandidateBuilder builder = MDCandidate.builderForClientAndOrgId(ppOrder.getPpOrderData().getClientAndOrgId());
 
 		retrieveDemandDetail(ppOrder.getPpOrderData())
 				.ifPresent(builder::additionalDemandDetail);
 
-		final Candidate headerCandidate = builder
+		final MDCandidate headerCandidate = builder
 				.type(CandidateType.SUPPLY)
 				.businessCase(CandidateBusinessCase.PRODUCTION)
 				.businessCaseDetail(createProductionDetailForPPOrder(ppOrderEvent))
@@ -180,6 +176,6 @@ public final class PPOrderCreatedHandler
 				.build();
 
 		return candidateRepositoryRetrieval.retrieveLatestMatch(candidatesQuery)
-				.map(Candidate::getDemandDetail);
+				.map(MDCandidate::getDemandDetail);
 	}
 }

@@ -5,7 +5,7 @@ import org.springframework.context.annotation.Profile;
 import org.springframework.stereotype.Service;
 
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
@@ -70,7 +70,7 @@ public class SupplyProposalEvaluator
 						.warehouseId(proposal.getDemandWarehouseId())
 						.build())
 				.build();
-		final Candidate existingDemandCandidate = candidateRepository.retrieveLatestMatchOrNull(proposedDemandExistsQuery);
+		final MDCandidate existingDemandCandidate = candidateRepository.retrieveLatestMatchOrNull(proposedDemandExistsQuery);
 		if (existingDemandCandidate == null)
 		{
 			return true;
@@ -85,7 +85,7 @@ public class SupplyProposalEvaluator
 						.warehouseId(proposal.getSupplyWarehouseId())
 						.build())
 				.build();
-		final Candidate existingsupplyCandidate = candidateRepository.retrieveLatestMatchOrNull(proposedSupplyExistsQuery);
+		final MDCandidate existingsupplyCandidate = candidateRepository.retrieveLatestMatchOrNull(proposedSupplyExistsQuery);
 		if (existingsupplyCandidate == null)
 		{
 			return true;

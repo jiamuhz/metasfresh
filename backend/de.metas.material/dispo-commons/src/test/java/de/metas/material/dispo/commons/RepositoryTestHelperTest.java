@@ -3,7 +3,7 @@ package de.metas.material.dispo.commons;
 import de.metas.document.dimension.DimensionFactory;
 import de.metas.document.dimension.DimensionService;
 import de.metas.document.dimension.MDCandidateDimensionFactory;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryWriteService;
@@ -82,8 +82,8 @@ public class RepositoryTestHelperTest
 	@Test
 	public void constructor_sets_up_candidates_correctly()
 	{
-		final Candidate laterStockCandidate = repositoryTestHelper.laterStockCandidate;
-		final Candidate stockCandidate = repositoryTestHelper.stockCandidate;
+		final MDCandidate laterStockCandidate = repositoryTestHelper.laterStockCandidate;
+		final MDCandidate stockCandidate = repositoryTestHelper.stockCandidate;
 
 		assertThat(laterStockCandidate.getDate()).isAfter(stockCandidate.getDate());
 		assertThat(laterStockCandidate.getId().isNull()).isFalse();
@@ -113,7 +113,7 @@ public class RepositoryTestHelperTest
 	{
 		final CandidatesQuery stockCandidatequery = repositoryTestHelper.mkQueryForStockUntilDate(EventTestHelper.NOW);
 		final CandidateRepositoryRetrieval candidateRepositoryRetrieval = new CandidateRepositoryRetrieval(dimensionService, stockChangeDetailRepo);
-		final Candidate retrievedStockCandidate = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(stockCandidatequery);
+		final MDCandidate retrievedStockCandidate = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(stockCandidatequery);
 		assertThat(retrievedStockCandidate).isNotNull();
 		assertThat(retrievedStockCandidate).isEqualTo(repositoryTestHelper.stockCandidate);
 	}

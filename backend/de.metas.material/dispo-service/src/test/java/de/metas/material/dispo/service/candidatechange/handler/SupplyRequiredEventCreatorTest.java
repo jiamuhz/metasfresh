@@ -1,7 +1,7 @@
 package de.metas.material.dispo.service.candidatechange.handler;
 
 import de.metas.common.util.time.SystemTime;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -46,7 +46,7 @@ public class SupplyRequiredEventCreatorTest
 	@Test
 	public void createMaterialDemandEvent()
 	{
-		final Candidate demandCandidate = Candidate.builderForEventDescr(EventDescriptor.ofClientAndOrg(20, 30))
+		final MDCandidate demandCandidate = MDCandidate.builderForEventDescr(EventDescriptor.ofClientAndOrg(20, 30))
 				.id(CandidateId.ofRepoId(10))
 				.type(CandidateType.DEMAND)
 				.businessCase(CandidateBusinessCase.PRODUCTION)

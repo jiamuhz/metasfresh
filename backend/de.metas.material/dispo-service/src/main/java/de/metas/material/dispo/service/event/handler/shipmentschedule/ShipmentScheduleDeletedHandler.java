@@ -4,7 +4,7 @@ import ch.qos.logback.classic.Level;
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
 import de.metas.logging.LogManager;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.common.util.IdConstants;
@@ -80,7 +80,7 @@ public class ShipmentScheduleDeletedHandler implements MaterialEventHandler<Ship
 				.demandDetailsQuery(demandDetailsQuery)
 				.build();
 
-		final Candidate candidate = candidateRepository.retrieveLatestMatchOrNull(candidatesQuery);
+		final MDCandidate candidate = candidateRepository.retrieveLatestMatchOrNull(candidatesQuery);
 		if (candidate == null)
 		{
 			Loggables.withLogger(logger, Level.DEBUG).addLog("Found no records to change for shipmentScheduleId={}", event.getShipmentScheduleId());
@@ -93,7 +93,7 @@ public class ShipmentScheduleDeletedHandler implements MaterialEventHandler<Ship
 				.shipmentScheduleId(IdConstants.NULL_REPO_ID)
 				.qty(ZERO)
 				.build();
-		final Candidate updatedCandidate = candidate
+		final MDCandidate updatedCandidate = candidate
 				.withQuantity(ZERO)
 				.withBusinessCaseDetail(updatedDemandDetail);
 		candidateChangeHandler.onCandidateNewOrChange(updatedCandidate);

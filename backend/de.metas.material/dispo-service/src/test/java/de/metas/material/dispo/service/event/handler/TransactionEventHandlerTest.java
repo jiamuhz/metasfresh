@@ -2,7 +2,7 @@ package de.metas.material.dispo.service.event.handler;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.document.dimension.DimensionService;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -79,7 +79,7 @@ public class TransactionEventHandlerTest
 				.materialDescriptor(materialDescriptor)
 				.build();
 
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.id(CandidateId.ofRepoId(100))
 				.parentId(CandidateId.ofRepoId(200))
 				.type(CandidateType.SUPPLY)
@@ -102,7 +102,7 @@ public class TransactionEventHandlerTest
 				.build();
 
 		// invoke the method under test
-		final List<Candidate> result = transactionEventHandler.createOneOrTwoCandidatesWithChangedTransactionDetailAndQuantity(candidate, transactionDetail, transactionCreatedEvent);
+		final List<MDCandidate> result = transactionEventHandler.createOneOrTwoCandidatesWithChangedTransactionDetailAndQuantity(candidate, transactionDetail, transactionCreatedEvent);
 		assertThat(result).hasSize(2);
 
 		assertThat(result.get(1).getId()).isEqualTo(candidate.getId());

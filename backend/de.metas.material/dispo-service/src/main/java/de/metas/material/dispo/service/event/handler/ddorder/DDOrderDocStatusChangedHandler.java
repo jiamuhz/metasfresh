@@ -3,7 +3,7 @@ package de.metas.material.dispo.service.event.handler.ddorder;
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
 import de.metas.document.engine.IDocument;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.businesscase.DistributionDetail;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
 import de.metas.material.dispo.service.candidatechange.CandidateChangeService;
@@ -65,7 +65,7 @@ public class DDOrderDocStatusChangedHandler implements MaterialEventHandler<DDOr
 	@Override
 	public void handleEvent(@NonNull final DDOrderDocStatusChangedEvent ddOrderChangedDocStatusEvent)
 	{
-		final List<Candidate> candidatesForDDOrderId = DDOrderUtil
+		final List<MDCandidate> candidatesForDDOrderId = DDOrderUtil
 				.retrieveCandidatesForDDOrderId(
 						candidateRepositoryRetrieval,
 						ddOrderChangedDocStatusEvent.getDdOrderId());
@@ -76,16 +76,16 @@ public class DDOrderDocStatusChangedHandler implements MaterialEventHandler<DDOr
 
 		final String newDocStatusFromEvent = ddOrderChangedDocStatusEvent.getNewDocStatus();
 
-		final List<Candidate> updatedCandidatesToPersist = new ArrayList<>();
+		final List<MDCandidate> updatedCandidatesToPersist = new ArrayList<>();
 
-		for (final Candidate candidateForDDOrderId : candidatesForDDOrderId)
+		for (final MDCandidate candidateForDDOrderId : candidatesForDDOrderId)
 		{
 			final BigDecimal newQuantity = computeNewQuantity(newDocStatusFromEvent, candidateForDDOrderId);
 
 			final DistributionDetail distributionDetail = //
 					DistributionDetail.cast(candidateForDDOrderId.getBusinessCaseDetail());
 
-			final Candidate updatedCandidateToPersist = candidateForDDOrderId.toBuilder()
+			final MDCandidate updatedCandidateToPersist = candidateForDDOrderId.toBuilder()
 					// .status(newCandidateStatus)
 					.materialDescriptor(candidateForDDOrderId.getMaterialDescriptor().withQuantity(newQuantity))
 					.businessCaseDetail(distributionDetail.toBuilder().ddOrderDocStatus(newDocStatusFromEvent).build())
@@ -98,7 +98,7 @@ public class DDOrderDocStatusChangedHandler implements MaterialEventHandler<DDOr
 
 	private BigDecimal computeNewQuantity(
 			@NonNull final String newDocStatusFromEvent,
-			@NonNull final Candidate candidateForDDOrderId)
+			@NonNull final MDCandidate candidateForDDOrderId)
 	{
 		final BigDecimal newQuantity;
 		final boolean ddOrderIsClosed = IDocument.STATUS_Closed.equals(newDocStatusFromEvent);

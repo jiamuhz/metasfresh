@@ -2,8 +2,8 @@ package de.metas.material.dispo.service.event.handler.shipmentschedule;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
-import de.metas.material.dispo.commons.candidate.Candidate.CandidateBuilder;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate.MDCandidateBuilder;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
@@ -81,7 +81,7 @@ public class ShipmentScheduleCreatedHandler implements MaterialEventHandler<Ship
 				event.getDocumentLineDescriptor(),
 				event.getMaterialDescriptor().getQuantity());
 
-		final CandidateBuilder candidateBuilder = Candidate
+		final MDCandidateBuilder candidateBuilder = MDCandidate
 				.builderForEventDescr(event.getEventDescriptor())
 				.materialDescriptor(event.getMaterialDescriptor())
 				.minMaxDescriptor(event.getMinMaxDescriptor())
@@ -89,13 +89,13 @@ public class ShipmentScheduleCreatedHandler implements MaterialEventHandler<Ship
 				.businessCase(CandidateBusinessCase.SHIPMENT)
 				.businessCaseDetail(demandDetail);
 
-		final Candidate existingCandidate = candidateRepository.retrieveLatestMatchOrNull(candidatesQuery);
+		final MDCandidate existingCandidate = candidateRepository.retrieveLatestMatchOrNull(candidatesQuery);
 		if (existingCandidate != null)
 		{
 			candidateBuilder.id(existingCandidate.getId());
 		}
 
-		final Candidate candidate = candidateBuilder.build();
+		final MDCandidate candidate = candidateBuilder.build();
 		candidateChangeHandler.onCandidateNewOrChange(candidate);
 	}
 }

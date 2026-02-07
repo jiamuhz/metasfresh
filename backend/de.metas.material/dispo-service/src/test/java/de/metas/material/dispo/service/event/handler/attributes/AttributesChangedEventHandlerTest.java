@@ -1,7 +1,7 @@
 package de.metas.material.dispo.service.event.handler.attributes;
 
 import com.google.common.collect.ImmutableList;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.service.candidatechange.CandidateChangeService;
 import de.metas.material.dispo.service.candidatechange.handler.CandidateHandler;
@@ -84,13 +84,13 @@ public class AttributesChangedEventHandlerTest
 				.huId(333)
 				.build());
 
-		final List<Candidate> candidates = mockedCandidateHandler.getSavedCandidates();
+		final List<MDCandidate> candidates = mockedCandidateHandler.getSavedCandidates();
 		assertThat(candidates).hasSize(2);
 
 		//
 		// ATTRIBUTES_CHANGED_FROM:
 		{
-			final Candidate fromCandidate = candidates.get(0);
+			final MDCandidate fromCandidate = candidates.get(0);
 			System.out.println("fromCandidate: " + fromCandidate);
 
 			assertThat(fromCandidate.getType()).isEqualTo(CandidateType.ATTRIBUTES_CHANGED_FROM);
@@ -106,7 +106,7 @@ public class AttributesChangedEventHandlerTest
 		//
 		// ATTRIBUTES_CHANGED_TO:
 		{
-			final Candidate toCandidate = candidates.get(1);
+			final MDCandidate toCandidate = candidates.get(1);
 			System.out.println("toCandidate: " + toCandidate);
 
 			assertThat(toCandidate.getType()).isEqualTo(CandidateType.ATTRIBUTES_CHANGED_TO);
@@ -138,7 +138,7 @@ public class AttributesChangedEventHandlerTest
 		private int nextGroupId = 100001;
 
 		@Getter
-		private ArrayList<Candidate> savedCandidates = new ArrayList<>();
+		private ArrayList<MDCandidate> savedCandidates = new ArrayList<>();
 
 		@Override
 		public Collection<CandidateType> getHandeledTypes()
@@ -147,11 +147,11 @@ public class AttributesChangedEventHandlerTest
 		}
 
 		@Override
-		public Candidate onCandidateNewOrChange(
-				@NonNull final Candidate candidate,
+		public MDCandidate onCandidateNewOrChange(
+				@NonNull final MDCandidate candidate,
 				final OnNewOrChangeAdvise onNewOrChangeAdvise)
 		{
-			final Candidate candidateToReturn = candidate.getGroupId() != null
+			final MDCandidate candidateToReturn = candidate.getGroupId() != null
 					? candidate
 					: candidate.withGroupId(generateGroupId());
 
@@ -166,7 +166,7 @@ public class AttributesChangedEventHandlerTest
 		}
 
 		@Override
-		public void onCandidateDelete(Candidate candidate)
+		public void onCandidateDelete(MDCandidate candidate)
 		{
 			throw new UnsupportedOperationException();
 		}

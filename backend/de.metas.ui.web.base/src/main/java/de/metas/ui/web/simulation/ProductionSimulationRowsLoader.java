@@ -24,7 +24,7 @@ package de.metas.ui.web.simulation;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.material.commons.attributes.clasifiers.BPartnerClassifier;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -87,7 +87,7 @@ public class ProductionSimulationRowsLoader
 	OrderLineDescriptor orderLineDescriptor;
 
 	@NonNull
-	Map<CandidateId, Candidate> candidateId2Stock = new HashMap<>();
+	Map<CandidateId, MDCandidate> candidateId2Stock = new HashMap<>();
 
 	@Builder
 	public ProductionSimulationRowsLoader(
@@ -119,12 +119,12 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private ImmutableList<ProductionSimulationRow> buildRowsFromCandidates(@NonNull final ImmutableList<Candidate> demandOrSupplyCandidates)
+	private ImmutableList<ProductionSimulationRow> buildRowsFromCandidates(@NonNull final ImmutableList<MDCandidate> demandOrSupplyCandidates)
 	{
-		final Iterator<Candidate> candidateIterator = demandOrSupplyCandidates.iterator();
+		final Iterator<MDCandidate> candidateIterator = demandOrSupplyCandidates.iterator();
 
 		//dev-note: we made sure that the first candidate is always the simulated demand
-		final Candidate simulatedDemandCandidate = candidateIterator.next();
+		final MDCandidate simulatedDemandCandidate = candidateIterator.next();
 
 		final ProductionSimulationRow.ProductionSimulationRowBuilder simulatedDemandRowBuilder = getRowBuilderForCandidateAndStock(simulatedDemandCandidate, candidateId2Stock.get(simulatedDemandCandidate.getId()));
 
@@ -132,9 +132,9 @@ public class ProductionSimulationRowsLoader
 
 		while (candidateIterator.hasNext())
 		{
-			final Candidate candidate = candidateIterator.next();
+			final MDCandidate candidate = candidateIterator.next();
 
-			final Candidate stockCandidate = candidateId2Stock.get(candidate.getId());
+			final MDCandidate stockCandidate = candidateId2Stock.get(candidate.getId());
 
 			final ProductionSimulationRow productionSimulationRow = buildRowFromCandidateAndStock(candidate, stockCandidate);
 
@@ -147,7 +147,7 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private ProductionSimulationRow.ProductionSimulationRowBuilder getRowBuilderForCandidateAndStock(@NonNull final Candidate candidate, @NonNull final Candidate stockCandidate)
+	private ProductionSimulationRow.ProductionSimulationRowBuilder getRowBuilderForCandidateAndStock(@NonNull final MDCandidate candidate, @NonNull final MDCandidate stockCandidate)
 	{
 		final ZoneId zoneId = orgDAO.getTimeZone(candidate.getClientAndOrgId().getOrgId());
 
@@ -174,7 +174,7 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private ProductionSimulationRow buildRowFromCandidateAndStock(@NonNull final Candidate candidate, @NonNull final Candidate stockCandidate)
+	private ProductionSimulationRow buildRowFromCandidateAndStock(@NonNull final MDCandidate candidate, @NonNull final MDCandidate stockCandidate)
 	{
 		final ProductionSimulationRow.ProductionSimulationRowBuilder productionSimulationRowBuilder = getRowBuilderForCandidateAndStock(candidate, stockCandidate);
 
@@ -197,15 +197,15 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private ProductionSimulationRow buildRowFromCandidate(@NonNull final Candidate candidate)
+	private ProductionSimulationRow buildRowFromCandidate(@NonNull final MDCandidate candidate)
 	{
-		final Candidate stockCandidate = getStockCandidate(candidate);
+		final MDCandidate stockCandidate = getStockCandidate(candidate);
 
 		return buildRowFromCandidateAndStock(candidate, stockCandidate);
 	}
 
 	@NonNull
-	private ImmutableList<ProductionSimulationRow> getIncludedRowsForProductionSupply(@NonNull final Candidate candidate)
+	private ImmutableList<ProductionSimulationRow> getIncludedRowsForProductionSupply(@NonNull final MDCandidate candidate)
 	{
 		final ProductionDetail productionDetail = ProductionDetail.cast(candidate.getBusinessCaseDetail());
 
@@ -219,7 +219,7 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private Optional<ProductionSimulationRow> getIncludedRowForProductionDemand(@NonNull final Candidate candidate)
+	private Optional<ProductionSimulationRow> getIncludedRowForProductionDemand(@NonNull final MDCandidate candidate)
 	{
 		return getResolvedSupplyCandidateForDemandCandidate(candidate)
 				.map(this::buildRowFromCandidate);
@@ -239,7 +239,7 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private Optional<Candidate> getResolvedSupplyCandidateForDemandCandidate(@NonNull final Candidate demandCandidate)
+	private Optional<MDCandidate> getResolvedSupplyCandidateForDemandCandidate(@NonNull final MDCandidate demandCandidate)
 	{
 		final MaterialDescriptorQuery materialDescriptorQuery = MaterialDescriptorQuery.builder()
 				.warehouseId(demandCandidate.getMaterialDescriptor().getWarehouseId())
@@ -260,7 +260,7 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private Candidate getDemandCandidateForPPOrderLineCand(@NonNull final I_PP_OrderLine_Candidate orderLineCandidate)
+	private MDCandidate getDemandCandidateForPPOrderLineCand(@NonNull final I_PP_OrderLine_Candidate orderLineCandidate)
 	{
 		final ProductionDetailsQuery productionDetailsQuery = ProductionDetailsQuery.builder()
 				.ppOrderCandidateLineId(orderLineCandidate.getPP_OrderLine_Candidate_ID())
@@ -274,7 +274,7 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private Candidate getStockCandidate(@NonNull final Candidate candidate)
+	private MDCandidate getStockCandidate(@NonNull final MDCandidate candidate)
 	{
 		if (CandidateId.isRegularNonNull(candidate.getParentId()))
 		{
@@ -292,9 +292,9 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private ImmutableList<Candidate> getCandidatesToDisplay()
+	private ImmutableList<MDCandidate> getCandidatesToDisplay()
 	{
-		final ImmutableList<Candidate> candidates = getAllMatchingCandidatesOrdered();
+		final ImmutableList<MDCandidate> candidates = getAllMatchingCandidatesOrdered();
 
 		mapCandidateId2Stock(candidates);
 
@@ -304,9 +304,9 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private ImmutableList<Candidate> getAllMatchingCandidatesOrdered()
+	private ImmutableList<MDCandidate> getAllMatchingCandidatesOrdered()
 	{
-		final Candidate simulatedDemandCandidate = getSimulatedDemandCandidate();
+		final MDCandidate simulatedDemandCandidate = getSimulatedDemandCandidate();
 
 		final MaterialDescriptorQuery materialDescriptorQuery = MaterialDescriptorQuery.builder()
 				.warehouseId(simulatedDemandCandidate.getMaterialDescriptor().getWarehouseId())
@@ -324,7 +324,7 @@ public class ProductionSimulationRowsLoader
 				.simulatedQueryQualifier(SimulatedQueryQualifier.INCLUDE_SIMULATED)
 				.build();
 
-		final ImmutableList.Builder<Candidate> sortedCandidates = ImmutableList.builder();
+		final ImmutableList.Builder<MDCandidate> sortedCandidates = ImmutableList.builder();
 		sortedCandidates.add(simulatedDemandCandidate);
 		sortedCandidates.add(getStockCandidate(simulatedDemandCandidate));
 		//FIXME: avoid loading candidates that will be later filtered out
@@ -334,7 +334,7 @@ public class ProductionSimulationRowsLoader
 	}
 
 	@NonNull
-	private Candidate getSimulatedDemandCandidate()
+	private MDCandidate getSimulatedDemandCandidate()
 	{
 		final CandidatesQuery candidatesQuery = CandidatesQuery.builder()
 				.demandDetailsQuery(DemandDetailsQuery.forDocumentLine(orderLineDescriptor))
@@ -347,12 +347,12 @@ public class ProductionSimulationRowsLoader
 				.orElseThrow(() -> new AdempiereException("No MD_Candidate found for orderLineDescriptor=" + orderLineDescriptor));
 	}
 
-	private void applySimulatedChangesToCandidates(@NonNull final List<Candidate> orderedCandidates)
+	private void applySimulatedChangesToCandidates(@NonNull final List<MDCandidate> orderedCandidates)
 	{
 		boolean nonSimulatedCandidateEncountered = false;
 		BigDecimal qtyToAdd = BigDecimal.ZERO;
 
-		for (final Candidate demandOrSupplyCandidate : orderedCandidates)
+		for (final MDCandidate demandOrSupplyCandidate : orderedCandidates)
 		{
 			if (CandidateType.STOCK.equals(demandOrSupplyCandidate.getType()))
 			{
@@ -366,7 +366,7 @@ public class ProductionSimulationRowsLoader
 
 			if (nonSimulatedCandidateEncountered)
 			{
-				final Candidate stockCandidate = candidateId2Stock.get(demandOrSupplyCandidate.getId());
+				final MDCandidate stockCandidate = candidateId2Stock.get(demandOrSupplyCandidate.getId());
 
 				final BigDecimal newQty = stockCandidate.getQuantity().add(qtyToAdd);
 
@@ -382,9 +382,9 @@ public class ProductionSimulationRowsLoader
 		}
 	}
 
-	private void mapCandidateId2Stock(@NonNull final List<Candidate> candidates)
+	private void mapCandidateId2Stock(@NonNull final List<MDCandidate> candidates)
 	{
-		final Function<Candidate, Candidate> locateMatchingStockCandidate = (candidate) -> candidates.stream()
+		final Function<MDCandidate, MDCandidate> locateMatchingStockCandidate = (candidate) -> candidates.stream()
 				.filter(potentialStockCandidate -> CandidateType.STOCK.equals(potentialStockCandidate.getType()))
 				.filter(potentialStockCandidate -> {
 
@@ -409,11 +409,11 @@ public class ProductionSimulationRowsLoader
 	 * i.e. we reached a point in time where there is enough stock to fulfill the demand.
 	 */
 	@NonNull
-	private ImmutableList<Candidate> removeNonRelevantCandidates(@NonNull final List<Candidate> candidates)
+	private ImmutableList<MDCandidate> removeNonRelevantCandidates(@NonNull final List<MDCandidate> candidates)
 	{
-		final ImmutableList.Builder<Candidate> onlyRelevantCandidatesCollector = ImmutableList.builder();
+		final ImmutableList.Builder<MDCandidate> onlyRelevantCandidatesCollector = ImmutableList.builder();
 
-		for (final Candidate candidate : candidates)
+		for (final MDCandidate candidate : candidates)
 		{
 			if (candidate.isSimulated() && candidate.getQuantity().signum() == 0)
 			{
@@ -438,7 +438,7 @@ public class ProductionSimulationRowsLoader
 		return onlyRelevantCandidatesCollector.build();
 	}
 
-	private DocumentId buildRowId(@NonNull final Candidate candidate)
+	private DocumentId buildRowId(@NonNull final MDCandidate candidate)
 	{
 		return DocumentId.of(candidate.getId());
 	}

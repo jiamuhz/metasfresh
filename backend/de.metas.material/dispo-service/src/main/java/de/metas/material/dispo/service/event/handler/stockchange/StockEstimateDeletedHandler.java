@@ -26,7 +26,7 @@ import ch.qos.logback.classic.Level;
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
 import de.metas.logging.LogManager;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.businesscase.BusinessCaseDetail;
 import de.metas.material.dispo.commons.candidate.businesscase.StockChangeDetail;
 import de.metas.material.dispo.commons.repository.query.CandidatesQuery;
@@ -75,7 +75,7 @@ public class StockEstimateDeletedHandler implements MaterialEventHandler<Abstrac
 	@Override
 	public void handleEvent(final AbstractStockEstimateEvent event)
 	{
-		final Candidate candidateToDelete = stockEstimateEventService.retrieveExistingStockEstimateCandidateOrNull(event);
+		final MDCandidate candidateToDelete = stockEstimateEventService.retrieveExistingStockEstimateCandidateOrNull(event);
 
 		if (candidateToDelete == null)
 		{

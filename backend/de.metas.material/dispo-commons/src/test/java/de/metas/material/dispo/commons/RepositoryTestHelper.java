@@ -16,7 +16,7 @@ import de.metas.product.acct.api.ActivityId;
 import de.metas.project.ProjectId;
 import org.mockito.Mockito;
 
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryWriteService;
 import de.metas.material.dispo.commons.repository.DateAndSeqNo;
@@ -52,10 +52,10 @@ import lombok.NonNull;
 
 public class RepositoryTestHelper
 {
-	public final Candidate stockCandidate;
+	public final MDCandidate stockCandidate;
 	public final MaterialDescriptor materialDescriptorOfStockCandidate;
 
-	public final Candidate laterStockCandidate;
+	public final MDCandidate laterStockCandidate;
 
 	public RepositoryTestHelper(@NonNull final CandidateRepositoryWriteService candidateRepositoryCommands)
 	{
@@ -84,7 +84,7 @@ public class RepositoryTestHelper
 
 		stockCandidate = candidateRepositoryCommands
 				.addOrUpdateOverwriteStoredSeqNo(
-						Candidate.builder()
+						MDCandidate.builder()
 								.type(CandidateType.STOCK)
 								.clientAndOrgId(CLIENT_AND_ORG_ID)
 								.materialDescriptor(materialDescriptorOfStockCandidate)
@@ -101,7 +101,7 @@ public class RepositoryTestHelper
 
 		laterStockCandidate = candidateRepositoryCommands
 				.addOrUpdateOverwriteStoredSeqNo(
-						Candidate.builder()
+						MDCandidate.builder()
 								.type(CandidateType.STOCK)
 								.clientAndOrgId(CLIENT_AND_ORG_ID)
 								.materialDescriptor(laterMaterialDescriptor)

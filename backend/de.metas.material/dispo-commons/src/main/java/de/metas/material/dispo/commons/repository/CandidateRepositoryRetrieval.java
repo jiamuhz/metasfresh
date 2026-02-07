@@ -8,8 +8,8 @@ import de.metas.common.util.CoalesceUtil;
 import de.metas.document.dimension.Dimension;
 import de.metas.document.dimension.DimensionService;
 import de.metas.document.engine.DocStatus;
-import de.metas.material.dispo.commons.candidate.Candidate;
-import de.metas.material.dispo.commons.candidate.Candidate.CandidateBuilder;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate.MDCandidateBuilder;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -102,7 +102,7 @@ public class CandidateRepositoryRetrieval
 	/**
 	 * Load and return <b>the</b> single record this has the given {@code id} as parentId.
 	 */
-	public Optional<Candidate> retrieveSingleChild(@NonNull final CandidateId parentId)
+	public Optional<MDCandidate> retrieveSingleChild(@NonNull final CandidateId parentId)
 	{
 		final IQueryBL queryBL = Services.get(IQueryBL.class);
 
@@ -123,7 +123,7 @@ public class CandidateRepositoryRetrieval
 	/**
 	 * @return never {@code null}
 	 */
-	public List<Candidate> retrieveGroup(final MaterialDispoGroupId groupId)
+	public List<MDCandidate> retrieveGroup(final MaterialDispoGroupId groupId)
 	{
 		if (groupId == null)
 		{
@@ -144,7 +144,7 @@ public class CandidateRepositoryRetrieval
 	}
 
 	@VisibleForTesting
-	Optional<Candidate> fromCandidateRecord(final I_MD_Candidate candidateRecordOrNull)
+	Optional<MDCandidate> fromCandidateRecord(final I_MD_Candidate candidateRecordOrNull)
 	{
 
 		if (candidateRecordOrNull == null || isNew(candidateRecordOrNull) || candidateRecordOrNull.getMD_Candidate_ID() <= 0)
@@ -152,7 +152,7 @@ public class CandidateRepositoryRetrieval
 			return Optional.empty();
 		}
 
-		final CandidateBuilder builder = createAndInitializeBuilder(candidateRecordOrNull);
+		final MDCandidateBuilder builder = createAndInitializeBuilder(candidateRecordOrNull);
 
 		final CandidateBusinessCase businessCase = getBusinesCaseOrNull(candidateRecordOrNull);
 		builder.businessCase(businessCase);
@@ -199,7 +199,7 @@ public class CandidateRepositoryRetrieval
 		return subType;
 	}
 
-	private CandidateBuilder createAndInitializeBuilder(@NonNull final I_MD_Candidate candidateRecord)
+	private MDCandidateBuilder createAndInitializeBuilder(@NonNull final I_MD_Candidate candidateRecord)
 	{
 		final Timestamp dateProjected = Preconditions.checkNotNull(candidateRecord.getDateProjected(),
 																   "Given parameter candidateRecord needs to have a not-null dateProjected; candidateRecord=%s",
@@ -229,7 +229,7 @@ public class CandidateRepositoryRetrieval
 				.max(candidateRecord.getReplenish_MaxQty())
 				.build();
 
-		final CandidateBuilder candidateBuilder = Candidate.builder()
+		final MDCandidateBuilder candidateBuilder = MDCandidate.builder()
 				.id(CandidateId.ofRepoId(candidateRecord.getMD_Candidate_ID()))
 				.clientAndOrgId(ClientAndOrgId.ofClientAndOrg(candidateRecord.getAD_Client_ID(), candidateRecord.getAD_Org_ID()))
 				.seqNo(candidateRecord.getSeqNo())
@@ -340,7 +340,7 @@ public class CandidateRepositoryRetrieval
 	}
 
 	@Nullable
-	public Candidate retrieveLatestMatchOrNull(@NonNull final CandidatesQuery query)
+	public MDCandidate retrieveLatestMatchOrNull(@NonNull final CandidatesQuery query)
 	{
 		final IQueryBuilder<I_MD_Candidate> queryBuilderWithoutOrdering = RepositoryCommons.mkQueryBuilder(query);
 
@@ -352,7 +352,7 @@ public class CandidateRepositoryRetrieval
 	}
 
 	@NonNull
-	public Optional<Candidate> retrieveLatestMatch(@NonNull final CandidatesQuery query)
+	public Optional<MDCandidate> retrieveLatestMatch(@NonNull final CandidatesQuery query)
 	{
 		return Optional.ofNullable(retrieveLatestMatchOrNull(query));
 	}
@@ -368,7 +368,7 @@ public class CandidateRepositoryRetrieval
 				.endOrderBy();
 	}
 
-	public List<Candidate> retrieveOrderedByDateAndSeqNo(@NonNull final CandidatesQuery query)
+	public List<MDCandidate> retrieveOrderedByDateAndSeqNo(@NonNull final CandidatesQuery query)
 	{
 		final IQueryBuilder<I_MD_Candidate> queryBuilderWithoutOrdering = RepositoryCommons.mkQueryBuilder(query);
 		return retrieveForQueryBuilder(queryBuilderWithoutOrdering);
@@ -378,7 +378,7 @@ public class CandidateRepositoryRetrieval
 	 * Only use this method in testing
 	 */
 	@VisibleForTesting
-	public List<Candidate> retrieveAllNotStockOrderedByDateAndSeqNoFor(@NonNull final ProductId productId)
+	public List<MDCandidate> retrieveAllNotStockOrderedByDateAndSeqNoFor(@NonNull final ProductId productId)
 	{
 		final IQueryBL queryBL = Services.get(IQueryBL.class);
 		final IQueryBuilder<I_MD_Candidate> queryBuilderWithoutOrdering = queryBL.createQueryBuilder(I_MD_Candidate.class)
@@ -389,7 +389,7 @@ public class CandidateRepositoryRetrieval
 	}
 
 	@NonNull
-	private List<Candidate> retrieveForQueryBuilder(@NonNull final IQueryBuilder<I_MD_Candidate> queryBuilderWithoutOrdering)
+	private List<MDCandidate> retrieveForQueryBuilder(@NonNull final IQueryBuilder<I_MD_Candidate> queryBuilderWithoutOrdering)
 	{
 		final Stream<I_MD_Candidate> candidateRecords = addOrderingYoungestFirst(queryBuilderWithoutOrdering)
 				.create()
@@ -410,7 +410,7 @@ public class CandidateRepositoryRetrieval
 				.endOrderBy();
 	}
 
-	public List<Candidate> retrieveCandidatesForPPOrderId(final int ppOrderId)
+	public List<MDCandidate> retrieveCandidatesForPPOrderId(final int ppOrderId)
 	{
 		final CandidatesQuery query = CandidatesQuery.builder()
 				.productionDetailsQuery(ProductionDetailsQuery.builder()

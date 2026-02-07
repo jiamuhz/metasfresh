@@ -1,7 +1,7 @@
 package de.metas.material.dispo.service.event.handler.purchasecandidate;
 
-import de.metas.material.dispo.commons.candidate.Candidate;
-import de.metas.material.dispo.commons.candidate.Candidate.CandidateBuilder;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate.MDCandidateBuilder;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.Flag;
@@ -63,9 +63,9 @@ public abstract class PurchaseCandidateCreatedOrUpdatedHandler<T extends Purchas
 
 		final CandidatesQuery query = createCandidatesQuery(event);
 
-		final Candidate existingCandidteOrNull = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(query);
+		final MDCandidate existingCandidteOrNull = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(query);
 
-		final CandidateBuilder candidateBuilder;
+		final MDCandidateBuilder candidateBuilder;
 		final PurchaseDetailBuilder purchaseDetailBuilder;
 		if (existingCandidteOrNull != null && existingCandidteOrNull.getBusinessCaseDetail() instanceof PurchaseDetail)
 		{
@@ -93,18 +93,18 @@ public abstract class PurchaseCandidateCreatedOrUpdatedHandler<T extends Purchas
 				.minMaxDescriptor(event.getMinMaxDescriptor())
 				.businessCaseDetail(purchaseDetail);
 
-		final Candidate supplyCandidate = updateBuilderFromEvent(candidateBuilder, event).build();
+		final MDCandidate supplyCandidate = updateBuilderFromEvent(candidateBuilder, event).build();
 
 		candidateChangeHandler.onCandidateNewOrChange(supplyCandidate);
 	}
 
-	protected abstract CandidateBuilder updateBuilderFromEvent(CandidateBuilder candidateBuilder, PurchaseCandidateEvent event);
+	protected abstract MDCandidateBuilder updateBuilderFromEvent(MDCandidateBuilder candidateBuilder, PurchaseCandidateEvent event);
 
 	protected abstract CandidatesQuery createCandidatesQuery(@NonNull final PurchaseCandidateEvent event);
 
-	protected final CandidateBuilder createInitialBuilder()
+	protected final MDCandidateBuilder createInitialBuilder()
 	{
-		return Candidate.builder()
+		return MDCandidate.builder()
 				.type(CandidateType.SUPPLY)
 				.businessCase(CandidateBusinessCase.PURCHASE)
 		;

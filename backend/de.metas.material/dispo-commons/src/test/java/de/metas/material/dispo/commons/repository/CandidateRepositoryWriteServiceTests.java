@@ -7,7 +7,7 @@ import de.metas.document.dimension.MDCandidateDimensionFactory;
 import de.metas.document.engine.DocStatus;
 import de.metas.material.dispo.commons.DispoTestUtils;
 import de.metas.material.dispo.commons.RepositoryTestHelper;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.TransactionDetail;
@@ -132,7 +132,7 @@ public class CandidateRepositoryWriteServiceTests
 		final MaterialDescriptor materialDescriptorWithAlotOfDigits = createMaterialDescriptor()
 				.withQuantity(new BigDecimal("0.00000000000000"));
 
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.clientAndOrgId(ClientAndOrgId.ofClientAndOrg(1, 1))
 				.type(CandidateType.DEMAND)
 				.materialDescriptor(materialDescriptorWithAlotOfDigits)
@@ -155,7 +155,7 @@ public class CandidateRepositoryWriteServiceTests
 	@Test
 	public void addOrRecplaceDemandDetail()
 	{
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.clientAndOrgId(ClientAndOrgId.ofClientAndOrg(1, 1))
 				.type(CandidateType.DEMAND)
 				.materialDescriptor(createMaterialDescriptor())
@@ -177,7 +177,7 @@ public class CandidateRepositoryWriteServiceTests
 	@Test
 	public void addOrRecplaceTransactionDetails()
 	{
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.clientAndOrgId(ClientAndOrgId.ofClientAndOrg(1, 1))
 				.type(CandidateType.DEMAND)
 				.materialDescriptor(createMaterialDescriptor())
@@ -207,9 +207,9 @@ public class CandidateRepositoryWriteServiceTests
 	@Test
 	public void addOrUpdateOverwriteStoredSeqNo_returns_equal_candidate()
 	{
-		final Candidate originalCandidate = repositoryTestHelper.stockCandidate;
+		final MDCandidate originalCandidate = repositoryTestHelper.stockCandidate;
 
-		final Candidate candidateReturnedfromRepo = candidateRepositoryWriteService
+		final MDCandidate candidateReturnedfromRepo = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(originalCandidate)
 				.getCandidate();
 
@@ -232,17 +232,17 @@ public class CandidateRepositoryWriteServiceTests
 
 		final CandidatesQuery queryForStockFromDate = repositoryTestHelper.mkQueryForStockFromDate(NOW);
 
-		final List<Candidate> stockBeforeReplacement = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(queryForStockFromDate);
+		final List<MDCandidate> stockBeforeReplacement = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(queryForStockFromDate);
 		assertThat(stockBeforeReplacement).containsOnly(
 				repositoryTestHelper.stockCandidate,
 				repositoryTestHelper.laterStockCandidate);
 
-		final Candidate replacementCandidate = repositoryTestHelper.stockCandidate
+		final MDCandidate replacementCandidate = repositoryTestHelper.stockCandidate
 				.withQuantity(ONE);
 		candidateRepositoryWriteService.addOrUpdateOverwriteStoredSeqNo(replacementCandidate);
 
 		assertThat(candidateRepositoryRetrieval.retrieveLatestMatchOrNull(queryForStockUntilDate)).isEqualTo(replacementCandidate);
-		final List<Candidate> stockAfterReplacement = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(queryForStockFromDate);
+		final List<MDCandidate> stockAfterReplacement = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(queryForStockFromDate);
 		assertThat(stockAfterReplacement).containsOnly(replacementCandidate, repositoryTestHelper.laterStockCandidate);
 	}
 
@@ -252,7 +252,7 @@ public class CandidateRepositoryWriteServiceTests
 	@Test
 	public void addOrReplace_with_ProductionDetail()
 	{
-		final Candidate productionCandidate = Candidate.builder()
+		final MDCandidate productionCandidate = MDCandidate.builder()
 				.type(CandidateType.DEMAND)
 				.businessCase(CandidateBusinessCase.PRODUCTION)
 				.materialDescriptor(createMaterialDescriptor())
@@ -270,7 +270,7 @@ public class CandidateRepositoryWriteServiceTests
 											.qty(TEN)
 											.build())
 				.build();
-		final Candidate addOrReplaceResult = candidateRepositoryWriteService
+		final MDCandidate addOrReplaceResult = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(productionCandidate)
 				.getCandidate();
 
@@ -300,24 +300,24 @@ public class CandidateRepositoryWriteServiceTests
 	@Test
 	public void addOrUpdateOverwriteStoredSeqNo_nonStockCandidate_receives_groupId()
 	{
-		final Candidate candidateWithOutGroupId = repositoryTestHelper.stockCandidate
+		final MDCandidate candidateWithOutGroupId = repositoryTestHelper.stockCandidate
 				.withType(CandidateType.DEMAND)
 				.withDate(AFTER_NOW.plus(1, ChronoUnit.MINUTES)) // pick a different time from the other candidates
 				.withGroupId(null);
 
-		final Candidate result1 = candidateRepositoryWriteService
+		final MDCandidate result1 = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(candidateWithOutGroupId)
 				.getCandidate();
 		// result1 was assigned an id and a groupId
 		assertThat(result1.getId().getRepoId()).isGreaterThan(0);
 		assertThat(result1.getGroupId().toInt()).isEqualTo(result1.getId().getRepoId());
 
-		final Candidate candidateWithGroupId = candidateWithOutGroupId
+		final MDCandidate candidateWithGroupId = candidateWithOutGroupId
 				.withId(null)
 				.withDate(AFTER_NOW.plus(2, ChronoUnit.MINUTES)) // pick a different time from the other candidates
 				.withGroupId(result1.getGroupId());
 
-		final Candidate result2 = candidateRepositoryWriteService
+		final MDCandidate result2 = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(candidateWithGroupId)
 				.getCandidate();
 		// result2 also has id & groupId, but its ID is unique whereas its groupId is the same as result1's groupId
@@ -340,11 +340,11 @@ public class CandidateRepositoryWriteServiceTests
 	@Test
 	public void addOrUpdateOverwriteStoredSeqNo_stockCandidate_receives_groupId()
 	{
-		final Candidate candidateWithOutGroupId = repositoryTestHelper.stockCandidate
+		final MDCandidate candidateWithOutGroupId = repositoryTestHelper.stockCandidate
 				.withDate(AFTER_NOW.plus(1, ChronoUnit.MINUTES)) // pick a different time from the other candidates
 				.withGroupId(null);
 
-		final Candidate result1 = candidateRepositoryWriteService
+		final MDCandidate result1 = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(candidateWithOutGroupId)
 				.getCandidate();
 		assertThat(result1.getId().getRepoId()).isGreaterThan(0);
@@ -361,7 +361,7 @@ public class CandidateRepositoryWriteServiceTests
 	@Test
 	public void addOrUpdateOverwriteStoredSeqNo_with_DistributionDetail()
 	{
-		final Candidate distributionCandidate = Candidate.builder()
+		final MDCandidate distributionCandidate = MDCandidate.builder()
 				.type(CandidateType.DEMAND)
 				.businessCase(CandidateBusinessCase.DISTRIBUTION)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
@@ -377,7 +377,7 @@ public class CandidateRepositoryWriteServiceTests
 											.qty(TEN)
 											.build())
 				.build();
-		final Candidate addOrReplaceResult = candidateRepositoryWriteService
+		final MDCandidate addOrReplaceResult = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(distributionCandidate)
 				.getCandidate();
 
@@ -403,14 +403,14 @@ public class CandidateRepositoryWriteServiceTests
 	@Test
 	public void addOrUpdateOverwriteStoredSeqNo_with_DemandDetail()
 	{
-		final Candidate productionCandidate = Candidate.builder()
+		final MDCandidate productionCandidate = MDCandidate.builder()
 				.type(CandidateType.DEMAND)
 				.businessCase(CandidateBusinessCase.SHIPMENT)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(createMaterialDescriptor())
 				.businessCaseDetail(DemandDetail.forForecastLineId(61, 71, TEN))
 				.build();
-		final Candidate addOrReplaceResult = candidateRepositoryWriteService
+		final MDCandidate addOrReplaceResult = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(productionCandidate)
 				.getCandidate();
 
@@ -432,7 +432,7 @@ public class CandidateRepositoryWriteServiceTests
 	public void addOrUpdateOverwriteStoredSeqNo_with_TransactionDetail()
 	{
 		final int productIdOffSet = 10;
-		final Candidate productionCandidate = Candidate.builder()
+		final MDCandidate productionCandidate = MDCandidate.builder()
 				.type(CandidateType.DEMAND)
 				.businessCase(CandidateBusinessCase.SHIPMENT)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
@@ -441,7 +441,7 @@ public class CandidateRepositoryWriteServiceTests
 				.businessCaseDetail(DemandDetail.forForecastLineId(61, 62, TEN))
 				.transactionDetail(TransactionDetail.builder().quantity(ONE).storageAttributesKey(AttributesKey.ALL).transactionId(33).transactionDate(NOW).complete(true).build())
 				.build();
-		final Candidate addOrReplaceResult = candidateRepositoryWriteService
+		final MDCandidate addOrReplaceResult = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(productionCandidate)
 				.getCandidate();
 

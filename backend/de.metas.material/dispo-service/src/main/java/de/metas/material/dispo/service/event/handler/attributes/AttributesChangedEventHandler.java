@@ -2,7 +2,7 @@ package de.metas.material.dispo.service.event.handler.attributes;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.service.candidatechange.CandidateChangeService;
 import de.metas.material.event.MaterialEventHandler;
@@ -63,18 +63,18 @@ public class AttributesChangedEventHandler implements MaterialEventHandler<Attri
 	@Override
 	public void handleEvent(final AttributesChangedEvent event)
 	{
-		final Candidate fromCandidate = createCandidate(event, CandidateType.ATTRIBUTES_CHANGED_FROM);
+		final MDCandidate fromCandidate = createCandidate(event, CandidateType.ATTRIBUTES_CHANGED_FROM);
 
-		final Candidate fromCandidatePersistedWithGroupId = candidateChangeHandler.onCandidateNewOrChange(fromCandidate);
+		final MDCandidate fromCandidatePersistedWithGroupId = candidateChangeHandler.onCandidateNewOrChange(fromCandidate);
 		final MaterialDispoGroupId groupId = fromCandidatePersistedWithGroupId.getEffectiveGroupId();
 		Check.assumeNotNull(groupId, "Parameter groupId is not null");
 
-		final Candidate toCandidate = createCandidate(event, CandidateType.ATTRIBUTES_CHANGED_TO)
+		final MDCandidate toCandidate = createCandidate(event, CandidateType.ATTRIBUTES_CHANGED_TO)
 				.withGroupId(groupId);
 		candidateChangeHandler.onCandidateNewOrChange(toCandidate);
 	}
 
-	private Candidate createCandidate(final AttributesChangedEvent event, final CandidateType type)
+	private MDCandidate createCandidate(final AttributesChangedEvent event, final CandidateType type)
 	{
 		final BigDecimal qty;
 		final AttributesKeyWithASI attributes;
@@ -93,7 +93,7 @@ public class AttributesChangedEventHandler implements MaterialEventHandler<Attri
 			throw new AdempiereException("Invalid type: " + type); // really shall not happen
 		}
 
-		return Candidate.builderForEventDescr(event.getEventDescriptor())
+		return MDCandidate.builderForEventDescr(event.getEventDescriptor())
 				.type(type)
 				.materialDescriptor(MaterialDescriptor.builder()
 						.warehouseId(event.getWarehouseId())

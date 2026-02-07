@@ -2,7 +2,7 @@ package de.metas.material.dispo.commons;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.document.dimension.DimensionService;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DistributionDetail;
@@ -72,7 +72,7 @@ public class CandidateServiceTests
 	@Test
 	public void testcreatePPOrderRequestEvent()
 	{
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.clientAndOrgId(ClientAndOrgId.ofClientAndOrg(20, 30))
 				.type(CandidateType.SUPPLY)
 				.businessCase(CandidateBusinessCase.PRODUCTION)
@@ -86,7 +86,7 @@ public class CandidateServiceTests
 											.build())
 				.build();
 
-		final Candidate candidate2 = candidate
+		final MDCandidate candidate2 = candidate
 				.withType(CandidateType.DEMAND)
 				.withMaterialDescriptor(candidate.getMaterialDescriptor()
 												.withProductDescriptor(ProductDescriptor.completeForProductIdAndEmptyAttribute(310))
@@ -101,7 +101,7 @@ public class CandidateServiceTests
 												.qty(TEN)
 												.build());
 
-		final Candidate candidate3 = candidate
+		final MDCandidate candidate3 = candidate
 				.withType(CandidateType.DEMAND)
 				.withMaterialDescriptor(candidate.getMaterialDescriptor()
 												.withProductDescriptor(ProductDescriptor.completeForProductIdAndEmptyAttribute(320))
@@ -137,7 +137,7 @@ public class CandidateServiceTests
 	@Test
 	public void testcreateDDOrderRequestEvent()
 	{
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.clientAndOrgId(ClientAndOrgId.ofClientAndOrg(20, 30))
 				.type(CandidateType.SUPPLY)
 				.businessCase(CandidateBusinessCase.DISTRIBUTION)
@@ -150,7 +150,7 @@ public class CandidateServiceTests
 											.build())
 				.build();
 
-		final Candidate candidate2 = candidate
+		final MDCandidate candidate2 = candidate
 				.withType(CandidateType.DEMAND)
 				.withMaterialDescriptor(candidate.getMaterialDescriptor()
 												.withProductDescriptor(ProductDescriptor.completeForProductIdAndEmptyAttribute(310))
@@ -164,7 +164,7 @@ public class CandidateServiceTests
 												.qty(TEN)
 												.build());
 
-		final Candidate candidate3 = candidate
+		final MDCandidate candidate3 = candidate
 				.withType(CandidateType.DEMAND)
 				.withGroupId(MaterialDispoGroupId.ofInt(10))
 				.withMaterialDescriptor(candidate.getMaterialDescriptor()

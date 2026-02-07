@@ -1,6 +1,6 @@
 package de.metas.material.dispo.commons.repository;
 
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.repository.atp.AddToResultGroupRequest;
 import lombok.Builder;
 import lombok.NonNull;
@@ -49,7 +49,7 @@ public class DateAndSeqNo
 				.build();
 	}
 
-	public static DateAndSeqNo ofCandidate(@NonNull final Candidate candidate)
+	public static DateAndSeqNo ofCandidate(@NonNull final MDCandidate candidate)
 	{
 		return builder()
 				.date(candidate.getDate())

@@ -9,7 +9,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 import org.junit.jupiter.api.Test;
 
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.MaterialDescriptorQueryTest;
@@ -55,7 +55,7 @@ public class CandidatesQueryTest
 	@Test
 	public void fromCandidate()
 	{
-		final Candidate cand = Candidate.builder()
+		final MDCandidate cand = MDCandidate.builder()
 				.clientAndOrgId(ClientAndOrgId.ofClientAndOrg(1, 1))
 				.type(CandidateType.STOCK)
 				.materialDescriptor(createMaterialDescriptor().withDate(NOW))

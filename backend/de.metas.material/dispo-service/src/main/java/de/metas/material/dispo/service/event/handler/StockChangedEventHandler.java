@@ -6,8 +6,8 @@ import de.metas.Profiles;
 import de.metas.common.util.CoalesceUtil;
 import de.metas.common.util.time.SystemTime;
 import de.metas.logging.LogManager;
-import de.metas.material.dispo.commons.candidate.Candidate;
-import de.metas.material.dispo.commons.candidate.Candidate.CandidateBuilder;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate.MDCandidateBuilder;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.TransactionDetail;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
@@ -105,11 +105,11 @@ public class StockChangedEventHandler implements MaterialEventHandler<StockChang
 				.matchExactStorageAttributesKey(true)
 				.build();
 
-		final Candidate candidate;
+		final MDCandidate candidate;
 
 		final TransactionDetail stockChangeDetail = createStockChangeDetail(event);
 
-		final Candidate latestStockRecord = candidateRepository.retrieveLatestMatchOrNull(stockQuery);
+		final MDCandidate latestStockRecord = candidateRepository.retrieveLatestMatchOrNull(stockQuery);
 		if (latestStockRecord == null)
 		{
 			final BigDecimal quantityOnHand = extractQuantityIfPositive(event);
@@ -117,7 +117,7 @@ public class StockChangedEventHandler implements MaterialEventHandler<StockChang
 			{
 				return;
 			}
-			final CandidateBuilder candidateBuilder = createCandidateBuilder(
+			final MDCandidateBuilder candidateBuilder = createCandidateBuilder(
 					event,
 					quantityOnHand,
 					stockChangeDetail);
@@ -144,7 +144,7 @@ public class StockChangedEventHandler implements MaterialEventHandler<StockChang
 					type,
 					stockChangeDetail.getTransactionId());
 
-			final CandidateBuilder candidateBuilder = createCandidateBuilder(
+			final MDCandidateBuilder candidateBuilder = createCandidateBuilder(
 					event,
 					qtyDifference.abs(), // also in case of INVENTORY_DOWN, the engine expects a positive qty
 					stockChangeDetail);
@@ -179,7 +179,7 @@ public class StockChangedEventHandler implements MaterialEventHandler<StockChang
 		return quantity.signum() > 0 ? CandidateType.INVENTORY_UP : CandidateType.INVENTORY_DOWN;
 	}
 
-	private CandidateBuilder createCandidateBuilder(
+	private MDCandidateBuilder createCandidateBuilder(
 			@NonNull final StockChangedEvent event,
 			@NonNull final BigDecimal quantity,
 			@NonNull final TransactionDetail stockChangeDetail)
@@ -188,7 +188,7 @@ public class StockChangedEventHandler implements MaterialEventHandler<StockChang
 				.quantity(quantity)
 				.build();
 
-		return Candidate.builderForEventDescr(event.getEventDescriptor())
+		return MDCandidate.builderForEventDescr(event.getEventDescriptor())
 				.materialDescriptor(materialDescriptorBuilder)
 				.transactionDetail(stockChangeDetail);
 	}
@@ -210,7 +210,7 @@ public class StockChangedEventHandler implements MaterialEventHandler<StockChang
 					.matchExactStorageAttributesKey(true)
 					.build();
 
-			final Candidate precedingInventoryRecord = candidateRepository.retrieveLatestMatchOrNull(inventoryQuery);
+			final MDCandidate precedingInventoryRecord = candidateRepository.retrieveLatestMatchOrNull(inventoryQuery);
 			if (precedingInventoryRecord != null)
 			{
 				groupId = precedingInventoryRecord.getGroupId();

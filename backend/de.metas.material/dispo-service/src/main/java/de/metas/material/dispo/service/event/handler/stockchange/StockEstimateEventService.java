@@ -22,7 +22,7 @@
 
 package de.metas.material.dispo.service.event.handler.stockchange;
 
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -49,14 +49,14 @@ public class StockEstimateEventService
 	}
 
 	@Nullable
-	public Candidate retrieveExistingStockEstimateCandidateOrNull(@NonNull final AbstractStockEstimateEvent event)
+	public MDCandidate retrieveExistingStockEstimateCandidateOrNull(@NonNull final AbstractStockEstimateEvent event)
 	{
 		final CandidatesQuery query = createCandidatesQuery(event);
 		return candidateRepositoryRetrieval.retrieveLatestMatchOrNull(query);
 	}
 
 	@Nullable
-	public Candidate retrievePreviousStockCandidateOrNull(@NonNull final AbstractStockEstimateEvent event)
+	public MDCandidate retrievePreviousStockCandidateOrNull(@NonNull final AbstractStockEstimateEvent event)
 	{
 		final CandidatesQuery query = createPreviousStockCandidatesQuery(event);
 		return candidateRepositoryRetrieval.retrieveLatestMatchOrNull(query);

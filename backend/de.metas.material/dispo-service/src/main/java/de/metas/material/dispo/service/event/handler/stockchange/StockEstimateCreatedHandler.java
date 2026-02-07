@@ -24,7 +24,7 @@ package de.metas.material.dispo.service.event.handler.stockchange;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.StockChangeDetail;
@@ -64,7 +64,7 @@ public class StockEstimateCreatedHandler implements MaterialEventHandler<Abstrac
 	@Override
 	public void handleEvent(final AbstractStockEstimateEvent event)
 	{
-		final Candidate existingStockEstimateCandidate = stockEstimateEventService.retrieveExistingStockEstimateCandidateOrNull(event);
+		final MDCandidate existingStockEstimateCandidate = stockEstimateEventService.retrieveExistingStockEstimateCandidateOrNull(event);
 
 		if (existingStockEstimateCandidate != null)
 		{
@@ -73,7 +73,7 @@ public class StockEstimateCreatedHandler implements MaterialEventHandler<Abstrac
 					.setParameter("StockEstimateCreatedEvent", event);
 		}
 
-		final Candidate previousStockOrNull = stockEstimateEventService.retrievePreviousStockCandidateOrNull(event);
+		final MDCandidate previousStockOrNull = stockEstimateEventService.retrievePreviousStockCandidateOrNull(event);
 
 		final BigDecimal currentATP = previousStockOrNull != null ? previousStockOrNull.getQuantity() : BigDecimal.ZERO;
 		final BigDecimal deltaATP = currentATP.subtract(event.getQuantityDelta());
@@ -85,7 +85,7 @@ public class StockEstimateCreatedHandler implements MaterialEventHandler<Abstrac
 				.isReverted(false)
 				.build();
 
-		final Candidate.CandidateBuilder supplyCandidateBuilder = Candidate.builder()
+		final MDCandidate.MDCandidateBuilder supplyCandidateBuilder = MDCandidate.builder()
 				.clientAndOrgId(event.getEventDescriptor().getClientAndOrgId())
 				.materialDescriptor(event.getMaterialDescriptor())
 				.businessCase(CandidateBusinessCase.STOCK_CHANGE)

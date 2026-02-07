@@ -20,7 +20,7 @@ import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentCaptor;
 import org.mockito.Mockito;
 
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
 import de.metas.material.dispo.service.candidatechange.CandidateChangeService;
@@ -88,10 +88,10 @@ public class StockChangedEventHandlerTest
 		// invoke the method under test
 		stockChangedEventHandler.handleEvent(event);
 
-		final ArgumentCaptor<Candidate> candidateCaptor = ArgumentCaptor.forClass(Candidate.class);
+		final ArgumentCaptor<MDCandidate> candidateCaptor = ArgumentCaptor.forClass(MDCandidate.class);
 		verify(candidateChangeService)
 				.onCandidateNewOrChange(candidateCaptor.capture());
-		final Candidate candidate = candidateCaptor.getValue();
+		final MDCandidate candidate = candidateCaptor.getValue();
 		//
 		assertInvocationCandidateCommons(candidate);
 		assertThat(candidate.getType()).isEqualTo(CandidateType.INVENTORY_UP);
@@ -112,7 +112,7 @@ public class StockChangedEventHandlerTest
 		assertThat(event.getQtyOnHand()).isEqualByComparingTo(TEN); // guard
 
 		when(candidateRepositoryRetrieval.retrieveLatestMatchOrNull(any()))
-				.thenReturn(Candidate.builder()
+				.thenReturn(MDCandidate.builder()
 						.type(CandidateType.STOCK)
 						.clientAndOrgId(CLIENT_AND_ORG_ID)
 						.materialDescriptor(createMaterialDescriptor().withQuantity(new BigDecimal("15")))
@@ -121,10 +121,10 @@ public class StockChangedEventHandlerTest
 		// invoke the method under test
 		stockChangedEventHandler.handleEvent(event);
 
-		final ArgumentCaptor<Candidate> candidateCaptor = ArgumentCaptor.forClass(Candidate.class);
+		final ArgumentCaptor<MDCandidate> candidateCaptor = ArgumentCaptor.forClass(MDCandidate.class);
 		verify(candidateChangeService)
 				.onCandidateNewOrChange(candidateCaptor.capture());
-		final Candidate candidate = candidateCaptor.getValue();
+		final MDCandidate candidate = candidateCaptor.getValue();
 		//
 		assertInvocationCandidateCommons(candidate);
 		assertThat(candidate.getType()).isEqualTo(CandidateType.INVENTORY_DOWN);
@@ -150,7 +150,7 @@ public class StockChangedEventHandlerTest
 		return event;
 	}
 
-	private void assertInvocationCandidateCommons(final Candidate candidate)
+	private void assertInvocationCandidateCommons(final MDCandidate candidate)
 	{
 		assertThat(candidate).isNotNull();
 		assertThat(candidate.getClientAndOrgId().getClientId().getRepoId()).isEqualTo(10);

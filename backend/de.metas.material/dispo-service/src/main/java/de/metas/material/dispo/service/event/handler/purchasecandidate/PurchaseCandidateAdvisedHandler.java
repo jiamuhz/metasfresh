@@ -3,7 +3,7 @@ package de.metas.material.dispo.service.event.handler.purchasecandidate;
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
 import de.metas.material.dispo.commons.RequestMaterialOrderService;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -104,13 +104,13 @@ public final class PurchaseCandidateAdvisedHandler
 				.build();
 
 		// see if there is an existing supply candidate to work with
-		Candidate.CandidateBuilder candidateBuilder = null;
+		MDCandidate.MDCandidateBuilder candidateBuilder = null;
 		CandidateHandler.OnNewOrChangeAdvise advise = DONT_UPDATE;
 		if (supplyRequiredDescriptor.getSupplyCandidateId() > 0)
 		{
 			final CandidatesQuery supplyCandidateQuery = CandidatesQuery.fromId(
 					CandidateId.ofRepoId(supplyRequiredDescriptor.getSupplyCandidateId()));
-			final Candidate existingCandidate = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(supplyCandidateQuery);
+			final MDCandidate existingCandidate = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(supplyCandidateQuery);
 			if (existingCandidate != null)
 			{
 				candidateBuilder = existingCandidate.toBuilder();
@@ -119,11 +119,11 @@ public final class PurchaseCandidateAdvisedHandler
 		}
 		if (candidateBuilder == null)
 		{
-			candidateBuilder = Candidate.builder();
+			candidateBuilder = MDCandidate.builder();
 		}
 
 		// put out data into the new or preexisting candidate
-		final Candidate supplyCandidate = candidateBuilder
+		final MDCandidate supplyCandidate = candidateBuilder
 				.clientAndOrgId(event.getEventDescriptor().getClientAndOrgId())
 				.id(CandidateId.ofRepoIdOrNull(supplyRequiredDescriptor.getSupplyCandidateId()))
 				.type(CandidateType.SUPPLY)
@@ -135,7 +135,7 @@ public final class PurchaseCandidateAdvisedHandler
 				.lotForLot(supplyRequiredDescriptor.getIsLotForLot())
 				.build();
 
-		final Candidate createdCandidate = candidateChangeHandler.onCandidateNewOrChange(supplyCandidate, advise);
+		final MDCandidate createdCandidate = candidateChangeHandler.onCandidateNewOrChange(supplyCandidate, advise);
 		if (event.isDirectlyCreatePurchaseCandidate())
 		{
 			// the group contains just one item, i.e. the supplyCandidate, but for the same of generic-ness we use that same interface that's also used for production and distribution

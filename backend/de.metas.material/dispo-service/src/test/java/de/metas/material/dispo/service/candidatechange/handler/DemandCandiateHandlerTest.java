@@ -6,7 +6,7 @@ import de.metas.document.dimension.DimensionService;
 import de.metas.document.dimension.MDCandidateDimensionFactory;
 import de.metas.material.dispo.commons.DispoTestUtils;
 import de.metas.material.dispo.commons.RepositoryTestHelper;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryWriteService;
@@ -116,7 +116,7 @@ public class DemandCandiateHandlerTest
 	@Test
 	public void onCandidateNewOrChange_no_stock()
 	{
-		final Candidate candidate = createDemandCandidateWithQuantity("23");
+		final MDCandidate candidate = createDemandCandidateWithQuantity("23");
 		setupRepositoryReturnsQuantityForMaterial("-23", candidate.getMaterialDescriptor());
 
 		demandCandidateHandler.onCandidateNewOrChange(candidate, OnNewOrChangeAdvise.DEFAULT);
@@ -149,7 +149,7 @@ public class DemandCandiateHandlerTest
 	@Test
 	public void onCandidateNewOrChange_unsufficient_stock()
 	{
-		final Candidate candidate = createDemandCandidateWithQuantity("23");
+		final MDCandidate candidate = createDemandCandidateWithQuantity("23");
 		setupRepositoryReturnsQuantityForMaterial("-13", candidate.getMaterialDescriptor());
 
 		// when
@@ -215,7 +215,7 @@ public class DemandCandiateHandlerTest
 	@Test
 	public void decrease_stock()
 	{
-		final Candidate candidate = createCandidateWithType(CandidateType.UNEXPECTED_DECREASE);
+		final MDCandidate candidate = createCandidateWithType(CandidateType.UNEXPECTED_DECREASE);
 
 		demandCandidateHandler.onCandidateNewOrChange(candidate, OnNewOrChangeAdvise.DEFAULT);
 
@@ -235,9 +235,9 @@ public class DemandCandiateHandlerTest
 				.enqueueEventNow(Mockito.any());
 	}
 
-	private static Candidate createCandidateWithType(@NonNull final CandidateType type)
+	private static MDCandidate createCandidateWithType(@NonNull final CandidateType type)
 	{
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.clientAndOrgId(ClientAndOrgId.ofClientAndOrg(1, 1))
 				.type(type)
 				.materialDescriptor(MaterialDescriptor.builder()
@@ -271,13 +271,13 @@ public class DemandCandiateHandlerTest
 				materialDescriptor,
 				"0");
 
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.type(CandidateType.DEMAND)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescriptor)
 				.build();
 
-		final Consumer<Candidate> doTest = candidateUnderTest -> {
+		final Consumer<MDCandidate> doTest = candidateUnderTest -> {
 
 			demandCandidateHandler.onCandidateNewOrChange(candidateUnderTest, OnNewOrChangeAdvise.DEFAULT);
 
@@ -312,7 +312,7 @@ public class DemandCandiateHandlerTest
 				.quantity(qty)
 				.date(NOW)
 				.build();
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.type(CandidateType.DEMAND)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescriptor)
@@ -323,7 +323,7 @@ public class DemandCandiateHandlerTest
 				materialDescriptor,
 				"0");
 
-		final BiConsumer<Candidate, BigDecimal> doTest = (candidateUnderTest, expectedQty) -> {
+		final BiConsumer<MDCandidate, BigDecimal> doTest = (candidateUnderTest, expectedQty) -> {
 			demandCandidateHandler.onCandidateNewOrChange(candidateUnderTest, OnNewOrChangeAdvise.DEFAULT);
 
 			final List<I_MD_Candidate> records = DispoTestUtils.retrieveAllRecords();
@@ -342,7 +342,7 @@ public class DemandCandiateHandlerTest
 		doTest.accept(candidate, qty);
 
 		// second invocation with different quantity
-		final Candidate secondInvocationCanddiate = candidate.withQuantity(qty.add(BigDecimal.ONE));
+		final MDCandidate secondInvocationCanddiate = candidate.withQuantity(qty.add(BigDecimal.ONE));
 		RepositoryTestHelper.setupMockedRetrieveAvailableToPromise(
 				availableToPromiseRepository,
 				secondInvocationCanddiate.getMaterialDescriptor(),
@@ -364,7 +364,7 @@ public class DemandCandiateHandlerTest
 	@Test
 	public void onCandidateNewOrChange_dateChange()
 	{
-		final Candidate demandCandidate = createDemandCandidateWithQuantity("30");
+		final MDCandidate demandCandidate = createDemandCandidateWithQuantity("30");
 
 		RepositoryTestHelper.setupMockedRetrieveAvailableToPromise(
 				availableToPromiseRepository,
@@ -375,7 +375,7 @@ public class DemandCandiateHandlerTest
 		demandCandidateHandler.onCandidateNewOrChange(demandCandidate, OnNewOrChangeAdvise.DEFAULT);
 	}
 
-	private Candidate createDemandCandidateWithQuantity(@NonNull final String quantity)
+	private MDCandidate createDemandCandidateWithQuantity(@NonNull final String quantity)
 	{
 		final MaterialDescriptor materialDescriptor = MaterialDescriptor.builder()
 				.productDescriptor(createProductDescriptor())
@@ -383,7 +383,7 @@ public class DemandCandiateHandlerTest
 				.quantity(new BigDecimal(quantity))
 				.date(NOW)
 				.build();
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.type(CandidateType.DEMAND)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescriptor)

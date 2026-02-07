@@ -2,7 +2,7 @@ package de.metas.material.dispo.service.event.handler;
 
 import de.metas.common.util.time.SystemTime;
 import de.metas.inout.InOutAndLineId;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -90,7 +90,7 @@ public class TransactionCreatedHandlerTests
 	{
 		final TransactionCreatedEvent event = createTransactionEventBuilderWithQuantity(TEN.negate(), Instant.now()).build();
 
-		final Candidate candidate = TransactionEventHandler
+		final MDCandidate candidate = TransactionEventHandler
 				.createBuilderForNewUnrelatedCandidate(
 						event,
 						event.getQuantity())
@@ -106,7 +106,7 @@ public class TransactionCreatedHandlerTests
 	{
 		final TransactionCreatedEvent event = createTransactionEventBuilderWithQuantity(TEN, Instant.now()).build();
 
-		final Candidate candidate = TransactionEventHandler
+		final MDCandidate candidate = TransactionEventHandler
 				.createBuilderForNewUnrelatedCandidate(
 						event,
 						event.getQuantity())
@@ -130,9 +130,9 @@ public class TransactionCreatedHandlerTests
 		Mockito.when(candidateRepository.retrieveLatestMatchOrNull(Mockito.any()))
 				.thenReturn(null);
 
-		final List<Candidate> candidates = transactionEventHandler.createCandidatesForTransactionEvent(unrelatedEvent);
+		final List<MDCandidate> candidates = transactionEventHandler.createCandidatesForTransactionEvent(unrelatedEvent);
 		assertThat(candidates).hasSize(1);
-		final Candidate candidate = candidates.get(0);
+		final MDCandidate candidate = candidates.get(0);
 
 		makeCommonAssertions(candidate);
 
@@ -162,7 +162,7 @@ public class TransactionCreatedHandlerTests
 		// final Instant date = SystemTime.asInstant();
 		final Instant date = unrelatedEvent.getMaterialDescriptor().getDate();
 
-		final Candidate existingCandidate = Candidate.builder()
+		final MDCandidate existingCandidate = MDCandidate.builder()
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.type(CandidateType.UNEXPECTED_INCREASE)
 				.id(CandidateId.ofRepoId(11))
@@ -184,9 +184,9 @@ public class TransactionCreatedHandlerTests
 		Mockito.when(candidateRepository.retrieveLatestMatchOrNull(Mockito.any()))
 				.thenReturn(existingCandidate);
 
-		final List<Candidate> candidates = transactionEventHandler.createCandidatesForTransactionEvent(unrelatedEvent);
+		final List<MDCandidate> candidates = transactionEventHandler.createCandidatesForTransactionEvent(unrelatedEvent);
 		assertThat(candidates).hasSize(1);
-		final Candidate candidate = candidates.get(0);
+		final MDCandidate candidate = candidates.get(0);
 
 		makeCommonAssertions(candidate);
 
@@ -230,9 +230,9 @@ public class TransactionCreatedHandlerTests
 		Mockito.when(candidateRepository.retrieveLatestMatchOrNull(Mockito.any()))
 				.thenReturn(null);
 
-		final List<Candidate> candidates = transactionEventHandler.createCandidatesForTransactionEvent(relatedEvent);
+		final List<MDCandidate> candidates = transactionEventHandler.createCandidatesForTransactionEvent(relatedEvent);
 		assertThat(candidates).hasSize(1);
-		final Candidate candidate = candidates.get(0);
+		final MDCandidate candidate = candidates.get(0);
 
 		makeCommonAssertions(candidate);
 
@@ -267,7 +267,7 @@ public class TransactionCreatedHandlerTests
 	{
 		final Instant date = SystemTime.asInstant();
 
-		final Candidate existingCandidate = Candidate.builder()
+		final MDCandidate existingCandidate = MDCandidate.builder()
 				.id(CandidateId.ofRepoId(11))
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.type(CandidateType.DEMAND)
@@ -292,9 +292,9 @@ public class TransactionCreatedHandlerTests
 				.build();
 
 		// invoke the method under test
-		final List<Candidate> candidates = transactionEventHandler.createCandidatesForTransactionEvent(relatedEvent);
+		final List<MDCandidate> candidates = transactionEventHandler.createCandidatesForTransactionEvent(relatedEvent);
 		assertThat(candidates).hasSize(1);
-		final Candidate candidate = candidates.get(0);
+		final MDCandidate candidate = candidates.get(0);
 
 		// verify that candidateRepository was called to decide if the event is related to anything we know
 		{
@@ -354,7 +354,7 @@ public class TransactionCreatedHandlerTests
 											.build());
 	}
 
-	private void makeCommonAssertions(final Candidate candidate)
+	private void makeCommonAssertions(final MDCandidate candidate)
 	{
 		assertThat(candidate).isNotNull();
 		assertThat(candidate.getClientAndOrgId()).isEqualTo(CLIENT_AND_ORG_ID);

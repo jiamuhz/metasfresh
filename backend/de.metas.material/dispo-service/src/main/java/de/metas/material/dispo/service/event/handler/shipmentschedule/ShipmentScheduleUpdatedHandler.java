@@ -24,7 +24,7 @@ package de.metas.material.dispo.service.event.handler.shipmentschedule;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
@@ -72,8 +72,8 @@ public class ShipmentScheduleUpdatedHandler implements MaterialEventHandler<Ship
 				.demandDetailsQuery(demandDetailsQuery)
 				.build();
 
-		final Candidate candidate = candidateRepository.retrieveLatestMatchOrNull(candidatesQuery);
-		final Candidate updatedCandidate;
+		final MDCandidate candidate = candidateRepository.retrieveLatestMatchOrNull(candidatesQuery);
+		final MDCandidate updatedCandidate;
 
 		final DemandDetail demandDetail = DemandDetail.forDocumentLine(
 				event.getShipmentScheduleId(),
@@ -82,7 +82,7 @@ public class ShipmentScheduleUpdatedHandler implements MaterialEventHandler<Ship
 
 		if (candidate == null)
 		{
-			updatedCandidate = Candidate
+			updatedCandidate = MDCandidate
 					.builderForEventDescr(event.getEventDescriptor())
 					.materialDescriptor(event.getMaterialDescriptor())
 					.minMaxDescriptor(event.getMinMaxDescriptor())

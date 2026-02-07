@@ -24,7 +24,7 @@ package de.metas.material.dispo.service.event.handler.simulation;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
@@ -65,7 +65,7 @@ public class SimulatedDemandCreatedHandler implements MaterialEventHandler<Simul
 				event.getMaterialDescriptor().getQuantity())
 				.withTraceId(event.getEventDescriptor().getTraceId());
 
-		final Candidate.CandidateBuilder candidateBuilder = Candidate
+		final MDCandidate.MDCandidateBuilder candidateBuilder = MDCandidate
 				.builderForEventDescr(event.getEventDescriptor())
 				.materialDescriptor(event.getMaterialDescriptor())
 				.type(CandidateType.DEMAND)

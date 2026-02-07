@@ -4,7 +4,7 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
@@ -94,8 +94,8 @@ public class DemandCandiateHandler implements CandidateHandler
 	 * Persists (updates or creates) the given demand candidate and also its <b>child</b> stock candidate.
 	 */
 	@Override
-	public Candidate onCandidateNewOrChange(
-			@NonNull final Candidate candidate,
+	public MDCandidate onCandidateNewOrChange(
+			@NonNull final MDCandidate candidate,
 			@NonNull final OnNewOrChangeAdvise advise)
 	{
 		if (!advise.isAttemptUpdate())
@@ -114,16 +114,16 @@ public class DemandCandiateHandler implements CandidateHandler
 			return candidateSaveResult.toCandidateWithQtyDelta(); // nothing to do
 		}
 
-		final Candidate savedCandidate = candidateSaveResult.getCandidate();
+		final MDCandidate savedCandidate = candidateSaveResult.getCandidate();
 
-		final Optional<Candidate> preExistingChildStockCandidate = candidateRepository.retrieveSingleChild(savedCandidate.getId());
-		final CandidateId preExistingChildStockId = preExistingChildStockCandidate.map(Candidate::getId).orElse(null);
+		final Optional<MDCandidate> preExistingChildStockCandidate = candidateRepository.retrieveSingleChild(savedCandidate.getId());
+		final CandidateId preExistingChildStockId = preExistingChildStockCandidate.map(MDCandidate::getId).orElse(null);
 
 		final SaveResult stockCandidate = stockCandidateService
 				.createStockCandidate(savedCandidate.withNegatedQuantity())
 				.withCandidateId(preExistingChildStockId);
 
-		final Candidate savedStockCandidate;
+		final MDCandidate savedStockCandidate;
 		if (preExistingChildStockCandidate.isPresent())
 		{
 			savedStockCandidate = candidateRepositoryWriteService
@@ -141,7 +141,7 @@ public class DemandCandiateHandler implements CandidateHandler
 
 		stockCandidateService.applyDeltaToMatchingLaterStockCandidates(deltaToApplyToLaterStockCandiates);
 
-		final Candidate candidateToReturn = candidateSaveResult
+		final MDCandidate candidateToReturn = candidateSaveResult
 				.toCandidateWithQtyDelta()
 				.withParentId(savedStockCandidate.getId());
 
@@ -160,7 +160,7 @@ public class DemandCandiateHandler implements CandidateHandler
 	}
 
 	@Override
-	public void onCandidateDelete(@NonNull final Candidate candidate)
+	public void onCandidateDelete(@NonNull final MDCandidate candidate)
 	{
 		assertCorrectCandidateType(candidate);
 
@@ -182,7 +182,7 @@ public class DemandCandiateHandler implements CandidateHandler
 		stockCandidateService.applyDeltaToMatchingLaterStockCandidates(applyDeltaRequest);
 	}
 
-	private void assertCorrectCandidateType(@NonNull final Candidate demandCandidate)
+	private void assertCorrectCandidateType(@NonNull final MDCandidate demandCandidate)
 	{
 		final CandidateType type = demandCandidate.getType();
 
@@ -192,7 +192,7 @@ public class DemandCandiateHandler implements CandidateHandler
 				type, demandCandidate);
 	}
 
-	private void fireSupplyRequiredEventIfQtyBelowZero(@NonNull final Candidate demandCandidateWithId)
+	private void fireSupplyRequiredEventIfQtyBelowZero(@NonNull final MDCandidate demandCandidateWithId)
 	{
 		final AvailableToPromiseMultiQuery query = AvailableToPromiseMultiQuery
 				.forDescriptorAndAllPossibleBPartnerIds(demandCandidateWithId.getMaterialDescriptor());
@@ -224,7 +224,7 @@ public class DemandCandiateHandler implements CandidateHandler
 		return minMaxDescriptor.getMax().subtract(availableQuantityAfterDemandWasApplied);
 	}
 
-	private void fireSupplyRequiredEventIfNeeded(@NonNull final Candidate demandCandidate, @NonNull final Candidate stockCandidate)
+	private void fireSupplyRequiredEventIfNeeded(@NonNull final MDCandidate demandCandidate, @NonNull final MDCandidate stockCandidate)
 	{
 		if (demandCandidate.isSimulated())
 		{
@@ -236,7 +236,7 @@ public class DemandCandiateHandler implements CandidateHandler
 		}
 	}
 
-	private void fireSimulatedSupplyRequiredEvent(@NonNull final Candidate simulatedCandidate, @NonNull final Candidate stockCandidate)
+	private void fireSimulatedSupplyRequiredEvent(@NonNull final MDCandidate simulatedCandidate, @NonNull final MDCandidate stockCandidate)
 	{
 		Check.assume(simulatedCandidate.isSimulated(), "fireSimulatedSupplyRequiredEvent should only be called for simulated candidates!");
 
@@ -246,7 +246,7 @@ public class DemandCandiateHandler implements CandidateHandler
 		}
 	}
 
-	private void postSupplyRequiredEvent(@NonNull final Candidate demandCandidateWithId, @NonNull final BigDecimal requiredQty)
+	private void postSupplyRequiredEvent(@NonNull final MDCandidate demandCandidateWithId, @NonNull final BigDecimal requiredQty)
 	{
 
 		final SupplyRequiredEvent supplyRequiredEvent = SupplyRequiredEventCreator.createSupplyRequiredEvent(demandCandidateWithId, requiredQty, null);

@@ -49,7 +49,7 @@ public class MaterialDispoRecordRepository
 	{
 		assertNotStockQuery(query);
 
-		final Candidate candidate = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(query);
+		final MDCandidate candidate = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(query);
 		if (candidate == null)
 		{
 			throw new AdempiereException("The given candidatesQuery does not match any candidate").appendParametersToMessage()
@@ -62,7 +62,7 @@ public class MaterialDispoRecordRepository
 	public ImmutableList<MaterialDispoDataItem> getAllBy(@NonNull final CandidatesQuery query)
 	{
 		assertNotStockQuery(query);
-		final List<Candidate> candidates = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(query);
+		final List<MDCandidate> candidates = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(query);
 		return asMaterialDispoDataItem(query, candidates);
 	}
 
@@ -72,7 +72,7 @@ public class MaterialDispoRecordRepository
 	{
 		assertNotStockQuery(query);
 
-		final List<Candidate> candidates = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(query);
+		final List<MDCandidate> candidates = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(query);
 		return asString(query, candidates);
 	}
 
@@ -80,12 +80,12 @@ public class MaterialDispoRecordRepository
 	@VisibleForTesting
 	public String getAllAsString(@NonNull final ProductId productId)
 	{
-		final List<Candidate> candidates = candidateRepositoryRetrieval.retrieveAllNotStockOrderedByDateAndSeqNoFor(productId);
+		final List<MDCandidate> candidates = candidateRepositoryRetrieval.retrieveAllNotStockOrderedByDateAndSeqNoFor(productId);
 		return asString(null, candidates);
 	}
 
 	@NonNull
-	private String asString(final @Nullable CandidatesQuery query, final @NonNull List<Candidate> candidates)
+	private String asString(final @Nullable CandidatesQuery query, final @NonNull List<MDCandidate> candidates)
 	{
 		final StringBuilder sb = new StringBuilder();
 		asMaterialDispoDataItem(query, candidates).forEach(item -> sb.append(item + "\n"));
@@ -94,20 +94,20 @@ public class MaterialDispoRecordRepository
 
 	private ImmutableList<MaterialDispoDataItem> asMaterialDispoDataItem(
 			final @Nullable CandidatesQuery query,
-			final @NonNull List<Candidate> candidates)
+			final @NonNull List<MDCandidate> candidates)
 	{
 		final ImmutableList.Builder<MaterialDispoDataItem> result = ImmutableList.builder();
 
-		for (final Candidate candidate : candidates)
+		for (final MDCandidate candidate : candidates)
 		{
 			result.add(extractMaterialDispoItem(query, candidate));
 		}
 		return result.build();
 	}
 
-	private MaterialDispoDataItem extractMaterialDispoItem(final @Nullable CandidatesQuery query, final @NonNull Candidate candidate)
+	private MaterialDispoDataItem extractMaterialDispoItem(final @Nullable CandidatesQuery query, final @NonNull MDCandidate candidate)
 	{
-		final Candidate stockCandidate;
+		final MDCandidate stockCandidate;
 		switch (candidate.getType())
 		{
 			case DEMAND:

@@ -25,7 +25,7 @@ package de.metas.material.dispo.service.event.handler.ppordercandidate;
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
 import de.metas.common.util.time.SystemTime;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
@@ -37,8 +37,6 @@ import de.metas.material.dispo.commons.repository.query.DemandDetailsQuery;
 import de.metas.material.dispo.commons.repository.query.MaterialDescriptorQuery;
 import de.metas.material.dispo.commons.repository.query.ProductionDetailsQuery;
 import de.metas.material.dispo.service.candidatechange.CandidateChangeService;
-import de.metas.material.dispo.service.candidatechange.handler.CandidateHandler;
-import de.metas.material.dispo.service.candidatechange.handler.DemandCandiateHandler;
 import de.metas.material.dispo.service.candidatechange.handler.SupplyCandidateHandler;
 import de.metas.material.event.MaterialEventHandler;
 import de.metas.material.event.PostMaterialEventService;
@@ -175,13 +173,13 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 
 	private MaterialDispoGroupId handlePPOrderCandidateAdvisedEvent(@NonNull final PPOrderCandidateAdvisedEvent ppOrderCandidateAdvisedEvent)
 	{
-		final Candidate headerCandidate = createHeaderCandidate(ppOrderCandidateAdvisedEvent);
+		final MDCandidate headerCandidate = createHeaderCandidate(ppOrderCandidateAdvisedEvent);
 
 		return headerCandidate.getGroupId();
 	}
 
 	@NonNull
-	private Candidate createHeaderCandidate(@NonNull final PPOrderCandidateAdvisedEvent event)
+	private MDCandidate createHeaderCandidate(@NonNull final PPOrderCandidateAdvisedEvent event)
 	{
 		final CandidatesQuery preExistingSupplyQuery = createPreExistingSupplyCandidateQuery(event);
 
@@ -238,7 +236,7 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 			return event;
 		}
 
-		final List<Candidate> stockCandidatesBetweenDemandAndPossibleSupply = getStockCandidatesBetweenDemandAndSupply(supplyRequiredDescriptor, ppOrderData);
+		final List<MDCandidate> stockCandidatesBetweenDemandAndPossibleSupply = getStockCandidatesBetweenDemandAndSupply(supplyRequiredDescriptor, ppOrderData);
 		if (stockCandidatesBetweenDemandAndPossibleSupply.isEmpty())
 		{
 			return event;
@@ -252,7 +250,7 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 				.missingQtySolvedTime(ppOrderData.getDatePromised())
 				.build();
 
-		for (final Candidate futureStockCandidate : stockCandidatesBetweenDemandAndPossibleSupply)
+		for (final MDCandidate futureStockCandidate : stockCandidatesBetweenDemandAndPossibleSupply)
 		{
 			final Optional<ProductionTimingResult> ppOrderDataWithBetterTiming = getBetterTimingIfAvailable(recalculateProductionDatePromisedFormula,
 																											futureStockCandidate,
@@ -276,7 +274,7 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 	@NonNull
 	private Optional<ProductionTimingResult> getBetterTimingIfAvailable(
 			@NonNull final Function<BigDecimal,Instant> recalculateProductionDateFormula,
-			@NonNull final Candidate stockCandidate,
+			@NonNull final MDCandidate stockCandidate,
 			@NonNull final SupplyRequiredDescriptor supplyRequiredDescriptor,
 			@NonNull final Instant currentMissingQtySolvingTime)
 	{
@@ -337,7 +335,7 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
    *  返回 Candidate List, 从 前 到 后 顺序
    */
 	@NonNull
-	private List<Candidate> getStockCandidatesBetweenDemandAndSupply(
+	private List<MDCandidate> getStockCandidatesBetweenDemandAndSupply(
 			@NonNull final SupplyRequiredDescriptor supplyRequiredDescriptor,
 			@NonNull final PPOrderData ppOrderData)
 	{
@@ -347,7 +345,7 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 		final boolean isDemandDateInThePast = Instant.now().isAfter(demandDate);
 		final Instant rangeStartTime = isDemandDateInThePast ? Instant.now() : demandDate;
 
-		final ImmutableList.Builder<Candidate> stockCandidatesCollector = ImmutableList.builder();
+		final ImmutableList.Builder<MDCandidate> stockCandidatesCollector = ImmutableList.builder();
 
 		if (isDemandDateInThePast)
 		{
@@ -358,7 +356,7 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 		retrieveStockCandidatesBetweenDates(supplyRequiredDescriptor, rangeStartTime, productionEarliestSupplyDate)
 				.forEach(stockCandidatesCollector::add);
 
-		final Candidate unspecifiedSupplyCandidate = getUnspecifiedSupplyCandidate(supplyRequiredDescriptor);
+		final MDCandidate unspecifiedSupplyCandidate = getUnspecifiedSupplyCandidate(supplyRequiredDescriptor);
 
     if (null ==  unspecifiedSupplyCandidate)
       return stockCandidatesCollector.build()
@@ -380,7 +378,7 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 	}
 
 	@NonNull
-	private Optional<Candidate> getLatestStockAtGivenTime(
+	private Optional<MDCandidate> getLatestStockAtGivenTime(
 			@NonNull final SupplyRequiredDescriptor supplyRequiredDescriptor,
 			@NonNull final Instant givenTime,
 			@NonNull final DateAndSeqNo.Operator operator)
@@ -399,13 +397,13 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 				.matchExactStorageAttributesKey(true)
 				.build();
 
-		final Candidate latestStock = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(stockCandidatesQuery);
+		final MDCandidate latestStock = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(stockCandidatesQuery);
 
 		return Optional.ofNullable(latestStock);
 	}
 
 	@NonNull
-	private List<Candidate> retrieveStockCandidatesBetweenDates(
+	private List<MDCandidate> retrieveStockCandidatesBetweenDates(
 			@NonNull final SupplyRequiredDescriptor supplyRequiredDescriptor,
 			@NonNull final Instant rangeStartTime,
 			@NonNull final Instant rangeEndTime)
@@ -431,7 +429,7 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 
 	@NonNull
 	private BigDecimal getQtyRequiredConsideringFutureStock(
-			@NonNull final Candidate stockCandidate,
+			@NonNull final MDCandidate stockCandidate,
 			@NonNull final BigDecimal initialQtyRequired)
 	{
 		return initialQtyRequired.subtract(stockCandidate.getQuantity());
@@ -458,15 +456,15 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 			@NonNull final BigDecimal requiredQtyInStock,
 			@NonNull final Instant givenTime)
 	{
-		final Optional<Candidate> latestStockAtGivenTime = getLatestStockAtGivenTime(supplyRequiredDescriptor, givenTime, DateAndSeqNo.Operator.INCLUSIVE);
+		final Optional<MDCandidate> latestStockAtGivenTime = getLatestStockAtGivenTime(supplyRequiredDescriptor, givenTime, DateAndSeqNo.Operator.INCLUSIVE);
 		
 		return latestStockAtGivenTime
-				.map(Candidate::getQuantity)
+				.map(MDCandidate::getQuantity)
 				.map(availableStock -> availableStock.compareTo(requiredQtyInStock) >= 0)
 				.orElse(false);
 	}
 
-	private boolean isStockForSupplyCandidate(@NonNull final Candidate stock, @NonNull final Candidate supplyCandidate)
+	private boolean isStockForSupplyCandidate(@NonNull final MDCandidate stock, @NonNull final MDCandidate supplyCandidate)
 	{
 		Check.assume(CandidateId.isRegularNonNull(supplyCandidate.getParentId()), "Supply Candidates have the stock candidate as parent!");
 
@@ -474,7 +472,7 @@ public final class PPOrderCandidateAdvisedHandler extends PPOrderCandidateEventH
 	}
 
 	@NonNull
-	private Candidate getUnspecifiedSupplyCandidate(@NonNull final SupplyRequiredDescriptor supplyRequiredDescriptor)
+	private MDCandidate getUnspecifiedSupplyCandidate(@NonNull final SupplyRequiredDescriptor supplyRequiredDescriptor)
 	{
     if (supplyRequiredDescriptor.getSupplyCandidateId() <= 0)
       return null;

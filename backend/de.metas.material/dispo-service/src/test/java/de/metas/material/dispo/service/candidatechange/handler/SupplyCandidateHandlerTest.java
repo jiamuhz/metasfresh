@@ -4,7 +4,7 @@ import de.metas.common.util.time.SystemTime;
 import de.metas.document.dimension.DimensionFactory;
 import de.metas.document.dimension.DimensionService;
 import de.metas.document.dimension.MDCandidateDimensionFactory;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryRetrieval;
@@ -109,7 +109,7 @@ public class SupplyCandidateHandlerTest
 				.date(NOW)
 				.build();
 
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.type(CandidateType.SUPPLY)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescriptor)
@@ -141,13 +141,13 @@ public class SupplyCandidateHandlerTest
 				.date(NOW)
 				.build();
 
-		final Candidate candidatee = Candidate.builder()
+		final MDCandidate candidatee = MDCandidate.builder()
 				.type(CandidateType.SUPPLY)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescriptor)
 				.build();
 
-		final Consumer<Candidate> doTest = candidate -> {
+		final Consumer<MDCandidate> doTest = candidate -> {
 
 			supplyCandiateHandler.onCandidateNewOrChange(candidate, OnNewOrChangeAdvise.DEFAULT);
 
@@ -180,13 +180,13 @@ public class SupplyCandidateHandlerTest
 				.date(NOW)
 				.build();
 
-		final Candidate candidatee = Candidate.builder()
+		final MDCandidate candidatee = MDCandidate.builder()
 				.type(CandidateType.SUPPLY)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescriptor)
 				.build();
 
-		final BiConsumer<Candidate, BigDecimal> doTest = (candidate, exptectedQty) -> {
+		final BiConsumer<MDCandidate, BigDecimal> doTest = (candidate, exptectedQty) -> {
 
 			supplyCandiateHandler.onCandidateNewOrChange(candidate, OnNewOrChangeAdvise.DEFAULT);
 
@@ -222,7 +222,7 @@ public class SupplyCandidateHandlerTest
 				.date(NOW)
 				.build();
 
-		final Candidate olderStockCandidate = Candidate.builder()
+		final MDCandidate olderStockCandidate = MDCandidate.builder()
 				.type(CandidateType.STOCK)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(olderMaterialDescriptor)
@@ -236,7 +236,7 @@ public class SupplyCandidateHandlerTest
 				.date(AFTER_NOW)
 				.build();
 
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.type(CandidateType.SUPPLY)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescriptoriptor)
@@ -260,7 +260,7 @@ public class SupplyCandidateHandlerTest
 	@Test
 	public void increase_stock()
 	{
-		final Candidate candidate = createCandidateWithType(CandidateType.UNEXPECTED_INCREASE);
+		final MDCandidate candidate = createCandidateWithType(CandidateType.UNEXPECTED_INCREASE);
 
 		supplyCandiateHandler.onCandidateNewOrChange(candidate, OnNewOrChangeAdvise.DEFAULT);
 
@@ -287,13 +287,13 @@ public class SupplyCandidateHandlerTest
 				.date(AFTER_NOW)
 				.build();
 
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.type(CandidateType.SUPPLY)
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.materialDescriptor(materialDescriptor)
 				.businessCase(CandidateBusinessCase.PURCHASE)
 				.build();
-		final Candidate persistendCandidate = supplyCandiateHandler.onCandidateNewOrChange(candidate, OnNewOrChangeAdvise.DEFAULT);
+		final MDCandidate persistendCandidate = supplyCandiateHandler.onCandidateNewOrChange(candidate, OnNewOrChangeAdvise.DEFAULT);
 
 		assertThat(filter(CandidateType.SUPPLY)).hasSize(1); // guard
 		assertThat(filter(CandidateType.STOCK)).hasSize(1); // guard
@@ -301,13 +301,13 @@ public class SupplyCandidateHandlerTest
 		final AttributesKey storageAttributesKey = AttributesKey.ofAttributeValueIds(10);
 		final int attributeSetInstanceId = 20;
 		final MaterialDescriptor alternativeAttribsMaterialDescriptor = materialDescriptor.withStorageAttributes(storageAttributesKey, attributeSetInstanceId);
-		final Candidate alternativeAttribsCandidate = persistendCandidate.toBuilder()
+		final MDCandidate alternativeAttribsCandidate = persistendCandidate.toBuilder()
 				.id(null)
 				.parentId(null)
 				.materialDescriptor(alternativeAttribsMaterialDescriptor)
 				.build();
 
-		final Candidate updatedCandidate = persistendCandidate.withQuantity(ZERO);
+		final MDCandidate updatedCandidate = persistendCandidate.withQuantity(ZERO);
 
 		// invoke the method under test
 		supplyCandiateHandler.onCandidateNewOrChange(alternativeAttribsCandidate, OnNewOrChangeAdvise.DEFAULT);
@@ -317,9 +317,9 @@ public class SupplyCandidateHandlerTest
 		assertThat(filter(CandidateType.STOCK)).hasSize(2);
 	}
 
-	private Candidate createCandidateWithType(@NonNull final CandidateType type)
+	private MDCandidate createCandidateWithType(@NonNull final CandidateType type)
 	{
-		final Candidate candidate = Candidate.builder()
+		final MDCandidate candidate = MDCandidate.builder()
 				.clientAndOrgId(CLIENT_AND_ORG_ID)
 				.type(type)
 				.materialDescriptor(MaterialDescriptor.builder()

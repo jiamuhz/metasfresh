@@ -53,17 +53,17 @@ import java.util.List;
 @With
 @Value
 @EqualsAndHashCode(doNotUseGetters = true)
-public class Candidate
+public class MDCandidate
 {
-	public static CandidateBuilder builderForEventDescr(@NonNull final EventDescriptor eventDescr)
+	public static MDCandidateBuilder builderForEventDescr(@NonNull final EventDescriptor eventDescr)
 	{
-		return Candidate.builder()
+		return MDCandidate.builder()
 				.clientAndOrgId(eventDescr.getClientAndOrgId());
 	}
 
-	public static CandidateBuilder builderForClientAndOrgId(@NonNull final ClientAndOrgId clientAndOrgId)
+	public static MDCandidateBuilder builderForClientAndOrgId(@NonNull final ClientAndOrgId clientAndOrgId)
 	{
-		return Candidate.builder()
+		return MDCandidate.builder()
 				.clientAndOrgId(clientAndOrgId);
 	}
 
@@ -120,7 +120,7 @@ public class Candidate
 	BigDecimal deltaQuantity;
 
 	@Builder(toBuilder = true)
-	private Candidate(
+	private MDCandidate(
 			@NonNull final ClientAndOrgId clientAndOrgId,
 			@NonNull final CandidateType type,
 			final CandidateBusinessCase businessCase,
@@ -175,9 +175,9 @@ public class Candidate
   /**
    * 这里的 Candidate 是指 MD_Candidate
    */
-	public static class CandidateBuilder
+	public static class MDCandidateBuilder
 	{
-		public CandidateBuilder quantity(final BigDecimal quantity)
+		public MDCandidateBuilder quantity(final BigDecimal quantity)
 		{
 			Check.assumeNotNull(materialDescriptor, "Parameter materialDescriptor is not null");
 			return materialDescriptor(materialDescriptor.withQuantity(quantity));
@@ -237,7 +237,7 @@ public class Candidate
 		return getClientAndOrgId().getOrgId();
 	}
 
-	public Candidate withNegatedQuantity()
+	public MDCandidate withNegatedQuantity()
 	{
 		return withQuantity(getQuantity().negate());
 	}
@@ -247,17 +247,17 @@ public class Candidate
 		return materialDescriptor.getQuantity();
 	}
 
-	public Candidate withQuantity(@NonNull final BigDecimal quantity)
+	public MDCandidate withQuantity(@NonNull final BigDecimal quantity)
 	{
 		return withMaterialDescriptor(materialDescriptor.withQuantity(quantity));
 	}
 
-	public Candidate withDate(@NonNull final Instant date)
+	public MDCandidate withDate(@NonNull final Instant date)
 	{
 		return withMaterialDescriptor(materialDescriptor.withDate(date));
 	}
 
-	public Candidate withWarehouseId(final WarehouseId warehouseId)
+	public MDCandidate withWarehouseId(final WarehouseId warehouseId)
 	{
 		return withMaterialDescriptor(materialDescriptor.withWarehouseId(warehouseId));
 	}

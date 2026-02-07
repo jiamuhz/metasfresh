@@ -7,7 +7,7 @@ import de.metas.common.util.IdConstants;
 import de.metas.common.util.time.SystemTime;
 import de.metas.document.dimension.Dimension;
 import de.metas.handlingunits.HUPIItemProductId;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DistributionDetail;
@@ -92,7 +92,7 @@ public class RequestMaterialOrderService
 			@NonNull final MaterialDispoGroupId groupId,
 			@Nullable final String traceId)
 	{
-		List<Candidate> groupOfCandidates = null;
+		List<MDCandidate> groupOfCandidates = null;
 		try
 		{
 			groupOfCandidates = candidateRepository.retrieveGroup(groupId);
@@ -101,7 +101,7 @@ public class RequestMaterialOrderService
 				return;
 			}
 
-			final CandidateBusinessCase businessCase = CollectionUtils.extractSingleElement(groupOfCandidates, Candidate::getBusinessCase);
+			final CandidateBusinessCase businessCase = CollectionUtils.extractSingleElement(groupOfCandidates, MDCandidate::getBusinessCase);
 			switch (businessCase)
 			{
 				case PRODUCTION:
@@ -132,24 +132,24 @@ public class RequestMaterialOrderService
 
 	/**
 	 * @param group a non-empty list of candidates that all have {@link CandidateBusinessCase#PRODUCTION},
-	 *              all have the same {@link Candidate#getGroupId()}
-	 *              and all have appropriate not-null {@link Candidate#getBusinessCaseDetail()}s that need to be {@link ProductionDetail} instances.
+	 *              all have the same {@link MDCandidate#getGroupId()}
+	 *              and all have appropriate not-null {@link MDCandidate#getBusinessCaseDetail()}s that need to be {@link ProductionDetail} instances.
 	 */
-	private void createAndFirePPOrderRequestedEvent(@NonNull final List<Candidate> group)
+	private void createAndFirePPOrderRequestedEvent(@NonNull final List<MDCandidate> group)
 	{
 		final PPOrderRequestedEvent ppOrderRequestEvent = createPPOrderRequestedEvent(group);
 		materialEventService.enqueueEventNow(ppOrderRequestEvent);
 	}
 
 	@VisibleForTesting
-	PPOrderRequestedEvent createPPOrderRequestedEvent(@NonNull final List<Candidate> group)
+	PPOrderRequestedEvent createPPOrderRequestedEvent(@NonNull final List<MDCandidate> group)
 	{
 		Preconditions.checkArgument(!group.isEmpty(), "Param 'group' may not be an empty list");
 
 		final PPOrder.PPOrderBuilder ppOrderBuilder = PPOrder.builder();
 		final PPOrderData.PPOrderDataBuilder ppOrderDataBuilder = PPOrderData.builder();
 
-		for (final Candidate groupMember : group)
+		for (final MDCandidate groupMember : group)
 		{
 			if (groupMember.getDemandDetail() != null)
 			{
@@ -210,7 +210,7 @@ public class RequestMaterialOrderService
 			}
 		}
 
-		final Candidate firstGroupMember = group.get(0);
+		final MDCandidate firstGroupMember = group.get(0);
 
 		ppOrderDataBuilder.materialDispoGroupId(firstGroupMember.getEffectiveGroupId());
 
@@ -221,14 +221,14 @@ public class RequestMaterialOrderService
 				.build();
 	}
 
-	private void createAndFireDDOrderRequestedEvent(@NonNull final List<Candidate> group, @Nullable final String traceId)
+	private void createAndFireDDOrderRequestedEvent(@NonNull final List<MDCandidate> group, @Nullable final String traceId)
 	{
 		final DDOrderRequestedEvent ddOrderRequestEvent = createDDOrderRequestEvent(group, traceId);
 		materialEventService.enqueueEventNow(ddOrderRequestEvent);
 	}
 
 	@VisibleForTesting
-	DDOrderRequestedEvent createDDOrderRequestEvent(@NonNull final List<Candidate> group, @Nullable final String traceId)
+	DDOrderRequestedEvent createDDOrderRequestEvent(@NonNull final List<MDCandidate> group, @Nullable final String traceId)
 	{
 		Preconditions.checkArgument(!group.isEmpty(), "Param 'group' is an empty list");
 
@@ -240,7 +240,7 @@ public class RequestMaterialOrderService
 		Instant startDate = null;
 		Instant endDate = null;
 
-		for (final Candidate groupMember : group)
+		for (final MDCandidate groupMember : group)
 		{
 			ddOrderBuilder.orgId(groupMember.getOrgId())
 					.simulated(groupMember.isSimulated());
@@ -279,7 +279,7 @@ public class RequestMaterialOrderService
 
 		final int durationDays = TimeUtil.getDaysBetween(startDate, endDate);
 
-		final Candidate firstGroupMember = group.get(0);
+		final MDCandidate firstGroupMember = group.get(0);
 
 		return DDOrderRequestedEvent.builder()
 				.eventDescriptor(EventDescriptor.ofClientOrgAndTraceId(firstGroupMember.getClientAndOrgId(), traceId))
@@ -292,15 +292,15 @@ public class RequestMaterialOrderService
 				.build();
 	}
 
-	private void createAndFirePurchaseCandidateRequestedEvent(@NonNull final List<Candidate> group, @Nullable final String traceId)
+	private void createAndFirePurchaseCandidateRequestedEvent(@NonNull final List<MDCandidate> group, @Nullable final String traceId)
 	{
 		final PurchaseCandidateRequestedEvent purchaseCandidateRequestedEvent = createPurchaseCandidateRequestedEvent(group, traceId);
 		materialEventService.enqueueEventAfterNextCommit(purchaseCandidateRequestedEvent);
 	}
 
-	private PurchaseCandidateRequestedEvent createPurchaseCandidateRequestedEvent(@NonNull final List<Candidate> group, @Nullable final String traceId)
+	private PurchaseCandidateRequestedEvent createPurchaseCandidateRequestedEvent(@NonNull final List<MDCandidate> group, @Nullable final String traceId)
 	{
-		final Candidate singleCandidate = CollectionUtils.singleElement(group);
+		final MDCandidate singleCandidate = CollectionUtils.singleElement(group);
 
 		final Dimension dimension = singleCandidate.getDimension();
 
@@ -329,15 +329,15 @@ public class RequestMaterialOrderService
 				.build();
 	}
 
-	private void createAndFireForecastRequestedEvent(@NonNull final List<Candidate> group)
+	private void createAndFireForecastRequestedEvent(@NonNull final List<MDCandidate> group)
 	{
 		final PurchaseCandidateRequestedEvent purchaseCandidateRequestedEvent = createForecastRequestedEvent(group);
 		materialEventService.enqueueEventAfterNextCommit(purchaseCandidateRequestedEvent);
 	}
 
-	private PurchaseCandidateRequestedEvent createForecastRequestedEvent(@NonNull final List<Candidate> group)
+	private PurchaseCandidateRequestedEvent createForecastRequestedEvent(@NonNull final List<MDCandidate> group)
 	{
-		final Candidate singleCandidate = CollectionUtils.singleElement(group);
+		final MDCandidate singleCandidate = CollectionUtils.singleElement(group);
 
 		final Dimension dimension = singleCandidate.getDimension();
 

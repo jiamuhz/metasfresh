@@ -3,7 +3,7 @@ package de.metas.material.dispo.service.candidatechange.handler;
 import com.google.common.base.Preconditions;
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateId;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.repository.CandidateRepositoryWriteService;
@@ -74,8 +74,8 @@ public class SupplyCandidateHandler implements CandidateHandler
 	 * When creating a new candidate, then compute its qty by getting the qty from that stockCandidate that has the same product and locator and is "before" it and add the supply candidate's qty
 	 */
 	@Override
-	public Candidate onCandidateNewOrChange(
-			@NonNull final Candidate candidate,
+	public MDCandidate onCandidateNewOrChange(
+			@NonNull final MDCandidate candidate,
 			@NonNull final OnNewOrChangeAdvise advise)
 	{
 		assertCorrectCandidateType(candidate);
@@ -98,13 +98,13 @@ public class SupplyCandidateHandler implements CandidateHandler
 			return candidateSaveResult.toCandidateWithQtyDelta(); // nothing more to do, because the candidate didn't change any ATP quantity.
 		}
 
-		final Candidate savedCandidate = candidateSaveResult.getCandidate();
+		final MDCandidate savedCandidate = candidateSaveResult.getCandidate();
 
 		final SaveResult stockCandidate = stockCandidateService
 				.createStockCandidate(savedCandidate)
 				.withCandidateId(savedCandidate.getParentId());
 
-		final Candidate savedStockCandidate = candidateRepositoryWriteService
+		final MDCandidate savedStockCandidate = candidateRepositoryWriteService
 				.addOrUpdateOverwriteStoredSeqNo(stockCandidate.getCandidate())
 				.getCandidate();
 
@@ -127,7 +127,7 @@ public class SupplyCandidateHandler implements CandidateHandler
 	}
 
 	@Override
-	public void onCandidateDelete(@NonNull final Candidate candidate)
+	public void onCandidateDelete(@NonNull final MDCandidate candidate)
 	{
 		assertCorrectCandidateType(candidate);
 
@@ -148,7 +148,7 @@ public class SupplyCandidateHandler implements CandidateHandler
 		stockCandidateService.applyDeltaToMatchingLaterStockCandidates(applyDeltaRequest);
 	}
 
-	private void assertCorrectCandidateType(@NonNull final Candidate supplyCandidate)
+	private void assertCorrectCandidateType(@NonNull final MDCandidate supplyCandidate)
 	{
 		Preconditions.checkArgument(
 				getHandeledTypes().contains(supplyCandidate.getType()),

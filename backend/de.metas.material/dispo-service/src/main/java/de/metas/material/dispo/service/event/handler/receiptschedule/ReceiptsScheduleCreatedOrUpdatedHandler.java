@@ -5,8 +5,8 @@ import static java.math.BigDecimal.ZERO;
 import java.math.BigDecimal;
 import java.util.List;
 
-import de.metas.material.dispo.commons.candidate.Candidate;
-import de.metas.material.dispo.commons.candidate.Candidate.CandidateBuilder;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate.MDCandidateBuilder;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.Flag;
@@ -59,25 +59,25 @@ abstract class ReceiptsScheduleCreatedOrUpdatedHandler<T extends AbstractReceipt
 
 	protected final void handleReceiptScheduleEvent(@NonNull final AbstractReceiptScheduleEvent event)
 	{
-		final Candidate existingSupplyCandidate = retrieveExistingSupplyCandidateOrNull(event);
+		final MDCandidate existingSupplyCandidate = retrieveExistingSupplyCandidateOrNull(event);
 
-		final CandidateBuilder supplyCandidateBuilder = existingSupplyCandidate != null
+		final MDCandidateBuilder supplyCandidateBuilder = existingSupplyCandidate != null
 				? existingSupplyCandidate.toBuilder()
 				: prepareInitialSupplyCandidate(event);
 
 		final PurchaseDetail purchaseDetail = createPurchaseDetail(event);
 
 		// for the "effective quantity" we need to subtract "UNEXPECTED_INSCREASES" (different AttributesKeys/Dates) that are related to the receipt schedule in question
-		final List<Candidate> receiptScheduleRecordsWithDifferentAttributes = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(CandidatesQuery.builder()
+		final List<MDCandidate> receiptScheduleRecordsWithDifferentAttributes = candidateRepositoryRetrieval.retrieveOrderedByDateAndSeqNo(CandidatesQuery.builder()
 				.type(CandidateType.UNEXPECTED_INCREASE) // get all purchaseDetail-candidates that are *not* the *actual* receipt schedule's candidate that we are updating in here
 				.purchaseDetailsQuery(PurchaseDetailsQuery.ofPurchaseDetailOrNull(purchaseDetail))
 				.build());
 		final BigDecimal qtySumWithDifferentAttributes = receiptScheduleRecordsWithDifferentAttributes
 				.stream()
-				.map(Candidate::getQuantity)
+				.map(MDCandidate::getQuantity)
 				.reduce(ZERO, BigDecimal::add);
 
-		final Candidate supplyCandidate = supplyCandidateBuilder
+		final MDCandidate supplyCandidate = supplyCandidateBuilder
 				.businessCaseDetail(purchaseDetail)
 				.quantity(event.getMaterialDescriptor().getQuantity().subtract(qtySumWithDifferentAttributes))
 				.build();
@@ -85,7 +85,7 @@ abstract class ReceiptsScheduleCreatedOrUpdatedHandler<T extends AbstractReceipt
 		candidateChangeHandler.onCandidateNewOrChange(supplyCandidate);
 	}
 
-	private Candidate retrieveExistingSupplyCandidateOrNull(@NonNull final AbstractReceiptScheduleEvent event)
+	private MDCandidate retrieveExistingSupplyCandidateOrNull(@NonNull final AbstractReceiptScheduleEvent event)
 	{
 		final CandidatesQuery query = createCandidatesQuery(event);
 		return candidateRepositoryRetrieval.retrieveLatestMatchOrNull(query);
@@ -93,9 +93,9 @@ abstract class ReceiptsScheduleCreatedOrUpdatedHandler<T extends AbstractReceipt
 
 	protected abstract CandidatesQuery createCandidatesQuery(@NonNull final AbstractReceiptScheduleEvent event);
 
-	private final CandidateBuilder prepareInitialSupplyCandidate(@NonNull final AbstractReceiptScheduleEvent event)
+	private final MDCandidateBuilder prepareInitialSupplyCandidate(@NonNull final AbstractReceiptScheduleEvent event)
 	{
-		return Candidate.builder()
+		return MDCandidate.builder()
 				.clientAndOrgId(event.getEventDescriptor().getClientAndOrgId())
 				.type(CandidateType.SUPPLY)
 				.materialDescriptor(event.getMaterialDescriptor())

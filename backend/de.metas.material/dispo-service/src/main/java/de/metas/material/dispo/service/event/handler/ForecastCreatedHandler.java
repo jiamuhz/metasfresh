@@ -2,8 +2,8 @@ package de.metas.material.dispo.service.event.handler;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.Profiles;
-import de.metas.material.dispo.commons.candidate.Candidate;
-import de.metas.material.dispo.commons.candidate.Candidate.CandidateBuilder;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate.MDCandidateBuilder;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
@@ -62,7 +62,7 @@ public class ForecastCreatedHandler implements MaterialEventHandler<ForecastCrea
 	{
 		final Forecast forecast = event.getForecast();
 
-		final CandidateBuilder candidateBuilder = Candidate.builderForEventDescr(event.getEventDescriptor())
+		final MDCandidateBuilder candidateBuilder = MDCandidate.builderForEventDescr(event.getEventDescriptor())
 				//.status(EventUtil.getCandidateStatus(forecast.getDocStatus()))
 				.type(CandidateType.STOCK_UP)
 				.businessCase(CandidateBusinessCase.FORECAST);
@@ -71,13 +71,13 @@ public class ForecastCreatedHandler implements MaterialEventHandler<ForecastCrea
 		{
 			complementBuilderFromForecastLine(candidateBuilder, forecast, forecastLine);
 
-			final Candidate demandCandidate = candidateBuilder.build();
+			final MDCandidate demandCandidate = candidateBuilder.build();
 			candidateChangeHandler.onCandidateNewOrChange(demandCandidate);
 		}
 	}
 
 	private void complementBuilderFromForecastLine(
-			@NonNull final CandidateBuilder candidateBuilder,
+			@NonNull final MDCandidate.MDCandidateBuilder candidateBuilder,
 			@NonNull final Forecast forecast,
 			@NonNull final ForecastLine forecastLine)
 	{

@@ -1,7 +1,7 @@
 package de.metas.material.dispo.service.event.handler.pporder;
 
-import de.metas.material.dispo.commons.candidate.Candidate;
-import de.metas.material.dispo.commons.candidate.Candidate.CandidateBuilder;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate.MDCandidateBuilder;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
  */
 
 /**
- * Creates (or updates) {@link Candidate}s for each {@link PPOrderLine}.
+ * Creates (or updates) {@link MDCandidate}s for each {@link PPOrderLine}.
  */
 final class PPOrderLineCandidatesCreateCommand
 {
@@ -93,19 +93,19 @@ final class PPOrderLineCandidatesCreateCommand
 	{
 		for (final PPOrderLine ppOrderLine : ppOrder.getLines())
 		{
-			final Candidate lineCandidate = createLineCandidate(ppOrderLine);
+			final MDCandidate lineCandidate = createLineCandidate(ppOrderLine);
 			candidateChangeService.onCandidateNewOrChange(lineCandidate);
 		}
 	}
 
-	private Candidate createLineCandidate(@NonNull final PPOrderLine ppOrderLine)
+	private MDCandidate createLineCandidate(@NonNull final PPOrderLine ppOrderLine)
 	{
 		final CandidatesQuery candidatesQuery = createPreExistingCandidatesQuery(ppOrder, ppOrderLine);
-		final Candidate existingLineCandidate = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(candidatesQuery);
+		final MDCandidate existingLineCandidate = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(candidatesQuery);
 
-		final CandidateBuilder candidateBuilder = existingLineCandidate != null
+		final MDCandidateBuilder candidateBuilder = existingLineCandidate != null
 				? existingLineCandidate.toBuilder()
-				: Candidate.builderForClientAndOrgId(ppOrder.getPpOrderData().getClientAndOrgId());
+				: MDCandidate.builderForClientAndOrgId(ppOrder.getPpOrderData().getClientAndOrgId());
 
 		final CandidateType candidateType = PPOrderHandlerUtils.extractCandidateType(ppOrderLine);
 		final MaterialDescriptor materialDescriptor = createMaterialDescriptor(ppOrderLine);

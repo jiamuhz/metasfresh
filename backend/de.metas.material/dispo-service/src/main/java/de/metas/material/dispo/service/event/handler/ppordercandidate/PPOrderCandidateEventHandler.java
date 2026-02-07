@@ -22,7 +22,7 @@
 
 package de.metas.material.dispo.service.event.handler.ppordercandidate;
 
-import de.metas.material.dispo.commons.candidate.Candidate;
+import de.metas.material.dispo.commons.candidate.MDCandidate;
 import de.metas.material.dispo.commons.candidate.CandidateBusinessCase;
 import de.metas.material.dispo.commons.candidate.CandidateType;
 import de.metas.material.dispo.commons.candidate.businesscase.DemandDetail;
@@ -67,18 +67,18 @@ public abstract class PPOrderCandidateEventHandler
    * Header Candidate 就是 MD_Candidate 表的记录
    */
 	@NonNull
-	protected Candidate createHeaderCandidate(
+	protected MDCandidate createHeaderCandidate(
 			@NonNull final AbstractPPOrderCandidateEvent event,
 			@NonNull final CandidatesQuery preExistingSupplyQuery)
 	{
 		final SupplyRequiredDescriptor supplyRequiredDescriptor = event.getSupplyRequiredDescriptor();
 		final PPOrderCandidate ppOrderCandidate = event.getPpOrderCandidate();
 
-		final Candidate existingCandidateOrNull = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(preExistingSupplyQuery);
+		final MDCandidate existingCandidateOrNull = candidateRepositoryRetrieval.retrieveLatestMatchOrNull(preExistingSupplyQuery);
 
-		final Candidate.CandidateBuilder builder = existingCandidateOrNull != null
+		final MDCandidate.MDCandidateBuilder builder = existingCandidateOrNull != null
 				? existingCandidateOrNull.toBuilder()
-				: Candidate.builderForClientAndOrgId(ppOrderCandidate.getPpOrderData().getClientAndOrgId());
+				: MDCandidate.builderForClientAndOrgId(ppOrderCandidate.getPpOrderData().getClientAndOrgId());
 
 		final ProductionDetail headerCandidateProductionDetail = createProductionDetailForPPOrderCandidate(event, existingCandidateOrNull);
 
@@ -90,7 +90,7 @@ public abstract class PPOrderCandidateEventHandler
 				headerCandidateMaterialDescriptor).ifPresent(builder::additionalDemandDetail);
 
 
-		final Candidate headerCandidate = builder
+		final MDCandidate headerCandidate = builder
 				.type(CandidateType.SUPPLY)
 				.businessCase(CandidateBusinessCase.PRODUCTION)
 				.businessCaseDetail(headerCandidateProductionDetail)
@@ -109,18 +109,18 @@ public abstract class PPOrderCandidateEventHandler
 	protected void createLineCandidates(
 			@NonNull final AbstractPPOrderCandidateEvent event,
 			@Nullable final MaterialDispoGroupId groupId,
-			@NonNull final Candidate headerCandidate)
+			@NonNull final MDCandidate headerCandidate)
 	{
 		final List<PPOrderLineCandidate> ppOrderLineCandidates = event.getPpOrderCandidate().getLines();
 		final boolean simulated = headerCandidate.isSimulated();
 
 		for (final PPOrderLineCandidate ppOrderLineCandidate : ppOrderLineCandidates)
 		{
-			final Candidate existingLineCandidate = retrieveExistingLineCandidateOrNull(ppOrderLineCandidate, simulated);
+			final MDCandidate existingLineCandidate = retrieveExistingLineCandidateOrNull(ppOrderLineCandidate, simulated);
 
-			final Candidate.CandidateBuilder candidateBuilder = existingLineCandidate != null
+			final MDCandidate.MDCandidateBuilder candidateBuilder = existingLineCandidate != null
 					? existingLineCandidate.toBuilder()
-					: Candidate.builderForClientAndOrgId(event.getPpOrderCandidate().getPpOrderData().getClientAndOrgId());
+					: MDCandidate.builderForClientAndOrgId(event.getPpOrderCandidate().getPpOrderData().getClientAndOrgId());
 
 			final DemandDetail headerDemandDetail = headerCandidate.getDemandDetail();
 			final ProductionDetail lineCandidateProductionDetail = createProductionDetailForPPOrderLineCandidate(ppOrderLineCandidate, event.getPpOrderCandidate());
@@ -149,7 +149,7 @@ public abstract class PPOrderCandidateEventHandler
 	@NonNull
 	private ProductionDetail createProductionDetailForPPOrderCandidate(
 			@NonNull final AbstractPPOrderCandidateEvent event,
-			@Nullable final Candidate existingCandidateOrNull)
+			@Nullable final MDCandidate existingCandidateOrNull)
 	{
 		final ProductionDetail.ProductionDetailBuilder productionDetailBuilder = prepareProductionDetail(existingCandidateOrNull);
 
@@ -177,17 +177,17 @@ public abstract class PPOrderCandidateEventHandler
 	}
 
 	@NonNull
-	private ProductionDetail.ProductionDetailBuilder prepareProductionDetail(@Nullable final Candidate existingCandidateOrNull)
+	private ProductionDetail.ProductionDetailBuilder prepareProductionDetail(@Nullable final MDCandidate existingCandidateOrNull)
 	{
 		return Optional.ofNullable(existingCandidateOrNull)
-				.map(Candidate::getBusinessCaseDetail)
+				.map(MDCandidate::getBusinessCaseDetail)
 				.map(ProductionDetail::cast)
 				.map(ProductionDetail::toBuilder)
 				.orElse(ProductionDetail.builder());
 	}
 
 	@Nullable
-	private Candidate retrieveExistingLineCandidateOrNull(@NonNull final PPOrderLineCandidate ppOrderLineCandidate, final boolean simulated)
+	private MDCandidate retrieveExistingLineCandidateOrNull(@NonNull final PPOrderLineCandidate ppOrderLineCandidate, final boolean simulated)
 	{
 		final SimulatedQueryQualifier simulatedQueryQualifier = simulated
 				? SimulatedQueryQualifier.ONLY_SIMULATED
