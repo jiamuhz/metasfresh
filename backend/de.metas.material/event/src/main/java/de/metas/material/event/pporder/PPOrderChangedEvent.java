@@ -67,6 +67,10 @@ public class PPOrderChangedEvent implements MaterialEvent
 	@With
 	DocStatus newDocStatus;
 
+	PPOrderPlanningStatus oldPlanningStatus;
+	@With
+	PPOrderPlanningStatus newPlanningStatus;
+
 	List<PPOrderLine> newPPOrderLines;
 	List<ChangedPPOrderLineDescriptor> ppOrderLineChanges;
 	List<DeletedPPOrderLineDescriptor> deletedPPOrderLines;
@@ -74,21 +78,23 @@ public class PPOrderChangedEvent implements MaterialEvent
 	@Builder
 	@JsonCreator
 	private PPOrderChangedEvent(
-			@JsonProperty("eventDescriptor") @NonNull final EventDescriptor eventDescriptor,
-			@JsonProperty("newDatePromised") @NonNull final Instant newDatePromised,
-			@JsonProperty("oldDatePromised") @NonNull final Instant oldDatePromised,
-			@JsonProperty("ppOrderAfterChanges") @NonNull final PPOrder ppOrderAfterChanges,
-			@JsonProperty("oldQtyRequired") @NonNull final BigDecimal oldQtyRequired,
-			@JsonProperty("newQtyRequired") @NonNull final BigDecimal newQtyRequired,
-			@JsonProperty("oldQtyDelivered") @NonNull final BigDecimal oldQtyDelivered,
-			@JsonProperty("newQtyDelivered") @NonNull final BigDecimal newQtyDelivered,
-			@JsonProperty("oldDocStatus") @NonNull final DocStatus oldDocStatus,
-			@JsonProperty("newDocStatus") @NonNull final DocStatus newDocStatus,
-			@JsonProperty("newPPOrderLines") @Singular final List<PPOrderLine> newPPOrderLines,
-			@JsonProperty("ppOrderLineChanges") @Singular final List<ChangedPPOrderLineDescriptor> ppOrderLineChanges,
-			@JsonProperty("deletedPPOrderLines") @Singular final List<DeletedPPOrderLineDescriptor> deletedPPOrderLines)
+    @JsonProperty("eventDescriptor") @NonNull final EventDescriptor eventDescriptor,
+    @JsonProperty("newDatePromised") @NonNull final Instant newDatePromised,
+    @JsonProperty("oldDatePromised") @NonNull final Instant oldDatePromised,
+    @JsonProperty("ppOrderAfterChanges") @NonNull final PPOrder ppOrderAfterChanges,
+    @JsonProperty("oldQtyRequired") @NonNull final BigDecimal oldQtyRequired,
+    @JsonProperty("newQtyRequired") @NonNull final BigDecimal newQtyRequired,
+    @JsonProperty("oldQtyDelivered") @NonNull final BigDecimal oldQtyDelivered,
+    @JsonProperty("newQtyDelivered") @NonNull final BigDecimal newQtyDelivered,
+    @JsonProperty("oldDocStatus") @NonNull final DocStatus oldDocStatus,
+    @JsonProperty("newDocStatus") @NonNull final DocStatus newDocStatus,
+		@JsonProperty("oldPlanningStatus") @NonNull final PPOrderPlanningStatus oldPlanningStatus,
+		@JsonProperty("newPlanningStatus") @NonNull final PPOrderPlanningStatus newPlanningStatus,
+    @JsonProperty("newPPOrderLines") @Singular final List<PPOrderLine> newPPOrderLines,
+    @JsonProperty("ppOrderLineChanges") @Singular final List<ChangedPPOrderLineDescriptor> ppOrderLineChanges,
+    @JsonProperty("deletedPPOrderLines") @Singular final List<DeletedPPOrderLineDescriptor> deletedPPOrderLines)
 	{
-		Check.assumeGreaterThanZero(ppOrderAfterChanges.getPpOrderId(), "ppOrderAfterChanges shall be saved");
+    Check.assumeGreaterThanZero(ppOrderAfterChanges.getPpOrderId(), "ppOrderAfterChanges shall be saved");
 
 		this.eventDescriptor = eventDescriptor;
 		this.newDatePromised = newDatePromised;
@@ -100,6 +106,8 @@ public class PPOrderChangedEvent implements MaterialEvent
 		this.newQtyDelivered = newQtyDelivered;
 		this.oldDocStatus = oldDocStatus;
 		this.newDocStatus = newDocStatus;
+		this.oldPlanningStatus = oldPlanningStatus;
+		this.newPlanningStatus = newPlanningStatus;
 		this.ppOrderLineChanges = ppOrderLineChanges;
 		this.deletedPPOrderLines = deletedPPOrderLines;
 		this.newPPOrderLines = newPPOrderLines;

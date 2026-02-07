@@ -112,6 +112,7 @@ public class PPOrderChangedEventFactory
 				.eventDescriptor(EventDescriptor.ofClientAndOrg(ppOrderRecord.getAD_Client_ID(), ppOrderRecord.getAD_Org_ID()))
 				.oldDatePromised(oldPPOrder.getPpOrderData().getDatePromised())
 				.oldDocStatus(oldPPOrder.getDocStatus())
+			  .oldPlanningStatus(oldPPOrder.getPpOrderPlanningStatus())
 				.oldQtyRequired(oldPPOrder.getPpOrderData().getQtyRequired())
 				.oldQtyDelivered(oldPPOrder.getPpOrderData().getQtyDelivered());
 	}
@@ -131,6 +132,7 @@ public class PPOrderChangedEventFactory
 
 		eventBuilder.newDatePromised(ppOrderData.getDatePromised());
 		eventBuilder.newDocStatus(updatedPPOrder.getDocStatus());
+		eventBuilder.newPlanningStatus(updatedPPOrder.getPpOrderPlanningStatus());
 
 		eventBuilder.newQtyRequired(ppOrderData.getQtyRequired());
 		eventBuilder.newQtyDelivered(ppOrderData.getQtyDelivered());

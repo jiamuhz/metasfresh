@@ -5,11 +5,7 @@ import de.metas.bpartner.BPartnerId;
 import de.metas.document.engine.DocStatus;
 import de.metas.handlingunits.HUPIItemProductId;
 import de.metas.material.event.ModelProductDescriptorExtractor;
-import de.metas.material.event.pporder.MaterialDispoGroupId;
-import de.metas.material.event.pporder.PPOrder;
-import de.metas.material.event.pporder.PPOrderData;
-import de.metas.material.event.pporder.PPOrderLine;
-import de.metas.material.event.pporder.PPOrderLineData;
+import de.metas.material.event.pporder.*;
 import de.metas.material.replenish.ReplenishInfo;
 import de.metas.material.replenish.ReplenishInfoRepository;
 import de.metas.organization.ClientAndOrgId;
@@ -110,6 +106,7 @@ public class PPOrderPojoConverter
 									 .build())
 				.lines(toPPOrderLinesList(ppOrderRecord))
 				.docStatus(DocStatus.ofCode(ppOrderRecord.getDocStatus()))
+			  .ppOrderPlanningStatus(PPOrderPlanningStatus.ofCode(ppOrderRecord.getPlanningStatus()))
 				.ppOrderId(ppOrderRecord.getPP_Order_ID())
 				.build();
 	}

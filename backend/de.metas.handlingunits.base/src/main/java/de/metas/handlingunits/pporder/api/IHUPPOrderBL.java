@@ -11,7 +11,7 @@ import lombok.NonNull;
 import org.eevolution.api.ManufacturingOrderQuery;
 import org.eevolution.api.PPOrderBOMLineId;
 import org.eevolution.api.PPOrderId;
-import org.eevolution.api.PPOrderPlanningStatus;
+import de.metas.material.event.pporder.PPOrderPlanningStatus;
 import org.eevolution.model.I_PP_Order_BOMLine;
 
 import java.util.Collection;

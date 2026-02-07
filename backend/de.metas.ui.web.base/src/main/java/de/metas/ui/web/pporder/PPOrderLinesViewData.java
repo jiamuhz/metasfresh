@@ -10,7 +10,7 @@ import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NonNull;
-import org.eevolution.api.PPOrderPlanningStatus;
+import de.metas.material.event.pporder.PPOrderPlanningStatus;
 
 import javax.annotation.concurrent.Immutable;
 import java.util.List;

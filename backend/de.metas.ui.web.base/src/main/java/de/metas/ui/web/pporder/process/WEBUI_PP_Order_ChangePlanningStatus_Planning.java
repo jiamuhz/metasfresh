@@ -1,6 +1,6 @@
 package de.metas.ui.web.pporder.process;
 
-import org.eevolution.api.PPOrderPlanningStatus;
+import de.metas.material.event.pporder.PPOrderPlanningStatus;
 
 /*
  * #%L

@@ -8,7 +8,7 @@ import de.metas.ui.web.pporder.PPOrderLinesView;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.eevolution.api.PPOrderId;
-import org.eevolution.api.PPOrderPlanningStatus;
+import de.metas.material.event.pporder.PPOrderPlanningStatus;
 
 /*
  * #%L

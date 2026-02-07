@@ -4,6 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import de.metas.dao.ValueRestriction;
 import de.metas.manufacturing.order.exportaudit.APIExportStatus;
+import de.metas.material.event.pporder.PPOrderPlanningStatus;
 import de.metas.product.ResourceId;
 import de.metas.user.UserId;
 import lombok.Builder;

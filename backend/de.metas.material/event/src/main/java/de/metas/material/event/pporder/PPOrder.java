@@ -44,6 +44,8 @@ public class PPOrder
 
 	DocStatus docStatus;
 
+	PPOrderPlanningStatus ppOrderPlanningStatus;
+
 	PPOrderData ppOrderData;
 
 	/**
@@ -56,11 +58,13 @@ public class PPOrder
 	public PPOrder(
 			@JsonProperty("ppOrderId") final int ppOrderId,
 			@JsonProperty("docStatus") @Nullable final DocStatus docStatus,
+			@JsonProperty("planningStatus") @Nullable final PPOrderPlanningStatus ppOrderPlanningStatus,
 			@JsonProperty("ppOrderData") @NonNull final PPOrderData ppOrderData,
 			@JsonProperty("lines") @Singular final List<PPOrderLine> lines)
 	{
 		this.ppOrderId = ppOrderId;
 		this.docStatus = docStatus;
+		this.ppOrderPlanningStatus = ppOrderPlanningStatus;
 		this.ppOrderData = ppOrderData;
 		this.lines = lines;
 	}
