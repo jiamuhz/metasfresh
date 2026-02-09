@@ -83,6 +83,7 @@ public class ViewsRepository implements IViewsRepository
 
 	private final ImmutableMap<ViewFactoryKey, IViewFactory> factories;
 	private final SqlViewFactory defaultFactory;
+
 	private final MenuTreeRepository menuTreeRepo;
 	private final WebsocketActiveSubscriptionsIndex websocketActiveSubscriptionsIndex;
 
@@ -108,6 +109,7 @@ public class ViewsRepository implements IViewsRepository
 		this.viewsIndexStorages = createViewIndexStoragesMap(viewIndexStorages.orElseGet(ImmutableList::of));
 		this.viewsIndexStorages.values().forEach(viewsIndexStorage -> viewsIndexStorage.setViewsRepository(this));
 		logger.info("Registered following view index storages: {}", this.viewsIndexStorages);
+
 		this.defaultFactory = defaultFactory;
 		this.menuTreeRepo = menuTreeRepo;
 		this.websocketActiveSubscriptionsIndex = websocketActiveSubscriptionsIndex;

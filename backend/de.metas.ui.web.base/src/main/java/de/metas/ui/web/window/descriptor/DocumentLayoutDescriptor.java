@@ -79,11 +79,13 @@ public final class DocumentLayoutDescriptor
 
 	/**
 	 * Single row layout: included tabs.
+	 * 窗口上部表单中的内嵌Tab (直接展开的Tab)
 	 */
 	private final Map<DetailId, DocumentLayoutDetailDescriptor> details;
 
 	/**
 	 * {@link #details} plus their included details.
+	 * 窗口下部的Tab
 	 */
 	private final Map<DetailId, DocumentLayoutDetailDescriptor> allDetails;
 
