@@ -82,7 +82,7 @@ public class ViewsRepository implements IViewsRepository
 	private static final String SYSCONFIG_ViewExpirationTimeoutInMinutes = "de.metas.ui.web.view.ViewExpirationTimeoutInMinutes";
 
 	private final ImmutableMap<ViewFactoryKey, IViewFactory> factories;
-	private final SqlViewFactory defaultFactory;
+	private final SqlViewFactory defaultViewFactory;
 
 	private final MenuTreeRepository menuTreeRepo;
 	private final WebsocketActiveSubscriptionsIndex websocketActiveSubscriptionsIndex;
@@ -98,7 +98,7 @@ public class ViewsRepository implements IViewsRepository
 	public ViewsRepository(
 			@NonNull final List<IViewFactory> viewFactories,
 			@SuppressWarnings("OptionalUsedAsFieldOrParameterType") @NonNull final Optional<List<IViewsIndexStorage>> viewIndexStorages,
-			@NonNull final SqlViewFactory defaultFactory,
+			@NonNull final SqlViewFactory defaultViewFactory,
 			@NonNull final MenuTreeRepository menuTreeRepo,
 			@NonNull final WebsocketActiveSubscriptionsIndex websocketActiveSubscriptionsIndex)
 	{
@@ -110,7 +110,7 @@ public class ViewsRepository implements IViewsRepository
 		this.viewsIndexStorages.values().forEach(viewsIndexStorage -> viewsIndexStorage.setViewsRepository(this));
 		logger.info("Registered following view index storages: {}", this.viewsIndexStorages);
 
-		this.defaultFactory = defaultFactory;
+		this.defaultViewFactory = defaultViewFactory;
 		this.menuTreeRepo = menuTreeRepo;
 		this.websocketActiveSubscriptionsIndex = websocketActiveSubscriptionsIndex;
 
@@ -234,7 +234,7 @@ public class ViewsRepository implements IViewsRepository
 			return factory;
 		}
 
-		return defaultFactory;
+		return defaultViewFactory;
 	}
 
 	@Override
