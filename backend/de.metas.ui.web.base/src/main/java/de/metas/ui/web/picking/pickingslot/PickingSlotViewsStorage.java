@@ -56,7 +56,7 @@ import java.util.stream.Stream;
  *
  */
 @Component
-public class PickingSlotViewsIndexStorage implements IViewsStorage4GivenWindow
+public class PickingSlotViewsStorage implements IViewsStorage4GivenWindow
 {
 	//@formatter:off
 	@Override

@@ -144,7 +144,7 @@ public class PickingSlotViewFactory implements IViewFactory
 
 		final ViewId pickingViewId = request.getParentViewId();
 		final DocumentId pickingRowId = request.getParentRowId();
-		final ViewId pickingSlotViewId = PickingSlotViewsIndexStorage.createViewId(pickingViewId, pickingRowId);
+		final ViewId pickingSlotViewId = PickingSlotViewsStorage.createViewId(pickingViewId, pickingRowId);
 		final ShipmentScheduleId currentShipmentScheduleId = extractCurrentShipmentScheduleId(request);
 		final boolean includeAllShipmentSchedules = sysConfigBL.getBooleanValue(SYS_CONFIG_SHOW_ALL_PICKING_CANDIDATES_ON_PICKING_SLOTS, false);
 

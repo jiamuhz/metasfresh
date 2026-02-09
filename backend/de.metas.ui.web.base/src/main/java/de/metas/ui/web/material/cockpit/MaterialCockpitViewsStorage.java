@@ -48,11 +48,11 @@ import java.util.stream.Stream;
  * because we need to invalidate those views on changes in two different tables (the standard framework could handle only one).
  */
 @Service
-public class MaterialCockpitViewsIndexStorage implements IViewsStorage4GivenWindow
+public class MaterialCockpitViewsStorage implements IViewsStorage4GivenWindow
 {
 	private final DefaultViewsStorage defaultViewsStorage = new DefaultViewsStorage(Duration.ofHours(1));
 
-	public MaterialCockpitViewsIndexStorage()
+	public MaterialCockpitViewsStorage()
 	{
 		CacheMgt.get().addCacheResetListener(I_MD_Cockpit.Table_Name, cacheInvalidateRequest -> {
 			notifyViewOfCacheReset(cacheInvalidateRequest);

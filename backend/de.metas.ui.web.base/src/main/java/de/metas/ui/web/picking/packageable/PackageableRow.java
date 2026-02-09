@@ -9,7 +9,7 @@ import de.metas.product.ProductId;
 import de.metas.quantity.Quantity;
 import de.metas.ui.web.exceptions.EntityNotFoundException;
 import de.metas.ui.web.picking.PickingConstants;
-import de.metas.ui.web.picking.pickingslot.PickingSlotViewsIndexStorage;
+import de.metas.ui.web.picking.pickingslot.PickingSlotViewsStorage;
 import de.metas.ui.web.view.IViewRow;
 import de.metas.ui.web.view.IViewRowAttributes;
 import de.metas.ui.web.view.IViewRowType;
@@ -157,7 +157,7 @@ public final class PackageableRow implements IViewRow
 		// create the included view's ID
 		// note that despite all our packageable-rows have the same picking slots, the IDs still need to be individual per-row,
 		// because we need to notify the picking slot view of this packageable-rows is selected at a given point in time
-		this.includedViewId = PickingSlotViewsIndexStorage.createViewId(viewId, id);
+		this.includedViewId = PickingSlotViewsStorage.createViewId(viewId, id);
 	}
 
 	@Override
