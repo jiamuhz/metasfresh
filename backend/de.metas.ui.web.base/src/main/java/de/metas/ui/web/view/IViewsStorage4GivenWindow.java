@@ -36,7 +36,7 @@ import de.metas.ui.web.window.datatypes.WindowId;
  *
  * @author metas-dev <dev@metasfresh.com>
  */
-public interface IViewsIndexStorage
+public interface IViewsStorage4GivenWindow
 {
 	/**
 	 * @return the window ID for whom this storage is storing the {@link IView} references. This method will be called by API on registration time.

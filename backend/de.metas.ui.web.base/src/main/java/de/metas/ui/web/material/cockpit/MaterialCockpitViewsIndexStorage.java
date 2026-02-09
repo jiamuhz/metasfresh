@@ -28,7 +28,7 @@ import de.metas.material.cockpit.model.I_MD_Cockpit;
 import de.metas.material.cockpit.model.I_MD_Stock;
 import de.metas.ui.web.view.DefaultViewsRepositoryStorage;
 import de.metas.ui.web.view.IView;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.window.datatypes.WindowId;
@@ -42,13 +42,13 @@ import java.time.Duration;
 import java.util.stream.Stream;
 
 /**
- * This {@link IViewsIndexStorage} implementation is dedicated to storing {@link MaterialCockpitView}.
+ * This {@link IViewsStorage4GivenWindow} implementation is dedicated to storing {@link MaterialCockpitView}.
  * The actual work is done by an internal instance of {@link DefaultViewsRepositoryStorage}.
  * We store {@link MaterialCockpitView}s inside this dedicated storage,
  * because we need to invalidate those views on changes in two different tables (the standard framework could handle only one).
  */
 @Service
-public class MaterialCockpitViewsIndexStorage implements IViewsIndexStorage
+public class MaterialCockpitViewsIndexStorage implements IViewsStorage4GivenWindow
 {
 	private final DefaultViewsRepositoryStorage defaultViewsRepositoryStorage = new DefaultViewsRepositoryStorage(Duration.ofHours(1));
 

@@ -47,7 +47,7 @@ import de.metas.ui.web.exceptions.EntityNotFoundException;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewId;
@@ -58,7 +58,7 @@ import de.metas.ui.web.window.datatypes.WindowId;
 import de.metas.util.Services;
 import lombok.NonNull;
 
-public abstract class PurchaseViewFactoryTemplate implements IViewFactory, IViewsIndexStorage
+public abstract class PurchaseViewFactoryTemplate implements IViewFactory, IViewsStorage4GivenWindow
 {
 	// services
 	private final PurchaseDemandWithCandidatesService purchaseDemandWithCandidatesService;

@@ -31,7 +31,7 @@ import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.DefaultViewsRepositoryStorage;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewFactory;
@@ -52,7 +52,7 @@ import java.util.stream.Stream;
 import static de.metas.ui.web.project.step.process.C_Project_WO_Step_ResolveReservationView_Launcher.VIEW_FACTORY_PARAM_WO_PROJECT_ID;
 
 @ViewFactory(windowId = ResolveReservationViewFactory.ResolveReservationView_String)
-public class ResolveReservationViewFactory implements IViewFactory, IViewsIndexStorage
+public class ResolveReservationViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	public static final String ResolveReservationView_String = "resolveReservation";
 	public static final WindowId WINDOWID = WindowId.fromJson(ResolveReservationView_String);

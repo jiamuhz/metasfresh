@@ -49,7 +49,7 @@ import de.metas.ui.web.material.cockpit.filters.ProductFilterUtil;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewFactory;
@@ -63,7 +63,7 @@ import lombok.NonNull;
 import javax.annotation.Nullable;
 
 @ViewFactory(windowId = MaterialCockpitUtil.WINDOW_MaterialCockpit_StockDetail_String)
-public class StockDetailsViewFactory implements IViewFactory, IViewsIndexStorage
+public class StockDetailsViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	private final Cache<ViewId, StockDetailsView> views = CacheBuilder.newBuilder()
 			.expireAfterAccess(1, TimeUnit.HOURS)

@@ -94,14 +94,14 @@ public class ViewsRepository implements IViewsRepository
 	@Value("${metasfresh.webui.view.truncateOnStartUp:true}")
 	private boolean truncateSelectionOnStartUp;
 
-	private final ImmutableMap<WindowId, IViewsIndexStorage> viewsIndexStorages;  // IViewsIndexStorage Spring Beans
-	private final IViewsIndexStorage defaultViewsIndexStorage;
+	private final ImmutableMap<WindowId, IViewsStorage4GivenWindow> viewsIndexStorages;  // IViewsIndexStorage Spring Beans
+	private final IViewsStorage4GivenWindow defaultViewsIndexStorage;
 
 	private final Executor async;
 
 	public ViewsRepository(
 			@NonNull final List<IViewFactory> viewFactories,
-			@SuppressWarnings("OptionalUsedAsFieldOrParameterType") @NonNull final Optional<List<IViewsIndexStorage>> viewIndexStorages,
+			@SuppressWarnings("OptionalUsedAsFieldOrParameterType") @NonNull final Optional<List<IViewsStorage4GivenWindow>> viewIndexStorages,
 			@NonNull final SqlViewFactory defaultViewFactory,
 			@NonNull final MenuTreeRepository menuTreeRepo,
 			@NonNull final WebsocketActiveSubscriptionsIndex websocketActiveSubscriptionsIndex)
@@ -196,11 +196,11 @@ public class ViewsRepository implements IViewsRepository
 		return ImmutableMap.copyOf(factories);
 	}
 
-	private static ImmutableMap<WindowId, IViewsIndexStorage> createViewIndexStoragesMap(final List<IViewsIndexStorage> viewsIndexStorages)
+	private static ImmutableMap<WindowId, IViewsStorage4GivenWindow> createViewIndexStoragesMap(final List<IViewsStorage4GivenWindow> viewsIndexStorages)
 	{
-		final ImmutableMap.Builder<WindowId, IViewsIndexStorage> map = ImmutableMap.builder();
+		final ImmutableMap.Builder<WindowId, IViewsStorage4GivenWindow> map = ImmutableMap.builder();
 
-		for (final IViewsIndexStorage viewsIndexStorage : viewsIndexStorages)
+		for (final IViewsStorage4GivenWindow viewsIndexStorage : viewsIndexStorages)
 		{
 			if (viewsIndexStorage instanceof DefaultViewsRepositoryStorage)
 			{
@@ -242,9 +242,9 @@ public class ViewsRepository implements IViewsRepository
 	}
 
 	@Override
-	public IViewsIndexStorage getViewsStorageFor(@NonNull final ViewId viewId)
+	public IViewsStorage4GivenWindow getViewsStorageFor(@NonNull final ViewId viewId)
 	{
-		final IViewsIndexStorage viewIndexStorage = viewsIndexStorages.get(viewId.getWindowId());
+		final IViewsStorage4GivenWindow viewIndexStorage = viewsIndexStorages.get(viewId.getWindowId());
 		if (viewIndexStorage != null)
 		{
 			return viewIndexStorage;
@@ -256,7 +256,7 @@ public class ViewsRepository implements IViewsRepository
 	private Stream<IView> streamAllViews()
 	{
 		return Streams.concat(viewsIndexStorages.values().stream(), Stream.of(defaultViewsIndexStorage))
-				.flatMap(IViewsIndexStorage::streamAllViews);
+				.flatMap(IViewsStorage4GivenWindow::streamAllViews);
 	}
 
 	@Override
@@ -464,7 +464,7 @@ public class ViewsRepository implements IViewsRepository
 
 		try (final IAutoCloseable ignored = ViewChangesCollector.currentOrNewThreadLocalCollector())
 		{
-			for (final IViewsIndexStorage viewsIndexStorage : viewsIndexStorages.values())
+			for (final IViewsStorage4GivenWindow viewsIndexStorage : viewsIndexStorages.values())
 			{
 				notifyRecordsChangedNow(recordRefs, viewsIndexStorage);
 			}
@@ -475,7 +475,7 @@ public class ViewsRepository implements IViewsRepository
 
 	private void notifyRecordsChangedNow(
 			@NonNull final TableRecordReferenceSet recordRefs,
-			@NonNull final IViewsIndexStorage viewsIndexStorage)
+			@NonNull final IViewsStorage4GivenWindow viewsIndexStorage)
 	{
 		final ImmutableList<IView> views = viewsIndexStorage.getAllViews();
 		if (views.isEmpty())

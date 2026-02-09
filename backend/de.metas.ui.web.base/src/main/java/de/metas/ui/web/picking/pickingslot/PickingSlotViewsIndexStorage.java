@@ -29,7 +29,7 @@ import de.metas.ui.web.picking.packageable.PackageableRow;
 import de.metas.ui.web.picking.packageable.PackageableView;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.IView;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewId;
@@ -56,7 +56,7 @@ import java.util.stream.Stream;
  *
  */
 @Component
-public class PickingSlotViewsIndexStorage implements IViewsIndexStorage
+public class PickingSlotViewsIndexStorage implements IViewsStorage4GivenWindow
 {
 	//@formatter:off
 	@Override

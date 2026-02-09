@@ -26,7 +26,7 @@ import de.metas.i18n.IMsgBL;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewFactory;
@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
 import java.util.stream.Stream;
 
 @ViewFactory(windowId = InvoicesViewFactory.WINDOW_ID_String)
-public class InvoicesViewFactory implements IViewFactory, IViewsIndexStorage
+public class InvoicesViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	static final String WINDOW_ID_String = "invoicesToAllocate"; // FIXME: HARDCODED
 	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_String);

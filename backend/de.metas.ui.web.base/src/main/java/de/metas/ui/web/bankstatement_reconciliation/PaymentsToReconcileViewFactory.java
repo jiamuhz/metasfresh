@@ -28,7 +28,7 @@ import de.metas.i18n.TranslatableStrings;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewFactory;
@@ -43,7 +43,7 @@ import lombok.NonNull;
 import javax.annotation.Nullable;
 
 @ViewFactory(windowId = PaymentsToReconcileViewFactory.WINDOW_ID_String)
-public class PaymentsToReconcileViewFactory implements IViewFactory, IViewsIndexStorage
+public class PaymentsToReconcileViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	static final String WINDOW_ID_String = "paymentsToReconcile";
 	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_String);

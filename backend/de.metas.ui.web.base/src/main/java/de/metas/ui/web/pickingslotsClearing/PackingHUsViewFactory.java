@@ -39,7 +39,7 @@ import de.metas.ui.web.pickingslotsClearing.process.WEBUI_PackingHUsView_AddHUsT
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewFactory;
@@ -59,7 +59,7 @@ import java.util.function.Supplier;
 import java.util.stream.Stream;
 
 @ViewFactory(windowId = PackingHUsViewFactory.WINDOW_ID_STRING)
-public class PackingHUsViewFactory implements IViewFactory, IViewsIndexStorage
+public class PackingHUsViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	static final String WINDOW_ID_STRING = "packingHUs";
 	static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);

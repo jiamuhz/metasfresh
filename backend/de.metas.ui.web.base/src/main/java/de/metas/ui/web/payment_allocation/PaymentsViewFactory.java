@@ -43,7 +43,7 @@ import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.DefaultViewsRepositoryStorage;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewFactory;
@@ -65,7 +65,7 @@ import java.util.Set;
 import java.util.stream.Stream;
 
 @ViewFactory(windowId = PaymentsViewFactory.WINDOW_ID_String)
-public class PaymentsViewFactory implements IViewFactory, IViewsIndexStorage
+public class PaymentsViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	static final String WINDOW_ID_String = "540759"; // FIXME: HARDCODED
 	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_String);

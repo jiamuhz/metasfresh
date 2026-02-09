@@ -41,7 +41,7 @@ import java.util.Objects;
  */
 public interface IViewsRepository
 {
-	IViewsIndexStorage getViewsStorageFor(ViewId viewId);
+	IViewsStorage4GivenWindow getViewsStorageFor(ViewId viewId);
 
 	List<ViewProfile> getAvailableProfiles(WindowId windowId, JSONViewDataType viewDataType);
 

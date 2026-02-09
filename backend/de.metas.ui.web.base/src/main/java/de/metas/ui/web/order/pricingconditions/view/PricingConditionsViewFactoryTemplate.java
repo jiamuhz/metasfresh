@@ -43,7 +43,7 @@ import de.metas.ui.web.order.pricingconditions.view.PricingConditionsRowsLoader.
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewId;
@@ -58,7 +58,7 @@ import lombok.NonNull;
 
 import javax.annotation.Nullable;
 
-public abstract class PricingConditionsViewFactoryTemplate implements IViewFactory, IViewsIndexStorage
+public abstract class PricingConditionsViewFactoryTemplate implements IViewFactory, IViewsStorage4GivenWindow
 {
 	private final WindowId windowId;
 

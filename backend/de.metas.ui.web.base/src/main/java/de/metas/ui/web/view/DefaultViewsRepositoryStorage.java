@@ -37,7 +37,7 @@ import java.util.stream.Stream;
  */
 
 // NOTE: don't add it to spring context! i.e. don't annotate it with @Component or similar
-public final class DefaultViewsRepositoryStorage implements IViewsIndexStorage
+public final class DefaultViewsRepositoryStorage implements IViewsStorage4GivenWindow
 {
 	private static transient final Logger logger = LogManager.getLogger(DefaultViewsRepositoryStorage.class);
 

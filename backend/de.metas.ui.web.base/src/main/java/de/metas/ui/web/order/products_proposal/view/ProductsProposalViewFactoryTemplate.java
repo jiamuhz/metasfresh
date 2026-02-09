@@ -46,7 +46,7 @@ import de.metas.ui.web.order.products_proposal.model.ProductsProposalRowsLoader;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
-import de.metas.ui.web.view.IViewsIndexStorage;
+import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewId;
@@ -59,7 +59,7 @@ import lombok.NonNull;
 
 import javax.annotation.Nullable;
 
-abstract class ProductsProposalViewFactoryTemplate implements IViewFactory, IViewsIndexStorage
+abstract class ProductsProposalViewFactoryTemplate implements IViewFactory, IViewsStorage4GivenWindow
 {
 	private static final String PARAM_RecordRef = "recordRef";
 
