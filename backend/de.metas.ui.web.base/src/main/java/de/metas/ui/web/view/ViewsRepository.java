@@ -73,6 +73,10 @@ import java.util.stream.Stream;
  * #L%
  */
 
+/**
+ * 全局唯一的实例，视图的总控
+ */
+
 @Service
 public class ViewsRepository implements IViewsRepository
 {
@@ -81,7 +85,7 @@ public class ViewsRepository implements IViewsRepository
 
 	private static final String SYSCONFIG_ViewExpirationTimeoutInMinutes = "de.metas.ui.web.view.ViewExpirationTimeoutInMinutes";
 
-	private final ImmutableMap<ViewFactoryKey, IViewFactory> factories;
+	private final ImmutableMap<ViewFactoryKey, IViewFactory> factories;  // IViewFactory Spring Beans
 	private final SqlViewFactory defaultViewFactory;
 
 	private final MenuTreeRepository menuTreeRepo;
@@ -90,7 +94,7 @@ public class ViewsRepository implements IViewsRepository
 	@Value("${metasfresh.webui.view.truncateOnStartUp:true}")
 	private boolean truncateSelectionOnStartUp;
 
-	private final ImmutableMap<WindowId, IViewsIndexStorage> viewsIndexStorages;
+	private final ImmutableMap<WindowId, IViewsIndexStorage> viewsIndexStorages;  // IViewsIndexStorage Spring Beans
 	private final IViewsIndexStorage defaultViewsIndexStorage;
 
 	private final Executor async;
