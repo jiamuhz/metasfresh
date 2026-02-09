@@ -85,7 +85,7 @@ public class ViewsRepository implements IViewsRepository
 
 	private static final String SYSCONFIG_ViewExpirationTimeoutInMinutes = "de.metas.ui.web.view.ViewExpirationTimeoutInMinutes";
 
-	private final ImmutableMap<ViewFactoryKey, IViewFactory> factories;  // IViewFactory Spring Beans
+	private final ImmutableMap<ViewFactoryKey, IViewFactory> mapViewFactories;  // IViewFactory Spring Beans
 	private final SqlViewFactory defaultViewFactory;
 
 	private final MenuTreeRepository menuTreeRepo;
@@ -94,8 +94,8 @@ public class ViewsRepository implements IViewsRepository
 	@Value("${metasfresh.webui.view.truncateOnStartUp:true}")
 	private boolean truncateSelectionOnStartUp;
 
-	private final ImmutableMap<WindowId, IViewsStorage4GivenWindow> viewsIndexStorages;  // IViewsIndexStorage Spring Beans
-	private final IViewsStorage4GivenWindow defaultViewsIndexStorage;
+	private final ImmutableMap<WindowId, IViewsStorage4GivenWindow> mapViewsStorages;  // IViewsStorage4GivenWindow Spring Beans
+	private final IViewsStorage4GivenWindow defaultViewsStorage;
 
 	private final Executor async;
 
@@ -106,13 +106,13 @@ public class ViewsRepository implements IViewsRepository
 			@NonNull final MenuTreeRepository menuTreeRepo,
 			@NonNull final WebsocketActiveSubscriptionsIndex websocketActiveSubscriptionsIndex)
 	{
-		factories = createFactoriesMap(viewFactories);
-		factories.values().forEach(viewFactory -> viewFactory.setViewsRepository(this));
-		logger.info("Registered following view factories: {}", factories);
+		this.mapViewFactories = createFactoriesMap(viewFactories);
+		this.mapViewFactories.values().forEach(viewFactory -> viewFactory.setViewsRepository(this));
+		logger.info("Registered following view factories: {}", this.mapViewFactories);
 
-		this.viewsIndexStorages = createViewIndexStoragesMap(viewIndexStorages.orElseGet(ImmutableList::of));
-		this.viewsIndexStorages.values().forEach(viewsIndexStorage -> viewsIndexStorage.setViewsRepository(this));
-		logger.info("Registered following view index storages: {}", this.viewsIndexStorages);
+		this.mapViewsStorages = createViewIndexStoragesMap(viewIndexStorages.orElseGet(ImmutableList::of));
+		this.mapViewsStorages.values().forEach(viewsIndexStorage -> viewsIndexStorage.setViewsRepository(this));
+		logger.info("Registered following view index storages: {}", this.mapViewsStorages);
 
 		this.defaultViewFactory = defaultViewFactory;
 		this.menuTreeRepo = menuTreeRepo;
@@ -120,7 +120,7 @@ public class ViewsRepository implements IViewsRepository
 
 		final Duration viewExpirationTimeout = Duration.ofMinutes(Services.get(ISysConfigBL.class).getIntValue(SYSCONFIG_ViewExpirationTimeoutInMinutes, 60));
 		logger.info("viewExpirationTimeout: {} (see `{}` sysconfig)", viewExpirationTimeout, SYSCONFIG_ViewExpirationTimeoutInMinutes);
-		defaultViewsIndexStorage = new DefaultViewsStorage(viewExpirationTimeout);
+		defaultViewsStorage = new DefaultViewsStorage(viewExpirationTimeout);
 
 		async = createAsyncExecutor();
 	}
@@ -226,13 +226,13 @@ public class ViewsRepository implements IViewsRepository
 
 	private IViewFactory getFactory(final WindowId windowId, final JSONViewDataType viewType)
 	{
-		IViewFactory factory = factories.get(ViewFactoryKey.of(windowId, viewType));
+		IViewFactory factory = mapViewFactories.get(ViewFactoryKey.of(windowId, viewType));
 		if (factory != null)
 		{
 			return factory;
 		}
 
-		factory = factories.get(ViewFactoryKey.of(windowId, null));
+		factory = mapViewFactories.get(ViewFactoryKey.of(windowId, null));
 		if (factory != null)
 		{
 			return factory;
@@ -244,18 +244,18 @@ public class ViewsRepository implements IViewsRepository
 	@Override
 	public IViewsStorage4GivenWindow getViewsStorageFor(@NonNull final ViewId viewId)
 	{
-		final IViewsStorage4GivenWindow viewIndexStorage = viewsIndexStorages.get(viewId.getWindowId());
+		final IViewsStorage4GivenWindow viewIndexStorage = mapViewsStorages.get(viewId.getWindowId());
 		if (viewIndexStorage != null)
 		{
 			return viewIndexStorage;
 		}
 
-		return defaultViewsIndexStorage;
+		return defaultViewsStorage;
 	}
 
 	private Stream<IView> streamAllViews()
 	{
-		return Streams.concat(viewsIndexStorages.values().stream(), Stream.of(defaultViewsIndexStorage))
+		return Streams.concat(mapViewsStorages.values().stream(), Stream.of(defaultViewsStorage))
 				.flatMap(IViewsStorage4GivenWindow::streamAllViews);
 	}
 
@@ -464,12 +464,12 @@ public class ViewsRepository implements IViewsRepository
 
 		try (final IAutoCloseable ignored = ViewChangesCollector.currentOrNewThreadLocalCollector())
 		{
-			for (final IViewsStorage4GivenWindow viewsIndexStorage : viewsIndexStorages.values())
+			for (final IViewsStorage4GivenWindow viewsIndexStorage : mapViewsStorages.values())
 			{
 				notifyRecordsChangedNow(recordRefs, viewsIndexStorage);
 			}
 
-			notifyRecordsChangedNow(recordRefs, defaultViewsIndexStorage);
+			notifyRecordsChangedNow(recordRefs, defaultViewsStorage);
 		}
 	}
 
