@@ -40,7 +40,7 @@ import de.metas.ui.web.payment_allocation.process.PaymentsView_InvoiceDiscount;
 import de.metas.ui.web.payment_allocation.process.PaymentsView_InvoiceWriteOff;
 import de.metas.ui.web.payment_allocation.process.PaymentsView_PaymentWriteOff;
 import de.metas.ui.web.view.CreateViewRequest;
-import de.metas.ui.web.view.DefaultViewsRepositoryStorage;
+import de.metas.ui.web.view.DefaultViewsStorage;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
 import de.metas.ui.web.view.IViewsStorage4GivenWindow;
@@ -72,7 +72,7 @@ public class PaymentsViewFactory implements IViewFactory, IViewsStorage4GivenWin
 
 	private final IMsgBL msgBL = Services.get(IMsgBL.class);
 	private final PaymentAndInvoiceRowsRepo rowsRepo;
-	private final DefaultViewsRepositoryStorage views = new DefaultViewsRepositoryStorage(Duration.ofHours(1));
+	private final DefaultViewsStorage views = new DefaultViewsStorage(Duration.ofHours(1));
 
 	public static final String PARAMETER_TYPE_SET_OF_PAYMENT_IDS = "SET_OF_PAYMENT_IDS";
 	public static final String PARAMETER_TYPE_BPARTNER_ID = "BPARTNER_ID";

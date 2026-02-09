@@ -36,7 +36,7 @@ import de.metas.process.RelatedProcessDescriptor;
 import de.metas.process.RelatedProcessDescriptor.DisplayPlace;
 import de.metas.ui.web.bankstatement_reconciliation.process.PaymentsToReconcileView_Reconcile;
 import de.metas.ui.web.view.CreateViewRequest;
-import de.metas.ui.web.view.DefaultViewsRepositoryStorage;
+import de.metas.ui.web.view.DefaultViewsStorage;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
 import de.metas.ui.web.view.IViewsStorage4GivenWindow;
@@ -62,7 +62,7 @@ public class BankStatementReconciliationViewFactory implements IViewFactory, IVi
 	private final IMsgBL msgBL = Services.get(IMsgBL.class);
 	private final IADProcessDAO adProcessDAO = Services.get(IADProcessDAO.class);
 	private final BankStatementLineAndPaymentsToReconcileRepository rowsRepo;
-	private final DefaultViewsRepositoryStorage views = new DefaultViewsRepositoryStorage(Duration.ofHours(1));
+	private final DefaultViewsStorage views = new DefaultViewsStorage(Duration.ofHours(1));
 
 	public BankStatementReconciliationViewFactory(
 			@NonNull final BankStatementLineAndPaymentsToReconcileRepository rowsRepo)

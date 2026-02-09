@@ -28,7 +28,7 @@ import de.metas.project.ProjectId;
 import de.metas.project.workorder.stepresource.WOProjectStepResourceService;
 import de.metas.ui.web.project.step.process.C_Project_WO_Step_ResolveReservationView_Launcher;
 import de.metas.ui.web.view.CreateViewRequest;
-import de.metas.ui.web.view.DefaultViewsRepositoryStorage;
+import de.metas.ui.web.view.DefaultViewsStorage;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewFactory;
 import de.metas.ui.web.view.IViewsStorage4GivenWindow;
@@ -58,7 +58,7 @@ public class ResolveReservationViewFactory implements IViewFactory, IViewsStorag
 	public static final WindowId WINDOWID = WindowId.fromJson(ResolveReservationView_String);
 
 	@NonNull
-	private final DefaultViewsRepositoryStorage views = new DefaultViewsRepositoryStorage(Duration.ofHours(1));
+	private final DefaultViewsStorage views = new DefaultViewsStorage(Duration.ofHours(1));
 
 	private final IADProcessDAO adProcessDAO = Services.get(IADProcessDAO.class);
 

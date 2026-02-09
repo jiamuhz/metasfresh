@@ -120,7 +120,7 @@ public class ViewsRepository implements IViewsRepository
 
 		final Duration viewExpirationTimeout = Duration.ofMinutes(Services.get(ISysConfigBL.class).getIntValue(SYSCONFIG_ViewExpirationTimeoutInMinutes, 60));
 		logger.info("viewExpirationTimeout: {} (see `{}` sysconfig)", viewExpirationTimeout, SYSCONFIG_ViewExpirationTimeoutInMinutes);
-		defaultViewsIndexStorage = new DefaultViewsRepositoryStorage(viewExpirationTimeout);
+		defaultViewsIndexStorage = new DefaultViewsStorage(viewExpirationTimeout);
 
 		async = createAsyncExecutor();
 	}
@@ -202,7 +202,7 @@ public class ViewsRepository implements IViewsRepository
 
 		for (final IViewsStorage4GivenWindow viewsIndexStorage : viewsIndexStorages)
 		{
-			if (viewsIndexStorage instanceof DefaultViewsRepositoryStorage)
+			if (viewsIndexStorage instanceof DefaultViewsStorage)
 			{
 				logger.warn("Skipping {} because it shall not be in spring context", viewsIndexStorage);
 				continue;

@@ -26,7 +26,7 @@ import de.metas.cache.CacheMgt;
 import de.metas.cache.model.CacheInvalidateMultiRequest;
 import de.metas.material.cockpit.model.I_MD_Cockpit;
 import de.metas.material.cockpit.model.I_MD_Stock;
-import de.metas.ui.web.view.DefaultViewsRepositoryStorage;
+import de.metas.ui.web.view.DefaultViewsStorage;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.ViewCloseAction;
@@ -43,14 +43,14 @@ import java.util.stream.Stream;
 
 /**
  * This {@link IViewsStorage4GivenWindow} implementation is dedicated to storing {@link MaterialCockpitView}.
- * The actual work is done by an internal instance of {@link DefaultViewsRepositoryStorage}.
+ * The actual work is done by an internal instance of {@link DefaultViewsStorage}.
  * We store {@link MaterialCockpitView}s inside this dedicated storage,
  * because we need to invalidate those views on changes in two different tables (the standard framework could handle only one).
  */
 @Service
 public class MaterialCockpitViewsIndexStorage implements IViewsStorage4GivenWindow
 {
-	private final DefaultViewsRepositoryStorage defaultViewsRepositoryStorage = new DefaultViewsRepositoryStorage(Duration.ofHours(1));
+	private final DefaultViewsStorage defaultViewsStorage = new DefaultViewsStorage(Duration.ofHours(1));
 
 	public MaterialCockpitViewsIndexStorage()
 	{
@@ -96,31 +96,31 @@ public class MaterialCockpitViewsIndexStorage implements IViewsStorage4GivenWind
 	@Override
 	public void put(final IView view)
 	{
-		defaultViewsRepositoryStorage.put(view);
+		defaultViewsStorage.put(view);
 	}
 
 	@Nullable
 	@Override
 	public IView getByIdOrNull(final ViewId viewId)
 	{
-		return defaultViewsRepositoryStorage.getByIdOrNull(viewId);
+		return defaultViewsStorage.getByIdOrNull(viewId);
 	}
 
 	@Override
 	public void closeById(@NonNull final ViewId viewId, @NonNull final ViewCloseAction closeAction)
 	{
-		defaultViewsRepositoryStorage.closeById(viewId, closeAction);
+		defaultViewsStorage.closeById(viewId, closeAction);
 	}
 
 	@Override
 	public Stream<IView> streamAllViews()
 	{
-		return defaultViewsRepositoryStorage.streamAllViews();
+		return defaultViewsStorage.streamAllViews();
 	}
 
 	@Override
 	public void invalidateView(final ViewId viewId)
 	{
-		defaultViewsRepositoryStorage.invalidateView(viewId);
+		defaultViewsStorage.invalidateView(viewId);
 	}
 }

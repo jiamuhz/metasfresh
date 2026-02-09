@@ -37,13 +37,13 @@ import java.util.stream.Stream;
  */
 
 // NOTE: don't add it to spring context! i.e. don't annotate it with @Component or similar
-public final class DefaultViewsRepositoryStorage implements IViewsStorage4GivenWindow
+public final class DefaultViewsStorage implements IViewsStorage4GivenWindow
 {
-	private static transient final Logger logger = LogManager.getLogger(DefaultViewsRepositoryStorage.class);
+	private static transient final Logger logger = LogManager.getLogger(DefaultViewsStorage.class);
 
 	private final Cache<ViewId, IView> views;
 
-	public DefaultViewsRepositoryStorage(@NonNull final Duration viewExpirationTimeout)
+	public DefaultViewsStorage(@NonNull final Duration viewExpirationTimeout)
 	{
 		views = CacheBuilder.newBuilder()
 				.expireAfterAccess(viewExpirationTimeout.toNanos(), TimeUnit.NANOSECONDS)
