@@ -46,6 +46,10 @@ import java.util.Map;
  * #L%
  */
 
+/**
+ * 文档窗口布局
+ */
+
 public final class DocumentLayoutDescriptor
 {
 	public static Builder builder()
