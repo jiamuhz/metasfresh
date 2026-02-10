@@ -69,7 +69,7 @@ public final class DocumentLayoutDescriptor
 	 */
 	private final DocumentLayoutElementDescriptor docActionElement;
 
-	private final DocumentFormLayout singleRowLayout;
+	private final DocumentFormLayout formLayout;
 	private final ViewLayout gridView;
 	/**
 	 * Side list layout
@@ -110,7 +110,7 @@ public final class DocumentLayoutDescriptor
 		docActionElement = builder.docActionElement;
 
 		Check.assumeNotNull(builder.getSingleRowLayout(), "builder.singleRowLayout may not be null; builder={}", builder);
-		singleRowLayout = builder.getSingleRowLayout()
+		formLayout = builder.getSingleRowLayout()
 				.setWindowId(windowId)
 				.build();
 		gridView = builder.getGridView()
@@ -129,7 +129,7 @@ public final class DocumentLayoutDescriptor
 		return MoreObjects.toStringHelper(this)
 				.omitNullValues()
 				.add("windowId", windowId)
-				.add("singleRowLayout", singleRowLayout)
+				.add("singleRowLayout", formLayout)
 				.add("gridView", gridView)
 				.add("details", details.isEmpty() ? null : details)
 				.add("sideList", sideListView)
@@ -156,9 +156,9 @@ public final class DocumentLayoutDescriptor
 		return docActionElement;
 	}
 
-	public DocumentFormLayout getSingleRowLayout()
+	public DocumentFormLayout getFormLayout()
 	{
-		return singleRowLayout;
+		return formLayout;
 	}
 
 	/**

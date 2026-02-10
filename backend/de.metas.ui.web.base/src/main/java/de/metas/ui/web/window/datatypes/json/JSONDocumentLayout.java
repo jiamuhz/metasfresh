@@ -135,7 +135,7 @@ public final class JSONDocumentLayout
 		documentSummaryElement = JSONDocumentLayoutElement.fromNullable(layout.getDocumentSummaryElement(), options);
 		docActionElement = JSONDocumentLayoutElement.fromNullable(layout.getDocActionElement(), options);
 
-		final DocumentFormLayout singleRowLayout = layout.getSingleRowLayout();
+		final DocumentFormLayout singleRowLayout = layout.getFormLayout();
 		sections = JSONDocumentLayoutSection.ofSectionsList(singleRowLayout.getSections(), options);
 		setAdvSearchWindows(this.sections, this.windowId, null, options);
 		//
