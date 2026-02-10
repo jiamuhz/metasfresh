@@ -69,7 +69,7 @@ public final class DocumentLayoutDescriptor
 	 */
 	private final DocumentLayoutElementDescriptor docActionElement;
 
-	private final DocumentLayoutSingleRow singleRowLayout;
+	private final DocumentFormLayout singleRowLayout;
 	private final ViewLayout gridView;
 	/**
 	 * Side list layout
@@ -156,7 +156,7 @@ public final class DocumentLayoutDescriptor
 		return docActionElement;
 	}
 
-	public DocumentLayoutSingleRow getSingleRowLayout()
+	public DocumentFormLayout getSingleRowLayout()
 	{
 		return singleRowLayout;
 	}
@@ -205,7 +205,7 @@ public final class DocumentLayoutDescriptor
 		@Nullable private DocumentLayoutElementDescriptor documentSummaryElement;
 		@Nullable private DocumentLayoutElementDescriptor docActionElement;
 
-		private DocumentLayoutSingleRow.Builder singleRowLayout;
+		private DocumentFormLayout.Builder singleRowLayout;
 		private ViewLayout.Builder _gridView;
 		private ViewLayout _sideListView;
 
@@ -310,13 +310,13 @@ public final class DocumentLayoutDescriptor
 			return this;
 		}
 
-		public Builder setSingleRowLayout(@NonNull final DocumentLayoutSingleRow.Builder singleRowLayout)
+		public Builder setSingleRowLayout(@NonNull final DocumentFormLayout.Builder singleRowLayout)
 		{
 			this.singleRowLayout = singleRowLayout;
 			return this;
 		}
 
-		private DocumentLayoutSingleRow.Builder getSingleRowLayout()
+		private DocumentFormLayout.Builder getSingleRowLayout()
 		{
 			return singleRowLayout;
 		}

@@ -43,7 +43,7 @@ import lombok.NonNull;
  * 表单布局，用于 Header Tab  and  Advanced Edit Dialog
  * @作者  嘉木
  */
-public class DocumentLayoutSingleRow
+public class DocumentFormLayout
 {
 	public static Builder builder()
 	{
@@ -57,7 +57,7 @@ public class DocumentLayoutSingleRow
 	private final List<DocumentLayoutSectionDescriptor> sections;
 	private transient List<DocumentLayoutElementDescriptor> _elements = null;
 
-	private DocumentLayoutSingleRow(final Builder builder)
+	private DocumentFormLayout(final Builder builder)
 	{
 		windowId = builder.windowId;
 		Check.assumeNotNull(windowId, "Parameter windowId is not null");
@@ -131,9 +131,9 @@ public class DocumentLayoutSingleRow
 			super();
 		}
 
-		public DocumentLayoutSingleRow build()
+		public DocumentFormLayout build()
 		{
-			return new DocumentLayoutSingleRow(this);
+			return new DocumentFormLayout(this);
 		}
 
 		private List<DocumentLayoutSectionDescriptor> buildSections()

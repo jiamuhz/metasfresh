@@ -44,7 +44,7 @@ import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor.CaptionMode;
 import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor.ClosableMode;
-import de.metas.ui.web.window.descriptor.DocumentLayoutSingleRow;
+import de.metas.ui.web.window.descriptor.DocumentFormLayout;
 import de.metas.ui.web.window.descriptor.LookupDescriptorProvider;
 import de.metas.ui.web.window.descriptor.LookupDescriptorProviders;
 import de.metas.ui.web.window.descriptor.ViewEditorRenderMode;
@@ -162,7 +162,7 @@ public class DataEntryTabLoader
 				.internalName(subTab.getInternalName())
 				.queryOnActivate(true);
 
-		final DocumentLayoutSingleRow.Builder singleRowLayoutBuilder = DocumentLayoutSingleRow
+		final DocumentFormLayout.Builder singleRowLayoutBuilder = DocumentFormLayout
 				.builder()
 				.setWindowId(windowId);
 

@@ -61,7 +61,7 @@ public final class DocumentLayoutDetailDescriptor
 	@Getter
 	private final ViewLayout gridLayout;
 	@Getter
-	private final DocumentLayoutSingleRow singleRowLayout;
+	private final DocumentFormLayout singleRowLayout;
 
 	@Getter
 	@Nullable private final QuickInputSupportDescriptor quickInputSupport;
@@ -148,7 +148,7 @@ public final class DocumentLayoutDetailDescriptor
 		private String internalName;
 
 		private ViewLayout.Builder gridLayout = null;
-		private DocumentLayoutSingleRow.Builder singleRowLayout = null;
+		private DocumentFormLayout.Builder singleRowLayout = null;
 
 		@Nullable private QuickInputSupportDescriptor quickInputSupport;
 
@@ -183,7 +183,7 @@ public final class DocumentLayoutDetailDescriptor
 			return gridLayout.build();
 		}
 
-		private DocumentLayoutSingleRow buildSingleRowLayout()
+		private DocumentFormLayout buildSingleRowLayout()
 		{
 			if (singleRowLayout == null)
 			{
@@ -214,7 +214,7 @@ public final class DocumentLayoutDetailDescriptor
 			return this;
 		}
 
-		public Builder singleRowLayout(@NonNull final DocumentLayoutSingleRow.Builder singleRowLayout)
+		public Builder singleRowLayout(@NonNull final DocumentFormLayout.Builder singleRowLayout)
 		{
 			this.singleRowLayout = singleRowLayout;
 			singleRowLayout.setWindowId(windowId);

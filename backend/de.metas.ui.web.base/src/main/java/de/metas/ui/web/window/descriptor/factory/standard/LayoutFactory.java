@@ -26,8 +26,8 @@ import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.Fi
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementGroupDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutSingleRow;
-import de.metas.ui.web.window.descriptor.DocumentLayoutSingleRow.Builder;
+import de.metas.ui.web.window.descriptor.DocumentFormLayout;
+import de.metas.ui.web.window.descriptor.DocumentFormLayout.Builder;
 import de.metas.ui.web.window.descriptor.LayoutElementType;
 import de.metas.ui.web.window.descriptor.LayoutType;
 import de.metas.ui.web.window.descriptor.QuickInputSupportDescriptor;
@@ -234,7 +234,7 @@ public class LayoutFactory
 	 * Single row layout: sections list
 	 */
 	@Nullable
-	public DocumentLayoutSingleRow.Builder layoutSingleRow()
+	public DocumentFormLayout.Builder layoutSingleRow()
 	{
 		// NOTE, according to (FRESH-686 #26), we are putting all elements in one list, one after another, no sections, no columns etc
 		final DocumentEntityDescriptor.Builder entityDescriptor = documentEntity();
@@ -260,7 +260,7 @@ public class LayoutFactory
 			layoutSectionsList = ImmutableList.of(oneLayoutSection);
 		}
 
-		return DocumentLayoutSingleRow.builder()
+		return DocumentFormLayout.builder()
 				.setCaption(entityDescriptor.getCaption())
 				.setDescription(entityDescriptor.getDescription())
 				.addSections(layoutSectionsList);
