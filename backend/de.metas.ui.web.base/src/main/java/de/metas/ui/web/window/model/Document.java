@@ -101,6 +101,9 @@ import java.util.function.Supplier;
  * #L%
  */
 
+/**
+ * 单据类
+ */
 public final class Document
 {
 	public static Builder builder(final DocumentEntityDescriptor entityDescriptor)
