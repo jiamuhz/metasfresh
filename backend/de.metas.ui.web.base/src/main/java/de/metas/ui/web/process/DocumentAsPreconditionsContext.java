@@ -2,7 +2,6 @@ package de.metas.ui.web.process;
 
 import java.util.List;
 import java.util.Set;
-import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 import javax.annotation.Nullable;
@@ -48,7 +47,7 @@ import lombok.NonNull;
  * #L%
  */
 
-public final class DocumentPreconditionsAsContext implements WebuiPreconditionsContext
+public final class DocumentAsPreconditionsContext implements WebuiPreconditionsContext
 {
 	private final Document document;
 	@Getter
@@ -63,7 +62,7 @@ public final class DocumentPreconditionsAsContext implements WebuiPreconditionsC
 	private final DisplayPlace displayPlace;
 
 	@Builder
-	private DocumentPreconditionsAsContext(
+	private DocumentAsPreconditionsContext(
 			@NonNull final Document document,
 			@Nullable final DetailId selectedTabId,
 			@Nullable final Set<TableRecordReference> selectedIncludedRecords,
