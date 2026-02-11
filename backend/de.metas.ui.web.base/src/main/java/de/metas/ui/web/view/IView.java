@@ -50,6 +50,10 @@ import java.util.stream.Stream;
  * #L%
  */
 
+/**
+ * 单据列表-表格
+ */
+
 public interface IView
 {
 	ViewId getViewId();
