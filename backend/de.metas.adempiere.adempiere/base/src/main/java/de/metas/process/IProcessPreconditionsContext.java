@@ -38,6 +38,7 @@ import java.util.stream.Stream;
 
 /**
  * Preconditions checking context.
+ * 前置条件检查上下文
  *
  * @author metas-dev <dev@metasfresh.com>
  */
