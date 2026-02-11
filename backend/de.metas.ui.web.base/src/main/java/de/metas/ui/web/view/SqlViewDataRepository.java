@@ -379,11 +379,11 @@ class SqlViewDataRepository implements IViewDataRepository
 		final String keyColumnName = keyColumnNamesMap.getSingleKeyColumnName();
 		final SqlViewRowFieldLoader fieldLoader = rowFieldLoaders.get(keyColumnName);
 		final Object rowIdObj = fieldLoader.retrieveValue(rs, jsonOpts.getAdLanguage());
-		return convertToRowId(rowIdObj);
+		return convertToDocumentId(rowIdObj);
 	}
 
 	@Nullable
-	private static DocumentId convertToRowId(@Nullable final Object rowIdObj)
+	private static DocumentId convertToDocumentId(@Nullable final Object rowIdObj)
 	{
 		if (rowIdObj == null || JSONNullValue.isNull(rowIdObj))
 		{
