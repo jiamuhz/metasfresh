@@ -47,7 +47,7 @@ import lombok.NonNull;
  * #L%
  */
 
-public final class DocumentAsPreconditionsContext implements WebuiProcessPreconditionsContext
+public final class DocumentProcessPreconditionsContext implements WebuiProcessPreconditionsContext
 {
 	private final Document document;
 	@Getter
@@ -62,7 +62,7 @@ public final class DocumentAsPreconditionsContext implements WebuiProcessPrecond
 	private final DisplayPlace displayPlace;
 
 	@Builder
-	private DocumentAsPreconditionsContext(
+	private DocumentProcessPreconditionsContext(
 			@NonNull final Document document,
 			@Nullable final DetailId selectedTabId,
 			@Nullable final Set<TableRecordReference> selectedIncludedRecords,

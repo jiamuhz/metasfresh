@@ -41,7 +41,7 @@ import de.metas.ui.web.comments.CommentsService;
 import de.metas.ui.web.config.WebConfig;
 import de.metas.ui.web.debug.DebugRestController;
 import de.metas.ui.web.exceptions.EntityNotFoundException;
-import de.metas.ui.web.process.DocumentAsPreconditionsContext;
+import de.metas.ui.web.process.DocumentProcessPreconditionsContext;
 import de.metas.ui.web.process.ProcessRestController;
 import de.metas.ui.web.process.descriptor.WebuiRelatedProcessDescriptor;
 import de.metas.ui.web.process.json.JSONDocumentActionsList;
@@ -978,7 +978,7 @@ public class WindowRestController
 				: WebuiRelatedProcessDescriptor::isEnabled;
 
 		return documentCollection.forDocumentReadonly(documentPath, document -> {
-			final DocumentAsPreconditionsContext preconditionsContext = DocumentAsPreconditionsContext.builder()
+			final DocumentProcessPreconditionsContext preconditionsContext = DocumentProcessPreconditionsContext.builder()
 					.document(document)
 					.selectedTabId(selectedTabId)
 					.selectedIncludedRecords(selectedIncludedRecords)
