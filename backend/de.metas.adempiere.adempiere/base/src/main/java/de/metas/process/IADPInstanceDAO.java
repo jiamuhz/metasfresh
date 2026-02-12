@@ -35,19 +35,19 @@ import java.util.Set;
 public interface IADPInstanceDAO extends ISingletonService
 {
 	/**
-	 * Saves {@link ProcessInfo} together with it's parameters.
+	 * Saves {@link ProcessInstanceInfo} together with it's parameters.
 	 *
-	 * @see #saveProcessInfoOnly(ProcessInfo)
+	 * @see #saveProcessInfoOnly(ProcessInstanceInfo)
 	 * @see #saveParameterToDB(PInstanceId, List)
 	 */
-	void saveProcessInfo(ProcessInfo pi);
+	void saveProcessInfo(ProcessInstanceInfo pi);
 
 	/**
-	 * Saves {@link ProcessInfo} only, excluding depending records like process parameters.
+	 * Saves {@link ProcessInstanceInfo} only, excluding depending records like process parameters.
 	 *
-	 * Also, in case the {@link ProcessInfo#getAdProcessId()} is missing, this method will create it and it will set it to {@link ProcessInfo}.
+	 * Also, in case the {@link ProcessInstanceInfo#getAdProcessId()} is missing, this method will create it and it will set it to {@link ProcessInstanceInfo}.
 	 */
-	void saveProcessInfoOnly(ProcessInfo pi);
+	void saveProcessInfoOnly(ProcessInstanceInfo pi);
 
 	/**
 	 * Saves process parameters.

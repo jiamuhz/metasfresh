@@ -30,7 +30,7 @@ import de.metas.externalsystem.ExternalSystemType;
 import de.metas.logging.LogManager;
 import de.metas.process.AdProcessId;
 import de.metas.process.IADProcessDAO;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.user.UserId;
 import de.metas.util.Loggables;
 import de.metas.util.Services;
@@ -74,7 +74,7 @@ public class ExternalSystemGRSSignumHouseKeepingTask implements IStartupHouseKee
 		parentConfigList
 				.stream()
 				.peek(config -> Loggables.withLogger(logger, Level.DEBUG).addLog("Firing process " + processId + " for GRSSignum config " + config.getChildConfig().getId()))
-				.forEach((config -> ProcessInfo.builder()
+				.forEach((config -> ProcessInstanceInfo.builder()
 						.setAD_Process_ID(processId)
 						.setAD_User_ID(UserId.METASFRESH.getRepoId())
 						.addParameter(PARAM_EXTERNAL_REQUEST, GRS_COMMAND)

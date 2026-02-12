@@ -88,7 +88,7 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 	private static final ThreadLocal<Object> currentInstanceHolder = new ThreadLocal<>();
 
 	private Properties _ctx;
-	private ProcessInfo _processInfo;
+	private ProcessInstanceInfo _processInfo;
 
 	private final IProcessParametersCallout parametersCallout;
 
@@ -228,7 +228,7 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 	 * @param pi  Process Info
 	 * @param trx existing/inherited transaction if any
 	 */
-	public synchronized final void startProcess(final ProcessInfo pi, final ITrx trx)
+	public synchronized final void startProcess(final ProcessInstanceInfo pi, final ITrx trx)
 	{
 		Check.assume(this == currentInstance(), "This process shall be the current active instance: {}", this);
 
@@ -323,7 +323,7 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 	 *
 	 * @param pi process instance info
 	 */
-	public final void init(final ProcessInfo pi)
+	public final void init(final ProcessInstanceInfo pi)
 	{
 		Check.assumeNotNull(pi, "ProcessInfo not null");
 
@@ -362,7 +362,7 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 	}
 
 	/**
-	 * Load "@Param" annotated parameters from {@link ProcessInfo}.
+	 * Load "@Param" annotated parameters from {@link ProcessInstanceInfo}.
 	 */
 	@OverridingMethodsMustInvokeSuper
 	protected void loadParametersFromContext(final boolean failIfNotValid)
@@ -717,9 +717,9 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 	/**
 	 * @return Process Info; never returns null
 	 */
-	protected final ProcessInfo getProcessInfo()
+	protected final ProcessInstanceInfo getProcessInfo()
 	{
-		final ProcessInfo processInfo = getProcessInfoOrNull();
+		final ProcessInstanceInfo processInfo = getProcessInfoOrNull();
 		if (processInfo == null)
 		{
 			throw new AdempiereException("ProcessInfo not configured for " + this);
@@ -727,7 +727,7 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 		return processInfo;
 	}
 
-	private ProcessInfo getProcessInfoOrNull()
+	private ProcessInstanceInfo getProcessInfoOrNull()
 	{
 		return _processInfo;
 	}
@@ -740,7 +740,7 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 	@Nullable
 	protected final ProcessExecutionResult getResultOrNull()
 	{
-		final ProcessInfo processInfo = getProcessInfoOrNull();
+		final ProcessInstanceInfo processInfo = getProcessInfoOrNull();
 		return processInfo != null ? processInfo.getResult() : null;
 	}
 
@@ -1055,8 +1055,8 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 	/**
 	 * Retrieves the active records which where selected and attached to this process execution, i.e.
 	 * <ul>
-	 * <li>if there is any {@link ProcessInfo#getQueryFilterOrElse(IQueryFilter)} that will be used to fetch the records
-	 * <li>else if the single record is set ({@link ProcessInfo}'s AD_Table_ID/Record_ID) that will will be used, even if it is inactive
+	 * <li>if there is any {@link ProcessInstanceInfo#getQueryFilterOrElse(IQueryFilter)} that will be used to fetch the records
+	 * <li>else if the single record is set ({@link ProcessInstanceInfo}'s AD_Table_ID/Record_ID) that will will be used, even if it is inactive
 	 * <li>else an exception is thrown
 	 * </ul>
 	 *
@@ -1070,8 +1070,8 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 	/**
 	 * Retrieves all records (active and inactive) which where selected and attached to this process execution, i.e.
 	 * <ul>
-	 * <li>if there is any {@link ProcessInfo#getQueryFilterOrElse(IQueryFilter)} that will be used to fetch the records
-	 * <li>else if the single record is set ({@link ProcessInfo}'s AD_Table_ID/Record_ID) that will will be used
+	 * <li>if there is any {@link ProcessInstanceInfo#getQueryFilterOrElse(IQueryFilter)} that will be used to fetch the records
+	 * <li>else if the single record is set ({@link ProcessInstanceInfo}'s AD_Table_ID/Record_ID) that will will be used
 	 * <li>else an exception is thrown
 	 * </ul>
 	 *
@@ -1136,7 +1136,7 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 	@NonNull
 	private <ModelType> IQueryBuilder<ModelType> retrieveSelectedRecordsQueryBuilder(final Class<ModelType> modelClass, final boolean onlyActiveRecords)
 	{
-		final ProcessInfo pi = getProcessInfo();
+		final ProcessInstanceInfo pi = getProcessInfo();
 		final String tableName = pi.getTableNameOrNull();
 		final int singleRecordId = pi.getRecord_ID();
 

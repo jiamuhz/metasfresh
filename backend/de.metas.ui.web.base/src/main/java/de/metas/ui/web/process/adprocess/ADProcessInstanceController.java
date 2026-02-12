@@ -27,7 +27,7 @@ import de.metas.logging.LogManager;
 import de.metas.process.JavaProcess;
 import de.metas.process.PInstanceId;
 import de.metas.process.ProcessExecutor;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.server.OutputType;
 import de.metas.ui.web.process.IProcessInstanceController;
 import de.metas.ui.web.process.IProcessInstanceParameter;
@@ -332,7 +332,7 @@ import lombok.NonNull;
 	{
 		//
 		// Create the process info and execute the process synchronously
-		final ProcessExecutor processExecutor = ProcessInfo.builder()
+		final ProcessExecutor processExecutor = ProcessInstanceInfo.builder()
 				.setCtx(context.getCtx())
 				.setCreateTemporaryCtx()
 				.setPInstanceId(PInstanceId.ofRepoId(getInstanceId().toInt()))

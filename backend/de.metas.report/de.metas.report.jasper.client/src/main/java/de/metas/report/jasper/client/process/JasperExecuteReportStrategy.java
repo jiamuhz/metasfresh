@@ -1,7 +1,7 @@
 package de.metas.report.jasper.client.process;
 
 import de.metas.common.util.CoalesceUtil;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.ExecuteReportStrategy;
 import de.metas.report.client.ReportsClient;
 import de.metas.report.server.OutputType;
@@ -50,7 +50,7 @@ public class JasperExecuteReportStrategy implements ExecuteReportStrategy
 
 	@Override
 	public ExecuteReportResult executeReport(
-			@NonNull final ProcessInfo processInfo,
+			@NonNull final ProcessInstanceInfo processInfo,
 			@Nullable final OutputType outputType)
 	{
 		final OutputType outputTypeEffective = Check.assumeNotNull(
@@ -75,7 +75,7 @@ public class JasperExecuteReportStrategy implements ExecuteReportStrategy
 	}
 
 	private ReportResult getReportResult(
-			@NonNull final ProcessInfo processInfo,
+			@NonNull final ProcessInstanceInfo processInfo,
 			@NonNull final OutputType outputType)
 	{
 		final ISysConfigBL sysConfigBL = Services.get(ISysConfigBL.class);

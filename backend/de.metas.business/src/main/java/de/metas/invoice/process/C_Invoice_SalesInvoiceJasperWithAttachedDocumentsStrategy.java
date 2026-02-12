@@ -21,7 +21,7 @@ import de.metas.attachments.AttachmentEntryService.AttachmentEntryQuery;
 import de.metas.attachments.AttachmentTags;
 import de.metas.invoice.InvoiceId;
 import de.metas.logging.LogManager;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.ExecuteReportStrategy;
 import de.metas.report.ExecuteReportStrategyUtil;
 import de.metas.report.ExecuteReportStrategyUtil.PdfDataProvider;
@@ -70,7 +70,7 @@ public class C_Invoice_SalesInvoiceJasperWithAttachedDocumentsStrategy implement
 
 	@Override
 	public ExecuteReportResult executeReport(
-			@NonNull final ProcessInfo processInfo,
+			@NonNull final ProcessInstanceInfo processInfo,
 			@NonNull final OutputType outputType)
 	{
 		final int invoiceDocReportProcessId = Services.get(ISysConfigBL.class)

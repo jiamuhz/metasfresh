@@ -37,7 +37,7 @@ import de.metas.process.AdProcessId;
 import de.metas.process.IADProcessDAO;
 import de.metas.process.ProcessBasicInfo;
 import de.metas.process.ProcessExecutionResult;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessType;
 import de.metas.process.impl.ADProcessDAO;
 import de.metas.security.permissions2.PermissionServiceFactories;
@@ -114,7 +114,7 @@ public class ProcessRestController
 			return ResponseEntity.status(HttpStatus.UNAUTHORIZED).build();
 		}
 
-		final ProcessInfo.ProcessInfoBuilder processInfoBuilder = ProcessInfo.builder();
+		final ProcessInstanceInfo.ProcessInstanceInfoBuilder processInfoBuilder = ProcessInstanceInfo.builder();
 		processInfoBuilder.setAD_Process_ID(processId.get());
 
 		final boolean parametersPresent = request != null && !Check.isEmpty(request.getProcessParameters());

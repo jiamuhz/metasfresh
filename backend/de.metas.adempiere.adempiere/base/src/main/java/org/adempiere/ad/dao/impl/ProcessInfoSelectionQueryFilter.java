@@ -31,11 +31,11 @@ import org.adempiere.ad.dao.IQueryFilter;
 import org.adempiere.ad.dao.ISqlQueryFilter;
 import org.compiere.Adempiere;
 
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.Check;
 
 /**
- * Filters user selection provided by {@link ProcessInfo}.
+ * Filters user selection provided by {@link ProcessInstanceInfo}.
  * 
  * @author tsa
  * 
@@ -43,9 +43,9 @@ import de.metas.util.Check;
  */
 public class ProcessInfoSelectionQueryFilter<T> implements IQueryFilter<T>, ISqlQueryFilter
 {
-	private final ProcessInfo processInfo;
+	private final ProcessInstanceInfo processInfo;
 
-	public ProcessInfoSelectionQueryFilter(final ProcessInfo pi)
+	public ProcessInfoSelectionQueryFilter(final ProcessInstanceInfo pi)
 	{
 		Check.assumeNotNull(pi, "process info not null");
 		this.processInfo = pi;

@@ -8,7 +8,7 @@ import com.itextpdf.text.pdf.PdfCopy;
 import com.itextpdf.text.pdf.PdfReader;
 import de.metas.printing.IMassPrintingService;
 import de.metas.process.ProcessExecutor;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.server.OutputType;
 import de.metas.report.server.ReportConstants;
 import lombok.NonNull;
@@ -51,10 +51,10 @@ public class ExecuteReportStrategyUtil
 {
 	public Resource executeJasperProcess(
 			final int jasperProcessId,
-			@NonNull final ProcessInfo processInfo,
+			@NonNull final ProcessInstanceInfo processInfo,
 			@NonNull final OutputType outputType)
 	{
-		final ProcessExecutor processExecutor = ProcessInfo.builder()
+		final ProcessExecutor processExecutor = ProcessInstanceInfo.builder()
 				.setCtx(Env.getCtx())
 				.setAD_Process_ID(jasperProcessId)
 				.setRecord(processInfo.getTable_ID(), processInfo.getRecord_ID())

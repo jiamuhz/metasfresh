@@ -37,7 +37,7 @@ import de.metas.process.IProcessPrecondition;
 import de.metas.process.IProcessPreconditionsContext;
 import de.metas.process.JavaProcess;
 import de.metas.process.PInstanceId;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.process.SelectionSize;
 import de.metas.util.Loggables;
@@ -100,7 +100,7 @@ public class EDIExportDocOutboundLog extends JavaProcess implements IProcessPrec
 	@Override
 	protected void prepare()
 	{
-		final ProcessInfo pi = getProcessInfo();
+		final ProcessInstanceInfo pi = getProcessInfo();
 
 		final PInstanceId pinstanceId = getPinstanceId();
 		logger.info("AD_Pinstance_ID={}", pinstanceId);

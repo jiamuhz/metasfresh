@@ -11,7 +11,7 @@ import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
 import de.metas.process.IProcessPrecondition;
 import de.metas.process.IProcessPreconditionsContext;
 import de.metas.process.JavaProcess;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -69,7 +69,7 @@ public class C_Invoice_Candidate_Close extends JavaProcess implements IProcessPr
 
 	private Iterator<I_C_Invoice_Candidate> retrieveSelectedCandidates()
 	{
-		final ProcessInfo processInfo = getProcessInfo();
+		final ProcessInstanceInfo processInfo = getProcessInfo();
 		final IQueryFilter<I_C_Invoice_Candidate> userSelectionFilter = processInfo.getQueryFilterOrElseFalse();
 
 		return queryBL

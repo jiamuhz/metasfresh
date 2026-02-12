@@ -38,9 +38,8 @@ import org.compiere.util.Env;
 import org.slf4j.Logger;
 
 import de.metas.logging.LogManager;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
-import de.metas.process.ui.ProcessParameterPanelModel;
 import de.metas.util.Services;
 
 /**
@@ -105,7 +104,7 @@ public class ProcessParametersPanel extends CPanel // implements IProcessParamet
 	/**
 	 * @param pi process info, used ONLY to get AD_Process_ID, WindowNo and TabNo; no reference is stored to it
 	 */
-	public ProcessParametersPanel(final ProcessInfo pi)
+	public ProcessParametersPanel(final ProcessInstanceInfo pi)
 	{
 		super();
 		model = new ProcessParameterPanelModel(Env.getCtx(), pi);

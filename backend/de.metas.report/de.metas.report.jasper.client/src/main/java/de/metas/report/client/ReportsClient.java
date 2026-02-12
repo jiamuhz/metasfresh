@@ -31,8 +31,8 @@ import de.metas.i18n.Language;
 import de.metas.logging.LogManager;
 import de.metas.process.IADPInstanceDAO;
 import de.metas.process.PInstanceId;
-import de.metas.process.ProcessInfo;
-import de.metas.process.ProcessInfo.ProcessInfoBuilder;
+import de.metas.process.ProcessInstanceInfo;
+import de.metas.process.ProcessInstanceInfo.ProcessInstanceInfoBuilder;
 import de.metas.report.jasper.client.RemoteServletInvoker;
 import de.metas.report.server.IReportServer;
 import de.metas.report.server.OutputType;
@@ -98,13 +98,13 @@ public final class ReportsClient
 		return 1;
 	}
 
-	public ReportResult report(@NonNull final ProcessInfo pi)
+	public ReportResult report(@NonNull final ProcessInstanceInfo pi)
 	{
 		return report(pi, pi.getJRDesiredOutputType());
 	}
 
 	public ReportResult report(
-			@NonNull final ProcessInfo pi,
+			@NonNull final ProcessInstanceInfo pi,
 			@Nullable final OutputType outputType)
 	{
 		// Make sure the ProcessInfo is persisted because we will need to access it's data (like AD_Table_ID/Record_ID etc)
@@ -154,13 +154,13 @@ public final class ReportsClient
 	}
 
 	/**
-	 * Extracts reporting language from given {@link ProcessInfo}.
+	 * Extracts reporting language from given {@link ProcessInstanceInfo}.
 	 *
 	 * @return Language; never returns null
 	 * @implNote Usually the ProcessInfo already has the language set, so this method is just a fallback.
-	 * If you are thinking to extend how the reporting language is fetched, please check {@link ProcessInfoBuilder}'s getReportLanguage() method.
+	 * If you are thinking to extend how the reporting language is fetched, please check {@link ProcessInstanceInfoBuilder}'s getReportLanguage() method.
 	 */
-	private static Language extractLanguage(final ProcessInfo pi)
+	private static Language extractLanguage(final ProcessInstanceInfo pi)
 	{
 		//
 		// Get Language from ProcessInfo, if any (08023)

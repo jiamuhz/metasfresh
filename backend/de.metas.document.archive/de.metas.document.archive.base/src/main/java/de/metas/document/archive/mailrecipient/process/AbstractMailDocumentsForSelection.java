@@ -13,7 +13,7 @@ import de.metas.i18n.ITranslatableString;
 import de.metas.process.JavaProcess;
 import de.metas.process.PInstanceId;
 import de.metas.process.Param;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.Loggables;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -70,7 +70,7 @@ public abstract class AbstractMailDocumentsForSelection extends JavaProcess
 
 	protected IQueryFilter<I_C_Doc_Outbound_Log> getFilter()
 	{
-		final ProcessInfo pi = getProcessInfo();
+		final ProcessInstanceInfo pi = getProcessInfo();
 		final IQueryFilter<I_C_Doc_Outbound_Log> selectedRecordsFilter = pi.getQueryFilterOrElse(ConstantQueryFilter.of(false));
 
 		return queryBL

@@ -39,7 +39,7 @@ import de.metas.inoutcandidate.api.IReceiptScheduleDAO;
 import de.metas.inoutcandidate.api.InOutGenerateResult;
 import de.metas.inoutcandidate.model.I_M_ReceiptSchedule;
 import de.metas.process.JavaProcess;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.security.permissions.Access;
 import de.metas.util.Services;
@@ -92,7 +92,7 @@ public class M_ReceiptSchedule_GenerateInOutFromSelection extends JavaProcess
 
 	private Iterator<I_M_ReceiptSchedule> getReceiptSchedules()
 	{
-		final ProcessInfo processInfo = getProcessInfo();
+		final ProcessInstanceInfo processInfo = getProcessInfo();
 
 		final IQueryBuilder<I_M_ReceiptSchedule> queryBuilder = Services.get(IQueryBL.class).createQueryBuilder(I_M_ReceiptSchedule.class, processInfo);
 		//

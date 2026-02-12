@@ -46,7 +46,7 @@ import de.metas.handlingunits.model.I_M_ReceiptSchedule;
 import de.metas.inoutcandidate.api.IReceiptScheduleDAO;
 import de.metas.inoutcandidate.model.I_M_ReceiptSchedule_Alloc;
 import de.metas.logging.LogManager;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.security.permissions.Access;
 import de.metas.util.Check;
 import de.metas.util.Services;
@@ -158,7 +158,7 @@ public class ReceiptScheduleHUDocumentFactory implements IHUDocumentFactory
 	}
 
 	@Override
-	public List<IHUDocument> createHUDocuments(final ProcessInfo pi)
+	public List<IHUDocument> createHUDocuments(final ProcessInstanceInfo pi)
 	{
 		Check.assumeNotNull(pi, "process info not null");
 
@@ -170,7 +170,7 @@ public class ReceiptScheduleHUDocumentFactory implements IHUDocumentFactory
 		return createHUDocuments(pi.getCtx(), I_M_ReceiptSchedule.class, schedules);
 	}
 
-	private Iterator<I_M_ReceiptSchedule> retrieveReceiptSchedules(final ProcessInfo pi)
+	private Iterator<I_M_ReceiptSchedule> retrieveReceiptSchedules(final ProcessInstanceInfo pi)
 	{
 		return Services.get(IQueryBL.class).createQueryBuilder(I_M_ReceiptSchedule.class, pi.getCtx(), ITrx.TRXNAME_None)
 				// Filter by process info selection

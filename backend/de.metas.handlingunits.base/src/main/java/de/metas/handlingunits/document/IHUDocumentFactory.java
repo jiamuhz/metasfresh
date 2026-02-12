@@ -27,7 +27,7 @@ import java.util.List;
 import java.util.Properties;
 
 import de.metas.handlingunits.document.impl.HUDocumentFactoryService;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 
 /**
  * Implementors can be registered in {@link HUDocumentFactoryService} and will then be invoked accordingly by its {@code create..} methods.
@@ -41,7 +41,7 @@ public interface IHUDocumentFactory
 
 	<T> List<IHUDocument> createHUDocuments(final Properties ctx, Class<T> modelClass, Iterator<T> records);
 
-	List<IHUDocument> createHUDocuments(ProcessInfo pi);
+	List<IHUDocument> createHUDocuments(ProcessInstanceInfo pi);
 
 	List<IHUDocument> createHUDocumentsFromModel(Object model);
 

@@ -11,7 +11,7 @@ import de.metas.process.IADPInstanceDAO;
 import de.metas.process.PInstanceId;
 import de.metas.process.PInstanceRequest;
 import de.metas.process.ProcessExecutionResult;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoLog;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.process.model.I_AD_PInstance_SelectedIncludedRecords;
@@ -477,7 +477,7 @@ public class ADPInstanceDAO implements IADPInstanceDAO
 	}
 
 	@Override
-	public void saveProcessInfo(final ProcessInfo pi)
+	public void saveProcessInfo(final ProcessInstanceInfo pi)
 	{
 		saveProcessInfoOnly(pi);
 
@@ -493,7 +493,7 @@ public class ADPInstanceDAO implements IADPInstanceDAO
 	}
 
 	@Override
-	public void saveProcessInfoOnly(final ProcessInfo pi)
+	public void saveProcessInfoOnly(final ProcessInstanceInfo pi)
 	{
 		//
 		// Create/Load the AD_PInstance

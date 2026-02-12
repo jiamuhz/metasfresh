@@ -36,7 +36,7 @@ import de.metas.externalsystem.externalservice.model.ExternalSystemServiceReposi
 import de.metas.logging.LogManager;
 import de.metas.process.AdProcessId;
 import de.metas.process.IADProcessDAO;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.user.UserId;
 import de.metas.util.Check;
 import de.metas.util.Loggables;
@@ -94,7 +94,7 @@ public class ExternalSystemSAPHouseKeepingTask implements IStartupHouseKeepingTa
 					.stream()
 					.filter(service -> Check.isNotBlank(service.getEnableCommand()))
 					.filter(service -> shouldStartExternalService(service, config.getId()))
-					.forEach(service -> ProcessInfo.builder()
+					.forEach(service -> ProcessInstanceInfo.builder()
 							.setAD_Process_ID(processId)
 							.setAD_User_ID(UserId.METASFRESH.getRepoId())
 							.addParameter(PARAM_EXTERNAL_REQUEST, service.getEnableCommand())

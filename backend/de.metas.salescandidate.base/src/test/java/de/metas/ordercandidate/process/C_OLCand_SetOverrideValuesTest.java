@@ -27,7 +27,7 @@ import de.metas.bpartner.BPartnerLocationId;
 import de.metas.bpartner.GLN;
 import de.metas.interfaces.I_C_BPartner;
 import de.metas.ordercandidate.model.I_C_OLCand;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.user.UserId;
 import de.metas.util.Services;
 import groovy.lang.Tuple2;
@@ -102,7 +102,7 @@ public class C_OLCand_SetOverrideValuesTest
 						.addEqualsFilter(I_C_OLCand.COLUMNNAME_C_OLCand_ID, olCandId);
 			}
 		};
-		overrideValuesProcess.init(ProcessInfo.builder()
+		overrideValuesProcess.init(ProcessInstanceInfo.builder()
 				.addParameter(I_C_OLCand.COLUMNNAME_C_BPartner_Override_ID, bpartnerOverrideId.getRepoId())
 				.addParameter(I_C_OLCand.COLUMNNAME_C_BP_Location_Override_ID, "")
 				.setWhereClause(I_C_OLCand.COLUMNNAME_C_OLCand_ID + "=" + olCandId)

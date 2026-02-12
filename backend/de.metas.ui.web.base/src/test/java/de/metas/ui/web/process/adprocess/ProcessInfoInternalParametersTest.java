@@ -20,8 +20,8 @@ import org.junit.jupiter.api.Test;
 import com.google.common.collect.ImmutableSet;
 
 import de.metas.ordercandidate.model.I_C_OLCand;
-import de.metas.process.ProcessInfo;
-import de.metas.process.ProcessInfo.ProcessInfoBuilder;
+import de.metas.process.ProcessInstanceInfo;
+import de.metas.process.ProcessInstanceInfo.ProcessInstanceInfoBuilder;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.process.ProcessType;
 import de.metas.ui.web.process.CreateProcessInstanceRequest;
@@ -55,7 +55,7 @@ import lombok.NonNull;
 public class ProcessInfoInternalParametersTest
 {
 
-	private ProcessInfoBuilder processInfoBuilder;
+	private ProcessInstanceInfoBuilder processInfoBuilder;
 	private ProcessId processId;
 
 	private static UserId loggedUserId = UserId.ofRepoId(1234567);
@@ -74,13 +74,13 @@ public class ProcessInfoInternalParametersTest
 
 	}
 
-	private ProcessInfoBuilder createProcessInfoBuilder()
+	private ProcessInstanceInfoBuilder createProcessInfoBuilder()
 	{
 		final Set<TableRecordReference> selectedIncludedRecords = ImmutableSet.of(
 				TableRecordReference.of(I_C_OLCand.Table_Name, 1), TableRecordReference.of(I_C_OLCand.Table_Name, 2),
 				TableRecordReference.of(I_C_OLCand.Table_Name, 3));
 
-		return ProcessInfo.builder().setCtx(Env.getCtx()).setCreateTemporaryCtx().setAD_Process_ID(processId.getProcessIdAsInt())
+		return ProcessInstanceInfo.builder().setCtx(Env.getCtx()).setCreateTemporaryCtx().setAD_Process_ID(processId.getProcessIdAsInt())
 				.setSelectedIncludedRecords(selectedIncludedRecords);
 	}
 

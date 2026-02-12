@@ -39,7 +39,7 @@ import de.metas.document.engine.IDocumentBL;
 import de.metas.logging.LogManager;
 import de.metas.organization.OrgId;
 import de.metas.process.AdProcessId;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.security.RoleId;
 import de.metas.user.UserId;
 import de.metas.util.Check;
@@ -67,7 +67,7 @@ public class PrinterRoutingBL implements IPrinterRoutingBL
 
 	private static final String DEFAULT_PrinterType = PRINTERTYPE_General;
 
-	public IPrintingService findPrintingService(final ProcessInfo pi)
+	public IPrintingService findPrintingService(final ProcessInstanceInfo pi)
 	{
 		final Properties ctx = Env.getCtx();
 		final int AD_Client_ID = Env.getAD_Client_ID(ctx);
@@ -316,7 +316,7 @@ public class PrinterRoutingBL implements IPrinterRoutingBL
 	}
 
 	@Override
-	public String findPrinterName(final ProcessInfo pi)
+	public String findPrinterName(final ProcessInstanceInfo pi)
 	{
 		final IPrintingService printingService = findPrintingService(pi);
 		return printingService.getPrinterName();

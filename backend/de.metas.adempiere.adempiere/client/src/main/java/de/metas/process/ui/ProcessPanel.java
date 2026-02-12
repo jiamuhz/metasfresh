@@ -38,7 +38,7 @@ import de.metas.logging.LogManager;
 import de.metas.process.IProcessExecutionListener;
 import de.metas.process.ProcessExecutionResult;
 import de.metas.process.ProcessExecutor;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.Check;
 import de.metas.util.Services;
 
@@ -437,7 +437,7 @@ class ProcessPanel implements ProcessDialog, ActionListener, IProcessExecutionLi
 
 		//
 		// Create process parameters panel
-		final ProcessInfo processInfo = createProcessInfo(); // NOTE: used only for loading
+		final ProcessInstanceInfo processInfo = createProcessInfo(); // NOTE: used only for loading
 		parameterPanel = new ProcessParametersPanel(processInfo);
 		parametersContainer.removeAll();
 		if (parameterPanel.hasFields())
@@ -484,9 +484,9 @@ class ProcessPanel implements ProcessDialog, ActionListener, IProcessExecutionLi
 		return messageText.toString();
 	}
 
-	private final ProcessInfo createProcessInfo()
+	private final ProcessInstanceInfo createProcessInfo()
 	{
-		final ProcessInfo pi = ProcessInfo.builder()
+		final ProcessInstanceInfo pi = ProcessInstanceInfo.builder()
 				.setCtx(getCtx())
 				.setAD_Process(_adProcessTrl)
 				.setWhereClause(whereClause)
@@ -537,7 +537,7 @@ class ProcessPanel implements ProcessDialog, ActionListener, IProcessExecutionLi
 			final String currentCardName = getCurrentCardName();
 			if (CARDNAME_ProcessParameters.equals(currentCardName))
 			{
-				final ProcessInfo pi = createProcessInfo();
+				final ProcessInstanceInfo pi = createProcessInfo();
 				ProcessExecutor.builder(pi)
 						.setListener(SwingProcessExecutionListener.of(this))
 						.executeASync();
@@ -568,7 +568,7 @@ class ProcessPanel implements ProcessDialog, ActionListener, IProcessExecutionLi
 	 * @param pi process info
 	 */
 	@Override
-	public void lockUI(final ProcessInfo pi)
+	public void lockUI(final ProcessInstanceInfo pi)
 	{
 		bOK.setEnabled(false);
 		setWindowEnabled(false);
@@ -586,7 +586,7 @@ class ProcessPanel implements ProcessDialog, ActionListener, IProcessExecutionLi
 	 * @param pi process info
 	 */
 	@Override
-	public void unlockUI(final ProcessInfo pi)
+	public void unlockUI(final ProcessInstanceInfo pi)
 	{
 		//
 		// Enable OK button, flag as not locked anymore.

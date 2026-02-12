@@ -43,7 +43,7 @@ import de.metas.edi.model.I_EDI_Document;
 import de.metas.edi.model.I_M_InOut;
 import de.metas.esb.edi.model.I_EDI_Desadv;
 import de.metas.process.JavaProcess;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.Services;
 
 /**
@@ -62,7 +62,7 @@ public class EDI_Desadv_Aggregate_M_InOuts extends JavaProcess
 	@Override
 	protected final String doIt() throws Exception
 	{
-		final ProcessInfo pi = getProcessInfo();
+		final ProcessInstanceInfo pi = getProcessInfo();
 
 		// this process is supposed to run "globally" on all matching M_InOuts
 		final IQueryFilter<I_M_InOut> processQueryFilter = pi.getQueryFilterOrElseTrue();

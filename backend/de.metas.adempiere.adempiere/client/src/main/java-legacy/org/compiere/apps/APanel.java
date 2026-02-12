@@ -29,7 +29,7 @@ import de.metas.process.AdProcessId;
 import de.metas.process.IProcessExecutionListener;
 import de.metas.process.ProcessClassInfo;
 import de.metas.process.ProcessExecutionResult;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ui.AProcess;
 import de.metas.process.ui.ProcessDialog;
 import de.metas.security.IUserRolePermissions;
@@ -3084,7 +3084,7 @@ public class APanel extends CPanel
 			{
 				title = vButton.getName();
 			}
-			final ProcessInfo pi = ProcessInfo.builder()
+			final ProcessInstanceInfo pi = ProcessInstanceInfo.builder()
 					.setCtx(m_ctx)
 					.setAD_Process_ID(vButton.getProcess_ID())
 					.setTitle(title)
@@ -3151,7 +3151,7 @@ public class APanel extends CPanel
 	 * @param pi process info
 	 */
 	@Override
-	public void lockUI(ProcessInfo pi)
+	public void lockUI(ProcessInstanceInfo pi)
 	{
 		// log.debug("" + pi);
 		setBusy(true, false);
@@ -3163,7 +3163,7 @@ public class APanel extends CPanel
 	 * @param pi of execute ASync call
 	 */
 	@Override
-	public void unlockUI(final ProcessInfo pi)
+	public void unlockUI(final ProcessInstanceInfo pi)
 	{
 		// Do nothing if disposing or already disposed.
 		if (m_disposing)
@@ -3218,7 +3218,7 @@ public class APanel extends CPanel
 		}
 	}   // unlockUI
 
-	private final void updateStatusLine(final ProcessInfo pi)
+	private final void updateStatusLine(final ProcessInstanceInfo pi)
 	{
 		final ProcessExecutionResult result = pi.getResult();
 

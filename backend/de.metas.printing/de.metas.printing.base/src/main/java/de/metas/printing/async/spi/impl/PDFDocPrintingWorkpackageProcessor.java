@@ -22,7 +22,7 @@ import de.metas.printing.model.X_C_Print_Job_Instructions;
 import de.metas.process.AdProcessId;
 import de.metas.process.IADPInstanceDAO;
 import de.metas.process.PInstanceId;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.report.DocumentReportFlavor;
 import de.metas.report.client.ReportsClient;
@@ -194,7 +194,7 @@ public class PDFDocPrintingWorkpackageProcessor implements IWorkpackageProcessor
 		piParams.add(ProcessInfoParameter.ofValueObject("Title", msg.toString()));
 		Services.get(IADPInstanceDAO.class).saveParameterToDB(PInstanceId.ofRepoId(pinstance.getAD_PInstance_ID()), piParams);
 
-		final ProcessInfo jasperProcessInfo = ProcessInfo.builder()
+		final ProcessInstanceInfo jasperProcessInfo = ProcessInstanceInfo.builder()
 				.setCtx(ctx)
 				.setAD_Process_ID(SummaryPdfPrinting_AD_Process_ID)
 				.setAD_PInstance(pinstance)

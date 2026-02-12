@@ -23,7 +23,7 @@
 package de.metas.workflow.execution;
 
 import de.metas.logging.LogManager;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.Services;
 import de.metas.util.StringUtils;
 import de.metas.workflow.Workflow;
@@ -110,7 +110,7 @@ public class DocWorkflowManager
 			@NonNull final Workflow workflow,
 			@NonNull final PO document)
 	{
-		final ProcessInfo pi = ProcessInfo.builder()
+		final ProcessInstanceInfo pi = ProcessInstanceInfo.builder()
 				.setCtx(document.getCtx())
 				.setAD_Process_ID(305) // FIXME HARDCODED
 				.setAD_Client_ID(document.getAD_Client_ID())

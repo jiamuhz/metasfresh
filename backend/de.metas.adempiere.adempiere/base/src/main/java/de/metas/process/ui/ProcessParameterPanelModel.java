@@ -26,7 +26,7 @@ import de.metas.logging.LogManager;
 import de.metas.process.IProcessDefaultParameter;
 import de.metas.process.ProcessClassInfo;
 import de.metas.process.ProcessDefaultParametersUpdater;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.util.Check;
 import lombok.Getter;
@@ -82,7 +82,7 @@ public class ProcessParameterPanelModel
 	 * @param parentCtx parent context
 	 * @param pi process info, used ONLY to get AD_Process_ID, WindowNo and TabNo; no reference is stored to it
 	 */
-	public ProcessParameterPanelModel(final Properties parentCtx, final ProcessInfo pi)
+	public ProcessParameterPanelModel(final Properties parentCtx, final ProcessInstanceInfo pi)
 	{
 		super();
 		Check.assumeNotNull(pi, "pi not null");

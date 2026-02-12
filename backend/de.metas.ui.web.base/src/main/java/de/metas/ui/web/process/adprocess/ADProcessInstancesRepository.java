@@ -12,8 +12,8 @@ import de.metas.process.IProcessDefaultParametersProvider;
 import de.metas.process.JavaProcess;
 import de.metas.process.PInstanceId;
 import de.metas.process.ProcessDefaultParametersUpdater;
-import de.metas.process.ProcessInfo;
-import de.metas.process.ProcessInfo.ProcessInfoBuilder;
+import de.metas.process.ProcessInstanceInfo;
+import de.metas.process.ProcessInstanceInfo.ProcessInstanceInfoBuilder;
 import de.metas.security.IUserRolePermissions;
 import de.metas.ui.web.process.CreateProcessInstanceRequest;
 import de.metas.ui.web.process.IProcessInstanceController;
@@ -164,7 +164,7 @@ public class ADProcessInstancesRepository implements IProcessInstancesRepository
 	{
 		//
 		// Save process info together with it's parameters and get the the newly created AD_PInstance_ID
-		final ProcessInfo processInfo = createProcessInfo(request);
+		final ProcessInstanceInfo processInfo = createProcessInfo(request);
 		Services.get(IADPInstanceDAO.class).saveProcessInfo(processInfo);
 		final DocumentId adPInstanceId = DocumentId.of(processInfo.getPinstanceId());
 
@@ -206,7 +206,7 @@ public class ADProcessInstancesRepository implements IProcessInstancesRepository
 		}
 	}
 
-	private ProcessInfo createProcessInfo(@NonNull final CreateProcessInstanceRequest request)
+	private ProcessInstanceInfo createProcessInfo(@NonNull final CreateProcessInstanceRequest request)
 	{
 		final DocumentPath singleDocumentPath = request.getSingleDocumentPath();
 		final String tableName;
@@ -304,7 +304,7 @@ public class ADProcessInstancesRepository implements IProcessInstancesRepository
 		//
 		final Set<TableRecordReference> selectedIncludedRecords = extractSelectedIncludedRecords(request);
 
-		final ProcessInfoBuilder processInfoBuilder = ProcessInfo.builder()
+		final ProcessInstanceInfoBuilder processInfoBuilder = ProcessInstanceInfo.builder()
 				.setCtx(Env.getCtx())
 				.setCreateTemporaryCtx()
 				.setAD_Process_ID(request.getProcessIdAsInt())
@@ -332,7 +332,7 @@ public class ADProcessInstancesRepository implements IProcessInstancesRepository
 	@VisibleForTesting
 	protected static void addViewInternalParameters(
 			@NonNull final CreateProcessInstanceRequest request,
-			@NonNull final ProcessInfoBuilder processInfoBuilder)
+			@NonNull final ProcessInstanceInfo.ProcessInstanceInfoBuilder processInfoBuilder)
 	{
 		if (request.getViewRowIdsSelection() != null)
 		{
@@ -368,7 +368,7 @@ public class ADProcessInstancesRepository implements IProcessInstancesRepository
 		//
 		// Load process info
 		final PInstanceId pinstanceId = PInstanceId.ofRepoId(adPInstanceDocumentId.toInt());
-		final ProcessInfo processInfo = ProcessInfo.builder()
+		final ProcessInstanceInfo processInfo = ProcessInstanceInfo.builder()
 				.setCtx(Env.getCtx())
 				.setCreateTemporaryCtx()
 				.setPInstanceId(pinstanceId)

@@ -104,20 +104,20 @@ import java.util.Set;
  * @author metas-dev <dev@metasfresh.com>
  */
 @SuppressWarnings({ "OptionalUsedAsFieldOrParameterType" })
-public final class ProcessInfo implements Serializable
+public final class ProcessInstanceInfo implements Serializable
 {
-	private static final transient Logger logger = LogManager.getLogger(ProcessInfo.class);
+	private static final transient Logger logger = LogManager.getLogger(ProcessInstanceInfo.class);
 
 	private static final AdMessageKey MSG_NO_TABLE_RECORD_REFERENCE_FOUND = AdMessageKey.of("de.metas.process.NoTableRecordReferenceFound");
 
-	public static ProcessInfoBuilder builder()
+	public static ProcessInstanceInfoBuilder builder()
 	{
-		return new ProcessInfoBuilder();
+		return new ProcessInstanceInfoBuilder();
 	}
 
-	private ProcessInfo(
+	private ProcessInstanceInfo(
 			@NonNull final Properties ctx,
-			@NonNull final ProcessInfoBuilder builder)
+			@NonNull final ProcessInstanceInfo.ProcessInstanceInfoBuilder builder)
 	{
 		this.ctx = ctx;
 
@@ -368,7 +368,7 @@ public final class ProcessInfo implements Serializable
 		ClassLoader classLoader = Thread.currentThread().getContextClassLoader();
 		if (classLoader == null)
 		{
-			classLoader = ProcessInfo.class.getClassLoader();
+			classLoader = ProcessInstanceInfo.class.getClassLoader();
 		}
 
 		final Class<?> processClass = classLoader.loadClass(classname);
@@ -777,7 +777,7 @@ public final class ProcessInfo implements Serializable
 	}
 
 	@SuppressWarnings({ "OptionalUsedAsFieldOrParameterType", "OptionalAssignedToNull" })
-	public static final class ProcessInfoBuilder
+	public static final class ProcessInstanceInfoBuilder
 	{
 		private Properties ctx;
 		private boolean createTemporaryCtx = false;
@@ -827,11 +827,11 @@ public final class ProcessInfo implements Serializable
 
 		private Boolean logWarning;
 
-		private ProcessInfoBuilder()
+		private ProcessInstanceInfoBuilder()
 		{
 		}
 
-		public ProcessInfo build()
+		public ProcessInstanceInfo build()
 		{
 			Properties ctx = getCtx();
 			if (createTemporaryCtx)
@@ -839,16 +839,16 @@ public final class ProcessInfo implements Serializable
 				ctx = createTemporaryCtx(ctx);
 			}
 
-			return new ProcessInfo(ctx, this);
+			return new ProcessInstanceInfo(ctx, this);
 		}
 
 		public ProcessExecutor.Builder buildAndPrepareExecution()
 		{
-			final ProcessInfo processInfo = build();
+			final ProcessInstanceInfo processInfo = build();
 			return ProcessExecutor.builder(processInfo);
 		}
 
-		public ProcessInfoBuilder setCtx(final Properties ctx)
+		public ProcessInstanceInfoBuilder setCtx(final Properties ctx)
 		{
 			this.ctx = ctx;
 			return this;
@@ -859,7 +859,7 @@ public final class ProcessInfo implements Serializable
 			return Env.coalesce(ctx);
 		}
 
-		public ProcessInfoBuilder setCreateTemporaryCtx()
+		public ProcessInstanceInfoBuilder setCreateTemporaryCtx()
 		{
 			this.createTemporaryCtx = true;
 			return this;
@@ -975,12 +975,12 @@ public final class ProcessInfo implements Serializable
 			return Env.getClientId(getCtx());
 		}
 
-		public ProcessInfoBuilder setAD_Client_ID(final int adClientId)
+		public ProcessInstanceInfoBuilder setAD_Client_ID(final int adClientId)
 		{
 			return setClientId(ClientId.ofRepoIdOrNull(adClientId));
 		}
 
-		public ProcessInfoBuilder setClientId(@Nullable final ClientId adClientId)
+		public ProcessInstanceInfoBuilder setClientId(@Nullable final ClientId adClientId)
 		{
 			this._adClientId = adClientId;
 			return this;
@@ -1013,23 +1013,23 @@ public final class ProcessInfo implements Serializable
 			return Env.getLoggedUserId(getCtx());
 		}
 
-		public ProcessInfoBuilder setAD_User_ID(final int adUserId)
+		public ProcessInstanceInfoBuilder setAD_User_ID(final int adUserId)
 		{
 			return setUserId(UserId.ofRepoIdOrNull(adUserId));
 		}
 
-		public ProcessInfoBuilder setUserId(final UserId adUserId)
+		public ProcessInstanceInfoBuilder setUserId(final UserId adUserId)
 		{
 			this._adUserId = adUserId;
 			return this;
 		}
 
-		public ProcessInfoBuilder setAD_Role_ID(final int adRoleId)
+		public ProcessInstanceInfoBuilder setAD_Role_ID(final int adRoleId)
 		{
 			return setRoleId(RoleId.ofRepoIdOrNull(adRoleId));
 		}
 
-		public ProcessInfoBuilder setRoleId(final RoleId adRoleId)
+		public ProcessInstanceInfoBuilder setRoleId(final RoleId adRoleId)
 		{
 			this._adRoleId = adRoleId;
 			return this;
@@ -1051,7 +1051,7 @@ public final class ProcessInfo implements Serializable
 			return Env.getLoggedRoleId(getCtx());
 		}
 
-		public ProcessInfoBuilder setAdWindowId(@Nullable final AdWindowId adWindowId)
+		public ProcessInstanceInfoBuilder setAdWindowId(@Nullable final AdWindowId adWindowId)
 		{
 			_adWindowId = adWindowId;
 			return this;
@@ -1090,7 +1090,7 @@ public final class ProcessInfo implements Serializable
 			return adProcessTrl.getName();
 		}
 
-		public ProcessInfoBuilder setTitle(final String title)
+		public ProcessInstanceInfoBuilder setTitle(final String title)
 		{
 			this.title = title;
 			return this;
@@ -1114,13 +1114,13 @@ public final class ProcessInfo implements Serializable
 			return _adPInstance;
 		}
 
-		public ProcessInfoBuilder setPInstanceId(@Nullable final PInstanceId pinstanceId)
+		public ProcessInstanceInfoBuilder setPInstanceId(@Nullable final PInstanceId pinstanceId)
 		{
 			this.pInstanceId = pinstanceId;
 			return this;
 		}
 
-		public ProcessInfoBuilder setAD_PInstance(@NonNull final I_AD_PInstance adPInstance)
+		public ProcessInstanceInfoBuilder setAD_PInstance(@NonNull final I_AD_PInstance adPInstance)
 		{
 			this._adPInstance = adPInstance;
 			setPInstanceId(PInstanceId.ofRepoId(adPInstance.getAD_PInstance_ID()));
@@ -1145,7 +1145,7 @@ public final class ProcessInfo implements Serializable
 			return adProcessId;
 		}
 
-		public ProcessInfoBuilder setAD_Process(final org.compiere.model.I_AD_Process adProcess)
+		public ProcessInstanceInfoBuilder setAD_Process(final org.compiere.model.I_AD_Process adProcess)
 		{
 			this._adProcess = InterfaceWrapperHelper.create(adProcess, I_AD_Process.class);
 
@@ -1155,14 +1155,14 @@ public final class ProcessInfo implements Serializable
 			return this;
 		}
 
-		public ProcessInfoBuilder setAD_ProcessByValue(final String processValue)
+		public ProcessInstanceInfoBuilder setAD_ProcessByValue(final String processValue)
 		{
 			final I_AD_Process adProcess = Services.get(IADProcessDAO.class).retrieveProcessByValue(getCtx(), processValue);
 			setAD_Process(adProcess);
 			return this;
 		}
 
-		public ProcessInfoBuilder setAD_ProcessByClassname(final String processClassname)
+		public ProcessInstanceInfoBuilder setAD_ProcessByClassname(final String processClassname)
 		{
 			final AdProcessId adProcessId = Services.get(IADProcessDAO.class).retrieveProcessIdByClassIfUnique(processClassname);
 			if (adProcessId == null)
@@ -1192,18 +1192,18 @@ public final class ProcessInfo implements Serializable
 			return _adProcess;
 		}
 
-		public ProcessInfoBuilder setAD_Process_ID(final int adProcessId)
+		public ProcessInstanceInfoBuilder setAD_Process_ID(final int adProcessId)
 		{
 			return setAD_Process_ID(AdProcessId.ofRepoIdOrNull(adProcessId));
 		}
 
-		public ProcessInfoBuilder setAD_Process_ID(@Nullable final AdProcessId adProcessId)
+		public ProcessInstanceInfoBuilder setAD_Process_ID(@Nullable final AdProcessId adProcessId)
 		{
 			this.adProcessId = adProcessId;
 			return this;
 		}
 
-		public ProcessInfoBuilder setClassname(final String classname)
+		public ProcessInstanceInfoBuilder setClassname(final String classname)
 		{
 			if (Check.isEmpty(classname, true))
 			{
@@ -1304,7 +1304,7 @@ public final class ProcessInfo implements Serializable
 		/**
 		 * Sets if the whole window tab shall be refreshed after process execution (applies only when the process was started from a user window)
 		 */
-		public ProcessInfoBuilder setRefreshAllAfterExecution(final boolean refreshAllAfterExecution)
+		public ProcessInstanceInfoBuilder setRefreshAllAfterExecution(final boolean refreshAllAfterExecution)
 		{
 			this.refreshAllAfterExecution = refreshAllAfterExecution;
 			return this;
@@ -1326,28 +1326,28 @@ public final class ProcessInfo implements Serializable
 			return process.isRefreshAllAfterExecution();
 		}
 
-		public ProcessInfoBuilder setTableName(final String tableName)
+		public ProcessInstanceInfoBuilder setTableName(final String tableName)
 		{
 			this.adTableId = Services.get(IADTableDAO.class).retrieveTableId(tableName);
 			this.recordId = 0;
 			return this;
 		}
 
-		public ProcessInfoBuilder setRecord(final int adTableId, final int recordId)
+		public ProcessInstanceInfoBuilder setRecord(final int adTableId, final int recordId)
 		{
 			this.adTableId = adTableId;
 			this.recordId = recordId;
 			return this;
 		}
 
-		public ProcessInfoBuilder setRecord(final String tableName, final int recordId)
+		public ProcessInstanceInfoBuilder setRecord(final String tableName, final int recordId)
 		{
 			this.adTableId = Services.get(IADTableDAO.class).retrieveTableId(tableName);
 			this.recordId = recordId;
 			return this;
 		}
 
-		public ProcessInfoBuilder setRecord(final ITableRecordReference recordRef)
+		public ProcessInstanceInfoBuilder setRecord(final ITableRecordReference recordRef)
 		{
 			if (recordRef == null)
 			{
@@ -1412,7 +1412,7 @@ public final class ProcessInfo implements Serializable
 			return TableRecordReference.of(adTableId, recordId);
 		}
 
-		public ProcessInfoBuilder setSelectedIncludedRecords(final Set<TableRecordReference> selectedIncludedRecords)
+		public ProcessInstanceInfoBuilder setSelectedIncludedRecords(final Set<TableRecordReference> selectedIncludedRecords)
 		{
 			this.selectedIncludedRecords = selectedIncludedRecords != null ? selectedIncludedRecords : ImmutableSet.of();
 			return this;
@@ -1439,7 +1439,7 @@ public final class ProcessInfo implements Serializable
 		 *
 		 * @param reportLanguage optional report language
 		 */
-		public ProcessInfoBuilder setReportLanguage(@Nullable final Language reportLanguage)
+		public ProcessInstanceInfoBuilder setReportLanguage(@Nullable final Language reportLanguage)
 		{
 			this.reportLanguage = reportLanguage;
 			return this;
@@ -1450,13 +1450,13 @@ public final class ProcessInfo implements Serializable
 		 *
 		 * @param adLanguage optional report language
 		 */
-		public ProcessInfoBuilder setReportLanguage(@Nullable final String adLanguage)
+		public ProcessInstanceInfoBuilder setReportLanguage(@Nullable final String adLanguage)
 		{
 			this.reportLanguage = Check.isBlank(adLanguage) ? null : Language.getLanguage(adLanguage);
 			return this;
 		}
 
-		public ProcessInfoBuilder setJRDesiredOutputType(OutputType jrDesiredOutputType)
+		public ProcessInstanceInfoBuilder setJRDesiredOutputType(OutputType jrDesiredOutputType)
 		{
 			this.jrDesiredOutputType = jrDesiredOutputType;
 			return this;
@@ -1513,12 +1513,12 @@ public final class ProcessInfo implements Serializable
 			return null;
 		}
 
-		public ProcessInfoBuilder setPrintPreview(final Boolean printPreview)
+		public ProcessInstanceInfoBuilder setPrintPreview(final Boolean printPreview)
 		{
 			return setPrintPreview(OptionalBoolean.ofNullableBoolean(printPreview));
 		}
 
-		public ProcessInfoBuilder setPrintPreview(@NonNull final OptionalBoolean printPreview)
+		public ProcessInstanceInfoBuilder setPrintPreview(@NonNull final OptionalBoolean printPreview)
 		{
 			this.printPreview = printPreview;
 			return this;
@@ -1549,7 +1549,7 @@ public final class ProcessInfo implements Serializable
 		 * <p>
 		 * Important: doesn't matter if print preview is {@code true}, because in that case, the report result is never archived.
 		 */
-		public ProcessInfoBuilder setArchiveReportData(final Boolean archiveReportData)
+		public ProcessInstanceInfoBuilder setArchiveReportData(final Boolean archiveReportData)
 		{
 			this.archiveReportData = archiveReportData;
 			return this;
@@ -1560,7 +1560,7 @@ public final class ProcessInfo implements Serializable
 			return CoalesceUtil.coalesceNotNull(archiveReportData, Boolean.TRUE);
 		}
 
-		public ProcessInfoBuilder setWindowNo(int windowNo)
+		public ProcessInstanceInfoBuilder setWindowNo(int windowNo)
 		{
 			this.windowNo = windowNo;
 			return this;
@@ -1571,7 +1571,7 @@ public final class ProcessInfo implements Serializable
 			return windowNo;
 		}
 
-		public ProcessInfoBuilder setTabNo(int tabNo)
+		public ProcessInstanceInfoBuilder setTabNo(int tabNo)
 		{
 			this.tabNo = tabNo;
 			return this;
@@ -1582,13 +1582,13 @@ public final class ProcessInfo implements Serializable
 			return tabNo;
 		}
 
-		public ProcessInfoBuilder setWhereClause(final String whereClause)
+		public ProcessInstanceInfoBuilder setWhereClause(final String whereClause)
 		{
 			this.whereClause = Optional.ofNullable(whereClause);
 			return this;
 		}
 
-		public ProcessInfoBuilder setInvokedBySchedulerId(final AdSchedulerId invokedBySchedulerId)
+		public ProcessInstanceInfoBuilder setInvokedBySchedulerId(final AdSchedulerId invokedBySchedulerId)
 		{
 			this.invokedBySchedulerId = invokedBySchedulerId;
 			if (invokedBySchedulerId != null && notifyUserAfterExecution)
@@ -1615,7 +1615,7 @@ public final class ProcessInfo implements Serializable
 			return null;
 		}
 
-		public ProcessInfoBuilder setNotifyUserAfterExecution(final boolean notifyUserAfterExecution)
+		public ProcessInstanceInfoBuilder setNotifyUserAfterExecution(final boolean notifyUserAfterExecution)
 		{
 			if (invokedBySchedulerId != null && notifyUserAfterExecution)
 			{
@@ -1657,7 +1657,7 @@ public final class ProcessInfo implements Serializable
 			return notifyUserAfterExecution;
 		}
 
-		public ProcessInfoBuilder setLogWarning(final boolean logWarning)
+		public ProcessInstanceInfoBuilder setLogWarning(final boolean logWarning)
 		{
 			this.logWarning = logWarning;
 
@@ -1721,7 +1721,7 @@ public final class ProcessInfo implements Serializable
 		 *                             be loaded from database but only those added here will be used.
 		 *                             </ul>
 		 */
-		public ProcessInfoBuilder setLoadParametersFromDB(boolean loadParametersFromDB)
+		public ProcessInstanceInfoBuilder setLoadParametersFromDB(boolean loadParametersFromDB)
 		{
 			this.loadParametersFromDB = loadParametersFromDB;
 			return this;
@@ -1737,31 +1737,31 @@ public final class ProcessInfo implements Serializable
 			return parameters;
 		}
 
-		public ProcessInfoBuilder addParameter(final String parameterName, final int parameterValue)
+		public ProcessInstanceInfoBuilder addParameter(final String parameterName, final int parameterValue)
 		{
 			addParameter(ProcessInfoParameter.of(parameterName, parameterValue));
 			return this;
 		}
 
-		public ProcessInfoBuilder addParameter(final String parameterName, final String parameterValue)
+		public ProcessInstanceInfoBuilder addParameter(final String parameterName, final String parameterValue)
 		{
 			addParameter(ProcessInfoParameter.of(parameterName, parameterValue));
 			return this;
 		}
 
-		public ProcessInfoBuilder addParameter(final String parameterName, final java.util.Date parameterValue)
+		public ProcessInstanceInfoBuilder addParameter(final String parameterName, final java.util.Date parameterValue)
 		{
 			addParameter(ProcessInfoParameter.of(parameterName, parameterValue));
 			return this;
 		}
 
-		public ProcessInfoBuilder addParameter(final String parameterName, final BigDecimal parameterValue)
+		public ProcessInstanceInfoBuilder addParameter(final String parameterName, final BigDecimal parameterValue)
 		{
 			addParameter(ProcessInfoParameter.of(parameterName, parameterValue));
 			return this;
 		}
 
-		public ProcessInfoBuilder addParameter(final String parameterName, final boolean parameterValue)
+		public ProcessInstanceInfoBuilder addParameter(final String parameterName, final boolean parameterValue)
 		{
 			addParameter(ProcessInfoParameter.of(parameterName, parameterValue));
 			return this;
@@ -1776,7 +1776,7 @@ public final class ProcessInfo implements Serializable
 			parameters.add(param);
 		}
 
-		public ProcessInfoBuilder addParameters(final List<ProcessInfoParameter> params)
+		public ProcessInstanceInfoBuilder addParameters(final List<ProcessInfoParameter> params)
 		{
 			if (parameters == null)
 			{

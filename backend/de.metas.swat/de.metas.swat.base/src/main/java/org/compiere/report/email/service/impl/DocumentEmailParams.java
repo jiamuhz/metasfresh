@@ -42,7 +42,7 @@ import org.compiere.util.Env;
 import de.metas.bpartner.service.IBPartnerDAO;
 import de.metas.i18n.Msg;
 import de.metas.letters.model.MADBoilerPlate;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.user.api.IUserDAO;
 import de.metas.util.Services;
 
@@ -71,7 +71,7 @@ public final class DocumentEmailParams implements IEmailParameters
 
 	private Integer defaultBoilerPlateId;
 
-	public DocumentEmailParams(final ProcessInfo pi)
+	public DocumentEmailParams(final ProcessInstanceInfo pi)
 	{
 
 		final int tableId = pi.getTable_ID();

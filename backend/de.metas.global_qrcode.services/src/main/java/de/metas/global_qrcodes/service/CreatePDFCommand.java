@@ -9,7 +9,7 @@ import de.metas.process.IADPInstanceDAO;
 import de.metas.process.IADProcessDAO;
 import de.metas.process.PInstanceId;
 import de.metas.process.PInstanceRequest;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.process.ProcessType;
 import de.metas.report.client.ReportsClient;
@@ -71,7 +71,7 @@ public class CreatePDFCommand
 						.processParams(processParams)
 						.build());
 
-		final ProcessInfo reportProcessInfo = ProcessInfo.builder()
+		final ProcessInstanceInfo reportProcessInfo = ProcessInstanceInfo.builder()
 				.setCtx(Env.getCtx())
 				.setAD_Process_ID(qrCodeProcessId)
 				.setPInstanceId(processPInstanceId)

@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import de.metas.inout.IInOutDAO;
 import de.metas.inout.InOutId;
 import de.metas.inout.model.I_M_InOut;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.ExecuteReportStrategy;
 import de.metas.report.server.OutputType;
 import de.metas.shipping.model.ShipperTransportationId;
@@ -20,7 +20,7 @@ import static de.metas.report.ExecuteReportStrategyUtil.concatenatePDFs;
 public class PrintAllShipmentsDocumentsStrategy implements ExecuteReportStrategy
 {
 	@Override
-	public ExecuteReportResult executeReport(final ProcessInfo processInfo, final OutputType outputType)
+	public ExecuteReportResult executeReport(final ProcessInstanceInfo processInfo, final OutputType outputType)
 	{
 		final ShipperTransportationId shipperTransportationId = ShipperTransportationId.ofRepoId(processInfo.getRecord_ID());
 

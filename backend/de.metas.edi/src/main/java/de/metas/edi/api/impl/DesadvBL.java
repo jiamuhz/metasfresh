@@ -32,7 +32,7 @@ import de.metas.order.IOrderDAO;
 import de.metas.organization.OrgId;
 import de.metas.pricing.InvoicableQtyBasedOn;
 import de.metas.process.ProcessExecutionResult;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.product.IProductBL;
 import de.metas.product.IProductDAO;
 import de.metas.product.ProductId;
@@ -565,7 +565,7 @@ public class DesadvBL implements IDesadvBL
 
 		//
 		// Create the process info based on AD_Process and AD_PInstance
-		final ProcessExecutionResult result = ProcessInfo.builder()
+		final ProcessExecutionResult result = ProcessInstanceInfo.builder()
 				.setCtx(ctx)
 				.setAD_ProcessByValue(AD_PROCESS_VALUE_EDI_DesadvLine_SSCC_Print)
 				//

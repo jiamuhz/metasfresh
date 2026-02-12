@@ -22,7 +22,7 @@
 
 package de.metas.printing;
 
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import lombok.NonNull;
 import org.adempiere.archive.api.ArchiveInfo;
 import org.springframework.core.io.Resource;
@@ -30,7 +30,7 @@ import org.springframework.core.io.Resource;
 public interface IMassPrintingService
 {
 	/**
-	 * A {@link ProcessInfo} parameter with this name can be used to specify the number of copies (1 means one printout) in case using {@link ArchiveInfo} is not feasible.
+	 * A {@link ProcessInstanceInfo} parameter with this name can be used to specify the number of copies (1 means one printout) in case using {@link ArchiveInfo} is not feasible.
 	 */
 	String PARAM_PrintCopies = "PrintCopies";
 

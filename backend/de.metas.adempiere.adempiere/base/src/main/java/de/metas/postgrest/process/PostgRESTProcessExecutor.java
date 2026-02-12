@@ -29,7 +29,7 @@ import de.metas.postgrest.config.PostgRESTConfig;
 import de.metas.postgrest.config.PostgRESTConfigRepository;
 import de.metas.process.IADProcessDAO;
 import de.metas.process.JavaProcess;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.Services;
 import de.metas.util.StringUtils;
 import lombok.NonNull;
@@ -55,7 +55,7 @@ public class PostgRESTProcessExecutor extends JavaProcess
 	@Override
 	protected String doIt() throws Exception
 	{
-		final ProcessInfo processInfo = getProcessInfo();
+		final ProcessInstanceInfo processInfo = getProcessInfo();
 
 		final boolean jsonPathMissing = !processInfo.getJsonPath().isPresent();
 

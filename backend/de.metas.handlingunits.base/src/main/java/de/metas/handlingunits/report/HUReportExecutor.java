@@ -10,7 +10,7 @@ import de.metas.i18n.Language;
 import de.metas.printing.IMassPrintingService;
 import de.metas.process.AdProcessId;
 import de.metas.process.ProcessExecutor;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.DocumentReportService;
 import de.metas.report.PrintCopies;
 import de.metas.report.server.ReportConstants;
@@ -172,7 +172,7 @@ public class HUReportExecutor
 		// Make sure the HU QR codes are generated
 		SpringContextHolder.instance.getBean(HUQRCodesService.class).generateForExistingHUs(huIdsToProcess);
 
-		final ProcessInfo.ProcessInfoBuilder builder = ProcessInfo.builder()
+		final ProcessInstanceInfo.ProcessInstanceInfoBuilder builder = ProcessInstanceInfo.builder()
 				.setCtx(ctx)
 				.setAD_Process_ID(request.getAdProcessId())
 				.setWindowNo(request.getWindowNo())

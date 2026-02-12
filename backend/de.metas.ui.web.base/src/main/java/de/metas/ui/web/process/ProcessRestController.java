@@ -12,7 +12,7 @@ import de.metas.process.AdProcessId;
 import de.metas.process.IADProcessDAO;
 import de.metas.process.PInstanceId;
 import de.metas.process.ProcessClassInfo;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessMDC;
 import de.metas.rest_api.utils.v2.JsonErrors;
 import de.metas.ui.web.cache.ETagResponseEntityBuilder;
@@ -464,7 +464,7 @@ public class ProcessRestController
 				// Try loading & instantiating the process class if any
 				if (processDescriptor.getProcessClassname() != null)
 				{
-					ProcessInfo.newProcessClassInstance(processDescriptor.getProcessClassname());
+					ProcessInstanceInfo.newProcessClassInstance(processDescriptor.getProcessClassname());
 				}
 
 				repository.cacheReset();

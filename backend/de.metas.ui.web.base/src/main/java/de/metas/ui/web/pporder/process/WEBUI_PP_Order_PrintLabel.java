@@ -32,7 +32,7 @@ import de.metas.process.IProcessPrecondition;
 import de.metas.process.PInstanceId;
 import de.metas.process.PInstanceRequest;
 import de.metas.process.Param;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.process.RunOutOfTrx;
@@ -187,7 +187,7 @@ public class WEBUI_PP_Order_PrintLabel extends WEBUI_PP_Order_Template implement
 		final PInstanceRequest pinstanceRequest = createPInstanceRequest();
 		final PInstanceId pinstanceId = adPInstanceDAO.createADPinstanceAndADPInstancePara(pinstanceRequest);
 
-		final ProcessInfo jasperProcessInfo = ProcessInfo.builder()
+		final ProcessInstanceInfo jasperProcessInfo = ProcessInstanceInfo.builder()
 				.setCtx(getCtx())
 				.setAD_Process_ID(getPrintFormat().getReportProcessId())
 				.setAD_PInstance(adPInstanceDAO.getById(pinstanceId))

@@ -5,7 +5,7 @@ import de.metas.logging.LogManager;
 import de.metas.process.AdProcessId;
 import de.metas.process.IADPInstanceDAO;
 import de.metas.process.PInstanceId;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.jasper.JasperEngine;
 import de.metas.report.xls.engine.XlsReportEngine;
 import de.metas.util.Check;
@@ -31,7 +31,7 @@ public class LocalReportServer implements IReportServer
 	{
 		//
 		// Load process info
-		final ProcessInfo processInfo = ProcessInfo.builder()
+		final ProcessInstanceInfo processInfo = ProcessInstanceInfo.builder()
 				.setCtx(Env.newTemporaryCtx())
 				.setCreateTemporaryCtx()
 				.setAD_Process_ID(AdProcessId.ofRepoIdOrNull(processId))
@@ -107,7 +107,7 @@ public class LocalReportServer implements IReportServer
 	/**
 	 * Populate given context (AD_Client_ID, AD_Org_ID) from given record.
 	 */
-	private static void updateContextFromRecord(final ProcessInfo processInfo)
+	private static void updateContextFromRecord(final ProcessInstanceInfo processInfo)
 	{
 		if (!processInfo.isRecordSet())
 		{

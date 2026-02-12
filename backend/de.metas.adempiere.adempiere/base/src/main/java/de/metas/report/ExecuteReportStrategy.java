@@ -1,6 +1,6 @@
 package de.metas.report;
 
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.server.OutputType;
 import lombok.NonNull;
 import lombok.ToString;
@@ -46,7 +46,7 @@ public interface ExecuteReportStrategy
 	/**
 	 * @return never return {@code null}.
 	 */
-	ExecuteReportResult executeReport(ProcessInfo processInfo, OutputType outputType);
+	ExecuteReportResult executeReport(ProcessInstanceInfo processInfo, OutputType outputType);
 
 	@Value
 	@ToString(exclude = "reportData")

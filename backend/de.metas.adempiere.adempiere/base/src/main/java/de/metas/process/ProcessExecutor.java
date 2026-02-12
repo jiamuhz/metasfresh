@@ -52,14 +52,14 @@ import java.util.concurrent.TimeUnit;
 import java.util.function.Consumer;
 
 /**
- * Process executor: executes a process (sync or async) which was defined by given {@link ProcessInfo}.
+ * Process executor: executes a process (sync or async) which was defined by given {@link ProcessInstanceInfo}.
  *
  * @author authors of earlier versions of this class are: Jorg Janke, Low Heng Sin, Teo Sarca
  * @author metas-dev dev@metasfresh.com>
  */
 public final class ProcessExecutor
 {
-	public static Builder builder(final ProcessInfo processInfo)
+	public static Builder builder(final ProcessInstanceInfo processInfo)
 	{
 		return new Builder(processInfo);
 	}
@@ -90,7 +90,7 @@ public final class ProcessExecutor
 	private final transient INotificationBL notificationBL = Services.get(INotificationBL.class);
 
 	private final IProcessExecutionListener listener;
-	private final ProcessInfo pi;
+	private final ProcessInstanceInfo pi;
 	private final boolean switchContextWhenRunning;
 	private final boolean onErrorThrowException;
 
@@ -286,7 +286,7 @@ public final class ProcessExecutor
 		}
 	}
 
-	private static DocumentReportRequest toDocumentReportRequest(final ProcessInfo processInfo)
+	private static DocumentReportRequest toDocumentReportRequest(final ProcessInstanceInfo processInfo)
 	{
 		return DocumentReportRequest.builder()
 				.flavor(DocumentReportFlavor.PRINT)
@@ -540,7 +540,7 @@ public final class ProcessExecutor
 
 	private void startJavaProcess()
 	{
-		final ProcessInfo pi = this.pi;
+		final ProcessInstanceInfo pi = this.pi;
 
 		final JavaProcess process = pi.newProcessClassInstanceOrNull();
 		if (process == null)
@@ -617,7 +617,7 @@ public final class ProcessExecutor
 		}
 	}
 
-	public ProcessInfo getProcessInfo()
+	public ProcessInstanceInfo getProcessInfo()
 	{
 		return pi;
 	}
@@ -631,13 +631,13 @@ public final class ProcessExecutor
 	{
 		private final transient IADPInstanceDAO adPInstanceDAO = Services.get(IADPInstanceDAO.class);
 
-		private final ProcessInfo processInfo;
+		private final ProcessInstanceInfo processInfo;
 		private IProcessExecutionListener listener = null;
 		private boolean switchContextWhenRunning = false;
 		private boolean onErrorThrowException = false;
-		private Consumer<ProcessInfo> beforeCallback = null;
+		private Consumer<ProcessInstanceInfo> beforeCallback = null;
 
-		private Builder(@NonNull final ProcessInfo processInfo)
+		private Builder(@NonNull final ProcessInstanceInfo processInfo)
 		{
 			this.processInfo = processInfo;
 		}
@@ -681,7 +681,7 @@ public final class ProcessExecutor
 			return new ProcessExecutor(this);
 		}
 
-		private void prepareAD_PInstance(final ProcessInfo pi)
+		private void prepareAD_PInstance(final ProcessInstanceInfo pi)
 		{
 			//
 			// Save process info to database, including parameters.
@@ -695,7 +695,7 @@ public final class ProcessExecutor
 			}
 		}
 
-		private ProcessInfo getProcessInfo()
+		private ProcessInstanceInfo getProcessInfo()
 		{
 			return processInfo;
 		}
@@ -729,7 +729,7 @@ public final class ProcessExecutor
 		/**
 		 * Advice the executor to switch current context with process info's context.
 		 *
-		 * @see ProcessInfo#getCtx()
+		 * @see ProcessInstanceInfo#getCtx()
 		 * @see Env#switchContext(Properties)
 		 */
 		public Builder switchContextWhenRunning()
@@ -744,7 +744,7 @@ public final class ProcessExecutor
 		 * <p>
 		 * A common use case of <code>beforeCallback</code> is to create to selections which are linked to this process instance.
 		 */
-		public Builder callBefore(final Consumer<ProcessInfo> beforeCallback)
+		public Builder callBefore(final Consumer<ProcessInstanceInfo> beforeCallback)
 		{
 			this.beforeCallback = beforeCallback;
 			return this;

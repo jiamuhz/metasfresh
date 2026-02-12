@@ -8,8 +8,7 @@ import org.compiere.util.Env;
 import de.metas.process.JavaProcess;
 import de.metas.process.Param;
 import de.metas.process.ProcessExecutionResult;
-import de.metas.process.ProcessInfo;
-import de.metas.report.ReportResultData;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.server.OutputType;
 
 /*
@@ -52,7 +51,7 @@ public class M_Pricelist_Excel extends JavaProcess
 	@Override
 	protected String doIt() throws Exception
 	{
-		final ProcessExecutionResult result = ProcessInfo.builder()
+		final ProcessExecutionResult result = ProcessInstanceInfo.builder()
 				.setCtx(Env.getCtx())
 				.setAD_ProcessByValue(AD_PROCESS_VALUE_RV_Fresh_PriceList_ExcelReport)
 				.addParameter(I_M_PriceList_Version.COLUMNNAME_M_PriceList_Version_ID, p_M_Pricelist_Version_ID)

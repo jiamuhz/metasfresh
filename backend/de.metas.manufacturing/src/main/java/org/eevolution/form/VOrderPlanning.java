@@ -63,6 +63,7 @@ import javax.swing.event.ListSelectionListener;
 import javax.swing.event.TableModelEvent;
 import javax.swing.event.TableModelListener;
 
+import de.metas.process.ProcessInstanceInfo;
 import org.adempiere.ad.element.api.AdWindowId;
 import org.adempiere.ad.table.api.IADTableDAO;
 import org.adempiere.ad.trx.api.ITrx;
@@ -391,7 +392,7 @@ public class VOrderPlanning extends CPanel
 	}
 
 	@Override
-	public void lockUI(de.metas.process.ProcessInfo processInfo)
+	public void lockUI(ProcessInstanceInfo processInfo)
 	{
 	}
 
@@ -406,7 +407,7 @@ public class VOrderPlanning extends CPanel
 	}
 
 	@Override
-	public void unlockUI(de.metas.process.ProcessInfo processInfo)
+	public void unlockUI(ProcessInstanceInfo processInfo)
 	{
 	}
 

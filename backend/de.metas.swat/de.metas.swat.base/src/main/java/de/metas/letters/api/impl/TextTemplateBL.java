@@ -19,7 +19,7 @@ import de.metas.organization.OrgId;
 import de.metas.process.AdProcessId;
 import de.metas.process.IADPInstanceDAO;
 import de.metas.process.PInstanceId;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.client.ReportsClient;
 import de.metas.report.server.OutputType;
 import de.metas.report.server.ReportResult;
@@ -156,7 +156,7 @@ public final class TextTemplateBL implements ITextTemplateBL
 	public byte[] createPDF(final Letter request)
 	{
 		final Properties ctx = Env.getCtx();
-		final ProcessInfo jasperProcessInfo = ProcessInfo.builder()
+		final ProcessInstanceInfo jasperProcessInfo = ProcessInstanceInfo.builder()
 				.setCtx(ctx)
 				.setAD_Process_ID(getJasperProcessId(request).orElse(AD_Process_ID_T_Letter_Spool_Print))
 				// .setRecord(recordRef) // no record

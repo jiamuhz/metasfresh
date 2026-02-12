@@ -33,7 +33,7 @@ import org.compiere.model.I_AD_User_SortPref_Line;
 import org.compiere.model.I_AD_User_SortPref_Line_Product;
 import org.compiere.util.TrxRunnable;
 
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.user.api.IUserSortPrefDAO;
 import de.metas.util.Services;
 import de.metas.process.JavaProcess;
@@ -71,7 +71,7 @@ public class AD_User_SortPref_Hdr_RecalculateSeqNo extends JavaProcess
 			{
 				int seqNumber = 10;
 
-				final ProcessInfo processInfo = getProcessInfo();
+				final ProcessInstanceInfo processInfo = getProcessInfo();
 				final int recordId = processInfo.getRecord_ID();
 				final I_AD_User_SortPref_Hdr hdr = InterfaceWrapperHelper.create(ctx, recordId, I_AD_User_SortPref_Hdr.class, localTrxName);
 

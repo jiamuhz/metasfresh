@@ -11,7 +11,7 @@ import de.metas.process.ProcessExecutionResult.RecordsToOpen;
 import de.metas.process.ProcessExecutionResult.RecordsToOpen.OpenTarget;
 import de.metas.process.ProcessExecutionResult.ViewOpenTarget;
 import de.metas.process.ProcessExecutionResult.WebuiViewToOpen;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.ReportResultData;
 import de.metas.ui.web.process.ProcessInstanceResult;
 import de.metas.ui.web.process.ProcessInstanceResult.DisplayQRCodeAction;
@@ -96,7 +96,7 @@ public class ADProcessPostProcessService
 
 	public ProcessInstanceResult postProcess(@NonNull final ADProcessPostProcessRequest request)
 	{
-		final ProcessInfo processInfo = request.getProcessInfo();
+		final ProcessInstanceInfo processInfo = request.getProcessInfo();
 
 		final TableRecordReference currentSingleSelectedDocumentRef = processInfo.getRecordRefOrNull();
 		final ProcessExecutionResult processExecutionResult = request.getProcessExecutionResult();
@@ -219,7 +219,7 @@ public class ADProcessPostProcessService
 		return DocumentPath.rootDocumentPath(windowId, documentId);
 	}
 
-	private static Set<DocumentPath> extractReferencingDocumentPaths(final ProcessInfo processInfo)
+	private static Set<DocumentPath> extractReferencingDocumentPaths(final ProcessInstanceInfo processInfo)
 	{
 		final String tableName = processInfo.getTableNameOrNull();
 		if (tableName == null)
@@ -307,7 +307,7 @@ public class ADProcessPostProcessService
 	}
 
 	@Nullable
-	private ResultAction createResultAction(final ProcessInfo processInfo, final ProcessExecutionResult processExecutionResult)
+	private ResultAction createResultAction(final ProcessInstanceInfo processInfo, final ProcessExecutionResult processExecutionResult)
 	{
 		final Resource reportTempFile = saveReportToDiskIfAny(processExecutionResult);
 		final RecordsToOpen recordsToOpen = processExecutionResult.getRecordsToOpen();

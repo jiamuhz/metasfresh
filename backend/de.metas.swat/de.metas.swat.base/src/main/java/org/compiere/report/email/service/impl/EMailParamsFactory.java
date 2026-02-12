@@ -10,13 +10,13 @@ import org.compiere.model.I_M_InOut;
 import org.compiere.report.email.service.IEmailParameters;
 import org.compiere.report.email.service.IEmailParamsFactory;
 
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 
 public class EMailParamsFactory implements IEmailParamsFactory
 {
 
 	@Override
-	public IEmailParameters getInstanceForPI(final ProcessInfo pi)
+	public IEmailParameters getInstanceForPI(final ProcessInstanceInfo pi)
 	{
 		final int tableId = pi.getTable_ID();
 

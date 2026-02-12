@@ -46,7 +46,7 @@ import de.metas.process.IProcessPreconditionsContext;
 import de.metas.process.JavaProcess;
 import de.metas.process.PInstanceId;
 import de.metas.process.Param;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -165,7 +165,7 @@ public abstract class InvokeExternalSystemProcess extends JavaProcess implements
 
 	private Timestamp retrieveSinceValue()
 	{
-		final ProcessInfo processInfo = getProcessInfo();
+		final ProcessInstanceInfo processInfo = getProcessInfo();
 		return pInstanceDAO.getLastRunDate(processInfo.getAdProcessId(), processInfo.getPinstanceId());
 	}
 

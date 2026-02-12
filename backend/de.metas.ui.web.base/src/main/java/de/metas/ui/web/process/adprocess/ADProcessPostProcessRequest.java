@@ -3,7 +3,7 @@ package de.metas.ui.web.process.adprocess;
 import javax.annotation.Nullable;
 
 import de.metas.process.ProcessExecutionResult;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import lombok.Builder;
@@ -36,14 +36,14 @@ import lombok.Value;
 public class ADProcessPostProcessRequest
 {
 	ViewId viewId;
-	ProcessInfo processInfo;
+	ProcessInstanceInfo processInfo;
 	ProcessExecutionResult processExecutionResult;
 	DocumentId instanceIdOverride;
 
 	@Builder
 	private ADProcessPostProcessRequest(
 			@Nullable final ViewId viewId,
-			@NonNull final ProcessInfo processInfo,
+			@NonNull final ProcessInstanceInfo processInfo,
 			@NonNull final ProcessExecutionResult processExecutionResult,
 			@Nullable final DocumentId instanceIdOverride)
 	{

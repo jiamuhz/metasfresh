@@ -27,7 +27,7 @@ import java.util.Properties;
 
 import org.adempiere.exceptions.AdempiereException;
 
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.ISingletonService;
 
 /**
@@ -42,7 +42,7 @@ public interface IHUDocumentFactoryService extends ISingletonService, IHUDocumen
 	List<IHUDocument> createHUDocuments(final Properties ctx, final String tableName, final int recordId);
 
 	@Override
-	List<IHUDocument> createHUDocuments(final ProcessInfo pi);
+	List<IHUDocument> createHUDocuments(final ProcessInstanceInfo pi);
 
 	@Override
 	List<IHUDocument> createHUDocumentsFromModel(final Object model);

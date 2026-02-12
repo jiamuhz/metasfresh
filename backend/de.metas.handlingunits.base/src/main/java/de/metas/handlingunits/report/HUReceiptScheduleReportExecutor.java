@@ -1,6 +1,5 @@
 package de.metas.handlingunits.report;
 
-import java.math.BigDecimal;
 import java.util.Properties;
 
 import de.metas.printing.IMassPrintingService;
@@ -16,7 +15,7 @@ import com.google.common.base.Preconditions;
 import de.metas.bpartner.service.IBPartnerBL;
 import de.metas.handlingunits.model.I_M_ReceiptSchedule;
 import de.metas.i18n.Language;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.Check;
 import de.metas.util.Services;
 
@@ -131,7 +130,7 @@ public class HUReceiptScheduleReportExecutor
 		//
 		// Create ProcessInfo
 
-		ProcessInfo.builder()
+		ProcessInstanceInfo.builder()
 				.setCtx(ctx)
 				.setAD_Process_ID(reportProcessId)
 				// .setAD_PInstance_ID() // NO AD_PInstance => we want a new instance

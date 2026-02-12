@@ -24,7 +24,7 @@ package org.adempiere.archive.api;
 import de.metas.bpartner.BPartnerId;
 import de.metas.process.AdProcessId;
 import de.metas.process.PInstanceId;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.PrintCopies;
 import de.metas.util.Check;
 import lombok.Data;
@@ -51,7 +51,7 @@ public class ArchiveInfo
 	//FRESH-349: AD_PInstance is also needed
 	private PInstanceId pInstanceId;
 
-	public ArchiveInfo(@NonNull final ProcessInfo processInfo)
+	public ArchiveInfo(@NonNull final ProcessInstanceInfo processInfo)
 	{
 		this.name = normalizeName(processInfo.getTitle());
 		this.recordRef = processInfo.getRecordRefOrNull();

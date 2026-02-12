@@ -16,7 +16,7 @@ import de.metas.process.AdProcessId;
 import de.metas.process.IADPInstanceDAO;
 import de.metas.process.PInstanceId;
 import de.metas.process.PInstanceRequest;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.report.client.ReportsClient;
 import de.metas.report.server.OutputType;
@@ -136,7 +136,7 @@ public class GPLRReportService
 							))
 							.build());
 
-			final ProcessInfo reportProcessInfo = ProcessInfo.builder()
+			final ProcessInstanceInfo reportProcessInfo = ProcessInstanceInfo.builder()
 					.setCtx(Env.getCtx())
 					.setAD_Process_ID(JASPER_PROCESS_ID)
 					.setPInstanceId(pinstanceId)

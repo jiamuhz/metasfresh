@@ -10,7 +10,7 @@ import de.metas.printing.IMassPrintingService;
 import de.metas.process.JavaProcess;
 import de.metas.process.PInstanceId;
 import de.metas.process.ProcessExecutionResult;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.report.ExecuteReportStrategy.ExecuteReportResult;
 import de.metas.report.server.OutputType;
@@ -65,7 +65,7 @@ public abstract class ReportStarter extends JavaProcess
 	protected abstract ExecuteReportStrategy getExecuteReportStrategy();
 
 	/**
-	 * Start Jasper reporting process. Based on {@link ProcessInfo#isPrintPreview()}, it will:
+	 * Start Jasper reporting process. Based on {@link ProcessInstanceInfo#isPrintPreview()}, it will:
 	 * <ul>
 	 * <li>directly print the report
 	 * <li>will open the report viewer and it will display the report
@@ -74,7 +74,7 @@ public abstract class ReportStarter extends JavaProcess
 	@Override
 	protected final String doIt()
 	{
-		final ProcessInfo pi = getProcessInfo();
+		final ProcessInstanceInfo pi = getProcessInfo();
 
 		final ReportPrintingInfo reportPrintingInfo = extractReportPrintingInfo(pi);
 
@@ -105,14 +105,14 @@ public abstract class ReportStarter extends JavaProcess
 
 	private void startProcessDirectPrint(@NonNull final ReportPrintingInfo reportPrintingInfo)
 	{
-		final ProcessInfo pi = reportPrintingInfo.getProcessInfo();
+		final ProcessInstanceInfo pi = reportPrintingInfo.getProcessInfo();
 
 		final ExecuteReportResult result = getExecuteReportStrategy().executeReport(pi, OutputType.PDF);
 
 		printService.print(result.getReportData(), extractArchiveInfo(pi));
 	}
 
-	private static ArchiveInfo extractArchiveInfo(@NonNull final ProcessInfo pi)
+	private static ArchiveInfo extractArchiveInfo(@NonNull final ProcessInstanceInfo pi)
 	{
 		// make sure that we never have zero copies. Apparently metasfresh
 		// thinks of "copies" as the number of printouts _additional_ to the
@@ -172,7 +172,7 @@ public abstract class ReportStarter extends JavaProcess
 
 	private void startProcessInvokeReportOnly(@NonNull final ReportPrintingInfo reportPrintingInfo)
 	{
-		final ProcessInfo processInfo = reportPrintingInfo.getProcessInfo();
+		final ProcessInstanceInfo processInfo = reportPrintingInfo.getProcessInfo();
 
 		final OutputType desiredOutputType;
 		if (reportPrintingInfo.isPrintPreview())
@@ -237,7 +237,7 @@ public abstract class ReportStarter extends JavaProcess
 		processExecutionResult.setReportData(result.getReportData(), reportFilename, reportContentType);
 	}
 
-	private String extractReportFilename(final ProcessInfo pi, final OutputType outputType)
+	private String extractReportFilename(final ProcessInstanceInfo pi, final OutputType outputType)
 	{
 		final String fileBasename = CoalesceUtil.firstValidValue(
 				basename -> !Check.isEmpty(basename, true),
@@ -252,7 +252,7 @@ public abstract class ReportStarter extends JavaProcess
 	}
 
 	@Nullable
-	private String extractReportBasename_IfDocument(final ProcessInfo pi)
+	private String extractReportBasename_IfDocument(final ProcessInstanceInfo pi)
 	{
 		final TableRecordReference recordRef = pi.getRecordRefOrNull();
 		if (recordRef == null)
@@ -271,7 +271,7 @@ public abstract class ReportStarter extends JavaProcess
 		return document.getDocumentInfo();
 	}
 
-	private ReportPrintingInfo extractReportPrintingInfo(@NonNull final ProcessInfo pi)
+	private ReportPrintingInfo extractReportPrintingInfo(@NonNull final ProcessInstanceInfo pi)
 	{
 		final ReportPrintingInfo.ReportPrintingInfoBuilder info = ReportPrintingInfo
 				.builder()
@@ -334,7 +334,7 @@ public abstract class ReportStarter extends JavaProcess
 	@Builder
 	private static class ReportPrintingInfo
 	{
-		ProcessInfo processInfo;
+		ProcessInstanceInfo processInfo;
 
 		ReportingSystemType reportingSystemType;
 

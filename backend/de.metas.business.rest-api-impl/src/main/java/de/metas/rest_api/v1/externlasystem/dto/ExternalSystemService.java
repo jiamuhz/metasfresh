@@ -45,7 +45,7 @@ import de.metas.process.IADPInstanceDAO;
 import de.metas.process.IADProcessDAO;
 import de.metas.process.PInstanceId;
 import de.metas.process.ProcessExecutionResult;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoLog;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -101,7 +101,7 @@ public class ExternalSystemService
 		// note: when the AD_PInstance is created by the schedule, it's also stored as string
 		final String configIdAsString = Integer.toString(externalSystemParentConfig.getChildConfig().getId().getRepoId());
 		
-		final ProcessInfo.ProcessInfoBuilder processInfoBuilder = ProcessInfo.builder();
+		final ProcessInstanceInfo.ProcessInstanceInfoBuilder processInfoBuilder = ProcessInstanceInfo.builder();
 		processInfoBuilder.setAD_Process_ID(processId.getRepoId());
 		processInfoBuilder.addParameter(PARAM_EXTERNAL_REQUEST, invokeExternalSystemProcessRequest.getRequest());
 		processInfoBuilder.addParameter(PARAM_CHILD_CONFIG_ID, configIdAsString);

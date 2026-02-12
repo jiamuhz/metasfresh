@@ -10,7 +10,7 @@ import org.slf4j.Logger;
 
 import de.metas.letters.model.MADBoilerPlate;
 import de.metas.logging.LogManager;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.user.api.IUserDAO;
 import de.metas.util.Services;
 
@@ -35,7 +35,7 @@ public final class BPartnerEmailParams implements IEmailParameters
 	private final String title;
 	private final String to;
 
-	public BPartnerEmailParams(final ProcessInfo pi, final IParams params)
+	public BPartnerEmailParams(final ProcessInstanceInfo pi, final IParams params)
 	{
 		to = updateTo(params);
 

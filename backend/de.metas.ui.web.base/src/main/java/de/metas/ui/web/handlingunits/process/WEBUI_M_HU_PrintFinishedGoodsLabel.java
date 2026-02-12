@@ -15,7 +15,7 @@ import de.metas.process.IADPInstanceDAO;
 import de.metas.process.IProcessPrecondition;
 import de.metas.process.PInstanceId;
 import de.metas.process.PInstanceRequest;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.process.RunOutOfTrx;
@@ -133,7 +133,7 @@ public class WEBUI_M_HU_PrintFinishedGoodsLabel
 		final PInstanceRequest pinstanceRequest = createPInstanceRequest(adProcessId);
 		final PInstanceId pinstanceId = adPInstanceDAO.createADPinstanceAndADPInstancePara(pinstanceRequest);
 
-		final ProcessInfo jasperProcessInfo = ProcessInfo.builder()
+		final ProcessInstanceInfo jasperProcessInfo = ProcessInstanceInfo.builder()
 				.setCtx(getCtx())
 				.setAD_Process_ID(adProcessId)
 				.setAD_PInstance(adPInstanceDAO.getById(pinstanceId))

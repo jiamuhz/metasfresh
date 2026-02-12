@@ -5,7 +5,7 @@ import com.google.common.collect.ImmutableList;
 import de.metas.dunning.DunningDocId;
 import de.metas.dunning.invoice.DunningService;
 import de.metas.logging.LogManager;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.ExecuteReportStrategy;
 import de.metas.report.ExecuteReportStrategyUtil;
 import de.metas.report.ExecuteReportStrategyUtil.PdfDataProvider;
@@ -58,7 +58,7 @@ public class C_DunningDoc_JasperWithInvoicePDFsStrategy implements ExecuteReport
 
 	@Override
 	public ExecuteReportResult executeReport(
-			@NonNull final ProcessInfo processInfo,
+			@NonNull final ProcessInstanceInfo processInfo,
 			@NonNull final OutputType outputType)
 	{
 		final DunningDocId dunningDocId = DunningDocId.ofRepoId(processInfo.getRecord_ID());

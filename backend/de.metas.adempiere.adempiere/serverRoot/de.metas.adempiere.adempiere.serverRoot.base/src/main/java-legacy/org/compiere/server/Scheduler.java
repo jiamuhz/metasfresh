@@ -35,7 +35,7 @@ import de.metas.organization.OrgInfo;
 import de.metas.process.PInstanceId;
 import de.metas.process.ProcessExecutionResult;
 import de.metas.process.ProcessExecutor;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.report.ReportResultData;
 import de.metas.scheduler.AdSchedulerId;
@@ -258,7 +258,7 @@ public class Scheduler extends AdempiereServer
 				// Create process info
 				// metas-ts using process with scheduler-ctx
 				final I_AD_Process process = m_model.getAD_Process();
-				final ProcessInfo pi = createProcessInfo(schedulerCtx, m_model);
+				final ProcessInstanceInfo pi = createProcessInfo(schedulerCtx, m_model);
 				adPInstanceId.setValue(pi.getPinstanceId());
 
 				//
@@ -391,7 +391,7 @@ public class Scheduler extends AdempiereServer
 	 *
 	 * @return summary
 	 */
-	private String runReport(final ProcessInfo pi, final I_AD_Process process)
+	private String runReport(final ProcessInstanceInfo pi, final I_AD_Process process)
 	{
 		log.debug("Run report: {}", process);
 
@@ -440,7 +440,7 @@ public class Scheduler extends AdempiereServer
 	/**
 	 * Run Process
 	 */
-	private String runProcess(final ProcessInfo pi) throws Exception
+	private String runProcess(final ProcessInstanceInfo pi) throws Exception
 	{
 		log.debug("Run process: {}", pi);
 
@@ -467,13 +467,13 @@ public class Scheduler extends AdempiereServer
 	}	// runProcess
 
 	/**
-	 * Creates and setup the {@link ProcessInfo}.
+	 * Creates and setup the {@link ProcessInstanceInfo}.
 	 */
-	private static ProcessInfo createProcessInfo(final Properties schedulerCtx, final MScheduler adScheduler)
+	private static ProcessInstanceInfo createProcessInfo(final Properties schedulerCtx, final MScheduler adScheduler)
 	{
 		final I_AD_Process adProcess = adScheduler.getAD_Process();
 
-		return ProcessInfo.builder()
+		return ProcessInstanceInfo.builder()
 				.setCtx(schedulerCtx)
 				.setAD_Process(adProcess)
 				.addParameters(createProcessInfoParameters(schedulerCtx, adScheduler))

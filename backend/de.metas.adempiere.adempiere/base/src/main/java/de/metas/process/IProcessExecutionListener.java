@@ -10,7 +10,7 @@ import de.metas.logging.LogManager;
  */
 public interface IProcessExecutionListener
 {
-	default void onProcessInitError(final ProcessInfo pi)
+	default void onProcessInitError(final ProcessInstanceInfo pi)
 	{
 		final ProcessExecutionResult processResult = pi.getResult();
 		final Throwable cause = processResult.getThrowable();
@@ -30,7 +30,7 @@ public interface IProcessExecutionListener
 	 *
 	 * @param pi process info
 	 */
-	void lockUI(ProcessInfo pi);
+	void lockUI(ProcessInstanceInfo pi);
 
 	/**
 	 * Unlock User Interface.
@@ -38,5 +38,5 @@ public interface IProcessExecutionListener
 	 *
 	 * @param pi process info
 	 */
-	void unlockUI(ProcessInfo pi);
+	void unlockUI(ProcessInstanceInfo pi);
 }

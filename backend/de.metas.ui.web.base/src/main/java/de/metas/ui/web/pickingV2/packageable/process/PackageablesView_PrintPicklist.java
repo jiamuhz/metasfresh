@@ -20,7 +20,7 @@ import de.metas.process.AdProcessId;
 import de.metas.process.IADPInstanceDAO;
 import de.metas.process.PInstanceId;
 import de.metas.process.PInstanceRequest;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.report.client.ReportsClient;
@@ -169,7 +169,7 @@ public class PackageablesView_PrintPicklist extends PackageablesViewBasedProcess
 		final PInstanceRequest pinstanceRequest = createPInstanceRequest(row);
 		final PInstanceId pinstanceId = adPInstanceDAO.createADPinstanceAndADPInstancePara(pinstanceRequest);
 
-		final ProcessInfo jasperProcessInfo = ProcessInfo.builder()
+		final ProcessInstanceInfo jasperProcessInfo = ProcessInstanceInfo.builder()
 				.setCtx(getCtx())
 				.setAD_Process_ID(PickListPdf_AD_Process_ID)
 				.setAD_PInstance(adPInstanceDAO.getById(pinstanceId))

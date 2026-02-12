@@ -19,7 +19,7 @@ import org.compiere.minigrid.IMiniTable;
 import org.compiere.print.MPrintFormat;
 import org.compiere.util.Trx;
 
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 
 /**
  * Generate custom form base class
@@ -34,7 +34,7 @@ public abstract class GenForm
 	private String askPrintMsg;
 	
 	private Trx trx;
-	private ProcessInfo pi;
+	private ProcessInstanceInfo pi;
 	
 	/** User selection */
 	private ArrayList<Integer> selection = null;
@@ -71,11 +71,11 @@ public abstract class GenForm
 		this.trx = trx;
 	}
 
-	public ProcessInfo getProcessInfo() {
+	public ProcessInstanceInfo getProcessInfo() {
 		return pi;
 	}
 
-	public void setProcessInfo(ProcessInfo pi) {
+	public void setProcessInfo(ProcessInstanceInfo pi) {
 		this.pi = pi;
 	}
 

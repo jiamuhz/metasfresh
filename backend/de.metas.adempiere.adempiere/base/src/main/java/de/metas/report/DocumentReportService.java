@@ -34,7 +34,7 @@ import de.metas.printing.IMassPrintingService;
 import de.metas.process.AdProcessId;
 import de.metas.process.PInstanceId;
 import de.metas.process.ProcessExecutionResult;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.report.server.ReportConstants;
 import de.metas.util.Services;
@@ -234,7 +234,7 @@ public class DocumentReportService
 	@VisibleForTesting
 	protected ExecuteReportProcessResult executeReportProcess(@NonNull final DocumentReportRequest request)
 	{
-		final ProcessExecutionResult reportProcessResult = ProcessInfo.builder()
+		final ProcessExecutionResult reportProcessResult = ProcessInstanceInfo.builder()
 				//
 				.setCtx(Env.getCtx())
 				.setCreateTemporaryCtx()

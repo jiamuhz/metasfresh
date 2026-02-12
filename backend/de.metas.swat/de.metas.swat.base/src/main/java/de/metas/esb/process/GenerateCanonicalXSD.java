@@ -64,7 +64,7 @@ import de.metas.esb.interfaces.I_EXP_Format;
 import de.metas.esb.util.CanonicalXSDGenerator;
 import de.metas.logging.LogManager;
 import de.metas.process.JavaProcess;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.util.Check;
 import de.metas.util.Services;
@@ -307,7 +307,7 @@ public class GenerateCanonicalXSD extends JavaProcess
 
 		AdempiereToolsHelper.getInstance().startupMinimal();
 
-		final ProcessInfo pi = ProcessInfo.builder()
+		final ProcessInstanceInfo pi = ProcessInstanceInfo.builder()
 				.setCtx(Env.getCtx())
 				.setTitle("GenerateCanonicalXSD")
 				.setAD_Process_ID(-1) // N/A

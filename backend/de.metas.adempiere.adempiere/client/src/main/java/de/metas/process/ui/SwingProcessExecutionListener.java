@@ -5,7 +5,7 @@ import javax.swing.SwingUtilities;
 import com.google.common.base.MoreObjects;
 
 import de.metas.process.IProcessExecutionListener;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 
 /*
  * #%L
@@ -61,13 +61,13 @@ import de.metas.process.ProcessInfo;
 	}
 
 	@Override
-	public void lockUI(final ProcessInfo pi)
+	public void lockUI(final ProcessInstanceInfo pi)
 	{
 		invokeInEDT(() -> delegate.lockUI(pi));
 	}
 
 	@Override
-	public void unlockUI(final ProcessInfo pi)
+	public void unlockUI(final ProcessInstanceInfo pi)
 	{
 		invokeInEDT(() -> delegate.unlockUI(pi));
 	}

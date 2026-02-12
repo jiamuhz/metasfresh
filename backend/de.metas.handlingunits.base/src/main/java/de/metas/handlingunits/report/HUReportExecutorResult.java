@@ -1,7 +1,7 @@
 package de.metas.handlingunits.report;
 
 import de.metas.process.ProcessExecutionResult;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.report.ReportResultData;
 import lombok.Builder;
 import lombok.NonNull;
@@ -33,7 +33,8 @@ import lombok.Value;
 @Builder
 public class HUReportExecutorResult
 {
-	@NonNull ProcessInfo processInfo;
+	@NonNull
+	ProcessInstanceInfo processInfo;
 	@NonNull ProcessExecutionResult processExecutionResult;
 
 	public ReportResultData getReportData() {return getProcessExecutionResult().getReportData();}

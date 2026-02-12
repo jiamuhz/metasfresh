@@ -49,7 +49,7 @@ import org.slf4j.Logger;
 
 import de.metas.adempiere.form.IClientUI;
 import de.metas.logging.LogManager;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.Check;
 import de.metas.util.Services;
 
@@ -103,7 +103,7 @@ public class FormFrame extends CFrame
 		}
 	}	//	FormFrame
 
-	private ProcessInfo  m_pi;
+	private ProcessInstanceInfo m_pi;
 
 	/**	WindowNo					*/
 	private final int	m_WindowNo;
@@ -455,13 +455,13 @@ public class FormFrame extends CFrame
 
 // Add window and tab no called from
 
-	public void setProcessInfo(ProcessInfo pi)
+	public void setProcessInfo(ProcessInstanceInfo pi)
 	{
 		m_pi = pi;
 
 	}
 
-	public ProcessInfo getProcessInfo()
+	public ProcessInstanceInfo getProcessInfo()
 	{
 		return m_pi;
 	}

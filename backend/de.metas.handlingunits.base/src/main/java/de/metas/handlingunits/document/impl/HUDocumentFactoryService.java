@@ -38,7 +38,7 @@ import de.metas.handlingunits.document.IHUDocument;
 import de.metas.handlingunits.document.IHUDocumentFactory;
 import de.metas.handlingunits.document.IHUDocumentFactoryService;
 import de.metas.handlingunits.model.I_M_HU;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.Check;
 
 public class HUDocumentFactoryService implements IHUDocumentFactoryService
@@ -87,7 +87,7 @@ public class HUDocumentFactoryService implements IHUDocumentFactoryService
 	}
 
 	@Override
-	public List<IHUDocument> createHUDocuments(final ProcessInfo pi)
+	public List<IHUDocument> createHUDocuments(final ProcessInstanceInfo pi)
 	{
 		Check.assumeNotNull(pi, "process info not null");
 

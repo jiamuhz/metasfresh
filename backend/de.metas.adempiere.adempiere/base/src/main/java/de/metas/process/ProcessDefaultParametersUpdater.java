@@ -79,14 +79,14 @@ public final class ProcessDefaultParametersUpdater
 	/**
 	 * Extracts, if possible, the {@link IProcessDefaultParametersProvider} from given <code>processInfo</code> and registers it.
 	 */
-	public ProcessDefaultParametersUpdater addDefaultParametersProvider(final ProcessInfo processInfo)
+	public ProcessDefaultParametersUpdater addDefaultParametersProvider(final ProcessInstanceInfo processInfo)
 	{
 		final IProcessDefaultParametersProvider provider = createProcessDefaultParametersProvider(processInfo);
 		addDefaultParametersProvider(provider);
 		return this;
 	}
 
-	public static IProcessDefaultParametersProvider createProcessDefaultParametersProvider(@NonNull final ProcessInfo pi)
+	public static IProcessDefaultParametersProvider createProcessDefaultParametersProvider(@NonNull final ProcessInstanceInfo pi)
 	{
 		try
 		{

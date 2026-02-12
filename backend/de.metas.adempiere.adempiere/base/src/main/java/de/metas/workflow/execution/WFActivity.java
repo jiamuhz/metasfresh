@@ -41,7 +41,7 @@ import de.metas.notification.UserNotificationRequest;
 import de.metas.organization.ClientAndOrgId;
 import de.metas.organization.OrgId;
 import de.metas.organization.OrgInfo;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.product.acct.api.ActivityId;
 import de.metas.project.ProjectId;
@@ -602,7 +602,7 @@ public class WFActivity
 		final WFNode wfNode = getNode();
 		log.debug("Process: AD_Process_ID={}", wfNode.getProcessId());
 
-		ProcessInfo.builder()
+		ProcessInstanceInfo.builder()
 				.setCtx(Env.getCtx())
 				.setClientId(context.getClientId())
 				.setUserId(getUserId())
@@ -622,7 +622,7 @@ public class WFActivity
 		final UserId userId = Check.assumeNotNull(getUserId(), "User is set: {}", state);
 
 		log.debug("Report: AD_Process_ID={}", wfNode.getProcessId());
-		final ProcessInfo pi = ProcessInfo.builder()
+		final ProcessInstanceInfo pi = ProcessInstanceInfo.builder()
 				.setCtx(Env.getCtx())
 				.setClientId(context.getClientId())
 				.setUserId(userId)

@@ -13,7 +13,7 @@ import de.metas.lang.SOTrx;
 import de.metas.letters.model.Letters;
 import de.metas.logging.LogManager;
 import de.metas.organization.OrgId;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.ui.web.process.ProcessId;
 import de.metas.ui.web.window.WindowConstants;
 import de.metas.ui.web.window.datatypes.DataTypes;
@@ -1237,7 +1237,7 @@ public final class Document
 		{
 			final IDocument workflowDocument = documentBL.getDocument(this);
 			final ProcessId workflowStarterProcessId = buttonActionDescriptor.getProcessId();
-			ProcessInfo.builder()
+			ProcessInstanceInfo.builder()
 					.setAD_Process_ID(workflowStarterProcessId.toAdProcessId())
 					.setRecord(workflowDocument.toTableRecordReference())
 					.buildAndPrepareExecution()

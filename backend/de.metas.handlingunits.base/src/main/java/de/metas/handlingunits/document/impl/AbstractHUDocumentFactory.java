@@ -35,7 +35,7 @@ import org.slf4j.Logger;
 import de.metas.handlingunits.document.IHUDocument;
 import de.metas.handlingunits.document.IHUDocumentFactory;
 import de.metas.logging.LogManager;
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.quantity.Capacity;
 import de.metas.util.Check;
 import de.metas.util.collections.SingletonIterator;
@@ -139,14 +139,14 @@ public abstract class AbstractHUDocumentFactory<T> implements IHUDocumentFactory
 	}
 
 	@Override
-	public final List<IHUDocument> createHUDocuments(final ProcessInfo pi)
+	public final List<IHUDocument> createHUDocuments(final ProcessInstanceInfo pi)
 	{
 		final HUDocumentsCollector documentsCollector = new HUDocumentsCollector();
 		createHUDocuments(documentsCollector, pi);
 		return documentsCollector.getHUDocuments();
 	}
 
-	protected final void createHUDocuments(final HUDocumentsCollector documentsCollector, final ProcessInfo pi)
+	protected final void createHUDocuments(final HUDocumentsCollector documentsCollector, final ProcessInstanceInfo pi)
 	{
 		Check.assumeNotNull(pi, "process info not null");
 
@@ -163,7 +163,7 @@ public abstract class AbstractHUDocumentFactory<T> implements IHUDocumentFactory
 	 * @param pi
 	 * @return
 	 */
-	protected Iterator<T> retrieveModelsFromProcessInfo(final ProcessInfo pi)
+	protected Iterator<T> retrieveModelsFromProcessInfo(final ProcessInstanceInfo pi)
 	{
 		final Properties ctx = pi.getCtx();
 

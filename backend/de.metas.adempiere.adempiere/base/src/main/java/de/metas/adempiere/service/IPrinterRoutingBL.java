@@ -30,7 +30,7 @@ import java.util.Properties;
 
 import org.adempiere.exceptions.AdempiereException;
 
-import de.metas.process.ProcessInfo;
+import de.metas.process.ProcessInstanceInfo;
 import de.metas.util.ISingletonService;
 
 /**
@@ -49,7 +49,7 @@ public interface IPrinterRoutingBL extends ISingletonService
 	/**
 	 * Uses the properties of the given <code>pi</code> to retrieve the printer to use via <code>AD_PrinterRouting</code>
 	 */
-	String findPrinterName(ProcessInfo pi);
+	String findPrinterName(ProcessInstanceInfo pi);
 
 	/**
 	 * Try to find printing service for given parameters.
