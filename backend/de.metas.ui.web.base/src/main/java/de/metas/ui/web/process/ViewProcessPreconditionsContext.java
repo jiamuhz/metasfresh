@@ -57,19 +57,19 @@ import java.util.stream.Stream;
  */
 
 @Value
-public class ViewAsPreconditionsContext implements WebuiProcessPreconditionsContext
+public class ViewProcessPreconditionsContext implements WebuiProcessPreconditionsContext
 {
-	public static ViewAsPreconditionsContext cast(final IProcessPreconditionsContext context)
+	public static ViewProcessPreconditionsContext cast(final IProcessPreconditionsContext context)
 	{
-		return (ViewAsPreconditionsContext)context;
+		return (ViewProcessPreconditionsContext)context;
 	}
 
 	@Nullable
-	public static ViewAsPreconditionsContext castOrNull(final IProcessPreconditionsContext context)
+	public static ViewProcessPreconditionsContext castOrNull(final IProcessPreconditionsContext context)
 	{
-		if (context instanceof ViewAsPreconditionsContext)
+		if (context instanceof ViewProcessPreconditionsContext)
 		{
-			return (ViewAsPreconditionsContext)context;
+			return (ViewProcessPreconditionsContext)context;
 		}
 		else
 		{
@@ -77,7 +77,7 @@ public class ViewAsPreconditionsContext implements WebuiProcessPreconditionsCont
 		}
 	}
 
-	private static final Logger logger = LogManager.getLogger(ViewAsPreconditionsContext.class);
+	private static final Logger logger = LogManager.getLogger(ViewProcessPreconditionsContext.class);
 
 	IView view;
 	ViewProfileId viewProfileId;
@@ -95,7 +95,7 @@ public class ViewAsPreconditionsContext implements WebuiProcessPreconditionsCont
 	@Getter(AccessLevel.NONE) MemoizingFunction<Class<?>, SelectedModelsList> _selectedModelsSupplier = Functions.memoizingFirstCall(this::retrieveSelectedModels);
 
 	@Builder
-	private ViewAsPreconditionsContext(
+	private ViewProcessPreconditionsContext(
 			@NonNull final IView view,
 			@Nullable final ViewProfileId viewProfileId,
 			@NonNull final ViewRowIdsSelection viewRowIdsSelection,

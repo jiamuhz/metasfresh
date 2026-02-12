@@ -16,7 +16,7 @@ import de.metas.ui.web.process.CreateProcessInstanceRequest;
 import de.metas.ui.web.process.IProcessInstanceController;
 import de.metas.ui.web.process.IProcessInstancesRepository;
 import de.metas.ui.web.process.ProcessId;
-import de.metas.ui.web.process.ViewAsPreconditionsContext;
+import de.metas.ui.web.process.ViewProcessPreconditionsContext;
 import de.metas.ui.web.process.WebuiProcessPreconditionsContext;
 import de.metas.ui.web.process.descriptor.ProcessDescriptor;
 import de.metas.ui.web.process.descriptor.WebuiRelatedProcessDescriptor;
@@ -97,7 +97,7 @@ public class ViewProcessInstancesRepository implements IProcessInstancesReposito
 	@Override
 	public Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(final WebuiProcessPreconditionsContext preconditionsContext)
 	{
-		final ViewAsPreconditionsContext viewContext = ViewAsPreconditionsContext.castOrNull(preconditionsContext);
+		final ViewProcessPreconditionsContext viewContext = ViewProcessPreconditionsContext.castOrNull(preconditionsContext);
 		if (viewContext == null)
 		{
 			return Stream.empty();

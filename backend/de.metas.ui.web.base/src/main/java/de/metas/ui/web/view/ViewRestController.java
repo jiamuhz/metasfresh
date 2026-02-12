@@ -35,7 +35,7 @@ import de.metas.ui.web.comments.CommentsService;
 import de.metas.ui.web.comments.ViewRowCommentsSummary;
 import de.metas.ui.web.config.WebConfig;
 import de.metas.ui.web.process.ProcessRestController;
-import de.metas.ui.web.process.ViewAsPreconditionsContext;
+import de.metas.ui.web.process.ViewProcessPreconditionsContext;
 import de.metas.ui.web.process.WebuiProcessPreconditionsContext;
 import de.metas.ui.web.process.json.JSONDocumentActionsList;
 import de.metas.ui.web.session.UserSession;
@@ -477,7 +477,7 @@ public class ViewRestController
 	}
 
 	@Builder(builderMethodName = "newPreconditionsContextBuilder")
-	private ViewAsPreconditionsContext createPreconditionsContext(
+	private ViewProcessPreconditionsContext createPreconditionsContext(
 			@NonNull final String windowId,
 			@NonNull final String viewIdString,
 			final String viewProfileIdStr,
@@ -495,7 +495,7 @@ public class ViewRestController
 		ViewRowIdsSelection parentViewRowIdsSelection = ViewRowIdsSelection.ofNullableStrings(parentViewId, parentViewSelectedIds);
 		ViewRowIdsSelection childViewRowIdsSelection = ViewRowIdsSelection.ofNullableStrings(childViewId, childViewSelectedIds);
 
-		return ViewAsPreconditionsContext.builder()
+		return ViewProcessPreconditionsContext.builder()
 				.view(view)
 				.viewProfileId(ViewProfileId.fromJson(viewProfileIdStr))
 				.viewRowIdsSelection(viewRowIdsSelection)

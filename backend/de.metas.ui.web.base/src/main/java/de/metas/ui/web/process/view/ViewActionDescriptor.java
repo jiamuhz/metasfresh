@@ -11,7 +11,7 @@ import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.process.RelatedProcessDescriptor.DisplayPlace;
 import de.metas.ui.web.process.ProcessId;
 import de.metas.ui.web.process.ProcessInstanceResult;
-import de.metas.ui.web.process.ViewAsPreconditionsContext;
+import de.metas.ui.web.process.ViewProcessPreconditionsContext;
 import de.metas.ui.web.process.descriptor.InternalName;
 import de.metas.ui.web.process.descriptor.ProcessDescriptor;
 import de.metas.ui.web.process.descriptor.ProcessDescriptor.ProcessDescriptorType;
@@ -129,7 +129,7 @@ public final class ViewActionDescriptor
 				.build();
 	}
 
-	public WebuiRelatedProcessDescriptor toWebuiRelatedProcessDescriptor(final ViewAsPreconditionsContext viewContext)
+	public WebuiRelatedProcessDescriptor toWebuiRelatedProcessDescriptor(final ViewProcessPreconditionsContext viewContext)
 	{
 		final IView view = viewContext.getView();
 		final DocumentIdsSelection selectedDocumentIds = viewContext.getSelectedRowIds();

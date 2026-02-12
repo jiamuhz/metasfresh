@@ -22,7 +22,7 @@ import de.metas.ui.web.process.CreateProcessInstanceRequest;
 import de.metas.ui.web.process.IProcessInstanceController;
 import de.metas.ui.web.process.IProcessInstancesRepository;
 import de.metas.ui.web.process.ProcessId;
-import de.metas.ui.web.process.ViewAsPreconditionsContext;
+import de.metas.ui.web.process.ViewProcessPreconditionsContext;
 import de.metas.ui.web.process.WebuiProcessPreconditionsContext;
 import de.metas.ui.web.process.adprocess.ADProcessInstancesRepository;
 import de.metas.ui.web.process.descriptor.InternalName;
@@ -181,7 +181,7 @@ public class HUReportProcessInstancesRepository implements IProcessInstancesRepo
 	@Override
 	public Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(final WebuiProcessPreconditionsContext preconditionsContext)
 	{
-		final ViewAsPreconditionsContext viewContext = ViewAsPreconditionsContext.castOrNull(preconditionsContext);
+		final ViewProcessPreconditionsContext viewContext = ViewProcessPreconditionsContext.castOrNull(preconditionsContext);
 		if (viewContext == null)
 		{
 			return Stream.empty();
@@ -212,7 +212,7 @@ public class HUReportProcessInstancesRepository implements IProcessInstancesRepo
 				.map(WebuiHUProcessDescriptor::toWebuiRelatedProcessDescriptor);
 	}
 
-	private boolean checkApplies(final WebuiHUProcessDescriptor descriptor, @NonNull final ViewAsPreconditionsContext viewContext)
+	private boolean checkApplies(final WebuiHUProcessDescriptor descriptor, @NonNull final ViewProcessPreconditionsContext viewContext)
 	{
 		final DocumentIdsSelection rowIds = viewContext.getSelectedRowIds();
 		if (rowIds.isEmpty())

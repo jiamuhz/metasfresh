@@ -6,7 +6,7 @@ import de.metas.process.JavaProcess;
 import de.metas.process.Param;
 import de.metas.process.ProcessExecutionResult;
 import de.metas.process.ProcessPreconditionsResolution;
-import de.metas.ui.web.process.ViewAsPreconditionsContext;
+import de.metas.ui.web.process.ViewProcessPreconditionsContext;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewRow;
 import de.metas.ui.web.view.IViewsRepository;
@@ -121,7 +121,7 @@ public abstract class ViewBasedProcessTemplate extends JavaProcess
 		super.init(context);
 
 		// Fetch and set view and view selected IDs from autowired process parameters
-		setViewInfos(ViewAsPreconditionsContext.cast(context));
+		setViewInfos(ViewProcessPreconditionsContext.cast(context));
 	}
 
 	@Override
@@ -136,7 +136,7 @@ public abstract class ViewBasedProcessTemplate extends JavaProcess
 		final ViewRowIdsSelection parentViewRowIdsSelection = ViewRowIdsSelection.ofNullableStrings(p_WebuiParentViewId, p_WebuiParentViewSelectedIdsStr);
 		final ViewRowIdsSelection childViewRowIdsSelection = ViewRowIdsSelection.ofNullableStrings(p_WebuiChildViewId, p_WebuiChildViewSelectedIdsStr);
 
-		setViewInfos(ViewAsPreconditionsContext.builder()
+		setViewInfos(ViewProcessPreconditionsContext.builder()
 				.view(view)
 				.viewRowIdsSelection(viewRowIdsSelection)
 				.parentViewRowIdsSelection(parentViewRowIdsSelection)
@@ -154,7 +154,7 @@ public abstract class ViewBasedProcessTemplate extends JavaProcess
 		return _viewProfileId;
 	}
 
-	private void setViewInfos(@NonNull final ViewAsPreconditionsContext viewContext)
+	private void setViewInfos(@NonNull final ViewProcessPreconditionsContext viewContext)
 	{
 		_view = viewContext.getView();
 		_viewProfileId = viewContext.getViewProfileId();
