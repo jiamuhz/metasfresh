@@ -16,7 +16,7 @@ import de.metas.process.RelatedProcessDescriptor.DisplayPlace;
 import de.metas.security.IUserRolePermissions;
 import de.metas.ui.web.exceptions.EntityNotFoundException;
 import de.metas.ui.web.process.ProcessId;
-import de.metas.ui.web.process.WebuiPreconditionsContext;
+import de.metas.ui.web.process.WebuiProcessPreconditionsContext;
 import de.metas.ui.web.process.descriptor.InternalName;
 import de.metas.ui.web.process.descriptor.ProcessDescriptor;
 import de.metas.ui.web.process.descriptor.ProcessDescriptor.ProcessDescriptorType;
@@ -112,7 +112,7 @@ import java.util.stream.Stream;
 	}
 
 	public Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(
-			@NonNull final WebuiPreconditionsContext preconditionsContext,
+			@NonNull final WebuiProcessPreconditionsContext preconditionsContext,
 			@NonNull final IUserRolePermissions userRolePermissions)
 	{
 		final String tableName = preconditionsContext.getTableName();
@@ -138,7 +138,7 @@ import java.util.stream.Stream;
 
 	private boolean isEligible(
 			@NonNull final RelatedProcessDescriptor relatedProcess,
-			@NonNull final WebuiPreconditionsContext preconditionsContext,
+			@NonNull final WebuiProcessPreconditionsContext preconditionsContext,
 			@NonNull final IUserRolePermissions userRolePermissions)
 	{
 		final DisplayPlace displayPlace = preconditionsContext.getDisplayPlace();

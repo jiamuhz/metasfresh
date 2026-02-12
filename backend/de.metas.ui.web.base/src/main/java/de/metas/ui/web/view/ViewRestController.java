@@ -36,7 +36,7 @@ import de.metas.ui.web.comments.ViewRowCommentsSummary;
 import de.metas.ui.web.config.WebConfig;
 import de.metas.ui.web.process.ProcessRestController;
 import de.metas.ui.web.process.ViewAsPreconditionsContext;
-import de.metas.ui.web.process.WebuiPreconditionsContext;
+import de.metas.ui.web.process.WebuiProcessPreconditionsContext;
 import de.metas.ui.web.process.json.JSONDocumentActionsList;
 import de.metas.ui.web.session.UserSession;
 import de.metas.ui.web.view.descriptor.ViewLayout;
@@ -514,7 +514,7 @@ public class ViewRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WebuiPreconditionsContext preconditionsContext = newPreconditionsContextBuilder()
+		final WebuiProcessPreconditionsContext preconditionsContext = newPreconditionsContextBuilder()
 				.windowId(windowId)
 				.viewIdString(viewIdStr)
 				.selectedIds(request.getSelectedIds())
@@ -540,7 +540,7 @@ public class ViewRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WebuiPreconditionsContext preconditionsContext = newPreconditionsContextBuilder()
+		final WebuiProcessPreconditionsContext preconditionsContext = newPreconditionsContextBuilder()
 				.windowId(windowId)
 				.viewIdString(viewIdStr)
 				.viewProfileIdStr(request.getViewProfileId())

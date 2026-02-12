@@ -23,7 +23,7 @@ import de.metas.ui.web.process.IProcessInstanceController;
 import de.metas.ui.web.process.IProcessInstancesRepository;
 import de.metas.ui.web.process.ProcessId;
 import de.metas.ui.web.process.ViewAsPreconditionsContext;
-import de.metas.ui.web.process.WebuiPreconditionsContext;
+import de.metas.ui.web.process.WebuiProcessPreconditionsContext;
 import de.metas.ui.web.process.adprocess.ADProcessInstancesRepository;
 import de.metas.ui.web.process.descriptor.InternalName;
 import de.metas.ui.web.process.descriptor.ProcessDescriptor;
@@ -179,7 +179,7 @@ public class HUReportProcessInstancesRepository implements IProcessInstancesRepo
 	}
 
 	@Override
-	public Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(final WebuiPreconditionsContext preconditionsContext)
+	public Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(final WebuiProcessPreconditionsContext preconditionsContext)
 	{
 		final ViewAsPreconditionsContext viewContext = ViewAsPreconditionsContext.castOrNull(preconditionsContext);
 		if (viewContext == null)

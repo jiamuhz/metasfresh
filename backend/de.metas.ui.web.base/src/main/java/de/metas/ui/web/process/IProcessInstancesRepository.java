@@ -52,7 +52,7 @@ public interface IProcessInstancesRepository
 	ProcessDescriptor getProcessDescriptor(ProcessId processId);
 
 	/** @return related process descriptors which are available to be called for given <code>preconditionsContext</code> */
-	Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(WebuiPreconditionsContext preconditionsContext);
+	Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(WebuiProcessPreconditionsContext preconditionsContext);
 
 	/**
 	 * Creates a new process instance for given request.

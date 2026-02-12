@@ -57,7 +57,7 @@ import java.util.stream.Stream;
  */
 
 @Value
-public class ViewAsPreconditionsContext implements WebuiPreconditionsContext
+public class ViewAsPreconditionsContext implements WebuiProcessPreconditionsContext
 {
 	public static ViewAsPreconditionsContext cast(final IProcessPreconditionsContext context)
 	{

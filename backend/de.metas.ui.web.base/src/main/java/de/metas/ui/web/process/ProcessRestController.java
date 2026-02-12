@@ -162,7 +162,7 @@ public class ProcessRestController
 		return JSONDocumentOptions.of(userSession);
 	}
 
-	public Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(final WebuiPreconditionsContext preconditionsContext)
+	public Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(final WebuiProcessPreconditionsContext preconditionsContext)
 	{
 		return getAllRepositories()
 				.stream()

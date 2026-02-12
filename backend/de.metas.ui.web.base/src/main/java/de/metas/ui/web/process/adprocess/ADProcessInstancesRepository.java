@@ -19,7 +19,7 @@ import de.metas.ui.web.process.CreateProcessInstanceRequest;
 import de.metas.ui.web.process.IProcessInstanceController;
 import de.metas.ui.web.process.IProcessInstancesRepository;
 import de.metas.ui.web.process.ProcessId;
-import de.metas.ui.web.process.WebuiPreconditionsContext;
+import de.metas.ui.web.process.WebuiProcessPreconditionsContext;
 import de.metas.ui.web.process.descriptor.ProcessDescriptor;
 import de.metas.ui.web.process.descriptor.WebuiRelatedProcessDescriptor;
 import de.metas.ui.web.session.UserSession;
@@ -137,7 +137,7 @@ public class ADProcessInstancesRepository implements IProcessInstancesRepository
 	}
 
 	@Override
-	public Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(final WebuiPreconditionsContext preconditionsContext)
+	public Stream<WebuiRelatedProcessDescriptor> streamDocumentRelatedProcesses(final WebuiProcessPreconditionsContext preconditionsContext)
 	{
 		final IUserRolePermissions userRolePermissions = userSession.getUserRolePermissions();
 		return processDescriptorFactory.streamDocumentRelatedProcesses(preconditionsContext, userRolePermissions);

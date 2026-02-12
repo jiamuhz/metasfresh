@@ -47,7 +47,7 @@ import lombok.NonNull;
  * #L%
  */
 
-public final class DocumentAsPreconditionsContext implements WebuiPreconditionsContext
+public final class DocumentAsPreconditionsContext implements WebuiProcessPreconditionsContext
 {
 	private final Document document;
 	@Getter

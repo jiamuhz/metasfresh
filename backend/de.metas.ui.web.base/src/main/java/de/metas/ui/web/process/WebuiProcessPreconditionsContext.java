@@ -30,7 +30,7 @@ import java.util.List;
  * #L%
  */
 
-public interface WebuiPreconditionsContext extends IProcessPreconditionsContext
+public interface WebuiProcessPreconditionsContext extends IProcessPreconditionsContext
 {
 	@Nullable
 	DisplayPlace getDisplayPlace();
