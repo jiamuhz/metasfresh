@@ -218,6 +218,10 @@ public class ADProcessDAO implements IADProcessDAO
 		CacheMgt.get().reset(I_AD_Table_Process.Table_Name);
 	}
 
+	/**
+	 * 1. static RelatedProcess  代码静态注册的Process
+	 * 2. AD_Table_Process 数据库表的Process
+	 */
 	@Override
 	@Cached(cacheName = I_AD_Table_Process.Table_Name + "#RelatedProcessDescriptors")
 	public ImmutableList<RelatedProcessDescriptor> retrieveRelatedProcessDescriptors(
