@@ -278,6 +278,10 @@ public final class ProcessClassInfo
 	private final ImmutableListMultimap<ProcessClassParamInfoKey, ProcessClassParamInfo> parameterInfos;
 
 	private static final boolean DEFAULT_ExistingCurrentRecordRequiredWhenCalledFromGear = true;
+
+	/**
+	 *  用于控制当用户从齿轮菜单（Gear）调用该功能时，是否必须存在一个当前选中的记录。
+	 */
 	private final boolean existingCurrentRecordRequiredWhenCalledFromGear;
 
 	@Nullable private final Profiles onlyForSpringProfiles;
