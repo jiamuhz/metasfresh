@@ -19,6 +19,9 @@
  * <http://www.gnu.org/licenses/gpl-2.0.html>.
  * #L%
  */
+/**
+ * 管理窗口定制化链，用于跟踪一个定制窗口从原始基础窗口到当前定制版本的完整继承链
+ */
 
 package de.metas.document.references.zoom_into;
 
@@ -33,11 +36,26 @@ import org.adempiere.ad.element.api.AdWindowId;
 @Builder(toBuilder = true)
 public class CustomizedWindowInfo
 {
-	@NonNull ImmutableTranslatableString customizationWindowCaption;
+	@NonNull ImmutableTranslatableString customizationWindowCaption; // 定制窗口标题
 
-	@NonNull AdWindowId customizationWindowId;
+	@NonNull AdWindowId customizationWindowId; // 当前定制窗口ID
+
+	/**
+	 * 历史定制窗口ID列表
+	 * 记录从基础窗口到当前定制窗口之间的所有中间定制版本
+	 * 比如：
+	 * 基础窗口 → 第一次定制 → 第二次定制 → 第三次定制
+	 * 这个列表就会包含第一次和第二次的定制ID
+	 */
 	@NonNull @Builder.Default ImmutableList<AdWindowId> previousCustomizationWindowIds = ImmutableList.of();
-	@NonNull AdWindowId baseWindowId;
+
+	@NonNull AdWindowId baseWindowId; // 基础窗口ID
+
+	/**
+	 *   作用： 控制这个定制窗口是否替换基础窗口在菜单中的显示
+	 *  true： 菜单中只显示定制版本，隐藏基础版本
+	 * false： 基础版本和定制版本同时在菜单中可见
+	 */
 	boolean overrideInMenu;
 
 	public ImmutableList<AdWindowId> getWindowIdsFromBaseToCustomization()

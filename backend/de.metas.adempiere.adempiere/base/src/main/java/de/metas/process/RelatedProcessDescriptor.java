@@ -49,6 +49,7 @@ public class RelatedProcessDescriptor
 	@Nullable
 	AdTabId tabId;
 
+	// Process 在UI上的显示位置
 	public enum DisplayPlace
 	{
 		SingleDocumentActionsMenu,
