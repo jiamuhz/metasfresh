@@ -58,12 +58,15 @@ public class CustomizedWindowInfo
 	 */
 	boolean overrideInMenu;
 
+	/**
+	 * 构建了从基础到当前定制的完整窗口ID列表
+	 */
 	public ImmutableList<AdWindowId> getWindowIdsFromBaseToCustomization()
 	{
 		return ImmutableList.<AdWindowId>builder()
-				.add(baseWindowId)
-				.addAll(previousCustomizationWindowIds)
-				.add(customizationWindowId)
+				.add(baseWindowId)     // 1. 基础版本
+				.addAll(previousCustomizationWindowIds)    // 2. 中间的所有定制版本
+				.add(customizationWindowId)    // 3. 当前使用的定制版本
 				.build();
 	}
 }
