@@ -118,7 +118,7 @@ public final class DocumentFieldDescriptor
 	private final Optional<IDocumentFieldValueProvider> virtualFieldValueProvider;
 
 	private final Optional<IExpression<?>> defaultValueExpression;
-	private final ImmutableList<IDocumentFieldCallout> callouts;
+	private final ImmutableList<IDocumentFieldCalloutInstance> callouts;
 
 	public enum Characteristic
 	{
@@ -401,7 +401,7 @@ public final class DocumentFieldDescriptor
 		return DataTypes.convertToValueClass(fieldName, value, widgetType, targetType, lookupDataSource);
 	}
 
-	/* package */List<IDocumentFieldCallout> getCallouts()
+	/* package */List<IDocumentFieldCalloutInstance> getCallouts()
 	{
 		return callouts;
 	}
@@ -460,7 +460,7 @@ public final class DocumentFieldDescriptor
 
 		private Optional<DocumentFieldDataBindingDescriptor> _dataBinding = Optional.empty();
 
-		private final List<IDocumentFieldCallout> callouts = new ArrayList<>();
+		private final List<IDocumentFieldCalloutInstance> callouts = new ArrayList<>();
 
 		private ButtonFieldActionDescriptor buttonActionDescriptor = null;
 
@@ -1103,7 +1103,7 @@ public final class DocumentFieldDescriptor
 			return dependencyMapBuilder.build();
 		}
 
-		public Builder addCallout(final IDocumentFieldCallout callout)
+		public Builder addCallout(final IDocumentFieldCalloutInstance callout)
 		{
 			Check.assumeNotNull(callout, "Parameter callout is not null");
 
@@ -1118,7 +1118,7 @@ public final class DocumentFieldDescriptor
 
 		public Builder addCallout(final ILambdaDocumentFieldCallout lambdaCallout)
 		{
-			final LambdaDocumentFieldCallout callout = new LambdaDocumentFieldCallout(getFieldName(), lambdaCallout);
+			final LambdaDocumentFieldCalloutInstance callout = new LambdaDocumentFieldCalloutInstance(getFieldName(), lambdaCallout);
 			addCallout(callout);
 			return this;
 		}
@@ -1149,13 +1149,13 @@ public final class DocumentFieldDescriptor
 					.filter(value -> fieldValueType.isAssignableFrom(value.getClass()))
 					.ifPresent(addOldValueToContextConsumer);
 
-			addCallout(new LambdaDocumentFieldCallout(getFieldName(), saveValueToContext));
+			addCallout(new LambdaDocumentFieldCalloutInstance(getFieldName(), saveValueToContext));
 
 			setDefaultValueExpression(IStringExpression.compile("@" + lastValueCtxName + "/@"));
 			return this;
 		}
 
-		private ImmutableList<IDocumentFieldCallout> buildCallouts()
+		private ImmutableList<IDocumentFieldCalloutInstance> buildCallouts()
 		{
 			return ImmutableList.copyOf(callouts);
 		}

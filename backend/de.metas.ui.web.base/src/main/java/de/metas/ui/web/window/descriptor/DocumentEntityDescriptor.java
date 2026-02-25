@@ -1065,13 +1065,13 @@ public class DocumentEntityDescriptor
 			final ImmutablePlainCalloutProvider.Builder entityCalloutProviderBuilder = ImmutablePlainCalloutProvider.builder();
 			for (final DocumentFieldDescriptor field : fields)
 			{
-				final List<IDocumentFieldCallout> fieldCallouts = field.getCallouts();
+				final List<IDocumentFieldCalloutInstance> fieldCallouts = field.getCallouts();
 				if (fieldCallouts.isEmpty())
 				{
 					continue;
 				}
 
-				for (final IDocumentFieldCallout fieldCallout : fieldCallouts)
+				for (final IDocumentFieldCalloutInstance fieldCallout : fieldCallouts)
 				{
 					final Set<String> dependsOnFieldNames = fieldCallout.getDependsOnFieldNames();
 					if (dependsOnFieldNames.isEmpty())

@@ -32,13 +32,13 @@ import de.metas.util.Check;
  * #L%
  */
 
-/* package */class LambdaDocumentFieldCallout implements IDocumentFieldCallout
+/* package */class LambdaDocumentFieldCalloutInstance implements IDocumentFieldCalloutInstance
 {
 	private final String id;
 	private final Set<String> dependsOnFieldNames;
 	private final ILambdaDocumentFieldCallout lambdaCallout;
 
-	public LambdaDocumentFieldCallout(final String triggeringFieldName, final ILambdaDocumentFieldCallout lambdaCallout)
+	public LambdaDocumentFieldCalloutInstance(final String triggeringFieldName, final ILambdaDocumentFieldCallout lambdaCallout)
 	{
 		super();
 

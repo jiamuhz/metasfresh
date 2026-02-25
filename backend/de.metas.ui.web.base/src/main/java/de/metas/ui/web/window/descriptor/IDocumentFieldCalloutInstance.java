@@ -34,7 +34,7 @@ import org.adempiere.ad.callout.api.ICalloutInstance;
  * @author metas-dev <dev@metasfresh.com>
  *
  */
-public interface IDocumentFieldCallout extends ICalloutInstance
+public interface IDocumentFieldCalloutInstance extends ICalloutInstance
 {
 	@Override
 	String getId();

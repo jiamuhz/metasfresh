@@ -51,9 +51,9 @@ public class CalloutExecutorTest
 	@Test
 	public void test_StandardCase()
 	{
-		final MockedCallout callout1 = createAndRegisterMockedCallout(field);
-		final MockedCallout callout2 = createAndRegisterMockedCallout(field);
-		final MockedCallout callout3 = createAndRegisterMockedCallout(field);
+		final MockedCalloutInstance2 callout1 = createAndRegisterMockedCallout(field);
+		final MockedCalloutInstance2 callout2 = createAndRegisterMockedCallout(field);
+		final MockedCalloutInstance2 callout3 = createAndRegisterMockedCallout(field);
 
 		newExecutor().execute(field);
 
@@ -76,7 +76,7 @@ public class CalloutExecutorTest
 	@Test
 	public void test_FailingCallout_CalloutInitException()
 	{
-		final MockedCallout callout1 = createAndRegisterMockedCallout(field);
+		final MockedCalloutInstance2 callout1 = createAndRegisterMockedCallout(field);
 		callout1.setOnExecuteFailException(() -> new CalloutInitException("test"));
 
 		final ICalloutExecutor calloutExecutor = newExecutor();
@@ -98,7 +98,7 @@ public class CalloutExecutorTest
 	@Test
 	public void test_FailingCallout_CalloutExecutionException()
 	{
-		final MockedCallout callout1 = createAndRegisterMockedCallout(field)
+		final MockedCalloutInstance2 callout1 = createAndRegisterMockedCallout(field)
 				.setOnExecuteFailException(() -> new CalloutExecutionException("test"));
 
 		final ICalloutExecutor calloutExecutor = newExecutor();
@@ -120,10 +120,10 @@ public class CalloutExecutorTest
 	@Test
 	public void test_StopExecutionOnFirstFailingCallout()
 	{
-		final MockedCallout callout1 = createAndRegisterMockedCallout(field);
-		final MockedCallout callout2 = createAndRegisterMockedCallout(field)
+		final MockedCalloutInstance2 callout1 = createAndRegisterMockedCallout(field);
+		final MockedCalloutInstance2 callout2 = createAndRegisterMockedCallout(field)
 				.setOnExecuteFailException(() -> new RuntimeException("test"));
-		final MockedCallout callout3 = createAndRegisterMockedCallout(field);
+		final MockedCalloutInstance2 callout3 = createAndRegisterMockedCallout(field);
 
 		final ICalloutExecutor calloutExecutor = newExecutor();
 		assertExceptionOnExecute(calloutExecutor, field, CalloutExecutionException.class);
@@ -141,9 +141,9 @@ public class CalloutExecutorTest
 				.build();
 	}
 
-	private MockedCallout createAndRegisterMockedCallout(final ICalloutField field)
+	private MockedCalloutInstance2 createAndRegisterMockedCallout(final ICalloutField field)
 	{
-		final MockedCallout callout = new MockedCallout();
+		final MockedCalloutInstance2 callout = new MockedCalloutInstance2();
 		calloutProvider.regiterCallout(field, callout);
 		return callout;
 	}

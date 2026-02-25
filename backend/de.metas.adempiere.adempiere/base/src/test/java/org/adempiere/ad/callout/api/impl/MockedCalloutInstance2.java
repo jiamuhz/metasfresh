@@ -9,7 +9,7 @@ import org.adempiere.ad.callout.api.ICalloutInstance;
 import org.junit.Ignore;
 
 @Ignore
-public class MockedCallout implements ICalloutInstance
+public class MockedCalloutInstance2 implements ICalloutInstance
 {
 	private String id = "MockedCallout-" + UUID.randomUUID();
 	private boolean called = false;
@@ -42,7 +42,7 @@ public class MockedCallout implements ICalloutInstance
 		this.called = called;
 	}
 
-	public MockedCallout setOnExecuteFailException(Supplier<Exception> onExecuteFailException)
+	public MockedCalloutInstance2 setOnExecuteFailException(Supplier<Exception> onExecuteFailException)
 	{
 		this.onExecuteFailException = onExecuteFailException;
 		return this;
