@@ -22,6 +22,11 @@ package de.metas.adempiere.service;
  * #L%
  */
 
+/**
+ * ITableColumnPathBL
+ * 解析点号分隔的字段路径表达式
+ * 就像是字段路径的"导航系统"，告诉系统如何从一张表出发，通过外键关系找到另一张表的字段，并生成正确的SQL表达式。
+ */
 
 import java.util.Properties;
 

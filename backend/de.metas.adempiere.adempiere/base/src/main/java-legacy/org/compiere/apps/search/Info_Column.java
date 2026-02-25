@@ -26,6 +26,12 @@ import org.compiere.minigrid.ColumnInfo;
  * 
  * NOTE: Use {@link org.compiere.minigrid.ColumnInfo} instead
  */
+
+/**
+ * 历史遗留类：来自 Adempiere/Compiere 时代
+ * UI 层专用：主要用于 Swing 客户端的 Info Window
+ * 已经废弃：推荐使用 ColumnInfo 或其他现代替代品
+ */
 public class Info_Column extends ColumnInfo
 {
 	/**
