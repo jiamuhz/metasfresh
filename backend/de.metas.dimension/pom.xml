@@ -13,7 +13,7 @@
 	<artifactId>de.metas.dimension</artifactId>
 	<packaging>jar</packaging>
 
-    <description>多维数据分析</description>
+    <description>会计维度管理</description>
 
 	<properties>
 		<!-- empty property because the sql migration dir already contains a list of base directories -->
