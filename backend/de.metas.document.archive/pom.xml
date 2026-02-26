@@ -14,7 +14,7 @@
 
 	<packaging>pom</packaging>
 
-	<description>Document Archive Management</description>
+	<description> 文档归档、存储、检索、版本管理 </description>
 
 	<modules>
 		<module>de.metas.document.archive.base</module>

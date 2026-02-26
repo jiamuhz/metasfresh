@@ -13,7 +13,7 @@
 	<artifactId>metasfresh-dlm</artifactId>
 	<packaging>pom</packaging>
 
-    <description>数据生命周期管理（Data Lifecycle Management） 的模块，负责数据的归档、分区、保留策略和性能优化</description>
+    <description> DLM 模块 - Data Lifecycle Management，负责数据的归档、分区、清理 </description>
 
 	<modules>
 		<module>base</module>

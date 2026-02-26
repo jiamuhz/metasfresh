@@ -13,7 +13,7 @@
 	<artifactId>de.metas.storage</artifactId>
 	<packaging>jar</packaging>
 
-	<description>Material Storage Engine</description>
+	<description> 跟踪每个产品在每个仓库/库位的库存数量，为销售、采购、生产等业务提供准确的可用库存信息 </description>
 
 	<properties>
 		<!-- empty property because the sql migration dir already contains a list of base directories -->

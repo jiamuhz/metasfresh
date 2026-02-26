@@ -12,6 +12,8 @@
     <groupId>de.metas.externalreference</groupId>
     <artifactId>de.metas.externalreference</artifactId>
 
+    <description> 管理内部记录与外部系统ID的映射关系, 相比 refid 模块: 更通用、更现代化，支持多租户、多系统、多种类型 </description>
+
     <properties>
         <migration-sql-basedir/>
         <metasfresh.version>10.0.0</metasfresh.version>

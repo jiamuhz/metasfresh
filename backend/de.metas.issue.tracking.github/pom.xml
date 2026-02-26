@@ -12,6 +12,8 @@
     <groupId>de.metas.issue.tracking</groupId>
     <artifactId>de.metas.issue.tracking.github</artifactId>
 
+    <description> 用于与 GitHub Issue 跟踪系统集成的模块 </description>
+
     <properties>
         <migration-sql-basedir></migration-sql-basedir>
         <metasfresh.version>[1,10.0.0]</metasfresh.version>

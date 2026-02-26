@@ -13,7 +13,7 @@
 	<version>10.0.0</version>
 	<packaging>jar</packaging>
 
-	<description>Document ReferenceNo Management</description>
+	<description> 管理文档的外部引用ID，实现内部ID与外部ID的映射 </description>
 
 	<properties>
 		<migration-sql-basedir>60-de.metas.document.document-refid</migration-sql-basedir>
