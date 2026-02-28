@@ -49,6 +49,9 @@ import java.util.stream.Stream;
  * #L%
  */
 
+/**
+ * UI布局中的控件描述 
+ */
 public final class DocumentLayoutElementDescriptor
 {
 	public static Builder builder()
