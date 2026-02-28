@@ -132,8 +132,8 @@ public final class JSONDocumentLayout
 
 		caption = layout.getCaption(options.getAdLanguage());
 
-		documentSummaryElement = JSONDocumentLayoutElement.fromNullable(layout.getDocumentSummaryElement(), options);
-		docActionElement = JSONDocumentLayoutElement.fromNullable(layout.getDocActionElement(), options);
+		documentSummaryElement = JSONDocumentLayoutElement.fromNullable(layout.getDocumentSummaryElementDescriptor(), options);
+		docActionElement = JSONDocumentLayoutElement.fromNullable(layout.getDocActionElementDescriptor(), options);
 
 		final DocumentFormLayout singleRowLayout = layout.getFormLayout();
 		sections = JSONDocumentLayoutSection.ofSectionsList(singleRowLayout.getSections(), options);

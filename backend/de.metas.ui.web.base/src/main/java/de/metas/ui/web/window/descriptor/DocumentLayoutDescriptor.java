@@ -63,11 +63,11 @@ public final class DocumentLayoutDescriptor
 	/**
 	 * Special element: Document summary
 	 */
-	private final DocumentLayoutElementDescriptor documentSummaryElement;
+	private final DocumentLayoutElementDescriptor documentSummaryElementDescriptor;
 	/**
 	 * Special element: DocStatus/DocAction
 	 */
-	private final DocumentLayoutElementDescriptor docActionElement;
+	private final DocumentLayoutElementDescriptor docActionElementDescriptor;
 
 	/**
 	 * 文档的单文档Layout方案
@@ -77,12 +77,13 @@ public final class DocumentLayoutDescriptor
 	/**
 	 * 文档的文档列表Layout方案
 	 */
-	private final ViewLayout gridView;
+	private final ViewLayout gridViewLayout;
 
 	/**
 	 * Side list layout
+	 * 右侧边栏的文档列表Layout方案
 	 */
-	private final ViewLayout sideListView;
+	private final ViewLayout sideListViewLayout;
 
 	// private final Map<DocumentLayoutDetailGroupDescriptor, List<DocumentLayoutDetailDescriptor>> detailGroupToDetails = new HashMap<>();
 	//
@@ -91,13 +92,13 @@ public final class DocumentLayoutDescriptor
 
 	/**
 	 * Single row layout: included tabs.
-	 * 窗口上部表单中的内嵌Tab (直接展开的Tab)
+	 * 文档的单文档Layout方案中 下方详情Tabs
 	 */
 	private final Map<DetailId, DocumentLayoutDetailDescriptor> details;
 
 	/**
 	 * {@link #details} plus their included details.
-	 * 窗口下部的Tab
+	 * 文档的单文档Layout方案中 下方详情Tabs + 后代详情Tabs
 	 */
 	private final Map<DetailId, DocumentLayoutDetailDescriptor> allDetails;
 
@@ -114,19 +115,19 @@ public final class DocumentLayoutDescriptor
 
 		caption = builder.caption;
 
-		documentSummaryElement = builder.documentSummaryElement;
-		docActionElement = builder.docActionElement;
+		documentSummaryElementDescriptor = builder.documentSummaryElement;
+		docActionElementDescriptor = builder.docActionElement;
 
 		Check.assumeNotNull(builder.getSingleRowLayout(), "builder.singleRowLayout may not be null; builder={}", builder);
 		formLayout = builder.getSingleRowLayout()
 				.setWindowId(windowId)
 				.build();
-		gridView = builder.getGridView()
+		gridViewLayout = builder.getGridView()
 				.setWindowId(windowId)
 				.build();
 		details = ImmutableMap.copyOf(builder.buildDetails());
 		allDetails = ImmutableMap.copyOf(builder.buildAllDetails());
-		sideListView = builder.getSideList();
+		sideListViewLayout = builder.getSideList();
 
 		debugProperties = DebugProperties.ofNullableMap(builder.debugProperties);
 	}
@@ -138,9 +139,9 @@ public final class DocumentLayoutDescriptor
 				.omitNullValues()
 				.add("windowId", windowId)
 				.add("singleRowLayout", formLayout)
-				.add("gridView", gridView)
+				.add("gridView", gridViewLayout)
 				.add("details", details.isEmpty() ? null : details)
-				.add("sideList", sideListView)
+				.add("sideList", sideListViewLayout)
 				.toString();
 	}
 
@@ -154,14 +155,14 @@ public final class DocumentLayoutDescriptor
 		return caption.translate(adLanguage);
 	}
 
-	public DocumentLayoutElementDescriptor getDocumentSummaryElement()
+	public DocumentLayoutElementDescriptor getDocumentSummaryElementDescriptor()
 	{
-		return documentSummaryElement;
+		return documentSummaryElementDescriptor;
 	}
 
-	public DocumentLayoutElementDescriptor getDocActionElement()
+	public DocumentLayoutElementDescriptor getDocActionElementDescriptor()
 	{
-		return docActionElement;
+		return docActionElementDescriptor;
 	}
 
 	public DocumentFormLayout getFormLayout()
@@ -174,12 +175,12 @@ public final class DocumentLayoutDescriptor
 	 */
 	public ViewLayout getGridViewLayout()
 	{
-		return gridView;
+		return gridViewLayout;
 	}
 
 	public ViewLayout getSideListViewLayout()
 	{
-		return sideListView;
+		return sideListViewLayout;
 	}
 
 	/**
