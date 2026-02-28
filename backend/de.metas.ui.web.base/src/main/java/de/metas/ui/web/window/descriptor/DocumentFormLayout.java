@@ -55,6 +55,7 @@ public class DocumentFormLayout
 	private final ITranslatableString description;
 
 	private final List<DocumentLayoutSectionDescriptor> sections;
+	// sections 压扁的内容
 	private transient List<DocumentLayoutElementDescriptor> _elements = null;
 
 	private DocumentFormLayout(final Builder builder)

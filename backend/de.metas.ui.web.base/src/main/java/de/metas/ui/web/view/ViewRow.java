@@ -84,6 +84,7 @@ public final class ViewRow implements IViewRow
 
 	private final ViewRowFieldNameAndJsonValues values;
 
+	// 当前行包含的子行
 	private final List<IViewRow> includedRows;
 
 	private ViewRow(final Builder builder)

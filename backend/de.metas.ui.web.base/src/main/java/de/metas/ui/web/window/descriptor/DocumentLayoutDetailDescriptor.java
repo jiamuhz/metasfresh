@@ -38,6 +38,7 @@ import static de.metas.util.Check.assumeNotNull;
 
 /**
  * Specifies the fields of a tab, both in terms of a table row and of a one-record detail view.
+ * 描述明细表格区域的布局
  */
 public final class DocumentLayoutDetailDescriptor
 {

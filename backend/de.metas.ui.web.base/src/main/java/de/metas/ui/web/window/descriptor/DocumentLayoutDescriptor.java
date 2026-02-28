@@ -69,8 +69,16 @@ public final class DocumentLayoutDescriptor
 	 */
 	private final DocumentLayoutElementDescriptor docActionElement;
 
+	/**
+	 * 文档的单文档Layout方案
+	 */
 	private final DocumentFormLayout formLayout;
+
+	/**
+	 * 文档的文档列表Layout方案
+	 */
 	private final ViewLayout gridView;
+
 	/**
 	 * Side list layout
 	 */

@@ -38,6 +38,7 @@ public final class ViewRowAttributesLayout
 		return new ViewRowAttributesLayout(elements);
 	}
 
+	// 属性项 集合
 	private final ImmutableList<DocumentLayoutElementDescriptor> elements;
 
 	private ViewRowAttributesLayout(@NonNull final List<DocumentLayoutElementDescriptor> elements)
