@@ -50,7 +50,7 @@ import java.util.stream.Stream;
  */
 
 /**
- * UI布局中的控件描述 
+ * UI布局中的控件描述符
  */
 public final class DocumentLayoutElementDescriptor
 {
