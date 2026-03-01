@@ -70,8 +70,8 @@ public class SqlViewBinding implements SqlEntityBinding
 	private final String _tableName;
 	private final String _tableAlias;
 
-	private final ImmutableMap<String, SqlViewRowFieldBinding> _fieldsByFieldName;
-	private final ImmutableMap<String, DocumentFieldWidgetType> widgetTypesByFieldName;
+	private final ImmutableMap<String, SqlViewRowFieldBinding> mapFieldNameVsFieldBinding;
+	private final ImmutableMap<String, DocumentFieldWidgetType> mapFieldNameVsWidgetType;
 
 	private final SqlViewKeyColumnNamesMap keyColumnNamesMap;
 
@@ -108,15 +108,15 @@ public class SqlViewBinding implements SqlEntityBinding
 		_tableName = builder.getTableName();
 		_tableAlias = builder.getTableAlias();
 
-		_fieldsByFieldName = ImmutableMap.copyOf(builder.getFieldsByFieldName());
+		mapFieldNameVsFieldBinding = ImmutableMap.copyOf(builder.getFieldsByFieldName());
 		keyColumnNamesMap = builder.getSqlViewKeyColumnNamesMap();
-		widgetTypesByFieldName = _fieldsByFieldName.values()
+		mapFieldNameVsWidgetType = mapFieldNameVsFieldBinding.values()
 				.stream()
 				.collect(ImmutableMap.toImmutableMap(SqlViewRowFieldBinding::getFieldName, SqlViewRowFieldBinding::getWidgetType));
 
 		final Collection<String> displayFieldNames = builder.getDisplayFieldNames();
 
-		final Collection<SqlViewRowFieldBinding> allFields = _fieldsByFieldName.values();
+		final Collection<SqlViewRowFieldBinding> allFields = mapFieldNameVsFieldBinding.values();
 		this.groupingBinding = builder.groupingBinding;
 		sqlViewSelect = SqlViewSelectData.builder()
 				.sqlTableName(_tableName)
@@ -191,13 +191,13 @@ public class SqlViewBinding implements SqlEntityBinding
 
 	public Collection<SqlViewRowFieldBinding> getFields()
 	{
-		return _fieldsByFieldName.values();
+		return mapFieldNameVsFieldBinding.values();
 	}
 
 	@Override
 	public SqlViewRowFieldBinding getFieldByFieldName(final String fieldName)
 	{
-		final SqlViewRowFieldBinding field = _fieldsByFieldName.get(fieldName);
+		final SqlViewRowFieldBinding field = mapFieldNameVsFieldBinding.get(fieldName);
 		if (field == null)
 		{
 			throw new IllegalArgumentException("No field found for '" + fieldName + "' in " + this);
@@ -205,9 +205,9 @@ public class SqlViewBinding implements SqlEntityBinding
 		return field;
 	}
 
-	public ImmutableMap<String, DocumentFieldWidgetType> getWidgetTypesByFieldName()
+	public ImmutableMap<String, DocumentFieldWidgetType> getMapFieldNameVsWidgetType()
 	{
-		return widgetTypesByFieldName;
+		return mapFieldNameVsWidgetType;
 	}
 
 	public SqlViewSelectData getSqlViewSelect()
