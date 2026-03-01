@@ -396,7 +396,7 @@ public class ViewLayout implements ETagAware
 		private Integer treeExpandedDepth;
 		private Boolean geoLocationSupport;
 
-		private ArrayList<DocumentLayoutElementDescriptor> elements = null;
+		private ArrayList<DocumentLayoutElementDescriptor> listElementDescriptor = null;
 		private ArrayList<DocumentQueryOrderBy> defaultOrderBys = null;
 
 		public ViewLayout build()
@@ -410,7 +410,7 @@ public class ViewLayout implements ETagAware
 			final int treeExpandedDepthEffective = treeExpandedDepth != null ? treeExpandedDepth : from.treeExpandedDepth;
 			final boolean geoLocationSupportEffective = geoLocationSupport != null ? geoLocationSupport : from.geoLocationSupport;
 
-			final ImmutableList<DocumentLayoutElementDescriptor> elementsEffective = elements != null ? ImmutableList.copyOf(elements) : from.elements;
+			final ImmutableList<DocumentLayoutElementDescriptor> elementsEffective = listElementDescriptor != null ? ImmutableList.copyOf(listElementDescriptor) : from.elements;
 			final DocumentQueryOrderByList defaultOrderBysEffective = DocumentQueryOrderByList.ofList(defaultOrderBys);
 
 			// If there will be no change then return this
@@ -501,16 +501,16 @@ public class ViewLayout implements ETagAware
 
 		private ArrayList<DocumentLayoutElementDescriptor> getElementsToEdit()
 		{
-			if (elements == null)
+			if (listElementDescriptor == null)
 			{
-				elements = new ArrayList<>(from.elements);
+				listElementDescriptor = new ArrayList<>(from.elements);
 			}
-			return elements;
+			return listElementDescriptor;
 		}
 
-		private void setElements(final ArrayList<DocumentLayoutElementDescriptor> elements)
+		private void setListElementDescriptor(final ArrayList<DocumentLayoutElementDescriptor> listElementDescriptor)
 		{
-			this.elements = elements;
+			this.listElementDescriptor = listElementDescriptor;
 		}
 
 		public ChangeBuilder element(@NonNull final DocumentLayoutElementDescriptor element)
@@ -521,27 +521,27 @@ public class ViewLayout implements ETagAware
 
 		public ChangeBuilder elementsOrder(final String... fieldNames)
 		{
-			final ImmutableMap<String, DocumentLayoutElementDescriptor> elementsByFieldName = Maps.uniqueIndex(getElementsToEdit(), DocumentLayoutElementDescriptor::getFirstFieldName);
+			final ImmutableMap<String, DocumentLayoutElementDescriptor> mapFieldNameVsElementDescriptor = Maps.uniqueIndex(getElementsToEdit(), DocumentLayoutElementDescriptor::getFirstFieldName);
 
-			final ArrayList<DocumentLayoutElementDescriptor> elementsNew = new ArrayList<>();
+			final ArrayList<DocumentLayoutElementDescriptor> listElementDescriptor = new ArrayList<>();
 			for (final String fieldName : fieldNames)
 			{
-				final DocumentLayoutElementDescriptor element = elementsByFieldName.get(fieldName);
-				if (element == null)
+				final DocumentLayoutElementDescriptor elementDescriptor = mapFieldNameVsElementDescriptor.get(fieldName);
+				if (elementDescriptor == null)
 				{
 					logger.warn("Field {} was not found. Will be ignored."
 									+ "\n Available field names are: {}."
 									+ "\n If this is a standard view, pls check if the field added to window {}.",
 							fieldName,
-							elementsByFieldName.keySet(),
+							mapFieldNameVsElementDescriptor.keySet(),
 							getWindowIdEffective());
 					continue;
 				}
 
-				elementsNew.add(element);
+				listElementDescriptor.add(elementDescriptor);
 			}
 
-			setElements(elementsNew);
+			setListElementDescriptor(listElementDescriptor);
 
 			return this;
 		}
