@@ -35,6 +35,9 @@ import lombok.NonNull;
  * #L%
  */
 
+/**
+ * 列容器 @DocumentLayoutSectionDescriptor
+ */
 public class DocumentLayoutColumnDescriptor
 {
 	public static final Builder builder()
