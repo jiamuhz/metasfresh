@@ -58,12 +58,12 @@ public class ViewHeaderPropertiesProviderMap
 
 	private static final ViewHeaderPropertiesProviderMap EMPTY = new ViewHeaderPropertiesProviderMap();
 
-	private final ImmutableMap<String, ViewHeaderPropertiesProvider> providersByTableName;
+	private final ImmutableMap<String, ViewHeaderPropertiesProvider> mapTableNameVsProviders;
 	private final ViewHeaderPropertiesProvider genericProviders;
 
 	private ViewHeaderPropertiesProviderMap()
 	{
-		this.providersByTableName = ImmutableMap.of();
+		this.mapTableNameVsProviders = ImmutableMap.of();
 		this.genericProviders = NullViewHeaderPropertiesProvider.instance;
 	}
 
@@ -98,7 +98,7 @@ public class ViewHeaderPropertiesProviderMap
 
 		this.genericProviders = CompositeViewHeaderPropertiesProvider.of(genericProviders);
 
-		this.providersByTableName = providersByTableName.keySet()
+		this.mapTableNameVsProviders = providersByTableName.keySet()
 				.stream()
 				.collect(ImmutableMap.toImmutableMap(
 						tableName -> tableName,
@@ -108,7 +108,7 @@ public class ViewHeaderPropertiesProviderMap
 	public ViewHeaderPropertiesProvider getProvidersByTableName(@Nullable final String tableName)
 	{
 		return tableName != null
-				? providersByTableName.getOrDefault(tableName, genericProviders)
+				? mapTableNameVsProviders.getOrDefault(tableName, genericProviders)
 				: genericProviders;
 	}
 }
