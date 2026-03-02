@@ -16,7 +16,7 @@ import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
 import de.metas.ui.web.window.descriptor.factory.standard.DefaultValueExpressionsFactory;
 import de.metas.ui.web.window.model.DocumentsRepository;
 import de.metas.ui.web.window.model.IDocumentFieldView;
@@ -313,7 +313,7 @@ public class AddressDescriptorFactory
 		return DocumentLayoutUIControlDescriptor.builder()
 				.setCaption(fieldDescriptor.getCaption())
 				.setWidgetType(fieldDescriptor.getWidgetType())
-				.addField(DocumentLayoutElementFieldDescriptor.builder(fieldDescriptor.getFieldName())
+				.addField(DocumentLayoutUIControlFieldDescriptor.builder(fieldDescriptor.getFieldName())
 								  .setLookupInfos(fieldDescriptor.getLookupDescriptor().orElse(null))
 								  .setPublicField(true)
 								  .setSupportZoomInto(fieldDescriptor.isSupportZoomInto()));

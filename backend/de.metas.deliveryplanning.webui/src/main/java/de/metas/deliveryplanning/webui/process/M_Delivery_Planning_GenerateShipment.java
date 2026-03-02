@@ -15,7 +15,7 @@ import de.metas.process.Param;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
 import lombok.NonNull;
 import org.adempiere.exceptions.FillMandatoryException;
 
@@ -88,7 +88,7 @@ public class M_Delivery_Planning_GenerateShipment extends JavaProcess
 		p_FECParams.updateOnParameterChanged(parameterName, getContracts());
 	}
 
-	@ProcessParamLookupValuesProvider(parameterName = ForexContractParameters.PARAM_C_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup)
+	@ProcessParamLookupValuesProvider(parameterName = ForexContractParameters.PARAM_C_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup)
 	public LookupValuesList getAvailableForexContracts() {return helper.toLookupValuesList(getContracts());}
 
 	@NonNull

@@ -11,7 +11,7 @@ import de.metas.process.JavaProcess;
 import de.metas.ui.web.window.datatypes.LookupValue.IntegerLookupValue;
 import de.metas.ui.web.window.datatypes.LookupValue.StringLookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.LookupSource;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
 
 /*

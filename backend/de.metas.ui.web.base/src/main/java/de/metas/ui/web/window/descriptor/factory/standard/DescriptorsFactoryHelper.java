@@ -7,8 +7,8 @@ import de.metas.ui.web.window.WindowConstants;
 import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.LookupSource;
 import de.metas.ui.web.window.descriptor.LookupDescriptor;
 import de.metas.ui.web.window.exceptions.DocumentLayoutBuildException;
 import de.metas.util.Check;
@@ -278,7 +278,7 @@ public final class DescriptorsFactoryHelper
 		return widgetType;
 	}
 
-	private static DocumentFieldWidgetType extractWidgetType(final DocumentLayoutElementFieldDescriptor.LookupSource lookupSource)
+	private static DocumentFieldWidgetType extractWidgetType(final DocumentLayoutUIControlFieldDescriptor.LookupSource lookupSource)
 	{
 		Check.assumeNotNull(lookupSource, "Parameter lookupSource is not null");
 		switch (lookupSource)
@@ -292,37 +292,37 @@ public final class DescriptorsFactoryHelper
 		}
 	}
 
-	public static DocumentLayoutElementFieldDescriptor.LookupSource extractLookupSource(@NonNull final ReferenceId displayType, @Nullable final ReferenceId adReferenceValueId)
+	public static DocumentLayoutUIControlFieldDescriptor.LookupSource extractLookupSource(@NonNull final ReferenceId displayType, @Nullable final ReferenceId adReferenceValueId)
 	{
 		return extractLookupSource(displayType.getRepoId(), adReferenceValueId);
 	}
 
 	@Nullable
-	public static DocumentLayoutElementFieldDescriptor.LookupSource extractLookupSource(final int displayType, @Nullable final ReferenceId adReferenceValueId)
+	public static DocumentLayoutUIControlFieldDescriptor.LookupSource extractLookupSource(final int displayType, @Nullable final ReferenceId adReferenceValueId)
 	{
 		if (DisplayType.Search == displayType)
 		{
-			return DocumentLayoutElementFieldDescriptor.LookupSource.lookup;
+			return DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup;
 		}
 		else if (DisplayType.List == displayType)
 		{
-			return DocumentLayoutElementFieldDescriptor.LookupSource.list;
+			return DocumentLayoutUIControlFieldDescriptor.LookupSource.list;
 		}
 		else if (DisplayType.TableDir == displayType)
 		{
-			return DocumentLayoutElementFieldDescriptor.LookupSource.list;
+			return DocumentLayoutUIControlFieldDescriptor.LookupSource.list;
 		}
 		else if (DisplayType.Table == displayType)
 		{
-			return DocumentLayoutElementFieldDescriptor.LookupSource.list;
+			return DocumentLayoutUIControlFieldDescriptor.LookupSource.list;
 		}
 		else if (DisplayType.isAnyLookup(displayType))
 		{
-			return DocumentLayoutElementFieldDescriptor.LookupSource.lookup;
+			return DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup;
 		}
 		else if (DisplayType.Button == displayType && adReferenceValueId != null)
 		{
-			return DocumentLayoutElementFieldDescriptor.LookupSource.list;
+			return DocumentLayoutUIControlFieldDescriptor.LookupSource.list;
 		}
 		else
 		{

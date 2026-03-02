@@ -25,7 +25,7 @@ import de.metas.ui.web.view.IView;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
 import de.metas.ui.web.window.datatypes.WindowId;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.LookupSource;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
 import de.metas.util.GuavaCollectors;
 import lombok.NonNull;

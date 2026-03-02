@@ -24,7 +24,7 @@ import de.metas.ui.web.window.datatypes.MediaType;
 import de.metas.ui.web.window.datatypes.json.JSONNullValue;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
 import de.metas.ui.web.window.descriptor.ViewEditorRenderMode;
 import de.metas.ui.web.window.descriptor.WidgetSize;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
@@ -398,7 +398,7 @@ public final class ViewColumnHelper
 				.setViewAllowSorting(column.isAllowSorting())
 				.restrictToMediaTypes(column.getRestrictToMediaTypes())
 				.setDescription(column.getDescription())
-				.addField(DocumentLayoutElementFieldDescriptor.builder(column.getFieldName()));
+				.addField(DocumentLayoutUIControlFieldDescriptor.builder(column.getFieldName()));
 	}
 
 	public static <T extends IViewRow> ImmutableSet<String> extractFieldNames(@NonNull final T row)

@@ -19,7 +19,7 @@ import de.metas.ui.web.window.datatypes.PanelLayoutType;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
 import de.metas.util.Check;
 
 /*
@@ -207,7 +207,7 @@ public class ProcessLayout
 					.setWidgetType(processParaDescriptor.getWidgetType())
 					.setAllowShowPassword(processParaDescriptor.isAllowShowPassword())
 					.barcodeScannerType(processParaDescriptor.getBarcodeScannerType())
-					.addField(DocumentLayoutElementFieldDescriptor.builder(processParaDescriptor.getFieldName())
+					.addField(DocumentLayoutUIControlFieldDescriptor.builder(processParaDescriptor.getFieldName())
 							.setLookupInfos(processParaDescriptor.getLookupDescriptor().orElse(null))
 							.setPublicField(true)
 							.setSupportZoomInto(processParaDescriptor.isSupportZoomInto()))

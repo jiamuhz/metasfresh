@@ -6,7 +6,7 @@ import org.junit.jupiter.api.Test;
 
 import de.metas.ui.web.test.util.EnumTestUtils;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentLayoutElementField.JSONLookupSource;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.LookupSource;
 
 /*
  * #%L

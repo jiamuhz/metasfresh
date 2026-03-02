@@ -27,7 +27,7 @@ import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.LookupSource;
 import de.metas.ui.web.window.model.DocumentCollection;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;

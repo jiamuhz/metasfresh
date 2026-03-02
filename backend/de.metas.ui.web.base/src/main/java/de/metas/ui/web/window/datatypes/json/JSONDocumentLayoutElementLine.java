@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.collect.ImmutableList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineDescriptor;
 import de.metas.util.GuavaCollectors;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
@@ -45,7 +45,7 @@ import java.util.stream.Stream;
 public class JSONDocumentLayoutElementLine
 {
 	static List<JSONDocumentLayoutElementLine> ofList(
-			@NonNull final List<DocumentLayoutElementLineDescriptor> elementsLines,
+			@NonNull final List<DocumentLayoutUIControlsLineDescriptor> elementsLines,
 			@NonNull final JSONDocumentLayoutOptions options)
 	{
 		return elementsLines.stream()
@@ -54,7 +54,7 @@ public class JSONDocumentLayoutElementLine
 	}
 
 	private static JSONDocumentLayoutElementLine ofDocumentLayoutElementLineDescriptor(
-			@NonNull final DocumentLayoutElementLineDescriptor elementLine,
+			@NonNull final DocumentLayoutUIControlsLineDescriptor elementLine,
 			@NonNull final JSONDocumentLayoutOptions options)
 	{
 		return new JSONDocumentLayoutElementLine(elementLine, options);
@@ -66,7 +66,7 @@ public class JSONDocumentLayoutElementLine
 	private final List<JSONDocumentLayoutElement> elements;
 
 	private JSONDocumentLayoutElementLine(
-			@NonNull final DocumentLayoutElementLineDescriptor elementLine,
+			@NonNull final DocumentLayoutUIControlsLineDescriptor elementLine,
 			@NonNull final JSONDocumentLayoutOptions options)
 	{
 		final List<JSONDocumentLayoutElement> elements = JSONDocumentLayoutElement.ofList(elementLine.getElements(), options);

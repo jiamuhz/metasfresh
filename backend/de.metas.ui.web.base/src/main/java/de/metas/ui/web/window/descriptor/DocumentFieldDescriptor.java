@@ -66,6 +66,9 @@ import java.util.function.Consumer;
  * #L%
  */
 
+/**
+ * 文档字段【本身】的描述符，不涉及如何在UI中定位摆放
+ */
 @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
 public final class DocumentFieldDescriptor
 {

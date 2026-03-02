@@ -38,9 +38,9 @@ import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIColumnDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementGroupDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineGroupDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor.CaptionMode;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor.ClosableMode;
@@ -197,7 +197,7 @@ public class DataEntryTabLoader
 				.setClosableMode(closableMode)
 				.setCaptionMode(CaptionMode.DISPLAY);
 
-		final ImmutableList<DocumentLayoutElementGroupDescriptor.Builder> //
+		final ImmutableList<DocumentLayoutUIControlsLineGroupDescriptor.Builder> //
 		elementGroups = createLayoutElemementTab(dataEntrySection);
 
 		column.addElementTabs(elementGroups);
@@ -205,23 +205,23 @@ public class DataEntryTabLoader
 		return layoutSection;
 	}
 
-	private ImmutableList<DocumentLayoutElementGroupDescriptor.Builder> createLayoutElemementTab(@NonNull final DataEntrySection dataEntrySection)
+	private ImmutableList<DocumentLayoutUIControlsLineGroupDescriptor.Builder> createLayoutElemementTab(@NonNull final DataEntrySection dataEntrySection)
 	{
 		final int columnCount = dataEntrySection.getLines().stream()
 				.map(DataEntryLine::getFields)
 				.map(Collection::size)
 				.max(Comparator.naturalOrder()).orElse(0);
 
-		final ImmutableList.Builder<DocumentLayoutElementGroupDescriptor.Builder> elementGroups = ImmutableList.builder();
+		final ImmutableList.Builder<DocumentLayoutUIControlsLineGroupDescriptor.Builder> elementGroups = ImmutableList.builder();
 
 		final List<DataEntryLine> dataEntryLines = dataEntrySection.getLines();
 		for (final DataEntryLine dataEntryLine : dataEntryLines)
 		{
-			final DocumentLayoutElementGroupDescriptor.Builder elementGroup = DocumentLayoutElementGroupDescriptor
+			final DocumentLayoutUIControlsLineGroupDescriptor.Builder elementGroup = DocumentLayoutUIControlsLineGroupDescriptor
 					.builder()
 					.setColumnCount(columnCount);
 
-			final ImmutableList<DocumentLayoutElementLineDescriptor.Builder> elementLines = createLayoutElemementLine(dataEntryLine, columnCount);
+			final ImmutableList<DocumentLayoutUIControlsLineDescriptor.Builder> elementLines = createLayoutElemementLine(dataEntryLine, columnCount);
 			elementGroup.addElementLines(elementLines);
 
 			elementGroups.add(elementGroup);
@@ -230,35 +230,35 @@ public class DataEntryTabLoader
 		return elementGroups.build();
 	}
 
-	private ImmutableList<DocumentLayoutElementLineDescriptor.Builder> createLayoutElemementLine(
+	private ImmutableList<DocumentLayoutUIControlsLineDescriptor.Builder> createLayoutElemementLine(
 			@NonNull final DataEntryLine dataEntryLine,
 			final int columnCount)
 	{
-		final ImmutableList.Builder<DocumentLayoutElementLineDescriptor.Builder> result = ImmutableList.builder();
+		final ImmutableList.Builder<DocumentLayoutUIControlsLineDescriptor.Builder> result = ImmutableList.builder();
 
 		final List<DataEntryField> fields = dataEntryLine.getFields();
 		for (final DataEntryField field : fields)
 		{
-			final DocumentLayoutElementLineDescriptor.Builder elementLine = createLayoutElemementLine(field);
+			final DocumentLayoutUIControlsLineDescriptor.Builder elementLine = createLayoutElemementLine(field);
 			result.add(elementLine);
 		}
 
 		// fill the gap with "empty cells" if this line has less fields than columnCount specifies
 		for (int i = fields.size(); i < columnCount; i++)
 		{
-			final DocumentLayoutElementLineDescriptor.Builder emptyElementLine = DocumentLayoutElementLineDescriptor.builder();
+			final DocumentLayoutUIControlsLineDescriptor.Builder emptyElementLine = DocumentLayoutUIControlsLineDescriptor.builder();
 			result.add(emptyElementLine);
 		}
 
 		return result.build();
 	}
 
-	private DocumentLayoutElementLineDescriptor.Builder createLayoutElemementLine(@NonNull final DataEntryField field)
+	private DocumentLayoutUIControlsLineDescriptor.Builder createLayoutElemementLine(@NonNull final DataEntryField field)
 	{
 		// note that each element builder can be used/"consumed" only ones
 		final DocumentLayoutUIControlDescriptor.Builder dataElement = createFieldElementDescriptor(field);
 
-		final DocumentLayoutElementLineDescriptor.Builder elementLine = DocumentLayoutElementLineDescriptor
+		final DocumentLayoutUIControlsLineDescriptor.Builder elementLine = DocumentLayoutUIControlsLineDescriptor
 				.builder()
 				.addElement(dataElement);
 		return elementLine;
@@ -281,15 +281,15 @@ public class DataEntryTabLoader
 
 		final String fieldName = dataEntryWebuiTools.computeFieldName(field.getId());
 
-		final DocumentLayoutElementFieldDescriptor.Builder dataField = DocumentLayoutElementFieldDescriptor
+		final DocumentLayoutUIControlFieldDescriptor.Builder dataField = DocumentLayoutUIControlFieldDescriptor
 				.builder(fieldName)
 				.setEmptyFieldText(TranslatableStrings.empty());
 		element.addField(dataField);
 
-		final DocumentLayoutElementFieldDescriptor.Builder infoField = DocumentLayoutElementFieldDescriptor
+		final DocumentLayoutUIControlFieldDescriptor.Builder infoField = DocumentLayoutUIControlFieldDescriptor
 				.builder(createInfoFieldName(field))
 				.setEmptyFieldText(TranslatableStrings.empty())
-				.setFieldType(DocumentLayoutElementFieldDescriptor.FieldType.Tooltip)
+				.setFieldType(DocumentLayoutUIControlFieldDescriptor.FieldType.Tooltip)
 				.setTooltipIconName(X_AD_UI_ElementField.TOOLTIPICONNAME_Text)
 				.setLookupSourceAsText();
 		element.addField(infoField);

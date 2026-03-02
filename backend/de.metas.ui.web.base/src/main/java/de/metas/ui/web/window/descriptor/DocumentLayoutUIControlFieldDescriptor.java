@@ -42,7 +42,7 @@ import java.util.Optional;
  */
 
 @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
-public final class DocumentLayoutElementFieldDescriptor implements Serializable
+public final class DocumentLayoutUIControlFieldDescriptor implements Serializable
 {
 	public static Builder builder(final String fieldName)
 	{
@@ -112,7 +112,7 @@ public final class DocumentLayoutElementFieldDescriptor implements Serializable
 	@Getter
 	private final boolean forbidNewRecordCreation;
 
-	private DocumentLayoutElementFieldDescriptor(@NonNull final Builder builder)
+	private DocumentLayoutUIControlFieldDescriptor(@NonNull final Builder builder)
 	{
 		field = builder.getFieldName();
 		caption = builder.getCaption();
@@ -164,11 +164,11 @@ public final class DocumentLayoutElementFieldDescriptor implements Serializable
 		{
 			return true;
 		}
-		if (!(obj instanceof DocumentLayoutElementFieldDescriptor))
+		if (!(obj instanceof DocumentLayoutUIControlFieldDescriptor))
 		{
 			return false;
 		}
-		final DocumentLayoutElementFieldDescriptor other = (DocumentLayoutElementFieldDescriptor)obj;
+		final DocumentLayoutUIControlFieldDescriptor other = (DocumentLayoutUIControlFieldDescriptor)obj;
 		return Objects.equals(field, other.field); // only the field name shall be matched
 	}
 
@@ -185,7 +185,7 @@ public final class DocumentLayoutElementFieldDescriptor implements Serializable
 	@SuppressWarnings("OptionalUsedAsFieldOrParameterType")
 	public static final class Builder
 	{
-		private static final Logger logger = LogManager.getLogger(DocumentLayoutElementFieldDescriptor.Builder.class);
+		private static final Logger logger = LogManager.getLogger(DocumentLayoutUIControlFieldDescriptor.Builder.class);
 
 		// FIXME TRL HARDCODED_FIELD_EMPTY_TEXT
 		private static final ITranslatableString HARDCODED_FIELD_EMPTY_TEXT = ImmutableTranslatableString.builder()
@@ -234,10 +234,10 @@ public final class DocumentLayoutElementFieldDescriptor implements Serializable
 					.toString();
 		}
 
-		public DocumentLayoutElementFieldDescriptor build()
+		public DocumentLayoutUIControlFieldDescriptor build()
 		{
 			setConsumed();
-			final DocumentLayoutElementFieldDescriptor result = new DocumentLayoutElementFieldDescriptor(this);
+			final DocumentLayoutUIControlFieldDescriptor result = new DocumentLayoutUIControlFieldDescriptor(this);
 
 			logger.trace("Build {} for {}", result, this);
 			return result;

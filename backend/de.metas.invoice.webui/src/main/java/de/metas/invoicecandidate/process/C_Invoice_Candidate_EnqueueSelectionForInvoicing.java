@@ -66,7 +66,7 @@ import de.metas.process.RunOutOfTrx;
 import de.metas.security.permissions.Access;
 import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
 import de.metas.ui.web.window.model.lookup.LookupDataSource;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
@@ -197,7 +197,7 @@ public class C_Invoice_Candidate_EnqueueSelectionForInvoicing extends JavaProces
 		p_FECParams.updateOnParameterChanged(parameterName, getContracts());
 	}
 
-	@ProcessParamLookupValuesProvider(parameterName = ForexContractParameters.PARAM_C_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup)
+	@ProcessParamLookupValuesProvider(parameterName = ForexContractParameters.PARAM_C_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup)
 	public LookupValuesList getAvailableForexContracts()
 	{
 		final ForexContracts contracts = getContracts();
@@ -206,7 +206,7 @@ public class C_Invoice_Candidate_EnqueueSelectionForInvoicing extends JavaProces
 				: LookupValuesList.EMPTY;
 	}
 
-	@ProcessParamLookupValuesProvider(parameterName = InvoicingParams.PARA_BP_BankAccountId, numericKey = true, lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup)
+	@ProcessParamLookupValuesProvider(parameterName = InvoicingParams.PARA_BP_BankAccountId, numericKey = true, lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup)
 	public LookupValuesList getAvailableBankAccountIds(@NonNull final LookupDataSourceContext context)
 	{
 		final ImmutableSet<BPartnerId> bPartnerIdsInvolved = getBPartnerIds();

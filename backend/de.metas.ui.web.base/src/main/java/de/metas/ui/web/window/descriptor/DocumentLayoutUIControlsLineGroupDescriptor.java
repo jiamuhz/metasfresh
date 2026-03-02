@@ -39,7 +39,7 @@ import lombok.NonNull;
  */
 
 @SuppressWarnings("serial")
-public final class DocumentLayoutElementGroupDescriptor implements Serializable
+public final class DocumentLayoutUIControlsLineGroupDescriptor implements Serializable
 {
 	public static Builder builder()
 	{
@@ -51,7 +51,7 @@ public final class DocumentLayoutElementGroupDescriptor implements Serializable
 	private final LayoutType layoutType;
 
 	@Getter
-	private final List<DocumentLayoutElementLineDescriptor> elementLines;
+	private final List<DocumentLayoutUIControlsLineDescriptor> elementLines;
 
 	@Getter
 	private final Integer columnCount;
@@ -59,7 +59,7 @@ public final class DocumentLayoutElementGroupDescriptor implements Serializable
 	@Getter
 	private final String internalName;
 
-	private DocumentLayoutElementGroupDescriptor(final Builder builder)
+	private DocumentLayoutUIControlsLineGroupDescriptor(final Builder builder)
 	{
 		layoutType = builder.layoutType;
 		elementLines = ImmutableList.copyOf(builder.buildElementLines());
@@ -86,13 +86,13 @@ public final class DocumentLayoutElementGroupDescriptor implements Serializable
 
 	public static final class Builder
 	{
-		private static final Logger logger = LogManager.getLogger(DocumentLayoutElementGroupDescriptor.Builder.class);
+		private static final Logger logger = LogManager.getLogger(DocumentLayoutUIControlsLineGroupDescriptor.Builder.class);
 
 		private String internalName;
 		private LayoutType layoutType;
 		public Integer columnCount = null;
 
-		private final List<DocumentLayoutElementLineDescriptor.Builder> elementLinesBuilders = new ArrayList<>();
+		private final List<DocumentLayoutUIControlsLineDescriptor.Builder> elementLinesBuilders = new ArrayList<>();
 
 		private Builder()
 		{
@@ -109,15 +109,15 @@ public final class DocumentLayoutElementGroupDescriptor implements Serializable
 					.toString();
 		}
 
-		public DocumentLayoutElementGroupDescriptor build()
+		public DocumentLayoutUIControlsLineGroupDescriptor build()
 		{
-			final DocumentLayoutElementGroupDescriptor result = new DocumentLayoutElementGroupDescriptor(this);
+			final DocumentLayoutUIControlsLineGroupDescriptor result = new DocumentLayoutUIControlsLineGroupDescriptor(this);
 
 			logger.trace("Built {} for {}", result, this);
 			return result;
 		}
 
-		private List<DocumentLayoutElementLineDescriptor> buildElementLines()
+		private List<DocumentLayoutUIControlsLineDescriptor> buildElementLines()
 		{
 			return elementLinesBuilders
 					.stream()
@@ -149,13 +149,13 @@ public final class DocumentLayoutElementGroupDescriptor implements Serializable
 			return this;
 		}
 
-		public Builder addElementLine(@NonNull final DocumentLayoutElementLineDescriptor.Builder elementLineBuilder)
+		public Builder addElementLine(@NonNull final DocumentLayoutUIControlsLineDescriptor.Builder elementLineBuilder)
 		{
 			elementLinesBuilders.add(elementLineBuilder);
 			return this;
 		}
 
-		public Builder addElementLines(@NonNull final List<DocumentLayoutElementLineDescriptor.Builder> elementLineBuilders)
+		public Builder addElementLines(@NonNull final List<DocumentLayoutUIControlsLineDescriptor.Builder> elementLineBuilders)
 		{
 			elementLinesBuilders.addAll(elementLineBuilders);
 			return this;
@@ -168,7 +168,7 @@ public final class DocumentLayoutElementGroupDescriptor implements Serializable
 
 		public Stream<DocumentLayoutUIControlDescriptor.Builder> streamElementBuilders()
 		{
-			return elementLinesBuilders.stream().flatMap(DocumentLayoutElementLineDescriptor.Builder::streamElementBuilders);
+			return elementLinesBuilders.stream().flatMap(DocumentLayoutUIControlsLineDescriptor.Builder::streamElementBuilders);
 		}
 	}
 }

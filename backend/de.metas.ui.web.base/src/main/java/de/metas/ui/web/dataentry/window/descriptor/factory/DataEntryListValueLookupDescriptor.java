@@ -5,7 +5,7 @@ import java.util.Set;
 
 import com.google.common.collect.ImmutableSet;
 
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.LookupSource;
 import de.metas.dataentry.layout.DataEntryListValue;
 import de.metas.ui.web.window.descriptor.LookupDescriptor;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFetcher;

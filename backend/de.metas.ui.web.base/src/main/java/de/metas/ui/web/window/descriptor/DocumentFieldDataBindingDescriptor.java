@@ -39,7 +39,7 @@ public interface DocumentFieldDataBindingDescriptor
 	}
 
 	/**
-	 * @return true if this field has ORDER BY instructions
+	 * @return true if this field has [ORDER BY] instructions
 	 */
 	default boolean isDefaultOrderBy()
 	{

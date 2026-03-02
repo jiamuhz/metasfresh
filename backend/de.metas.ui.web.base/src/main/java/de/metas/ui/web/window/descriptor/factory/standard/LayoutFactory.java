@@ -21,10 +21,10 @@ import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIColumnDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.FieldType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementGroupDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.FieldType;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineGroupDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFormLayout;
 import de.metas.ui.web.window.descriptor.DocumentFormLayout.Builder;
@@ -331,7 +331,7 @@ public class LayoutFactory
 		// UI Element Groups
 		for (final I_AD_UI_ElementGroup uiElementGroup : uiElementGroups)
 		{
-			final DocumentLayoutElementGroupDescriptor.Builder layoutElementGroupBuilder = layoutSingleRow_ElementGroup(uiElementGroup);
+			final DocumentLayoutUIControlsLineGroupDescriptor.Builder layoutElementGroupBuilder = layoutSingleRow_ElementGroup(uiElementGroup);
 			if (layoutElementGroupBuilder == null)
 			{
 				continue;
@@ -343,7 +343,7 @@ public class LayoutFactory
 	}
 
 	@Nullable
-	private DocumentLayoutElementGroupDescriptor.Builder layoutSingleRow_ElementGroup(final I_AD_UI_ElementGroup uiElementGroup)
+	private DocumentLayoutUIControlsLineGroupDescriptor.Builder layoutSingleRow_ElementGroup(final I_AD_UI_ElementGroup uiElementGroup)
 	{
 		if (!uiElementGroup.isActive())
 		{
@@ -354,7 +354,7 @@ public class LayoutFactory
 		final List<I_AD_UI_Element> uiElements = getUIProvider().getUIElements(uiElementGroup);
 		logger.trace("Building layout element group for {}: {}", uiElementGroup, uiElements);
 
-		final DocumentLayoutElementGroupDescriptor.Builder layoutElementGroupBuilder = DocumentLayoutElementGroupDescriptor.builder()
+		final DocumentLayoutUIControlsLineGroupDescriptor.Builder layoutElementGroupBuilder = DocumentLayoutUIControlsLineGroupDescriptor.builder()
 				.setInternalName(uiElementGroup.toString())
 				.setLayoutType(uiElementGroup.getUIStyle());
 
@@ -368,7 +368,7 @@ public class LayoutFactory
 				continue;
 			}
 
-			final DocumentLayoutElementLineDescriptor.Builder layoutElementLineBuilder = layoutSingleRow_ElementLine(uiElement);
+			final DocumentLayoutUIControlsLineDescriptor.Builder layoutElementLineBuilder = layoutSingleRow_ElementLine(uiElement);
 			if (layoutElementLineBuilder == null)
 			{
 				continue;
@@ -387,7 +387,7 @@ public class LayoutFactory
 	}
 
 	@Nullable
-	private DocumentLayoutElementLineDescriptor.Builder layoutSingleRow_ElementLine(final I_AD_UI_Element uiElement)
+	private DocumentLayoutUIControlsLineDescriptor.Builder layoutSingleRow_ElementLine(final I_AD_UI_Element uiElement)
 	{
 		logger.trace("Building layout element line for {}", uiElement);
 
@@ -398,7 +398,7 @@ public class LayoutFactory
 			return null;
 		}
 
-		final DocumentLayoutElementLineDescriptor.Builder layoutElementLineBuilder = DocumentLayoutElementLineDescriptor.builder()
+		final DocumentLayoutUIControlsLineDescriptor.Builder layoutElementLineBuilder = DocumentLayoutUIControlsLineDescriptor.builder()
 				.setInternalName(uiElement.toString())
 				.addElement(layoutElementBuilder);
 
@@ -460,7 +460,7 @@ public class LayoutFactory
 
 		for (final DocumentFieldDescriptor.Builder field : extractDocumentFields(uiElement))
 		{
-			final DocumentLayoutElementFieldDescriptor.Builder layoutElementFieldBuilder = layoutElementField(field);
+			final DocumentLayoutUIControlFieldDescriptor.Builder layoutElementFieldBuilder = layoutElementField(field);
 
 			if (layoutElementBuilder.getFieldsCount() <= 0)
 			{
@@ -742,7 +742,7 @@ public class LayoutFactory
 		return quickInputSupport;
 	}
 
-	private DocumentLayoutElementFieldDescriptor.Builder layoutElementField(final DocumentFieldDescriptor.Builder field)
+	private DocumentLayoutUIControlFieldDescriptor.Builder layoutElementField(final DocumentFieldDescriptor.Builder field)
 	{
 		logger.trace("Building layout element field for {}", field);
 
@@ -752,7 +752,7 @@ public class LayoutFactory
 			field.addCharacteristic(Characteristic.PublicField);
 		}
 
-		final DocumentLayoutElementFieldDescriptor.Builder layoutElementFieldBuilder = DocumentLayoutElementFieldDescriptor.builder(fieldName)
+		final DocumentLayoutUIControlFieldDescriptor.Builder layoutElementFieldBuilder = DocumentLayoutUIControlFieldDescriptor.builder(fieldName)
 				.setCaption(field.getCaption())
 				.setLookupInfos(field.getLookupDescriptor().orElse(null))
 				.setPublicField(field.hasCharacteristic(Characteristic.PublicField))

@@ -33,7 +33,7 @@ import java.util.stream.Stream;
  * #L%
  */
 
-public final class DocumentLayoutElementLineDescriptor
+public final class DocumentLayoutUIControlsLineDescriptor
 {
 	public static final Builder builder()
 	{
@@ -43,7 +43,7 @@ public final class DocumentLayoutElementLineDescriptor
 	private final String internalName;
 	private final List<DocumentLayoutUIControlDescriptor> elements;
 
-	private DocumentLayoutElementLineDescriptor(@NonNull final Builder builder)
+	private DocumentLayoutUIControlsLineDescriptor(@NonNull final Builder builder)
 	{
 		internalName = builder.internalName;
 		elements = ImmutableList.copyOf(builder.buildElements());
@@ -66,7 +66,7 @@ public final class DocumentLayoutElementLineDescriptor
 
 	public static final class Builder
 	{
-		private static final Logger logger = LogManager.getLogger(DocumentLayoutElementLineDescriptor.Builder.class);
+		private static final Logger logger = LogManager.getLogger(DocumentLayoutUIControlsLineDescriptor.Builder.class);
 
 		private String internalName;
 		private final List<DocumentLayoutUIControlDescriptor.Builder> elementsBuilders = new ArrayList<>();
@@ -85,9 +85,9 @@ public final class DocumentLayoutElementLineDescriptor
 					.toString();
 		}
 
-		public DocumentLayoutElementLineDescriptor build()
+		public DocumentLayoutUIControlsLineDescriptor build()
 		{
-			final DocumentLayoutElementLineDescriptor result = new DocumentLayoutElementLineDescriptor(this);
+			final DocumentLayoutUIControlsLineDescriptor result = new DocumentLayoutUIControlsLineDescriptor(this);
 
 			logger.trace("Built {} for {}", result, this);
 			return result;

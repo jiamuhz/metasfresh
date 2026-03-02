@@ -17,7 +17,7 @@ import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.WindowId;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
 import de.metas.ui.web.window.descriptor.sql.SqlSelectValue;
 import de.metas.ui.web.window.model.DocumentQueryOrderBy;
 import lombok.NonNull;
@@ -119,7 +119,7 @@ public class PickingTerminalByWarehouseAndProductViewCustomizer implements SqlVi
 	{
 		viewLayoutBuilder.element(DocumentLayoutUIControlDescriptor.builder()
 										  .setWidgetType(DocumentFieldWidgetType.Lookup)
-										  .addField(DocumentLayoutElementFieldDescriptor.builder(FIELDNAME_ProductOrBPartner)
+										  .addField(DocumentLayoutUIControlFieldDescriptor.builder(FIELDNAME_ProductOrBPartner)
 															.setPublicField(true))
 										  .build());
 

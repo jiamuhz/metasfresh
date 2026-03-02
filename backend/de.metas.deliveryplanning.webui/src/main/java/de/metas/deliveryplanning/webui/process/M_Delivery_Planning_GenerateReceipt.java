@@ -21,7 +21,7 @@ import de.metas.process.Param;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
 import de.metas.util.Check;
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
@@ -123,10 +123,10 @@ public class M_Delivery_Planning_GenerateReceipt extends JavaProcess
 		p_ShipmentFECParams.updateOnParameterChanged(toInternalParameterName(externalParameterName), getB2BShipmentForexContracts().orElse(null));
 	}
 
-	@ProcessParamLookupValuesProvider(parameterName = ForexContractParameters.PARAM_C_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup)
+	@ProcessParamLookupValuesProvider(parameterName = ForexContractParameters.PARAM_C_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup)
 	public LookupValuesList getAvailableReceiptForexContracts() {return helper.toLookupValuesList(getReceiptForexContracts());}
 
-	@ProcessParamLookupValuesProvider(parameterName = PARAM_FEC_Shipment_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup)
+	@ProcessParamLookupValuesProvider(parameterName = PARAM_FEC_Shipment_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup)
 	public LookupValuesList getAvailableB2BShipmentForexContracts()
 	{
 		final ForexContracts b2bShipmentContracts = helper.getB2BShipmentContracts(getReceiptInfo()).orElse(null);

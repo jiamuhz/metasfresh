@@ -20,7 +20,7 @@ import de.metas.ui.web.window.datatypes.Values;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
 import de.metas.util.Check;
 import de.metas.util.GuavaCollectors;
 import de.metas.util.Services;
@@ -104,7 +104,7 @@ public final class HUEditorRowAttributesHelper
 				.setCaption(caption)
 				.setDescription(description)
 				.setWidgetType(widgetType)
-				.addField(DocumentLayoutElementFieldDescriptor.builder(attributeCode.getCode())
+				.addField(DocumentLayoutUIControlFieldDescriptor.builder(attributeCode.getCode())
 						.setPublicField(true)
 						.setDevices(getDeviceDescriptors(attributeCode, warehouseId)))
 				.build();
@@ -229,7 +229,7 @@ public final class HUEditorRowAttributesHelper
 		return DocumentLayoutUIControlDescriptor.builder()
 				.setCaption(caption)
 				.setWidgetType(DocumentFieldWidgetType.Text)
-				.addField(DocumentLayoutElementFieldDescriptor
+				.addField(DocumentLayoutUIControlFieldDescriptor
 								  .builder(I_M_HU.COLUMNNAME_ClearanceNote)
 								  .setPublicField(true))
 				.build();

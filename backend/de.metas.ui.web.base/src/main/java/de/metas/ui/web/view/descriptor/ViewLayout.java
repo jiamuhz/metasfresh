@@ -19,7 +19,7 @@ import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.WindowId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
 import de.metas.ui.web.window.model.DocumentQueryOrderBy;
 import de.metas.ui.web.window.model.DocumentQueryOrderByList;
 import de.metas.util.Check;
@@ -307,7 +307,7 @@ public class ViewLayout implements ETagAware
 		return getElements()
 				.stream()
 				.flatMap(element -> element.getFields().stream())
-				.map(DocumentLayoutElementFieldDescriptor::getField)
+				.map(DocumentLayoutUIControlFieldDescriptor::getField)
 				.collect(ImmutableSet.toImmutableSet());
 	}
 

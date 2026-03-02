@@ -48,7 +48,7 @@ import de.metas.ui.web.pporder.util.WEBUI_PP_Order_ProcessHelper;
 import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
 import de.metas.util.Services;
 import org.compiere.SpringContextHolder;
@@ -179,7 +179,7 @@ public class WEBUI_PP_Order_Pick_ReceivedHUs extends WEBUI_PP_Order_Template imp
 	@ProcessParamLookupValuesProvider(//
 			parameterName = WEBUI_M_HU_Pick_ParametersFiller.PARAM_M_ShipmentSchedule_ID, //
 			numericKey = true, //
-			lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup)
+			lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup)
 	private LookupValuesPage getShipmentScheduleValues(final LookupDataSourceContext context)
 	{
 		return createNewDefaultParametersFiller().getShipmentScheduleValues(context);
@@ -199,7 +199,7 @@ public class WEBUI_PP_Order_Pick_ReceivedHUs extends WEBUI_PP_Order_Template imp
 			parameterName = WEBUI_M_HU_Pick_ParametersFiller.PARAM_M_PickingSlot_ID, //
 			dependsOn = WEBUI_M_HU_Pick_ParametersFiller.PARAM_M_ShipmentSchedule_ID, //
 			numericKey = true, //
-			lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup)
+			lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup)
 	private LookupValuesList getPickingSlotValues(final LookupDataSourceContext context)
 	{
 		final WEBUI_M_HU_Pick_ParametersFiller filler = WEBUI_M_HU_Pick_ParametersFiller
