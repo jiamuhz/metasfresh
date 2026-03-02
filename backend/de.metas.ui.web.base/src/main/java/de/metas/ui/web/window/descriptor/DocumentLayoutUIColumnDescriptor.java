@@ -38,7 +38,7 @@ import lombok.NonNull;
 /**
  * 列容器 @DocumentLayoutSectionDescriptor
  */
-public class DocumentLayoutColumnDescriptor
+public class DocumentLayoutUIColumnDescriptor
 {
 	public static final Builder builder()
 	{
@@ -48,7 +48,7 @@ public class DocumentLayoutColumnDescriptor
 	private final String internalName;
 	private final List<DocumentLayoutElementGroupDescriptor> elementGroups;
 
-	private DocumentLayoutColumnDescriptor(final Builder builder)
+	private DocumentLayoutUIColumnDescriptor(final Builder builder)
 	{
 		internalName = builder.internalName;
 		elementGroups = ImmutableList.copyOf(builder.buildElementGroups());
@@ -76,7 +76,7 @@ public class DocumentLayoutColumnDescriptor
 
 	public static final class Builder
 	{
-		private static final Logger logger = LogManager.getLogger(DocumentLayoutColumnDescriptor.Builder.class);
+		private static final Logger logger = LogManager.getLogger(DocumentLayoutUIColumnDescriptor.Builder.class);
 
 		private String internalName;
 		private final List<DocumentLayoutElementGroupDescriptor.Builder> elementGroupsBuilders = new ArrayList<>();
@@ -95,9 +95,9 @@ public class DocumentLayoutColumnDescriptor
 					.toString();
 		}
 
-		public DocumentLayoutColumnDescriptor build()
+		public DocumentLayoutUIColumnDescriptor build()
 		{
-			final DocumentLayoutColumnDescriptor result = new DocumentLayoutColumnDescriptor(this);
+			final DocumentLayoutUIColumnDescriptor result = new DocumentLayoutUIColumnDescriptor(this);
 
 			logger.trace("Built {} for {}", result, this);
 			return result;

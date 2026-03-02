@@ -35,15 +35,15 @@ import de.metas.ui.web.window.descriptor.DocumentFieldDataBindingDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutColumnDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIColumnDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementGroupDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor.CaptionMode;
-import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor.ClosableMode;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor.CaptionMode;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor.ClosableMode;
 import de.metas.ui.web.window.descriptor.DocumentFormLayout;
 import de.metas.ui.web.window.descriptor.LookupDescriptorProvider;
 import de.metas.ui.web.window.descriptor.LookupDescriptorProviders;
@@ -168,7 +168,7 @@ public class DataEntryTabLoader
 
 		for (final DataEntrySection dataEntrySection : subTab.getSections())
 		{
-			final DocumentLayoutSectionDescriptor.Builder section = createLayoutSection(dataEntrySection);
+			final DocumentLayoutUISectionDescriptor.Builder section = createLayoutSection(dataEntrySection);
 			singleRowLayoutBuilder.addSection(section);
 		}
 
@@ -178,17 +178,17 @@ public class DataEntryTabLoader
 		return subGroupDescriptor.build();
 	}
 
-	private DocumentLayoutSectionDescriptor.Builder createLayoutSection(
+	private DocumentLayoutUISectionDescriptor.Builder createLayoutSection(
 			@NonNull final DataEntrySection dataEntrySection)
 	{
-		final DocumentLayoutColumnDescriptor.Builder column = DocumentLayoutColumnDescriptor
+		final DocumentLayoutUIColumnDescriptor.Builder column = DocumentLayoutUIColumnDescriptor
 				.builder();
 
 		final ClosableMode closableMode = dataEntrySection.isInitiallyClosed()
 				? ClosableMode.INITIALLY_CLOSED
 				: ClosableMode.INITIALLY_OPEN;
 
-		final DocumentLayoutSectionDescriptor.Builder layoutSection = DocumentLayoutSectionDescriptor
+		final DocumentLayoutUISectionDescriptor.Builder layoutSection = DocumentLayoutUISectionDescriptor
 				.builder()
 				.setCaption(dataEntrySection.getCaption())
 				.setDescription(dataEntrySection.getDescription())

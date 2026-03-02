@@ -54,7 +54,7 @@ public class DocumentFormLayout
 	private final ITranslatableString caption;
 	private final ITranslatableString description;
 
-	private final List<DocumentLayoutSectionDescriptor> sections;
+	private final List<DocumentLayoutUISectionDescriptor> sections;
 	// sections 压扁的内容
 	private transient List<DocumentLayoutElementDescriptor> _elements = null;
 
@@ -93,7 +93,7 @@ public class DocumentFormLayout
 		return description.translate(adLanguage);
 	}
 
-	public List<DocumentLayoutSectionDescriptor> getSections()
+	public List<DocumentLayoutUISectionDescriptor> getSections()
 	{
 		return sections;
 	}
@@ -125,7 +125,7 @@ public class DocumentFormLayout
 		private ITranslatableString caption;
 		private ITranslatableString description;
 
-		private final ArrayList<DocumentLayoutSectionDescriptor.Builder> sectionBuilders = new ArrayList<>();
+		private final ArrayList<DocumentLayoutUISectionDescriptor.Builder> sectionBuilders = new ArrayList<>();
 
 		private Builder()
 		{
@@ -137,13 +137,13 @@ public class DocumentFormLayout
 			return new DocumentFormLayout(this);
 		}
 
-		private List<DocumentLayoutSectionDescriptor> buildSections()
+		private List<DocumentLayoutUISectionDescriptor> buildSections()
 		{
 			return sectionBuilders
 					.stream()
-					.filter(DocumentLayoutSectionDescriptor.Builder::isValid)
-					.map(DocumentLayoutSectionDescriptor.Builder::build)
-					.filter(DocumentLayoutSectionDescriptor::hasColumns)
+					.filter(DocumentLayoutUISectionDescriptor.Builder::isValid)
+					.map(DocumentLayoutUISectionDescriptor.Builder::build)
+					.filter(DocumentLayoutUISectionDescriptor::hasColumns)
 					.collect(ImmutableList.toImmutableList());
 		}
 
@@ -174,13 +174,13 @@ public class DocumentFormLayout
 			return this;
 		}
 
-		public Builder addSection(@NonNull final DocumentLayoutSectionDescriptor.Builder sectionBuilderToAdd)
+		public Builder addSection(@NonNull final DocumentLayoutUISectionDescriptor.Builder sectionBuilderToAdd)
 		{
 			sectionBuilders.add(sectionBuilderToAdd);
 			return this;
 		}
 
-		public Builder addSections(@NonNull final Collection<DocumentLayoutSectionDescriptor.Builder> sectionBuildersToAdd)
+		public Builder addSections(@NonNull final Collection<DocumentLayoutUISectionDescriptor.Builder> sectionBuildersToAdd)
 		{
 			sectionBuilders.addAll(sectionBuildersToAdd);
 			return this;

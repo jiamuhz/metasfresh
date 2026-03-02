@@ -6,7 +6,7 @@ import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.collect.ImmutableList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutColumnDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIColumnDescriptor;
 import de.metas.util.GuavaCollectors;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
@@ -43,14 +43,14 @@ import java.util.stream.Stream;
 @ToString
 public final class JSONDocumentLayoutColumn
 {
-	static List<JSONDocumentLayoutColumn> ofList(final List<DocumentLayoutColumnDescriptor> columns, final JSONDocumentLayoutOptions jsonOpts)
+	static List<JSONDocumentLayoutColumn> ofList(final List<DocumentLayoutUIColumnDescriptor> columns, final JSONDocumentLayoutOptions jsonOpts)
 	{
 		return columns.stream()
 				.map(column -> of(column, jsonOpts))
 				.collect(GuavaCollectors.toImmutableList());
 	}
 
-	private static JSONDocumentLayoutColumn of(final DocumentLayoutColumnDescriptor column, final JSONDocumentLayoutOptions jsonOpts)
+	private static JSONDocumentLayoutColumn of(final DocumentLayoutUIColumnDescriptor column, final JSONDocumentLayoutOptions jsonOpts)
 	{
 		return new JSONDocumentLayoutColumn(column, jsonOpts);
 	}
@@ -67,7 +67,7 @@ public final class JSONDocumentLayoutColumn
 		this.elementGroups = elementGroups == null ? ImmutableList.of() : ImmutableList.copyOf(elementGroups);
 	}
 
-	private JSONDocumentLayoutColumn(final DocumentLayoutColumnDescriptor column, final JSONDocumentLayoutOptions jsonOpts)
+	private JSONDocumentLayoutColumn(final DocumentLayoutUIColumnDescriptor column, final JSONDocumentLayoutOptions jsonOpts)
 	{
 		elementGroups = JSONDocumentLayoutElementGroup.ofList(column.getElementGroups(), jsonOpts);
 	}

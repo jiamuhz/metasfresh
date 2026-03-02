@@ -18,14 +18,14 @@ import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutColumnDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIColumnDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.FieldType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementGroupDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFormLayout;
 import de.metas.ui.web.window.descriptor.DocumentFormLayout.Builder;
 import de.metas.ui.web.window.descriptor.LayoutElementType;
@@ -250,12 +250,12 @@ public class LayoutFactory
 
 		//
 		// Layout sections
-		List<DocumentLayoutSectionDescriptor.Builder> layoutSectionsList = layoutSingleRow_SectionsList();
+		List<DocumentLayoutUISectionDescriptor.Builder> layoutSectionsList = layoutSingleRow_SectionsList();
 		// In case there were no layout sections defined then use the grid view elements and put them in one column.
 		// Usually this happens when generating the single row layout for included tabs.
-		if (layoutSectionsList.stream().noneMatch(DocumentLayoutSectionDescriptor.Builder::isNotEmpty))
+		if (layoutSectionsList.stream().noneMatch(DocumentLayoutUISectionDescriptor.Builder::isNotEmpty))
 		{
-			final DocumentLayoutSectionDescriptor.Builder oneLayoutSection = DocumentLayoutSectionDescriptor.builder()
+			final DocumentLayoutUISectionDescriptor.Builder oneLayoutSection = DocumentLayoutUISectionDescriptor.builder()
 					.addColumn(layoutGridView().getElements());
 			layoutSectionsList = ImmutableList.of(oneLayoutSection);
 		}
@@ -266,14 +266,14 @@ public class LayoutFactory
 				.addSections(layoutSectionsList);
 	}
 
-	private List<DocumentLayoutSectionDescriptor.Builder> layoutSingleRow_SectionsList()
+	private List<DocumentLayoutUISectionDescriptor.Builder> layoutSingleRow_SectionsList()
 	{
 		final List<I_AD_UI_Section> uiSections = getUISections();
 		logger.trace("Generating layout sections list for {}", uiSections);
 
 		//
 		// UI Sections
-		final List<DocumentLayoutSectionDescriptor.Builder> layoutSectionBuilders = new ArrayList<>();
+		final List<DocumentLayoutUISectionDescriptor.Builder> layoutSectionBuilders = new ArrayList<>();
 		for (final I_AD_UI_Section uiSection : uiSections)
 		{
 			layoutSectionBuilders.add(layoutSingleRow_Section(uiSection)
@@ -283,10 +283,10 @@ public class LayoutFactory
 		return layoutSectionBuilders;
 	}
 
-	private DocumentLayoutSectionDescriptor.Builder layoutSingleRow_Section(final I_AD_UI_Section uiSection)
+	private DocumentLayoutUISectionDescriptor.Builder layoutSingleRow_Section(final I_AD_UI_Section uiSection)
 	{
 		final IModelTranslationMap uiSectionTrls = InterfaceWrapperHelper.getModelTranslationMap(uiSection);
-		final DocumentLayoutSectionDescriptor.Builder layoutSectionBuilder = DocumentLayoutSectionDescriptor.builder()
+		final DocumentLayoutUISectionDescriptor.Builder layoutSectionBuilder = DocumentLayoutUISectionDescriptor.builder()
 				.setInternalName(uiSection.toString())
 				.setCaption(uiSectionTrls.getColumnTrl(I_AD_UI_Section.COLUMNNAME_Name, uiSection.getName()))
 				.setDescription(uiSectionTrls.getColumnTrl(I_AD_UI_Section.COLUMNNAME_Description, uiSection.getDescription()))
@@ -301,7 +301,7 @@ public class LayoutFactory
 		// UI Columns
 		for (final I_AD_UI_Column uiColumn : getUIProvider().getUIColumns(uiSection))
 		{
-			final DocumentLayoutColumnDescriptor.Builder layoutColumnBuilder = layoutSingleRow_Column(uiColumn);
+			final DocumentLayoutUIColumnDescriptor.Builder layoutColumnBuilder = layoutSingleRow_Column(uiColumn);
 			if (layoutColumnBuilder == null)
 			{
 				continue;
@@ -313,7 +313,7 @@ public class LayoutFactory
 	}
 
 	@Nullable
-	private DocumentLayoutColumnDescriptor.Builder layoutSingleRow_Column(final I_AD_UI_Column uiColumn)
+	private DocumentLayoutUIColumnDescriptor.Builder layoutSingleRow_Column(final I_AD_UI_Column uiColumn)
 	{
 		if (!uiColumn.isActive())
 		{
@@ -324,7 +324,7 @@ public class LayoutFactory
 		final List<I_AD_UI_ElementGroup> uiElementGroups = getUIProvider().getUIElementGroups(uiColumn);
 		logger.trace("Generating layout column for {}: {}", uiColumn, uiElementGroups);
 
-		final DocumentLayoutColumnDescriptor.Builder layoutColumnBuilder = DocumentLayoutColumnDescriptor.builder()
+		final DocumentLayoutUIColumnDescriptor.Builder layoutColumnBuilder = DocumentLayoutUIColumnDescriptor.builder()
 				.setInternalName(uiColumn.toString());
 
 		//

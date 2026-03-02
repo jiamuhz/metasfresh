@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  */
 
 @SuppressWarnings("serial")
-public final class DocumentLayoutSectionDescriptor implements Serializable
+public final class DocumentLayoutUISectionDescriptor implements Serializable
 {
 	public enum ClosableMode
 	{
@@ -80,9 +80,9 @@ public final class DocumentLayoutSectionDescriptor implements Serializable
 	@Nullable private final String uiStyle;
 
 	@Getter
-	private final List<DocumentLayoutColumnDescriptor> columns;
+	private final List<DocumentLayoutUIColumnDescriptor> columns;
 
-	private DocumentLayoutSectionDescriptor(@NonNull final Builder builder)
+	private DocumentLayoutUISectionDescriptor(@NonNull final Builder builder)
 	{
 		caption = builder.caption;
 		description = builder.description;
@@ -121,14 +121,14 @@ public final class DocumentLayoutSectionDescriptor implements Serializable
 
 	public static final class Builder
 	{
-		private static final Logger logger = LogManager.getLogger(DocumentLayoutSectionDescriptor.Builder.class);
+		private static final Logger logger = LogManager.getLogger(DocumentLayoutUISectionDescriptor.Builder.class);
 
 		private ITranslatableString caption = TranslatableStrings.empty();
 		private ITranslatableString description = TranslatableStrings.empty();
 		private String internalName;
 		@Nullable
 		private String uiStyle;
-		private final List<DocumentLayoutColumnDescriptor.Builder> columnsBuilders = new ArrayList<>();
+		private final List<DocumentLayoutUIColumnDescriptor.Builder> columnsBuilders = new ArrayList<>();
 
 		@Getter
 		private String invalidReason;
@@ -153,16 +153,16 @@ public final class DocumentLayoutSectionDescriptor implements Serializable
 					.toString();
 		}
 
-		public DocumentLayoutSectionDescriptor build()
+		public DocumentLayoutUISectionDescriptor build()
 		{
 			if (isInvalid())
 			{
 				throw new IllegalStateException("Builder is invalid: " + getInvalidReason());
 			}
-			return new DocumentLayoutSectionDescriptor(this);
+			return new DocumentLayoutUISectionDescriptor(this);
 		}
 
-		private List<DocumentLayoutColumnDescriptor> buildColumns()
+		private List<DocumentLayoutUIColumnDescriptor> buildColumns()
 		{
 			return columnsBuilders
 					.stream()
@@ -171,7 +171,7 @@ public final class DocumentLayoutSectionDescriptor implements Serializable
 					.collect(GuavaCollectors.toImmutableList());
 		}
 
-		private boolean checkValid(final DocumentLayoutColumnDescriptor column)
+		private boolean checkValid(final DocumentLayoutUIColumnDescriptor column)
 		{
 			if (!column.hasElementGroups())
 			{
@@ -206,7 +206,7 @@ public final class DocumentLayoutSectionDescriptor implements Serializable
 			return this;
 		}
 
-		public Builder addColumn(final DocumentLayoutColumnDescriptor.Builder columnBuilder)
+		public Builder addColumn(final DocumentLayoutUIColumnDescriptor.Builder columnBuilder)
 		{
 			Check.assumeNotNull(columnBuilder, "Parameter columnBuilder is not null");
 			columnsBuilders.add(columnBuilder);
@@ -225,7 +225,7 @@ public final class DocumentLayoutSectionDescriptor implements Serializable
 					.map(elementBuilder -> DocumentLayoutElementLineDescriptor.builder().addElement(elementBuilder))
 					.forEach(elementLineBuilder -> elementsGroupBuilder.addElementLine(elementLineBuilder));
 
-			final DocumentLayoutColumnDescriptor.Builder column = DocumentLayoutColumnDescriptor.builder().addElementGroup(elementsGroupBuilder);
+			final DocumentLayoutUIColumnDescriptor.Builder column = DocumentLayoutUIColumnDescriptor.builder().addElementGroup(elementsGroupBuilder);
 
 			addColumn(column);
 			return this;
@@ -268,7 +268,7 @@ public final class DocumentLayoutSectionDescriptor implements Serializable
 
 		private Stream<DocumentLayoutElementDescriptor.Builder> streamElementBuilders()
 		{
-			return columnsBuilders.stream().flatMap(DocumentLayoutColumnDescriptor.Builder::streamElementBuilders);
+			return columnsBuilders.stream().flatMap(DocumentLayoutUIColumnDescriptor.Builder::streamElementBuilders);
 		}
 
 		public Builder setExcludeSpecialFields()

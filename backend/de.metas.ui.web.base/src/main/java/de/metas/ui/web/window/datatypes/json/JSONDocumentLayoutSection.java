@@ -6,9 +6,9 @@ import com.fasterxml.jackson.annotation.JsonInclude.Include;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor.CaptionMode;
-import de.metas.ui.web.window.descriptor.DocumentLayoutSectionDescriptor.ClosableMode;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor.CaptionMode;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor.ClosableMode;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.Getter;
 import lombok.NonNull;
@@ -44,7 +44,7 @@ import java.util.stream.Stream;
 @JsonAutoDetect(fieldVisibility = JsonAutoDetect.Visibility.ANY, getterVisibility = JsonAutoDetect.Visibility.NONE, isGetterVisibility = JsonAutoDetect.Visibility.NONE, setterVisibility = JsonAutoDetect.Visibility.NONE)
 public final class JSONDocumentLayoutSection
 {
-	static List<JSONDocumentLayoutSection> ofSectionsList(final List<DocumentLayoutSectionDescriptor> sections, final JSONDocumentLayoutOptions jsonOpts)
+	static List<JSONDocumentLayoutSection> ofSectionsList(final List<DocumentLayoutUISectionDescriptor> sections, final JSONDocumentLayoutOptions jsonOpts)
 	{
 		return sections.stream()
 				.map(section -> new JSONDocumentLayoutSection(section, jsonOpts))
@@ -97,7 +97,7 @@ public final class JSONDocumentLayoutSection
 	private final JSONClosableMode closableMode;
 
 	private JSONDocumentLayoutSection(
-			final DocumentLayoutSectionDescriptor section,
+			final DocumentLayoutUISectionDescriptor section,
 			final JSONDocumentLayoutOptions options)
 	{
 		this.title = extractTitle(section, options);
@@ -110,7 +110,7 @@ public final class JSONDocumentLayoutSection
 
 	@Nullable
 	private static String extractTitle(
-			@NonNull final DocumentLayoutSectionDescriptor section,
+			@NonNull final DocumentLayoutUISectionDescriptor section,
 			@NonNull final JSONDocumentLayoutOptions options)
 	{
 		if (CaptionMode.DISPLAY.equals(section.getCaptionMode()))
