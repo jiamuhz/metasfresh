@@ -9,7 +9,7 @@ import com.google.common.collect.ImmutableList;
 import de.metas.i18n.ITranslatableString;
 import de.metas.i18n.TranslatableStrings;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
 import de.metas.util.Check;
 import de.metas.util.GuavaCollectors;
 
@@ -46,7 +46,7 @@ public class ASILayout
 	private final ITranslatableString caption;
 	private final ITranslatableString description;
 
-	private final List<DocumentLayoutElementDescriptor> elements;
+	private final List<DocumentLayoutUIControlDescriptor> elements;
 
 	private ASILayout(final Builder builder)
 	{
@@ -83,7 +83,7 @@ public class ASILayout
 		return description.translate(adLanguage);
 	}
 
-	public List<DocumentLayoutElementDescriptor> getElements()
+	public List<DocumentLayoutUIControlDescriptor> getElements()
 	{
 		return elements;
 	}
@@ -94,7 +94,7 @@ public class ASILayout
 		private ITranslatableString caption;
 		private ITranslatableString description;
 
-		private final List<DocumentLayoutElementDescriptor.Builder> elementBuilders = new ArrayList<>();
+		private final List<DocumentLayoutUIControlDescriptor.Builder> elementBuilders = new ArrayList<>();
 
 		private Builder()
 		{
@@ -106,7 +106,7 @@ public class ASILayout
 			return new ASILayout(this);
 		}
 
-		private List<DocumentLayoutElementDescriptor> buildElements()
+		private List<DocumentLayoutUIControlDescriptor> buildElements()
 		{
 			return elementBuilders
 					.stream()
@@ -142,7 +142,7 @@ public class ASILayout
 			return this;
 		}
 
-		public Builder addElement(final DocumentLayoutElementDescriptor.Builder elementBuilder)
+		public Builder addElement(final DocumentLayoutUIControlDescriptor.Builder elementBuilder)
 		{
 			Check.assumeNotNull(elementBuilder, "Parameter elementBuilder is not null");
 			elementBuilders.add(elementBuilder);

@@ -27,7 +27,7 @@ import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
 import de.metas.ui.web.window.descriptor.WidgetSize;
 import de.metas.ui.web.window.descriptor.sql.ProductLookupDescriptor;
 import de.metas.util.Services;
@@ -109,7 +109,7 @@ import lombok.NonNull;
 
 		final QuickInputLayoutDescriptor.Builder quickInputBuilder = QuickInputLayoutDescriptor.builder();
 
-		DocumentLayoutElementDescriptor
+		DocumentLayoutUIControlDescriptor
 				.builderOrEmpty(entityDescriptor,
 						ICablesOrderLineQuickInput.COLUMNNAME_Plug1_Product_ID,
 						ICablesOrderLineQuickInput.COLUMNNAME_Cable_Product_ID,
@@ -117,13 +117,13 @@ import lombok.NonNull;
 				.map(b -> b.setWidgetSize(WidgetSize.Large))
 				.ifPresent(quickInputBuilder::element);
 
-		DocumentLayoutElementDescriptor
+		DocumentLayoutUIControlDescriptor
 				.builderOrEmpty(entityDescriptor,
 						ICablesOrderLineQuickInput.COLUMNNAME_CableLength)
 				.map(b -> b.setWidgetSize(WidgetSize.Small))
 				.ifPresent(quickInputBuilder::element);
 
-		DocumentLayoutElementDescriptor
+		DocumentLayoutUIControlDescriptor
 				.builderOrEmpty(entityDescriptor,
 						ICablesOrderLineQuickInput.COLUMNNAME_Qty)
 				.map(b -> b.setWidgetSize(WidgetSize.Small))

@@ -18,7 +18,7 @@ import de.metas.ui.web.view.descriptor.annotation.ViewColumnHelper;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.WindowId;
 import de.metas.ui.web.window.descriptor.DetailId;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.model.DocumentQueryOrderBy;
 import de.metas.ui.web.window.model.DocumentQueryOrderByList;
@@ -93,7 +93,7 @@ public class ViewLayout implements ETagAware
 
 	private final DocumentQueryOrderByList defaultOrderBys;
 
-	private final ImmutableList<DocumentLayoutElementDescriptor> elements;
+	private final ImmutableList<DocumentLayoutUIControlDescriptor> elements;
 
 	private final String idFieldName;
 	private final String focusOnFieldName;
@@ -175,7 +175,7 @@ public class ViewLayout implements ETagAware
 					   final boolean treeCollapsible,
 					   final int treeExpandedDepth,
 					   final boolean geoLocationSupport,
-					   final ImmutableList<DocumentLayoutElementDescriptor> elements)
+					   final ImmutableList<DocumentLayoutUIControlDescriptor> elements)
 	{
 		Check.assumeNotEmpty(elements, "elements is not empty");
 
@@ -297,7 +297,7 @@ public class ViewLayout implements ETagAware
 				.build();
 	}
 
-	public List<DocumentLayoutElementDescriptor> getElements()
+	public List<DocumentLayoutUIControlDescriptor> getElements()
 	{
 		return elements;
 	}
@@ -396,7 +396,7 @@ public class ViewLayout implements ETagAware
 		private Integer treeExpandedDepth;
 		private Boolean geoLocationSupport;
 
-		private ArrayList<DocumentLayoutElementDescriptor> listElementDescriptor = null;
+		private ArrayList<DocumentLayoutUIControlDescriptor> listElementDescriptor = null;
 		private ArrayList<DocumentQueryOrderBy> defaultOrderBys = null;
 
 		public ViewLayout build()
@@ -410,7 +410,7 @@ public class ViewLayout implements ETagAware
 			final int treeExpandedDepthEffective = treeExpandedDepth != null ? treeExpandedDepth : from.treeExpandedDepth;
 			final boolean geoLocationSupportEffective = geoLocationSupport != null ? geoLocationSupport : from.geoLocationSupport;
 
-			final ImmutableList<DocumentLayoutElementDescriptor> elementsEffective = listElementDescriptor != null ? ImmutableList.copyOf(listElementDescriptor) : from.elements;
+			final ImmutableList<DocumentLayoutUIControlDescriptor> elementsEffective = listElementDescriptor != null ? ImmutableList.copyOf(listElementDescriptor) : from.elements;
 			final DocumentQueryOrderByList defaultOrderBysEffective = DocumentQueryOrderByList.ofList(defaultOrderBys);
 
 			// If there will be no change then return this
@@ -499,7 +499,7 @@ public class ViewLayout implements ETagAware
 			return this;
 		}
 
-		private ArrayList<DocumentLayoutElementDescriptor> getElementsToEdit()
+		private ArrayList<DocumentLayoutUIControlDescriptor> getElementsToEdit()
 		{
 			if (listElementDescriptor == null)
 			{
@@ -508,12 +508,12 @@ public class ViewLayout implements ETagAware
 			return listElementDescriptor;
 		}
 
-		private void setListElementDescriptor(final ArrayList<DocumentLayoutElementDescriptor> listElementDescriptor)
+		private void setListElementDescriptor(final ArrayList<DocumentLayoutUIControlDescriptor> listElementDescriptor)
 		{
 			this.listElementDescriptor = listElementDescriptor;
 		}
 
-		public ChangeBuilder element(@NonNull final DocumentLayoutElementDescriptor element)
+		public ChangeBuilder element(@NonNull final DocumentLayoutUIControlDescriptor element)
 		{
 			getElementsToEdit().add(element);
 			return this;
@@ -521,12 +521,12 @@ public class ViewLayout implements ETagAware
 
 		public ChangeBuilder elementsOrder(final String... fieldNames)
 		{
-			final ImmutableMap<String, DocumentLayoutElementDescriptor> mapFieldNameVsElementDescriptor = Maps.uniqueIndex(getElementsToEdit(), DocumentLayoutElementDescriptor::getFirstFieldName);
+			final ImmutableMap<String, DocumentLayoutUIControlDescriptor> mapFieldNameVsElementDescriptor = Maps.uniqueIndex(getElementsToEdit(), DocumentLayoutUIControlDescriptor::getFirstFieldName);
 
-			final ArrayList<DocumentLayoutElementDescriptor> listElementDescriptor = new ArrayList<>();
+			final ArrayList<DocumentLayoutUIControlDescriptor> listElementDescriptor = new ArrayList<>();
 			for (final String fieldName : fieldNames)
 			{
-				final DocumentLayoutElementDescriptor elementDescriptor = mapFieldNameVsElementDescriptor.get(fieldName);
+				final DocumentLayoutUIControlDescriptor elementDescriptor = mapFieldNameVsElementDescriptor.get(fieldName);
 				if (elementDescriptor == null)
 				{
 					logger.warn("Field {} was not found. Will be ignored."
@@ -600,7 +600,7 @@ public class ViewLayout implements ETagAware
 
 		private boolean allowOpeningRowDetails = true;
 
-		private final List<DocumentLayoutElementDescriptor.Builder> elementBuilders = new ArrayList<>();
+		private final List<DocumentLayoutUIControlDescriptor.Builder> elementBuilders = new ArrayList<>();
 
 		private String idFieldName;
 		private String focusOnFieldName;
@@ -614,12 +614,12 @@ public class ViewLayout implements ETagAware
 			return new ViewLayout(this);
 		}
 
-		private List<DocumentLayoutElementDescriptor> buildElements()
+		private List<DocumentLayoutUIControlDescriptor> buildElements()
 		{
 			return elementBuilders
 					.stream()
 					.filter(elementBuilder -> elementBuilder.getFieldsCount() > 0) // have some field builders
-					.map(DocumentLayoutElementDescriptor.Builder::build)
+					.map(DocumentLayoutUIControlDescriptor.Builder::build)
 					.collect(GuavaCollectors.toImmutableList());
 		}
 
@@ -689,9 +689,9 @@ public class ViewLayout implements ETagAware
 
 		public Builder removeElementByFieldName(final String fieldName)
 		{
-			for (final Iterator<DocumentLayoutElementDescriptor.Builder> it = elementBuilders.iterator(); it.hasNext(); )
+			for (final Iterator<DocumentLayoutUIControlDescriptor.Builder> it = elementBuilders.iterator(); it.hasNext(); )
 			{
-				final DocumentLayoutElementDescriptor.Builder element = it.next();
+				final DocumentLayoutUIControlDescriptor.Builder element = it.next();
 				if (element.getFieldNames().contains(fieldName))
 				{
 					element.removeFieldByFieldName(fieldName);
@@ -705,19 +705,19 @@ public class ViewLayout implements ETagAware
 			return this;
 		}
 
-		public Builder addElement(@NonNull final DocumentLayoutElementDescriptor.Builder elementBuilder)
+		public Builder addElement(@NonNull final DocumentLayoutUIControlDescriptor.Builder elementBuilder)
 		{
 			elementBuilders.add(elementBuilder);
 			return this;
 		}
 
-		public Builder addElements(@NonNull final Collection<DocumentLayoutElementDescriptor.Builder> elementBuilders)
+		public Builder addElements(@NonNull final Collection<DocumentLayoutUIControlDescriptor.Builder> elementBuilders)
 		{
 			elementBuilders.forEach(this::addElement);
 			return this;
 		}
 
-		public Builder addElements(@NonNull final Stream<DocumentLayoutElementDescriptor.Builder> elementBuilders)
+		public Builder addElements(@NonNull final Stream<DocumentLayoutUIControlDescriptor.Builder> elementBuilders)
 		{
 			elementBuilders.forEach(this::addElement);
 			return this;
@@ -725,7 +725,7 @@ public class ViewLayout implements ETagAware
 
 		public <T extends IViewRow> Builder addElementsFromViewRowClass(final Class<T> viewRowClass, final JSONViewDataType viewType)
 		{
-			final List<DocumentLayoutElementDescriptor.Builder> elements = ViewColumnHelper.createLayoutElementsForClass(viewRowClass, viewType);
+			final List<DocumentLayoutUIControlDescriptor.Builder> elements = ViewColumnHelper.createLayoutElementsForClass(viewRowClass, viewType);
 			if (elements.isEmpty())
 			{
 				//noinspection ThrowableNotThrown
@@ -739,7 +739,7 @@ public class ViewLayout implements ETagAware
 
 		public <T extends IViewRow> Builder addElementsFromViewRowClassAndFieldNames(final Class<T> viewRowClass, final JSONViewDataType viewDataType, final ViewColumnHelper.ClassViewColumnOverrides... columns)
 		{
-			final List<DocumentLayoutElementDescriptor.Builder> elements = ViewColumnHelper.createLayoutElementsForClassAndFieldNames(viewRowClass, viewDataType, columns);
+			final List<DocumentLayoutUIControlDescriptor.Builder> elements = ViewColumnHelper.createLayoutElementsForClassAndFieldNames(viewRowClass, viewDataType, columns);
 			Check.assumeNotEmpty(elements, "elements is not empty"); // shall never happen
 
 			addElements(elements);
@@ -752,7 +752,7 @@ public class ViewLayout implements ETagAware
 			return !elementBuilders.isEmpty();
 		}
 
-		public List<DocumentLayoutElementDescriptor.Builder> getElements()
+		public List<DocumentLayoutUIControlDescriptor.Builder> getElements()
 		{
 			return elementBuilders;
 		}

@@ -23,7 +23,7 @@ import de.metas.ui.web.window.datatypes.LookupValue.StringLookupValue;
 import de.metas.ui.web.window.datatypes.MediaType;
 import de.metas.ui.web.window.datatypes.json.JSONNullValue;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.descriptor.ViewEditorRenderMode;
 import de.metas.ui.web.window.descriptor.WidgetSize;
@@ -119,7 +119,7 @@ public final class ViewColumnHelper
 		}
 	}
 
-	public static List<DocumentLayoutElementDescriptor.Builder> createLayoutElementsForClass(
+	public static List<DocumentLayoutUIControlDescriptor.Builder> createLayoutElementsForClass(
 			@NonNull final Class<?> dataType,
 			@NonNull final JSONViewDataType viewType)
 	{
@@ -152,7 +152,7 @@ public final class ViewColumnHelper
 		boolean hideIfConfiguredSysConfig;
 	}
 
-	public static List<DocumentLayoutElementDescriptor.Builder> createLayoutElementsForClassAndFieldNames(
+	public static List<DocumentLayoutUIControlDescriptor.Builder> createLayoutElementsForClassAndFieldNames(
 			@NonNull final Class<?> dataType,
 			@NonNull final JSONViewDataType viewDataType,
 			@NonNull final ClassViewColumnOverrides... columns)
@@ -387,9 +387,9 @@ public final class ViewColumnHelper
 		}
 	}
 
-	private static DocumentLayoutElementDescriptor.Builder createLayoutElement(final ClassViewColumnDescriptor column)
+	private static DocumentLayoutUIControlDescriptor.Builder createLayoutElement(final ClassViewColumnDescriptor column)
 	{
-		return DocumentLayoutElementDescriptor.builder()
+		return DocumentLayoutUIControlDescriptor.builder()
 				.setGridElement()
 				.setCaption(column.getCaption())
 				.setWidgetType(column.getWidgetType())

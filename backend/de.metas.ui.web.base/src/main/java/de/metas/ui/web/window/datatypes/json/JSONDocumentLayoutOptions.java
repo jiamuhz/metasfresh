@@ -13,7 +13,7 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.base.Suppliers;
 
 import de.metas.ui.web.session.UserSession;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
 import de.metas.ui.web.window.descriptor.factory.NewRecordDescriptorsProvider;
 import lombok.Builder;
 import lombok.Getter;
@@ -77,7 +77,7 @@ public class JSONDocumentLayoutOptions
 	private final Supplier<Duration> defaultLookupSearchStartDelaySupplier;
 	private static final Supplier<Duration> ZERO_DURATION_SUPPLIER = Suppliers.ofInstance(Duration.ZERO);
 
-	private Predicate<DocumentLayoutElementDescriptor> _documentLayoutElementFilter; // lazy
+	private Predicate<DocumentLayoutUIControlDescriptor> _documentLayoutElementFilter; // lazy
 
 	@Builder(builderMethodName = "_builder")
 	private JSONDocumentLayoutOptions(
@@ -104,7 +104,7 @@ public class JSONDocumentLayoutOptions
 		return duration != null ? duration : Duration.ZERO;
 	}
 
-	public Predicate<DocumentLayoutElementDescriptor> documentLayoutElementFilter()
+	public Predicate<DocumentLayoutUIControlDescriptor> documentLayoutElementFilter()
 	{
 		if (_documentLayoutElementFilter == null)
 		{
@@ -113,7 +113,7 @@ public class JSONDocumentLayoutOptions
 		return _documentLayoutElementFilter;
 	}
 
-	private static final Predicate<DocumentLayoutElementDescriptor> FILTER_DocumentLayoutElementDescriptor_BASIC = new Predicate<DocumentLayoutElementDescriptor>()
+	private static final Predicate<DocumentLayoutUIControlDescriptor> FILTER_DocumentLayoutElementDescriptor_BASIC = new Predicate<DocumentLayoutUIControlDescriptor>()
 	{
 		@Override
 		public String toString()
@@ -122,13 +122,13 @@ public class JSONDocumentLayoutOptions
 		}
 
 		@Override
-		public boolean test(final DocumentLayoutElementDescriptor layoutElement)
+		public boolean test(final DocumentLayoutUIControlDescriptor layoutElement)
 		{
 			return !layoutElement.isAdvancedField();
 		}
 	};
 
-	private static final Predicate<DocumentLayoutElementDescriptor> FILTER_DocumentLayoutElementDescriptor_ALL = new Predicate<DocumentLayoutElementDescriptor>()
+	private static final Predicate<DocumentLayoutUIControlDescriptor> FILTER_DocumentLayoutElementDescriptor_ALL = new Predicate<DocumentLayoutUIControlDescriptor>()
 	{
 		@Override
 		public String toString()
@@ -137,7 +137,7 @@ public class JSONDocumentLayoutOptions
 		}
 
 		@Override
-		public boolean test(final DocumentLayoutElementDescriptor layoutElement)
+		public boolean test(final DocumentLayoutUIControlDescriptor layoutElement)
 		{
 			return true;
 		}

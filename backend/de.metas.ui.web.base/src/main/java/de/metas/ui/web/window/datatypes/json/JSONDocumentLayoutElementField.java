@@ -12,7 +12,7 @@ import com.google.common.collect.ImmutableMap;
 import de.metas.ui.web.window.datatypes.WindowId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.FieldType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
@@ -118,7 +118,7 @@ public final class JSONDocumentLayoutElementField
 	}
 
 	/**
-	 * If one {@link DocumentLayoutElementDescriptor} has multiple fields,
+	 * If one {@link DocumentLayoutUIControlDescriptor} has multiple fields,
 	 * then this tells the frontend how to render each particular "sub-widget".
 	 * <p>
 	 * Please keep in sync with {@link LookupSource}.

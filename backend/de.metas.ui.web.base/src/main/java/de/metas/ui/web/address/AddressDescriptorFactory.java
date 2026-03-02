@@ -15,7 +15,7 @@ import de.metas.ui.web.window.descriptor.DocumentFieldDataBindingDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.descriptor.factory.standard.DefaultValueExpressionsFactory;
 import de.metas.ui.web.window.model.DocumentsRepository;
@@ -308,9 +308,9 @@ public class AddressDescriptorFactory
 		return layout.build();
 	}
 
-	private static DocumentLayoutElementDescriptor.Builder createLayoutElement(final DocumentFieldDescriptor fieldDescriptor)
+	private static DocumentLayoutUIControlDescriptor.Builder createLayoutElement(final DocumentFieldDescriptor fieldDescriptor)
 	{
-		return DocumentLayoutElementDescriptor.builder()
+		return DocumentLayoutUIControlDescriptor.builder()
 				.setCaption(fieldDescriptor.getCaption())
 				.setWidgetType(fieldDescriptor.getWidgetType())
 				.addField(DocumentLayoutElementFieldDescriptor.builder(fieldDescriptor.getFieldName())

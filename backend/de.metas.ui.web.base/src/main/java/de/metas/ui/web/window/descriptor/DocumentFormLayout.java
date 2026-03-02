@@ -56,7 +56,7 @@ public class DocumentFormLayout
 
 	private final List<DocumentLayoutUISectionDescriptor> sections;
 	// sections 压扁的内容
-	private transient List<DocumentLayoutElementDescriptor> _elements = null;
+	private transient List<DocumentLayoutUIControlDescriptor> _elements = null;
 
 	private DocumentFormLayout(final Builder builder)
 	{
@@ -98,9 +98,9 @@ public class DocumentFormLayout
 		return sections;
 	}
 
-	public List<DocumentLayoutElementDescriptor> getElements()
+	public List<DocumentLayoutUIControlDescriptor> getElements()
 	{
-		List<DocumentLayoutElementDescriptor> elements = _elements;
+		List<DocumentLayoutUIControlDescriptor> elements = _elements;
 		if (elements == null)
 		{
 			elements = sections.stream()

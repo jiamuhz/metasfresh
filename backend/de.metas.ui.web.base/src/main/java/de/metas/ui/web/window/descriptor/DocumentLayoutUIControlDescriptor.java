@@ -52,7 +52,7 @@ import java.util.stream.Stream;
 /**
  * UI布局中的控件描述符
  */
-public final class DocumentLayoutElementDescriptor
+public final class DocumentLayoutUIControlDescriptor
 {
 	public static Builder builder()
 	{
@@ -150,7 +150,7 @@ public final class DocumentLayoutElementDescriptor
 	@Getter
 	private final DetailId inlineTabId;
 
-	private DocumentLayoutElementDescriptor(final Builder builder)
+	private DocumentLayoutUIControlDescriptor(final Builder builder)
 	{
 		internalName = builder.getInternalName();
 		gridElement = builder.isGridElement();
@@ -237,7 +237,7 @@ public final class DocumentLayoutElementDescriptor
 
 	public static final class Builder
 	{
-		private static final Logger logger = LogManager.getLogger(DocumentLayoutElementDescriptor.Builder.class);
+		private static final Logger logger = LogManager.getLogger(DocumentLayoutUIControlDescriptor.Builder.class);
 
 		private String _internalName;
 		private ITranslatableString _caption = null;
@@ -288,11 +288,11 @@ public final class DocumentLayoutElementDescriptor
 					.toString();
 		}
 
-		public DocumentLayoutElementDescriptor build()
+		public DocumentLayoutUIControlDescriptor build()
 		{
 			setConsumed();
 
-			final DocumentLayoutElementDescriptor result = new DocumentLayoutElementDescriptor(this);
+			final DocumentLayoutUIControlDescriptor result = new DocumentLayoutUIControlDescriptor(this);
 
 			logger.trace("Built {} for {}", result, this);
 			return result;

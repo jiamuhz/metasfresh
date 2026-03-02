@@ -166,7 +166,7 @@ public final class DocumentLayoutElementGroupDescriptor implements Serializable
 			return !elementLinesBuilders.isEmpty();
 		}
 
-		public Stream<DocumentLayoutElementDescriptor.Builder> streamElementBuilders()
+		public Stream<DocumentLayoutUIControlDescriptor.Builder> streamElementBuilders()
 		{
 			return elementLinesBuilders.stream().flatMap(DocumentLayoutElementLineDescriptor.Builder::streamElementBuilders);
 		}

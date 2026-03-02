@@ -4,7 +4,7 @@ import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
 import de.metas.util.Check;
 import lombok.NonNull;
 
@@ -55,7 +55,7 @@ public class QuickInputLayoutDescriptor
 				continue;
 			}
 
-			DocumentLayoutElementDescriptor
+			DocumentLayoutUIControlDescriptor
 					.builderOrEmpty(entityDescriptor, elementFieldNames)
 					.ifPresent(layoutBuilder::element);
 		}
@@ -83,7 +83,7 @@ public class QuickInputLayoutDescriptor
 				continue;
 			}
 
-			DocumentLayoutElementDescriptor
+			DocumentLayoutUIControlDescriptor
 					.builderOrEmpty(entityDescriptor, fieldName)
 					.ifPresent(layoutBuilder::element);
 		}
@@ -98,16 +98,16 @@ public class QuickInputLayoutDescriptor
 
 		for (final DocumentFieldDescriptor field : entityDescriptor.getFields())
 		{
-			final DocumentLayoutElementDescriptor.Builder element = DocumentLayoutElementDescriptor.builder(field);
+			final DocumentLayoutUIControlDescriptor.Builder element = DocumentLayoutUIControlDescriptor.builder(field);
 			layoutBuilder.element(element);
 		}
 
 		return layoutBuilder.build();
 	}
 
-	private final List<DocumentLayoutElementDescriptor> elements;
+	private final List<DocumentLayoutUIControlDescriptor> elements;
 
-	private QuickInputLayoutDescriptor(final List<DocumentLayoutElementDescriptor> elements)
+	private QuickInputLayoutDescriptor(final List<DocumentLayoutUIControlDescriptor> elements)
 	{
 		this.elements = ImmutableList.copyOf(elements);
 	}
@@ -121,14 +121,14 @@ public class QuickInputLayoutDescriptor
 				.toString();
 	}
 
-	public List<DocumentLayoutElementDescriptor> getElements()
+	public List<DocumentLayoutUIControlDescriptor> getElements()
 	{
 		return elements;
 	}
 
 	public static final class Builder
 	{
-		private final List<DocumentLayoutElementDescriptor> elements = new ArrayList<>();
+		private final List<DocumentLayoutUIControlDescriptor> elements = new ArrayList<>();
 
 		private Builder()
 		{
@@ -139,7 +139,7 @@ public class QuickInputLayoutDescriptor
 			return new QuickInputLayoutDescriptor(elements);
 		}
 
-		public Builder element(@NonNull final DocumentLayoutElementDescriptor.Builder elementBuilder)
+		public Builder element(@NonNull final DocumentLayoutUIControlDescriptor.Builder elementBuilder)
 		{
 			elements.add(elementBuilder.build());
 			return this;

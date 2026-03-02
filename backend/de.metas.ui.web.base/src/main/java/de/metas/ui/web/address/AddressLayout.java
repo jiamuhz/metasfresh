@@ -6,7 +6,7 @@ import java.util.List;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableList;
 
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
 import de.metas.util.Check;
 import de.metas.util.GuavaCollectors;
 
@@ -39,7 +39,7 @@ public class AddressLayout
 		return new Builder();
 	}
 
-	private final List<DocumentLayoutElementDescriptor> elements;
+	private final List<DocumentLayoutUIControlDescriptor> elements;
 
 	private AddressLayout(final Builder builder)
 	{
@@ -56,14 +56,14 @@ public class AddressLayout
 				.toString();
 	}
 
-	public List<DocumentLayoutElementDescriptor> getElements()
+	public List<DocumentLayoutUIControlDescriptor> getElements()
 	{
 		return elements;
 	}
 
 	public static final class Builder
 	{
-		private final List<DocumentLayoutElementDescriptor.Builder> elementBuilders = new ArrayList<>();
+		private final List<DocumentLayoutUIControlDescriptor.Builder> elementBuilders = new ArrayList<>();
 
 		private Builder()
 		{
@@ -75,7 +75,7 @@ public class AddressLayout
 			return new AddressLayout(this);
 		}
 
-		private List<DocumentLayoutElementDescriptor> buildElements()
+		private List<DocumentLayoutUIControlDescriptor> buildElements()
 		{
 			return elementBuilders
 					.stream()
@@ -91,7 +91,7 @@ public class AddressLayout
 					.toString();
 		}
 
-		public Builder addElement(final DocumentLayoutElementDescriptor.Builder elementBuilder)
+		public Builder addElement(final DocumentLayoutUIControlDescriptor.Builder elementBuilder)
 		{
 			Check.assumeNotNull(elementBuilder, "Parameter elementBuilder is not null");
 			elementBuilders.add(elementBuilder);

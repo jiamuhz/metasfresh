@@ -14,7 +14,7 @@ import de.metas.ui.web.window.descriptor.ButtonFieldActionDescriptor;
 import de.metas.ui.web.window.descriptor.ButtonFieldActionDescriptor.ButtonFieldActionType;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
 import de.metas.ui.web.window.descriptor.ViewEditorRenderMode;
 import de.metas.ui.web.window.descriptor.WidgetSize;
 import de.metas.util.GuavaCollectors;
@@ -56,7 +56,7 @@ import java.util.Set;
 public final class JSONDocumentLayoutElement
 {
 	public static List<JSONDocumentLayoutElement> ofList(
-			@NonNull final List<DocumentLayoutElementDescriptor> elements,
+			@NonNull final List<DocumentLayoutUIControlDescriptor> elements,
 			@NonNull final JSONDocumentLayoutOptions jsonOpts)
 	{
 		return elements.stream()
@@ -68,7 +68,7 @@ public final class JSONDocumentLayoutElement
 
 	@Nullable
 	static JSONDocumentLayoutElement fromNullable(
-			@Nullable final DocumentLayoutElementDescriptor element,
+			@Nullable final DocumentLayoutUIControlDescriptor element,
 			@NonNull final JSONDocumentLayoutOptions jsonOpts)
 	{
 		if (element == null)
@@ -158,7 +158,7 @@ public final class JSONDocumentLayoutElement
 	private JSONDocumentLayoutTab inlineTab;
 
 	private JSONDocumentLayoutElement(
-			@NonNull final DocumentLayoutElementDescriptor element,
+			@NonNull final DocumentLayoutUIControlDescriptor element,
 			@NonNull final JSONDocumentLayoutOptions options)
 	{
 		final String adLanguage = options.getAdLanguage();

@@ -41,7 +41,7 @@ public final class DocumentLayoutElementLineDescriptor
 	}
 
 	private final String internalName;
-	private final List<DocumentLayoutElementDescriptor> elements;
+	private final List<DocumentLayoutUIControlDescriptor> elements;
 
 	private DocumentLayoutElementLineDescriptor(@NonNull final Builder builder)
 	{
@@ -59,7 +59,7 @@ public final class DocumentLayoutElementLineDescriptor
 				.toString();
 	}
 
-	public List<DocumentLayoutElementDescriptor> getElements()
+	public List<DocumentLayoutUIControlDescriptor> getElements()
 	{
 		return elements;
 	}
@@ -69,7 +69,7 @@ public final class DocumentLayoutElementLineDescriptor
 		private static final Logger logger = LogManager.getLogger(DocumentLayoutElementLineDescriptor.Builder.class);
 
 		private String internalName;
-		private final List<DocumentLayoutElementDescriptor.Builder> elementsBuilders = new ArrayList<>();
+		private final List<DocumentLayoutUIControlDescriptor.Builder> elementsBuilders = new ArrayList<>();
 
 		private Builder()
 		{
@@ -93,7 +93,7 @@ public final class DocumentLayoutElementLineDescriptor
 			return result;
 		}
 
-		private List<DocumentLayoutElementDescriptor> buildElements()
+		private List<DocumentLayoutUIControlDescriptor> buildElements()
 		{
 			return elementsBuilders
 					.stream()
@@ -103,7 +103,7 @@ public final class DocumentLayoutElementLineDescriptor
 					.collect(GuavaCollectors.toImmutableList());
 		}
 
-		private final boolean checkValid(final DocumentLayoutElementDescriptor.Builder elementBuilder)
+		private final boolean checkValid(final DocumentLayoutUIControlDescriptor.Builder elementBuilder)
 		{
 			if (elementBuilder.isConsumed())
 			{
@@ -120,7 +120,7 @@ public final class DocumentLayoutElementLineDescriptor
 			return true;
 		}
 
-		private final boolean checkValid(final DocumentLayoutElementDescriptor element)
+		private final boolean checkValid(final DocumentLayoutUIControlDescriptor element)
 		{
 			if (element.isEmpty())
 			{
@@ -137,7 +137,7 @@ public final class DocumentLayoutElementLineDescriptor
 			return this;
 		}
 
-		public Builder addElement(final DocumentLayoutElementDescriptor.Builder elementBuilder)
+		public Builder addElement(final DocumentLayoutUIControlDescriptor.Builder elementBuilder)
 		{
 			elementsBuilders.add(elementBuilder);
 			return this;
@@ -148,7 +148,7 @@ public final class DocumentLayoutElementLineDescriptor
 			return !elementsBuilders.isEmpty();
 		}
 
-		public Stream<DocumentLayoutElementDescriptor.Builder> streamElementBuilders()
+		public Stream<DocumentLayoutUIControlDescriptor.Builder> streamElementBuilders()
 		{
 			return elementsBuilders.stream();
 		}
