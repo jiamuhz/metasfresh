@@ -162,11 +162,11 @@ public class X_AD_UI_Element extends org.compiere.model.PO implements I_AD_UI_El
 	 * Reference name: AD_UI_ElementType
 	 */
 	public static final int AD_UI_ELEMENTTYPE_AD_Reference_ID=540736;
-	/** Field = F */
+	/** Field = F   普通的数据字段，如文本框、下拉框 */
 	public static final String AD_UI_ELEMENTTYPE_Field = "F";
-	/** Labels = L */
+	/** Labels = L  只读的标签文本，用于显示说明信息 */
 	public static final String AD_UI_ELEMENTTYPE_Labels = "L";
-	/** InlineTab = T */
+	/** InlineTab = T  嵌入在主表单中的子表/明细表 */
 	public static final String AD_UI_ELEMENTTYPE_InlineTab = "T";
 	@Override
 	public void setAD_UI_ElementType (final java.lang.String AD_UI_ElementType)
