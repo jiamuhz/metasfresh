@@ -36,6 +36,7 @@ import java.lang.reflect.Field;
 
 /**
  * Note: take a look at {@link ViewColumnHelper} to see how the annotation is processed.
+ * 用于标记 IViewRow 中 列
  */
 @Target({ ElementType.FIELD })
 @Retention(RetentionPolicy.RUNTIME)

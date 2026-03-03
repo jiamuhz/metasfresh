@@ -324,7 +324,7 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 
 		final ViewLayout.Builder viewLayoutBuilder = ViewLayout.builder()
 				.setWindowId(windowId)
-				.setCaption("HU Editor")
+				.setCaption("HU Editor HU 编辑器")
 				.setEmptyResultText(msgBL.getTranslatableMsgText(LayoutFactory.TAB_EMPTY_RESULT_TEXT))
 				.setEmptyResultHint(msgBL.getTranslatableMsgText(LayoutFactory.TAB_EMPTY_RESULT_HINT))
 				.setIdFieldName(HUEditorRow.FIELDNAME_M_HU_ID)
