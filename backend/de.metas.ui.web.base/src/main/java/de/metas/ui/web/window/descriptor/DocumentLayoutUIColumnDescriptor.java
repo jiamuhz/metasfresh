@@ -46,7 +46,7 @@ public class DocumentLayoutUIColumnDescriptor
 	}
 
 	private final String internalName;
-	private final List<DocumentLayoutUIControlsLineGroupDescriptor> elementGroups;
+	private final List<DocumentLayoutElementLineGroupDescriptor> elementGroups;
 
 	private DocumentLayoutUIColumnDescriptor(final Builder builder)
 	{
@@ -64,7 +64,7 @@ public class DocumentLayoutUIColumnDescriptor
 				.toString();
 	}
 
-	public List<DocumentLayoutUIControlsLineGroupDescriptor> getElementGroups()
+	public List<DocumentLayoutElementLineGroupDescriptor> getElementGroups()
 	{
 		return elementGroups;
 	}
@@ -79,7 +79,7 @@ public class DocumentLayoutUIColumnDescriptor
 		private static final Logger logger = LogManager.getLogger(DocumentLayoutUIColumnDescriptor.Builder.class);
 
 		private String internalName;
-		private final List<DocumentLayoutUIControlsLineGroupDescriptor.Builder> elementGroupsBuilders = new ArrayList<>();
+		private final List<DocumentLayoutElementLineGroupDescriptor.Builder> elementGroupsBuilders = new ArrayList<>();
 
 		private Builder()
 		{
@@ -103,7 +103,7 @@ public class DocumentLayoutUIColumnDescriptor
 			return result;
 		}
 
-		private List<DocumentLayoutUIControlsLineGroupDescriptor> buildElementGroups()
+		private List<DocumentLayoutElementLineGroupDescriptor> buildElementGroups()
 		{
 			return elementGroupsBuilders
 					.stream()
@@ -112,7 +112,7 @@ public class DocumentLayoutUIColumnDescriptor
 					.collect(GuavaCollectors.toImmutableList());
 		}
 
-		private boolean checkValid(final DocumentLayoutUIControlsLineGroupDescriptor elementGroup)
+		private boolean checkValid(final DocumentLayoutElementLineGroupDescriptor elementGroup)
 		{
 			if(!elementGroup.hasElementLines())
 			{
@@ -129,13 +129,13 @@ public class DocumentLayoutUIColumnDescriptor
 			return this;
 		}
 
-		public Builder addElementTabs(@NonNull final List<DocumentLayoutUIControlsLineGroupDescriptor.Builder> elementGroupBuilders)
+		public Builder addElementTabs(@NonNull final List<DocumentLayoutElementLineGroupDescriptor.Builder> elementGroupBuilders)
 		{
 			elementGroupsBuilders.addAll(elementGroupBuilders);
 			return this;
 		}
 
-		public Builder addElementGroup(@NonNull final DocumentLayoutUIControlsLineGroupDescriptor.Builder elementGroupBuilder)
+		public Builder addElementGroup(@NonNull final DocumentLayoutElementLineGroupDescriptor.Builder elementGroupBuilder)
 		{
 			elementGroupsBuilders.add(elementGroupBuilder);
 			return this;
@@ -143,7 +143,7 @@ public class DocumentLayoutUIColumnDescriptor
 
 		public Stream<DocumentLayoutElementDescriptor.Builder> streamElementBuilders()
 		{
-			return elementGroupsBuilders.stream().flatMap(DocumentLayoutUIControlsLineGroupDescriptor.Builder::streamElementBuilders);
+			return elementGroupsBuilders.stream().flatMap(DocumentLayoutElementLineGroupDescriptor.Builder::streamElementBuilders);
 		}
 	}
 }

@@ -39,8 +39,8 @@ import de.metas.ui.web.window.descriptor.DocumentLayoutUIColumnDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineGroupDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineGroupDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor.CaptionMode;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor.ClosableMode;
@@ -197,7 +197,7 @@ public class DataEntryTabLoader
 				.setClosableMode(closableMode)
 				.setCaptionMode(CaptionMode.DISPLAY);
 
-		final ImmutableList<DocumentLayoutUIControlsLineGroupDescriptor.Builder> //
+		final ImmutableList<DocumentLayoutElementLineGroupDescriptor.Builder> //
 		elementGroups = createLayoutElemementTab(dataEntrySection);
 
 		column.addElementTabs(elementGroups);
@@ -205,23 +205,23 @@ public class DataEntryTabLoader
 		return layoutSection;
 	}
 
-	private ImmutableList<DocumentLayoutUIControlsLineGroupDescriptor.Builder> createLayoutElemementTab(@NonNull final DataEntrySection dataEntrySection)
+	private ImmutableList<DocumentLayoutElementLineGroupDescriptor.Builder> createLayoutElemementTab(@NonNull final DataEntrySection dataEntrySection)
 	{
 		final int columnCount = dataEntrySection.getLines().stream()
 				.map(DataEntryLine::getFields)
 				.map(Collection::size)
 				.max(Comparator.naturalOrder()).orElse(0);
 
-		final ImmutableList.Builder<DocumentLayoutUIControlsLineGroupDescriptor.Builder> elementGroups = ImmutableList.builder();
+		final ImmutableList.Builder<DocumentLayoutElementLineGroupDescriptor.Builder> elementGroups = ImmutableList.builder();
 
 		final List<DataEntryLine> dataEntryLines = dataEntrySection.getLines();
 		for (final DataEntryLine dataEntryLine : dataEntryLines)
 		{
-			final DocumentLayoutUIControlsLineGroupDescriptor.Builder elementGroup = DocumentLayoutUIControlsLineGroupDescriptor
+			final DocumentLayoutElementLineGroupDescriptor.Builder elementGroup = DocumentLayoutElementLineGroupDescriptor
 					.builder()
 					.setColumnCount(columnCount);
 
-			final ImmutableList<DocumentLayoutUIControlsLineDescriptor.Builder> elementLines = createLayoutElemementLine(dataEntryLine, columnCount);
+			final ImmutableList<DocumentLayoutElementLineDescriptor.Builder> elementLines = createLayoutElemementLine(dataEntryLine, columnCount);
 			elementGroup.addElementLines(elementLines);
 
 			elementGroups.add(elementGroup);
@@ -230,35 +230,35 @@ public class DataEntryTabLoader
 		return elementGroups.build();
 	}
 
-	private ImmutableList<DocumentLayoutUIControlsLineDescriptor.Builder> createLayoutElemementLine(
+	private ImmutableList<DocumentLayoutElementLineDescriptor.Builder> createLayoutElemementLine(
 			@NonNull final DataEntryLine dataEntryLine,
 			final int columnCount)
 	{
-		final ImmutableList.Builder<DocumentLayoutUIControlsLineDescriptor.Builder> result = ImmutableList.builder();
+		final ImmutableList.Builder<DocumentLayoutElementLineDescriptor.Builder> result = ImmutableList.builder();
 
 		final List<DataEntryField> fields = dataEntryLine.getFields();
 		for (final DataEntryField field : fields)
 		{
-			final DocumentLayoutUIControlsLineDescriptor.Builder elementLine = createLayoutElemementLine(field);
+			final DocumentLayoutElementLineDescriptor.Builder elementLine = createLayoutElemementLine(field);
 			result.add(elementLine);
 		}
 
 		// fill the gap with "empty cells" if this line has less fields than columnCount specifies
 		for (int i = fields.size(); i < columnCount; i++)
 		{
-			final DocumentLayoutUIControlsLineDescriptor.Builder emptyElementLine = DocumentLayoutUIControlsLineDescriptor.builder();
+			final DocumentLayoutElementLineDescriptor.Builder emptyElementLine = DocumentLayoutElementLineDescriptor.builder();
 			result.add(emptyElementLine);
 		}
 
 		return result.build();
 	}
 
-	private DocumentLayoutUIControlsLineDescriptor.Builder createLayoutElemementLine(@NonNull final DataEntryField field)
+	private DocumentLayoutElementLineDescriptor.Builder createLayoutElemementLine(@NonNull final DataEntryField field)
 	{
 		// note that each element builder can be used/"consumed" only ones
 		final DocumentLayoutElementDescriptor.Builder dataElement = createFieldElementDescriptor(field);
 
-		final DocumentLayoutUIControlsLineDescriptor.Builder elementLine = DocumentLayoutUIControlsLineDescriptor
+		final DocumentLayoutElementLineDescriptor.Builder elementLine = DocumentLayoutElementLineDescriptor
 				.builder()
 				.addElement(dataElement);
 		return elementLine;

@@ -23,8 +23,8 @@ import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.FieldType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineGroupDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineGroupDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementLineDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFormLayout;
 import de.metas.ui.web.window.descriptor.DocumentFormLayout.Builder;
@@ -331,7 +331,7 @@ public class LayoutFactory
 		// UI Element Groups
 		for (final I_AD_UI_ElementGroup uiElementGroup : uiElementGroups)
 		{
-			final DocumentLayoutUIControlsLineGroupDescriptor.Builder layoutElementGroupBuilder = layoutSingleRow_ElementGroup(uiElementGroup);
+			final DocumentLayoutElementLineGroupDescriptor.Builder layoutElementGroupBuilder = layoutSingleRow_ElementGroup(uiElementGroup);
 			if (layoutElementGroupBuilder == null)
 			{
 				continue;
@@ -343,7 +343,7 @@ public class LayoutFactory
 	}
 
 	@Nullable
-	private DocumentLayoutUIControlsLineGroupDescriptor.Builder layoutSingleRow_ElementGroup(final I_AD_UI_ElementGroup uiElementGroup)
+	private DocumentLayoutElementLineGroupDescriptor.Builder layoutSingleRow_ElementGroup(final I_AD_UI_ElementGroup uiElementGroup)
 	{
 		if (!uiElementGroup.isActive())
 		{
@@ -354,7 +354,7 @@ public class LayoutFactory
 		final List<I_AD_UI_Element> uiElements = getUIProvider().getUIElements(uiElementGroup);
 		logger.trace("Building layout element group for {}: {}", uiElementGroup, uiElements);
 
-		final DocumentLayoutUIControlsLineGroupDescriptor.Builder layoutElementGroupBuilder = DocumentLayoutUIControlsLineGroupDescriptor.builder()
+		final DocumentLayoutElementLineGroupDescriptor.Builder layoutElementGroupBuilder = DocumentLayoutElementLineGroupDescriptor.builder()
 				.setInternalName(uiElementGroup.toString())
 				.setLayoutType(uiElementGroup.getUIStyle());
 
@@ -368,7 +368,7 @@ public class LayoutFactory
 				continue;
 			}
 
-			final DocumentLayoutUIControlsLineDescriptor.Builder layoutElementLineBuilder = layoutSingleRow_ElementLine(uiElement);
+			final DocumentLayoutElementLineDescriptor.Builder layoutElementLineBuilder = layoutSingleRow_ElementLine(uiElement);
 			if (layoutElementLineBuilder == null)
 			{
 				continue;
@@ -387,7 +387,7 @@ public class LayoutFactory
 	}
 
 	@Nullable
-	private DocumentLayoutUIControlsLineDescriptor.Builder layoutSingleRow_ElementLine(final I_AD_UI_Element uiElement)
+	private DocumentLayoutElementLineDescriptor.Builder layoutSingleRow_ElementLine(final I_AD_UI_Element uiElement)
 	{
 		logger.trace("Building layout element line for {}", uiElement);
 
@@ -398,7 +398,7 @@ public class LayoutFactory
 			return null;
 		}
 
-		final DocumentLayoutUIControlsLineDescriptor.Builder layoutElementLineBuilder = DocumentLayoutUIControlsLineDescriptor.builder()
+		final DocumentLayoutElementLineDescriptor.Builder layoutElementLineBuilder = DocumentLayoutElementLineDescriptor.builder()
 				.setInternalName(uiElement.toString())
 				.addElement(layoutElementBuilder);
 

@@ -220,9 +220,9 @@ public final class DocumentLayoutUISectionDescriptor implements Serializable
 				return this;
 			}
 
-			final DocumentLayoutUIControlsLineGroupDescriptor.Builder elementsGroupBuilder = DocumentLayoutUIControlsLineGroupDescriptor.builder();
+			final DocumentLayoutElementLineGroupDescriptor.Builder elementsGroupBuilder = DocumentLayoutElementLineGroupDescriptor.builder();
 			elementsBuilders.stream()
-					.map(elementBuilder -> DocumentLayoutUIControlsLineDescriptor.builder().addElement(elementBuilder))
+					.map(elementBuilder -> DocumentLayoutElementLineDescriptor.builder().addElement(elementBuilder))
 					.forEach(elementLineBuilder -> elementsGroupBuilder.addElementLine(elementLineBuilder));
 
 			final DocumentLayoutUIColumnDescriptor.Builder column = DocumentLayoutUIColumnDescriptor.builder().addElementGroup(elementsGroupBuilder);
