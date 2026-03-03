@@ -213,7 +213,7 @@ public final class DocumentLayoutUISectionDescriptor implements Serializable
 			return this;
 		}
 
-		public Builder addColumn(final List<DocumentLayoutUIControlDescriptor.Builder> elementsBuilders)
+		public Builder addColumn(final List<DocumentLayoutElementDescriptor.Builder> elementsBuilders)
 		{
 			if (elementsBuilders == null || elementsBuilders.isEmpty())
 			{
@@ -266,7 +266,7 @@ public final class DocumentLayoutUISectionDescriptor implements Serializable
 			return streamElementBuilders().findAny().isPresent();
 		}
 
-		private Stream<DocumentLayoutUIControlDescriptor.Builder> streamElementBuilders()
+		private Stream<DocumentLayoutElementDescriptor.Builder> streamElementBuilders()
 		{
 			return columnsBuilders.stream().flatMap(DocumentLayoutUIColumnDescriptor.Builder::streamElementBuilders);
 		}

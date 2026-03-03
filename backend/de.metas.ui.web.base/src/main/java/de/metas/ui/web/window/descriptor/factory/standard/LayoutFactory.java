@@ -20,9 +20,9 @@ import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIColumnDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.FieldType;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.FieldType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineGroupDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor;
@@ -391,7 +391,7 @@ public class LayoutFactory
 	{
 		logger.trace("Building layout element line for {}", uiElement);
 
-		final DocumentLayoutUIControlDescriptor.Builder layoutElementBuilder = layoutElement(uiElement);
+		final DocumentLayoutElementDescriptor.Builder layoutElementBuilder = layoutElement(uiElement);
 		if (layoutElementBuilder == null)
 		{
 			logger.trace("Skip building layout element line because got null layout element: {}", uiElement);
@@ -407,7 +407,7 @@ public class LayoutFactory
 	}
 
 	@Nullable
-	private DocumentLayoutUIControlDescriptor.Builder layoutElement(@NonNull final I_AD_UI_Element uiElement)
+	private DocumentLayoutElementDescriptor.Builder layoutElement(@NonNull final I_AD_UI_Element uiElement)
 	{
 		logger.trace("Building layout element for {}", uiElement);
 
@@ -417,7 +417,7 @@ public class LayoutFactory
 			return null;
 		}
 
-		final DocumentLayoutUIControlDescriptor.Builder layoutElementBuilder;
+		final DocumentLayoutElementDescriptor.Builder layoutElementBuilder;
 		final LayoutElementType layoutElementType = LayoutElementType.ofCode(uiElement.getAD_UI_ElementType());
 		if (LayoutElementType.InlineTab.equals(layoutElementType))
 		{
@@ -445,11 +445,11 @@ public class LayoutFactory
 	}
 
 	@Nullable
-	private DocumentLayoutUIControlDescriptor.Builder layoutElement_Default(@NonNull final I_AD_UI_Element uiElement)
+	private DocumentLayoutElementDescriptor.Builder layoutElement_Default(@NonNull final I_AD_UI_Element uiElement)
 	{
 		//
 		// UI main field
-		final DocumentLayoutUIControlDescriptor.Builder layoutElementBuilder = DocumentLayoutUIControlDescriptor.builder()
+		final DocumentLayoutElementDescriptor.Builder layoutElementBuilder = DocumentLayoutElementDescriptor.builder()
 				.setInternalName(uiElement.toString())
 				.setLayoutType(LayoutType.fromNullable(uiElement.getUIStyle()))
 				.setWidgetSize(WidgetSize.fromNullableADRefListValue(uiElement.getWidgetSize()))
@@ -460,7 +460,7 @@ public class LayoutFactory
 
 		for (final DocumentFieldDescriptor.Builder field : extractDocumentFields(uiElement))
 		{
-			final DocumentLayoutUIControlFieldDescriptor.Builder layoutElementFieldBuilder = layoutElementField(field);
+			final DocumentLayoutElementFieldDescriptor.Builder layoutElementFieldBuilder = layoutElementField(field);
 
 			if (layoutElementBuilder.getFieldsCount() <= 0)
 			{
@@ -499,11 +499,11 @@ public class LayoutFactory
 		return layoutElementBuilder;
 	}
 
-	private DocumentLayoutUIControlDescriptor.Builder layoutElement_InlineTab(@NonNull final I_AD_UI_Element uiElement)
+	private DocumentLayoutElementDescriptor.Builder layoutElement_InlineTab(@NonNull final I_AD_UI_Element uiElement)
 	{
 		final AdTabId inlineTabId = AdTabId.ofRepoId(uiElement.getInline_Tab_ID());
 
-		return DocumentLayoutUIControlDescriptor.builder()
+		return DocumentLayoutElementDescriptor.builder()
 				.setInternalName(uiElement.toString())
 				.setLayoutType(LayoutType.fromNullable(uiElement.getUIStyle()))
 				.setWidgetSize(WidgetSize.fromNullableADRefListValue(uiElement.getWidgetSize()))
@@ -742,7 +742,7 @@ public class LayoutFactory
 		return quickInputSupport;
 	}
 
-	private DocumentLayoutUIControlFieldDescriptor.Builder layoutElementField(final DocumentFieldDescriptor.Builder field)
+	private DocumentLayoutElementFieldDescriptor.Builder layoutElementField(final DocumentFieldDescriptor.Builder field)
 	{
 		logger.trace("Building layout element field for {}", field);
 
@@ -752,7 +752,7 @@ public class LayoutFactory
 			field.addCharacteristic(Characteristic.PublicField);
 		}
 
-		final DocumentLayoutUIControlFieldDescriptor.Builder layoutElementFieldBuilder = DocumentLayoutUIControlFieldDescriptor.builder(fieldName)
+		final DocumentLayoutElementFieldDescriptor.Builder layoutElementFieldBuilder = DocumentLayoutElementFieldDescriptor.builder(fieldName)
 				.setCaption(field.getCaption())
 				.setLookupInfos(field.getLookupDescriptor().orElse(null))
 				.setPublicField(field.hasCharacteristic(Characteristic.PublicField))
@@ -822,7 +822,7 @@ public class LayoutFactory
 	}
 
 	@Nullable
-	public DocumentLayoutUIControlDescriptor createSpecialElement_DocumentSummary()
+	public DocumentLayoutElementDescriptor createSpecialElement_DocumentSummary()
 	{
 		final DocumentFieldDescriptor.Builder field = descriptorsFactory.getSpecialField_DocumentSummary();
 		if (field == null)
@@ -830,7 +830,7 @@ public class LayoutFactory
 			return null;
 		}
 
-		return DocumentLayoutUIControlDescriptor.builder()
+		return DocumentLayoutElementDescriptor.builder()
 				.setCaptionNone() // not relevant
 				.setDescription(null) // not relevant
 				.setLayoutTypeNone() // not relevant
@@ -841,7 +841,7 @@ public class LayoutFactory
 	}
 
 	@Nullable
-	public DocumentLayoutUIControlDescriptor createSpecialElement_DocStatusAndDocAction()
+	public DocumentLayoutElementDescriptor createSpecialElement_DocStatusAndDocAction()
 	{
 		final Map<Characteristic, DocumentFieldDescriptor.Builder> fields = descriptorsFactory.getSpecialField_DocSatusAndDocAction();
 		if (fields == null || fields.isEmpty())
@@ -852,7 +852,7 @@ public class LayoutFactory
 		final DocumentFieldDescriptor.Builder docStatusField = fields.get(Characteristic.SpecialField_DocStatus);
 		final DocumentFieldDescriptor.Builder docActionField = fields.get(Characteristic.SpecialField_DocAction);
 
-		return DocumentLayoutUIControlDescriptor.builder()
+		return DocumentLayoutElementDescriptor.builder()
 				.setCaptionNone() // not relevant
 				.setDescription(null) // not relevant
 				.setLayoutTypeNone() // not relevant

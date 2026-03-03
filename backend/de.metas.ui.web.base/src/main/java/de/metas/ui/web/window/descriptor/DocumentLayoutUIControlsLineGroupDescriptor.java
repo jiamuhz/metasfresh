@@ -166,7 +166,7 @@ public final class DocumentLayoutUIControlsLineGroupDescriptor implements Serial
 			return !elementLinesBuilders.isEmpty();
 		}
 
-		public Stream<DocumentLayoutUIControlDescriptor.Builder> streamElementBuilders()
+		public Stream<DocumentLayoutElementDescriptor.Builder> streamElementBuilders()
 		{
 			return elementLinesBuilders.stream().flatMap(DocumentLayoutUIControlsLineDescriptor.Builder::streamElementBuilders);
 		}

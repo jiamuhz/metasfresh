@@ -17,7 +17,7 @@ import de.metas.process.NestedParams;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.model.lookup.LookupDataSource;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Services;
@@ -96,7 +96,7 @@ public class WEBUI_M_HU_CreateReceipt_With_FEC_Param
 		p_FECParams.updateOnParameterChanged(parameterName, getContracts());
 	}
 
-	@ProcessParamLookupValuesProvider(parameterName = ForexContractParameters.PARAM_C_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup)
+	@ProcessParamLookupValuesProvider(parameterName = ForexContractParameters.PARAM_C_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup)
 	public LookupValuesList getAvailableForexContracts()
 	{
 		final ForexContracts contracts = getContracts();

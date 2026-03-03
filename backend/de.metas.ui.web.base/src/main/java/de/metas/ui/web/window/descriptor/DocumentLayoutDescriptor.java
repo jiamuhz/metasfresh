@@ -63,11 +63,11 @@ public final class DocumentLayoutDescriptor
 	/**
 	 * Special element: Document summary
 	 */
-	private final DocumentLayoutUIControlDescriptor documentSummaryElementDescriptor;
+	private final DocumentLayoutElementDescriptor documentSummaryElementDescriptor;
 	/**
 	 * Special element: DocStatus/DocAction
 	 */
-	private final DocumentLayoutUIControlDescriptor docActionElementDescriptor;
+	private final DocumentLayoutElementDescriptor docActionElementDescriptor;
 
 	/**
 	 * 文档的单文档Layout方案
@@ -155,12 +155,12 @@ public final class DocumentLayoutDescriptor
 		return caption.translate(adLanguage);
 	}
 
-	public DocumentLayoutUIControlDescriptor getDocumentSummaryElementDescriptor()
+	public DocumentLayoutElementDescriptor getDocumentSummaryElementDescriptor()
 	{
 		return documentSummaryElementDescriptor;
 	}
 
-	public DocumentLayoutUIControlDescriptor getDocActionElementDescriptor()
+	public DocumentLayoutElementDescriptor getDocActionElementDescriptor()
 	{
 		return docActionElementDescriptor;
 	}
@@ -211,8 +211,8 @@ public final class DocumentLayoutDescriptor
 
 		private WindowId windowId;
 		private ITranslatableString caption = TranslatableStrings.empty();
-		@Nullable private DocumentLayoutUIControlDescriptor documentSummaryElement;
-		@Nullable private DocumentLayoutUIControlDescriptor docActionElement;
+		@Nullable private DocumentLayoutElementDescriptor documentSummaryElement;
+		@Nullable private DocumentLayoutElementDescriptor docActionElement;
 
 		private DocumentFormLayout.Builder singleRowLayout;
 		private ViewLayout.Builder _gridView;
@@ -301,13 +301,13 @@ public final class DocumentLayoutDescriptor
 			return this;
 		}
 
-		public Builder setDocumentSummaryElement(@Nullable final DocumentLayoutUIControlDescriptor documentSummaryElement)
+		public Builder setDocumentSummaryElement(@Nullable final DocumentLayoutElementDescriptor documentSummaryElement)
 		{
 			this.documentSummaryElement = documentSummaryElement;
 			return this;
 		}
 
-		public Builder setDocActionElement(@Nullable final DocumentLayoutUIControlDescriptor docActionElement)
+		public Builder setDocActionElement(@Nullable final DocumentLayoutElementDescriptor docActionElement)
 		{
 			this.docActionElement = docActionElement;
 			return this;

@@ -31,7 +31,7 @@ import de.metas.ui.web.window.datatypes.json.JSONLookupValuesList;
 import de.metas.ui.web.window.datatypes.json.JSONNullValue;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.util.Check;
 import lombok.Builder;
 import lombok.NonNull;
@@ -109,7 +109,7 @@ import lombok.NonNull;
 
 	private String getFieldName(final int columnIndex)
 	{
-		final Set<DocumentLayoutUIControlFieldDescriptor> fields = layout.getElements().get(columnIndex).getFields();
+		final Set<DocumentLayoutElementFieldDescriptor> fields = layout.getElements().get(columnIndex).getFields();
 		return fields.iterator().next().getField();
 	}
 

@@ -37,8 +37,8 @@ import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIColumnDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineGroupDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlsLineDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutUISectionDescriptor;
@@ -256,7 +256,7 @@ public class DataEntryTabLoader
 	private DocumentLayoutUIControlsLineDescriptor.Builder createLayoutElemementLine(@NonNull final DataEntryField field)
 	{
 		// note that each element builder can be used/"consumed" only ones
-		final DocumentLayoutUIControlDescriptor.Builder dataElement = createFieldElementDescriptor(field);
+		final DocumentLayoutElementDescriptor.Builder dataElement = createFieldElementDescriptor(field);
 
 		final DocumentLayoutUIControlsLineDescriptor.Builder elementLine = DocumentLayoutUIControlsLineDescriptor
 				.builder()
@@ -264,9 +264,9 @@ public class DataEntryTabLoader
 		return elementLine;
 	}
 
-	private DocumentLayoutUIControlDescriptor.Builder createFieldElementDescriptor(@NonNull final DataEntryField field)
+	private DocumentLayoutElementDescriptor.Builder createFieldElementDescriptor(@NonNull final DataEntryField field)
 	{
-		final DocumentLayoutUIControlDescriptor.Builder element = DocumentLayoutUIControlDescriptor
+		final DocumentLayoutElementDescriptor.Builder element = DocumentLayoutElementDescriptor
 				.builder()
 				.setCaption(field.getCaption())
 				.setDescription(field.getDescription())
@@ -281,15 +281,15 @@ public class DataEntryTabLoader
 
 		final String fieldName = dataEntryWebuiTools.computeFieldName(field.getId());
 
-		final DocumentLayoutUIControlFieldDescriptor.Builder dataField = DocumentLayoutUIControlFieldDescriptor
+		final DocumentLayoutElementFieldDescriptor.Builder dataField = DocumentLayoutElementFieldDescriptor
 				.builder(fieldName)
 				.setEmptyFieldText(TranslatableStrings.empty());
 		element.addField(dataField);
 
-		final DocumentLayoutUIControlFieldDescriptor.Builder infoField = DocumentLayoutUIControlFieldDescriptor
+		final DocumentLayoutElementFieldDescriptor.Builder infoField = DocumentLayoutElementFieldDescriptor
 				.builder(createInfoFieldName(field))
 				.setEmptyFieldText(TranslatableStrings.empty())
-				.setFieldType(DocumentLayoutUIControlFieldDescriptor.FieldType.Tooltip)
+				.setFieldType(DocumentLayoutElementFieldDescriptor.FieldType.Tooltip)
 				.setTooltipIconName(X_AD_UI_ElementField.TOOLTIPICONNAME_Text)
 				.setLookupSourceAsText();
 		element.addField(infoField);

@@ -17,7 +17,7 @@ import de.metas.process.Param;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.model.lookup.LookupDataSource;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
@@ -92,7 +92,7 @@ public class C_Order_AllocateToForexContract extends JavaProcess
 		p_RemainingAmount = getForexContractOpenAmount();
 	}
 
-	@ProcessParamLookupValuesProvider(parameterName = PARAM_C_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup)
+	@ProcessParamLookupValuesProvider(parameterName = PARAM_C_ForeignExchangeContract_ID, numericKey = true, lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup)
 	public LookupValuesList getEligibleForexContracts(@NonNull final LookupDataSourceContext context)
 	{
 		return forexContractLookup.findByIdsOrdered(getEligibleForexContractIds(context.getFilter()));

@@ -32,7 +32,7 @@ import de.metas.process.Param;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import lombok.NonNull;
 import org.adempiere.exceptions.FillMandatoryException;
@@ -78,7 +78,7 @@ public class C_BankStatement_ReconcileWithSinglePayment extends BankStatementBas
 		return DEFAULT_VALUE_NOTAVAILABLE;
 	}
 
-	@ProcessParamLookupValuesProvider(parameterName = PARAM_C_Payment_ID, numericKey = true, lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup, lookupTableName = I_C_Payment.Table_Name)
+	@ProcessParamLookupValuesProvider(parameterName = PARAM_C_Payment_ID, numericKey = true, lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup, lookupTableName = I_C_Payment.Table_Name)
 	private LookupValuesList paymentLookupProvider()
 	{
 		if (bpartnerId == null)

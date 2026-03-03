@@ -25,7 +25,7 @@ import de.metas.ui.web.view.ViewRowsOrderBy;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
@@ -126,7 +126,7 @@ public class ViewGeoLocationsRestController
 		final ImmutableSet<String> fieldNames = viewLayout.getElements()
 				.stream()
 				.flatMap(element -> element.getFields().stream())
-				.map(DocumentLayoutUIControlFieldDescriptor::getField)
+				.map(DocumentLayoutElementFieldDescriptor::getField)
 				.collect(ImmutableSet.toImmutableSet());
 
 		// bpartner window doesn't have a field for "c_bpartner_id", so i'm adding it like this

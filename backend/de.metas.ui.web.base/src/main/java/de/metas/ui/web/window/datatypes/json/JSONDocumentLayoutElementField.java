@@ -12,10 +12,10 @@ import com.google.common.collect.ImmutableMap;
 import de.metas.ui.web.window.datatypes.WindowId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.FieldType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.LookupSource;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.FieldType;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
 import de.metas.ui.web.window.descriptor.factory.AdvancedSearchDescriptorsProvider;
 import de.metas.ui.web.window.descriptor.factory.NewRecordDescriptorsProvider;
 import de.metas.util.GuavaCollectors;
@@ -56,7 +56,7 @@ import java.util.Set;
 public final class JSONDocumentLayoutElementField
 {
 	public static Set<JSONDocumentLayoutElementField> ofSet(
-			final Set<DocumentLayoutUIControlFieldDescriptor> fieldDescriptors,
+			final Set<DocumentLayoutElementFieldDescriptor> fieldDescriptors,
 			final JSONDocumentLayoutOptions options)
 	{
 		return fieldDescriptors.stream()
@@ -64,7 +64,7 @@ public final class JSONDocumentLayoutElementField
 				.collect(GuavaCollectors.toImmutableSet());
 	}
 
-	private static JSONDocumentLayoutElementField of(final DocumentLayoutUIControlFieldDescriptor fieldDescriptor, final JSONDocumentLayoutOptions jsonOpts)
+	private static JSONDocumentLayoutElementField of(final DocumentLayoutElementFieldDescriptor fieldDescriptor, final JSONDocumentLayoutOptions jsonOpts)
 	{
 		return new JSONDocumentLayoutElementField(fieldDescriptor, jsonOpts);
 	}
@@ -118,7 +118,7 @@ public final class JSONDocumentLayoutElementField
 	}
 
 	/**
-	 * If one {@link DocumentLayoutUIControlDescriptor} has multiple fields,
+	 * If one {@link DocumentLayoutElementDescriptor} has multiple fields,
 	 * then this tells the frontend how to render each particular "sub-widget".
 	 * <p>
 	 * Please keep in sync with {@link LookupSource}.
@@ -231,7 +231,7 @@ public final class JSONDocumentLayoutElementField
 	private final Boolean supportZoomInto;
 
 	private JSONDocumentLayoutElementField(
-			@NonNull final DocumentLayoutUIControlFieldDescriptor fieldDescriptor,
+			@NonNull final DocumentLayoutElementFieldDescriptor fieldDescriptor,
 			@NonNull final JSONDocumentLayoutOptions jsonOpts)
 	{
 		field = fieldDescriptor.getField();
@@ -338,7 +338,7 @@ public final class JSONDocumentLayoutElementField
 
 	@Nullable
 	private static DocumentEntityDescriptor findNewRecordEntityDescriptor(
-			@NonNull final DocumentLayoutUIControlFieldDescriptor fieldDescriptor,
+			@NonNull final DocumentLayoutElementFieldDescriptor fieldDescriptor,
 			final JSONDocumentLayoutOptions jsonOpts)
 	{
 		if (fieldDescriptor.isForbidNewRecordCreation())

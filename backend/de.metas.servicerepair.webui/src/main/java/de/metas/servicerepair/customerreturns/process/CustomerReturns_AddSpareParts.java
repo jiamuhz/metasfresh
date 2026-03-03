@@ -35,7 +35,7 @@ import de.metas.servicerepair.customerreturns.RepairCustomerReturnsService;
 import de.metas.servicerepair.customerreturns.SparePartsReturnCalculation;
 import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.uom.IUOMConversionBL;
 import de.metas.uom.IUOMDAO;
@@ -83,7 +83,7 @@ public class CustomerReturns_AddSpareParts
 	@ProcessParamLookupValuesProvider(
 			parameterName = PARAM_M_Product_ID,
 			numericKey = true,
-			lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.list,
+			lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.list,
 			lookupTableName = I_M_Product.Table_Name)
 	public LookupValuesList getProducts()
 	{

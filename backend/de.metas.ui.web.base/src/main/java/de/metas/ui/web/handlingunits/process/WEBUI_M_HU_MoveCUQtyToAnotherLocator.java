@@ -21,7 +21,7 @@ import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 import de.metas.ui.web.window.datatypes.LookupValue.IntegerLookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.model.DocumentCollection;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
 import de.metas.util.GuavaCollectors;
@@ -115,7 +115,7 @@ public class WEBUI_M_HU_MoveCUQtyToAnotherLocator extends HUEditorProcessTemplat
 		return ProcessPreconditionsResolution.accept();
 	}
 
-	@ProcessParamLookupValuesProvider(parameterName = I_M_Locator.COLUMNNAME_M_Locator_ID, numericKey = true, lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.lookup, dependsOn = { I_M_Warehouse.COLUMNNAME_M_Warehouse_ID })
+	@ProcessParamLookupValuesProvider(parameterName = I_M_Locator.COLUMNNAME_M_Locator_ID, numericKey = true, lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.lookup, dependsOn = { I_M_Warehouse.COLUMNNAME_M_Warehouse_ID })
 	public LookupValuesList getAvailableLocators(final LookupDataSourceContext evalCtx)
 	{
 		final List<org.compiere.model.I_M_Locator> locatorsToLoad = p_WarehouseId != null ?

@@ -18,8 +18,8 @@ import de.metas.ui.web.process.ProcessId;
 import de.metas.ui.web.window.datatypes.PanelLayoutType;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.util.Check;
 
 /*
@@ -59,7 +59,7 @@ public class ProcessLayout
 	private final ITranslatableString caption;
 	private final ITranslatableString description;
 
-	private final List<DocumentLayoutUIControlDescriptor> elements;
+	private final List<DocumentLayoutElementDescriptor> elements;
 
 	private ProcessLayout(final Builder builder)
 	{
@@ -76,7 +76,7 @@ public class ProcessLayout
 		if (layoutType == PanelLayoutType.SingleOverlayField)
 		{
 			final ImmutableSet<BarcodeScannerType> barcodeScannerTypes = this.elements.stream()
-					.map(DocumentLayoutUIControlDescriptor::getBarcodeScannerType)
+					.map(DocumentLayoutElementDescriptor::getBarcodeScannerType)
 					.filter(Objects::nonNull)
 					.collect(ImmutableSet.toImmutableSet());
 			barcodeScannerType = barcodeScannerTypes.size() == 1 ? barcodeScannerTypes.iterator().next() : null;
@@ -128,7 +128,7 @@ public class ProcessLayout
 		return description.translate(adLanguage);
 	}
 
-	public List<DocumentLayoutUIControlDescriptor> getElements()
+	public List<DocumentLayoutElementDescriptor> getElements()
 	{
 		return elements;
 	}
@@ -140,7 +140,7 @@ public class ProcessLayout
 		private ITranslatableString caption;
 		private ITranslatableString description;
 
-		private final List<DocumentLayoutUIControlDescriptor> elements = new ArrayList<>();
+		private final List<DocumentLayoutElementDescriptor> elements = new ArrayList<>();
 
 		private Builder()
 		{
@@ -191,7 +191,7 @@ public class ProcessLayout
 			return description;
 		}
 
-		public Builder addElement(final DocumentLayoutUIControlDescriptor element)
+		public Builder addElement(final DocumentLayoutElementDescriptor element)
 		{
 			Check.assumeNotNull(element, "Parameter element is not null");
 			elements.add(element);
@@ -201,13 +201,13 @@ public class ProcessLayout
 		public Builder addElement(final DocumentFieldDescriptor processParaDescriptor)
 		{
 			Check.assumeNotNull(processParaDescriptor, "Parameter processParaDescriptor is not null");
-			final DocumentLayoutUIControlDescriptor element = DocumentLayoutUIControlDescriptor.builder()
+			final DocumentLayoutElementDescriptor element = DocumentLayoutElementDescriptor.builder()
 					.setCaption(processParaDescriptor.getCaption())
 					.setDescription(processParaDescriptor.getDescription())
 					.setWidgetType(processParaDescriptor.getWidgetType())
 					.setAllowShowPassword(processParaDescriptor.isAllowShowPassword())
 					.barcodeScannerType(processParaDescriptor.getBarcodeScannerType())
-					.addField(DocumentLayoutUIControlFieldDescriptor.builder(processParaDescriptor.getFieldName())
+					.addField(DocumentLayoutElementFieldDescriptor.builder(processParaDescriptor.getFieldName())
 							.setLookupInfos(processParaDescriptor.getLookupDescriptor().orElse(null))
 							.setPublicField(true)
 							.setSupportZoomInto(processParaDescriptor.isSupportZoomInto()))

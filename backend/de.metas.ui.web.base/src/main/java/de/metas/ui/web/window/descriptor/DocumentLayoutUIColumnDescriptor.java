@@ -141,7 +141,7 @@ public class DocumentLayoutUIColumnDescriptor
 			return this;
 		}
 
-		public Stream<DocumentLayoutUIControlDescriptor.Builder> streamElementBuilders()
+		public Stream<DocumentLayoutElementDescriptor.Builder> streamElementBuilders()
 		{
 			return elementGroupsBuilders.stream().flatMap(DocumentLayoutUIControlsLineGroupDescriptor.Builder::streamElementBuilders);
 		}

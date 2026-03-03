@@ -22,7 +22,7 @@ import de.metas.ui.web.picking.pickingslot.PickingSlotRow;
 import de.metas.ui.web.picking.pickingslot.PickingSlotRowType;
 import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -140,7 +140,7 @@ public class WEBUI_Picking_ReturnQtyToSourceHU
 	@ProcessParamLookupValuesProvider(
 			parameterName = PARAM_M_Product_ID,
 			numericKey = true,
-			lookupSource = DocumentLayoutUIControlFieldDescriptor.LookupSource.list,
+			lookupSource = DocumentLayoutElementFieldDescriptor.LookupSource.list,
 			lookupTableName = I_M_Product.Table_Name)
 	@NonNull
 	public LookupValuesList getAvailableProducts()

@@ -23,8 +23,8 @@ import de.metas.ui.web.window.datatypes.LookupValue.StringLookupValue;
 import de.metas.ui.web.window.datatypes.MediaType;
 import de.metas.ui.web.window.datatypes.json.JSONNullValue;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.descriptor.ViewEditorRenderMode;
 import de.metas.ui.web.window.descriptor.WidgetSize;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
@@ -119,7 +119,7 @@ public final class ViewColumnHelper
 		}
 	}
 
-	public static List<DocumentLayoutUIControlDescriptor.Builder> createLayoutElementsForClass(
+	public static List<DocumentLayoutElementDescriptor.Builder> createLayoutElementsForClass(
 			@NonNull final Class<?> dataType,
 			@NonNull final JSONViewDataType viewType)
 	{
@@ -152,7 +152,7 @@ public final class ViewColumnHelper
 		boolean hideIfConfiguredSysConfig;
 	}
 
-	public static List<DocumentLayoutUIControlDescriptor.Builder> createLayoutElementsForClassAndFieldNames(
+	public static List<DocumentLayoutElementDescriptor.Builder> createLayoutElementsForClassAndFieldNames(
 			@NonNull final Class<?> dataType,
 			@NonNull final JSONViewDataType viewDataType,
 			@NonNull final ClassViewColumnOverrides... columns)
@@ -387,9 +387,9 @@ public final class ViewColumnHelper
 		}
 	}
 
-	private static DocumentLayoutUIControlDescriptor.Builder createLayoutElement(final ClassViewColumnDescriptor column)
+	private static DocumentLayoutElementDescriptor.Builder createLayoutElement(final ClassViewColumnDescriptor column)
 	{
-		return DocumentLayoutUIControlDescriptor.builder()
+		return DocumentLayoutElementDescriptor.builder()
 				.setGridElement()
 				.setCaption(column.getCaption())
 				.setWidgetType(column.getWidgetType())
@@ -398,7 +398,7 @@ public final class ViewColumnHelper
 				.setViewAllowSorting(column.isAllowSorting())
 				.restrictToMediaTypes(column.getRestrictToMediaTypes())
 				.setDescription(column.getDescription())
-				.addField(DocumentLayoutUIControlFieldDescriptor.builder(column.getFieldName()));
+				.addField(DocumentLayoutElementFieldDescriptor.builder(column.getFieldName()));
 	}
 
 	public static <T extends IViewRow> ImmutableSet<String> extractFieldNames(@NonNull final T row)

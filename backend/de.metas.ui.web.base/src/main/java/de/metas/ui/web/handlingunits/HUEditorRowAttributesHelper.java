@@ -19,8 +19,8 @@ import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.Values;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.util.Check;
 import de.metas.util.GuavaCollectors;
 import de.metas.util.Services;
@@ -77,7 +77,7 @@ public final class HUEditorRowAttributesHelper
 	public static ViewRowAttributesLayout createLayout(@NonNull final IAttributeStorage attributeStorage, @NonNull final I_M_HU hu)
 	{
 		final WarehouseId warehouseId = attributeStorage.getWarehouseId().orElse(null);
-		final List<DocumentLayoutUIControlDescriptor> attributeLayoutElements = attributeStorage.getAttributeValues()
+		final List<DocumentLayoutElementDescriptor> attributeLayoutElements = attributeStorage.getAttributeValues()
 				.stream()
 				.map(av -> createLayoutElement(av, warehouseId))
 				.collect(Collectors.toList());
@@ -87,7 +87,7 @@ public final class HUEditorRowAttributesHelper
 		return ViewRowAttributesLayout.of(ImmutableList.copyOf(attributeLayoutElements));
 	}
 
-	private static DocumentLayoutUIControlDescriptor createLayoutElement(
+	private static DocumentLayoutElementDescriptor createLayoutElement(
 			@NonNull final IAttributeValue attributeValue,
 			@Nullable final WarehouseId warehouseId)
 	{
@@ -100,11 +100,11 @@ public final class HUEditorRowAttributesHelper
 
 		final AttributeCode attributeCode = HUEditorRowAttributesHelper.extractAttributeCode(attribute);
 
-		return DocumentLayoutUIControlDescriptor.builder()
+		return DocumentLayoutElementDescriptor.builder()
 				.setCaption(caption)
 				.setDescription(description)
 				.setWidgetType(widgetType)
-				.addField(DocumentLayoutUIControlFieldDescriptor.builder(attributeCode.getCode())
+				.addField(DocumentLayoutElementFieldDescriptor.builder(attributeCode.getCode())
 						.setPublicField(true)
 						.setDevices(getDeviceDescriptors(attributeCode, warehouseId)))
 				.build();
@@ -204,7 +204,7 @@ public final class HUEditorRowAttributesHelper
 	}
 
 	@NonNull
-	private static Optional<DocumentLayoutUIControlDescriptor> getClearanceNoteLayoutElement(@NonNull final I_M_HU hu)
+	private static Optional<DocumentLayoutElementDescriptor> getClearanceNoteLayoutElement(@NonNull final I_M_HU hu)
 	{
 		if (Check.isBlank(hu.getClearanceNote()))
 		{
@@ -222,14 +222,14 @@ public final class HUEditorRowAttributesHelper
 	}
 
 	@NonNull
-	private static DocumentLayoutUIControlDescriptor createClearanceNoteLayoutElement()
+	private static DocumentLayoutElementDescriptor createClearanceNoteLayoutElement()
 	{
 		final ITranslatableString caption = Services.get(IMsgBL.class).translatable(I_M_HU.COLUMNNAME_ClearanceNote);
 
-		return DocumentLayoutUIControlDescriptor.builder()
+		return DocumentLayoutElementDescriptor.builder()
 				.setCaption(caption)
 				.setWidgetType(DocumentFieldWidgetType.Text)
-				.addField(DocumentLayoutUIControlFieldDescriptor
+				.addField(DocumentLayoutElementFieldDescriptor
 								  .builder(I_M_HU.COLUMNNAME_ClearanceNote)
 								  .setPublicField(true))
 				.build();

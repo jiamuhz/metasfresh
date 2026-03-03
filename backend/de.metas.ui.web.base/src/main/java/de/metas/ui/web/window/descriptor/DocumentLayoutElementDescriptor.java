@@ -52,7 +52,7 @@ import java.util.stream.Stream;
 /**
  * UI布局中的控件描述符
  */
-public final class DocumentLayoutUIControlDescriptor
+public final class DocumentLayoutElementDescriptor
 {
 	public static Builder builder()
 	{
@@ -74,7 +74,7 @@ public final class DocumentLayoutUIControlDescriptor
 
 		for (final DocumentFieldDescriptor field : fields)
 		{
-			elementBuilder.addField(DocumentLayoutUIControlFieldDescriptor.builder(field.getFieldName())
+			elementBuilder.addField(DocumentLayoutElementFieldDescriptor.builder(field.getFieldName())
 					.setCaption(field.getCaption())
 					.setPublicField(true)
 					.setLookupInfos(field.getLookupDescriptor().orElse(null))
@@ -142,7 +142,7 @@ public final class DocumentLayoutUIControlDescriptor
 	private final boolean viewAllowSorting;
 
 	@Getter
-	private final ImmutableSet<DocumentLayoutUIControlFieldDescriptor> fields;
+	private final ImmutableSet<DocumentLayoutElementFieldDescriptor> fields;
 
 	private String _captionAsFieldNames; // lazy
 	private static final Joiner JOINER_FieldNames = Joiner.on(" | ").skipNulls();
@@ -150,7 +150,7 @@ public final class DocumentLayoutUIControlDescriptor
 	@Getter
 	private final DetailId inlineTabId;
 
-	private DocumentLayoutUIControlDescriptor(final Builder builder)
+	private DocumentLayoutElementDescriptor(final Builder builder)
 	{
 		internalName = builder.getInternalName();
 		gridElement = builder.isGridElement();
@@ -207,8 +207,8 @@ public final class DocumentLayoutUIControlDescriptor
 		{
 			_captionAsFieldNames = fields
 					.stream()
-					.filter(DocumentLayoutUIControlFieldDescriptor::isPublicField) // only those which are public
-					.map(DocumentLayoutUIControlFieldDescriptor::getField)
+					.filter(DocumentLayoutElementFieldDescriptor::isPublicField) // only those which are public
+					.map(DocumentLayoutElementFieldDescriptor::getField)
 					.collect(GuavaCollectors.toString(JOINER_FieldNames));
 		}
 		return _captionAsFieldNames;
@@ -237,7 +237,7 @@ public final class DocumentLayoutUIControlDescriptor
 
 	public static final class Builder
 	{
-		private static final Logger logger = LogManager.getLogger(DocumentLayoutUIControlDescriptor.Builder.class);
+		private static final Logger logger = LogManager.getLogger(DocumentLayoutElementDescriptor.Builder.class);
 
 		private String _internalName;
 		private ITranslatableString _caption = null;
@@ -262,7 +262,7 @@ public final class DocumentLayoutUIControlDescriptor
 		private boolean viewAllowSorting = true;
 
 		private boolean _advancedField = false;
-		private final LinkedHashMap<String, DocumentLayoutUIControlFieldDescriptor.Builder> _fieldsBuilders = new LinkedHashMap<>();
+		private final LinkedHashMap<String, DocumentLayoutElementFieldDescriptor.Builder> _fieldsBuilders = new LinkedHashMap<>();
 
 		private DetailId inlineTabId;
 
@@ -288,17 +288,17 @@ public final class DocumentLayoutUIControlDescriptor
 					.toString();
 		}
 
-		public DocumentLayoutUIControlDescriptor build()
+		public DocumentLayoutElementDescriptor build()
 		{
 			setConsumed();
 
-			final DocumentLayoutUIControlDescriptor result = new DocumentLayoutUIControlDescriptor(this);
+			final DocumentLayoutElementDescriptor result = new DocumentLayoutElementDescriptor(this);
 
 			logger.trace("Built {} for {}", result, this);
 			return result;
 		}
 
-		private Set<DocumentLayoutUIControlFieldDescriptor> buildFields()
+		private Set<DocumentLayoutElementFieldDescriptor> buildFields()
 		{
 			updateFieldsEmptyTexts();
 
@@ -306,7 +306,7 @@ public final class DocumentLayoutUIControlDescriptor
 					.values()
 					.stream()
 					.filter(this::checkValid)
-					.map(DocumentLayoutUIControlFieldDescriptor.Builder::build)
+					.map(DocumentLayoutElementFieldDescriptor.Builder::build)
 					.collect(GuavaCollectors.toImmutableSet());
 		}
 
@@ -317,7 +317,7 @@ public final class DocumentLayoutUIControlDescriptor
 				return;
 			}
 
-			for (final DocumentLayoutUIControlFieldDescriptor.Builder field : _fieldsBuilders.values())
+			for (final DocumentLayoutElementFieldDescriptor.Builder field : _fieldsBuilders.values())
 			{
 				if (field.isRegularField()
 						&& !TranslatableStrings.isBlank(field.getCaption()))
@@ -330,13 +330,13 @@ public final class DocumentLayoutUIControlDescriptor
 		private boolean isComposedField()
 		{
 			final long countRegularFields = _fieldsBuilders.values().stream()
-					.filter(DocumentLayoutUIControlFieldDescriptor.Builder::isRegularField)
+					.filter(DocumentLayoutElementFieldDescriptor.Builder::isRegularField)
 					.count();
 
 			return countRegularFields > 1;
 		}
 
-		private boolean checkValid(final DocumentLayoutUIControlFieldDescriptor.Builder fieldBuilder)
+		private boolean checkValid(final DocumentLayoutElementFieldDescriptor.Builder fieldBuilder)
 		{
 			if (fieldBuilder.isConsumed())
 			{
@@ -395,7 +395,7 @@ public final class DocumentLayoutUIControlDescriptor
 				return _caption;
 			}
 
-			final DocumentLayoutUIControlFieldDescriptor.Builder firstField = getFirstField();
+			final DocumentLayoutElementFieldDescriptor.Builder firstField = getFirstField();
 			if (firstField != null)
 			{
 				final String fieldName = firstField.getFieldName();
@@ -546,9 +546,9 @@ public final class DocumentLayoutUIControlDescriptor
 			return this;
 		}
 
-		public Builder addField(@NonNull final DocumentLayoutUIControlFieldDescriptor.Builder fieldBuilder)
+		public Builder addField(@NonNull final DocumentLayoutElementFieldDescriptor.Builder fieldBuilder)
 		{
-			final DocumentLayoutUIControlFieldDescriptor.Builder previousFieldBuilder = _fieldsBuilders.put(fieldBuilder.getFieldName(), fieldBuilder);
+			final DocumentLayoutElementFieldDescriptor.Builder previousFieldBuilder = _fieldsBuilders.put(fieldBuilder.getFieldName(), fieldBuilder);
 			if (previousFieldBuilder != null)
 			{
 				new AdempiereException("Field " + fieldBuilder.getFieldName() + " already exists in element: " + this)
@@ -562,13 +562,13 @@ public final class DocumentLayoutUIControlDescriptor
 			return _fieldsBuilders.keySet();
 		}
 
-		public DocumentLayoutUIControlFieldDescriptor.Builder getField(final String fieldName)
+		public DocumentLayoutElementFieldDescriptor.Builder getField(final String fieldName)
 		{
 			return _fieldsBuilders.get(fieldName);
 		}
 
 		@Nullable
-		private DocumentLayoutUIControlFieldDescriptor.Builder getFirstField()
+		private DocumentLayoutElementFieldDescriptor.Builder getFirstField()
 		{
 			return !_fieldsBuilders.isEmpty()
 					? _fieldsBuilders.values().iterator().next()

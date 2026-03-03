@@ -15,8 +15,8 @@ import de.metas.ui.web.window.descriptor.DocumentFieldDataBindingDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
 import de.metas.ui.web.window.descriptor.LookupDescriptor;
 import de.metas.ui.web.window.model.DocumentsRepository;
 import de.metas.ui.web.window.model.IDocumentFieldView;
@@ -285,12 +285,12 @@ public class ASIDescriptorFactory
 		return layout.build();
 	}
 
-	private static DocumentLayoutUIControlDescriptor.Builder createLayoutElement(final DocumentFieldDescriptor fieldDescriptor)
+	private static DocumentLayoutElementDescriptor.Builder createLayoutElement(final DocumentFieldDescriptor fieldDescriptor)
 	{
-		return DocumentLayoutUIControlDescriptor.builder()
+		return DocumentLayoutElementDescriptor.builder()
 				.setCaption(fieldDescriptor.getCaption())
 				.setWidgetType(fieldDescriptor.getWidgetType())
-				.addField(DocumentLayoutUIControlFieldDescriptor.builder(fieldDescriptor.getFieldName())
+				.addField(DocumentLayoutElementFieldDescriptor.builder(fieldDescriptor.getFieldName())
 						.setLookupInfos(fieldDescriptor.getLookupDescriptor().orElse(null))
 						.setPublicField(true)
 						.setSupportZoomInto(fieldDescriptor.isSupportZoomInto()));

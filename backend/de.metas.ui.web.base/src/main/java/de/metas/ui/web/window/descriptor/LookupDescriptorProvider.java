@@ -1,6 +1,6 @@
 package de.metas.ui.web.window.descriptor;
 
-import de.metas.ui.web.window.descriptor.DocumentLayoutUIControlFieldDescriptor.LookupSource;
+import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
 
 import java.util.Optional;
 
