@@ -50,7 +50,14 @@ import java.util.stream.Stream;
  */
 
 /**
- * UI布局中的控件描述符
+ * Element 的物理表现形式
+ * 表现形式	示例	                 说明
+ * 单个字段	一个文本框、一个下拉框	 最常用的Element类型
+ * 字段组合	"金额 + 货币" 的组合框	 多个字段在视觉上组合成一个单元
+ * 按钮	    "保存"、"取消"、"打印"	 触发操作的交互元素
+ * 标签	    分组标题、说明文本	     只读的文本信息
+ * 分隔线	  水平线、空白区域	       用于视觉分隔
+ * 内嵌表格	订单行明细	           嵌入在主表单中的子表
  */
 public final class DocumentLayoutElementDescriptor
 {
