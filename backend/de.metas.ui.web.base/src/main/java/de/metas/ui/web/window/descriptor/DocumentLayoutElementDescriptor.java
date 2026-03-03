@@ -58,6 +58,8 @@ import java.util.stream.Stream;
  * 标签	    分组标题、说明文本	     只读的文本信息
  * 分隔线	  水平线、空白区域	       用于视觉分隔
  * 内嵌表格	订单行明细	           嵌入在主表单中的子表
+ *
+ * 数据库表： ad_ui_element  ad_ui_elementfield
  */
 public final class DocumentLayoutElementDescriptor
 {

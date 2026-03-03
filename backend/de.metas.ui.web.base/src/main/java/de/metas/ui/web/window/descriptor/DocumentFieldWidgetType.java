@@ -39,6 +39,9 @@ import java.util.Set;
  * #L%
  */
 
+/**
+ * 用于 AD_Column表中 AD_Reference_ID 字段
+ */
 public enum DocumentFieldWidgetType
 {
 	//
