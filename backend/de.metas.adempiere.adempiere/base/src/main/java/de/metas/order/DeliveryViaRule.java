@@ -35,11 +35,11 @@ import java.util.Arrays;
 
 public enum DeliveryViaRule implements ReferenceListAwareEnum
 {
-	Pickup(X_C_Order.DELIVERYVIARULE_Pickup), //
-	Delivery(X_C_Order.DELIVERYVIARULE_Delivery), //
-	Shipper(X_C_Order.DELIVERYVIARULE_Shipper),
-	NormalPost(X_C_Order.DELIVERYVIARULE_Normalpost),
-	LuftPost(X_C_Order.DELIVERYVIARULE_Luftpost)//
+	Pickup(X_C_Order.DELIVERYVIARULE_Pickup), // 客户自行取货
+	Delivery(X_C_Order.DELIVERYVIARULE_Delivery), // 由我方送货
+	Shipper(X_C_Order.DELIVERYVIARULE_Shipper),  // 通过物流公司配送
+	NormalPost(X_C_Order.DELIVERYVIARULE_Normalpost), // 标准邮政服务
+	LuftPost(X_C_Order.DELIVERYVIARULE_Luftpost)  // 空运邮件
 	;
 
 	@Getter

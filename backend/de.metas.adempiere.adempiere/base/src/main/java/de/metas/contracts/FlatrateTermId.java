@@ -30,6 +30,9 @@ import javax.annotation.Nullable;
  * #L%
  */
 
+/**
+ * Flatrate 就是合同，具体地说是“固定费率合同”或“长期合同”
+ */
 @Value
 public class FlatrateTermId implements RepoIdAware
 {
