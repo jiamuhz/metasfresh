@@ -24,8 +24,6 @@ package de.metas.handlingunits.attribute.storage.impl;
 
 import org.adempiere.mm.attributes.spi.IAttributeValueGenerator;
 
-import de.metas.vertical.pharma.securpharm.attribute.HUScannedAttributeHandler;
-import de.metas.vertical.pharma.securpharm.attribute.SecurPharmAttributesStatus;
 import org.junit.jupiter.api.Test;
 
 /**
@@ -40,15 +38,12 @@ public class Fresh_HUAttributeStorage_generateInitialAttributes_Integration_Test
 	@Override
 	protected void initialize()
 	{
-		registerEnum(HUScannedAttributeHandler.class, SecurPharmAttributesStatus.class);
 		super.initialize();
 	}
 
 	@Override
 	@Test
-	public void test()
-	{
-		test(HUScannedAttributeHandler.class);
+	public void test() {;
 	}
 
 }

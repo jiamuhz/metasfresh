@@ -40,10 +40,6 @@ import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.model.lookup.LookupDataSource;
 import de.metas.util.Services;
-import de.metas.vertical.healthcare.alberta.bpartner.patient.AlbertaPatient;
-import de.metas.vertical.healthcare.alberta.bpartner.patient.AlbertaPatientRepository;
-import de.metas.vertical.healthcare.alberta.model.I_Alberta_PrescriptionRequest;
-import de.metas.vertical.healthcare.alberta.prescription.dao.AlbertaPrescriptionRequestDAO;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.Value;
@@ -72,19 +68,9 @@ class OrderAttachmentRowsLoader
 	IOrderBL orderBL = Services.get(IOrderBL.class);
 
 	@NonNull
-	AlbertaPrescriptionRequestDAO albertaPrescriptionRequestDAO;
-	@NonNull
 	AttachmentEntryRepository attachmentEntryRepository;
 	@NonNull
-	AlbertaPatientRepository albertaPatientRepository;
-	@NonNull
 	PurchaseCandidateRepository purchaseCandidateRepository;
-	@NonNull
-	LookupDataSource patientLookup;
-	@NonNull
-	LookupDataSource payerLookup;
-	@NonNull
-	LookupDataSource pharmacyLookup;
 	@NonNull
 	OrderId selectedPurchaseOrderId;
 
@@ -95,29 +81,16 @@ class OrderAttachmentRowsLoader
 	Map<TableRecordReference, I_C_Order> salesOrderRecordRefs = ImmutableMap.of();
 	@NonFinal
 	@NonNull
-	Map<TableRecordReference, I_Alberta_PrescriptionRequest> prescriptionRequestRecordRefs = ImmutableMap.of();
-	@NonFinal
-	@NonNull
 	Set<TableRecordReference> bPartnerRecordRefs = ImmutableSet.of();
 
 	@Builder
 	private OrderAttachmentRowsLoader(
 			@NonNull final AttachmentEntryRepository attachmentEntryRepository,
-			@NonNull final AlbertaPrescriptionRequestDAO albertaPrescriptionRequestDAO,
-			@NonNull final AlbertaPatientRepository albertaPatientRepository,
 			@NonNull final PurchaseCandidateRepository purchaseCandidateRepository,
-			@NonNull final LookupDataSource patientLookup,
-			@NonNull final LookupDataSource payerLookup,
-			@NonNull final LookupDataSource pharmacyLookup,
 			@NonNull final OrderId purchaseOrderId)
 	{
 		this.attachmentEntryRepository = attachmentEntryRepository;
-		this.albertaPrescriptionRequestDAO = albertaPrescriptionRequestDAO;
-		this.albertaPatientRepository = albertaPatientRepository;
 		this.purchaseCandidateRepository = purchaseCandidateRepository;
-		this.patientLookup = patientLookup;
-		this.payerLookup = payerLookup;
-		this.pharmacyLookup = pharmacyLookup;
 
 		this.selectedPurchaseOrderId = purchaseOrderId;
 	}
@@ -128,15 +101,14 @@ class OrderAttachmentRowsLoader
 
 		final Set<TableRecordReference> allTargetTableRecordRefs = Stream.of(ImmutableSet.of(getPurchaseOrderRecordRef()),
 																			 salesOrderRecordRefs.keySet(),
-																			 prescriptionRequestRecordRefs.keySet(),
 																			 bPartnerRecordRefs)
 				.flatMap(Set::stream)
 				.collect(ImmutableSet.toImmutableSet());
 
 		final Map<String, AttachmentRowBuilder.PriorityRowBuilder> tableName2PriorityRowBuilder = ImmutableMap.of(
 				I_C_BPartner.Table_Name, AttachmentRowBuilder.PriorityRowBuilder.of(AttachmentRowBuilder.Priority.of(0), this::buildRowFromCustomer),
-				I_C_Order.Table_Name, AttachmentRowBuilder.PriorityRowBuilder.of(AttachmentRowBuilder.Priority.of(1), this::buildRowFromSalesOrder),
-				I_Alberta_PrescriptionRequest.Table_Name, AttachmentRowBuilder.PriorityRowBuilder.of(AttachmentRowBuilder.Priority.of(2), this::buildRowFromPrescription));
+				I_C_Order.Table_Name, AttachmentRowBuilder.PriorityRowBuilder.of(AttachmentRowBuilder.Priority.of(1), this::buildRowFromSalesOrder)
+		);
 
 		final AttachmentRowBuilder attachmentRowBuilder = AttachmentRowBuilder.builder()
 				.purchaseOrderRowBuilder(this::buildRowFromPurchaseOrder)
@@ -153,70 +125,6 @@ class OrderAttachmentRowsLoader
 
 		return OrderAttachmentRows.builder()
 				.rows(rows)
-				.build();
-	}
-
-	@Nullable
-	private LookupValue extractPatientFromPrescriptionRequest(@NonNull final I_Alberta_PrescriptionRequest albertaPrescriptionRequest)
-	{
-		final BPartnerId patientBPartnerId = BPartnerId.ofRepoId(albertaPrescriptionRequest.getC_BPartner_Patient_ID());
-		return patientLookup.findById(patientBPartnerId);
-	}
-
-	@Nullable
-	private LookupValue extractPayerFromPrescriptionRequest(@NonNull final I_Alberta_PrescriptionRequest albertaPrescriptionRequest)
-	{
-		return Optional.of(albertaPrescriptionRequest)
-				.map(albertaPrescriptionRequestDAO::getPayer)
-				.map(I_C_BPartner::getC_BPartner_ID)
-				.map(BPartnerId::ofRepoId)
-				.map(payerLookup::findById)
-				.orElse(null);
-	}
-
-	@Nullable
-	private LookupValue extractPharmacyFromPrescriptionRequest(@NonNull final I_Alberta_PrescriptionRequest albertaPrescriptionRequest)
-	{
-		final BPartnerId pharmacyId = BPartnerId.ofRepoId(albertaPrescriptionRequest.getC_BPartner_Pharmacy_ID());
-		return pharmacyLookup.findById(pharmacyId);
-	}
-
-	@Nullable
-	private LookupValue extractPatientFromSalesOrder(@NonNull final I_C_Order salesOrder)
-	{
-		final BPartnerId patientBpartnerId = BPartnerId.ofRepoId(salesOrder.getC_BPartner_ID());
-		return patientLookup.findById(patientBpartnerId);
-	}
-
-	@Nullable
-	private LookupValue extractPayerFromSalesOrder(@NonNull final I_C_Order salesOrder)
-	{
-		final BPartnerId patientBPartnerId = BPartnerId.ofRepoId(salesOrder.getC_BPartner_ID());
-
-		return albertaPatientRepository.getByBPartnerId(patientBPartnerId)
-				.map(AlbertaPatient::getPayerId)
-				.map(payerLookup::findById)
-				.orElse(null);
-	}
-
-	@NonNull
-	private OrderAttachmentRow buildRowFromPrescription(@NonNull final TableRecordReference recordReference, @NonNull final AttachmentEntry attachmentEntry)
-	{
-		final I_Alberta_PrescriptionRequest prescriptionRequest = Optional.ofNullable(prescriptionRequestRecordRefs.get(recordReference))
-				.orElseThrow(() -> new AdempiereException("No I_Alberta_PrescriptionRequest present for given record reference: " + recordReference));
-
-		final boolean isAttachToPurchaseOrder = attachmentEntry.hasLinkToRecord(getPurchaseOrderRecordRef())
-				|| salesOrderRecordRefs.keySet().stream().anyMatch(attachmentEntry::hasLinkToRecord);
-
-		return OrderAttachmentRow.builder()
-				.rowId(buildRowId(attachmentEntry.getId(), recordReference))
-				.patient(extractPatientFromPrescriptionRequest(prescriptionRequest))
-				.payer(extractPayerFromPrescriptionRequest(prescriptionRequest))
-				.pharmacy(extractPharmacyFromPrescriptionRequest(prescriptionRequest))
-				.filename(attachmentEntry.getFilename(recordReference))
-				.isAttachToPurchaseOrder(isAttachToPurchaseOrder)
-				.selectedPurchaseOrder(purchaseOrder)
-				.attachmentEntry(attachmentEntry)
 				.build();
 	}
 
@@ -256,8 +164,6 @@ class OrderAttachmentRowsLoader
 
 		return OrderAttachmentRow.builder()
 				.rowId(buildRowId(attachmentEntry.getId(), recordReference))
-				.patient(extractPatientFromSalesOrder(salesOrder))
-				.payer(extractPayerFromSalesOrder(salesOrder))
 				.datePromised(datePromised)
 				.filename(attachmentEntry.getFilename(recordReference))
 				.isAttachToPurchaseOrder(true)
@@ -279,7 +185,6 @@ class OrderAttachmentRowsLoader
 
 		return OrderAttachmentRow.builder()
 				.rowId(buildRowId(attachmentEntry.getId(), recordReference))
-				.patient(patientLookup.findById(recordReference.getRecord_ID()))
 				.filename(attachmentEntry.getFilename(recordReference))
 				.isAttachToPurchaseOrder(attachmentEntry.hasLinkToRecord(getPurchaseOrderRecordRef()))
 				.selectedPurchaseOrder(purchaseOrder)
@@ -315,8 +220,6 @@ class OrderAttachmentRowsLoader
 				.map(TableRecordReference::getRecord_ID)
 				.map(OrderId::ofRepoId)
 				.collect(ImmutableSet.toImmutableSet());
-
-		prescriptionRequestRecordRefs = getAlbertaPrescriptionsRecordRefs(salesOrderIds).orElse(ImmutableMap.of());
 	}
 
 	@NonNull
@@ -358,17 +261,4 @@ class OrderAttachmentRowsLoader
 				.collect(ImmutableSet.toImmutableSet());
 	}
 
-	@NonNull
-	private Optional<Map<TableRecordReference, I_Alberta_PrescriptionRequest>> getAlbertaPrescriptionsRecordRefs(@NonNull final Set<OrderId> salesOrderIds)
-	{
-		if (salesOrderIds.isEmpty())
-		{
-			return Optional.empty();
-		}
-
-		return Optional.of(albertaPrescriptionRequestDAO.getByOrderIds(salesOrderIds)
-								   .stream()
-								   .collect(ImmutableMap.toImmutableMap(prescription -> TableRecordReference.of(I_Alberta_PrescriptionRequest.Table_Name, prescription.getAlberta_PrescriptionRequest_ID()),
-																		Function.identity())));
-	}
 }

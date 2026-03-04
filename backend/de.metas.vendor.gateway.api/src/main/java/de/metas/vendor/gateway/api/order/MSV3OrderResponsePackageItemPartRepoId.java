@@ -30,7 +30,7 @@ import lombok.Value;
  */
 
 /**
- * @see de.metas.vertical.pharma.vendor.gateway.msv3.model.I_MSV3_BestellungAnteil
+ *
  */
 @Value
 public class MSV3OrderResponsePackageItemPartRepoId implements RepoIdAware

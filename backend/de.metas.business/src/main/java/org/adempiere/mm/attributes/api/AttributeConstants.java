@@ -41,7 +41,6 @@ public class AttributeConstants
 
 	public final AttributeCode ATTR_TE = AttributeCode.ofString("HU_TE");
 	public final AttributeCode ATTR_DateReceived = AttributeCode.ofString("HU_DateReceived");
-	public final AttributeCode ATTR_SecurPharmScannedStatus = AttributeCode.ofString("HU_Scanned");
 
 	public final String ATTR_BestBeforeDate_String = "HU_BestBeforeDate";
 	public final AttributeCode ATTR_BestBeforeDate = AttributeCode.ofString(ATTR_BestBeforeDate_String);

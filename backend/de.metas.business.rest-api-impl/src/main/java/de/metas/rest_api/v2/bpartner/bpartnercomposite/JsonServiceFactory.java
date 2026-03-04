@@ -38,7 +38,6 @@ import de.metas.sectionCode.SectionCodeService;
 import de.metas.title.TitleRepository;
 import de.metas.util.Services;
 import de.metas.util.lang.UIDStringUtil;
-import de.metas.vertical.healthcare.alberta.bpartner.AlbertaBPartnerCompositeService;
 import lombok.NonNull;
 import org.springframework.stereotype.Service;
 
@@ -54,7 +53,6 @@ public class JsonServiceFactory
 	private final CurrencyRepository currencyRepository;
 	private final JobService jobService;
 	private final ExternalReferenceRestControllerService externalReferenceService;
-	private final AlbertaBPartnerCompositeService albertaBPartnerCompositeService;
 	private final SectionCodeService sectionCodeService;
 	private final IncotermsRepository incotermsRepository;
 	private final IPaymentTermRepository paymentTermRepository;
@@ -72,7 +70,6 @@ public class JsonServiceFactory
 			@NonNull final ExternalReferenceRestControllerService externalReferenceService,
 			@NonNull final SectionCodeService sectionCodeService,
 			@NonNull final IncotermsRepository incotermsRepository,
-			@NonNull final AlbertaBPartnerCompositeService albertaBPartnerCompositeService,
 			@NonNull final BPartnerCreditLimitRepository bPartnerCreditLimitRepository)
 	{
 		this.jsonRequestConsolidateService = jsonRequestConsolidateService;
@@ -85,7 +82,6 @@ public class JsonServiceFactory
 		this.jobService = jobService;
 		this.externalReferenceService = externalReferenceService;
 		this.sectionCodeService = sectionCodeService;
-		this.albertaBPartnerCompositeService = albertaBPartnerCompositeService;
 		this.incotermsRepository = incotermsRepository;
 		this.paymentTermRepository = Services.get(IPaymentTermRepository.class);
 		this.bPartnerCreditLimitRepository = bPartnerCreditLimitRepository;
@@ -103,7 +99,6 @@ public class JsonServiceFactory
 				bpGroupRepository,
 				currencyRepository,
 				externalReferenceService,
-				albertaBPartnerCompositeService,
 				sectionCodeService,
 				incotermsRepository,
 				bPartnerCreditLimitRepository,

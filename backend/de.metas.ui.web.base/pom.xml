@@ -56,20 +56,6 @@
             <version>${metasfresh.version}</version>
         </dependency>
 
-        <!-- note that the code is not called by metasfresh-webui-api (currently!) 
-            but there are model interceptors etc that should be present -->
-        <dependency>
-            <groupId>de.metas.vertical.pharma</groupId>
-            <artifactId>metasfresh-pharma</artifactId>
-            <version>${metasfresh.version}</version>
-        </dependency>
-
-        <dependency>
-            <groupId>de.metas.vertical.pharma</groupId>
-            <artifactId>metasfresh-pharma.msv3.server-peer-metasfresh</artifactId>
-            <version>${metasfresh.version}</version>
-        </dependency>
-
         <dependency>
             <groupId>de.metas.salesorder</groupId>
             <artifactId>de-metas-salesorder</artifactId>

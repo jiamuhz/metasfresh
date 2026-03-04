@@ -52,10 +52,6 @@ import de.metas.sectionCode.SectionCodeId;
 import de.metas.uom.UomId;
 import de.metas.util.Check;
 import de.metas.util.Services;
-import de.metas.vertical.healthcare.alberta.service.AlbertaCompositeProductInfo;
-import de.metas.vertical.healthcare.alberta.service.AlbertaPackagingUnit;
-import de.metas.vertical.healthcare.alberta.service.AlbertaProductService;
-import de.metas.vertical.healthcare.alberta.service.GetAlbertaProductsInfoRequest;
 import lombok.Builder;
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
@@ -87,8 +83,6 @@ public class GetProductsCommand
 	@NonNull
 	private final ProductsServicesFacade servicesFacade;
 	@NonNull
-	private final AlbertaProductService albertaProductService;
-	@NonNull
 	private final ExternalSystemService externalSystemService;
 	@NonNull
 	private final ExternalIdentifierResolver externalIdentifierResolver;
@@ -109,13 +103,9 @@ public class GetProductsCommand
 
 	private ImmutableMap<JsonMetasfreshId, String> bpartnerId2Name;
 
-	@Nullable
-	private ImmutableMap<ProductId, AlbertaCompositeProductInfo> productId2AlbertaInfo;
-
 	@Builder(buildMethodName = "_build")
 	private GetProductsCommand(
 			@NonNull final ProductsServicesFacade servicesFacade,
-			@NonNull final AlbertaProductService albertaProductService,
 			@NonNull final ExternalSystemService externalSystemService,
 			@NonNull final ExternalIdentifierResolver externalIdentifierResolver,
 			@NonNull final String adLanguage,
@@ -126,7 +116,6 @@ public class GetProductsCommand
 			@Nullable final ExternalIdentifier productIdentifier)
 	{
 		this.servicesFacade = servicesFacade;
-		this.albertaProductService = albertaProductService;
 		this.externalSystemService = externalSystemService;
 		this.externalIdentifierResolver = externalIdentifierResolver;
 		this.adLanguage = adLanguage;
@@ -230,7 +219,6 @@ public class GetProductsCommand
 				.uom(servicesFacade.getUOMSymbol(uomId))
 				.discontinuedFrom(discontinuedFrom)
 				.bpartners(productBPartners.get(productId))
-				.albertaProductInfo(getJsonAlbertaProductInfoFor(productId))
 				.sectionCode(sectionCode)
 				.sapProductHierarchy(productRecord.getSAP_ProductHierarchy())
 				.build();
@@ -289,53 +277,6 @@ public class GetProductsCommand
 		return productRecordsBuilder.build();
 	}
 
-	@Nullable
-	private JsonAlbertaProductInfo getJsonAlbertaProductInfoFor(@NonNull final ProductId productId)
-	{
-		if (productId2AlbertaInfo == null)
-		{
-			return null;
-		}
-
-		final AlbertaCompositeProductInfo albertaCompositeProductInfo = productId2AlbertaInfo.get(productId);
-
-		if (albertaCompositeProductInfo == null)
-		{
-			return null;
-		}
-
-		return mapToJsonAlbertaProductInfo(albertaCompositeProductInfo);
-	}
-
-	@NonNull
-	private JsonAlbertaProductInfo mapToJsonAlbertaProductInfo(@NonNull final AlbertaCompositeProductInfo albertaCompositeProductInfo)
-	{
-		final List<JsonAlbertaPackagingUnit> jsonPackagingUnitList = Check.isEmpty(albertaCompositeProductInfo.getAlbertaPackagingUnitList())
-				? null
-				: albertaCompositeProductInfo.getAlbertaPackagingUnitList()
-				.stream()
-				.map(this::mapToJsonAlbertaPackagingUnit)
-				.collect(ImmutableList.toImmutableList());
-
-		return JsonAlbertaProductInfo.builder()
-				.albertaProductId(albertaCompositeProductInfo.getAlbertaArticleId())
-				.additionalDescription(albertaCompositeProductInfo.getAdditionalDescription())
-				.assortmentType(albertaCompositeProductInfo.getAssortmentType())
-				.inventoryType(albertaCompositeProductInfo.getInventoryType())
-				.purchaseRating(albertaCompositeProductInfo.getPurchaseRating())
-				.medicalAidPositionNumber(albertaCompositeProductInfo.getMedicalAidPositionNumber())
-				.status(albertaCompositeProductInfo.getStatus())
-				.size(albertaCompositeProductInfo.getSize())
-				.stars(albertaCompositeProductInfo.getStars())
-				.therapyIds(albertaCompositeProductInfo.getTherapyIds())
-				.pharmacyPrice(albertaCompositeProductInfo.getPharmacyPrice())
-				.fixedPrice(albertaCompositeProductInfo.getFixedPrice())
-				.billableTherapies(albertaCompositeProductInfo.getBillableTherapyIds())
-				.packagingUnits(jsonPackagingUnitList)
-				.productGroupId(albertaCompositeProductInfo.getProductGroupId())
-				.build();
-	}
-
 	private boolean wasAlreadyExported(@NonNull final I_M_Product product)
 	{
 		if (externalSystemType == null)
@@ -356,26 +297,12 @@ public class GetProductsCommand
 		{
 			return false;
 		}
-		else if (productId2AlbertaInfo == null)
-		{
-			return false;
-		}
 		else
 		{
 			final ProductId productId = ProductId.ofRepoId(product.getM_Product_ID());
-			final AlbertaCompositeProductInfo albertaCompositeProductInfo = productId2AlbertaInfo.get(productId);
 
-			return albertaCompositeProductInfo == null || albertaCompositeProductInfo.getLastUpdated().isBefore(lastExported);
+			return true;
 		}
-	}
-
-	@NonNull
-	private JsonAlbertaPackagingUnit mapToJsonAlbertaPackagingUnit(@NonNull final AlbertaPackagingUnit albertaPackagingUnit)
-	{
-		return JsonAlbertaPackagingUnit.builder()
-				.quantity(albertaPackagingUnit.getQuantity())
-				.unit(albertaPackagingUnit.getUnit())
-				.build();
 	}
 
 	@NonNull

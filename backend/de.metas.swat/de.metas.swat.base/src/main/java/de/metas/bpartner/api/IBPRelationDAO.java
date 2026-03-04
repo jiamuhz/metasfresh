@@ -44,8 +44,6 @@ public interface IBPRelationDAO extends ISingletonService
 	I_C_BP_Relation retrieveHandoverBPRelation(I_C_BPartner partner, I_C_BPartner relationPartner);
 
 	Stream<BPRelation> getRelationsForBpartner(@NonNull OrgId orgId, @NonNull BPartnerId bPartnerId);
-
-	Optional<BPartnerId> getLastUpdatedPreferredPharmacyByPartnerId(@Nullable final BPartnerId bpartnerId);
 	
 	void saveOrUpdate(final @NonNull OrgId orgId, final BPRelation rel);
 }

@@ -25,7 +25,6 @@ package de.metas.rest_api.v2.product;
 import de.metas.Profiles;
 import de.metas.rest_api.v2.externlasystem.ExternalSystemService;
 import de.metas.util.web.MetasfreshRestAPIConstants;
-import de.metas.vertical.healthcare.alberta.service.AlbertaProductService;
 import lombok.NonNull;
 import org.springframework.context.annotation.Profile;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -39,11 +38,10 @@ public class DeprecatedProductsRestController extends ProductsRestController
 {
 	public DeprecatedProductsRestController(
 			final @NonNull ProductsServicesFacade productsServicesFacade,
-			final @NonNull AlbertaProductService albertaProductService,
 			final @NonNull ExternalSystemService externalSystemService,
 			final @NonNull ProductRestService productRestService,
 			final @NonNull ExternalIdentifierResolver externalIdentifierResolver)
 	{
-		super(productsServicesFacade, albertaProductService, externalSystemService, productRestService, externalIdentifierResolver);
+		super(productsServicesFacade, externalSystemService, productRestService, externalIdentifierResolver);
 	}
 }

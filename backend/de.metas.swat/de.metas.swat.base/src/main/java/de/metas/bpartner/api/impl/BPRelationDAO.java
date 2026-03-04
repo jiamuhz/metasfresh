@@ -138,21 +138,6 @@ public class BPRelationDAO implements IBPRelationDAO
 				.build();
 	}
 
-	// TODO: create generic relation-query class etc
-	@Nullable
-	@Override
-	public Optional<BPartnerId> getLastUpdatedPreferredPharmacyByPartnerId(@NonNull final BPartnerId bpartnerId)
-	{
-		return queryBL.createQueryBuilder(org.compiere.model.I_C_BP_Relation.class)
-				.addOnlyActiveRecordsFilter()
-				.addEqualsFilter(org.compiere.model.I_C_BP_Relation.COLUMNNAME_C_BPartner_ID, bpartnerId)
-				.addEqualsFilter(org.compiere.model.I_C_BP_Relation.COLUMNNAME_Role, X_C_BP_Relation.ROLE_PreferredPharmacy)
-				.orderByDescending(org.compiere.model.I_C_BP_Relation.COLUMNNAME_Updated)
-				.create()
-				.firstOptional(org.compiere.model.I_C_BP_Relation.class)
-				.map(bpRelation -> BPartnerId.ofRepoId(bpRelation.getC_BPartnerRelation_ID()));
-	}
-	
 	@Override
 	public void saveOrUpdate(final @NonNull OrgId orgId, final BPRelation rel)
 	{

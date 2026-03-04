@@ -25,8 +25,6 @@ import de.metas.ui.web.window.datatypes.DocumentPath;
 import de.metas.ui.web.window.model.DocumentCollection;
 import de.metas.util.Check;
 import de.metas.util.Services;
-import de.metas.vertical.pharma.securpharm.attribute.SecurPharmAttributesStatus;
-import de.metas.vertical.pharma.securpharm.service.SecurPharmService;
 import lombok.NonNull;
 import org.adempiere.ad.dao.ConstantQueryFilter;
 import org.adempiere.ad.dao.IQueryBL;
@@ -76,7 +74,6 @@ public abstract class WEBUI_M_HU_CreateReceipt_Base
 
 	private final IViewsRepository viewsRepo = SpringContextHolder.instance.getBean(IViewsRepository.class);
 	private final DocumentCollection documentsCollection = SpringContextHolder.instance.getBean(DocumentCollection.class);
-	private final SecurPharmService securPharmService = SpringContextHolder.instance.getBean(SecurPharmService.class);
 	private final ProductRepository productRepository = SpringContextHolder.instance.getBean(ProductRepository.class);
 	private final transient IHUReceiptScheduleBL huReceiptScheduleBL = Services.get(IHUReceiptScheduleBL.class);
 	private final transient IAttributeDAO attributeDAO = Services.get(IAttributeDAO.class);
@@ -124,36 +121,6 @@ public abstract class WEBUI_M_HU_CreateReceipt_Base
 
 	private ProcessPreconditionsResolution rejectIfSecurPharmAttributesAreNotOK(final HUEditorRow document)
 	{
-		//
-		// OK if this is not a Pharma product
-		final HUEditorRowAttributes attributes = document.getAttributes();
-		if (!attributes.hasAttribute(AttributeConstants.ATTR_SecurPharmScannedStatus))
-		{
-			return ProcessPreconditionsResolution.accept();
-		}
-
-		//
-		// NOK if SecurPharm connection is not configured and we deal with a pharma product
-		if (!securPharmService.hasConfig())
-		{
-			return ProcessPreconditionsResolution.reject("SecurPharm not configured");
-		}
-
-		//
-		// NOK if not scanned and vendor != manufacturer
-		final BPartnerId vendorId = document.getBpartnerId();
-		final BPartnerId manufacturerId = productRepository
-				.getById(document.getProductId())
-				.getManufacturerId();
-		if (!BPartnerId.equals(vendorId, manufacturerId))
-		{
-			final SecurPharmAttributesStatus status = SecurPharmAttributesStatus.ofNullableCodeOrKnown(attributes.getValueAsString(AttributeConstants.ATTR_SecurPharmScannedStatus));
-			if (status.isUnknown())
-			{
-				return ProcessPreconditionsResolution.reject(Services.get(IMsgBL.class).getTranslatableMsgText(MSG_ScanRequired));
-			}
-		}
-
 		//
 		// OK
 		return ProcessPreconditionsResolution.accept();

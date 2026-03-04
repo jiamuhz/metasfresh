@@ -56,9 +56,6 @@ import de.metas.salesorder.candidate.ProcessOLCandsWorkpackageEnqueuer;
 import de.metas.util.Check;
 import de.metas.util.Services;
 import de.metas.util.web.exception.MissingResourceException;
-import de.metas.vertical.healthcare.alberta.order.AlbertaOrderInfo;
-import de.metas.vertical.healthcare.alberta.order.AlbertaOrderLineInfo;
-import de.metas.vertical.healthcare.alberta.order.service.AlbertaOrderService;
 import lombok.NonNull;
 import org.adempiere.ad.trx.api.ITrx;
 import org.compiere.util.DB;
@@ -83,7 +80,6 @@ public class OrderCandidateRestControllerService
 
 	private final JsonConverters jsonConverters;
 	private final OLCandRepository olCandRepo;
-	private final AlbertaOrderService albertaOrderService;
 	private final JsonInvoiceService jsonInvoiceService;
 	private final JsonShipmentService jsonShipmentService;
 	private final ProcessOLCandsWorkpackageEnqueuer processOLCandsWorkpackageEnqueuer;
@@ -92,7 +88,6 @@ public class OrderCandidateRestControllerService
 	public OrderCandidateRestControllerService(
 			@NonNull final JsonConverters jsonConverters,
 			@NonNull final OLCandRepository olCandRepo,
-			@NonNull final AlbertaOrderService albertaOrderService,
 			@NonNull final JsonShipmentService jsonShipmentService,
 			@NonNull final JsonInvoiceService jsonInvoiceService,
 			@NonNull final ProcessOLCandsWorkpackageEnqueuer processOLCandsWorkpackageEnqueuer,
@@ -100,7 +95,6 @@ public class OrderCandidateRestControllerService
 	{
 		this.jsonConverters = jsonConverters;
 		this.olCandRepo = olCandRepo;
-		this.albertaOrderService = albertaOrderService;
 		this.jsonShipmentService = jsonShipmentService;
 		this.jsonInvoiceService = jsonInvoiceService;
 		this.processOLCandsWorkpackageEnqueuer = processOLCandsWorkpackageEnqueuer;
@@ -179,13 +173,6 @@ public class OrderCandidateRestControllerService
 
 		final OLCandCreateRequest candCreateRequest = fromJson(request, masterdataProvider);
 		final OLCand olCand = olCandRepo.create(candCreateRequest);
-
-		if (request.getAlbertaOrderInfo() == null)
-		{
-			return olCand;
-		}
-
-		createAlbertaOrderRecords(request.getOrgCode(), olCand, request.getAlbertaOrderInfo(), masterdataProvider);
 
 		return olCand;
 	}
@@ -309,58 +296,4 @@ public class OrderCandidateRestControllerService
 		asyncBatchService.executeBatch(action, processOLCandsAsyncBatchId);
 	}
 
-	private void createAlbertaOrderRecords(
-			@Nullable final String orgCode,
-			@NonNull final OLCand olCand,
-			@NonNull final JsonAlbertaOrderInfo jsonAlbertaOrderInfo,
-			@NonNull final MasterdataProvider masterdataProvider)
-	{
-		final OLCandId olCandId = OLCandId.ofRepoId(olCand.getId());
-
-		final AlbertaOrderLineInfo albertaOrderLineInfo = jsonAlbertaOrderInfo.getJsonAlbertaOrderLineInfo() != null
-				? buildAlbertaOrderLineInfo(jsonAlbertaOrderInfo.getJsonAlbertaOrderLineInfo(), olCandId)
-				: null;
-
-		final AlbertaOrderInfo albertaOrderInfo = AlbertaOrderInfo.builder()
-				.orgId(OrgId.ofRepoId(olCand.getAD_Org_ID()))
-				.olCandId(olCandId)
-				.externalId(jsonAlbertaOrderInfo.getExternalId())
-				.rootId(jsonAlbertaOrderInfo.getRootId())
-				.creationDate(jsonAlbertaOrderInfo.getCreationDate())
-				.startDate(jsonAlbertaOrderInfo.getStartDate())
-				.endDate(jsonAlbertaOrderInfo.getEndDate())
-				.dayOfDelivery(jsonAlbertaOrderInfo.getDayOfDelivery())
-				.nextDelivery(jsonAlbertaOrderInfo.getNextDelivery())
-				.doctorBPartnerId(resolveExternalBPartnerIdentifier(orgCode, jsonAlbertaOrderInfo.getDoctorBPartnerIdentifier(), masterdataProvider))
-				.pharmacyBPartnerId(resolveExternalBPartnerIdentifier(orgCode, jsonAlbertaOrderInfo.getPharmacyBPartnerIdentifier(), masterdataProvider))
-				.isInitialCare(jsonAlbertaOrderInfo.getIsInitialCare())
-				.isSeriesOrder(jsonAlbertaOrderInfo.getIsSeriesOrder())
-				.isArchived(jsonAlbertaOrderInfo.getIsArchived())
-				.annotation(jsonAlbertaOrderInfo.getAnnotation())
-				.deliveryInformation(jsonAlbertaOrderInfo.getDeliveryInformation())
-				.deliveryNote(jsonAlbertaOrderInfo.getDeliveryNote())
-				.updated(jsonAlbertaOrderInfo.getUpdated())
-				.orderLine(albertaOrderLineInfo)
-				.therapy(jsonAlbertaOrderInfo.getTherapy())
-				.therapyTypes(jsonAlbertaOrderInfo.getTherapyTypes())
-				.build();
-
-		albertaOrderService.saveAlbertaOrderInfo(albertaOrderInfo);
-	}
-
-	@NonNull
-	private AlbertaOrderLineInfo buildAlbertaOrderLineInfo(@NonNull final JsonAlbertaOrderLineInfo jsonAlbertaOrderLineInfo, @NonNull final OLCandId olCandId)
-	{
-		return AlbertaOrderLineInfo.builder()
-				.externalId(jsonAlbertaOrderLineInfo.getExternalId())
-				.olCandId(olCandId)
-				.salesLineId(jsonAlbertaOrderLineInfo.getSalesLineId())
-				.unit(jsonAlbertaOrderLineInfo.getUnit())
-				.isPrivateSale(jsonAlbertaOrderLineInfo.getIsPrivateSale())
-				.isRentalEquipment(jsonAlbertaOrderLineInfo.getIsRentalEquipment())
-				.durationAmount(jsonAlbertaOrderLineInfo.getDurationAmount())
-				.timePeriod(jsonAlbertaOrderLineInfo.getTimePeriod())
-				.updated(jsonAlbertaOrderLineInfo.getUpdated())
-				.build();
-	}
 }

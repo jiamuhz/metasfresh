@@ -120,7 +120,6 @@ import de.metas.util.StringUtils;
 import de.metas.util.web.exception.InvalidIdentifierException;
 import de.metas.util.web.exception.MissingPropertyException;
 import de.metas.util.web.exception.MissingResourceException;
-import de.metas.vertical.healthcare.alberta.bpartner.AlbertaBPartnerCompositeService;
 import lombok.AccessLevel;
 import lombok.Data;
 import lombok.Getter;
@@ -170,7 +169,6 @@ public class JsonPersisterService
 	private final transient BPartnerCompositeRepository bpartnerCompositeRepository;
 	private final transient BPGroupRepository bpGroupRepository;
 	private final transient CurrencyRepository currencyRepository;
-	private final transient AlbertaBPartnerCompositeService albertaBPartnerCompositeService;
 	private final transient SectionCodeService sectionCodeService;
 	private final transient IncotermsRepository incotermsRepository;
 	private final transient BPartnerCreditLimitRepository bPartnerCreditLimitRepository;
@@ -188,7 +186,6 @@ public class JsonPersisterService
 			@NonNull final BPGroupRepository bpGroupRepository,
 			@NonNull final CurrencyRepository currencyRepository,
 			@NonNull final ExternalReferenceRestControllerService externalReferenceRestControllerService,
-			@NonNull final AlbertaBPartnerCompositeService albertaBPartnerCompositeService,
 			@NonNull final SectionCodeService sectionCodeService,
 			@NonNull final IncotermsRepository incotermsRepository,
 			@NonNull final BPartnerCreditLimitRepository bPartnerCreditLimitRepository,
@@ -200,7 +197,6 @@ public class JsonPersisterService
 		this.bpartnerCompositeRepository = bpartnerCompositeRepository;
 		this.bpGroupRepository = bpGroupRepository;
 		this.currencyRepository = currencyRepository;
-		this.albertaBPartnerCompositeService = albertaBPartnerCompositeService;
 		this.sectionCodeService = sectionCodeService;
 		this.incotermsRepository = incotermsRepository;
 		this.bPartnerCreditLimitRepository = bPartnerCreditLimitRepository;
@@ -269,8 +265,6 @@ public class JsonPersisterService
 
 		final JsonResponseBPartnerCompositeUpsertItem result = resultBuilder.build();
 		handleExternalReferenceRecords(requestItem, result, orgCode);
-
-		handleAlbertaInfo(bpartnerComposite.getOrgId(), effectiveSyncAdvise, requestItem, result);
 
 		return result;
 	}
@@ -2181,53 +2175,6 @@ public class JsonPersisterService
 		for (final JsonRequestExternalReferenceUpsert request : externalReferenceCreateReqs)
 		{
 			externalReferenceRestControllerService.performUpsert(request, orgCode);
-		}
-	}
-
-	private void handleAlbertaInfo(
-			@NonNull final OrgId orgId,
-			@NonNull final SyncAdvise syncAdvise,
-			@NonNull final JsonRequestBPartnerUpsertItem requestItem,
-			@NonNull final JsonResponseBPartnerCompositeUpsertItem result)
-	{
-		final JsonRequestComposite requestBPartnerComposite = requestItem.getBpartnerComposite();
-
-		final JsonCompositeAlbertaBPartner compositeAlbertaBPartner = requestBPartnerComposite.getCompositeAlbertaBPartner();
-
-		if (compositeAlbertaBPartner != null)
-		{
-			final BPartnerId bPartnerId = BPartnerId.ofRepoId(result.getResponseBPartnerItem().getMetasfreshId().getValue());
-			albertaBPartnerCompositeService.upsertAlbertaCompositeInfo(orgId, bPartnerId, compositeAlbertaBPartner, syncAdvise);
-		}
-
-		if (!requestBPartnerComposite.getContactsNotNull().getRequestItems().isEmpty()
-				&& !Check.isEmpty(result.getResponseContactItems()))
-		{
-			final Map<String, JsonMetasfreshId> contactIdentifierToMetasfreshId = result.getResponseContactItems()
-					.stream()
-					.collect(ImmutableMap.toImmutableMap(JsonResponseUpsertItem::getIdentifier, JsonResponseUpsertItem::getMetasfreshId));
-
-			final SyncAdvise effectiveSyncAdvise = CoalesceUtil.coalesceNotNull(requestBPartnerComposite.getContactsNotNull().getSyncAdvise(), syncAdvise);
-
-			requestItem.getBpartnerComposite().getContactsNotNull().getRequestItems()
-					.stream()
-					.filter(contactRequestItem -> contactRequestItem.getJsonAlbertaContact() != null)
-					.forEach(contactRequestItem -> {
-						final JsonMetasfreshId contactMetasfreshId = contactIdentifierToMetasfreshId.get(contactRequestItem.getContactIdentifier());
-
-						if (contactMetasfreshId == null)
-						{
-							throw MissingResourceException.builder()
-									.resourceName("BPartnerContact")
-									.resourceIdentifier(contactRequestItem.getContactIdentifier())
-									.parentResource(requestBPartnerComposite)
-									.build();
-						}
-
-						albertaBPartnerCompositeService.upsertAlbertaContact(UserId.ofRepoId(contactMetasfreshId.getValue()),
-																			 contactRequestItem.getJsonAlbertaContact(),
-																			 effectiveSyncAdvise);
-					});
 		}
 	}
 

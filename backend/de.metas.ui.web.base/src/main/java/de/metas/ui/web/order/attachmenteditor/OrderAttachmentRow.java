@@ -36,8 +36,6 @@ import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.ViewEditorRenderMode;
 import de.metas.ui.web.window.descriptor.WidgetSize;
-import de.metas.vertical.healthcare.alberta.model.I_Alberta_PrescriptionRequest;
-import de.metas.vertical.healthcare.alberta.model.I_C_BPartner_AlbertaPatient;
 import lombok.Builder;
 import lombok.Getter;
 import lombok.NonNull;
@@ -85,35 +83,6 @@ public class OrderAttachmentRow implements IViewRow
 			editor = ViewEditorRenderMode.ALWAYS)
 	private final Boolean isAttachToPurchaseOrder;
 
-	@ViewColumn(seqNo = 30, widgetType = DocumentFieldWidgetType.Lookup,
-			widgetSize = WidgetSize.Small,
-			captionKey = I_Alberta_PrescriptionRequest.COLUMNNAME_C_BPartner_Patient_ID,
-			displayed = ViewColumn.ViewColumnLayout.Displayed.SYSCONFIG,
-			displayedSysConfigPrefix = SYS_CONFIG_PREFIX,
-			fieldName = I_Alberta_PrescriptionRequest.COLUMNNAME_C_BPartner_Patient_ID,
-			editor = ViewEditorRenderMode.NEVER)
-	@Getter
-	private final LookupValue patient;
-
-	@ViewColumn(seqNo = 40, widgetType = DocumentFieldWidgetType.Lookup,
-			widgetSize = WidgetSize.Small,
-			captionKey = I_C_BPartner_AlbertaPatient.COLUMNNAME_C_BPartner_Payer_ID,
-			displayed = ViewColumn.ViewColumnLayout.Displayed.SYSCONFIG,
-			displayedSysConfigPrefix = SYS_CONFIG_PREFIX,
-			fieldName = I_C_BPartner_AlbertaPatient.COLUMNNAME_C_BPartner_Payer_ID,
-			editor = ViewEditorRenderMode.NEVER)
-	@Getter
-	private final LookupValue payer;
-
-	@ViewColumn(seqNo = 50, widgetType = DocumentFieldWidgetType.Lookup,
-			widgetSize = WidgetSize.Small, captionKey = I_Alberta_PrescriptionRequest.COLUMNNAME_C_BPartner_Pharmacy_ID,
-			displayed = ViewColumn.ViewColumnLayout.Displayed.SYSCONFIG,
-			displayedSysConfigPrefix = SYS_CONFIG_PREFIX,
-			fieldName = I_Alberta_PrescriptionRequest.COLUMNNAME_C_BPartner_Pharmacy_ID,
-			editor = ViewEditorRenderMode.NEVER)
-	@Getter
-	private final LookupValue pharmacy;
-
 	@ViewColumn(seqNo = 60, widgetType = DocumentFieldWidgetType.ZonedDateTime,
 			widgetSize = WidgetSize.Small,
 			captionKey = I_C_Order.COLUMNNAME_DatePromised,
@@ -138,11 +107,8 @@ public class OrderAttachmentRow implements IViewRow
 	@Builder(toBuilder = true)
 	private OrderAttachmentRow(
 			@NonNull final Boolean isAttachToPurchaseOrder,
-			@Nullable final LookupValue patient,
 			@NonNull final I_C_Order selectedPurchaseOrder,
 			@NonNull final AttachmentEntry attachmentEntry,
-			@Nullable final LookupValue payer,
-			@Nullable final LookupValue pharmacy,
 			@Nullable final ZonedDateTime datePromised,
 			@Nullable final String filename,
 			@NonNull final DocumentId rowId)
@@ -150,9 +116,6 @@ public class OrderAttachmentRow implements IViewRow
 		this.attachmentEntryId = attachmentEntry.getId().getRepoId();
 		this.isAttachToPurchaseOrder = isAttachToPurchaseOrder;
 		this.isDirectlyAttachToPurchaseOrder = attachmentEntry.hasLinkToRecord(TableRecordReference.of(selectedPurchaseOrder));
-		this.patient = patient;
-		this.payer = payer;
-		this.pharmacy = pharmacy;
 		this.datePromised = datePromised;
 		this.filename = filename;
 		this.selectedPurchaseOrder = selectedPurchaseOrder;

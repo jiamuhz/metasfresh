@@ -36,7 +36,6 @@ import de.metas.rest_api.v2.externlasystem.ExternalSystemService;
 import de.metas.rest_api.v2.product.command.GetProductsCommand;
 import de.metas.util.Check;
 import de.metas.util.web.MetasfreshRestAPIConstants;
-import de.metas.vertical.healthcare.alberta.service.AlbertaProductService;
 import io.swagger.v3.oas.annotations.Operation;
 import io.swagger.v3.oas.annotations.Parameter;
 import io.swagger.v3.oas.annotations.responses.ApiResponse;
@@ -79,20 +78,17 @@ public class ProductsRestController
 {
 	private static final Logger logger = LogManager.getLogger(ProductsRestController.class);
 	private final ProductsServicesFacade productsServicesFacade;
-	private final AlbertaProductService albertaProductService;
 	private final ExternalSystemService externalSystemService;
 	private final ProductRestService productRestService;
 	private final ExternalIdentifierResolver externalIdentifierResolver;
 
 	public ProductsRestController(
 			@NonNull final ProductsServicesFacade productsServicesFacade,
-			@NonNull final AlbertaProductService albertaProductService,
 			@NonNull final ExternalSystemService externalSystemService,
 			@NonNull final ProductRestService productRestService,
 			@NonNull final ExternalIdentifierResolver externalIdentifierResolver)
 	{
 		this.productsServicesFacade = productsServicesFacade;
-		this.albertaProductService = albertaProductService;
 		this.externalSystemService = externalSystemService;
 		this.productRestService = productRestService;
 		this.externalIdentifierResolver = externalIdentifierResolver;
@@ -115,7 +111,6 @@ public class ProductsRestController
 
 			final JsonGetProductsResponse response = GetProductsCommand.builder()
 					.servicesFacade(productsServicesFacade)
-					.albertaProductService(albertaProductService)
 					.externalSystemService(externalSystemService)
 					.externalIdentifierResolver(externalIdentifierResolver)
 					.externalSystemType(externalSystemType)
@@ -181,7 +176,6 @@ public class ProductsRestController
 
 			final JsonGetProductsResponse response = GetProductsCommand.builder()
 					.servicesFacade(productsServicesFacade)
-					.albertaProductService(albertaProductService)
 					.externalSystemService(externalSystemService)
 					.externalIdentifierResolver(externalIdentifierResolver)
 					.adLanguage(adLanguage)

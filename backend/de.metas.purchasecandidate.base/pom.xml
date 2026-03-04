@@ -29,13 +29,7 @@
 			<artifactId>de.metas.vendor.gateway.api</artifactId>
 			<version>${metasfresh.version}</version>
 		</dependency>
-		<!-- vendor-API's implementation to be discovered, registered and used behind the scenes, but not used directly -->
-		<dependency>
-			<groupId>de.metas.vertical.pharma</groupId>
-			<artifactId>metasfresh-pharma.vendor.gateway.msv3</artifactId>
-			<version>${metasfresh.version}</version>
-		</dependency>
-			
+
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
