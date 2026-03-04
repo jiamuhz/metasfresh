@@ -14,6 +14,8 @@
 
 	<packaging>pom</packaging>
 
+	<description> Rollout 在软件开发和部署领域，指的是将新的软件版本、功能或配置有计划地发布到生产环境或用户手中的过程。你可以把它理解为软件的"部署上线"或"推广发布"。 </description>
+
 	<dependencies>
 		<dependency>
 			<groupId>de.metas.migration</groupId>

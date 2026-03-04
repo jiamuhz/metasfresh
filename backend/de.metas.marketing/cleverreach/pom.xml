@@ -13,6 +13,8 @@
 	<artifactId>marketing-cleverreach</artifactId>
 	<packaging>jar</packaging>
 
+	<description> CleverReach® 邮件营销平台 </description>
+
 	<properties>
 		<migration-sql-basedir></migration-sql-basedir>
 		<metasfresh.version>[1,10.0.0]</metasfresh.version>
