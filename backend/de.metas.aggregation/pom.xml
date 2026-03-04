@@ -12,6 +12,8 @@
 	<groupId>de.metas.aggregation</groupId>
 	<artifactId>de.metas.aggregation</artifactId>
 
+	<description>metasfresh 的"数据聚合工厂"，它读取 C_Aggregation 和 C_AggregationItem 的配置，驱动整个聚合计算过程，生成各种统计报表和分析结果</description>
+
 	<properties>
 		<migration-sql-basedir>20-de.metas.aggregation</migration-sql-basedir>
 	</properties>

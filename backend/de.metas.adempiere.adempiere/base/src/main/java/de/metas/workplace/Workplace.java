@@ -20,6 +20,10 @@
  * #L%
  */
 
+/**
+ * 个人工作台
+ */
+
 package de.metas.workplace;
 
 import lombok.Builder;
