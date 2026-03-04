@@ -56,14 +56,14 @@ import lombok.NonNull;
  */
 
 /**
- * {@link HUEditorViewBuffer} implementation which fully caches the {@link HUEditorRow}s.
+ * {@link HUEditorViewRowBuffer} implementation which fully caches the {@link HUEditorRow}s.
  *
  * This implementation shall be used when dealing with small amount of HUs.
  *
  * @author metas-dev <dev@metasfresh.com>
  *
  */
-class HUEditorViewBuffer_FullyCached implements HUEditorViewBuffer
+class HUEditorViewRowBuffer_FullyCached implements HUEditorViewRowBuffer
 {
 	private final ViewId viewId;
 	private final HUEditorViewRepository huEditorRepo;
@@ -76,7 +76,7 @@ class HUEditorViewBuffer_FullyCached implements HUEditorViewBuffer
 
 	private final DocumentQueryOrderByList defaultOrderBys;
 
-	HUEditorViewBuffer_FullyCached(
+	HUEditorViewRowBuffer_FullyCached(
 			@NonNull final ViewId viewId,
 			@NonNull final HUEditorViewRepository huEditorRepo,
 			final DocumentFilterList stickyFilters,

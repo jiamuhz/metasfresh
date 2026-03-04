@@ -44,7 +44,7 @@ import lombok.NonNull;
  * @author metas-dev <dev@metasfresh.com>
  *
  */
-interface HUEditorViewBuffer
+interface HUEditorViewRowBuffer
 {
 	ViewId getViewId();
 

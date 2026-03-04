@@ -93,7 +93,7 @@ public class HUEditorView implements IView
 	private final boolean considerTableRelatedProcessDescriptors;
 	private final ImmutableList<RelatedProcessDescriptor> additionalRelatedProcessDescriptors;
 
-	private final HUEditorViewBuffer rowsBuffer;
+	private final HUEditorViewRowBuffer rowsBuffer;
 
 	private final transient DocumentFilterDescriptorsProvider filterDescriptors;
 	private final DocumentFilterList filters;

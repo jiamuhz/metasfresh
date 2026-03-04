@@ -319,19 +319,19 @@ public final class HUEditorViewBuilder
 		return this;
 	}
 
-	HUEditorViewBuffer createRowsBuffer(@NonNull final SqlDocumentFilterConverterContext context)
+	HUEditorViewRowBuffer createRowsBuffer(@NonNull final SqlDocumentFilterConverterContext context)
 	{
 		final ViewId viewId = getViewId();
 		final DocumentFilterList stickyFilters = getStickyFilters();
 		final DocumentFilterList filters = getFilters();
 
-		if (HUEditorViewBuffer_HighVolume.isHighVolume(stickyFilters))
+		if (HUEditorViewRowBuffer_HighVolume.isHighVolume(stickyFilters))
 		{
-			return new HUEditorViewBuffer_HighVolume(viewId, huEditorViewRepository, stickyFilters, filters, getOrderBys(), context);
+			return new HUEditorViewRowBuffer_HighVolume(viewId, huEditorViewRepository, stickyFilters, filters, getOrderBys(), context);
 		}
 		else
 		{
-			return new HUEditorViewBuffer_FullyCached(viewId, huEditorViewRepository, stickyFilters, filters, getOrderBys(), context);
+			return new HUEditorViewRowBuffer_FullyCached(viewId, huEditorViewRepository, stickyFilters, filters, getOrderBys(), context);
 		}
 	}
 

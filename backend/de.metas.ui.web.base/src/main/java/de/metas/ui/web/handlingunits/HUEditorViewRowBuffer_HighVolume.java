@@ -54,7 +54,7 @@ import java.util.stream.Stream;
  * #L%
  */
 
-public class HUEditorViewBuffer_HighVolume implements HUEditorViewBuffer
+public class HUEditorViewRowBuffer_HighVolume implements HUEditorViewRowBuffer
 {
 	private static final int HIGHVOLUME_THRESHOLD = 100;
 	private static final int STREAM_ALL_MAX_SIZE_ALLOWED = 200;
@@ -70,7 +70,7 @@ public class HUEditorViewBuffer_HighVolume implements HUEditorViewBuffer
 
 	private final CCache<DocumentId, HUEditorRow> cache_huRowsById = CCache.newLRUCache(I_M_HU.Table_Name + "#HUEditorRows#by#Id", 100, 2);
 
-	HUEditorViewBuffer_HighVolume(
+	HUEditorViewRowBuffer_HighVolume(
 			final ViewId viewId,
 			final HUEditorViewRepository huEditorRepo,
 			@NonNull final DocumentFilterList stickyFilters,
