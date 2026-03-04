@@ -28,12 +28,6 @@
 	<dependencies>
 
 		<dependency>
-			<groupId>de.metas.vertical.healthcare.alberta</groupId>
-			<artifactId>de.metas.vertical.healthcare.alberta</artifactId>
-			<version>${metasfresh.version}</version>
-		</dependency>
-		
-		<dependency>
 			<groupId>de.metas.async</groupId>
 			<artifactId>de.metas.async</artifactId>
 			<version>${metasfresh.version}</version>
