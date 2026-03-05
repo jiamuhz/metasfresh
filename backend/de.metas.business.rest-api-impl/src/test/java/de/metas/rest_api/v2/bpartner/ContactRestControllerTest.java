@@ -61,7 +61,6 @@ import de.metas.user.UserId;
 import de.metas.user.UserRepository;
 import de.metas.util.Services;
 import de.metas.util.lang.UIDStringUtil;
-import de.metas.vertical.healthcare.alberta.bpartner.AlbertaBPartnerCompositeService;
 import lombok.NonNull;
 import org.adempiere.ad.dao.IQueryBL;
 import org.adempiere.ad.table.MockLogEntriesRepository;
@@ -152,7 +151,6 @@ class ContactRestControllerTest
 				externalReferenceRestControllerService,
 				new SectionCodeService(sectionCodeRepository),
 				incotermsRepository,
-				Mockito.mock(AlbertaBPartnerCompositeService.class),
 				new BPartnerCreditLimitRepository());
 
 		contactRestController = new ContactRestController(

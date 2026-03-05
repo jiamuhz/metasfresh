@@ -518,14 +518,6 @@ public class X_I_Invoice_Candidate extends org.compiere.model.PO implements I_I_
 	public static final String DOCSUBTYPE_Rueckverguetungsrechnung = "RI";
 	/** Rückvergütungsgutschrift = RC */
 	public static final String DOCSUBTYPE_Rueckverguetungsgutschrift = "RC";
-	/** Healthcare_CH-GM = GM */
-	public static final String DOCSUBTYPE_Healthcare_CH_GM = "GM";
-	/** Healthcare_CH-EA = EA */
-	public static final String DOCSUBTYPE_Healthcare_CH_EA = "EA";
-	/** Healthcare_CH-KV = KV */
-	public static final String DOCSUBTYPE_Healthcare_CH_KV = "KV";
-	/** Healthcare_CH-KT = KT */
-	public static final String DOCSUBTYPE_Healthcare_CH_KT = "KT";
 	/** AggregatedHUInventory = IAH */
 	public static final String DOCSUBTYPE_AggregatedHUInventory = "IAH";
 	/** SingleHUInventory = ISH */

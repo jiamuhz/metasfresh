@@ -68,9 +68,6 @@ import de.metas.uom.UomId;
 import de.metas.user.UserId;
 import de.metas.user.UserRepository;
 import de.metas.util.Services;
-import de.metas.vertical.healthcare.alberta.bpartner.AlbertaBPartnerCompositeService;
-import de.metas.vertical.healthcare.alberta.dao.AlbertaProductDAO;
-import de.metas.vertical.healthcare.alberta.service.AlbertaProductService;
 import de.metas.warehouseassignment.ProductWarehouseAssignmentRepository;
 import de.metas.warehouseassignment.ProductWarehouseAssignmentService;
 import lombok.Builder;
@@ -138,7 +135,6 @@ public class ProductsRestControllerTest
 
 		final ExternalReferenceRestControllerService externalReferenceRestControllerService =
 				new ExternalReferenceRestControllerService(externalReferenceRepository, new ExternalSystems(), new ExternalReferenceTypes());
-		final AlbertaProductService albertaProductService = new AlbertaProductService(new AlbertaProductDAO(), externalReferenceRepository);
 
 		final ProductsServicesFacade productsServicesFacade = new ProductsServicesFacade(sectionCodeRepository);
 
@@ -157,7 +153,6 @@ public class ProductsRestControllerTest
 				Mockito.mock(de.metas.externalreference.rest.v2.ExternalReferenceRestControllerService.class),
 				new SectionCodeService(sectionCodeRepository),
 				new IncotermsRepository(),
-				Mockito.mock(AlbertaBPartnerCompositeService.class),
 				new BPartnerCreditLimitRepository());
 
 		final ExternalIdentifierResolver externalIdentifierResolver = new ExternalIdentifierResolver(externalReferenceRestControllerService);
@@ -173,8 +168,7 @@ public class ProductsRestControllerTest
 																			 new QualityAttributeService(new ProductQualityAttributeRepository()),
 																			 jsonServiceFactory,
 																			 externalIdentifierResolver);
-		//
-		restController = new ProductsRestController(productsServicesFacade, albertaProductService, externalSystemService, productRestService, externalIdentifierResolver);
+
 	}
 
 	private void createMasterData()

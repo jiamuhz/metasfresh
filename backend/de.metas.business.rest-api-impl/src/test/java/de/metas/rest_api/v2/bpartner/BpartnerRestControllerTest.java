@@ -88,7 +88,6 @@ import de.metas.util.JSONObjectMapper;
 import de.metas.util.Services;
 import de.metas.util.lang.UIDStringUtil;
 import de.metas.util.web.exception.MissingResourceException;
-import de.metas.vertical.healthcare.alberta.bpartner.AlbertaBPartnerCompositeService;
 import lombok.NonNull;
 import lombok.Value;
 import org.adempiere.ad.dao.IQueryBL;

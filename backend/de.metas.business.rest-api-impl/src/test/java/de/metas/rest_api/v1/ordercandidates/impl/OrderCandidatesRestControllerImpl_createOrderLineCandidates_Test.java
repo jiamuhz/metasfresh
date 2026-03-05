@@ -156,7 +156,7 @@ OrderCandidatesRestControllerImpl_createOrderLineCandidates_Test
 					.atTime(LocalTime.parse("23:07:16.193"))
 					.atZone(ZoneId.of("Europe/Berlin"));
 
-	private static final String DATA_SOURCE_INTERNALNAME = "SOURCE.de.metas.vertical.healthcare.forum_datenaustausch_ch.rest.ImportInvoice440RestController";
+	private static final String DATA_SOURCE_INTERNALNAME = "SOURCE.forum_datenaustausch_ch.rest.ImportInvoice440RestController";
 	private static final String DATA_DEST_INVOICECANDIDATE = "DEST.de.metas.invoicecandidate";
 
 	private BPartnerBL bpartnerBL;
