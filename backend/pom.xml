@@ -83,8 +83,6 @@
         <module>de.metas.global_qrcode.services</module>
         <module>de.metas.business</module>
 
-        <module>de.metas.forex.webui</module>
-
         <module>de.metas.business.rest-api</module>
         <module>de.metas.business.rest-api-impl</module>
 
