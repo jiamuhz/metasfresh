@@ -41,13 +41,6 @@
             <groupId>de.metas.fresh</groupId>
             <artifactId>de.metas.fresh.base</artifactId>
             <version>${metasfresh.version}</version>
-            <exclusions>
-                <!-- TODO: i think we shall remove this dep. from de.metas.fresh.base !!! -->
-                <exclusion>
-                    <groupId>de.metas.adempiere.adempiere</groupId>
-                    <artifactId>de.metas.adempiere.adempiere.serverRoot.base</artifactId>
-                </exclusion>
-            </exclusions>
         </dependency>
 
         <dependency>
