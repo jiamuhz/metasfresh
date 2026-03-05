@@ -196,7 +196,6 @@ class BpartnerRestControllerTest
 				externalReferenceRestControllerService,
 				new SectionCodeService(sectionCodeRepository),
 				incotermsRepository,
-				Mockito.mock(AlbertaBPartnerCompositeService.class),
 				bPartnerCreditLimitRepository);
 
 		bpartnerRestController = new BpartnerRestController(

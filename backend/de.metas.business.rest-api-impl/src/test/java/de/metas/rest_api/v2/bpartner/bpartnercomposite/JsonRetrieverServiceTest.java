@@ -106,7 +106,6 @@ class JsonRetrieverServiceTest
 				Mockito.mock(ExternalReferenceRestControllerService.class),
 				new SectionCodeService(sectionCodeRepository),
 				incotermsRepository,
-				Mockito.mock(AlbertaBPartnerCompositeService.class),
 				new BPartnerCreditLimitRepository());
 
 		jsonRetrieverService = jsonServiceFactory.createRetriever();
