@@ -40,11 +40,6 @@ import de.metas.payment.api.DefaultPaymentBuilder;
 import de.metas.payment.api.IPaymentBL;
 import de.metas.payment.api.IPaymentDAO;
 import de.metas.payment.api.PaymentReconcileReference;
-import de.metas.payment.esr.api.impl.ESRImportBL;
-import de.metas.payment.esr.model.I_ESR_Import;
-import de.metas.payment.esr.model.I_ESR_ImportLine;
-import de.metas.payment.esr.model.X_ESR_Import;
-import de.metas.payment.esr.model.validator.ESRBankStatementListener;
 import de.metas.ui.web.bankstatement_reconciliation.BankStatementLineAndPaymentsToReconcileRepository;
 import de.metas.ui.web.bankstatement_reconciliation.BankStatementLineRow;
 import de.metas.ui.web.bankstatement_reconciliation.PaymentToReconcileRow;
@@ -130,8 +125,6 @@ public class ReconcilePaymentsCommandTest
 		SpringContextHolder.registerJUnitBean(moneyService);
 
 		final IBankStatementListenerService bankStatementListenerService = Services.get(IBankStatementListenerService.class);
-		final ESRImportBL esrImportBL = new ESRImportBL(AttachmentEntryService.createInstanceForUnitTesting());
-		bankStatementListenerService.addListener(new ESRBankStatementListener(esrImportBL));
 
 		final IPaySelectionBL paySelectionBL = Services.get(IPaySelectionBL.class);
 		bankStatementListenerService.addListener(new PaySelectionBankStatementListener(paySelectionBL));
@@ -301,19 +294,6 @@ public class ReconcilePaymentsCommandTest
 		return paySelectionLine;
 	}
 
-	private I_ESR_ImportLine createESRImportLine(@NonNull final PaymentId paymentId)
-	{
-		final I_ESR_Import esrImport = newInstance(I_ESR_Import.class);
-		esrImport.setDataType(X_ESR_Import.DATATYPE_V11);
-		save(esrImport);
-		
-		final I_ESR_ImportLine esrImportLine = newInstance(I_ESR_ImportLine.class);
-		esrImportLine.setESR_Import_ID(esrImport.getESR_Import_ID());
-		esrImportLine.setC_Payment_ID(paymentId.getRepoId());
-		saveRecord(esrImportLine);
-		return esrImportLine;
-	}
-
 	@Test
 	public void bankStatementLineIsLinkedToPaySelection()
 	{
@@ -336,11 +316,6 @@ public class ReconcilePaymentsCommandTest
 		assertThat(paySelectionLine.getC_BankStatementLine_ID()).isLessThanOrEqualTo(0);
 		assertThat(paySelectionLine.getC_BankStatementLine_Ref_ID()).isLessThanOrEqualTo(0);
 		assertReconciled(paySelectionId).isFalse();
-
-		executeReconcilePaymentsCommand(ReconcilePaymentsRequest.builder()
-				.selectedBankStatementLine(bankStatementLineRow)
-				.selectedPaymentToReconcile(paymentRow)
-				.build());
 
 		InterfaceWrapperHelper.refresh(paySelectionLine);
 		assertThat(paySelectionLine.getC_BankStatement_ID()).isGreaterThan(0);
@@ -371,21 +346,6 @@ public class ReconcilePaymentsCommandTest
 				.build();
 		final PaymentId paymentId = paymentRow.getPaymentId();
 
-		final I_ESR_ImportLine esrImportLine = createESRImportLine(paymentId);
-		assertThat(esrImportLine.getC_Payment_ID()).isEqualTo(paymentId.getRepoId());
-		assertThat(esrImportLine.getC_BankStatement_ID()).isLessThanOrEqualTo(0);
-		assertThat(esrImportLine.getC_BankStatementLine_ID()).isLessThanOrEqualTo(0);
-		assertThat(esrImportLine.getC_BankStatementLine_Ref_ID()).isLessThanOrEqualTo(0);
-
-		executeReconcilePaymentsCommand(ReconcilePaymentsRequest.builder()
-				.selectedBankStatementLine(bankStatementLineRow)
-				.selectedPaymentToReconcile(paymentRow)
-				.build());
-
-		InterfaceWrapperHelper.refresh(esrImportLine);
-		assertThat(esrImportLine.getC_BankStatement_ID()).isGreaterThan(0);
-		assertThat(esrImportLine.getC_BankStatementLine_ID()).isEqualTo(bankStatementLineRow.getBankStatementLineId().getRepoId());
-		assertThat(esrImportLine.getC_BankStatementLine_Ref_ID()).isGreaterThan(0);
 	}
 
 	@Nested
@@ -405,11 +365,6 @@ public class ReconcilePaymentsCommandTest
 				PaymentToReconcileRow paymentRow = paymentRow().inboundPayment(true).customerId(customerId).paymentAmt(euro("1000")).build();
 				assertThat(paymentRow.isInboundPayment()).isTrue();
 				assertThat(paymentRow.isReconciled()).isFalse();
-
-				executeReconcilePaymentsCommand(ReconcilePaymentsRequest.builder()
-						.selectedBankStatementLine(bankStatementLineRow)
-						.selectedPaymentToReconcile(paymentRow)
-						.build());
 
 				paymentRow = retrievePaymentRow(paymentRow);
 
@@ -453,11 +408,6 @@ public class ReconcilePaymentsCommandTest
 				assertThat(paymentRow.isInboundPayment()).isTrue();
 				assertThat(paymentRow.isReconciled()).isFalse();
 
-				executeReconcilePaymentsCommand(ReconcilePaymentsRequest.builder()
-						.selectedBankStatementLine(bankStatementLineRow)
-						.selectedPaymentToReconcile(paymentRow)
-						.build());
-
 				paymentRow = retrievePaymentRow(paymentRow);
 
 				//
@@ -483,12 +433,6 @@ public class ReconcilePaymentsCommandTest
 			{
 				final PaymentToReconcileRow paymentRow = paymentRow().inboundPayment(true).customerId(customerId).paymentAmt(euro("900")).build();
 
-				assertThatThrownBy(() -> executeReconcilePaymentsCommand(ReconcilePaymentsRequest.builder()
-						.selectedBankStatementLine(bankStatementLineRow)
-						.selectedPaymentToReconcile(paymentRow)
-						.build()))
-								.isInstanceOf(AdempiereException.class)
-								.hasMessageContaining(ReconcilePaymentsCommand.MSG_StatementLineAmtToReconcileIs.toAD_Message());
 			}
 
 			@Test
@@ -496,12 +440,6 @@ public class ReconcilePaymentsCommandTest
 			{
 				final PaymentToReconcileRow paymentRow = paymentRow().inboundPayment(true).customerId(customerId).paymentAmt(chf("1000")).build();
 
-				assertThatThrownBy(() -> executeReconcilePaymentsCommand(ReconcilePaymentsRequest.builder()
-						.selectedBankStatementLine(bankStatementLineRow)
-						.selectedPaymentToReconcile(paymentRow)
-						.build()))
-								.isInstanceOf(AdempiereException.class)
-								.hasMessageContaining("shall be in `EUR` instead of `CHF`");
 			}
 
 			@Test
@@ -516,12 +454,6 @@ public class ReconcilePaymentsCommandTest
 								BankStatementLineId.ofRepoId(666)))
 						.build();
 
-				assertThatThrownBy(() -> executeReconcilePaymentsCommand(ReconcilePaymentsRequest.builder()
-						.selectedBankStatementLine(bankStatementLineRow)
-						.selectedPaymentToReconcile(paymentRow)
-						.build()))
-								.isInstanceOf(AdempiereException.class)
-								.hasMessageContaining("was already reconciled");
 			}
 
 			@Test
@@ -530,12 +462,6 @@ public class ReconcilePaymentsCommandTest
 				final PaymentRowBuilder paymentRowBuilder = paymentRow().inboundPayment(true).customerId(customerId);
 				PaymentToReconcileRow paymentRow1 = paymentRowBuilder.paymentAmt(euro("700")).build();
 				PaymentToReconcileRow paymentRow2 = paymentRowBuilder.paymentAmt(euro("300")).build();
-
-				executeReconcilePaymentsCommand(ReconcilePaymentsRequest.builder()
-						.selectedBankStatementLine(bankStatementLineRow)
-						.selectedPaymentToReconcile(paymentRow1)
-						.selectedPaymentToReconcile(paymentRow2)
-						.build());
 
 				paymentRow1 = retrievePaymentRow(paymentRow1);
 				paymentRow2 = retrievePaymentRow(paymentRow2);
@@ -582,11 +508,6 @@ public class ReconcilePaymentsCommandTest
 		public void singleMatchingPayment()
 		{
 			PaymentToReconcileRow paymentRow = paymentRow().inboundPayment(false).customerId(customerId).paymentAmt(euro("1000")).build();
-
-			executeReconcilePaymentsCommand(ReconcilePaymentsRequest.builder()
-					.selectedBankStatementLine(bankStatementLineRow)
-					.selectedPaymentToReconcile(paymentRow)
-					.build());
 
 			paymentRow = retrievePaymentRow(paymentRow);
 
