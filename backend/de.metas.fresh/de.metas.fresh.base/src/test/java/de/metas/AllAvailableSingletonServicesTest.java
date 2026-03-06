@@ -81,8 +81,6 @@ public class AllAvailableSingletonServicesTest
 			.skipServiceInterface(de.metas.inoutcandidate.invalidation.IShipmentScheduleInvalidateBL.class, "spring component")
 			.skipServiceInterface(de.metas.notification.INotificationRepository.class, "spring component")
 			.skipServiceInterface(de.metas.ordercandidate.api.IOLCandBL.class, "spring component")
-			.skipServiceInterface(de.metas.payment.esr.api.IESRBPBankAccountBL.class, "spring component")
-			.skipServiceInterface(de.metas.payment.esr.api.IESRImportBL.class, "spring component")
 			.skipServiceInterface(de.metas.printing.api.IPrintPackageBL.class, "spring component")
 			.skipServiceInterface(de.metas.procurement.base.IAgentSyncBL.class, "spring component")
 			.skipServiceInterface(de.metas.procurement.base.IServerSyncBL.class, "spring component")

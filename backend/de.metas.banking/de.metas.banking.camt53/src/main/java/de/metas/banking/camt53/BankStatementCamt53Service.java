@@ -57,7 +57,6 @@ import de.metas.money.Money;
 import de.metas.money.MoneyService;
 import de.metas.organization.IOrgDAO;
 import de.metas.organization.OrgId;
-import de.metas.payment.esr.model.I_ESR_ImportLine;
 import de.metas.util.Loggables;
 import de.metas.util.Services;
 import lombok.Builder;
@@ -402,7 +401,7 @@ public class BankStatementCamt53Service
 		}
 
 		return unpaidInvoiceMatchingAmtQueryBuilder
-				.additionalFilter(getInvoiceDocOrEsrReferenceNoFilter(documentReferenceCandidates))
+				//.additionalFilter(getInvoiceDocOrEsrReferenceNoFilter(documentReferenceCandidates))
 				.build();
 	}
 
@@ -418,6 +417,7 @@ public class BankStatementCamt53Service
 				.build();
 	}
 
+/*
 	@NonNull
 	private ICompositeQueryFilter<I_C_Invoice> getInvoiceDocOrEsrReferenceNoFilter(@NonNull final ImmutableSet<String> invoiceDocOrEsrRefNoCandidates)
 	{
@@ -441,6 +441,7 @@ public class BankStatementCamt53Service
 				.addFilter(invoiceEsrReferenceNumberCandidatesFilter)
 				.addFilter(invoiceDocNumberCandidatesFilter);
 	}
+*/
 
 	@NonNull
 	private ImmutableList<IAccountStatementWrapper> getAccountStatementsV04(@NonNull final XMLStreamReader xmlStreamReader)

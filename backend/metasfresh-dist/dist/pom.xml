@@ -112,13 +112,6 @@
             <classifier>migration-postgres-sql</classifier>
             <type>zip</type>
         </dependency>
-        <dependency>
-            <groupId>de.metas.forex</groupId>
-            <artifactId>de.metas.forex.webui</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>migration-postgres-sql</classifier>
-            <type>zip</type>
-        </dependency>
 
         <dependency>
             <groupId>de.metas.adempiere.adempiere</groupId>
@@ -396,14 +389,6 @@
         </dependency>
 
         <dependency>
-            <groupId>de.metas.payment.revolut</groupId>
-            <artifactId>de.metas.payment.revolut</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>migration-postgres-sql</classifier>
-            <type>zip</type>
-        </dependency>
-
-        <dependency>
             <artifactId>de.metas.printing.base</artifactId>
             <groupId>de.metas.printing</groupId>
             <version>${metasfresh.version}</version>
@@ -480,36 +465,7 @@
 
         <dependency>
             <groupId>de.metas.shipper.gateway</groupId>
-            <artifactId>de.metas.shipper.gateway.derkurier</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>migration-postgres-sql</classifier>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>de.metas.shipper.gateway</groupId>
             <artifactId>de.metas.shipper.gateway.dhl</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>migration-postgres-sql</classifier>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>de.metas.shipper.gateway</groupId>
-            <artifactId>de.metas.shipper.gateway.dpd</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>migration-postgres-sql</classifier>
-            <type>zip</type>
-        </dependency>
-        <dependency>
-            <groupId>de.metas.shipper.gateway</groupId>
-            <artifactId>de.metas.shipper.gateway.go</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>migration-postgres-sql</classifier>
-            <type>zip</type>
-        </dependency>
-
-        <dependency>
-            <groupId>de.metas.datev</groupId>
-            <artifactId>metasfresh-datev</artifactId>
             <version>${metasfresh.version}</version>
             <classifier>migration-postgres-sql</classifier>
             <type>zip</type>

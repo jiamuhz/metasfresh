@@ -55,11 +55,7 @@
             <artifactId>lombok</artifactId>
             <scope>provided</scope>
         </dependency>
-        <dependency>
-            <groupId>de.metas.payment.esr</groupId>
-            <artifactId>de.metas.payment.esr</artifactId>
-            <version>${metasfresh.version}</version>
-        </dependency>
+
     </dependencies>
 
     <build>

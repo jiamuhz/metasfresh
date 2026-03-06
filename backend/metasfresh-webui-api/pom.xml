@@ -49,12 +49,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>de.metas.forex</groupId>
-			<artifactId>de.metas.forex.webui</artifactId>
-			<version>${metasfresh.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>de.metas.deliveryplanning</groupId>
 			<artifactId>de.metas.deliveryplanning.webui</artifactId>
 			<version>${metasfresh.version}</version>

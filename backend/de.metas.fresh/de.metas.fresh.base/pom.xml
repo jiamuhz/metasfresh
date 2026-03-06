@@ -181,12 +181,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>de.metas.payment.revolut</groupId>
-			<artifactId>de.metas.payment.revolut</artifactId>
-			<version>${metasfresh.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>de.metas.handlingunits</groupId>
 			<artifactId>de.metas.handlingunits.base</artifactId>
 			<version>${metasfresh.version}</version>
@@ -277,35 +271,11 @@
 
 		<dependency>
 			<groupId>de.metas.shipper.gateway</groupId>
-			<artifactId>de.metas.shipper.gateway.derkurier</artifactId>
-			<version>${metasfresh.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>de.metas.shipper.gateway</groupId>
 			<artifactId>de.metas.shipper.gateway.dhl</artifactId>
 			<version>${metasfresh.version}</version>
 		</dependency>
 
-		<dependency>
-			<groupId>de.metas.shipper.gateway</groupId>
-			<artifactId>de.metas.shipper.gateway.dpd</artifactId>
-			<version>${metasfresh.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>de.metas.shipper.gateway</groupId>
-			<artifactId>de.metas.shipper.gateway.go</artifactId>
-			<version>${metasfresh.version}</version>
-		</dependency>
-
-		<dependency>
-			<groupId>de.metas.datev</groupId>
-			<artifactId>metasfresh-datev</artifactId>
-			<version>${metasfresh.version}</version>
-		</dependency>
-
-		<!-- include material-dispo; 
+		<!-- include material-dispo;
 			This component will only be active within metasfresh-app (a.k.a. serverRoot) 
 			if the spring profile "material-dispo" is active. One way of activating that profile is to 
 			find the existing AD_SysConfig with Name="de.metas.spring.profiles.active_material-dispo" and set is to IsActive='Y' -->
