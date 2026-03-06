@@ -388,22 +388,6 @@
         </dependency>
 
         <dependency>
-            <groupId>de.metas.payment.esr</groupId>
-            <artifactId>de.metas.payment.esr</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>migration-postgres-sql</classifier>
-            <type>zip</type>
-        </dependency>
-
-        <dependency>
-            <groupId>de.metas.payment.sepa</groupId>
-            <artifactId>de.metas.payment.sepa.base</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>migration-postgres-sql</classifier>
-            <type>zip</type>
-        </dependency>
-
-        <dependency>
             <groupId>de.metas.payment.paypal</groupId>
             <artifactId>de.metas.payment.paypal</artifactId>
             <version>${metasfresh.version}</version>
