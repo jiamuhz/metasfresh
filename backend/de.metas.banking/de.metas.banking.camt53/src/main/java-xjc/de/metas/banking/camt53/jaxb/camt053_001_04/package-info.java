@@ -2,7 +2,7 @@
 // 此文件是由 Eclipse Implementation of JAXB v2.3.7 生成的
 // 请访问 https://eclipse-ee4j.github.io/jaxb-ri 
 // 在重新编译源模式时, 对此文件的所有修改都将丢失。
-// 生成时间: 2026.03.06 时间 06:00:13 PM CST 
+// 生成时间: 2026.03.06 时间 06:17:11 PM CST 
 //
 
 @javax.xml.bind.annotation.XmlSchema(namespace = "urn:iso:std:iso:20022:tech:xsd:camt.053.001.04", elementFormDefault = javax.xml.bind.annotation.XmlNsForm.QUALIFIED)
