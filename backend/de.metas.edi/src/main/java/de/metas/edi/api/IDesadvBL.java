@@ -22,6 +22,14 @@ package de.metas.edi.api;
  * #L%
  */
 
+/**
+ * IDesadvBL 是处理 DESADV（发货通知）消息的业务逻辑接口
+ * 支持出站（生成并发送）和入站（接收并解析）两种方向
+ * 负责将内部单据转换为标准的发货通知消息（DESADV）发送给合作伙伴，同时也负责解析收到的发货通知并更新系统状态
+ *
+ * DESADV - DESpatch ADVice（发货通知）的缩写
+ */
+
 import com.google.common.collect.ImmutableList;
 import de.metas.edi.api.impl.pack.EDIDesadvPackId;
 import de.metas.edi.model.I_C_Order;
