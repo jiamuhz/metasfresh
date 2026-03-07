@@ -5,7 +5,6 @@ import de.metas.i18n.ITranslatableString;
 import de.metas.i18n.ImmutableTranslatableString;
 import de.metas.i18n.TranslatableStrings;
 import de.metas.logging.LogManager;
-import de.metas.ui.web.process.adprocess.device_providers.DeviceDescriptorsList;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentLayoutElementField.JSONFieldType;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentLayoutElementField.JSONLookupSource;
 import de.metas.util.Check;
@@ -104,9 +103,6 @@ public final class DocumentLayoutElementFieldDescriptor implements Serializable
 	private final ITranslatableString emptyFieldText;
 
 	@Getter
-	private final DeviceDescriptorsList devices;
-
-	@Getter
 	private final boolean supportZoomInto;
 	
 	@Getter
@@ -129,7 +125,6 @@ public final class DocumentLayoutElementFieldDescriptor implements Serializable
 		publicField = builder.publicField;
 		listNullItemCaption = TranslatableStrings.copyOfNullable(builder.listNullItemCaption);
 		emptyFieldText = TranslatableStrings.copyOfNullable(builder.emptyFieldText);
-		devices = builder.getDevices();
 
 		lookupSource = builder.lookupSource;
 		lookupTableName = builder.getLookupTableName();
@@ -147,7 +142,6 @@ public final class DocumentLayoutElementFieldDescriptor implements Serializable
 				.omitNullValues()
 				.add("field", field)
 				.add("publicField", publicField)
-				.add("devices", devices.isEmpty() ? null : devices)
 				.toString();
 	}
 
@@ -202,7 +196,6 @@ public final class DocumentLayoutElementFieldDescriptor implements Serializable
 		private ITranslatableString listNullItemCaption = HARDCODED_FIELD_EMPTY_TEXT;
 		private ITranslatableString emptyFieldText = HARDCODED_FIELD_EMPTY_TEXT;
 		private boolean publicField = true;
-		private DeviceDescriptorsList _devices = DeviceDescriptorsList.EMPTY;
 
 		private LookupSource lookupSource;
 		private Optional<String> lookupTableName = null;
@@ -229,7 +222,6 @@ public final class DocumentLayoutElementFieldDescriptor implements Serializable
 					.omitNullValues()
 					.add("fieldName", fieldName)
 					.add("publicField", publicField)
-					.add("fieldActions", (_devices == null || _devices.isEmpty()) ? null : _devices)
 					.add("consumed", consumed)
 					.toString();
 		}
@@ -368,17 +360,6 @@ public final class DocumentLayoutElementFieldDescriptor implements Serializable
 		public boolean isSpecialFieldToExcludeFromLayout()
 		{
 			return documentFieldBuilder != null && documentFieldBuilder.isSpecialFieldToExcludeFromLayout();
-		}
-
-		public Builder setDevices(@NonNull final DeviceDescriptorsList devices)
-		{
-			this._devices = devices;
-			return this;
-		}
-
-		private DeviceDescriptorsList getDevices()
-		{
-			return _devices;
 		}
 
 		public Builder setSupportZoomInto(final boolean supportZoomInto)

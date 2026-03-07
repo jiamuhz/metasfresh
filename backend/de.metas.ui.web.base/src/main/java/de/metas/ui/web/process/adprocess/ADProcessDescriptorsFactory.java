@@ -352,8 +352,6 @@ import java.util.stream.Stream;
 				//
 				.addCharacteristic(Characteristic.PublicField)
 				//
-				.deviceDescriptorsProvider(webuiProcesClassInfo.getDeviceDescriptorsProvider(parameterName))
-				//
 				;
 
 		// Add a callout to forward process parameter value (UI) to current process instance

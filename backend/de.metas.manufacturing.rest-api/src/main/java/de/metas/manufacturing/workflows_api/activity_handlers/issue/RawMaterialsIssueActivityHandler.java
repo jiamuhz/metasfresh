@@ -10,7 +10,6 @@ import de.metas.manufacturing.workflows_api.activity_handlers.issue.json.JsonAll
 import de.metas.manufacturing.workflows_api.activity_handlers.issue.json.JsonHazardSymbol;
 import de.metas.manufacturing.workflows_api.activity_handlers.issue.json.JsonRawMaterialsIssueLine;
 import de.metas.manufacturing.workflows_api.activity_handlers.issue.json.JsonRejectReasonsList;
-import de.metas.manufacturing.workflows_api.activity_handlers.issue.json.JsonScaleDevice;
 import de.metas.product.ProductId;
 import de.metas.product.allergen.ProductAllergensService;
 import de.metas.product.hazard_symbol.ProductHazardSymbolService;
@@ -62,7 +61,6 @@ public class RawMaterialsIssueActivityHandler implements WFActivityHandler
 
 		return UIComponent.builderFrom(COMPONENT_TYPE, wfActivity)
 				.properties(Params.builder()
-						.valueObj("scaleDevice", getCurrentScaleDevice(job, jsonOpts))
 						.valueObj("lines", getLines(job, wfActivity.getId(), jsonOpts))
 						.valueObj("qtyRejectedReasons", getJsonRejectReasonsList(jsonOpts))
 						.build())
@@ -73,14 +71,6 @@ public class RawMaterialsIssueActivityHandler implements WFActivityHandler
 	private static ManufacturingJob getManufacturingJob(final @NonNull WFProcess wfProcess)
 	{
 		return wfProcess.getDocumentAs(ManufacturingJob.class);
-	}
-
-	@Nullable
-	private JsonScaleDevice getCurrentScaleDevice(final ManufacturingJob job, final @NonNull JsonOpts jsonOpts)
-	{
-		return manufacturingJobService.getCurrentScaleDevice(job)
-				.map(scaleDevice -> JsonScaleDevice.of(scaleDevice, jsonOpts.getAdLanguage()))
-				.orElse(null);
 	}
 
 	private ImmutableList<JsonRawMaterialsIssueLine> getLines(final ManufacturingJob job, final @NonNull WFActivityId wfActivityId, final @NonNull JsonOpts jsonOpts)

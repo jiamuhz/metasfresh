@@ -6,7 +6,6 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Multimaps;
 import de.metas.bpartner.BPartnerId;
-import de.metas.device.accessor.DeviceId;
 import de.metas.document.engine.DocStatus;
 import de.metas.handlingunits.HUPIItemProductId;
 import de.metas.handlingunits.HuId;
@@ -85,7 +84,6 @@ public class ManufacturingJobLoaderAndSaver
 				.allowUserReporting(ppOrderDocStatus.isCompleted())
 				//
 				.warehouseId(WarehouseId.ofRepoId(ppOrder.getM_Warehouse_ID()))
-				.currentScaleDeviceId(DeviceId.ofNullableString(ppOrder.getCurrentScaleDeviceId()))
 				//
 				.activities(routing.getActivities()
 						.stream()
@@ -378,7 +376,6 @@ public class ManufacturingJobLoaderAndSaver
 	public void saveHeader(@NonNull final ManufacturingJob job)
 	{
 		final I_PP_Order ppOrder = getPPOrderRecordById(job.getPpOrderId());
-		ppOrder.setCurrentScaleDeviceId(job.getCurrentScaleDeviceId() != null ? job.getCurrentScaleDeviceId().getAsString() : null);
 		InterfaceWrapperHelper.saveRecord(ppOrder);
 	}
 }

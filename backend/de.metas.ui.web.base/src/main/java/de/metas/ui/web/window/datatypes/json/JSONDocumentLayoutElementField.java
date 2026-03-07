@@ -184,10 +184,6 @@ public final class JSONDocumentLayoutElementField
 	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private final String clearValueText;
 
-	@JsonProperty("devices")
-	@JsonInclude(JsonInclude.Include.NON_EMPTY)
-	private final List<JSONDeviceDescriptor> devices;
-
 	@JsonProperty("newRecordWindowId")
 	@JsonInclude(JsonInclude.Include.NON_EMPTY)
 	private final String newRecordWindowId;
@@ -240,7 +236,6 @@ public final class JSONDocumentLayoutElementField
 		tooltipIconName = fieldDescriptor.getTooltipIconName();
 		emptyText = fieldDescriptor.getEmptyFieldText(jsonOpts.getAdLanguage());
 		clearValueText = fieldDescriptor.getListNullItemCaption(jsonOpts.getAdLanguage());
-		devices = JSONDeviceDescriptor.ofList(fieldDescriptor.getDevices(), jsonOpts.getAdLanguage());
 
 		final DocumentEntityDescriptor newRecordEntityDescriptor = findNewRecordEntityDescriptor(fieldDescriptor, jsonOpts);
 		if (newRecordEntityDescriptor != null)
@@ -284,7 +279,6 @@ public final class JSONDocumentLayoutElementField
 			@JsonProperty("tooltipIconName") final String tooltipIconName,
 			@JsonProperty("emptyText") final String emptyText,
 			@JsonProperty("clearValueText") final String clearValueText,
-			@JsonProperty("devices") final List<JSONDeviceDescriptor> devices,
 			@JsonProperty("newRecordWindowId") final String newRecordWindowId,
 			@JsonProperty("newRecordCaption") final String newRecordCaption,
 			@Nullable @JsonProperty("advSearchWindowId") final String advSearchWindowId,
@@ -302,7 +296,6 @@ public final class JSONDocumentLayoutElementField
 		this.tooltipIconName = tooltipIconName;
 		this.emptyText = emptyText;
 		this.clearValueText = clearValueText;
-		this.devices = devices == null ? ImmutableList.of() : ImmutableList.copyOf(devices);
 
 		this.newRecordWindowId = newRecordWindowId;
 		this.newRecordCaption = newRecordCaption;
@@ -329,7 +322,6 @@ public final class JSONDocumentLayoutElementField
 				.add("source", source)
 				.add("emptyText", emptyText)
 				.add("clearValueText", clearValueText)
-				.add("actions", devices.isEmpty() ? null : devices)
 				.add("newRecordWindowId", newRecordWindowId)
 				.add("advSearchWindowId", advSearchWindowId)
 				.add("supportZoomInto", supportZoomInto)

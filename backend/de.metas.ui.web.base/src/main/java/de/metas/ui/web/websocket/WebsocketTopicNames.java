@@ -1,7 +1,6 @@
 package de.metas.ui.web.websocket;
 
 import com.google.common.base.Preconditions;
-import de.metas.device.websocket.DeviceWebsocketNamingStrategy;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.WindowId;
 import de.metas.user.UserId;
@@ -41,8 +40,6 @@ public class WebsocketTopicNames
 	static final String TOPIC_Document = "/document";
 	static final String TOPIC_Board = "/board";
 	public static final String TOPIC_Dashboard = "/dashboard";
-
-	public static final DeviceWebsocketNamingStrategy DEVICES_NAMING_STRATEGY = new DeviceWebsocketNamingStrategy("/devices");
 
 	public static WebsocketTopicName buildUserSessionTopicName(@NonNull final UserId adUserId)
 	{

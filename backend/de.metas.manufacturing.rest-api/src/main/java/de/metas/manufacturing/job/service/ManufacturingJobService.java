@@ -4,10 +4,6 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
 import de.metas.dao.ValueRestriction;
-import de.metas.device.accessor.DeviceAccessor;
-import de.metas.device.accessor.DeviceAccessorsHubFactory;
-import de.metas.device.accessor.DeviceId;
-import de.metas.device.websocket.DeviceWebsocketNamingStrategy;
 import de.metas.global_qrcodes.GlobalQRCode;
 import de.metas.handlingunits.IHandlingUnitsBL;
 import de.metas.handlingunits.attribute.weightable.Weightables;
@@ -27,7 +23,6 @@ import de.metas.manufacturing.job.model.ManufacturingJobActivity;
 import de.metas.manufacturing.job.model.ManufacturingJobActivityId;
 import de.metas.manufacturing.job.model.ManufacturingJobReference;
 import de.metas.manufacturing.job.model.ReceivingTarget;
-import de.metas.manufacturing.job.model.ScaleDevice;
 import de.metas.manufacturing.job.service.commands.ReceiveGoodsCommand;
 import de.metas.manufacturing.job.service.commands.create_job.ManufacturingJobCreateCommand;
 import de.metas.manufacturing.workflows_api.activity_handlers.receive.json.JsonReceivingTarget;
@@ -82,8 +77,6 @@ public class ManufacturingJobService
 	private final PPOrderIssueScheduleService ppOrderIssueScheduleService;
 	private final HUReservationService huReservationService;
 	private final PPOrderSourceHUService ppOrderSourceHUService;
-	private final DeviceAccessorsHubFactory deviceAccessorsHubFactory;
-	private final DeviceWebsocketNamingStrategy deviceWebsocketNamingStrategy;
 	private final ManufacturingJobLoaderAndSaverSupportingServices loadingAndSavingSupportServices;
 
 	@VisibleForTesting
@@ -96,16 +89,12 @@ public class ManufacturingJobService
 			final @NonNull PPOrderIssueScheduleService ppOrderIssueScheduleService,
 			final @NonNull HUReservationService huReservationService,
 			final @NonNull PPOrderSourceHUService ppOrderSourceHUService,
-			final @NonNull DeviceAccessorsHubFactory deviceAccessorsHubFactory,
-			final @NonNull DeviceWebsocketNamingStrategy deviceWebsocketNamingStrategy,
 			final @NonNull HUQRCodesService huQRCodeService)
 	{
 		this.resourceService = resourceService;
 		this.ppOrderIssueScheduleService = ppOrderIssueScheduleService;
 		this.huReservationService = huReservationService;
 		this.ppOrderSourceHUService = ppOrderSourceHUService;
-		this.deviceAccessorsHubFactory = deviceAccessorsHubFactory;
-		this.deviceWebsocketNamingStrategy = deviceWebsocketNamingStrategy;
 
 		this.loadingAndSavingSupportServices = ManufacturingJobLoaderAndSaverSupportingServices.builder()
 				.orgDAO(Services.get(IOrgDAO.class))
@@ -433,60 +422,6 @@ public class ManufacturingJobService
 		saveActivityStatuses(changedJob);
 
 		return changedJob;
-	}
-
-	public ManufacturingJob withCurrentScaleDevice(@NonNull final ManufacturingJob job, @Nullable final DeviceId currentScaleDeviceId)
-	{
-		// Make sure the device really exists, to avoid future issues in mobile UI
-		if (currentScaleDeviceId != null && !getScaleDevice(currentScaleDeviceId).isPresent())
-		{
-			throw new AdempiereException(MSG_ScaleDeviceNotRegistered).markAsUserValidationError();
-		}
-
-		if (!DeviceId.equals(job.getCurrentScaleDeviceId(), currentScaleDeviceId))
-		{
-			final ManufacturingJob jobChanged = job.withCurrentScaleDevice(currentScaleDeviceId);
-			newSaver().saveHeader(jobChanged);
-			return jobChanged;
-		}
-		else
-		{
-			return job;
-		}
-	}
-
-	public Optional<ScaleDevice> getCurrentScaleDevice(final ManufacturingJob job)
-	{
-		final DeviceId currentScaleDeviceId = job.getCurrentScaleDeviceId();
-		return currentScaleDeviceId != null
-				? getScaleDevice(currentScaleDeviceId)
-				: Optional.empty();
-	}
-
-	private Optional<ScaleDevice> getScaleDevice(@NonNull final DeviceId currentScaleDeviceId)
-	{
-		return deviceAccessorsHubFactory
-				.getDefaultDeviceAccessorsHub()
-				.getDeviceAccessorById(currentScaleDeviceId)
-				.map(this::toScaleDevice);
-	}
-
-	private ScaleDevice toScaleDevice(@NonNull final DeviceAccessor deviceAccessor)
-	{
-		return ScaleDevice.builder()
-				.deviceId(deviceAccessor.getId())
-				.caption(deviceAccessor.getDisplayName())
-				.websocketEndpoint(deviceWebsocketNamingStrategy.toWebsocketEndpoint(deviceAccessor.getId()))
-				.build();
-	}
-
-	public Stream<ScaleDevice> streamAvailableScaleDevices(@NonNull final ManufacturingJob job)
-	{
-		return deviceAccessorsHubFactory
-				.getDefaultDeviceAccessorsHub()
-				.getDeviceAccessors(Weightables.ATTR_WeightGross)
-				.stream(job.getWarehouseId())
-				.map(this::toScaleDevice);
 	}
 
 	public ManufacturingJob withScannedQRCode(

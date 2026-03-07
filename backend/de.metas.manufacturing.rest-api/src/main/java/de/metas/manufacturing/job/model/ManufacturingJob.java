@@ -2,7 +2,6 @@ package de.metas.manufacturing.job.model;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.bpartner.BPartnerId;
-import de.metas.device.accessor.DeviceId;
 import de.metas.handlingunits.pporder.api.issue_schedule.PPOrderIssueScheduleId;
 import de.metas.user.UserId;
 import de.metas.util.Check;
@@ -32,7 +31,6 @@ public class ManufacturingJob
 	boolean allowUserReporting;
 
 	@NonNull WarehouseId warehouseId;
-	@Nullable DeviceId currentScaleDeviceId;
 
 	@NonNull ImmutableList<ManufacturingJobActivity> activities;
 
@@ -46,12 +44,10 @@ public class ManufacturingJob
 			final boolean allowUserReporting,
 			//
 			final @NonNull WarehouseId warehouseId,
-			@Nullable final DeviceId currentScaleDeviceId,
 			//
 			@NonNull final ImmutableList<ManufacturingJobActivity> activities)
 	{
 		this.warehouseId = warehouseId;
-		this.currentScaleDeviceId = currentScaleDeviceId;
 		Check.assumeNotEmpty(activities, "activities is not empty");
 
 		this.ppOrderId = ppOrderId;
@@ -144,10 +140,4 @@ public class ManufacturingJob
 				.orElseThrow(() -> new AdempiereException("No finished goods receive line found for " + finishedGoodsReceiveLineId));
 	}
 
-	public ManufacturingJob withCurrentScaleDevice(@Nullable final DeviceId currentScaleDeviceId)
-	{
-		return !DeviceId.equals(this.currentScaleDeviceId, currentScaleDeviceId)
-				? toBuilder().currentScaleDeviceId(currentScaleDeviceId).build()
-				: this;
-	}
 }

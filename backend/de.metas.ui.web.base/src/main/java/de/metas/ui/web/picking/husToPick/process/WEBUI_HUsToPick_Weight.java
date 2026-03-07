@@ -15,7 +15,6 @@ import de.metas.process.Param;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.ui.web.handlingunits.HUEditorRow;
 import de.metas.ui.web.handlingunits.HUEditorRowAttributesHelper;
-import de.metas.ui.web.process.adprocess.device_providers.DeviceDescriptorsList;
 import de.metas.ui.web.process.descriptor.ProcessParamDevicesProvider;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 import org.adempiere.mm.attributes.AttributeCode;
@@ -197,18 +196,7 @@ public class WEBUI_HUsToPick_Weight extends HUsToPickViewBasedProcess implements
 				.weightTareAdjust(weightTareAdjust)
 				.build();
 	}
-
-	@ProcessParamDevicesProvider(parameterName = PARAM_WeightGross)
-	public DeviceDescriptorsList getWeightGrossDevices()
-	{
-		final IWeightable weightable = getHUAttributesAsWeightable().get();
-		final AttributeCode weightGrossAttribute = weightable.getWeightGrossAttribute();
-
-		final WarehouseId huWarehouseId = getHUWarehouseId();
-
-		return HUEditorRowAttributesHelper.getDeviceDescriptors(weightGrossAttribute, huWarehouseId);
-	}
-
+	
 	@Override
 	protected String doIt()
 	{

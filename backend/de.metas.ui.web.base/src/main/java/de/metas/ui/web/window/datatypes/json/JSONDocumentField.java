@@ -110,8 +110,7 @@ public final class JSONDocumentField
 				.setReadonly(expressionRevaluator.revaluate(parameter.getReadonly()), adLanguage)
 				.setMandatory(parameter.getMandatory(), adLanguage) // NOTE: don't re-evaluate because we cannot apply the same logic when we evaluate if the document is valid
 				.setDisplayed(expressionRevaluator.revaluate(parameter.getDisplayed()), adLanguage)
-				.setValidStatus(parameter.getValidStatus())
-				.setDevices(JSONDeviceDescriptor.ofList(parameter.getDevices(), adLanguage));
+				.setValidStatus(parameter.getValidStatus());
 		if (WindowConstants.isProtocolDebugging())
 		{
 			jsonField.putDebugProperty(DocumentFieldChange.DEBUGPROPERTY_FieldInfo, parameter.toString());
@@ -244,10 +243,6 @@ public final class JSONDocumentField
 	@JsonProperty("warning")
 	@JsonInclude(JsonInclude.Include.NON_NULL)
 	@Nullable private JSONDocumentFieldWarning fieldWarning;
-
-	@JsonProperty("devices")
-	@JsonInclude(JsonInclude.Include.NON_EMPTY)
-	@Nullable private List<JSONDeviceDescriptor> devices;
 
 	/**
 	 * Other properties
@@ -460,9 +455,4 @@ public final class JSONDocumentField
 		this.fieldWarning = fieldWarning;
 	}
 
-	public JSONDocumentField setDevices(@Nullable final List<JSONDeviceDescriptor> devices)
-	{
-		this.devices = devices;
-		return this;
-	}
 }

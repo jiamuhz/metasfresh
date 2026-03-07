@@ -88,11 +88,6 @@
 
         <module>de.metas.report</module>
 
-        <module>de.metas.device.adempiere</module>
-        <module>de.metas.device.api</module>
-        <module>de.metas.device.scales</module>
-        <module>de.metas.device.webui</module>
-
         <module>de.metas.dimension</module> <!-- task 08681 -->
 
         <module>de.metas.document.archive.api</module>

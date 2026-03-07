@@ -345,12 +345,6 @@ public class X_PP_Order extends org.compiere.model.PO implements I_PP_Order, org
 	}
 
 	@Override
-	public void setCurrentScaleDeviceId (final @Nullable java.lang.String CurrentScaleDeviceId)
-	{
-		set_Value (COLUMNNAME_CurrentScaleDeviceId, CurrentScaleDeviceId);
-	}
-
-	@Override
 	public java.lang.String getCurrentScaleDeviceId() 
 	{
 		return get_ValueAsString(COLUMNNAME_CurrentScaleDeviceId);

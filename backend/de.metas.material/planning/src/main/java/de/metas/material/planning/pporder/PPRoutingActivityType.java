@@ -20,7 +20,6 @@ public enum PPRoutingActivityType implements ReferenceListAwareEnum
 	ActivityConfirmation(X_AD_WF_Node.PP_ACTIVITY_TYPE_ActivityConfirmation),
 	GenerateHUQRCodes(X_AD_WF_Node.PP_ACTIVITY_TYPE_GenerateHUQRCodes),
 	PrintReceivedHUQRCodes(X_AD_WF_Node.PP_ACTIVITY_TYPE_PrintReceivedHUQRCodes),
-	ScanScaleDevice(X_AD_WF_Node.PP_ACTIVITY_TYPE_ScanScaleDevice),
 	CallExternalSystem(X_AD_WF_Node.PP_ACTIVITY_TYPE_CallExternalSystem);
 
 	@Getter

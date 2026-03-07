@@ -2,17 +2,12 @@ package de.metas.ui.web.handlingunits;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.adempiere.service.impl.TooltipType;
-import de.metas.device.accessor.DeviceAccessor;
-import de.metas.device.accessor.DeviceAccessorsHubFactory;
-import de.metas.device.accessor.DeviceId;
 import de.metas.handlingunits.attribute.IAttributeValue;
 import de.metas.handlingunits.attribute.storage.IAttributeStorage;
 import de.metas.handlingunits.model.I_M_HU;
 import de.metas.i18n.IModelTranslationMap;
 import de.metas.i18n.IMsgBL;
 import de.metas.i18n.ITranslatableString;
-import de.metas.ui.web.process.adprocess.device_providers.DeviceDescriptor;
-import de.metas.ui.web.process.adprocess.device_providers.DeviceDescriptorsList;
 import de.metas.ui.web.view.descriptor.ViewRowAttributesLayout;
 import de.metas.ui.web.websocket.WebsocketTopicNames;
 import de.metas.ui.web.window.datatypes.LookupValue;
@@ -105,35 +100,7 @@ public final class HUEditorRowAttributesHelper
 				.setDescription(description)
 				.setWidgetType(widgetType)
 				.addField(DocumentLayoutElementFieldDescriptor.builder(attributeCode.getCode())
-						.setPublicField(true)
-						.setDevices(getDeviceDescriptors(attributeCode, warehouseId)))
-				.build();
-	}
-
-	public static DeviceDescriptorsList getDeviceDescriptors(
-			@NonNull final AttributeCode attributeCode,
-			@Nullable final WarehouseId warehouseId)
-	{
-		final DeviceAccessorsHubFactory deviceAccessorsHubFactory = SpringContextHolder.instance.getBean(DeviceAccessorsHubFactory.class);
-
-		final ImmutableList<DeviceDescriptor> deviceDescriptors = deviceAccessorsHubFactory
-				.getDefaultDeviceAccessorsHub()
-				.getDeviceAccessors(attributeCode)
-				.stream(warehouseId)
-				.map(HUEditorRowAttributesHelper::toDeviceDescriptor)
-				.collect(GuavaCollectors.toImmutableList());
-
-		return DeviceDescriptorsList.ofList(deviceDescriptors);
-	}
-
-	private static DeviceDescriptor toDeviceDescriptor(final DeviceAccessor deviceAccessor)
-	{
-		final DeviceId deviceId = deviceAccessor.getId();
-
-		return DeviceDescriptor.builder()
-				.deviceId(deviceId)
-				.caption(deviceAccessor.getDisplayName())
-				.websocketEndpoint(WebsocketTopicNames.DEVICES_NAMING_STRATEGY.toWebsocketEndpoint(deviceId))
+						.setPublicField(true))
 				.build();
 	}
 

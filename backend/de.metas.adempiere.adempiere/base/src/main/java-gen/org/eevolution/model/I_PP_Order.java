@@ -494,15 +494,6 @@ public interface I_PP_Order
 	String COLUMNNAME_Current_Receiving_TU_PI_Item_Product_ID = "Current_Receiving_TU_PI_Item_Product_ID";
 
 	/**
-	 * Set Current Scale DeviceId.
-	 *
-	 * <br>Type: String
-	 * <br>Mandatory: false
-	 * <br>Virtual Column: false
-	 */
-	void setCurrentScaleDeviceId (@Nullable java.lang.String CurrentScaleDeviceId);
-
-	/**
 	 * Get Current Scale DeviceId.
 	 *
 	 * <br>Type: String

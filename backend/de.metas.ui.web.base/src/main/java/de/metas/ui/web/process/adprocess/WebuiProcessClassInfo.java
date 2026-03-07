@@ -13,8 +13,6 @@ import de.metas.process.BarcodeScannerType;
 import de.metas.process.JavaProcess;
 import de.metas.process.ProcessClassInfo;
 import de.metas.process.ProcessClassParamInfo;
-import de.metas.ui.web.process.adprocess.device_providers.DeviceDescriptorsProvider;
-import de.metas.ui.web.process.adprocess.device_providers.DeviceDescriptorsProviders;
 import de.metas.ui.web.process.descriptor.ProcessParamDevicesProvider;
 import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
@@ -154,15 +152,11 @@ public final class WebuiProcessClassInfo
 
 		@SuppressWarnings("unchecked")
 		final Set<Method> deviceProviderMethods = ReflectionUtils.getAllMethods(processClass, ReflectionUtils.withAnnotation(ProcessParamDevicesProvider.class));
-		final ImmutableMap<String, DeviceDescriptorsProvider> paramDeviceProviders = deviceProviderMethods.stream()
-				.map(WebuiProcessClassInfo::createDeviceDescriptorsProvider)
-				.collect(GuavaCollectors.toImmutableMap());
 
 		//
 		// Check is there were no settings at all so we could return our NULL instance
 		if (ProcessClassInfo.isNull(processClassInfo)
-				&& paramLookupValuesProviders.isEmpty()
-				&& paramDeviceProviders.isEmpty())
+				&& paramLookupValuesProviders.isEmpty())
 		{
 			return NULL;
 		}
@@ -170,15 +164,13 @@ public final class WebuiProcessClassInfo
 		return new WebuiProcessClassInfo(
 				processClassInfo,
 				webuiProcessAnn,
-				paramLookupValuesProviders,
-				paramDeviceProviders);
+				paramLookupValuesProviders);
 	}
 
 	private static final WebuiProcessClassInfo NULL = new WebuiProcessClassInfo();
 
 	private final ProcessClassInfo processClassInfo;
 	private final ImmutableMap<String, LookupDescriptorProvider> paramLookupValuesProviders;
-	private final ImmutableMap<String, DeviceDescriptorsProvider> paramDeviceProviders;
 	private final PanelLayoutType layoutType;
 
 	/**
@@ -188,19 +180,16 @@ public final class WebuiProcessClassInfo
 	{
 		processClassInfo = ProcessClassInfo.NULL;
 		paramLookupValuesProviders = ImmutableMap.of();
-		paramDeviceProviders = ImmutableMap.of();
 		this.layoutType = PanelLayoutType.Panel;
 	}
 
 	private WebuiProcessClassInfo(
 			@NonNull final ProcessClassInfo processClassInfo,
 			@Nullable final WebuiProcess webuiProcessAnn,
-			@NonNull final ImmutableMap<String, LookupDescriptorProvider> paramLookupValuesProviders,
-			@NonNull final ImmutableMap<String, DeviceDescriptorsProvider> paramDeviceProviders)
+			@NonNull final ImmutableMap<String, LookupDescriptorProvider> paramLookupValuesProviders)
 	{
 		this.processClassInfo = processClassInfo;
 		this.paramLookupValuesProviders = paramLookupValuesProviders;
-		this.paramDeviceProviders = paramDeviceProviders;
 		if (webuiProcessAnn != null)
 		{
 			this.layoutType = webuiProcessAnn.layoutType();
@@ -228,12 +217,6 @@ public final class WebuiProcessClassInfo
 	public LookupDescriptorProvider getLookupDescriptorProviderOrNull(@NonNull final String parameterName)
 	{
 		return paramLookupValuesProviders.get(parameterName);
-	}
-
-	public DeviceDescriptorsProvider getDeviceDescriptorsProvider(@NonNull final String parameterName)
-	{
-		final DeviceDescriptorsProvider provider = paramDeviceProviders.get(parameterName);
-		return provider != null ? provider : DeviceDescriptorsProviders.empty();
 	}
 
 	public boolean isForwardValueToJavaProcessInstance(final String parameterName)
@@ -367,18 +350,4 @@ public final class WebuiProcessClassInfo
 		}
 	}
 
-	private static Map.Entry<String, DeviceDescriptorsProvider> createDeviceDescriptorsProvider(@NonNull final Method method)
-	{
-		final ProcessParamDevicesProvider ann = method.getAnnotation(ProcessParamDevicesProvider.class);
-		if (ann == null)
-		{
-			throw new AdempiereException("Method " + method + " shall be annotated with " + ProcessParamDevicesProvider.class.getSimpleName());
-		}
-
-		final DeviceDescriptorsProvider deviceDescriptorsProvider = DeviceDescriptorsProviders.ofMethod(
-				method,
-				JavaProcess::currentInstance);
-
-		return GuavaCollectors.entry(ann.parameterName(), deviceDescriptorsProvider);
-	}
 }

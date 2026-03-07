@@ -2,7 +2,6 @@ package de.metas.ui.web.process.adprocess;
 
 import org.adempiere.ad.expression.api.LogicExpressionResult;
 
-import de.metas.ui.web.process.adprocess.device_providers.DeviceDescriptorsList;
 import de.metas.ui.web.process.IProcessInstanceParameter;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
@@ -98,11 +97,4 @@ public final class DocumentFieldAsProcessInstanceParameter implements IProcessIn
 		return documentField.getValidStatus();
 	}
 
-	@Override
-	public DeviceDescriptorsList getDevices()
-	{
-		return documentField.getDescriptor()
-				.getDeviceDescriptorsProvider()
-				.getDeviceDescriptors();
-	}
 }
