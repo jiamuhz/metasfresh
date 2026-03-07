@@ -97,13 +97,6 @@
 			<version>${metasfresh.version}</version>
 		</dependency>
 
-		<!-- 04966 adding the code to access scales hardware -->
-		<dependency>
-			<groupId>de.metas.device.scales</groupId>
-			<artifactId>de.metas.device.scales</artifactId>
-			<version>${metasfresh.version}</version>
-		</dependency>
-
 		<dependency>
 			<groupId>de.metas.edi</groupId>
 			<artifactId>de.metas.edi</artifactId>

@@ -190,15 +190,7 @@
             <classifier>migration-postgres-sql</classifier>
             <type>zip</type>
         </dependency>
-
-        <dependency>
-            <groupId>de.metas.device.adempiere</groupId>
-            <artifactId>de.metas.device.adempiere</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>migration-postgres-sql</classifier>
-            <type>zip</type>
-        </dependency>
-
+        
         <dependency>
             <groupId>de.metas.dimension</groupId>
             <artifactId>de.metas.dimension</artifactId>

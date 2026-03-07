@@ -1,8 +1,5 @@
 package de.metas.manufacturing.job.service;
 
-import de.metas.device.accessor.DeviceAccessorsHubFactory;
-import de.metas.device.config.DeviceConfigPoolFactory;
-import de.metas.device.websocket.DeviceWebsocketNamingStrategy;
 import de.metas.global_qrcodes.service.GlobalQRCodeService;
 import de.metas.handlingunits.inventory.InventoryRepository;
 import de.metas.handlingunits.inventory.InventoryService;
@@ -49,8 +46,6 @@ class ManufacturingJobServiceTest
 				ppOrderIssueScheduleService,
 				new HUReservationService(new HUReservationRepository()),
 				new PPOrderSourceHUService(new PPOrderSourceHURepository(), ppOrderIssueScheduleService),
-				new DeviceAccessorsHubFactory(new DeviceConfigPoolFactory()),
-				new DeviceWebsocketNamingStrategy("/test/"),
 				new HUQRCodesService(
 						new HUQRCodesRepository(),
 						new GlobalQRCodeService(DoNothingMassPrintingService.instance))
