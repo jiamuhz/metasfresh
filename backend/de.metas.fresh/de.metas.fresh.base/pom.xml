@@ -134,12 +134,6 @@
 		</dependency>
 
 		<dependency>
-			<groupId>de.metas.dunning</groupId>
-			<artifactId>de.metas.dunning</artifactId>
-			<version>${metasfresh.version}</version>
-		</dependency>
-
-		<dependency>
 			<groupId>de.metas.marketing</groupId>
 			<artifactId>marketing-base</artifactId>
 			<version>${metasfresh.version}</version>

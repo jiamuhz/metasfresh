@@ -224,20 +224,6 @@
         </dependency>
 
         <dependency>
-            <groupId>de.metas.dunning</groupId>
-            <artifactId>de.metas.dunning</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>jasper</classifier>
-        </dependency>
-        <dependency>
-            <groupId>de.metas.dunning</groupId>
-            <artifactId>de.metas.dunning</artifactId>
-            <version>${metasfresh.version}</version>
-            <classifier>migration-postgres-sql</classifier>
-            <type>zip</type>
-        </dependency>
-
-        <dependency>
             <groupId>de.metas.edi</groupId>
             <artifactId>de.metas.edi</artifactId>
             <version>${metasfresh.version}</version>

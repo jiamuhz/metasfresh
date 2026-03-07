@@ -94,10 +94,6 @@
         <module>de.metas.document.archive</module>
 
         <module>de.metas.document.refid</module>
-        <module>de.metas.dunning</module>
-
-        <module>de.metas.dunning_gateway.api</module>
-        <module>de.metas.dunning_gateway.spi</module>
 
         <module>de.metas.dlm</module>
 
