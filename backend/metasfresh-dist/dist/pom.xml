@@ -68,15 +68,6 @@
         </dependency>
 
         <dependency>
-            <groupId>de.metas.dist</groupId>
-            <artifactId>metasfresh-dist-swingui</artifactId>
-            <version>10.0.0</version>
-            <classifier>client</classifier>
-            <type>zip</type>
-        </dependency>
-
-
-        <dependency>
             <groupId>de.metas.printing</groupId>
             <artifactId>de.metas.printing.client</artifactId>
             <classifier>jar-with-dependencies</classifier>
@@ -628,15 +619,6 @@
                                     <version>${project.version}</version>
                                     <outputDirectory>${project.build.directory}/dist/deploy</outputDirectory>
                                     <destFileName>metasfresh_server.jar</destFileName>
-                                </artifactItem>
-                                <artifactItem>
-                                    <groupId>de.metas.dist</groupId>
-                                    <artifactId>metasfresh-dist-swingui</artifactId>
-                                    <classifier>client</classifier>
-                                    <version>${project.version}</version>
-                                    <type>zip</type>
-                                    <outputDirectory>${project.build.directory}/dist/deploy/download</outputDirectory>
-                                    <destFileName>metasfresh-client.zip</destFileName>
                                 </artifactItem>
                             </artifactItems>
                         </configuration>
