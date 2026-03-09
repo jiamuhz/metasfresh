@@ -18,7 +18,6 @@
 		<module>tools</module>
 		<module>base</module>
 		<module>serverRoot</module>
-		<module>client</module>
 		<module>migration</module>
 	</modules>
 

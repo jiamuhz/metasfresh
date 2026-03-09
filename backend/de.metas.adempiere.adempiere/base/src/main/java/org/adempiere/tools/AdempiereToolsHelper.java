@@ -72,7 +72,7 @@ public final class AdempiereToolsHelper
 		
 		//
 		// Initialize logging
-		LogManager.initialize(true); // running it here to make sure we get the client side config
+		LogManager.initialize(); // running it here to make sure we get the client side config
 
 		//
 		// Start Adempiere system

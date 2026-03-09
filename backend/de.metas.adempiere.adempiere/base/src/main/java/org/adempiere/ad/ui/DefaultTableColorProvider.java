@@ -27,7 +27,6 @@ import java.awt.Color;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 
-import org.adempiere.plaf.AdempierePLAF;
 import org.compiere.util.Env;
 
 public class DefaultTableColorProvider extends TableColorProviderAdapter
@@ -47,11 +46,11 @@ public class DefaultTableColorProvider extends TableColorProviderAdapter
 		}
 		else if (cCode < 0)
 		{
-			return AdempierePLAF.getTextColor_Issue();		// Red
+			return COLOR_NONE;		// Red
 		}
 		else
 		{
-			return AdempierePLAF.getTextColor_OK();		// Blue
+			return COLOR_NONE;		// Blue
 		}
 	}
 

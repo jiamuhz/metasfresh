@@ -28,7 +28,6 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.compiere.model.I_AD_InfoColumn;
-import org.compiere.swing.CEditor;
 
 /**
  * Info Column Controller and customizer. Declared in {@link I_AD_InfoColumn#COLUMNNAME_Classname}.
@@ -95,16 +94,6 @@ public interface IInfoColumnController
 	 * @param builders builders where we can add more our builder for new record
 	 */
 	void save(Properties ctx, int windowNo, IInfoWindowGridRowBuilders builders);
-
-	/**
-	 * Prepare editor before before it gets activated.
-	 *
-	 * @param editor
-	 * @param value new value that will be set (but it's not set yet)
-	 * @param rowIndexModel
-	 * @param columnIndexModel
-	 */
-	void prepareEditor(CEditor editor, Object value, int rowIndexModel, int columnIndexModel);
 
 	/**
 	 * Returns where clause combination for product

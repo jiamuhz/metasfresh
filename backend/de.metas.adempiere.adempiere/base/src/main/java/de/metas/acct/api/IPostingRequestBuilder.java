@@ -3,7 +3,6 @@ package de.metas.acct.api;
 import org.adempiere.service.ClientId;
 import org.adempiere.util.lang.impl.TableRecordReference;
 
-import de.metas.adempiere.form.IClientUIInvoker;
 import de.metas.user.UserId;
 
 /**
@@ -45,13 +44,6 @@ public interface IPostingRequestBuilder
 		/** Post it immediate only if the system is configured to do so. Else, just enqueue it */
 		IfConfigured
 	}
-
-	/**
-	 * Post it on UI
-	 * 
-	 * @return the Client UI invoker which when {@link IClientUIInvoker#invoke())ed will call #postIt().
-	 */
-	IClientUIInvoker postItOnUI();
 
 	/**
 	 * Post the document (i.e. execute this request).

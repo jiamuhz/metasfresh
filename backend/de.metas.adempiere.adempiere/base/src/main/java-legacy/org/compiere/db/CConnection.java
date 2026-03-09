@@ -31,6 +31,7 @@ import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
 import org.adempiere.exceptions.DBNoConnectionException;
 import org.adempiere.util.lang.IAutoCloseable;
+import org.apache.avalon.framework.ExceptionUtil;
 import org.compiere.SpringContextHolder;
 import org.compiere.util.DB;
 import org.compiere.util.Ini;
@@ -120,9 +121,10 @@ public final class CConnection implements Serializable, Cloneable
 		CConnection cc = createFromIniIfOK();
 		//
 		// Ask user to provide the configuration if not already configured
-		while (cc == null || !connectionIsOK(cc))
+		if (cc == null || !connectionIsOK(cc))
 		{
-			cc = createInstance_FromUI(cc);
+			log.info("Check DB config !");
+			throw new DBNoConnectionException();
 		}
 		Check.assumeNotNull(cc, "cc not null"); // shall never happen
 
@@ -170,39 +172,6 @@ public final class CConnection implements Serializable, Cloneable
 		}
 		cc.testDatabaseIfNeeded();
 		return cc.isDatabaseOK();
-	}
-
-	/**
-	 * Creates a connection configuration by asking the user.
-	 *
-	 * @param ccTemplate connection template (optional)
-	 * @return user created {@link CConnection}; never returns <code>null</code>
-	 * @throws DBNoConnectionException if user canceled the settings panel
-	 */
-	private static CConnection createInstance_FromUI(final CConnection ccTemplate)
-	{
-		final CConnection ccTemplateToUse;
-		if (ccTemplate == null)
-		{
-			ccTemplateToUse = new CConnection();
-		}
-		else
-		{
-			ccTemplateToUse = ccTemplate;
-		}
-
-		// Ask the user (UI!) to provide the parameters
-		final CConnectionDialog ccd = new CConnectionDialog(ccTemplateToUse);
-		final CConnection cc = ccd.getConnection();
-		Check.assumeNotNull(cc, "cc not null"); // shall not happen
-
-		// If user canceled this dialog, there is NO point to go forward because it will propagate the wrong connection (task 09327)
-		if (ccd.isCancel())
-		{
-			throw new DBNoConnectionException("User canceled the connection dialog");
-		}
-
-		return cc;
 	}
 
 	private CConnection()

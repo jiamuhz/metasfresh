@@ -25,7 +25,7 @@ import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.Multimap;
 import com.google.common.collect.MultimapBuilder;
-import de.metas.adempiere.form.IClientUI;
+
 import de.metas.i18n.IMsgBL;
 import de.metas.logging.LogManager;
 import de.metas.logging.MetasfreshLastError;
@@ -168,7 +168,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 
 	// services
 	private final transient IGridTabSummaryInfoFactory gridTabSummaryInfoFactory = Services.get(IGridTabSummaryInfoFactory.class);
-	private final transient IClientUI clientUI = Services.get(IClientUI.class);
+
 	private final transient IMsgBL msgBL = Services.get(IMsgBL.class);
 
 	public static final String DEFAULT_STATUS_MESSAGE = "NavigateOrUpdate";
@@ -1339,16 +1339,6 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 				return false;
 			}
 			final boolean newRecord = m_mTable.isInserting(); // metas-2009_0021_AP1_CR061:
-			// start: c.ghita@metas.ro: check for warning
-			final String beforeChangeMsg = MIndexTable.getBeforeChangeWarning(this, newRecord);
-			if (!Check.isEmpty(beforeChangeMsg))
-			{
-				if (!clientUI.ask(m_window.getWindowNo(), "Warning", beforeChangeMsg))
-				{
-					return true;
-				}
-			}
-			// end: c.ghita@metas.ro: check for warning
 
 			final char gridTableDataSaveResult = m_mTable.dataSave(manualCmd);
 			final boolean retValue = gridTableDataSaveResult == GridTable.SAVE_OK;
