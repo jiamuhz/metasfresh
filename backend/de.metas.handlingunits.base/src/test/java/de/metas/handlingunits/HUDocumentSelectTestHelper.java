@@ -51,7 +51,7 @@ import org.eevolution.model.I_PP_Order;
 import org.eevolution.model.X_M_Warehouse_Routing;
 
 import de.metas.adempiere.form.IClientUI;
-import de.metas.adempiere.form.swing.SwingClientUI;
+//import de.metas.adempiere.form.swing.SwingClientUI;
 import de.metas.adempiere.model.I_C_Order;
 import de.metas.handlingunits.attribute.strategy.impl.SumAggregationStrategy;
 import de.metas.handlingunits.attributes.impl.WeightAttributeValueCalloutTest;
@@ -158,7 +158,7 @@ public class HUDocumentSelectTestHelper extends HUTestHelper
 	public void afterInitialized()
 	{
 		// register after init (else it would get lost)
-		Services.registerService(IClientUI.class, new SwingClientUI());
+		//Services.registerService(IClientUI.class, new SwingClientUI());
 		// Services.get(IHUDocumentFactoryService.class).registerHUDocumentFactory(I_M_ReceiptSchedule.Table_Name, new ReceiptScheduleHUDocumentFactory());
 	}
 

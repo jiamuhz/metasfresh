@@ -1,7 +1,7 @@
 package de.metas.handlingunits;
 
 import de.metas.adempiere.form.IClientUI;
-import de.metas.adempiere.form.swing.SwingClientUI;
+//import de.metas.adempiere.form.swing.SwingClientUI;
 import de.metas.handlingunits.model.I_M_HU;
 import de.metas.handlingunits.model.I_M_HU_PI;
 import de.metas.handlingunits.model.I_M_HU_PI_Item;
@@ -120,7 +120,7 @@ public class HUIssueTestHelper extends HUTestHelper
 	protected void afterInitialized()
 	{
 		// register after init (else it would get lost)
-		Services.registerService(IClientUI.class, new SwingClientUI());
+		//Services.registerService(IClientUI.class, new SwingClientUI());
 
 		// create hus
 		final IHUContext huContext = getHUContext();

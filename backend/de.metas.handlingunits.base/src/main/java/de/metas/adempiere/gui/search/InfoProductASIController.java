@@ -39,7 +39,7 @@ import org.compiere.apps.search.IInfoSimple;
 import org.compiere.apps.search.IInfoWindowGridRowBuilders;
 import org.compiere.apps.search.InfoColumnControllerAdapter;
 import org.compiere.apps.search.Info_Column;
-import org.compiere.grid.ed.IVPAttributeContext;
+//import org.compiere.grid.ed.IVPAttributeContext;
 import org.compiere.model.I_AD_InfoColumn;
 import org.compiere.model.I_C_OrderLine;
 import org.compiere.swing.CEditor;
