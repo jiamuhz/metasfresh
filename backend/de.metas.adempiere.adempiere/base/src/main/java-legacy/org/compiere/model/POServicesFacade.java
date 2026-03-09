@@ -115,6 +115,16 @@ final class POServicesFacade
 		ModelCacheInvalidationService cacheInvalidationService = this._cacheInvalidationService;
 		if (cacheInvalidationService == null)
 		{
+			//
+			// Case: on Swing login which happens before Spring context is created
+			if (!SpringContextHolder.instance.isApplicationContextSet()
+					&& Ini.isSwingClient())
+			{
+				logger.warn("Spring context is not yet started => using an empty ModelCacheInvalidationService instance");
+
+				return new ModelCacheInvalidationService(Optional.empty());
+			}
+
 			cacheInvalidationService = this._cacheInvalidationService = ModelCacheInvalidationService.get();
 		}
 		return cacheInvalidationService;

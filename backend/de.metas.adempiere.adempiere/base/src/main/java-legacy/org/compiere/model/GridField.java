@@ -60,6 +60,7 @@ import org.compiere.util.Evaluatees;
 import org.compiere.util.ValueNamePair;
 import org.slf4j.Logger;
 
+import de.metas.adempiere.form.IClientUI;
 import de.metas.adempiere.service.IColumnBL;
 import de.metas.logging.LogManager;
 import de.metas.organization.OrgId;
@@ -1959,7 +1960,7 @@ public class GridField
 					+ Arrays.asList(propertyChangeListeners));
 		}
 
-
+		Services.get(IClientUI.class).invokeLater(getWindowNo(), this::requestFocusInCurrentThread);
 	}
 
 	/**

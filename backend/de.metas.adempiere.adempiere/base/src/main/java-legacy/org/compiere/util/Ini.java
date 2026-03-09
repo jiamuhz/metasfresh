@@ -24,6 +24,8 @@ import de.metas.logging.LogManager;
 import de.metas.util.Check;
 import lombok.Setter;
 import org.adempiere.exceptions.AdempiereException;
+import org.adempiere.plaf.AdempiereLookAndFeel;
+import org.adempiere.plaf.MetasFreshTheme;
 import org.adempiere.util.lang.ExtendedMemorizingSupplier;
 import org.compiere.Adempiere.RunMode;
 import org.compiere.model.ModelValidationEngine;
@@ -121,12 +123,12 @@ public final class Ini
 	 */
 	public static final String P_UI_LOOK = "UILookFeel";
 
-	private static final String DEFAULT_UI_LOOK = "--";
+	private static final String DEFAULT_UI_LOOK = AdempiereLookAndFeel.NAME;
 	/**
 	 * UI Theme
 	 */
 
-	private static final String DEFAULT_UI_THEME = "--";
+	private static final String DEFAULT_UI_THEME = MetasFreshTheme.NAME;
 	/**
 	 * UI Theme
 	 */
@@ -344,6 +346,12 @@ public final class Ini
 	 */
 	public static void saveProperties()
 	{
+		if (Ini.isSwingClient() && DB.isConnected())
+		{
+			// Call ModelValidators beforeSaveProperties
+			ModelValidationEngine.get().beforeSaveProperties();
+		}
+
 		final String fileName = getFileName();
 		final File file = new File(fileName).getAbsoluteFile();
 		final FileOutputStream fos;
@@ -393,6 +401,13 @@ public final class Ini
 		{
 			log.info("File {} does not exist. Allow the user to set initial properties", propertiesFile);
 			firstTime = true;
+			if (isShowLicenseDialog())
+			{
+				if (!IniDialog.accept())
+				{
+					System.exit(-1);
+				}
+			}
 			saveProperties();
 			propertiesFileExists = true;
 		}
@@ -486,9 +501,13 @@ public final class Ini
 		{
 			result = defaultValue;
 		}
-		else
+		else if (!isSwingClient())
 		{
 			result = s_prop.getProperty(key, SecureInterface.CLEARVALUE_START + defaultValue + SecureInterface.CLEARVALUE_END);
+		}
+		else
+		{
+			result = s_prop.getProperty(key, SecureEngine.encrypt(defaultValue));
 		}
 		s_prop.setProperty(key, result);
 		return result;
@@ -544,7 +563,7 @@ public final class Ini
 	public static void setProperty(final String key, final String value)
 	{
 		// If it's a client property and we are in server mode, update the context instead of Ini file
-		if (PROPERTIES_CLIENT.contains(key))
+		if (!Ini.isSwingClient() && PROPERTIES_CLIENT.contains(key))
 		{
 			Env.getCtx().setProperty(key, value);
 			return;
@@ -557,9 +576,22 @@ public final class Ini
 		{
 			s_prop.setProperty(key, value);
 		}
-		else
+		else if (!isSwingClient())
 		{
 			s_prop.setProperty(key, SecureInterface.CLEARVALUE_START + value + SecureInterface.CLEARVALUE_END);
+		}
+		else
+		{
+			if (value == null)
+				s_prop.setProperty(key, "");
+			else
+			{
+				final String eValue = SecureEngine.encrypt(value);
+				if (eValue == null)
+					s_prop.setProperty(key, "");
+				else
+					s_prop.setProperty(key, eValue);
+			}
 		}
 	}
 
@@ -587,7 +619,7 @@ public final class Ini
 		}
 
 		// If it's a client property and we are in server mode, get value from context instead of Ini file
-		if (PROPERTIES_CLIENT.contains(key))
+		if (!Ini.isSwingClient() && PROPERTIES_CLIENT.contains(key))
 		{
 			final String value = Env.getCtx().getProperty(key);
 			return value == null ? "" : value;
@@ -688,7 +720,20 @@ public final class Ini
 	 * IsClient Internal marker
 	 */
 	private static boolean s_loaded = false;
+	/**
+	 * Show license dialog for first time
+	 **/
+	private static boolean s_license_dialog = true;
 
+	/**
+	 * Are we running within the swing client?
+	 *
+	 * @return <code>true</code> if running in the swing client.
+	 */
+	public static boolean isSwingClient()
+	{
+		return getRunMode() == RunMode.SWING_CLIENT;
+	}   // isClient
 
 	/**
 	 * Set Client Mode
@@ -718,6 +763,24 @@ public final class Ini
 	public static void setRunMode(final RunMode mode)
 	{
 		s_runMode = mode;
+	}
+
+	/**
+	 * Set show license dialog for new setup
+	 */
+	public static void setShowLicenseDialog(final boolean b)
+	{
+		s_license_dialog = b;
+	}
+
+	/**
+	 * Is show license dialog for new setup
+	 *
+	 * @return boolean
+	 */
+	public static boolean isShowLicenseDialog()
+	{
+		return s_license_dialog;
 	}
 
 	/**
@@ -976,10 +1039,6 @@ public final class Ini
 	public static String getPropertyFileName()
 	{
 		return s_propertyFileName;
-	}
-
-	public static Boolean isSwingClient() {
-		return false;
 	}
 
 	// public static class IsNotSwingClient implements Condition

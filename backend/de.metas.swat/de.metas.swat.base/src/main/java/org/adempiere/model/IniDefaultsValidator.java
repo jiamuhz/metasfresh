@@ -31,7 +31,10 @@ import javax.swing.plaf.metal.MetalLookAndFeel;
 import javax.swing.plaf.metal.MetalTheme;
 
 import org.adempiere.exceptions.AdempiereException;
+import org.adempiere.plaf.AdempierePLAF;
+import org.adempiere.plaf.SysConfigUIDefaultsRepository;
 import org.adempiere.service.ISysConfigBL;
+import org.compiere.apps.AEnv;
 import org.compiere.model.I_AD_SysConfig;
 import org.compiere.model.MClient;
 import org.compiere.model.ModelValidationEngine;
@@ -42,6 +45,7 @@ import org.compiere.util.Ini;
 import org.compiere.util.ValueNamePair;
 
 import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.form.swing.SwingClientUI;
 import de.metas.util.Check;
 import de.metas.util.Services;
 

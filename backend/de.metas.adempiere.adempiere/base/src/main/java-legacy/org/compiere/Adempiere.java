@@ -36,6 +36,7 @@ import org.adempiere.ad.service.impl.DeveloperModeBL;
 import org.adempiere.context.SwingContextProvider;
 import org.adempiere.context.ThreadLocalContextProvider;
 import org.adempiere.exceptions.AdempiereException;
+import org.adempiere.plaf.AdempierePLAF;
 import org.adempiere.service.IClientDAO;
 import org.adempiere.util.proxy.Cached;
 import org.compiere.db.CConnection;
@@ -620,7 +621,9 @@ public class Adempiere
 		Services.setAutodetectServices(true);
 		Services.registerService(IDeveloperModeBL.class, DeveloperModeBL.instance); // we need this during AIT
 
-		LogManager.initialize();
+		final boolean runmodeClient = runMode == RunMode.SWING_CLIENT;
+
+		LogManager.initialize(runmodeClient);
 		Ini.setRunMode(runMode);
 
 		// Greeting
@@ -628,8 +631,26 @@ public class Adempiere
 
 		// System properties
 		Ini.loadProperties();
+		// Update logging configuration from Ini file (applies only if we are running the swing client)
+		if (runmodeClient)
+		{
+			LogManager.updateConfigurationFromIni();
+		}
+		else
+		{
+			LogManager.setLevel(Level.INFO);
+		}
 
-		LogManager.setLevel(Level.INFO);
+		// Set UI
+		if (runmodeClient)
+		{
+			if (logger.isTraceEnabled())
+			{
+				logger.trace("{}", System.getProperties());
+			}
+
+			AdempierePLAF.setPLAF(); // metas: load plaf from last session
+		}
 
 		// Set Default Database Connection from Ini
 		DB.setDBTarget(CConnection.get());
@@ -644,8 +665,14 @@ public class Adempiere
 		// return startupEnvironment(isClient);
 		started = true;
 		final boolean rv;
-		rv = startupEnvironment(runMode);
-
+		if (runmodeClient)
+		{
+			rv = false;
+		}
+		else
+		{
+			rv = startupEnvironment(runMode);
+		}
 		return rv;
 	}   // startup
 

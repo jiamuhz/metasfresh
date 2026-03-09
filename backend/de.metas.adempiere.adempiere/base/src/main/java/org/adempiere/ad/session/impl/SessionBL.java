@@ -1,5 +1,6 @@
 package org.adempiere.ad.session.impl;
 
+import de.metas.adempiere.form.IClientUI;
 import de.metas.cache.CCache;
 import de.metas.common.util.time.SystemTime;
 import de.metas.logging.LogManager;
@@ -69,7 +70,17 @@ public class SessionBL implements ISessionBL
 		final I_AD_Session sessionPO = InterfaceWrapperHelper.create(ctx, I_AD_Session.class, ITrx.TRXNAME_None);
 		sessionPO.setProcessed(false);
 
-		sessionPO.setClient_Info("N/A");
+		//
+		// Set Client Info if available - 04442
+		if ((Ini.isSwingClient())  // task 08569: only try it if we are running in any client mode
+				&& Services.isAvailable(IClientUI.class))
+		{
+			sessionPO.setClient_Info(Services.get(IClientUI.class).getClientInfo());
+		}
+		else
+		{
+			sessionPO.setClient_Info("N/A");
+		}
 
 		sessionPO.setDescription(Adempiere.getBuildVersion() + "_" + Adempiere.getDateVersion() + " " + Adempiere.getImplementationVersion());
 		sessionPO.setAD_Role_ID(Env.getAD_Role_ID(ctx));

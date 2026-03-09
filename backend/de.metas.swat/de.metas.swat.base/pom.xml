@@ -59,6 +59,11 @@
 		</dependency>
 
 		<dependency>
+			<groupId>de.metas.adempiere.adempiere</groupId>
+			<artifactId>de.metas.adempiere.adempiere.client</artifactId>
+			<version>10.0.0</version>
+		</dependency>
+		<dependency>
 			<groupId>de.metas.aggregation</groupId>
 			<artifactId>de.metas.aggregation</artifactId>
 			<version>10.0.0</version>

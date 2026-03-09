@@ -57,8 +57,9 @@ public final class LogManager
 	/**
 	 * Initialize Logging
 	 *
+	 * @param isClient client
 	 */
-	public static void initialize()
+	public static void initialize(final boolean isClient)
 	{
 		if (s_initialized.getAndSet(true))
 		{
@@ -72,6 +73,12 @@ public final class LogManager
 			SLF4JBridgeHandler.install();
 		}
 
+		if (isClient)
+		{
+			// FRESH-267: in server mode, do not (re)set the loglevels. They are coming out of logback.xml and/or application properties and were probably fine-tuned.
+			// resetting them to info might cause the disk to run full.
+			setLevel(Level.INFO);
+		}
 	}
 
 	private static final AtomicBoolean s_initialized = new AtomicBoolean(false);
@@ -132,7 +139,7 @@ public final class LogManager
 			return;
 		}
 
-		initialize();
+		initialize(true);
 
 		//
 		final Level levelOld = s_currentLevel;

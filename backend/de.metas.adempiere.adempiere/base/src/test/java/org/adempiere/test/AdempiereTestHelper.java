@@ -6,7 +6,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.fasterxml.jackson.databind.ObjectWriter;
 import com.google.common.base.Stopwatch;
 import de.metas.JsonObjectMapperHolder;
-
+import de.metas.adempiere.form.IClientUI;
 import de.metas.cache.CacheMgt;
 import de.metas.cache.interceptor.CacheInterceptor;
 import de.metas.common.util.time.SystemTime;
@@ -175,6 +175,7 @@ public class AdempiereTestHelper
 			Services.getInterceptor().registerInterceptor(Cached.class, new CacheInterceptor()); // task 06952
 			JavaAssistInterceptor.FAIL_ON_ERROR = true;
 
+			Services.registerService(IClientUI.class, new TestClientUI());
 		}
 
 		// Base Language
