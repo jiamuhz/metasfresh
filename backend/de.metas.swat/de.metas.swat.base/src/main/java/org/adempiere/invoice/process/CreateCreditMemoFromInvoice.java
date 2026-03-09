@@ -26,7 +26,7 @@ import java.math.BigDecimal;
 import java.util.Properties;
 
 import org.adempiere.model.InterfaceWrapperHelper;
-import org.compiere.apps.AEnv;
+//import org.compiere.apps.AEnv;
 
 import de.metas.adempiere.model.I_C_Invoice;
 import de.metas.document.DocTypeId;
@@ -72,11 +72,12 @@ public class CreateCreditMemoFromInvoice extends JavaProcess
 		final I_C_Invoice invoice = InterfaceWrapperHelper.create(ctx, getRecord_ID(), de.metas.adempiere.model.I_C_Invoice.class, get_TrxName());
 
 		final InvoiceCreditContext creditCtx = InvoiceCreditContext.builder()
-				.docTypeId(DocTypeId.ofRepoIdOrNull(C_DocType_ID))
-				.completeAndAllocate(completeIt)
-				.referenceOriginalOrder(referenceOriginalOrder)
-				.referenceInvoice(referenceInvoice)
-				.creditedInvoiceReinvoicable(creditedInvoiceReinvoicable).build();
+			.docTypeId(DocTypeId.ofRepoIdOrNull(C_DocType_ID))
+			.completeAndAllocate(completeIt)
+			.referenceOriginalOrder(referenceOriginalOrder)
+			.referenceInvoice(referenceInvoice)
+			.creditedInvoiceReinvoicable(creditedInvoiceReinvoicable)
+			.fixedInvoice(false).build();
 
 		creditMemo = invoiceBL.creditInvoice(invoice, creditCtx);
 
@@ -146,6 +147,7 @@ public class CreateCreditMemoFromInvoice extends JavaProcess
 			// not zooming to the credit memo, because there is nothing more to change
 			return;
 		}
-		AEnv.zoom(AD_Table_ID, Record_ID);
+
+		//AEnv.zoom(AD_Table_ID, Record_ID);
 	}
 }

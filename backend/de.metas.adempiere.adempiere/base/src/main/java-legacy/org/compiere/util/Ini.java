@@ -732,7 +732,7 @@ public final class Ini
 	 */
 	public static boolean isSwingClient()
 	{
-		return getRunMode() == RunMode.SWING_CLIENT;
+		return false;
 	}   // isClient
 
 	/**

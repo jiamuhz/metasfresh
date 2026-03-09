@@ -34,18 +34,15 @@ import org.adempiere.exceptions.AdempiereException;
 import org.adempiere.plaf.AdempierePLAF;
 import org.adempiere.plaf.SysConfigUIDefaultsRepository;
 import org.adempiere.service.ISysConfigBL;
-import org.compiere.apps.AEnv;
 import org.compiere.model.I_AD_SysConfig;
 import org.compiere.model.MClient;
 import org.compiere.model.ModelValidationEngine;
 import org.compiere.model.ModelValidator;
 import org.compiere.model.PO;
-import org.compiere.util.Env;
 import org.compiere.util.Ini;
 import org.compiere.util.ValueNamePair;
 
 import de.metas.adempiere.form.IClientUI;
-import de.metas.adempiere.form.swing.SwingClientUI;
 import de.metas.util.Check;
 import de.metas.util.Services;
 
@@ -76,7 +73,7 @@ public class IniDefaultsValidator implements ModelValidator
 
 		if (!Services.isAvailable(IClientUI.class))
 		{
-			Services.registerService(IClientUI.class, new SwingClientUI());
+			//Services.registerService(IClientUI.class, new SwingClientUI());
 		}
 	}
 
@@ -85,50 +82,6 @@ public class IniDefaultsValidator implements ModelValidator
 	{
 		if (!Ini.isSwingClient())
 			return null;
-		//
-		// UI
-		boolean changed = false;
-		final ISysConfigBL sysConfigBL = Services.get(ISysConfigBL.class);
-		ValueNamePair laf = getLookByName(sysConfigBL.getValue(SYSCONFIG_UILookFeel, Env.getAD_Client_ID(Env.getCtx())));
-		ValueNamePair theme = getThemeByName(sysConfigBL.getValue(SYSCONFIG_UITheme, Env.getAD_Client_ID(Env.getCtx())));
-		if (laf != null && theme != null)
-		{
-			String clazz = laf.getValue();
-			String currentLaf = UIManager.getLookAndFeel().getClass().getName();
-			if (!Check.isEmpty(clazz) && !currentLaf.equals(clazz))
-			{
-				// laf changed
-				AdempierePLAF.setPLAF(laf, theme, true);
-				AEnv.updateUI();
-				changed = true;
-			}
-			else
-			{
-				if (UIManager.getLookAndFeel() instanceof MetalLookAndFeel)
-				{
-					MetalTheme currentTheme = MetalLookAndFeel.getCurrentTheme();
-					String themeClass = currentTheme.getClass().getName();
-					String sTheme = theme.getValue();
-					if (sTheme != null && sTheme.length() > 0 && !sTheme.equals(themeClass))
-					{
-						ValueNamePair plaf = ValueNamePair.of(
-								UIManager.getLookAndFeel().getClass().getName(),
-								UIManager.getLookAndFeel().getName());
-						AdempierePLAF.setPLAF(plaf, theme, true);
-						AEnv.updateUI();
-						changed = true;
-					}
-				}
-			}
-		}
-		//
-		if (changed)
-			Ini.saveProperties();
-
-		//
-		// Make sure the UIDefauls from sysconfig were loaded
-		SysConfigUIDefaultsRepository.ofCurrentLookAndFeelId()
-				.loadAllFromSysConfigTo(UIManager.getDefaults());
 
 		return null;
 	}

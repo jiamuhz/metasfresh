@@ -34,7 +34,7 @@ import org.compiere.model.GridField;
 import org.compiere.model.GridTab;
 import org.compiere.model.I_C_Order;
 
-import de.metas.form.swing.OrderLineCreate;
+//import de.metas.form.swing.OrderLineCreate;
 
 /**
  * @author Teo Sarca, teo.sarca@gmail.com
@@ -47,8 +47,8 @@ public class QuickOrderLineCreate extends CalloutEngine {
 		if (order.isProcessed() || order.getC_Order_ID() <= 0)
 			return null;
 		//
-		final OrderLineCreate input = new OrderLineCreate(WindowNo, mTab);
-		input.showCenter();
+		//final OrderLineCreate input = new OrderLineCreate(WindowNo, mTab);
+		//input.showCenter();
 		//
 		return null;
 	}
