@@ -99,7 +99,9 @@ import java.util.stream.Collectors;
 import java.util.stream.Stream;
 
 /**
- * Tab Model.  
+ * Tab Model.
+ * Tab的元数据信息，与具体的前端实现无关
+ *
  * - a combination of AD_Tab (the display attributes) and AD_Table information.
  * <p>
  * The Tab owns also it's Table model and listens to data changes to update the Field values.

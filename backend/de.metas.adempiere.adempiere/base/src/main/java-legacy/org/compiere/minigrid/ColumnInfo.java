@@ -27,6 +27,7 @@ import org.compiere.apps.search.Info_Column;
 
 /**
  *  Info Column Details
+ *  用于在服务端定义和传递表格列的元数据信息，与具体的前端实现无关。
  *
  * 	@author 	Jorg Janke
  * 	@version 	$Id: ColumnInfo.java,v 1.3 2006/07/30 00:51:28 jjanke Exp $

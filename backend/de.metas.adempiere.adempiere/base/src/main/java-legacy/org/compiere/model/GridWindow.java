@@ -59,6 +59,7 @@ import de.metas.util.collections.IdentityHashSet;
 
 /**
  *	Window Model
+ *  窗口的元数据信息，与具体的前端实现无关
  *
  *  @author 	Jorg Janke
  *  @version 	$Id: GridWindow.java,v 1.4 2006/07/30 00:51:02 jjanke Exp $
