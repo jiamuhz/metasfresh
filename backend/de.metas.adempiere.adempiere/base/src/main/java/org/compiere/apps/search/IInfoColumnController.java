@@ -28,7 +28,7 @@ import java.util.Properties;
 import java.util.Set;
 
 import org.compiere.model.I_AD_InfoColumn;
-import org.compiere.swing.CEditor;
+//import org.compiere.swing.CEditor;
 
 /**
  * Info Column Controller and customizer. Declared in {@link I_AD_InfoColumn#COLUMNNAME_Classname}.
@@ -104,7 +104,7 @@ public interface IInfoColumnController
 	 * @param rowIndexModel
 	 * @param columnIndexModel
 	 */
-	void prepareEditor(CEditor editor, Object value, int rowIndexModel, int columnIndexModel);
+	//void prepareEditor(CEditor editor, Object value, int rowIndexModel, int columnIndexModel);
 
 	/**
 	 * Returns where clause combination for product

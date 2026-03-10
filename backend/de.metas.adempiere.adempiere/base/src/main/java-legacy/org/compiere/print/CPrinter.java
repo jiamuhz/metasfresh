@@ -24,7 +24,6 @@ import javax.print.PrintService;
 import javax.print.PrintServiceLookup;
 import javax.swing.DefaultComboBoxModel;
 
-import org.compiere.swing.CComboBox;
 import org.slf4j.Logger;
 import de.metas.logging.LogManager;
 import de.metas.util.Services;
@@ -36,7 +35,7 @@ import de.metas.adempiere.service.IPrinterRoutingBL;
  *  @author     Jorg Janke
  *  @version    $Id: CPrinter.java,v 1.3 2006/07/30 00:53:02 jjanke Exp $
  */
-public class CPrinter extends CComboBox implements ActionListener 
+public class CPrinter  implements ActionListener
 {
 	/**
 	 * 
@@ -144,11 +143,8 @@ public class CPrinter extends CComboBox implements ActionListener
 	 */
 	public CPrinter()
 	{
-		super(getPrinterNames());
 		//  Set Default
-		setValue(Services.get(IPrinterRoutingBL.class).getDefaultPrinterName()); // metas: us316
 		//setValue(Ini.getProperty(Ini.P_PRINTER)); // metas: us316: commented
-		this.addActionListener(this);
 	}   //  CPrinter
 
 	/**
@@ -166,7 +162,7 @@ public class CPrinter extends CComboBox implements ActionListener
 	 */
 	public PrintService getPrintService()
 	{
-		String currentService = (String)getSelectedItem();
+		String currentService = "";
 		for (int i = 0; i < s_services.length; i++)
 		{
 			if (s_services[i].getName().equals(currentService))
@@ -179,16 +175,6 @@ public class CPrinter extends CComboBox implements ActionListener
 	 * 	Refresh printer list
 	 */
 	public void refresh() {
-		String current = (String) getSelectedItem();
-		removeAllItems();
-		setModel(new DefaultComboBoxModel(getPrinterNames()));
-		if (current != null) {
-			for (int i = 0; i < getItemCount(); i++) {
-				String item = (String) getItemAt(i);
-				if (item.equals(current))
-					setSelectedIndex(i);
-			}
-		}
 	}
 
 }   //  CPrinter

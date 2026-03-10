@@ -51,7 +51,6 @@ import org.compiere.Adempiere;
 import org.compiere.SpringContextHolder;
 import org.compiere.db.CConnection;
 import org.compiere.model.MLanguage;
-import org.compiere.swing.CFrame;
 import org.slf4j.Logger;
 import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
@@ -176,11 +175,6 @@ public final class Env
 	public static void reset(final boolean finalCall)
 	{
 		s_log.info("Reseting environment (finalCall={})", finalCall);
-		if (Ini.isSwingClient())
-		{
-			final boolean preserveMainWindow = !finalCall;
-			windows.closeAll(preserveMainWindow);
-		}
 
 		// Clear all Context
 		final Properties ctx = getCtx();
@@ -1769,11 +1763,6 @@ public final class Env
 		final String ctxWindowPrefix = WindowNo + "|";
 		removeContextForPrefix(ctx, ctxWindowPrefix);
 
-		//
-		if (Ini.isSwingClient())
-		{
-			removeWindow(WindowNo);
-		}
 	}    // clearWinContext
 
 	/**
@@ -1852,48 +1841,6 @@ public final class Env
 
 	/*************************************************************************/
 
-	private static final WindowsIndex windows = new WindowsIndex();
-
-	/**
-	 * Add Container and return WindowNo. The container is a APanel, AWindow or JFrame/JDialog
-	 *
-	 * @param window window
-	 * @return WindowNo used for context
-	 */
-	public static int createWindowNo(final Container window)
-	{
-		return windows.addWindow(window);
-	}
-
-	public static void addWindow(final int windowNo, final Container window)
-	{
-		windows.addWindow(windowNo, window);
-	}
-
-	/**
-	 * @return WindowNo of container or {@link #WINDOW_MAIN} if no WindowNo found for container.
-	 */
-	public static int getWindowNo(@Nullable final Component container)
-	{
-		return windows.getWindowNo(container);
-	}    // getWindowNo
-
-	/**
-	 * @return JFrame of WindowNo or <code>null</code> if not found or windowNo is invalid
-	 */
-	public static JFrame getWindow(final int windowNo)
-	{
-		return windows.getFrameByWindowNo(windowNo);
-	}
-
-	/**
-	 * Remove window from active list
-	 */
-	private static void removeWindow(final int windowNo)
-	{
-		windows.removeWindow(windowNo);
-	}
-
 	/**
 	 * @return true if given windowNo is a valid windowNo and is for a regular window (not the main window)
 	 */
@@ -1970,10 +1917,10 @@ public final class Env
 	 * @param window window
 	 * @return true if window is hidden, otherwise close it
 	 */
-	static public boolean hideWindow(final CFrame window)
+	/*static public boolean hideWindow(final CFrame window)
 	{
 		return windows.hideWindow(window);
-	}
+	}*/
 
 	/**
 	 * Show Window
@@ -1981,20 +1928,12 @@ public final class Env
 	 * @param adWindowId window
 	 * @return {@link CFrame} or <code>null</code> if not found
 	 */
+/*
 	public static CFrame showWindow(final AdWindowId adWindowId)
 	{
 		return windows.showWindowByWindowId(adWindowId);
 	}
-
-	/**
-	 * Update all windows after look and feel changes.
-	 *
-	 * @since 2006-11-27
-	 */
-	public static Set<Window> updateUI()
-	{
-		return windows.updateUI();
-	}
+*/
 
 	/**
 	 * Prepare the context for calling remote server (for e.g, ejb), only default and global variables are pass over.

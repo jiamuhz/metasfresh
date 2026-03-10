@@ -42,7 +42,7 @@ import org.compiere.apps.search.Info_Column;
 //import org.compiere.grid.ed.IVPAttributeContext;
 import org.compiere.model.I_AD_InfoColumn;
 import org.compiere.model.I_C_OrderLine;
-import org.compiere.swing.CEditor;
+//import org.compiere.swing.CEditor;
 import org.compiere.util.DisplayType;
 import org.compiere.util.Env;
 import org.compiere.util.KeyNamePair;
@@ -357,14 +357,6 @@ public class InfoProductASIController extends InfoColumnControllerAdapter implem
 			productQtyBuilder.setSource(recordId, asiId);
 			builders.addGridTabRowBuilder(recordId, productQtyBuilder);
 		}
-	}
-
-	@Override
-	public void prepareEditor(final CEditor editor, final Object value, final int rowIndexModel, final int columnIndexModel)
-	{
-		final VPAttributeContext attributeContext = new VPAttributeContext(rowIndexModel);
-		editor.putClientProperty(IVPAttributeContext.ATTR_NAME, attributeContext);
-		// nothing
 	}
 
 	@Override

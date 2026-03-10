@@ -36,7 +36,6 @@ import org.adempiere.ad.service.impl.DeveloperModeBL;
 import org.adempiere.context.SwingContextProvider;
 import org.adempiere.context.ThreadLocalContextProvider;
 import org.adempiere.exceptions.AdempiereException;
-import org.adempiere.plaf.AdempierePLAF;
 import org.adempiere.service.IClientDAO;
 import org.adempiere.util.proxy.Cached;
 import org.compiere.db.CConnection;
@@ -648,8 +647,6 @@ public class Adempiere
 			{
 				logger.trace("{}", System.getProperties());
 			}
-
-			AdempierePLAF.setPLAF(); // metas: load plaf from last session
 		}
 
 		// Set Default Database Connection from Ini

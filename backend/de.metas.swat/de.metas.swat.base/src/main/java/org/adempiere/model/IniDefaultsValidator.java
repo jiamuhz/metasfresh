@@ -31,8 +31,6 @@ import javax.swing.plaf.metal.MetalLookAndFeel;
 import javax.swing.plaf.metal.MetalTheme;
 
 import org.adempiere.exceptions.AdempiereException;
-import org.adempiere.plaf.AdempierePLAF;
-import org.adempiere.plaf.SysConfigUIDefaultsRepository;
 import org.adempiere.service.ISysConfigBL;
 import org.compiere.model.I_AD_SysConfig;
 import org.compiere.model.MClient;
@@ -121,11 +119,13 @@ public class IniDefaultsValidator implements ModelValidator
 	{
 		if (Check.isEmpty(name, true))
 			return null;
-		for (ValueNamePair vnp : AdempierePLAF.getPLAFs())
+
+		/*for (ValueNamePair vnp : AdempierePLAF.getPLAFs())
 		{
 			if (vnp.getName().equals(name))
 				return vnp;
-		}
+		}*/
+
 		return null;
 	}
 
@@ -133,11 +133,13 @@ public class IniDefaultsValidator implements ModelValidator
 	{
 		if (Check.isEmpty(name, true))
 			return null;
-		for (ValueNamePair vnp : AdempierePLAF.getThemes())
+
+		/*for (ValueNamePair vnp : AdempierePLAF.getThemes())
 		{
 			if (vnp.getName().equals(name))
 				return vnp;
-		}
+		}*/
+
 		return null;
 	}
 }

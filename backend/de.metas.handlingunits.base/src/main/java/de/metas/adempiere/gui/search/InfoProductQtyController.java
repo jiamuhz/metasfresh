@@ -18,7 +18,7 @@ import org.compiere.apps.search.IInfoWindowGridRowBuilders;
 import org.compiere.apps.search.InfoColumnControllerAdapter;
 import org.compiere.apps.search.Info_Column;
 import org.compiere.model.I_AD_InfoColumn;
-import org.compiere.swing.CEditor;
+//import org.compiere.swing.CEditor;
 import org.compiere.util.DB;
 
 import de.metas.util.Services;
@@ -263,12 +263,6 @@ public class InfoProductQtyController extends InfoColumnControllerAdapter implem
 	public String getText()
 	{
 		return null;
-	}
-
-	@Override
-	public void prepareEditor(final CEditor editor, final Object value, final int rowIndexModel, final int columnIndexModel)
-	{
-		// nothing
 	}
 
 	@Override

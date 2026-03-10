@@ -24,8 +24,6 @@ import de.metas.logging.LogManager;
 import de.metas.util.Check;
 import lombok.Setter;
 import org.adempiere.exceptions.AdempiereException;
-import org.adempiere.plaf.AdempiereLookAndFeel;
-import org.adempiere.plaf.MetasFreshTheme;
 import org.adempiere.util.lang.ExtendedMemorizingSupplier;
 import org.compiere.Adempiere.RunMode;
 import org.compiere.model.ModelValidationEngine;
@@ -123,12 +121,12 @@ public final class Ini
 	 */
 	public static final String P_UI_LOOK = "UILookFeel";
 
-	private static final String DEFAULT_UI_LOOK = AdempiereLookAndFeel.NAME;
+	private static final String DEFAULT_UI_LOOK = "Adempiere";
 	/**
 	 * UI Theme
 	 */
 
-	private static final String DEFAULT_UI_THEME = MetasFreshTheme.NAME;
+	private static final String DEFAULT_UI_THEME = "metas Fresh Theme";
 	/**
 	 * UI Theme
 	 */
@@ -401,13 +399,6 @@ public final class Ini
 		{
 			log.info("File {} does not exist. Allow the user to set initial properties", propertiesFile);
 			firstTime = true;
-			if (isShowLicenseDialog())
-			{
-				if (!IniDialog.accept())
-				{
-					System.exit(-1);
-				}
-			}
 			saveProperties();
 			propertiesFileExists = true;
 		}
@@ -723,7 +714,7 @@ public final class Ini
 	/**
 	 * Show license dialog for first time
 	 **/
-	private static boolean s_license_dialog = true;
+	private static boolean s_license_dialog = false;
 
 	/**
 	 * Are we running within the swing client?

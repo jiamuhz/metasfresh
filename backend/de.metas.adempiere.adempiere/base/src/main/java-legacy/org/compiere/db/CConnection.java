@@ -120,10 +120,11 @@ public final class CConnection implements Serializable, Cloneable
 		CConnection cc = createFromIniIfOK();
 		//
 		// Ask user to provide the configuration if not already configured
-		while (cc == null || !connectionIsOK(cc))
+		/*while (cc == null || !connectionIsOK(cc))
 		{
 			cc = createInstance_FromUI(cc);
-		}
+		}*/
+		log.error("check database ini...");
 		Check.assumeNotNull(cc, "cc not null"); // shall never happen
 
 		//
@@ -179,7 +180,7 @@ public final class CConnection implements Serializable, Cloneable
 	 * @return user created {@link CConnection}; never returns <code>null</code>
 	 * @throws DBNoConnectionException if user canceled the settings panel
 	 */
-	private static CConnection createInstance_FromUI(final CConnection ccTemplate)
+	/*private static CConnection createInstance_FromUI(final CConnection ccTemplate)
 	{
 		final CConnection ccTemplateToUse;
 		if (ccTemplate == null)
@@ -203,7 +204,7 @@ public final class CConnection implements Serializable, Cloneable
 		}
 
 		return cc;
-	}
+	}*/
 
 	private CConnection()
 	{
