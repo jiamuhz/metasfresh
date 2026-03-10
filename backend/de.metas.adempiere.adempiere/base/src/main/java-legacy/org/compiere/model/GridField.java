@@ -72,7 +72,7 @@ import de.metas.util.Check;
 import de.metas.util.Services;
 
 /**
- * Grid Field Model.   Just For Swing UI
+ * Grid Field Model.
  * <p>
  * Fields are a combination of AD_Field (the display attributes) and AD_Column (the storage attributes).
  * <p>

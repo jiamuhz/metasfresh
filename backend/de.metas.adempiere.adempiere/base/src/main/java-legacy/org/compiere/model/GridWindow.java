@@ -58,7 +58,7 @@ import de.metas.util.Services;
 import de.metas.util.collections.IdentityHashSet;
 
 /**
- *	Window Model   Just For Swing UI
+ *	Window Model
  *
  *  @author 	Jorg Janke
  *  @version 	$Id: GridWindow.java,v 1.4 2006/07/30 00:51:02 jjanke Exp $
