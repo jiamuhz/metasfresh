@@ -71,6 +71,18 @@ public class GridTabVO implements Evaluatee, Serializable
 
 	public static final int MAIN_TabNo = 0;
 
+	// Context property names:
+	private static final String CTX_Prefix = "_TabInfo_";
+	public static final String CTX_KeyColumnName = CTX_Prefix + "KeyColumnName";
+	public static final String CTX_LinkColumnName = CTX_Prefix + "LinkColumnName";
+	public static final String CTX_TabLevel = CTX_Prefix + "TabLevel";
+	public static final String CTX_AccessLevel = CTX_Prefix + "AccessLevel";
+	public static final String CTX_AD_Tab_ID = CTX_Prefix + "AD_Tab_ID";
+	public static final String CTX_AD_Table_ID = CTX_Prefix + "AD_Table_ID";
+	public static final String CTX_FindSQL = CTX_Prefix + "FindSQL";
+	public static final String CTX_SQL = CTX_Prefix + "SQL";
+	public static final String CTX_CurrentRow = CTX_Prefix + "RowIndex";
+
 	/**************************************************************************
 	 *	Create MTab VO, ordered by <code>SeqNo</code>.
 	 *
@@ -126,7 +138,7 @@ public class GridTabVO implements Evaluatee, Serializable
 
 		{
 			vo.adTabId = AdTabId.ofRepoId(rs.getInt("AD_Tab_ID"));
-			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_AD_Tab_ID, String.valueOf(vo.adTabId.getRepoId()));
+			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, CTX_AD_Tab_ID, String.valueOf(vo.adTabId.getRepoId()));
 
 			vo.templateTabId = AdTabId.ofRepoIdOrNull(rs.getInt(I_AD_Tab.COLUMNNAME_Template_Tab_ID));
 
@@ -188,11 +200,11 @@ public class GridTabVO implements Evaluatee, Serializable
 
 			//	Access Level
 			vo.AccessLevel = TableAccessLevel.forAccessLevel(rs.getString("AccessLevel"));
-			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_AccessLevel, vo.AccessLevel.getAccessLevelString());
+			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, CTX_AccessLevel, vo.AccessLevel.getAccessLevelString());
 
 			//	Table Access
 			vo.AD_Table_ID = rs.getInt("AD_Table_ID");
-			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_AD_Table_ID, String.valueOf(vo.AD_Table_ID));
+			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, CTX_AD_Table_ID, String.valueOf(vo.AD_Table_ID));
 
 			//
 			// Apply role permissions
@@ -318,7 +330,7 @@ public class GridTabVO implements Evaluatee, Serializable
 			{
 				vo.TabLevel = 0;
 			}
-			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_TabLevel, String.valueOf(vo.TabLevel)); // metas: tsa: set this value here because here is the right place
+			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, CTX_TabLevel, String.valueOf(vo.TabLevel)); // metas: tsa: set this value here because here is the right place
 
 			//
 			vo.IsSortTab = rs.getString("IsSortTab").equals("Y");
@@ -746,7 +758,7 @@ public class GridTabVO implements Evaluatee, Serializable
 	{
 		final GridTabVO clone = new GridTabVO(ctx, windowNo, this.TabNo, this.loadAllLanguages, this.applyRolePermissions);
 		clone.adWindowId = adWindowId;
-		Env.setContext(ctx, windowNo, clone.TabNo, GridTab.CTX_AD_Tab_ID, clone.adTabId != null ? String.valueOf(clone.adTabId.getRepoId()) : null);
+		Env.setContext(ctx, windowNo, clone.TabNo, CTX_AD_Tab_ID, clone.adTabId != null ? String.valueOf(clone.adTabId.getRepoId()) : null);
 		//
 		clone.adTabId = adTabId;
 		clone.captions = this.captions.copy();
@@ -774,8 +786,8 @@ public class GridTabVO implements Evaluatee, Serializable
 		clone.AD_Image_ID = AD_Image_ID;
 		clone.Included_Tab_ID = Included_Tab_ID;
 		clone.ReplicationType = ReplicationType;
-		Env.setContext(ctx, windowNo, clone.TabNo, GridTab.CTX_AccessLevel, clone.AccessLevel.getAccessLevelString());
-		Env.setContext(ctx, windowNo, clone.TabNo, GridTab.CTX_AD_Table_ID, String.valueOf(clone.AD_Table_ID));
+		Env.setContext(ctx, windowNo, clone.TabNo, CTX_AccessLevel, clone.AccessLevel.getAccessLevelString());
+		Env.setContext(ctx, windowNo, clone.TabNo, CTX_AD_Table_ID, String.valueOf(clone.AD_Table_ID));
 
 		//
 		clone.IsSortTab = IsSortTab;

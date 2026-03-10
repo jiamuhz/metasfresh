@@ -25,7 +25,6 @@ package org.adempiere.model.tree.spi;
  * #L%
  */
 
-import org.compiere.model.GridTab;
 import org.compiere.model.MTree;
 import org.compiere.model.MTreeNode;
 import org.compiere.model.MTree_Base;
@@ -79,7 +78,6 @@ public interface IPOTreeSupport
 	 */
 	@Nullable String getWhereClause(MTree_Base tree);
 
-	MTreeNode getNodeInfo(GridTab gridTab);
 
 	/**
 	 * Advice the implementation to not enforce role access while loading the {@link MTreeNode}.

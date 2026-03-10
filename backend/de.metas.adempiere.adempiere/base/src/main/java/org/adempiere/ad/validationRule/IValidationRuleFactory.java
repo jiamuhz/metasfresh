@@ -25,8 +25,6 @@ package org.adempiere.ad.validationRule;
 import java.util.Properties;
 
 import lombok.NonNull;
-import org.compiere.model.GridField;
-import org.compiere.model.GridTab;
 import org.compiere.util.Evaluatee;
 
 import de.metas.util.ISingletonService;
@@ -70,7 +68,7 @@ public interface IValidationRuleFactory extends ISingletonService
 
 	IValidationContext createValidationContext(Properties ctx, int windowNo, int tabNo, String tableName);
 
-	IValidationContext createValidationContext(Properties ctx, String tableName, GridTab gridTab, int rowIndex);
+	//IValidationContext createValidationContext(Properties ctx, String tableName, GridTab gridTab, int rowIndex);
 
 	/**
 	 * Creates validation context for given <code>gridField</code>.
@@ -79,9 +77,9 @@ public interface IValidationRuleFactory extends ISingletonService
 	 *
 	 * @return validation context or {@link IValidationContext#NULL}
 	 */
-	IValidationContext createValidationContext(GridField gridField);
+	//IValidationContext createValidationContext(GridField gridField);
 
-	IValidationContext createValidationContext(GridField gridField, int rowIndex);
+	//IValidationContext createValidationContext(GridField gridField, int rowIndex);
 
 	IValidationContext createValidationContext(Evaluatee evaluatee);
 

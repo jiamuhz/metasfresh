@@ -34,8 +34,8 @@ import de.metas.common.util.time.SystemTime;
 import org.adempiere.ad.element.api.AdWindowId;
 import org.adempiere.exceptions.AdempiereException;
 import org.adempiere.model.InterfaceWrapperHelper;
-import org.compiere.model.GridTab;
-import org.compiere.model.GridWindow;
+//import org.compiere.model.GridTab;
+//import org.compiere.model.GridWindow;
 import org.compiere.model.GridWindowVO;
 import org.compiere.model.MQuery;
 import org.compiere.model.MWindow;
@@ -202,6 +202,7 @@ public final class MiscUtils
 		}
 	}
 
+/*
 	public static int getCalloutId(final GridTab mTab, final String colName)
 	{
 
@@ -213,6 +214,7 @@ public final class MiscUtils
 		}
 		return id;
 	}
+*/
 
 	/**
 	 * For a {@link Timestamp} representing e.g. "17.12.2009 15:14:34" this method returns a timestamp representing
@@ -241,9 +243,9 @@ public final class MiscUtils
 		return currentDate;
 	}
 
-	public static GridTab getGridTabForTableAndWindow(final Properties ctx, final int windowNo, final int AD_Window_ID, final int AD_Table_ID, final boolean startWithEmptyQuery)
+	/*public static GridTab getGridTabForTableAndWindow(final Properties ctx, final int windowNo, final int AD_Window_ID, final int AD_Table_ID, final boolean startWithEmptyQuery)
 	{
-		final GridWindowVO wVO = GridWindowVO.create(ctx, windowNo, AdWindowId.ofRepoId(AD_Window_ID));
+		/*final GridWindowVO wVO = GridWindowVO.create(ctx, windowNo, AdWindowId.ofRepoId(AD_Window_ID));
 		if (wVO == null)
 		{
 			MWindow w = new MWindow(Env.getCtx(), AD_Window_ID, null);
@@ -276,4 +278,6 @@ public final class MiscUtils
 		}
 		return tab;
 	}
+	*/
+
 }

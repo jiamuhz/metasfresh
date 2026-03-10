@@ -24,19 +24,10 @@ package de.metas.adempiere.callout;
 
 
 import org.compiere.apps.search.IGridTabRowBuilder;
-import org.compiere.model.GridTab;
 
 public interface IOrderFastInputHandler
 {
 
-	void clearFields(GridTab gridTab);
-
-	/**
-	 * 
-	 * @param gridTab
-	 * @return true if focus was actually requested
-	 */
-	boolean requestFocus(GridTab gridTab);
 
 	IGridTabRowBuilder createLineBuilderFromHeader(Object model);
 }

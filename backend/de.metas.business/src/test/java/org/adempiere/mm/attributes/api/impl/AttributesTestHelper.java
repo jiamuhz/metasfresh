@@ -10,7 +10,7 @@ import org.adempiere.ad.trx.api.ITrx;
 import org.adempiere.mm.attributes.AttributeCode;
 import org.adempiere.mm.attributes.AttributeListValue;
 import org.adempiere.mm.attributes.AttributeValueType;
-import org.adempiere.mm.attributes.callout.M_Attribute;
+//import org.adempiere.mm.attributes.callout.M_Attribute;
 import org.adempiere.mm.attributes.spi.IAttributeValueGenerator;
 import org.adempiere.model.InterfaceWrapperHelper;
 import org.adempiere.model.PlainContextAware;

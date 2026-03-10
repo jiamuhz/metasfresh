@@ -33,7 +33,7 @@ import org.adempiere.ad.callout.api.ICalloutInstance;
 import org.adempiere.ad.callout.exceptions.CalloutExecutionException;
 import org.adempiere.ad.callout.exceptions.CalloutInitException;
 import org.adempiere.util.lang.EqualsBuilder;
-import org.compiere.model.GridField;
+//import org.compiere.model.GridField;
 import org.compiere.model.I_AD_Rule;
 import org.compiere.model.X_AD_Rule;
 import org.compiere.util.Env;
@@ -136,7 +136,7 @@ public final class RuleCalloutInstance implements ICalloutInstance
 		final int windowNo = field.getWindowNo();
 		final Object value = field.getValue();
 		final Object valueOld = field.getOldValue();
-		final GridField gridField = (field instanceof GridField ? (GridField)field : null);
+		//final GridField gridField = (field instanceof GridField ? (GridField)field : null);
 
 		try
 		{
@@ -144,8 +144,8 @@ public final class RuleCalloutInstance implements ICalloutInstance
 					.putContext(ctx, windowNo)
 					.putArgument("Value", value)
 					.putArgument("OldValue", valueOld)
-					.putArgument("Field", gridField)
-					.putArgument("Tab", gridField == null ? null : gridField.getGridTab())
+					//.putArgument("Field", gridField)
+					//.putArgument("Tab", gridField == null ? null : gridField.getGridTab())
 					.setThrowExceptionIfResultNotEmpty()
 					.execute(script);
 		}

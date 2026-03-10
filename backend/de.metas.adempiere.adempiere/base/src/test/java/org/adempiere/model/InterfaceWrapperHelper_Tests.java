@@ -8,7 +8,6 @@ import static org.junit.Assert.assertThat;
 import org.adempiere.test.AdempiereTestHelper;
 import org.adempiere.util.lang.ITableRecordReference;
 import org.adempiere.util.lang.impl.TableRecordReference;
-import org.compiere.model.GridTab;
 import org.compiere.model.I_Test;
 import org.compiere.model.PO;
 import org.compiere.util.Env;
@@ -139,17 +138,6 @@ public class InterfaceWrapperHelper_Tests
 	{
 		final I_TestModel baseModel = InterfaceWrapperHelper.newInstance(I_TestModel.class, contextProvider);
 		InterfaceWrapperHelper.save(baseModel);
-		test_wrapToOldValues(baseModel);
-	}
-
-	@Test
-	public void test_wrapToOldValues_GridTabWrapper()
-	{
-		final GridTab gridTab = Mockito.mock(GridTab.class);
-		Mockito.doReturn(I_TestModel.Table_Name).when(gridTab).get_TableName();
-		Mockito.doReturn(I_TestModel.Table_Name).when(gridTab).getTableName();
-
-		final I_TestModel baseModel = InterfaceWrapperHelper.create(gridTab, I_TestModel.class);
 		test_wrapToOldValues(baseModel);
 	}
 

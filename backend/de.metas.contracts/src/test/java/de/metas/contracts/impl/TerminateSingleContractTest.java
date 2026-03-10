@@ -30,7 +30,7 @@ import de.metas.invoicecandidate.api.IAggregationDAO;
 import de.metas.invoicecandidate.api.IInvoiceCandBL;
 import de.metas.invoicecandidate.api.IInvoiceCandDAO;
 import de.metas.invoicecandidate.api.IInvoiceCandidateListeners;
-import de.metas.invoicecandidate.api.impl.PlainAggregationDAO;
+//import de.metas.invoicecandidate.api.impl.PlainAggregationDAO;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate_Agg;
 import de.metas.invoicecandidate.spi.impl.OrderAndInOutInvoiceCandidateListener;
@@ -244,8 +244,8 @@ public class TerminateSingleContractTest extends AbstractFlatrateTermTest
 		defaultLineAgg.setM_ProductGroup(null);
 		save(defaultLineAgg);
 
-		final PlainAggregationDAO aggregationDAO = (PlainAggregationDAO)Services.get(IAggregationDAO.class);
-		aggregationDAO.setDefaultAgg(defaultLineAgg);
+		//final PlainAggregationDAO aggregationDAO = (PlainAggregationDAO)Services.get(IAggregationDAO.class);
+		//aggregationDAO.setDefaultAgg(defaultLineAgg);
 	}
 
 	private void assertVoidedFlatrateTerm(@NonNull final I_C_Flatrate_Term flatrateTerm)

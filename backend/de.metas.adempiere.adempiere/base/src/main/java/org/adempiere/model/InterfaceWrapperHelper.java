@@ -52,7 +52,6 @@ import org.adempiere.ad.trx.api.ITrx;
 import org.adempiere.ad.trx.api.ITrxManager;
 import org.adempiere.ad.trx.api.OnTrxMissingPolicy;
 import org.adempiere.ad.wrapper.CompositeInterfaceWrapperHelper;
-import org.adempiere.ad.wrapper.GridTabInterfaceWrapperHelper;
 import org.adempiere.ad.wrapper.IInterfaceWrapperHelper;
 import org.adempiere.ad.wrapper.POInterfaceWrapperHelper;
 import org.adempiere.ad.wrapper.POJOInterfaceWrapperHelper;
@@ -63,8 +62,7 @@ import org.adempiere.service.ClientId;
 import org.adempiere.util.lang.IContextAware;
 import org.adempiere.util.lang.ITableRecordReference;
 import org.compiere.Adempiere;
-import org.compiere.model.GridField;
-import org.compiere.model.GridTab;
+
 import org.compiere.model.PO;
 import org.compiere.model.POInfo;
 import org.compiere.util.Env;
@@ -96,7 +94,6 @@ public class InterfaceWrapperHelper
 
 	private static final CompositeInterfaceWrapperHelper helpers = new CompositeInterfaceWrapperHelper()
 			.addFactory(new POInterfaceWrapperHelper())
-			.addFactory(new GridTabInterfaceWrapperHelper())
 			.addFactory(new POJOInterfaceWrapperHelper());
 
 	public static final String COLUMNNAME_IsActive = "IsActive";
@@ -579,10 +576,6 @@ public class InterfaceWrapperHelper
 		{
 			final AdempiereException ex = new AdempiereException("Saving null model ignored. Possible development issue. Ignored.");
 			logger.warn(ex.getLocalizedMessage(), ex);
-		}
-		else if (GridTabWrapper.isHandled(modelToSave))
-		{
-			GridTabWrapper.save(modelToSave);
 		}
 		else if (POWrapper.isHandled(modelToSave))
 		{
@@ -1172,21 +1165,7 @@ public class InterfaceWrapperHelper
 
 	public static <T> T getValueByColumnId(@NonNull final Object model, @NonNull final AdColumnId adColumnId)
 	{
-		if (GridTabWrapper.isHandled(model))
-		{
-			final GridTab gridTab = GridTabWrapper.getGridTab(model);
-			for (final GridField field : gridTab.getFields())
-			{
-				if (field.getAD_Column_ID() == adColumnId.getRepoId())
-				{
-					@SuppressWarnings("unchecked") final T value = (T)field.getValue();
-					return value;
-				}
-			}
-
-			throw new AdempiereException("No field with AD_Column_ID=" + adColumnId + " found in " + gridTab + " for " + model);
-		}
-		else if (POWrapper.isHandled(model))
+    if (POWrapper.isHandled(model))
 		{
 			final PO po = POWrapper.getStrictPO(model);
 			@SuppressWarnings("unchecked") final T value = (T)po.get_ValueOfColumn(adColumnId);
@@ -1516,11 +1495,7 @@ public class InterfaceWrapperHelper
 	 */
 	public static boolean isUIAction(final Object model)
 	{
-		if (GridTabWrapper.isHandled(model))
-		{
-			return true;
-		}
-		else if (POWrapper.isHandled(model))
+		if (POWrapper.isHandled(model))
 		{
 			return POWrapper.isUIAction(model);
 		}
@@ -1661,10 +1636,6 @@ public class InterfaceWrapperHelper
 		if (POWrapper.isHandled(model))
 		{
 			return POWrapper.isOldValues(model);
-		}
-		else if (GridTabWrapper.isHandled(model))
-		{
-			return GridTabWrapper.isOldValues(model);
 		}
 		else if (POJOWrapper.isHandled(model))
 		{

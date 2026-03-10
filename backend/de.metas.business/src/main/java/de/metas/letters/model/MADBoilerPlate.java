@@ -34,7 +34,6 @@ import org.adempiere.ad.validationRule.AdValRuleId;
 import org.adempiere.exceptions.AdempiereException;
 import org.adempiere.service.ClientId;
 import org.compiere.Adempiere;
-import org.compiere.model.GridTab;
 import org.compiere.model.I_AD_User;
 import org.compiere.model.I_A_Asset;
 import org.compiere.model.I_C_BPartner;
@@ -1274,25 +1273,6 @@ public final class MADBoilerPlate extends X_AD_BoilerPlate
 		public Object getFieldValue(final String fieldName)
 		{
 			return po.get_Value(fieldName);
-		}
-	}
-
-	@AllArgsConstructor
-	private static final class GridTabSourceDocument implements SourceDocument
-	{
-		@NonNull
-		private final GridTab gridTab;
-
-		@Override
-		public boolean hasFieldValue(final String fieldName)
-		{
-			return gridTab.getField(fieldName) != null;
-		}
-
-		@Override
-		public Object getFieldValue(final String fieldName)
-		{
-			return gridTab.getValue(fieldName);
 		}
 	}
 

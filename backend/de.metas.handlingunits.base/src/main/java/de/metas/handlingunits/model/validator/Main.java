@@ -22,8 +22,6 @@
 
 package de.metas.handlingunits.model.validator;
 
-import de.metas.adempiere.callout.OrderFastInput;
-import de.metas.adempiere.gui.search.impl.HUOrderFastInputHandler;
 import de.metas.cache.CacheMgt;
 import de.metas.cache.model.IModelCacheService;
 import de.metas.cache.model.ITableCacheConfig.TrxLevel;
@@ -41,7 +39,6 @@ import de.metas.handlingunits.document.IHUDocumentFactoryService;
 import de.metas.handlingunits.hutransaction.IHUTrxBL;
 import de.metas.handlingunits.inout.HuInOutInvoiceCandidateVetoer;
 import de.metas.handlingunits.invoicecandidate.facet.C_Invoice_Candidate_HUPackingMaterials_FacetCollector;
-import de.metas.handlingunits.invoicecandidate.ui.spi.impl.HUC_Invoice_Candidate_GridTabSummaryInfoProvider;
 import de.metas.handlingunits.materialtracking.impl.QualityInspectionWarehouseDestProvider;
 import de.metas.handlingunits.materialtracking.spi.impl.HUDocumentLineLineMaterialTrackingListener;
 import de.metas.handlingunits.materialtracking.spi.impl.HUHandlingUnitsInfoFactory;
@@ -101,7 +98,6 @@ import org.adempiere.ad.modelvalidator.AbstractModuleInterceptor;
 import org.adempiere.ad.modelvalidator.IModelValidationEngine;
 import org.adempiere.ad.ui.api.ITabCalloutFactory;
 import org.adempiere.mm.attributes.spi.impl.WeightGenerateHUTrxListener;
-import org.adempiere.ui.api.IGridTabSummaryInfoFactory;
 import org.adempiere.util.agg.key.IAggregationKeyRegistry;
 import org.compiere.apps.search.dao.IInvoiceHistoryDAO;
 import org.compiere.apps.search.dao.impl.HUInvoiceHistoryDAO;
@@ -229,9 +225,6 @@ public final class Main extends AbstractModuleInterceptor
 		setupTourPlanning();
 
 		//
-		// Register GridTabSummaryInfo entries (08734) - override de.metas.swat implementation
-		final IGridTabSummaryInfoFactory gridTabSummaryInfoFactory = Services.get(IGridTabSummaryInfoFactory.class);
-		gridTabSummaryInfoFactory.register(I_C_Invoice_Candidate.Table_Name, new HUC_Invoice_Candidate_GridTabSummaryInfoProvider(), true); // forceOverride
 
 		registerImportProcesses();
 	}
@@ -361,10 +354,6 @@ public final class Main extends AbstractModuleInterceptor
 					.registerVetoer(new ProFormaSOInvoiceCandidateVetoer(), I_M_InOutLine.Table_Name);
 		}
 
-		// Order - Fast Input
-		{
-			OrderFastInput.addOrderFastInputHandler(new HUOrderFastInputHandler());
-		}
 
 		// 06040 - Add handler for default pricing
 		{

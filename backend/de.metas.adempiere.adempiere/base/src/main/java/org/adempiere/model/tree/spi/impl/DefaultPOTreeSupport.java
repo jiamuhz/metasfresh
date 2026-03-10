@@ -27,7 +27,6 @@ package org.adempiere.model.tree.spi.impl;
 
 import de.metas.util.StringUtils;
 import org.adempiere.model.tree.spi.IPOTreeSupport;
-import org.compiere.model.GridTab;
 import org.compiere.model.MTree;
 import org.compiere.model.MTreeNode;
 import org.compiere.model.MTree_Base;
@@ -92,21 +91,6 @@ public class DefaultPOTreeSupport implements IPOTreeSupport
 	public String getParentIdSQL()
 	{
 		return null;
-	}
-
-	@Override
-	public MTreeNode getNodeInfo(final GridTab gridTab)
-	{
-		final int nodeId = gridTab.getRecord_ID();
-		final String name = String.valueOf(gridTab.getValue("Name"));
-		final String description = String.valueOf(gridTab.getValue("Description"));
-		final boolean isSummary = StringUtils.toBoolean(gridTab.getValue("IsSummary"));
-		final String imageIndicator = String.valueOf(gridTab.getValue("Action"));
-		final int seqNo = 0;
-		final int parent_ID = 0;
-		final boolean onBar = false;
-		final Color color = null;
-		return new MTreeNode(nodeId, seqNo, name, description, parent_ID, isSummary, imageIndicator, onBar, color);
 	}
 
 	protected String getPrintColorSQL(final String tableAlias)

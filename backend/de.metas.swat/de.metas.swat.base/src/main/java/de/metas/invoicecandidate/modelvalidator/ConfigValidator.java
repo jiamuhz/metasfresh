@@ -39,11 +39,11 @@ import de.metas.invoicecandidate.agg.key.impl.ICHeaderAggregationKeyBuilder_OLD;
 import de.metas.invoicecandidate.agg.key.impl.ICLineAggregationKeyBuilder_OLD;
 import de.metas.invoicecandidate.api.IInvoiceCandDAO;
 import de.metas.invoicecandidate.api.InvoiceCandidate_Constants;
-import de.metas.invoicecandidate.callout.C_Invoice_Candidate_TabCallout;
+//import de.metas.invoicecandidate.callout.C_Invoice_Candidate_TabCallout;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate_Recompute;
 import de.metas.invoicecandidate.model.I_I_Invoice_Candidate;
-import de.metas.invoicecandidate.ui.spi.impl.C_Invoice_Candidate_GridTabSummaryInfoProvider;
+//import de.metas.invoicecandidate.ui.spi.impl.C_Invoice_Candidate_GridTabSummaryInfoProvider;
 import de.metas.util.Services;
 import org.adempiere.ad.callout.spi.IProgramaticCalloutProvider;
 import org.adempiere.ad.modelvalidator.AbstractModuleInterceptor;
@@ -52,7 +52,6 @@ import org.adempiere.ad.trx.api.ITrx;
 import org.adempiere.ad.ui.api.ITabCalloutFactory;
 import org.adempiere.invoice.event.InvoiceUserNotificationsProducer;
 import org.adempiere.model.InterfaceWrapperHelper;
-import org.adempiere.ui.api.IGridTabSummaryInfoFactory;
 import org.compiere.util.Env;
 import org.compiere.util.Ini;
 
@@ -90,8 +89,8 @@ public class ConfigValidator extends AbstractModuleInterceptor
 
 		//
 		// Register GridTabSummaryInfo entries (07985)
-		final IGridTabSummaryInfoFactory gridTabSummaryInfoFactory = Services.get(IGridTabSummaryInfoFactory.class);
-		gridTabSummaryInfoFactory.register(I_C_Invoice_Candidate.Table_Name, new C_Invoice_Candidate_GridTabSummaryInfoProvider());
+		//final IGridTabSummaryInfoFactory gridTabSummaryInfoFactory = Services.get(IGridTabSummaryInfoFactory.class);
+		//gridTabSummaryInfoFactory.register(I_C_Invoice_Candidate.Table_Name, new C_Invoice_Candidate_GridTabSummaryInfoProvider());
 
 		setupAggregations();
 
@@ -122,7 +121,7 @@ public class ConfigValidator extends AbstractModuleInterceptor
 	@Override
 	protected void registerTabCallouts(final ITabCalloutFactory tabCalloutsRegistry)
 	{
-		tabCalloutsRegistry.registerTabCalloutForTable(I_C_Invoice_Candidate.Table_Name, C_Invoice_Candidate_TabCallout.class);
+		//tabCalloutsRegistry.registerTabCalloutForTable(I_C_Invoice_Candidate.Table_Name, C_Invoice_Candidate_TabCallout.class);
 	}
 
 	@Override

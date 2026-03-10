@@ -36,7 +36,7 @@ import org.adempiere.appdict.validation.api.IADValidatorResult;
 import org.adempiere.appdict.validation.api.IADValidatorViolation;
 import org.adempiere.appdict.validation.model.validator.ApplicationDictionaryGenericModelValidator;
 import org.adempiere.appdict.validation.spi.IADValidator;
-import org.adempiere.appdict.validation.spi.impl.ADColumnCalloutADValidator;
+//import org.adempiere.appdict.validation.spi.impl.ADColumnCalloutADValidator;
 import org.adempiere.appdict.validation.spi.impl.ADFormADValidator;
 import org.adempiere.appdict.validation.spi.impl.ADModelValidatorADValidator;
 import org.adempiere.appdict.validation.spi.impl.ADProcessADValidator;
@@ -119,7 +119,7 @@ public class ADValidatorRegistryBL implements IADValidatorRegistryBL
 
 	private void registerStandardValidators()
 	{
-		registerValidator(I_AD_ColumnCallout.class, new ADColumnCalloutADValidator());
+//		registerValidator(I_AD_ColumnCallout.class, new ADColumnCalloutADValidator());
 		registerValidator(I_AD_Form.class, new ADFormADValidator());
 		registerValidator(I_AD_ModelValidator.class, new ADModelValidatorADValidator());
 		registerValidator(I_AD_Process.class, new ADProcessADValidator());
