@@ -372,6 +372,177 @@ public class MIndexTable extends X_AD_Index_Table
 		}
 	}
 
+	public static boolean isAnyIndexedValueChanged(final GridTab tab, final boolean newRecord)
+	{
+		for (final MIndexTable index : getByTableName(tab.getTableName()))
+		{
+			if (index.isIndexedValuesChanged(tab, newRecord))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	public boolean isMatched(final GridTab tab, final boolean newRecord)
+	{
+		return isIndexedValuesChanged(tab, newRecord)
+				&& isWhereClauseMatched(tab);
+	}
+
+	/**
+	 * Check if there are changed values in index columns for the grid tab
+	 *
+	 * @param tab
+	 * @param newRecord
+	 * @return
+	 */
+	public boolean isIndexedValuesChanged(final GridTab tab, final boolean newRecord)
+	{
+		if (!tab.getTableName().equalsIgnoreCase(getTableName()))
+		{
+			throw new IllegalArgumentException("GridTab " + tab
+					+ " should be from table " + getTableName());
+		}
+		for (final String columnName : getColumnNames())
+		{
+			if (isValueChanged(tab, columnName, newRecord))
+			{
+				return true;
+			}
+		}
+		return false;
+	}
+
+	/**
+	 * Introduced to avoid false index qualification on before save.
+	 * <p>
+	 * Before this functionality was introduced, ADempiere was identifying which indexes will be affected by a GridTab save only based on which columns were modified. In case of a new record, all
+	 * columns are considered as modified.
+	 * <p>
+	 * The index's SQL where clause was not considered. That is the source of our issue.
+	 * <p>
+	 * To avoid this case, we introduced this method which actually generates a dummy SELECT on "dual" table and apply the where clause on it.
+	 * <p>
+	 * For example, consider a table called "MyTable" with Column1, Column2... ColumnN columns.
+	 * <p>
+	 * Our index has following where clause: Column1='Y' and Column2='N'.
+	 * <p>
+	 * In this case, this method will try to check if the where clause matches our GridTab data by generating following SQL SELECT:
+	 *
+	 * <pre>
+	 * SELECT * FROM (SELECT ? AS Column1, ? AS Column2, ..., ? AS ColumnN) MyTable
+	 * WHERE
+	 *     Column1='Y' AND Column2='N'
+	 * </pre>
+	 *
+	 * @task 02627
+	 */
+	private boolean isWhereClauseMatched(final GridTab tab)
+	{
+		final String trxName = null;
+
+		final String whereClause = getWhereClause();
+		if (Check.isEmpty(whereClause, true))
+		{
+			return true;
+		}
+
+		final StringBuilder sql = new StringBuilder();
+		final List<Object> params = new ArrayList<>();
+		for (int i = 0; i < tab.getFieldCount(); i++)
+		{
+			final GridField field = tab.getField(i);
+			if (field.isVirtualColumn())
+			{
+				continue;
+			}
+
+			final String columnName = field.getColumnName();
+			final Object value = field.getValue();
+
+			if (log.isDebugEnabled())
+			{
+				log.debug("column: " + columnName + "=" + value + ", index=" + i);
+			}
+
+			if (sql.length() > 0)
+			{
+				sql.append(", ");
+			}
+
+			if (value == null)
+			{
+
+				// NOTE: If we are not specify the datatype, we get
+				// "org.postgresql.util.PSQLException: ERROR: could not determine data type of parameter..."
+				// see http://archives.postgresql.org/pgsql-jdbc/2006-08/msg00163.php
+				// this case is for when we have those null fields in where clause
+				if (DisplayType.isText(field.getDisplayType()))
+				{
+					sql.append("NULL::text");
+				}
+				else if (DisplayType.isID(field.getDisplayType()) || DisplayType.Integer == field.getDisplayType())
+				{
+					sql.append("NULL::integer");
+				}
+				else if (DisplayType.isNumeric(field.getDisplayType()))
+				{
+					sql.append("NULL::numeric");
+				}
+				else
+				{
+					sql.append("NULL");
+				}
+			}
+			else if (value instanceof java.util.Date)
+			{
+				// NOTE: If we are not specify the datatype, we get
+				// "org.postgresql.util.PSQLException: ERROR: could not determine data type of parameter..."
+				// see http://archives.postgresql.org/pgsql-jdbc/2006-08/msg00163.php
+				sql.append("?::timestamp");
+				params.add(value);
+			}
+			else
+			{
+				sql.append("?");
+				params.add(value);
+			}
+			sql.append(" AS ").append(columnName);
+		}
+
+		if (sql.length() <= 0)
+		{
+			return true;
+		}
+
+		sql.insert(0, "SELECT * FROM (SELECT ").append(") ")
+				.append(tab.getTableName())
+				.append(" WHERE ")
+				.append(getWhereClause());
+
+		PreparedStatement pstmt = null;
+		ResultSet rs = null;
+		try
+		{
+			pstmt = DB.prepareStatement(sql.toString(), trxName);
+			DB.setParameters(pstmt, params);
+			rs = pstmt.executeQuery();
+			final boolean matched = rs.next();
+			return matched;
+		}
+		catch (final SQLException e)
+		{
+			throw new DBException(e, sql.toString(), params);
+		}
+		finally
+		{
+			DB.close(rs, pstmt);
+			rs = null;
+			pstmt = null;
+		}
+	}
+
 	/**
 	 *
 	 * @param ctx
@@ -398,6 +569,74 @@ public class MIndexTable extends X_AD_Index_Table
 				.anyMatch();
 
 		return matched;
+	}
+
+	public static List<I_AD_Index_Table> getAffectedIndexes(final GridTab tab, final boolean newRecord)
+	{
+		return MIndexTable.getByTableName(tab.getTableName())
+				.stream()
+				.filter(index -> index.isMatched(tab, newRecord))
+				.collect(ImmutableList.toImmutableList());
+	}
+
+	public static String getBeforeChangeWarning(final GridTab tab, final boolean newRecord)
+	{
+		final List<I_AD_Index_Table> indexes = getAffectedIndexes(tab, newRecord);
+		if (indexes.isEmpty())
+		{
+			return null;
+		}
+		// metas start: R.Craciunescu@metas.ro : 02280
+		final int rowCount = tab.getRowCount();
+		// metas end: R.Craciunescu@metas.ro : 02280
+
+		final StringBuilder msg = new StringBuilder();
+		for (final I_AD_Index_Table index : indexes)
+		{
+			if (Check.isEmpty(index.getBeforeChangeWarning()))
+			{
+				continue;
+			}
+			// metas start: R.Craciunescu@metas.ro : 02280
+			// if the new entry is the only row, there is nothing to be changed, so a before change warning is not needed.
+			if (rowCount == 1)
+			{
+				return null;
+			}
+			// metas end: R.Craciunescu@metas.ro : 02280
+			if (msg.length() > 0)
+			{
+				msg.append("\n");
+			}
+			msg.append(index.getBeforeChangeWarning());
+		}
+		return msg.toString();
+	}
+
+	private static final boolean isValueChanged(final GridTab tab, final String columnName,
+			final boolean newRecord)
+	{
+		final GridTable table = tab.getTableModel();
+		final int index = table.findColumn(columnName);
+		if (index == -1)
+		{
+			return false;
+		}
+		if (newRecord)
+		{
+			return true;
+		}
+		final Object valueOld = table.getOldValue(tab.getCurrentRow(), index);
+		if (valueOld == null)
+		{
+			return false;
+		}
+		final Object value = tab.getValue(columnName);
+		if (!valueOld.equals(value))
+		{
+			return true;
+		}
+		return false;
 	}
 
 	@Override

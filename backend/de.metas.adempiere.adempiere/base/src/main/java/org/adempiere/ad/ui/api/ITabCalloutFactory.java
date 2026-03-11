@@ -26,7 +26,7 @@ import org.adempiere.ad.callout.api.ICalloutRecord;
 
 
 import org.adempiere.ad.ui.spi.ITabCallout;
-
+import org.compiere.model.StateChangeEvent;
 
 import de.metas.util.ISingletonService;
 

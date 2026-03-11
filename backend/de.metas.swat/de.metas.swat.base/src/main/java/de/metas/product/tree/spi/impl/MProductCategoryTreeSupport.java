@@ -31,6 +31,7 @@ import java.sql.SQLException;
 
 import org.adempiere.model.InterfaceWrapperHelper;
 import org.adempiere.model.tree.spi.impl.DefaultPOTreeSupport;
+import org.compiere.model.GridTab;
 import org.compiere.model.I_M_Product_Category;
 import org.compiere.model.MTable;
 import org.compiere.model.MTree;
@@ -97,6 +98,15 @@ public class MProductCategoryTreeSupport extends DefaultPOTreeSupport
 	public String getParentIdSQL()
 	{
 		return I_M_Product_Category.COLUMNNAME_M_Product_Category_Parent_ID;
+	}
+
+	@Override
+	public MTreeNode getNodeInfo(GridTab gridTab)
+	{
+		MTreeNode info = super.getNodeInfo(gridTab);
+		info.setAllowsChildren(true); // we always allow children because IsSummary field will be automatically
+		// maintained
+		return info;
 	}
 
 	@Override

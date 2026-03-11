@@ -85,6 +85,14 @@ public class CalloutEngine implements Callout
 		}
 	}	// start
 
+	private static GridField extractGridFieldOrNull(final ICalloutField calloutField)
+	{
+		if (calloutField instanceof GridField)
+		{
+			return (GridField)calloutField;
+		}
+		return null;
+	}
 
 	/**
 	 * Conversion Rules.
@@ -165,23 +173,19 @@ public class CalloutEngine implements Callout
 
 		if (argLength == 6)
 		{
-			/*return (instance, calloutField) -> {
+			return (instance, calloutField) -> {
 				final GridField mField = extractGridFieldOrNull(calloutField);
 				final GridTab mTab = mField == null ? null : mField.getGridTab();
 				return (String)method.invoke(instance, calloutField.getCtx(), calloutField.getWindowNo(), mTab, mField, calloutField.getValue(), calloutField.getOldValue());
-			};*/
-
-			throw new IllegalArgumentException("Method " + methodName + " has invalid no of arguments: " + argLength);
+			};
 		}
 		else if (argLength == 5)
 		{
-			/*return (instance, calloutField) -> {
+			return (instance, calloutField) -> {
 				final GridField mField = extractGridFieldOrNull(calloutField);
 				final GridTab mTab = mField == null ? null : mField.getGridTab();
 				return (String)method.invoke(instance, calloutField.getCtx(), calloutField.getWindowNo(), mTab, mField, calloutField.getValue());
-			};*/
-
-			throw new IllegalArgumentException("Method " + methodName + " has invalid no of arguments: " + argLength);
+			};
 		}
 		else if (argLength == 1)
 		{

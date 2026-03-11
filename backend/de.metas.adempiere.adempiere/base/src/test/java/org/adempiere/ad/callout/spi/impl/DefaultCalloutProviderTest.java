@@ -35,6 +35,8 @@ import org.adempiere.model.InterfaceWrapperHelper;
 import org.adempiere.test.AdempiereTestHelper;
 import org.adempiere.test.AdempiereTestWatcher;
 import org.compiere.model.CalloutEngine;
+import org.compiere.model.GridField;
+import org.compiere.model.GridTab;
 import org.compiere.model.I_AD_ColumnCallout;
 import org.junit.Assert;
 import org.junit.Before;
@@ -68,9 +70,17 @@ public class DefaultCalloutProviderTest
 
 		public static final String METHOD_method2 = "method2";
 
+		public String method2(final Properties ctx, final int WindowNo, final GridTab mTab, final GridField mField, final Object value)
+		{
+			return NO_ERROR;
+		}
 
 		public static final String METHOD_method3 = "method3";
 
+		public String method3(final Properties ctx, final int WindowNo, final GridTab mTab, final GridField mField, final Object value, final Object valueOld)
+		{
+			return NO_ERROR;
+		}
 	}
 
 	public static class Callout1 extends AbstractMockedCallout

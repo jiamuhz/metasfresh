@@ -4,6 +4,7 @@ import java.util.concurrent.CopyOnWriteArrayList;
 
 import org.compiere.apps.search.IGridTabRowBuilder;
 import org.compiere.apps.search.impl.CompositeGridTabRowBuilder;
+import org.compiere.model.GridTab;
 
 import lombok.NonNull;
 import lombok.ToString;
@@ -36,6 +37,29 @@ public class CompositeOrderFastInputHandler implements IOrderFastInputHandler
 		handlers.addIfAbsent(handler);
 	}
 
+	@Override
+	public void clearFields(final GridTab gridTab)
+	{
+		for (final IOrderFastInputHandler handler : handlers)
+		{
+			handler.clearFields(gridTab);
+		}
+		defaultHandler.clearFields(gridTab);
+	}
+
+	@Override
+	public boolean requestFocus(final GridTab gridTab)
+	{
+		for (final IOrderFastInputHandler handler : handlers)
+		{
+			final boolean requested = handler.requestFocus(gridTab);
+			if (requested)
+			{
+				return true;
+			}
+		}
+		return defaultHandler.requestFocus(gridTab);
+	}
 
 	@Override
 	public IGridTabRowBuilder createLineBuilderFromHeader(final Object model)

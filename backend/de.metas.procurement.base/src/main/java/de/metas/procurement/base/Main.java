@@ -6,7 +6,7 @@ import de.metas.event.Topic;
 import de.metas.logging.LogManager;
 import de.metas.procurement.base.contracts.ProcurementFlatrateHandler;
 import de.metas.procurement.base.model.I_PMM_PurchaseCandidate;
-
+import de.metas.procurement.base.order.callout.PMM_PurchaseCandidate_TabCallout;
 import de.metas.util.Check;
 import de.metas.util.Services;
 import org.adempiere.ad.callout.spi.IProgramaticCalloutProvider;
@@ -85,6 +85,9 @@ public class Main extends AbstractModuleInterceptor
 	@Override
 	protected void registerTabCallouts(final ITabCalloutFactory tabCalloutsRegistry)
 	{
+		//
+		// Candidate -> Purchase order
+		tabCalloutsRegistry.registerTabCalloutForTable(I_PMM_PurchaseCandidate.Table_Name, PMM_PurchaseCandidate_TabCallout.class);
 	}
 
 	@Override

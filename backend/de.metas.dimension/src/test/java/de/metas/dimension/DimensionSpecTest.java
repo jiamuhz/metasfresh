@@ -8,7 +8,7 @@ import java.util.List;
 
 import org.adempiere.mm.attributes.AttributeId;
 import org.adempiere.mm.attributes.AttributeListValue;
-//import org.adempiere.mm.attributes.api.impl.AttributesTestHelper;
+import org.adempiere.mm.attributes.api.impl.AttributesTestHelper;
 import org.adempiere.test.AdempiereTestHelper;
 import org.compiere.model.I_M_Attribute;
 import org.compiere.model.X_M_Attribute;
@@ -55,7 +55,6 @@ public class DimensionSpecTest
 	{
 		AdempiereTestHelper.get().init();
 
-/*
 		final AttributesTestHelper attributesTestHelper = new AttributesTestHelper();
 
 		attr1 = attributesTestHelper.createM_Attribute("test1", X_M_Attribute.ATTRIBUTEVALUETYPE_List, true);
@@ -65,7 +64,6 @@ public class DimensionSpecTest
 		attr2 = attributesTestHelper.createM_Attribute("test21", X_M_Attribute.ATTRIBUTEVALUETYPE_List, true);
 		attr2_value1 = attributesTestHelper.createM_AttributeValue(attr2, "test2_value1");
 		attr2_value2 = attributesTestHelper.createM_AttributeValue(attr2, "test2_value2");
-*/
 	}
 
 	@Test

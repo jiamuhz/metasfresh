@@ -4,10 +4,12 @@
 package de.metas.modelvalidator;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
+import de.metas.adempiere.callout.C_OrderFastInputTabCallout;
 import de.metas.adempiere.engine.MViewModelValidator;
 import de.metas.adempiere.model.I_C_InvoiceLine;
 import de.metas.adempiere.modelvalidator.AD_User;
 import de.metas.adempiere.modelvalidator.Order;
+import de.metas.adempiere.modelvalidator.OrderLine;
 import de.metas.adempiere.modelvalidator.Payment;
 import de.metas.bpartner.interceptor.C_BPartner_Location;
 import de.metas.cache.CCache.CacheMapType;
@@ -43,11 +45,11 @@ import org.adempiere.ad.validationRule.IValidationRuleFactory;
 import org.adempiere.appdict.validation.model.validator.ApplicationDictionary;
 import org.adempiere.model.InterfaceWrapperHelper;
 import org.adempiere.model.tree.IPOTreeSupportFactory;
-//import org.adempiere.model.tree.spi.impl.BPartnerTreeSupport;
-//import org.adempiere.model.tree.spi.impl.CampainTreeSupport;
+import org.adempiere.model.tree.spi.impl.BPartnerTreeSupport;
+import org.adempiere.model.tree.spi.impl.CampainTreeSupport;
 import org.adempiere.model.tree.spi.impl.MenuTreeSupport;
-//import org.adempiere.model.tree.spi.impl.OrgTreeSupport;
-//import org.adempiere.model.tree.spi.impl.ProductTreeSupport;
+import org.adempiere.model.tree.spi.impl.OrgTreeSupport;
+import org.adempiere.model.tree.spi.impl.ProductTreeSupport;
 import org.adempiere.process.rpl.model.I_EXP_ReplicationTrx;
 import org.adempiere.process.rpl.model.I_EXP_ReplicationTrxLine;
 import org.adempiere.service.ISysConfigBL;
@@ -132,7 +134,7 @@ public class SwatValidator implements ModelValidator
 		engine.addModelValidator(new ApplicationDictionary(), client);
 
 		engine.addModelValidator(new Order(), client);
-//		engine.addModelValidator(new OrderLine(), client);
+		engine.addModelValidator(new OrderLine(), client);
 		engine.addModelValidator(new M_InOut(), client); // 03771
 		engine.addModelValidator(new Payment(), client);
 		// 04359 this MV cripples the processing performance of Sales Orders
@@ -175,11 +177,11 @@ public class SwatValidator implements ModelValidator
 		// AD_Tree UI support
 		{
 			final IPOTreeSupportFactory treeSupportFactory = Services.get(IPOTreeSupportFactory.class);
-//			treeSupportFactory.register(I_C_BPartner.Table_Name, BPartnerTreeSupport.class);
-//			treeSupportFactory.register(I_C_Campaign.Table_Name, CampainTreeSupport.class);
+			treeSupportFactory.register(I_C_BPartner.Table_Name, BPartnerTreeSupport.class);
+			treeSupportFactory.register(I_C_Campaign.Table_Name, CampainTreeSupport.class);
 			treeSupportFactory.register(I_AD_Menu.Table_Name, MenuTreeSupport.class);
-//			treeSupportFactory.register(I_AD_Org.Table_Name, OrgTreeSupport.class);
-//			treeSupportFactory.register(I_M_Product.Table_Name, ProductTreeSupport.class);
+			treeSupportFactory.register(I_AD_Org.Table_Name, OrgTreeSupport.class);
+			treeSupportFactory.register(I_M_Product.Table_Name, ProductTreeSupport.class);
 		}
 
 		// Note: de.metas.adempiere.modelvalidator.InvoiceLine is currently deactivated, so we leave it in
@@ -242,7 +244,7 @@ public class SwatValidator implements ModelValidator
 
 		// task 09232
 		{
-			//Services.get(ITabCalloutFactory.class).registerTabCalloutForTable(I_C_Order.Table_Name, C_OrderFastInputTabCallout.class);
+			Services.get(ITabCalloutFactory.class).registerTabCalloutForTable(I_C_Order.Table_Name, C_OrderFastInputTabCallout.class);
 		}
 	}
 

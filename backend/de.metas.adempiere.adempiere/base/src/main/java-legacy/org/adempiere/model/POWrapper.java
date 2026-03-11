@@ -327,11 +327,11 @@ public class POWrapper implements InvocationHandler, IInterfaceWrapper
 				final POWrapper wrapper = (POWrapper)ih;
 				return (T)wrapper.getPO();
 			}
-			/*if (checkOtherWrapper && ih instanceof GridTabWrapper)
+			if (checkOtherWrapper && ih instanceof GridTabWrapper)
 			{
 				final GridTabWrapper wrapper = (GridTabWrapper)ih;
 				return wrapper.getPO();
-			}*/
+			}
 		}
 
 		return null;

@@ -133,7 +133,7 @@ public class MRGroupProspect extends X_R_Group_Prospect
 	{
 		if (!success)
 			return success;
-//		BundleUtil.updateCCM_Bundle_Status(getR_Group_ID(), get_TrxName());
+		BundleUtil.updateCCM_Bundle_Status(getR_Group_ID(), get_TrxName());
 		return true;
 	}
 
@@ -157,7 +157,7 @@ public class MRGroupProspect extends X_R_Group_Prospect
 	{
 		if (!success)
 			return success;
-		//BundleUtil.updateCCM_Bundle_Status(getR_Group_ID(), get_TrxName());
+		BundleUtil.updateCCM_Bundle_Status(getR_Group_ID(), get_TrxName());
 		return true;
 	}
 

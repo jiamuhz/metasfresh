@@ -14,7 +14,10 @@ import org.adempiere.ad.validationRule.IValidationRule;
 import org.adempiere.ad.validationRule.IValidationRuleDAO;
 import org.adempiere.ad.validationRule.IValidationRuleFactory;
 import org.adempiere.exceptions.AdempiereException;
+import org.adempiere.util.GridRowCtx;
+import org.compiere.model.GridField;
 import org.compiere.model.GridFieldVO;
+import org.compiere.model.GridTab;
 import org.compiere.model.Lookup;
 import org.compiere.util.Env;
 import org.compiere.util.Evaluatee;
@@ -231,9 +234,80 @@ public class ValidationRuleFactory implements IValidationRuleFactory
 	@Override
 	public IValidationContext createValidationContext(final Properties ctx, final int windowNo, final int tabNo, final String tableName)
 	{
-		//return new GridTabValidationContext(ctx, windowNo, tabNo, tableName);
-		return null;
+		return new GridTabValidationContext(ctx, windowNo, tabNo, tableName);
 
+	}
+
+	@Override
+	public IValidationContext createValidationContext(final Properties ctx, final String tableName, final GridTab gridTab, final int rowIndex)
+	{
+		final GridRowCtx ctxToUse = new GridRowCtx(ctx, gridTab, rowIndex);
+		final int windowNo = gridTab.getWindowNo();
+		final int tabNo = gridTab.getTabNo();
+
+		return createValidationContext(ctxToUse, windowNo, tabNo, tableName);
+	}
+
+	@Override
+	public IValidationContext createValidationContext(@NonNull final GridField gridField)
+	{
+		final GridTab gridTab = gridField.getGridTab();
+		// Check.assumeNotNull(gridTab, "gridTab not null");
+		if (gridTab == null)
+		{
+			return createValidationContext(gridField, ROWINDEX_None);
+		}
+
+		// If GridTab is not open we don't have an Row Index anyways
+		// Case: open a window with High Volume. Instead of getting the window opened,
+		// you will get a popup to filter records before window actually opens.
+		// If you try to set on of the filtering fields you will get "===========> GridTab.verifyRow: Table not open".
+		if (!gridTab.isOpen())
+		{
+			return createValidationContext(gridField, ROWINDEX_None);
+		}
+
+		final int rowIndex = gridTab.getCurrentRow();
+		return createValidationContext(gridField, rowIndex);
+	}
+
+	@Override
+	public IValidationContext createValidationContext(final GridField gridField, final int rowIndex)
+	{
+		final Properties ctx = Env.getCtx();
+
+		String tableName = null;
+
+		final Lookup lookup = gridField.getLookup();
+		if (lookup != null)
+		{
+			final IValidationContext parentEvalCtx = lookup.getValidationContext();
+			if (parentEvalCtx != null)
+			{
+				tableName = parentEvalCtx.getTableName();
+			}
+		}
+
+		if (tableName == null)
+		{
+			return IValidationContext.DISABLED;
+		}
+
+		//
+		// Check if is a Process Parameter/Form field
+		final GridFieldVO gridFieldVO = gridField.getVO();
+		if (gridFieldVO.isProcessParameter() || gridFieldVO.isFormField())
+		{
+			return createValidationContext(ctx, gridField.getWindowNo(), Env.TAB_None, tableName);
+		}
+
+		final GridTab gridTab = gridField.getGridTab();
+		if (gridTab != null)
+		{
+			return createValidationContext(ctx, tableName, gridTab, rowIndex);
+		}
+
+		return IValidationContext.NULL;
 	}
 
 	@Override
