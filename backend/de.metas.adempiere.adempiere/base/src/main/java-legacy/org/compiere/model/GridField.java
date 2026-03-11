@@ -73,7 +73,7 @@ import de.metas.util.Services;
 
 /**
  * Grid Field Model.
- * 字段的元数据信息，与具体的前端实现无关
+ * 不用于 WebUI ，但还有一点粘连
  *
  * <p>
  * Fields are a combination of AD_Field (the display attributes) and AD_Column (the storage attributes).
