@@ -1,6 +1,6 @@
 package de.metas.printing.api.impl;
 
-import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.client.IClientUI;
 import de.metas.common.util.time.SystemTime;
 import de.metas.document.archive.api.ArchiveFileNameService;
 import de.metas.document.engine.IDocumentBL;

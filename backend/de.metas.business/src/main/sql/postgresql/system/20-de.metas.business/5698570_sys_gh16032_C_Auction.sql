@@ -1170,7 +1170,7 @@ UPDATE AD_TreeNodeMM SET Parent_ID=0, SeqNo=66, Updated=now(), UpdatedBy=100 WHE
 UPDATE AD_TreeNodeMM SET Parent_ID=0, SeqNo=67, Updated=now(), UpdatedBy=100 WHERE  Node_ID=540148 AND AD_Tree_ID=10
 ;
 
--- Node name: `Orders Overview (de.metas.adempiere.form.swing.OrderOverview)`
+-- Node name: `Orders Overview (de.metas.adempiere.client.swing.OrderOverview)`
 -- 2023-08-09T10:46:07.176025600Z
 UPDATE AD_TreeNodeMM SET Parent_ID=0, SeqNo=68, Updated=now(), UpdatedBy=100 WHERE  Node_ID=540228 AND AD_Tree_ID=10
 ;

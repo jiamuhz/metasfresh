@@ -22,7 +22,7 @@ package de.metas.tourplanning.process;
  * #L%
  */
 
-import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.client.IClientUI;
 import de.metas.process.JavaProcess;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.shipping.api.IShipperTransportationBL;

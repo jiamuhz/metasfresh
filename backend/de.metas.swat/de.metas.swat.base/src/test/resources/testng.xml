@@ -136,18 +136,18 @@
 
 	<test name="packing">
 		<!--
-			<packages> <package name="de.metas.adempiere.form" /> <package " />
+			<packages> <package name="de.metas.adempiere.client" /> <package " />
 			</packages>
 		-->
 		<classes>
 			<!--
 				test causes an InderArrayOutOfBoundsException see
 				http://code.google.com/p/testng/issues/detail?id=61 <class
-				name="de.metas.adempiere.form.BinPackerTests" />
+				name="de.metas.adempiere.client.BinPackerTests" />
 			-->
-			<class name="de.metas.adempiere.form.PackingDetailsCtrlTests" />
-			<class name="de.metas.adempiere.form.PackingItemTests" />
-			<class name="de.metas.adempiere.form.PackingTreeModelTests" />
+			<class name="de.metas.adempiere.client.PackingDetailsCtrlTests" />
+			<class name="de.metas.adempiere.client.PackingItemTests" />
+			<class name="de.metas.adempiere.client.PackingTreeModelTests" />
 			<class name="de.metas.adempiere.addon.PackingAddonTest" />
 		</classes>
 	</test>

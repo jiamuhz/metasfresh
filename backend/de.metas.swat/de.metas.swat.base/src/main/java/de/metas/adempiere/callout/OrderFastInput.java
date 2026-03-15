@@ -23,7 +23,7 @@ package de.metas.adempiere.callout;
  */
 
 import com.google.common.annotations.VisibleForTesting;
-import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.client.IClientUI;
 import de.metas.bpartner.BPartnerContactId;
 import de.metas.bpartner.BPartnerId;
 import de.metas.bpartner.BPartnerLocationAndCaptureId;

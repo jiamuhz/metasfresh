@@ -60,7 +60,7 @@ import org.compiere.util.Evaluatees;
 import org.compiere.util.ValueNamePair;
 import org.slf4j.Logger;
 
-import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.client.IClientUI;
 import de.metas.adempiere.service.IColumnBL;
 import de.metas.logging.LogManager;
 import de.metas.organization.OrgId;

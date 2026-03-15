@@ -1,4 +1,4 @@
-package de.metas.adempiere.form.impl;
+package de.metas.adempiere.client.impl;
 
 import java.io.InputStream;
 
@@ -6,12 +6,12 @@ import org.slf4j.Logger;
 
 /** */
 
-import de.metas.adempiere.form.AbstractClientUI;
-import de.metas.adempiere.form.AbstractClientUIInstance;
-import de.metas.adempiere.form.IAskDialogBuilder;
-import de.metas.adempiere.form.IClientUIAsyncInvoker;
-import de.metas.adempiere.form.IClientUIInstance;
-import de.metas.adempiere.form.IClientUIInvoker;
+import de.metas.adempiere.client.AbstractClientUI;
+import de.metas.adempiere.client.AbstractClientUIInstance;
+import de.metas.adempiere.client.IAskDialogBuilder;
+import de.metas.adempiere.client.IClientUIAsyncInvoker;
+import de.metas.adempiere.client.IClientUIInstance;
+import de.metas.adempiere.client.IClientUIInvoker;
 import de.metas.logging.LogManager;
 
 /**

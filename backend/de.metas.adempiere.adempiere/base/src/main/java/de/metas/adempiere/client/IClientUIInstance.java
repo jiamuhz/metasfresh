@@ -1,4 +1,4 @@
-package de.metas.adempiere.form;
+package de.metas.adempiere.client;
 
 /*
  * #%L
@@ -24,7 +24,7 @@ package de.metas.adempiere.form;
 
 import java.io.InputStream;
 
-import de.metas.adempiere.form.IClientUIAsyncInvoker.IClientUIAsyncRunnable;
+import de.metas.adempiere.client.IClientUIAsyncInvoker.IClientUIAsyncRunnable;
 
 /**
  * It's the Client User Interface in a particular user session.

@@ -1,4 +1,4 @@
-package de.metas.adempiere.form;
+package de.metas.adempiere.client;
 
 import java.util.List;
 

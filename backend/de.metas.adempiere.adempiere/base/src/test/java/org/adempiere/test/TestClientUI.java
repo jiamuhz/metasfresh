@@ -9,10 +9,10 @@ import org.slf4j.Logger;
 import de.metas.logging.LogManager;
 import org.junit.Assert;
 
-import de.metas.adempiere.form.AbstractClientUI;
-import de.metas.adempiere.form.IClientUI;
-import de.metas.adempiere.form.IClientUIInstance;
-import de.metas.adempiere.form.IClientUIInvoker;
+import de.metas.adempiere.client.AbstractClientUI;
+import de.metas.adempiere.client.IClientUI;
+import de.metas.adempiere.client.IClientUIInstance;
+import de.metas.adempiere.client.IClientUIInvoker;
 
 /**
  * Mocked {@link IClientUI} implementation used in JUnit tests.

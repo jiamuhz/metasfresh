@@ -3,7 +3,7 @@ package de.metas.acct.api;
 import org.adempiere.service.ClientId;
 import org.adempiere.util.lang.impl.TableRecordReference;
 
-import de.metas.adempiere.form.IClientUIInvoker;
+import de.metas.adempiere.client.IClientUIInvoker;
 import de.metas.user.UserId;
 
 /**

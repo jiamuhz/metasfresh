@@ -1,4 +1,4 @@
-package de.metas.adempiere.form;
+package de.metas.adempiere.client;
 
 /*
  * #%L
@@ -24,7 +24,7 @@ package de.metas.adempiere.form;
 
 import org.slf4j.Logger;
 
-import de.metas.adempiere.form.IClientUIInvoker.OnFail;
+import de.metas.adempiere.client.IClientUIInvoker.OnFail;
 import de.metas.logging.LogManager;
 import de.metas.util.Check;
 

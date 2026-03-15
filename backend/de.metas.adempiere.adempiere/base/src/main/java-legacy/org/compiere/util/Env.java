@@ -17,7 +17,7 @@
 package org.compiere.util;
 
 import com.google.common.base.Supplier;
-import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.client.IClientUI;
 import de.metas.adempiere.model.I_AD_Role;
 import de.metas.cache.CacheMgt;
 import de.metas.common.util.time.SystemTime;
@@ -56,8 +56,6 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.context.ApplicationContext;
 
 import javax.annotation.Nullable;
-import javax.swing.*;
-import java.awt.*;
 import java.io.File;
 import java.math.BigDecimal;
 import java.sql.Timestamp;

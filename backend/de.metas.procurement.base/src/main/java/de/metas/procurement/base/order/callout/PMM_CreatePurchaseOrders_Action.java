@@ -4,7 +4,7 @@ import org.adempiere.ui.sideactions.model.ExecutableSideAction;
 import org.compiere.model.GridTab;
 import org.compiere.util.Env;
 
-import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.client.IClientUI;
 import de.metas.i18n.IMsgBL;
 import de.metas.procurement.base.model.I_PMM_PurchaseCandidate;
 import de.metas.procurement.base.order.async.PMM_GenerateOrders;

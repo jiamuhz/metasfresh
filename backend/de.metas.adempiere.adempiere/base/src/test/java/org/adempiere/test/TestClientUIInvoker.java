@@ -3,9 +3,9 @@ package org.adempiere.test;
 /** */
 
 
-import de.metas.adempiere.form.AbstractClientUIInvoker;
-import de.metas.adempiere.form.IClientUIInstance;
-import de.metas.adempiere.form.IClientUIInvoker;
+import de.metas.adempiere.client.AbstractClientUIInvoker;
+import de.metas.adempiere.client.IClientUIInstance;
+import de.metas.adempiere.client.IClientUIInvoker;
 
 public class TestClientUIInvoker extends AbstractClientUIInvoker
 {

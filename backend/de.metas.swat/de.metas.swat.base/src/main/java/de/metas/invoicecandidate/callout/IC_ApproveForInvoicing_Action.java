@@ -31,7 +31,7 @@ import org.compiere.model.GridTab;
 import org.compiere.model.IQuery;
 import org.compiere.util.Env;
 
-import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.client.IClientUI;
 import de.metas.i18n.IMsgBL;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
 import de.metas.util.Check;

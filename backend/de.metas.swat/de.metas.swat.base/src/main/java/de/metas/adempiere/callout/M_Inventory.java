@@ -36,7 +36,7 @@ import org.compiere.model.GridTab;
 import org.compiere.model.I_M_InventoryLine;
 import org.compiere.model.I_M_Locator;
 
-import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.client.IClientUI;
 import de.metas.adempiere.model.I_M_Inventory;
 import de.metas.inventory.IInventoryBL;
 import de.metas.util.Services;

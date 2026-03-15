@@ -50,7 +50,6 @@ import org.eevolution.model.I_M_Warehouse_Routing;
 import org.eevolution.model.I_PP_Order;
 import org.eevolution.model.X_M_Warehouse_Routing;
 
-import de.metas.adempiere.form.IClientUI;
 //import de.metas.adempiere.form.swing.SwingClientUI;
 import de.metas.adempiere.model.I_C_Order;
 import de.metas.handlingunits.attribute.strategy.impl.SumAggregationStrategy;

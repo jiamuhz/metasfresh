@@ -28,12 +28,11 @@ import java.util.Properties;
 import org.adempiere.ad.modelvalidator.AbstractModuleInterceptor;
 import org.adempiere.ad.session.ISessionBL;
 import org.adempiere.ad.session.MFSession;
-import org.adempiere.model.PlainContextAware;
 import org.compiere.util.Env;
 import org.compiere.util.Ini;
 import org.slf4j.Logger;
 
-import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.client.IClientUI;
 import de.metas.logging.LogManager;
 import de.metas.printing.Printing_Constants;
 import de.metas.printing.api.IPrintingDAO;

@@ -26,12 +26,7 @@ package org.adempiere.model;
  */
 
 
-import javax.swing.UIManager;
-import javax.swing.plaf.metal.MetalLookAndFeel;
-import javax.swing.plaf.metal.MetalTheme;
-
 import org.adempiere.exceptions.AdempiereException;
-import org.adempiere.service.ISysConfigBL;
 import org.compiere.model.I_AD_SysConfig;
 import org.compiere.model.MClient;
 import org.compiere.model.ModelValidationEngine;
@@ -40,7 +35,7 @@ import org.compiere.model.PO;
 import org.compiere.util.Ini;
 import org.compiere.util.ValueNamePair;
 
-import de.metas.adempiere.form.IClientUI;
+import de.metas.adempiere.client.IClientUI;
 import de.metas.util.Check;
 import de.metas.util.Services;
 

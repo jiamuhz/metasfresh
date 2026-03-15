@@ -36,7 +36,7 @@ import org.compiere.model.I_AD_PInstance;
 import org.compiere.util.Env;
 import org.slf4j.Logger;
 
-import de.metas.adempiere.form.IClientUIInstance;
+import de.metas.adempiere.client.IClientUIInstance;
 import de.metas.data.export.api.IExporter;
 import de.metas.data.export.api.IExporterMonitor;
 import de.metas.logging.LogManager;
