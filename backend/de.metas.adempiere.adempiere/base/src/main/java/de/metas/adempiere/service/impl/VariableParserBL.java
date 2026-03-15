@@ -34,6 +34,13 @@ import de.metas.adempiere.service.IVariableParserBL;
 import de.metas.logging.LogManager;
 import de.metas.util.Services;
 
+/**
+ * 用于解析路径表达式 并 从对象模型中动态获取嵌套属性值
+ *
+ * 变量路径表达式，如 "C_BPartner.Location.AD_Address"
+ *
+ */
+
 public class VariableParserBL implements IVariableParserBL
 {
 	private static final Logger logger = LogManager.getLogger(VariableParserBL.class);
