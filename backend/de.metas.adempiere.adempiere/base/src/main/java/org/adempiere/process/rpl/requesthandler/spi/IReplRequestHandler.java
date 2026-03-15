@@ -13,7 +13,7 @@ import org.compiere.model.PO;
  * 
  * Please consider extending the adapter: {@link ReplRequestHandlerAdapter}.
  * 
- * @author ts
+
  * 
  */
 public interface IReplRequestHandler

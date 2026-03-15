@@ -31,7 +31,7 @@ import java.util.stream.Stream;
 /**
  * Implementers give database access to {@link I_M_ShipmentSchedule} instances (DAO).
  *
- * @author ts
+
  */
 public interface IShipmentSchedulePA extends ISingletonService
 {

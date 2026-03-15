@@ -45,7 +45,7 @@ import java.util.List;
 import java.util.Properties;
 
 /**
- * @author ts
+
  * @deprecated this was just a dirty hack to get the data fast.
  */
 @Deprecated

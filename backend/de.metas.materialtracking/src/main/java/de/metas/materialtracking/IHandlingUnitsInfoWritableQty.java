@@ -29,7 +29,7 @@ import de.metas.materialtracking.spi.IHandlingUnitsInfoFactory;
  * A handlingunits info where the TO-quantity can be set from outside.<br>
  * Use {@link IHandlingUnitsInfoFactory#createHUInfoWritableQty(IHandlingUnitsInfo)} to get an instance.
  * 
- * @author ts
+
  *
  */
 public interface IHandlingUnitsInfoWritableQty extends IHandlingUnitsInfo

@@ -34,7 +34,7 @@ import de.metas.materialtracking.ch.lagerkonf.interfaces.I_M_Material_Tracking;
 import de.metas.materialtracking.ch.lagerkonf.model.I_M_QualityInsp_LagerKonf_Version;
 
 /**
- * @author ts
+
  *
  */
 @Callout(I_M_Material_Tracking.class)

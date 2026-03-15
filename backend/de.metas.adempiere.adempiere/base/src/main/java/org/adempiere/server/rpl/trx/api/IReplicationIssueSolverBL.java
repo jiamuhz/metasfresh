@@ -15,7 +15,7 @@ import de.metas.util.ISingletonService;
  * Business logic that helps solving replication issues. To use it, implement you specific solver and pass it to the {@link #solveReplicationIssues(IReplicationIssueSolver, I_EXP_ReplicationTrx)}
  * method.
  *
- * @author ts
+
  *
  */
 public interface IReplicationIssueSolverBL extends ISingletonService

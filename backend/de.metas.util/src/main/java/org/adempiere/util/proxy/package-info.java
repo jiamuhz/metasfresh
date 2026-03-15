@@ -6,7 +6,7 @@
  * </ul> 
  * So i think for both frameworks, we either need to have an export, or go a long way of refactoring and splitting the stuff into different projects/jars, so that we can then only activate CDI for the jars that have the proper classes for it.
  * 
- * @author ts
+
  *
  */
 package org.adempiere.util.proxy;

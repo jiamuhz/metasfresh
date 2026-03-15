@@ -12,7 +12,7 @@ import org.adempiere.util.trxConstraints.api.ITrxConstraints;
  * This implementation is returned by {@link TrxConstraintsBL#getConstraints()} to indicate that the Trx constraints
  * have been globally disabled.
  * 
- * @author ts
+
  * 
  */
 public final class TrxConstraintsDisabled implements ITrxConstraints

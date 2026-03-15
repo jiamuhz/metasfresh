@@ -6,7 +6,7 @@ package org.adempiere.server.rpl.interfaces;
 import org.adempiere.process.rpl.requesthandler.model.I_IMP_RequestHandler;
 
 /**
- * @author ts
+
  */
 public interface I_EXP_Format extends org.compiere.model.I_EXP_Format
 {

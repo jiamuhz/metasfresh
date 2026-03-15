@@ -26,7 +26,7 @@ package de.metas.ordercandidate.api;
 /**
  * Instances of this class are returned by {@link IOLCandUpdateBL#updateOLCands(java.util.Properties, java.util.Iterator, org.adempiere.util.api.IParams)}.
  * 
- * @author ts
+
  * 
  */
 public class OLCandUpdateResult

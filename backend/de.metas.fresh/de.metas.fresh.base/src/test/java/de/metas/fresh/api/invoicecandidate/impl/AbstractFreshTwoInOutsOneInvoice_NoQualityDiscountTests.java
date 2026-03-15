@@ -40,7 +40,7 @@ import de.metas.invoicecandidate.model.I_C_Invoice_Candidate_Agg;
  * Similar to its super class {@link AbstractTwoInOutsOneInvoiceSalesTests}, but uses the {@link FreshQuantityDiscountAggregator} instead of the default aggregator.<br>
  * Also in this case the expectations are the same.
  * 
- * @author ts
+
  *
  */
 public abstract class AbstractFreshTwoInOutsOneInvoice_NoQualityDiscountTests extends AbstractTwoInOutsOneInvoicePurchaseTests

@@ -22,7 +22,7 @@ import org.adempiere.util.proxy.Cached;
  * configured in a <code>jboss-aop.xml</code> file but hard-coded in
  * the cache implementation ({@link CacheAsp}).
  * 
- * @author ts
+
  * 
  */
 @Retention(RetentionPolicy.RUNTIME)

@@ -46,7 +46,7 @@ import de.metas.util.Services;
  * Note: This model validator is not registered by {@link SwatValidator}, because we want the option to disable it
  * without code change if required
  *
- * @author ts
+
  *
  */
 public class ProhibitNegativeQtyReserved implements ModelValidator

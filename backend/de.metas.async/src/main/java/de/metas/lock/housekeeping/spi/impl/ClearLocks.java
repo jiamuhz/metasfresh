@@ -32,7 +32,7 @@ import de.metas.util.Services;
 /**
  * Deletes lock records which were flagged with "auto-cleanup".
  *
- * @author ts
+
  * @author tsa
  * @task 06295
  */

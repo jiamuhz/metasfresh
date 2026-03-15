@@ -54,7 +54,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.load;
  * <p>
  * Note: This model validator is not registered by {@link SwatValidator}, because we want the option to disable it without code change if required
  *
- * @author ts
+
  */
 public class ProhibitInconsistentDropshipValues implements ModelValidator
 {

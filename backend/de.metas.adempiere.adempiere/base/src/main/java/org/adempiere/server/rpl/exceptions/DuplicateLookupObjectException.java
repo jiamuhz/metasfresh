@@ -11,7 +11,7 @@ import org.compiere.model.PO;
 /**
  * Exception meant to contain data for failed lookups.
  * 
- * @author ts
+
  * @author al
  */
 public final class DuplicateLookupObjectException extends ReplicationException

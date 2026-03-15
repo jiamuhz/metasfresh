@@ -32,7 +32,7 @@ import java.util.Properties;
 /**
  * Updates order line candidates.
  * 
- * @author ts
+
  * 
  */
 public interface IOLCandUpdateBL extends ISingletonService

@@ -52,7 +52,7 @@ import de.metas.util.Services;
 
 /**
  * 
- * @author ts
+
  * 
  */
 public class C_RecurrentPaymentCreateInvoice extends JavaProcess

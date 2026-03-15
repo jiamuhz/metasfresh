@@ -30,7 +30,7 @@ import de.metas.util.IService;
 /**
  * Be sure to know about the current implementations' restrictions.
  * 
- * @author ts
+
  * 
  */
 public interface IServiceInterceptor

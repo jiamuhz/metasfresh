@@ -80,7 +80,7 @@ import static org.compiere.model.I_C_Order.COLUMNNAME_M_Shipper_ID;
  * <li>{@link C_OrderFastInputTabCallout}: this tabcallout makes sure that the quick-input fields are empty (and not "0"!) when a new order record is created (task 09232).
  * </ul>
  *
- * @author ts
+
  * @see "<a href='http://dewiki908/mediawiki/index.php/Geschwindigkeit_Erfassung_%282009_0027_G131%29'>(2009 0027 G131)</a>"
  */
 public class OrderFastInput extends CalloutEngine

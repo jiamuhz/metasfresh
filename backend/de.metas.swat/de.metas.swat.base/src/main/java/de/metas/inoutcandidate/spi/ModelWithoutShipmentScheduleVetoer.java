@@ -37,7 +37,7 @@ import de.metas.inoutcandidate.model.I_M_ShipmentSchedule;
  * for subscription order lines. The reason for that would be that the module wants to create those records itself at
  * the actual subscription delivery dates.
  *
- * @author ts
+
  *
  */
 @FunctionalInterface

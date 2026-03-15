@@ -42,7 +42,7 @@ import de.metas.util.Services;
  * Note: it also sets the description to <code>null</code>.
  * 
  * 
- * @author ts
+
  * @task 08329
  */
 public class Fresh_QtyOnHand_Tab_Callout extends TabCalloutAdapter

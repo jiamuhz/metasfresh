@@ -13,7 +13,7 @@ package de.metas.event;
  * login-user, or in general.
  * </ul>
  * 
- * @author ts
+
  *
  */
 public enum Type

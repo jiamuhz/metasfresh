@@ -27,7 +27,7 @@ import org.junit.Ignore;
 /**
  * Comment out the ignore flag to run the test
  *
- * @author ts
+
  *
  */
 @Ignore

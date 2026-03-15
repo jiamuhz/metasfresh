@@ -6,7 +6,7 @@ import de.metas.util.ISingletonService;
 
 /**
  * Statefull singleton that contains inout candidate configuration
- * @author ts
+
  *
  */
 public interface IInOutCandidateConfig extends ISingletonService

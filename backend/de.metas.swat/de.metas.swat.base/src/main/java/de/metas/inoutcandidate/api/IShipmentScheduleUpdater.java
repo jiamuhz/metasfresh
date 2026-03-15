@@ -7,7 +7,7 @@ import de.metas.util.ISingletonService;
 /**
  * Implementors update invalid {@link I_M_ShipmentSchedule} instance and make them valid again.
  *
- * @author ts
+
  *
  */
 public interface IShipmentScheduleUpdater extends ISingletonService

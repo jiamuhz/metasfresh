@@ -30,7 +30,7 @@ import java.util.Set;
  * A simple bean that is used to pass parameters to
  * {@link ShipmentGeneratorService#computeShipmentCandidates(String, ShipmentgenerateParams)}.
  * 
- * @author ts
+
  * 
  */
 public final class ShipmentParams {

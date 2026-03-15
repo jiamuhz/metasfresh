@@ -28,7 +28,7 @@ import org.compiere.util.Env;
 /**
  * This model validator checks for each new invoice line if there needs to be an additional invoice line for freight cost.
  *
- * @author ts
+
  * @see "<a href='http://dewiki908/mediawiki/index.php/Versandkostenermittlung/_-berechnung_(2009_0027_G28)'>DV-Konzept (2009_0027_G28)</a>"
  * @deprecated the code form this class shall be moved to {@link de.metas.order.model.interceptor.C_Order} and a new MV de.metas.modelvalidator.C_OrderLine.
  */

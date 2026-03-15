@@ -12,7 +12,7 @@ import de.metas.util.Check;
 /**
  * Default immutable implementation for {@link ITrxRunConfig}
  *
- * @author ts
+
  *
  */
 @Immutable

@@ -38,7 +38,7 @@ import de.metas.materialtracking.qualityBasedInvoicing.invoicing.QualityInvoiceL
 /**
  * Interface containing all the information needed to do quality based invoicing
  *
- * @author ts
+
  *
  */
 public interface IQualityBasedConfig

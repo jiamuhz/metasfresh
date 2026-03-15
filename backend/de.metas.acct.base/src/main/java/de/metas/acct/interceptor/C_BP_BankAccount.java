@@ -12,7 +12,7 @@ import org.compiere.model.ModelValidator;
 
 /**
  * 
- * @author ts
+
  * @implSpec task 08354
  */
 @Interceptor(I_C_BP_BankAccount.class)

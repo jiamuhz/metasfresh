@@ -51,7 +51,7 @@ import de.metas.util.Services;
 /**
  * In this scenario we have two invoice candidates (also referencing two orders). The first ic has two iols, the 2nd ic has one iol.
  *
- * @author ts
+
  *
  */
 public abstract class AbstractTwoOrdersTwoInOutsOneInvoiceTests extends AbstractNewAggregationEngineTests

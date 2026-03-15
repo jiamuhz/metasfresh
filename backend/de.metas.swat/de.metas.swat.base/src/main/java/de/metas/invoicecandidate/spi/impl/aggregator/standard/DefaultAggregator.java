@@ -57,7 +57,7 @@ import java.util.Properties;
  * <p>
  * This implementation sums up QtyToInvoice, PriceActual, PriceEntered and Discount of the candidates that it aggregates.
  *
- * @author ts
+
  */
 @ToString
 public class DefaultAggregator implements IAggregator

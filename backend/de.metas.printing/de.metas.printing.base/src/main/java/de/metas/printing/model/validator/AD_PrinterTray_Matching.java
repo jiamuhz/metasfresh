@@ -34,7 +34,7 @@ import de.metas.util.Services;
 
 /**
  * 
- * @author ts
+
  * 
  */
 @Validator(I_AD_PrinterTray_Matching.class)

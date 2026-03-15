@@ -32,7 +32,7 @@ import de.metas.util.Services;
 /**
  * This exception is used if an error occurs during execution of an ADempiere server process.
  * 
- * @author ts
+
  * @see http://dewiki908/mediawiki/index.php/03034:_ADempiere_ServerProcesses_can_die_%282012072510000033%29
  */
 @SuppressWarnings("serial")

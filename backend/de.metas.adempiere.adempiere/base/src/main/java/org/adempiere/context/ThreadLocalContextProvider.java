@@ -17,7 +17,7 @@ import org.compiere.util.Env;
  * parent's context. Note that the child thread will even have read-access to context values that were set in the parent after it was spawned.<br>
  * The goal of this implementation is to avoid context pollution.
  * 
- * @author ts
+
  * @task http://dewiki908/mediawiki/index.php/08859_Fix_role_and_context_problem_around_Scheduler_%28102015832679%29
  */
 public class ThreadLocalContextProvider implements ContextProvider

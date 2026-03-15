@@ -43,7 +43,7 @@ import de.metas.process.JavaProcess;
 import de.metas.util.Services;
 
 /**
- * @author ts
+
  *
  */
 public class C_Invoice_Candidate_Update_HeaderAggKeys extends JavaProcess

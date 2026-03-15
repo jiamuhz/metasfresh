@@ -65,7 +65,7 @@ import java.util.Map;
 
 /**
  *
- * @author ts
+
  * @implNote Task http://dewiki908/mediawiki/index.php/09028_Produktionsauftrag-Bestellkontrolle_automatisch_ausdrucken_%28106402701484%29
  */
 public class OrderCheckupBL implements IOrderCheckupBL

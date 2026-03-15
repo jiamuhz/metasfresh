@@ -8,7 +8,7 @@ import de.metas.util.ISingletonService;
  * Service maintains {@link ITrxConstraints} instances for threads. A new instance is created for a thread at the first
  * time, 'getConstraints' is called. The instance is destroyed when the thread finishes.
  * 
- * @author ts
+
  * @see DB#getConstraints()
  */
 public interface ITrxConstraintsBL extends ISingletonService

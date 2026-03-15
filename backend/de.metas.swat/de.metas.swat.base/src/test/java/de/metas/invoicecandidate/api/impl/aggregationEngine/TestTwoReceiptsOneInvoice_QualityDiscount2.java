@@ -67,7 +67,7 @@ import de.metas.quantity.StockQtyAndUOMQtys;
  * => Expectation: the MovementQty that is in dispute is not invoiced.
  * <p>
  *
- * @author ts
+
  *
  */
 

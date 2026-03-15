@@ -48,7 +48,7 @@ import de.metas.util.Services;
 
 /**
  *
- * @author ts
+
  *
  */
 public final class DocumentEmailParams implements IEmailParameters

@@ -41,7 +41,7 @@ import com.google.common.collect.ImmutableList;
  * <li>if there are move members, please don't extend the constructor, but add a builder.
  * </ul>
  * 
- * @author ts
+
  *
  */
 @Immutable

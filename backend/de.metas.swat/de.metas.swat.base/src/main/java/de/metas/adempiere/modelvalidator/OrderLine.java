@@ -21,7 +21,7 @@ import de.metas.util.Services;
 
 /**
  * @deprecated the code form this class shall be moved a new MV de.metas.modelvalidator.C_OrderLine.
- * @author ts
+
  *
  */
 @Deprecated

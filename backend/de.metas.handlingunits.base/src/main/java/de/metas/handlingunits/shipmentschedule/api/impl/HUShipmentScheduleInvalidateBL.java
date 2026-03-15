@@ -41,7 +41,7 @@ import java.util.List;
  * Subclass of {@link ShipmentScheduleInvalidateBL} with HU-aware code. The concrete benefit of this is that we can create BPartner-specific storage segments which in turn allow us to invalidate less
  * shipment schedules.
  *
- * @author ts
+
  *
  */
 public class HUShipmentScheduleInvalidateBL extends ShipmentScheduleInvalidateBL

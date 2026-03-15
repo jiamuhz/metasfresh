@@ -29,7 +29,7 @@ import de.metas.common.util.pair.ImmutablePair;
 /**
  * Generic class to hold a pair of objects. The given first and second may be null.
  * 
- * @author ts
+
  * @author tsa
  * 
  * @param <F> the type of the first item

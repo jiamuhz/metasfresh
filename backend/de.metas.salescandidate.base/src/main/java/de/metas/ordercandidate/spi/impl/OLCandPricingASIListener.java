@@ -40,7 +40,7 @@ import de.metas.util.Services;
 /**
  * Keeps the olCand's ASI up to date after changes in the product or the pricing.
  *
- * @author ts
+
  * @task http://dewiki908/mediawiki/index.php/08803_ADR_from_Partner_versus_Pricelist
  */
 public class OLCandPricingASIListener implements IModelAttributeSetInstanceListener

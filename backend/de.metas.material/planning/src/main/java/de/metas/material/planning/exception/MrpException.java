@@ -5,7 +5,7 @@ import org.adempiere.exceptions.AdempiereException;
 /**
  * Generic libero-specifc exception. Please subclass this one rather than {@link MrpException} when adding libero related exceptions.
  *
- * @author ts
+
  *
  */
 public class MrpException extends AdempiereException

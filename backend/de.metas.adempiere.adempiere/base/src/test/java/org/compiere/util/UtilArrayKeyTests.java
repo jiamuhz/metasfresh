@@ -12,7 +12,7 @@ import org.junit.Test;
 /**
  * Some noob tests that I need to gather some self-confidence using array as keys in hashset and hashmaps.
  * 
- * @author ts
+
  * 
  */
 public class UtilArrayKeyTests

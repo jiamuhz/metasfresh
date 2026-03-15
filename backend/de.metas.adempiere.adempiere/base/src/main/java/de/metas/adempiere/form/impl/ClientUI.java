@@ -20,7 +20,6 @@ import de.metas.logging.LogManager;
  *
  * Also, this implementation is used on server side.
  *
- * @author ts
  *
  */
 public class ClientUI extends AbstractClientUI

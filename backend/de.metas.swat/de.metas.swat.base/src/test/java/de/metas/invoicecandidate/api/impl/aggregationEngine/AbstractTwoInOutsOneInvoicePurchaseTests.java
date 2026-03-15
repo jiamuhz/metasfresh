@@ -49,7 +49,7 @@ import de.metas.product.ProductPrice;
  * => Expectation: one invoice, but two lines, because only iols that belong to the same inOut can be aggregated into one invoice line.
  * <p>
  *
- * @author ts
+
  *
  */
 public abstract class AbstractTwoInOutsOneInvoicePurchaseTests extends AbstractTwoInOutsTests

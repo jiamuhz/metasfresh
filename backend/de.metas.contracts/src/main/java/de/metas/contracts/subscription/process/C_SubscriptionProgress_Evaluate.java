@@ -45,7 +45,7 @@ import de.metas.util.Services;
 
 /**
  *
- * @author ts
+
  * @see "<a href='http://dewiki908/mediawiki/index.php/Abonnement_Auftragsverwaltung_(2009_0015_G36)'>(2009 0015 G36)</a>"
  */
 public class C_SubscriptionProgress_Evaluate extends JavaProcess

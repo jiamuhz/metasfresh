@@ -314,7 +314,7 @@ public class Util
 	 * <p>
 	 * Thanks to http://stackoverflow.com/questions/1595588/java-how-to-be-sure-to-store-unique-arrays-based-on -its-values-on-a-list
 	 *
-	 * @author ts
+	
 	 */
 	@Immutable
 	public static class ArrayKey implements Comparable<ArrayKey>

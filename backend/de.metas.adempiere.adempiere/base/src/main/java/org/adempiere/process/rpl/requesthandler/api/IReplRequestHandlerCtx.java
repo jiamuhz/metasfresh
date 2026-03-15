@@ -13,7 +13,7 @@ import org.adempiere.server.rpl.interfaces.I_EXP_Format;
  * Instances are created by {@link IReplRequestHandlerBL#createCtx(Properties, I_EXP_Format, I_IMP_RequestHandler)} and
  * contain context info for {@link IReplRequestHandler#handleRequest(org.compiere.model.PO, IReplRequestHandlerCtx)}.
  * 
- * @author ts
+
  * 
  */
 public interface IReplRequestHandlerCtx

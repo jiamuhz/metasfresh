@@ -36,7 +36,7 @@ import org.compiere.model.I_AD_User;
  * the update is performed by a scheduled process, that process can use the given <code>adUserToNotifyId</code> to
  * notify whoever is in charge of the problem.
  *
- * @author ts
+
  */
 public class InconsistentUpdateException extends AdempiereException
 {

@@ -84,7 +84,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.saveRecord;
 /**
  * Implements those methods from {@link IInvoiceDAO} that are DB decoupled.
  *
- * @author ts
+
  */
 public abstract class AbstractInvoiceDAO implements IInvoiceDAO
 {

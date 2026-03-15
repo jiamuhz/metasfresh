@@ -8,7 +8,7 @@ import de.metas.contracts.model.I_C_Flatrate_Matching;
 /**
  * Callout for
  * 
- * @author ts
+
  * 
  */
 public class C_Flatrate_Matching extends CalloutEngine

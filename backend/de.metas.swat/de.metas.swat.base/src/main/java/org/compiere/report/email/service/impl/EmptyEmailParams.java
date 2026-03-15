@@ -8,7 +8,7 @@ import de.metas.letters.model.MADBoilerPlate;
 /**
  * Default implementation. Always returns <code>null</code>.
  * 
- * @author ts
+
  * 
  */
 public final class EmptyEmailParams implements IEmailParameters {

@@ -36,7 +36,7 @@ import de.metas.materialtracking.qualityBasedInvoicing.spi.IQualityBasedConfig;
 /**
  * Interface containing all the information needed to do quality based invoicing
  *
- * @author ts
+
  *
  */
 public interface ILagerKonfQualityBasedConfig extends IQualityBasedConfig

@@ -38,7 +38,7 @@ import javax.annotation.Nullable;
 /**
  * Dedicated exception to handle the case that the DB detected a deadlock and killed one of the participants.
  * 
- * @author ts
+
  * @task 08353
  */
 public class DBDeadLockDetectedException extends DBException

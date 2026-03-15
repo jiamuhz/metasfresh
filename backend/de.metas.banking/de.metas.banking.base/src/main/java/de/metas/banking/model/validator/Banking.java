@@ -49,7 +49,7 @@ import java.util.Set;
 /**
  * Banking module activator
  *
- * @author ts
+
  */
 public class Banking extends AbstractModuleInterceptor
 {

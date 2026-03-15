@@ -48,7 +48,7 @@ import static org.junit.Assert.assertThat;
  * => Expectation: see subclasses
  * <p>
  *
- * @author ts
+
  */
 public abstract class AbstractTwoInOutsTests extends AbstractNewAggregationEngineTests
 {

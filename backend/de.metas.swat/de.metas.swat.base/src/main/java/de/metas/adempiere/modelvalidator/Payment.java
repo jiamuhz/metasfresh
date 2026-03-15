@@ -17,7 +17,7 @@ import de.metas.util.Services;
 
 /**
  *
- * @author ts [metas 00036] Modelvalidator makes sure that credit card number and verification code are not stored in
+ [metas 00036] Modelvalidator makes sure that credit card number and verification code are not stored in
  *         the DB, depending on {@link OrgInfo#getStoreCreditCardNumberMode()}. 
  */
 public class Payment implements ModelValidator

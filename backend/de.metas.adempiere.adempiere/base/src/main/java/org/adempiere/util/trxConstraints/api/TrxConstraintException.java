@@ -8,7 +8,7 @@ import org.adempiere.exceptions.AdempiereException;
 /**
  * Exception can be thrown if the system detects a violation of an {@link ITrxConstraints} instance.
  * 
- * @author ts
+
  * 
  */
 public class TrxConstraintException extends AdempiereException

@@ -31,7 +31,7 @@ import org.compiere.model.GridTab;
 /**
  * See {@link #onNew(GridTab)} javadoc.
  * 
- * @author ts
+
  * @task http://dewiki908/mediawiki/index.php/09232_Auftrag_Schnellerfassung_erste_Zeile_ohne_Packvorschrift_Menge_CU_nicht_%C3%BCbernommen_%28103054677064%29
  */
 public class C_OrderFastInputTabCallout extends TabCalloutAdapter

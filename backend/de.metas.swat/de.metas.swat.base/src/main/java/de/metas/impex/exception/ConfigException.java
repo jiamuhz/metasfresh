@@ -32,7 +32,7 @@ import de.metas.i18n.Msg;
  * 
  * Exception to be thrown when an edi export fails dues to (user) config problems. That's why it is a checked exception.
  * 
- * @author ts
+
  * 
  */
 public final class ConfigException extends AdempiereException

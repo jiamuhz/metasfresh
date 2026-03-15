@@ -9,7 +9,7 @@ import de.metas.document.IDocLineCopyHandler;
 /**
  * A copy handler that does nothing. If registered as handler, it is never invoked. Use {@link ICopyHandlerBL#getNullDocLineCopyHandler()} to get an instance.
  * 
- * @author ts
+
  *
  * @param <LT> ignored
  */

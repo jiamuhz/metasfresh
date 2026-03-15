@@ -12,7 +12,7 @@ import de.metas.ordercandidate.spi.IOLCandGroupingProvider;
 /**
  *
  *
- * @author ts
+
  *
  */
 @Component

@@ -30,7 +30,7 @@ import de.metas.async.model.I_C_Queue_WorkPackage;
 /**
  * Default strategy that is used unless a work package processor explicitly specifies something else.
  * 
- * @author ts
+
  *
  */
 public final class NullLatchStrategy implements ILatchStragegy

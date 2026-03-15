@@ -34,7 +34,7 @@ import java.util.stream.Stream;
 /**
  * Packaging related DAO
  *
- * @author ts
+
  * @author tsa
  *
  * @see <a href="http://dewiki908/mediawiki/index.php/Transportverpackung_%282009_0022_G61%29">(2009_0022_G61)</a>

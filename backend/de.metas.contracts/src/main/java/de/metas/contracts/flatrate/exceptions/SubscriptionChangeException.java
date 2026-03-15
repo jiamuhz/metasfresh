@@ -37,7 +37,7 @@ import de.metas.i18n.Msg;
  * Indicates that there is more than one {@link I_C_SubscriptionChange} entry that could be applied in the given
  * situation (which is an error).
  * 
- * @author ts
+
  * 
  */
 public class SubscriptionChangeException extends AdempiereException

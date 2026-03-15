@@ -50,7 +50,7 @@ import org.compiere.model.ModelValidator;
 /**
  * Model validator <b>with attached callout</b>. See {@link #validateUOM(I_M_ProductPrice)} for what it does.
  *
- * @author ts
+
  * @task http://dewiki908/mediawiki/index.php/09045_Changes_on_Excel_Export-Import_%28107395757529%29
  */
 @Callout(I_M_ProductPrice.class)

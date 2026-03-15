@@ -45,7 +45,7 @@ import lombok.ToString;
 
 /**
  *
- * @author ts
+
  * @see "<a href='http://dewiki908/mediawiki/index.php?title=Auftrag_versenden_mit_Abo-Lieferung_(2009_0027_G62)'>(2009 0027 G62)</a>"
  *
  */

@@ -139,7 +139,7 @@ public interface IHUPickingSlotBL extends IPickingSlotBL, ISingletonService
 	/**
 	 * Ad-Hoc and simple return type for above methods
 	 *
-	 * @author ts
+	
 	 */
 	interface IQueueActionResult
 	{

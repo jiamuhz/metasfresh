@@ -29,7 +29,7 @@ import org.adempiere.ad.modelvalidator.IModelValidationEngine;
 /**
  * Module activator
  *
- * @author ts
+
  *
  */
 public class Main extends AbstractModuleInterceptor

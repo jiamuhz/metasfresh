@@ -41,7 +41,7 @@ import de.metas.printing.model.I_C_Print_PackageInfo;
 /**
  * To test additional things, create subclasses and override the setup and eval methods. Assertions run under static page range.
  *
- * @author ts
+
  */
 public abstract class AbstractPrintJobLinesAggregatorPageRangeTestBase extends AbstractPrintingTest
 {

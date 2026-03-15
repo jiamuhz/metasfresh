@@ -2,7 +2,7 @@
  *
  */
 /**
- * @author ts
+
  *
  */
 package de.metas.materialtracking.qualityBasedInvoicing.spi;

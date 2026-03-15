@@ -18,7 +18,7 @@ import de.metas.util.Services;
  * Returns generic email parameters for a process that contains a
  * {@link I_C_BPartner#COLUMNNAME_C_BPartner_ID} as a process parameter.
  * 
- * @author ts
+
  * 
  */
 public final class BPartnerEmailParams implements IEmailParameters

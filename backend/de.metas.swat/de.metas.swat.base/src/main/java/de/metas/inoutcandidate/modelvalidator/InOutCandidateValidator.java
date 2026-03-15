@@ -32,7 +32,7 @@ import org.compiere.model.I_M_Product;
  * <p>
  * NOTE: atm we have modelChange/docValidate interceptors here. Please don't add more like this but consider creating separate model interceptors.
  *
- * @author ts
+
  */
 
 public final class InOutCandidateValidator extends AbstractModelInterceptor

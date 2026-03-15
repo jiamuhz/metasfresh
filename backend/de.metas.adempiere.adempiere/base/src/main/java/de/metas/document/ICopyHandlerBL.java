@@ -12,7 +12,7 @@ import de.metas.util.ISingletonService;
 /**
  * Generic service that allows us do add handlers (could also be called listeners for all I know) which add module specific aspects to the copying of records.
  * 
- * @author ts
+
  * 
  */
 public interface ICopyHandlerBL extends ISingletonService

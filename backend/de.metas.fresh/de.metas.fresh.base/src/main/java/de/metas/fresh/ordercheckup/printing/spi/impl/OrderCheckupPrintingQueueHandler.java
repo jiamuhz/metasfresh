@@ -41,7 +41,7 @@ import org.slf4j.Logger;
  * <li>set the user to print to {@link I_C_Order_MFGWarehouse_Report#getAD_User_Responsible_ID()}.
  * </ul>
  *
- * @author ts
+
  * @author tsa
  * @task http://dewiki908/mediawiki/index.php/09028_Produktionsauftrag-Bestellkontrolle_automatisch_ausdrucken_%28106402701484%29
  */

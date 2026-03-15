@@ -28,7 +28,7 @@ import de.metas.inout.model.I_M_InOut;
 /**
  
  * 
- * @author ts
+
  * 
  */
 public interface I_C_Invoice extends de.metas.adempiere.model.I_C_Invoice
