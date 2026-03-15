@@ -65,7 +65,7 @@ import de.metas.util.Services;
  * This class contains common setup code and tests for {@link HUTransformServiceTests} and {@link HUTransformTracingTests}.<br>
  * Please move additional common code from {@link HUTransformServiceTests} to this class when it is needed by {@link HUTransformTracingTests}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class HUTransformTestsBase
@@ -273,7 +273,7 @@ public class HUTransformTestsBase
 	/**
 	 * Simple POJO that contains instances the test code worked with. Needed for assertions.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 *
 	 */
 	// need to fully qualify the lombok classes, not sure why; if I don't then it works with eclipse, but not with javac (lombok 1.16.16)

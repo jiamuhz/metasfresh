@@ -30,7 +30,7 @@ import de.metas.dlm.migrator.IMigratorService;
 /**
  * Checks if an invoice was already paid. If it is still open, then it can't be archived.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class InvoicePaidInspector implements IRecordInspector

@@ -36,7 +36,7 @@ import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 /**
  * Common base class to dedupliate code.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public abstract class WEBUI_M_HU_Receipt_Base

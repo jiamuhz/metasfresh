@@ -43,7 +43,7 @@ import de.metas.util.Services;
 /**
  * Publish RfQ bidding invitations.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class C_RfQ_Publish extends JavaProcess implements IProcessPrecondition

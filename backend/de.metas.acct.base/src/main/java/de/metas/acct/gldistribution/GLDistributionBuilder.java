@@ -46,7 +46,7 @@ import java.util.List;
 /**
  * Helper class used to execute GL_Distribution on a given {@link AccountDimension}, amount and qty.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class GLDistributionBuilder

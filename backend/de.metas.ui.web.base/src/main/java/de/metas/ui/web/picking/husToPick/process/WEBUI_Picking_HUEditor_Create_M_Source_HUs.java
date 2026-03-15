@@ -35,7 +35,7 @@ import de.metas.ui.web.picking.pickingslot.process.WEBUI_Picking_PickQtyToNewHU;
  * 
  * @task https://github.com/metasfresh/metasfresh/issues/2298
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class WEBUI_Picking_HUEditor_Create_M_Source_HUs

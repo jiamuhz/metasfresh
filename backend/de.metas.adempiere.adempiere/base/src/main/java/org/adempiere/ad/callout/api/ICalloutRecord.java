@@ -28,7 +28,7 @@ import lombok.NonNull;
 /**
  * Callout record. This is the underlying record for which a field callout or tab callout is invoked.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ICalloutRecord

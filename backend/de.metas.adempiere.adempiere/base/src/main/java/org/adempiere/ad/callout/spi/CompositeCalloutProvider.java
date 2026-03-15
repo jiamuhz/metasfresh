@@ -17,7 +17,7 @@ import com.google.common.collect.ImmutableList;
  * 
  * To manipulate the the composites you shall use {@link #compose(ICalloutProvider, ICalloutProvider)}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

@@ -33,7 +33,7 @@ import de.metas.util.Services;
 /**
  * Document reposting handler for C_Invoice
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class InvoiceDocumentRepostingSupplier implements IDocumentRepostingSupplier

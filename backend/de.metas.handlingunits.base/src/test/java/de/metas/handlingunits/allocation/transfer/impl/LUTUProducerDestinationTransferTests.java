@@ -60,7 +60,7 @@ import de.metas.util.Services;
  * This test verifies the loader's behavior if quantities are transferred between HUs. It uses {@link HUTestHelper#transferMaterialToNewHUs(List, LUTUProducerDestination, BigDecimal, org.compiere.model.I_M_Product, org.compiere.model.I_C_UOM)}.
  * The reason it doesn't use the {@link HUSplitBuilder} has more moving parts (like running the BL in yet another IHUContextProcessor and destroying empty HUs) which are not relevant for these tests.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class LUTUProducerDestinationTransferTests

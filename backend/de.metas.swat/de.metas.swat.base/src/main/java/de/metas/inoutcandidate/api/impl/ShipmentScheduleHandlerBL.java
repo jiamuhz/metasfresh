@@ -73,7 +73,7 @@ import lombok.NonNull;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ShipmentScheduleHandlerBL implements IShipmentScheduleHandlerBL

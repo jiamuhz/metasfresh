@@ -38,7 +38,7 @@ import java.util.List;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Service
 public class ContractChangePriceQtyService

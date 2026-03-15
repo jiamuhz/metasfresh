@@ -56,7 +56,7 @@ import de.metas.util.Services;
 /**
  * This interceptor is responsible for reacting on DLM-related events by identifying the related records and scheduling them with {@link DLMPartitionerWorkpackageProcessor}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PartitionerInterceptor extends AbstractModelInterceptor

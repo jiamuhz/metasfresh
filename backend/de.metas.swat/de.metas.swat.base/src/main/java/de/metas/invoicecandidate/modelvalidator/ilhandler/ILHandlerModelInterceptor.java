@@ -41,7 +41,7 @@ import org.compiere.model.I_AD_Client;
 /**
  * Interceptor used to intercept invoice candidates relevant documents and manage their life cycle.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 @EqualsAndHashCode(callSuper = true)

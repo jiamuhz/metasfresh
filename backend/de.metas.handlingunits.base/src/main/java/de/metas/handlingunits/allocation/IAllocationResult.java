@@ -31,7 +31,7 @@ import de.metas.handlingunits.hutransaction.IHUTransactionCandidate;
 /**
  * Result of an {@link IAllocationRequest}
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IAllocationResult

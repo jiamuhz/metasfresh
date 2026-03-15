@@ -34,7 +34,7 @@ import de.metas.ui.web.window.datatypes.WindowId;
  * Implementations of this interface are responsible of storing {@link IView} references for a particular window ID identified by {@link #getWindowId()}.
  * 该接口实现者负责存储特定窗口相关的视图
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IViewsStorage4GivenWindow
 {

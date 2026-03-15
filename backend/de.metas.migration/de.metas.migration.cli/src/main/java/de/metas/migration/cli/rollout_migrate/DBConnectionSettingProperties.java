@@ -33,7 +33,7 @@ import lombok.AllArgsConstructor;
 /**
  * This class wraps the settings {@link Properties} and provides getters for the different parameters.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @AllArgsConstructor

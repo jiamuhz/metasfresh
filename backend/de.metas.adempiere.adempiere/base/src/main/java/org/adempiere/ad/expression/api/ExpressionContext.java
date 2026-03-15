@@ -27,7 +27,7 @@ import com.google.common.collect.ImmutableMap;
 /**
  * Context used to pass different options to {@link IExpressionCompiler} and not only.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class ExpressionContext

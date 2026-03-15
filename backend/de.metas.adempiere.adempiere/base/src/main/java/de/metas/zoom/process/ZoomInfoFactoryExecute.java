@@ -42,7 +42,7 @@ import de.metas.util.Services;
  * The relevant code contains {@link ILoggable#addLog(String, Object...)} calls that output timing info.
  * this way, we can use the process to diagnose zoom-to-performance-problems.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ZoomInfoFactoryExecute extends JavaProcess

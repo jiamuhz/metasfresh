@@ -64,7 +64,7 @@ import static de.metas.ui.web.handlingunits.WEBUI_HU_Constants.SYS_CONFIG_CLEARA
 /**
  * Collection of helper methods for building HU attributes layout, extracting widgetType etc.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @UtilityClass
 public final class HUEditorRowAttributesHelper

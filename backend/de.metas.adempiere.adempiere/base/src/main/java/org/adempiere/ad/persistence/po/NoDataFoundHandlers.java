@@ -42,7 +42,7 @@ import de.metas.logging.LogManager;
  * Singleton where {@link INoDataFoundHandler}s can be registered (see {@link #addHandler(INoDataFoundHandler)}) and invoked (see {@link #invokeHandlers(String, Object[], IContextAware)}).
  * Note that it's up to the caller to determine if the handlers actually need to be called.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class NoDataFoundHandlers

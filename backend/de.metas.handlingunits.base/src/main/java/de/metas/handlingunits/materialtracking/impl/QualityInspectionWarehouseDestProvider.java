@@ -40,7 +40,7 @@ import de.metas.util.Services;
 /**
  * Provides the destination warehouse based on ASI's {@link IHUMaterialTrackingBL#ATTRIBUTENAME_QualityInspectionCycle} attribute value.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class QualityInspectionWarehouseDestProvider implements IReceiptScheduleWarehouseDestProvider

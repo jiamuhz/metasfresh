@@ -27,7 +27,7 @@ import de.metas.util.ISingletonService;
 /**
  * {@link IFactAcctListener}s dispatcher.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IFactAcctListenersService extends ISingletonService

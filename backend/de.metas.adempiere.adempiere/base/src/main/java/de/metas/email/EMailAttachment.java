@@ -48,7 +48,7 @@ import lombok.NonNull;
 /**
  * EMail attachment.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * @see EMail#getAttachments()
  */
 @JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)

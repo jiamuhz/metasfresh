@@ -50,7 +50,7 @@ public interface ITrxItemExecutorBuilder<IT, RT>
 	/**
 	 * Used to specify what shall be done when processing a chunk failed. See {@link ITrxItemExecutorBuilder#setOnItemErrorPolicy(OnItemErrorPolicy)}.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 * task https://github.com/metasfresh/metasfresh/issues/302
 	 */
 	enum OnItemErrorPolicy

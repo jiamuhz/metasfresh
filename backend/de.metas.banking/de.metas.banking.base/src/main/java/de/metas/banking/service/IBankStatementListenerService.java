@@ -32,7 +32,7 @@ import lombok.NonNull;
 /**
  * {@link IBankStatementListener} factory service.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IBankStatementListenerService extends ISingletonService

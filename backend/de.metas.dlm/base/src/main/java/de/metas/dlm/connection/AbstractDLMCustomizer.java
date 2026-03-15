@@ -35,7 +35,7 @@ import de.metas.logging.LogManager;
 /**
  * Basic class for all DLM connection customizers. All DLM connection customizers have in common that they use {@link DLMConnectionUtils} to get and set the DLM related DB parameters for one DB connection.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public abstract class AbstractDLMCustomizer implements IConnectionCustomizer

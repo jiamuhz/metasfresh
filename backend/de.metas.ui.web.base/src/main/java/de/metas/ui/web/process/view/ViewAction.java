@@ -51,7 +51,7 @@ import de.metas.ui.web.window.datatypes.PanelLayoutType;
  * <li>{@link ResultAction} like "open included view", "open report" etc
  * </ul>
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Inherited

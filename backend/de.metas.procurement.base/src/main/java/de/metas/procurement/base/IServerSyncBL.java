@@ -49,7 +49,7 @@ import java.util.List;
  * </ul>
  *
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @AD_JavaClass(ignore = true)

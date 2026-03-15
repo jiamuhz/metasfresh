@@ -45,7 +45,7 @@ import de.metas.util.Services;
 
 /**
  * Low level (mainly about transaction handling) tests for  
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class TrxItemChunkProcessorExecutor_LowLevel_Test

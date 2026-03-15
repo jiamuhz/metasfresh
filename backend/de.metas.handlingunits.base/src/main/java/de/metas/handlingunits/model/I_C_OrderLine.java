@@ -29,7 +29,7 @@ import java.math.BigDecimal;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface I_C_OrderLine extends de.metas.interfaces.I_C_OrderLine

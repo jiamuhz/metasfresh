@@ -33,7 +33,7 @@ import lombok.NonNull;
 /**
  * This class loads {@link Properties} from a given file.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @AllArgsConstructor

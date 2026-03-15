@@ -33,7 +33,7 @@ import de.metas.util.StringUtils;
  *
  * Note: if this exception occurs, one might be able to run {@link AD_Table_CreatePK} to fix it.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class NoSingleKeyColumnException extends AdempiereException

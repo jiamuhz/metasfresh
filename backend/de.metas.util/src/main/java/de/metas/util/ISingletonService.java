@@ -29,7 +29,7 @@ package de.metas.util;
  * <p>
  * Also see {@link IMultitonService}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ISingletonService extends IService

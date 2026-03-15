@@ -34,7 +34,7 @@ import java.sql.Timestamp;
 /**
  * Helper class used to fill an empties InOut header.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class ReturnsInOutHeaderFiller
 {

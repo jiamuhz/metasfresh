@@ -27,7 +27,7 @@ import de.metas.util.ISingletonService;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * Task http://dewiki908/mediawiki/index.php/09557_Wrong_aggregation_on_OrderPOCreate_%28109614894753%29
  */
 public interface IC_Order_CreatePOFromSOsBL extends ISingletonService

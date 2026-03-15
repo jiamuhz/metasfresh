@@ -62,7 +62,7 @@ import java.util.Set;
 /**
  * Creates one purchase order from given candidates.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 /* package */ final class PurchaseOrderFromItemFactory
 {

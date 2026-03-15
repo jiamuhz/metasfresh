@@ -116,7 +116,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.getModelTranslationMap;
  * <p>
  * It is searching by product's Value, Name, UPC and partner's ProductNo.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * task https://github.com/metasfresh/metasfresh/issues/2484
  */
 @SuppressWarnings("OptionalUsedAsFieldOrParameterType")

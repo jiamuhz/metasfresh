@@ -27,7 +27,7 @@ import org.compiere.model.I_AD_Client;
 /**
  * Interface used to wrap a given persistent object in order to access document related fields.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface DocumentTableFields

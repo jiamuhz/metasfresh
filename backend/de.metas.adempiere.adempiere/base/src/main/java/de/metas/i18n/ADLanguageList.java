@@ -47,7 +47,7 @@ import java.util.Set;
 /**
  * Immutable object which contains languages {@link ValueNamePair}s and also the base AD_Language.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @EqualsAndHashCode(exclude = "_languageTagsByADLanguage")
 @ToString(exclude = "_languageTagsByADLanguage")

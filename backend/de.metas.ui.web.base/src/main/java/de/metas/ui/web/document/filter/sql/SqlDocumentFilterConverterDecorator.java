@@ -33,7 +33,7 @@ import de.metas.ui.web.window.datatypes.WindowId;
  * When a view is created for the implementor's {@link WindowId}, the "normal" {@link SqlDocumentFilterConverter} can be wrapped.<br>
  * It can later be called and its results be augmented.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * 
  * @task Extend framework to allow modification of standard filter results https://github.com/metasfresh/metasfresh-webui-api/issues/628
  */

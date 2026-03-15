@@ -47,7 +47,7 @@ import de.metas.util.Services;
  * Generic base class to expand using {@code AD_Table_ID} and {@code Record_ID}; can be extended for specific tables.
  * It is assumed that those tables have these two columns.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  * @param <T>
  */

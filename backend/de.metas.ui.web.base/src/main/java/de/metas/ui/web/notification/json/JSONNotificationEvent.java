@@ -53,7 +53,7 @@ import lombok.ToString;
  * }
  * </pre>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("serial")

@@ -47,7 +47,7 @@ import java.util.SortedSet;
  * against.
  *
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class GloballyOrderedScannerDecorator extends AbstractScriptDecoratorAdapter

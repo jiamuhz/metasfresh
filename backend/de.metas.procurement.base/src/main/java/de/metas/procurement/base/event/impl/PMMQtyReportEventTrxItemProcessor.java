@@ -58,7 +58,7 @@ import de.metas.common.util.CoalesceUtil;
 /**
  * Processes {@link I_PMM_QtyReport_Event}s and creates/updates {@link I_PMM_PurchaseCandidate}s.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 class PMMQtyReportEventTrxItemProcessor extends TrxItemProcessorAdapter<I_PMM_QtyReport_Event, Void>

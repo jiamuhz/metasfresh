@@ -33,7 +33,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
 /**
  * Window miscellaneous constants.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 // NOTE to dev: please keep this class in the root package (e.g. de.metas.ui.web.window) because at least the "logger" depends on this
 public final class WindowConstants

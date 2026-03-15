@@ -46,7 +46,7 @@ import lombok.NonNull;
 /**
  * An convenient user notification producer which allows APIs to easily notify about documents.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @param <ModelType>
  */

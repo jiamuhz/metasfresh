@@ -48,7 +48,7 @@ import de.metas.util.Check;
 /**
  * metasfresh-webui logging component.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Component

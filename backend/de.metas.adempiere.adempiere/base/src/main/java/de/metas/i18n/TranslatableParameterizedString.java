@@ -41,7 +41,7 @@ import com.google.common.base.MoreObjects;
  * <li>string to be used for any other language. This string can contain a parameter which will be replaced with actual AD_Language when returned
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public abstract class TranslatableParameterizedString

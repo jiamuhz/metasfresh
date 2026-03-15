@@ -35,7 +35,7 @@ import de.metas.util.Services;
 /**
  * Close {@link I_C_RfQResponse}s of given {@link I_C_RfQ}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class C_RfQ_CloseResults extends JavaProcess implements IProcessPrecondition

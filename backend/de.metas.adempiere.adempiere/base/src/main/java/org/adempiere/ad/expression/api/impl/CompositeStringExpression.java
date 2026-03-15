@@ -59,7 +59,7 @@ import java.util.stream.Collectors;
  *
  * It has a powerful builder which is able to also reduce expressions.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @Immutable

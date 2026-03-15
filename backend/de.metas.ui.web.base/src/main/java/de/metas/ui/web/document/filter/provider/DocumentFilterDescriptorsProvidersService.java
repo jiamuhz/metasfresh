@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * {@link DocumentFilterDescriptorsProvider}s factory.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Service

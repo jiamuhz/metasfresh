@@ -34,7 +34,7 @@ import com.google.common.base.MoreObjects;
  * A copy of that wrapped item can be obtained via {@link #createNewState()}.<br>
  * Changes can be made to this this copy incrementally, and can then be "flushed" onto the original wrapped instance by calling {@link #commit(IPackingItem)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @see TransactionalPackingItemSupport
  */
 final class TransactionalPackingItem extends ForwardingPackingItem

@@ -38,7 +38,7 @@ import lombok.ToString;
 /**
  * All {@link ViewActionDescriptor}s for a view class.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ToString

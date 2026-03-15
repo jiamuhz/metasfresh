@@ -34,7 +34,7 @@ import java.util.Set;
 /**
  * Static utility methods for {@link INamePairPredicate}s.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class NamePairPredicates

@@ -10,7 +10,7 @@ import de.metas.util.ISingletonService;
 /**
  * Implementors assign a pre-existing TU to a pre-existing LU.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IHUJoinBL extends ISingletonService

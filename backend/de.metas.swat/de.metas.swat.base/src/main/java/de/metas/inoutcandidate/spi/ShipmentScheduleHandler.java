@@ -73,7 +73,7 @@ import lombok.Value;
  *
  * Interface methods should only be called by the {@link IShipmentScheduleHandlerBL} implementation.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public abstract class ShipmentScheduleHandler
 {

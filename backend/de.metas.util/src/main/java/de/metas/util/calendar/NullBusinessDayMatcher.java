@@ -27,7 +27,7 @@ import java.time.LocalDate;
 /**
  * {@link IBusinessDayMatcher} implementation which considers each day as a working/business day.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class NullBusinessDayMatcher implements IBusinessDayMatcher

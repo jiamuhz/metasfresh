@@ -27,7 +27,7 @@ import de.metas.util.Check;
 /**
  * Exception thrown where C_TaxCategory_ID was not found for a given document line.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("serial")

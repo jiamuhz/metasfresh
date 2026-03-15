@@ -40,7 +40,7 @@ import javax.annotation.OverridingMethodsMustInvokeSuper;
  * Send by the material planner when it came up with a brilliant distribution plan that could be turned into an {@link I_PP_Order}<br>
  * <b>or</or> if a ddOrder was actually created.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @EqualsAndHashCode(callSuper = false)
 @Getter

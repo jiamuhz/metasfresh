@@ -35,7 +35,7 @@ import de.metas.util.StringUtils;
 /**
  * {@link Event}'s message formatter template.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("serial")

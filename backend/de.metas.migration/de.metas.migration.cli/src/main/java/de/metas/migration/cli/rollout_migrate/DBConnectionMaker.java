@@ -32,7 +32,7 @@ import lombok.NonNull;
 /**
  * This class creates {@link IDatabase} instances.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @AllArgsConstructor

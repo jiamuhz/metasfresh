@@ -49,7 +49,7 @@ import java.util.function.Supplier;
 /**
  * Class to retrieve the rows shown in {@link PackageableView}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Component

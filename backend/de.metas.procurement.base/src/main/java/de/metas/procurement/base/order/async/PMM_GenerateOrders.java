@@ -35,7 +35,7 @@ import java.util.List;
 /**
  * Generates purchase orders from {@link I_PMM_PurchaseCandidate} by invoking {@link OrdersGenerator}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class PMM_GenerateOrders extends WorkpackageProcessorAdapter
 {

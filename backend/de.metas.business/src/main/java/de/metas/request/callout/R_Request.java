@@ -48,7 +48,7 @@ import de.metas.util.Services;
 /**
  *
  * @author based on original org.compiere.model.CalloutRequest class developed by: Jorg Janke
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @Callout(I_R_Request.class)

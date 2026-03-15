@@ -42,7 +42,7 @@ import javax.annotation.Nullable;
 /**
  * Manufacturing cost collector callout
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @author based on initial version developed by Victor Perez, Teo Sarca under ADempiere project
  */
 @Callout(I_PP_Cost_Collector.class)

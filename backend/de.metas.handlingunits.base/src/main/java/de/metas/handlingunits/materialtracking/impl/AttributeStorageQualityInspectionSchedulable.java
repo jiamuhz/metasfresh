@@ -40,7 +40,7 @@ import de.metas.util.Services;
 /**
  * {@link IQualityInspectionSchedulable} which wraps an {@link IAttributeStorage}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 class AttributeStorageQualityInspectionSchedulable implements IQualityInspectionSchedulable

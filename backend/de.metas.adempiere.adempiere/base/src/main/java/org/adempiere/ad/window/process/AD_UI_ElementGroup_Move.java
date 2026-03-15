@@ -35,7 +35,7 @@ import de.metas.process.JavaProcess;
 /**
  * Helper process to move an {@link I_AD_UI_ElementGroup} to another {@link I_AD_UI_Column}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class AD_UI_ElementGroup_Move extends JavaProcess

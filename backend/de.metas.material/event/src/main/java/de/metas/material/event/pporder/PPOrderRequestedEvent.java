@@ -38,7 +38,7 @@ import java.time.Instant;
  * <b>Important: right now, any {@link PPOrderLine}s are ignored</b>. The receiver of this event will mostly use
  * the event's {@link PPOrder}'s {@link PPOrder#getProductPlanningId()} to create the @{code PP_Order}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Value

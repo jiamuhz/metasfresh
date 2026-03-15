@@ -35,7 +35,7 @@ import de.metas.util.Check;
  * <p>
  * Use {@link org.adempiere.ad.trx.processor.api.ITrxItemExecutorBuilder#setItemsPerBatch(int)} in order to get an instance.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  * @param <IT> item type
  * @param <RT> result type

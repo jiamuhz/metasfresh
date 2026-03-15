@@ -37,7 +37,7 @@ import java.util.Optional;
 /**
  * Uom-based capacity definition for all sorts of containers.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @EqualsAndHashCode(exclude = "uom")
 public final class Capacity

@@ -31,7 +31,7 @@ import java.util.Set;
  * Customize the available DocActions for given document.
  * Just annotate implementations with spring's {@link Component} they will be automatically discovered.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IDocActionOptionsCustomizer

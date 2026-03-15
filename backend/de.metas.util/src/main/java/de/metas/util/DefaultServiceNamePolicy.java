@@ -27,7 +27,7 @@ package de.metas.util;
  * For a given {@link IService} class, it returns a service implementation class name that is similar to the interface's class name, but sits in an <code>impl</code> package.<br>
  * Check out the code for details
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class DefaultServiceNamePolicy implements IServiceNameAutoDetectPolicy

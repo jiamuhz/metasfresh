@@ -60,7 +60,7 @@ import lombok.ToString;
  * <p>
  * <b>Important:</b> this listener does nothing, unless the given request's {@link MTLinkRequest#getParams()} has {@link HUConstants#PARAM_CHANGE_HU_MAterial_Tracking_ID} <code>=true</code>.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task http://dewiki908/mediawiki/index.php/09106_Material-Vorgangs-ID_nachtr%C3%A4glich_erfassen_%28101556035702%29
  */
 @ToString

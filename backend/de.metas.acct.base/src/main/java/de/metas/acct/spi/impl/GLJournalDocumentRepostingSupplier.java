@@ -33,7 +33,7 @@ import de.metas.util.Services;
 /**
  * Document reposting handler for GL_Journal
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class GLJournalDocumentRepostingSupplier implements IDocumentRepostingSupplier

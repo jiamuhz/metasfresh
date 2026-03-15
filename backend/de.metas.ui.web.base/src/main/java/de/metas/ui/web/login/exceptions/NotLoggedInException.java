@@ -31,7 +31,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * 
  * IMPORTANT: this exception shall be mapped to HTTP 401 Unauthorized instead of 403 Forbidden. Webui frontend relies on that!
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("serial")

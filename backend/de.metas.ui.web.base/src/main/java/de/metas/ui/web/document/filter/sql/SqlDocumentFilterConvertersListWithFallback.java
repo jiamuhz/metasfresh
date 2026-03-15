@@ -30,7 +30,7 @@ import lombok.ToString;
 /**
  * Composite {@link SqlDocumentFilterConverter} implementation which internally uses a converters list and a default converter.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @ToString

@@ -40,7 +40,7 @@ import java.util.List;
 /**
  * Return the selected HUs back to vendor.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * Initial task https://github.com/metasfresh/metasfresh-webui-api/issues/396
  */
 public class WEBUI_M_HU_ReturnToVendor extends HUEditorProcessTemplate implements IProcessPrecondition

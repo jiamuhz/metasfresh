@@ -36,7 +36,7 @@ import java.time.temporal.Temporal;
 /**
  * Exception thrown when there was no currency rate found.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class NoCurrencyRateFoundException extends AdempiereException
 {

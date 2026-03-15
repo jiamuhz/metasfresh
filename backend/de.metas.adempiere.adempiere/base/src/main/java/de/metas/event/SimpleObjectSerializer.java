@@ -34,7 +34,7 @@ import de.metas.JsonObjectMapperHolder;
  * Simple json serializer/deserializer that can be used when a whole object is to be send as an {@link Event}'s property.<br>
  * See the {@code metasfresh-material-event} module for usage examples.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @deprecated Please use {@code de.metas.util.JSONObjectMapper} instead.
  */

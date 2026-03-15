@@ -29,7 +29,7 @@ import lombok.experimental.UtilityClass;
 /**
  * Static methods to create and manipulate {@link SqlDocumentFilterConverter} instances.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @UtilityClass
 public final class SqlDocumentFilterConverters

@@ -67,7 +67,7 @@ import java.util.stream.Stream;
 /**
  * Factory methods to create specific {@link DocumentFieldValueLoader} instances.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public final class DocumentFieldValueLoaders
 {

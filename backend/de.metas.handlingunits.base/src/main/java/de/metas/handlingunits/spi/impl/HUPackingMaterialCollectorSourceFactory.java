@@ -35,7 +35,7 @@ import lombok.experimental.UtilityClass;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  * 
  * Serves as source for HUPackingMaterialCollector.
  * Must be a document line ( at leas for now).

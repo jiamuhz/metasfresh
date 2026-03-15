@@ -31,7 +31,7 @@ import org.slf4j.Logger;
 /**
  * {@link ITabCallout} wrapper which catches all exceptions and just log them.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Deprecated
 //TODO: Remove this class and it's usages

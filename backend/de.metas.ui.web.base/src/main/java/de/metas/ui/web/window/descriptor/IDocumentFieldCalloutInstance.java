@@ -31,7 +31,7 @@ import org.adempiere.ad.callout.api.ICalloutInstance;
 /**
  * Document field callout: an {@link ICalloutField} implementation which also provides the field names for which this callout shall be triggered.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface IDocumentFieldCalloutInstance extends ICalloutInstance

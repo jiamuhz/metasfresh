@@ -40,7 +40,7 @@ import lombok.NonNull;
 /**
  * Allocation result that be created as an empty one and then can be altered by the code which dioes the allocating.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 /* package */class MutableAllocationResult extends AbstractAllocationResult implements IMutableAllocationResult

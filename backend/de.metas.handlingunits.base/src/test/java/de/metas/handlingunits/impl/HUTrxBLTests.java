@@ -51,7 +51,7 @@ import de.metas.util.Services;
 /**
  * These aren't really "unit" tests, but they all start by invoking stuff from {@link HUTrxBL}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class HUTrxBLTests

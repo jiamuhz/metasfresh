@@ -39,7 +39,7 @@ import lombok.Value;
 /**
  * Request for creating a new process instance.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @Value

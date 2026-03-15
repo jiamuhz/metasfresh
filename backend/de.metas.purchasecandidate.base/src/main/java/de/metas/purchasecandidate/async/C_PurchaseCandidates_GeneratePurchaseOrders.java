@@ -64,7 +64,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.loadByIds;
  * <p>
  * Also, {@link #enqueue(Collection)} method is used to enqueue purchase candidates.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class C_PurchaseCandidates_GeneratePurchaseOrders extends WorkpackageProcessorAdapter
 {

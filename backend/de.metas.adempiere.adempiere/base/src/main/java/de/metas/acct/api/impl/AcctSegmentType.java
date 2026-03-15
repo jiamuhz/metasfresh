@@ -29,7 +29,7 @@ import org.compiere.model.X_C_AcctSchema_Element;
 /**
  * Accounting segment type
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public enum AcctSegmentType
 {

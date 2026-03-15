@@ -11,7 +11,7 @@ import java.util.Objects;
 import java.util.stream.Stream;
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public enum DocTimingType implements TimingType
 {

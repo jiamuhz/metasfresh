@@ -73,7 +73,7 @@ import java.util.TreeMap;
 /**
  * {@link MaterialTrackingDocuments}'s pricing informations
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 /* package */final class MaterialTrackingDocumentsPricingInfo
 {

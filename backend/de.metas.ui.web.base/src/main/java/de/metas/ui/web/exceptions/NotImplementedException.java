@@ -35,7 +35,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * <li>usually "A 501 response is cacheable by default; i.e., unless otherwise indicated by the method definition or explicit cache controls", see https://tools.ietf.org/html/rfc7231#section-6.6.2
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @SuppressWarnings("serial")
 @ResponseStatus(code = HttpStatus.NOT_IMPLEMENTED)

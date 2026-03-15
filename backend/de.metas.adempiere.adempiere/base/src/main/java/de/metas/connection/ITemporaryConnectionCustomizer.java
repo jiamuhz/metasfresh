@@ -25,7 +25,7 @@ package de.metas.connection;
 /**
  * A temporary customizer. See {@link IConnectionCustomizerService#registerTemporaryCustomizer(ITemporaryConnectionCustomizer)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ITemporaryConnectionCustomizer extends IConnectionCustomizer

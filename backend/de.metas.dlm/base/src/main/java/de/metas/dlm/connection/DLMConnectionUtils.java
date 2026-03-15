@@ -32,7 +32,7 @@ import de.metas.util.Check;
 /**
  * This utils class makes the actual DB calls for getting and setting DLM parameters from the DB.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 /* package */ class DLMConnectionUtils

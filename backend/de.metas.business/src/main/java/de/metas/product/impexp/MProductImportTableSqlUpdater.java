@@ -44,7 +44,7 @@ import static de.metas.impexp.format.ImportTableDescriptor.COLUMNNAME_I_IsImport
  * A helper class for {@link ProductImportProcess} that performs the "dirty" but efficient SQL updates on the {@link I_I_Product} table.
  * Those updates complements the data from existing metasfresh records and flag those import records that can't yet be imported.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class MProductImportTableSqlUpdater
 {

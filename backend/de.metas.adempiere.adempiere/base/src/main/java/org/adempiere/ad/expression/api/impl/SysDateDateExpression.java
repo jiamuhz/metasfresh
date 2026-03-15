@@ -37,7 +37,7 @@ import com.google.common.collect.ImmutableSet;
 /**
  * Expression which evaluates to {@link de.metas.common.util.time.SystemTime#asDate()}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class SysDateDateExpression implements IExpression<java.util.Date>

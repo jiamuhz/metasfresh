@@ -53,7 +53,7 @@ import java.util.Set;
 /**
  * Creates or updates inventory lines for
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class DraftInventoryLinesCreator
 {

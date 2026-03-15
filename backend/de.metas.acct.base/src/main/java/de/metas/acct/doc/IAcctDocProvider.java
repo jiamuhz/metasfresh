@@ -38,7 +38,7 @@ import de.metas.acct.api.AcctSchema;
  * 
  * Instead of implementing this interface, consider extending {@link AcctDocProviderTemplate}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IAcctDocProvider

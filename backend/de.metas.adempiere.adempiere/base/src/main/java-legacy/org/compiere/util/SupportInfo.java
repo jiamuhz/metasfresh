@@ -42,7 +42,7 @@ import de.metas.util.Services;
 /**
  * Helper class to provide technical support informations.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class SupportInfo

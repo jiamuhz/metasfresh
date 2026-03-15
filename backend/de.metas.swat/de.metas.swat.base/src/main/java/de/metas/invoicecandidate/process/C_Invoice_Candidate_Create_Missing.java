@@ -43,7 +43,7 @@ import de.metas.process.JavaProcess;
 /**
  * Creates missing invoice candidates. Note that the method {@link #retrieveHandlers()} can be overridden.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class C_Invoice_Candidate_Create_Missing extends JavaProcess

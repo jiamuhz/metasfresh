@@ -68,7 +68,7 @@ import java.util.Properties;
  *
  * NOTE: This is basically a reimplementation of the class <code>org.compiere.util.EMail</code> which was authored (according to the javadoc) by author Joerg Janke.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @SuppressWarnings("serial")
 @JsonAutoDetect(getterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)

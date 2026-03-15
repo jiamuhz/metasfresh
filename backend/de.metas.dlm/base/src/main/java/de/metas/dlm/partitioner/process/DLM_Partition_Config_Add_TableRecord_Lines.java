@@ -42,7 +42,7 @@ import de.metas.util.Services;
  * For a given config, this process checks its lines and adds additional lines for tables
  * that references the existing lines via <code>*Table_ID</code> and <code>*Record_ID</code> columns.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class DLM_Partition_Config_Add_TableRecord_Lines extends JavaProcess

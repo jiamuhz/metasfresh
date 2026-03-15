@@ -45,7 +45,7 @@ import java.util.Iterator;
 /**
  * Updates selected {@link I_PMM_PurchaseCandidate} prices.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://metasfresh.atlassian.net/browse/FRESH-202
  */
 public class PMM_Purchase_Candidate_UpdatePricing extends JavaProcess

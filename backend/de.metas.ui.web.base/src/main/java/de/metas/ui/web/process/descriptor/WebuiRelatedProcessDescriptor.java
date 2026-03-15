@@ -49,7 +49,7 @@ import java.util.function.Supplier;
  * <p>
  * NOTE: this is a short living object and it shall not be cached
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @ToString
 public final class WebuiRelatedProcessDescriptor

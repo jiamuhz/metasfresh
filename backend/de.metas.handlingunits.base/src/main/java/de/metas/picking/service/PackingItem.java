@@ -27,7 +27,7 @@ import java.util.function.Predicate;
 /**
  * Item to be packed.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 final class PackingItem implements IPackingItem

@@ -32,7 +32,7 @@ import de.metas.inoutcandidate.model.I_M_ShipmentSchedule;
  * <p>
  * Please annotate your implementations also with {@link Component} to enable auto detection.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ShipmentScheduleReferencedLineProvider

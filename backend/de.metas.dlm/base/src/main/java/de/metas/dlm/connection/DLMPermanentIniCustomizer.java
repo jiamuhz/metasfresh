@@ -30,7 +30,7 @@ import de.metas.util.Check;
 /**
  * Customizes the connection using {@link Ini}, but invokes  {@link DLMPermanentSysConfigCustomizer} in case the {@link Ini} does not yet have such a setting.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

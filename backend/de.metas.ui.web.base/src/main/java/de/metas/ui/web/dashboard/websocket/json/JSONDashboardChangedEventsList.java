@@ -33,7 +33,7 @@ import lombok.Value;
 /**
  * Dashboard changed events collection to be sent via websocket.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 @Value

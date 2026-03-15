@@ -32,7 +32,7 @@ import org.compiere.SpringContextHolder;
  * Reset the {@link I_MD_Stock} table.
  * May be run in parallel to "normal" production stock changes.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class MD_Stock_Update_From_M_HUs extends JavaProcess
 {

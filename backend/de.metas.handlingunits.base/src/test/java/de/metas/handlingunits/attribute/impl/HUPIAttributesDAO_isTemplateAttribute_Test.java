@@ -41,7 +41,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 /**
  * Tests for {@link HUPIAttributesDAO#isTemplateAttribute(I_M_HU_PI_Attribute)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class HUPIAttributesDAO_isTemplateAttribute_Test extends AbstractHUTest
 {

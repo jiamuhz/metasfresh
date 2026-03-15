@@ -29,7 +29,7 @@ import de.metas.email.EMailSentStatus;
 /**
  * Exception thrown when an email could not be sent.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class EMailSendException extends AdempiereException

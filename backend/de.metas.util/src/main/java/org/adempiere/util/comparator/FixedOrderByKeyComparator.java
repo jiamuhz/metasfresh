@@ -34,7 +34,7 @@ import java.util.function.Function;
 /**
  * Like {@link FixedOrderComparator} but it uses a <code>keyMapper</code> to extract the sorting keys.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @param <V> comparing value type
  * @param <K> key type

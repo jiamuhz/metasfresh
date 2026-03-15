@@ -40,7 +40,7 @@ import de.metas.util.Check;
  * <p>
  * This is basically a reimplementation of the class of <code>org.compiere.util.EMailAuthenticator</code> which was authored (according to the javadoc) by Joerg Janke
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("serial")

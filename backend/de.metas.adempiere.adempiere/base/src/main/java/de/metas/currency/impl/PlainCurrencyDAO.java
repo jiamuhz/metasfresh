@@ -61,7 +61,7 @@ import lombok.NonNull;
 /**
  * Plain {@link ICurrencyDAO} implementation, exclusively to be used for testing.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PlainCurrencyDAO extends CurrencyDAO

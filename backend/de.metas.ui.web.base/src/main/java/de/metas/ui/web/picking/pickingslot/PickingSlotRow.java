@@ -64,7 +64,7 @@ import java.util.stream.Stream;
 /**
  * Rows shown in {@link PickingSlotView}. One row can represent a picking slot, a TU or a picked good (CU).
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @ToString

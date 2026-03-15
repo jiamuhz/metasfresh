@@ -38,7 +38,7 @@ import lombok.NonNull;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Repository

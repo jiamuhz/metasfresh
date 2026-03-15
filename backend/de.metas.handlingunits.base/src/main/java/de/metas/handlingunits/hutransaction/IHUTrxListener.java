@@ -38,7 +38,7 @@ import de.metas.handlingunits.model.I_M_HU_Trx_Line;
 /**
  * Implementors can be registered using {@link IHUTrxBL#addListener(IHUTrxListener)} or to the {@link CompositeHUTrxListener} instance returned by {@link IHUContext#getTrxListeners()}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IHUTrxListener

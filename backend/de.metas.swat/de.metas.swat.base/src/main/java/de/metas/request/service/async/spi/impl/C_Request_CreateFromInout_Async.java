@@ -76,7 +76,7 @@ public class C_Request_CreateFromInout_Async extends WorkpackageProcessorAdapter
 	 * Class to keep information about the inout lines with quality issues (Quality Discount Percent).
 	 * This model will be used ion the
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 */
 	private static final class InOutLineWithQualityIssues
 	{

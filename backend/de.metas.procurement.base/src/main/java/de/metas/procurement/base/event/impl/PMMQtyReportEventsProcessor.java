@@ -38,7 +38,7 @@ import de.metas.util.Services;
  * Process {@link I_PMM_QtyReport_Event}s and creates/updates {@link I_PMM_PurchaseCandidate}s.<br>
  * The actual work is done by {@link PMMQtyReportEventTrxItemProcessor}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PMMQtyReportEventsProcessor

@@ -56,7 +56,7 @@ import java.util.List;
 /**
  * Reverse the receipts which contain the selected HUs.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Profile(value = Profiles.PROFILE_Webui)
 public class WEBUI_M_HU_ReverseReceipt extends WEBUI_M_HU_Receipt_Base implements IProcessPrecondition

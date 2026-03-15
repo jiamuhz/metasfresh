@@ -45,7 +45,7 @@ import de.metas.dlm.partitioner.config.PartitionConfig;
 /**
  * A partition is a set of {@link IDLMAware} records that can be DLM'ed. Each an {@link IDLMAware} is only part of one partition.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

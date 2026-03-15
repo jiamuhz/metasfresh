@@ -49,7 +49,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.create;
 /**
  * Handles {@link I_C_Order}s. Mainly all invoice candidates creation logic is delegated to {@link C_OrderLine_Handler}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class C_Order_Handler extends AbstractInvoiceCandidateHandler

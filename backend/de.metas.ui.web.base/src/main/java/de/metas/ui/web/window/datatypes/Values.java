@@ -52,7 +52,7 @@ import lombok.experimental.UtilityClass;
 /**
  * Misc JSON values converters.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

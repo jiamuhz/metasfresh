@@ -30,7 +30,7 @@ import org.springframework.stereotype.Component;
 /**
  * Cleans up stale <code>C_Invoice_Candidate_Recompute</code> records that might prevent ICs from getting updated.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @implSpec https://github.com/metasfresh/metasfresh/issues/251
  */

@@ -34,7 +34,7 @@ import lombok.ToString;
 /**
  * Request for generating invoice candidates.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ToString

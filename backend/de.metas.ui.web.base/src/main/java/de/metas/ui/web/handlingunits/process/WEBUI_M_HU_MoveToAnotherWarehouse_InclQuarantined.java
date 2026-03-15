@@ -30,7 +30,7 @@ import java.util.List;
  * #2144
  * HU editor: Move selected HUs to another warehouse
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * <p>
  * This process is completely similar with the basic structure for HU moving process.
  */

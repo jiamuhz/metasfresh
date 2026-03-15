@@ -15,7 +15,7 @@ import lombok.NonNull;
 /**
  * This is the tool's "main" class. To learn about the tool's command line parameters etc, check out {@link CommandlineParams}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @AllArgsConstructor
 class RolloutMigrate

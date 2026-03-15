@@ -44,7 +44,7 @@ import java.util.Properties;
 /**
  * Login context for {@link Login}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @SuppressWarnings("SameParameterValue")
 @Getter

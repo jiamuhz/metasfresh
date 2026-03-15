@@ -64,7 +64,7 @@ import java.util.List;
 /**
  * contains common code of the two fine picking process classes that we have.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 /* package */abstract class WEBUI_Picking_With_M_Source_HU_Base extends PickingSlotViewBasedProcess

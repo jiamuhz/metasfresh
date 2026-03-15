@@ -51,7 +51,7 @@ import java.util.stream.Stream;
 /**
  * {@link Evaluatee} convenient factories.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public final class Evaluatees
 {
@@ -161,7 +161,7 @@ public final class Evaluatees
 	/**
 	 * Map
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 */
 	private static final class MapEvaluatee implements Evaluatee2
 	{
@@ -324,7 +324,7 @@ public final class Evaluatees
 	/**
 	 * Composite
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 */
 	@VisibleForTesting
 	@lombok.ToString

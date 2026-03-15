@@ -40,7 +40,7 @@ import de.metas.ui.web.window.model.IDocumentChangesCollector.ReasonSupplier;
  * <li>starting the process
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IProcessInstanceController

@@ -39,7 +39,7 @@ import de.metas.email.mailboxes.Mailbox;
 /**
  * Tests if {@link EMail} related objects are JSON serializable.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class EMailJsonTest

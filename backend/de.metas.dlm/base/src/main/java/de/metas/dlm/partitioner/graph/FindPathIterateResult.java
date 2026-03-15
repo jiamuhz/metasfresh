@@ -48,7 +48,7 @@ import de.metas.dlm.partitioner.process.DLM_FindPathBetweenRecords;
  *
  * @see DLM_FindPathBetweenRecords
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class FindPathIterateResult implements IIterateResult

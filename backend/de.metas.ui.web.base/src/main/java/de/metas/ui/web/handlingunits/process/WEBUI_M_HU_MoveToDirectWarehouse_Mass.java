@@ -46,7 +46,7 @@ import de.metas.util.Services;
 /**
  * HU Editor: Move selected HUs to direct warehouse (aka Materialentnahme)
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class WEBUI_M_HU_MoveToDirectWarehouse_Mass extends HUEditorProcessTemplate

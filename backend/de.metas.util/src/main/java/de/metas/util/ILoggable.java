@@ -30,7 +30,7 @@ import org.adempiere.util.lang.ITableRecordReference;
  * <p>
  * NOTE: The signature of this interface {@link #addLog(String, Object...)} method is chosen so that all classes like de.metas.process.JavaProcess subclasses can implement it without further code changes.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface ILoggable
 {

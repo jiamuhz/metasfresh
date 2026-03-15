@@ -40,7 +40,7 @@ import de.metas.util.Check;
 /**
  * Specialized {@link IStringExpression} which wraps one {@link CtxName} parameter.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @JsonSerialize(using = JsonStringExpressionSerializer.class)

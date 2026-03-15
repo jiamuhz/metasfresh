@@ -48,7 +48,7 @@ import de.metas.logging.MetasfreshLastError;
 /**
  * Misc utils
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * @deprecated This class is scheduled to be removed
  */
 @Deprecated

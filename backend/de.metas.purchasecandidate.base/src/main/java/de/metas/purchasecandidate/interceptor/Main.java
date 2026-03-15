@@ -28,7 +28,7 @@ import org.adempiere.ad.modelvalidator.IModelValidationEngine;
 /**
  * Module activator
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class Main extends AbstractModuleInterceptor

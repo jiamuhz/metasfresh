@@ -37,7 +37,7 @@ import java.util.function.Predicate;
 /**
  * You can obtain an instance via {@link PackingItems#newPackingItem(java.util.Map)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IPackingItem

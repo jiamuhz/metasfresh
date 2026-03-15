@@ -35,7 +35,7 @@ import lombok.Value;
  * See https://github.com/metasfresh/metasfresh/issues/4403 for a use case.
  * Note that without this approach, issue #4403 would probably have been implemented in the form of one large piece of spaghetti code.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public interface RelatedRecordsProvider
 {

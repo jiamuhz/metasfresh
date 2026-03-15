@@ -30,7 +30,7 @@ import lombok.NonNull;
  * Extracts a {@link ProductDescriptor} from a given ASI-aware model.
  * There is a subclass in metasfresh-material-dispo-commons that is injected at runtime and that has a working implementation for {@link #createProductDescriptor(Object)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ModelProductDescriptorExtractor

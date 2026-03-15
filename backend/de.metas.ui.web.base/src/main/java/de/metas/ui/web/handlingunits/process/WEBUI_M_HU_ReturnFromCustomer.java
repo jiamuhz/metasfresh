@@ -42,7 +42,7 @@ import org.compiere.SpringContextHolder;
 /**
  * Return the selected HUs back to customer.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task initial task https://github.com/metasfresh/metasfresh/issues/1306
  */
 public class WEBUI_M_HU_ReturnFromCustomer extends HUEditorProcessTemplate implements IProcessPrecondition

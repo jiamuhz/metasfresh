@@ -43,7 +43,7 @@ import java.util.List;
  * A dedicated model interceptor whose job it is to fire events on the {@link MetasfreshEventBusService}.<br>
  * I add this into a dedicated interceptor (as opposed to adding the method to {@link DD_Order}) because there is at least one test case where I want {@link PP_Order} to be invoked without events being fired.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Interceptor(I_DD_Order.class)
 @Component

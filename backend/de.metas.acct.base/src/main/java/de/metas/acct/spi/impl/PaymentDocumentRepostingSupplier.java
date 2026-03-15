@@ -33,7 +33,7 @@ import de.metas.util.Services;
 /**
  * Document reposting handler for C_Payment
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PaymentDocumentRepostingSupplier implements IDocumentRepostingSupplier

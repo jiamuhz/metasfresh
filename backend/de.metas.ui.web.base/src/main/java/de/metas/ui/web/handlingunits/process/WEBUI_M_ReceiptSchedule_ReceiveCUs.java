@@ -48,7 +48,7 @@ import java.util.stream.Stream;
  * <p>
  * It creates one VHU for each receipt schedule, using it's remaining quantity to move.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * https://github.com/metasfresh/metasfresh-webui/issues/182
  */
 @Profile(Profiles.PROFILE_Webui)

@@ -34,7 +34,7 @@ import org.compiere.model.I_M_Replenish;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

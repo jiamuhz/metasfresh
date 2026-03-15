@@ -7,7 +7,7 @@ import de.metas.util.Check;
 /**
  * Generates Java code for AD_Ref_List items.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ADRefListGenerator

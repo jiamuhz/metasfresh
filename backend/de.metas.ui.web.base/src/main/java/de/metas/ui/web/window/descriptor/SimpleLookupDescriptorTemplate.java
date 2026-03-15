@@ -37,7 +37,7 @@ import java.util.Set;
 /**
  * Simple template implementation of {@link LookupDescriptor} and {@link LookupDataSourceFetcher}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public abstract class SimpleLookupDescriptorTemplate implements LookupDescriptor, LookupDataSourceFetcher
 {

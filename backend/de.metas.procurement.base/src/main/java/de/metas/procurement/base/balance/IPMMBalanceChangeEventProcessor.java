@@ -29,7 +29,7 @@ import de.metas.util.ISingletonService;
 /**
  * Service used to process PMM_Balance various change events and update the {@link I_PMM_Balance} records.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IPMMBalanceChangeEventProcessor extends ISingletonService

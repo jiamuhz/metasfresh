@@ -41,7 +41,7 @@ import lombok.ToString;
 /**
  * Note that we exclude {@link #getLines()} from {@link #toString()}, {@link #equals(Object)} and {@link #hashCode()} to avoid a {@link StackOverflowError}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Data

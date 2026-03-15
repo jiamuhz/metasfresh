@@ -30,7 +30,7 @@ import de.metas.process.RunOutOfTrx;
 /**
  * Generate primary key column for a given table.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class AD_Table_CreatePK extends JavaProcess

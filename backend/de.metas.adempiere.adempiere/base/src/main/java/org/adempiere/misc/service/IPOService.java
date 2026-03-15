@@ -7,7 +7,7 @@ import de.metas.util.ISingletonService;
 
 /**
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * @deprecated this service is deprecated <b>big time</b>. Please use {@link InterfaceWrapperHelper} instead.
  */
 @Deprecated

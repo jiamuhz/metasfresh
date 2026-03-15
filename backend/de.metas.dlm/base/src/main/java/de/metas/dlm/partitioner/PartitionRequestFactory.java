@@ -39,7 +39,7 @@ import de.metas.util.Check;
 /**
  * Factory for requests that can be passed as parameters to the {@link IPartitionerService} and {@link DLMPartitionerWorkpackageProcessor}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("rawtypes")
@@ -79,7 +79,7 @@ public class PartitionRequestFactory
 
 	/**
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 *
 	 * @param <T> actual type of this builder. Used such that if this builder is an AsyncPartitionerRequestBuilder, then e.g.
 	 *            {@link #setConfig(PartitionConfig)} shall return not {@link PartitionerRequestBuilder}, but {@link AsyncPartitionerRequestBuilder}
@@ -214,7 +214,7 @@ public class PartitionRequestFactory
 	/**
 	 * Passed to {@link IPartitionerService#createPartition(CreatePartitionRequest)} to create another partition.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 *
 	 */
 	@Immutable
@@ -225,7 +225,7 @@ public class PartitionRequestFactory
 		 * <p>
 		 * Note: <code>IGNORE</code> is not an option, because if we don't handle the record, there could be FK-references between records that have different DLM levels
 		 *
-		 * @author metas-dev <dev@metasfresh.com>
+		 *
 		 *
 		 */
 		public enum OnNotDLMTable
@@ -311,7 +311,7 @@ public class PartitionRequestFactory
 	 * Passed to {@link DLMPartitionerWorkpackageProcessor#schedule(CreatePartitionAsyncRequest, int)} to create a workpackage to invoke {@link IPartitionerService#createPartition(CreatePartitionRequest)} asynchronously.
 	 * The additional members of this class tell the work package processor if it shall enqueue another workpackage after it did its job.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 *
 	 */
 	@Immutable

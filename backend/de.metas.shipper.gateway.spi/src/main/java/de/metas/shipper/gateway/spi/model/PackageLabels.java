@@ -39,7 +39,7 @@ import lombok.Value;
 /**
  * Labels for one package.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Value

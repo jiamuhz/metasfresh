@@ -67,7 +67,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.saveRecord;
 /**
  * *
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 
 public class FlatrateTermDataFactory

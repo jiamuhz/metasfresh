@@ -34,7 +34,7 @@ import de.metas.util.Services;
  * 
  * Document reposting handler for C_Allocation_Hdr
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class AllocationHdrDocumentRepostingSupplier implements IDocumentRepostingSupplier

@@ -32,7 +32,7 @@ import org.compiere.model.I_AD_Archive;
 /**
  * Can be called from different places to "inform" registered {@link IArchiveEventListener}s about events.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IArchiveEventManager extends ISingletonService
 {

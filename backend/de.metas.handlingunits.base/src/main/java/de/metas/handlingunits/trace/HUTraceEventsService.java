@@ -85,7 +85,7 @@ import java.util.function.Function;
  * The job of this service is to create {@link HUTraceEvent}s from the inout lines etc it is invoked with<br>
  * and add those events to the {@link HUTraceRepository}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Service
 public class HUTraceEventsService

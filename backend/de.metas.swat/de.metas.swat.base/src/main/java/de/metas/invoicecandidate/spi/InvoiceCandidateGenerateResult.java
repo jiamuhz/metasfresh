@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * Result of {@link IInvoiceCandidateHandler#createCandidatesFor(InvoiceCandidateGenerateRequest)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public final class InvoiceCandidateGenerateResult
 {

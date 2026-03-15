@@ -37,7 +37,7 @@ import java.time.Instant;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface ICurrencyDAO extends ISingletonService
 {

@@ -39,7 +39,7 @@ import de.metas.util.Check;
  * <p>
  * Note: in this class we use the constant {@link I_AD_Column#COLUMNNAME_Updated} for the <code>Updated</code> column name, which is a kind of arbitrary choice.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class LastUpdatedInspector implements IRecordInspector

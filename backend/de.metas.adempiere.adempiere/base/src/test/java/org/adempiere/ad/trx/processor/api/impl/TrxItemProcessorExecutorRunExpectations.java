@@ -48,7 +48,7 @@ import junit.framework.AssertionFailedError;
 /**
  * Executes a given {@link ITrxItemChunkProcessor} and asserts expectations.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @param <IT>
  * @param <RT>

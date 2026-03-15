@@ -38,7 +38,7 @@ import java.time.Instant;
 /**
  * The result of a currency conversion.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 @Builder

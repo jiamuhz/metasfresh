@@ -57,7 +57,7 @@ import java.util.Objects;
  * Instances of this class represent a piece of a <b>factual</b> purchase order,
  * for which the system now needs to create a {@code C_Order} etc.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @ToString(exclude = "purchaseCandidate") // exclude purchaseCandidate to avoid stacktrace, since purchaseCandidate can hold a reference to this
 public class PurchaseOrderItem implements PurchaseItem

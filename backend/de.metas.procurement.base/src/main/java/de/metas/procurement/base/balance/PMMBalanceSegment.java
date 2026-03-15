@@ -33,7 +33,7 @@ import de.metas.util.Check;
 /**
  * Aggregation segment of {@link I_PMM_Balance}, excluding the time dimension.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PMMBalanceSegment

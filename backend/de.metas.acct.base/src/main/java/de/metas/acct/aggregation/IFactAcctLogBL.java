@@ -32,7 +32,7 @@ import java.util.Properties;
 /**
  * {@link I_Fact_Acct_Log} BL.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface IFactAcctLogBL extends ISingletonService

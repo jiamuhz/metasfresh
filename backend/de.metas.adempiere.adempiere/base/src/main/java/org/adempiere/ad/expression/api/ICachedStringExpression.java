@@ -25,7 +25,7 @@ package org.adempiere.ad.expression.api;
 /**
  * Tagging interface for cached {@link IStringExpression} implementations.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ICachedStringExpression extends IStringExpression

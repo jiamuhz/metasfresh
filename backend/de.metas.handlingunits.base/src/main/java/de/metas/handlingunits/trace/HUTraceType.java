@@ -30,7 +30,7 @@ import java.util.Set;
 /**
  * <b>Please</b> keep this in sync with the trace types of {@code M_HU_Trace}, or bad things will happen {@link X_M_HU_Trace#HUTRACETYPE_AD_Reference_ID}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public enum HUTraceType
 {

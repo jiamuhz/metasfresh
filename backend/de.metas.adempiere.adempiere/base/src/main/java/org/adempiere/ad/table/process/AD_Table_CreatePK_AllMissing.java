@@ -37,7 +37,7 @@ import de.metas.util.Services;
 /**
  * Generates primary key columns for all tables.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class AD_Table_CreatePK_AllMissing extends JavaProcess

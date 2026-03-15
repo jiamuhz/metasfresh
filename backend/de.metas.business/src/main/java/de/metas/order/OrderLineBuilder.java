@@ -60,7 +60,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.saveRecord;
 /**
  * Order line builder. Used exclusively by {@link OrderFactory}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class OrderLineBuilder
 {

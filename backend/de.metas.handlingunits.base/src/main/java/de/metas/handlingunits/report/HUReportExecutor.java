@@ -57,7 +57,7 @@ import java.util.Set;
 /**
  * This little class is specialized on executing HU report processes.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @ToString(doNotUseGetters = true, exclude = "ctx")
 public class HUReportExecutor

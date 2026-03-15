@@ -35,7 +35,7 @@ import lombok.NonNull;
  * 
  * If the weak reference expired, it will try to load the {@link Class} using current thread's class loader.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @param <T>
  */

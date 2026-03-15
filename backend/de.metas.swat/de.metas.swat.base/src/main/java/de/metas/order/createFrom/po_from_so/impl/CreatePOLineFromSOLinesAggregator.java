@@ -73,7 +73,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.create;
 /**
  * Creates purchase order lines for sales order lines. One instance of this aggregator is called with sales order lines that all belong to the same purchase order.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 class CreatePOLineFromSOLinesAggregator extends MapReduceAggregator<I_C_OrderLine, I_C_OrderLine>
 {

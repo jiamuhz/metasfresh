@@ -48,7 +48,7 @@ import de.metas.util.Services;
 /**
  * Processes all activity change requests.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task http://dewiki908/mediawiki/index.php/09110_Konten_KST_Pflicht_%28105477200774%29
  */
 public class Fact_Acct_ActivityChangeRequest_Process extends JavaProcess

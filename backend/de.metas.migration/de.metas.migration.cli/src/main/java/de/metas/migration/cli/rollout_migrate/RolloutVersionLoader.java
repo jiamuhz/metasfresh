@@ -31,7 +31,7 @@ import lombok.NonNull;
 /**
  * This class gets the "rollout package"'s version string out of the "build.version" file.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @AllArgsConstructor

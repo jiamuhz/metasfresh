@@ -40,7 +40,7 @@ import de.metas.util.Check;
  * <p>
  * This is basically a reimplementation of the class <code>org.compiere.util.ByteArrayDataSource</code> which was authored (according to the javadoc) by author John Mani, Bill Shannon and Spivak.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 final class ByteArrayBackedDataSource implements DataSource

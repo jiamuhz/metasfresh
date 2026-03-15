@@ -69,7 +69,7 @@ import java.util.stream.Stream;
 /**
  * Helper class used to build the SQL queries needed for creating and manipulating the view selections.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @see I_T_WEBUI_ViewSelection
  */
 public final class SqlViewSelectionQueryBuilder

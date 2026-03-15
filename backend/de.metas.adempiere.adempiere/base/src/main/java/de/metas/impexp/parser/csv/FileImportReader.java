@@ -41,7 +41,7 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

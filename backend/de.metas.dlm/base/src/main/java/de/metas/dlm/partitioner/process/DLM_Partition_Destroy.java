@@ -42,7 +42,7 @@ import de.metas.util.Services;
 /**
  * Sets {@link IDLMAware#COLUMNNAME_DLM_Partition_ID} to 0 for all records that reference the current partition
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class DLM_Partition_Destroy extends JavaProcess

@@ -51,7 +51,7 @@ import java.util.concurrent.Executor;
 /**
  * An {@link Connection} wrapper which inserts a given "query info" comment at the beginning of the SQL queries, right before they are executed.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 final class JasperJdbcConnection implements Connection

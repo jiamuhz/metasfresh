@@ -36,7 +36,7 @@ import de.metas.order.grossprofit.model.I_C_OrderLine;
  * See documentation of the problem in https://github.com/metasfresh/metasfresh/issues/4012
  * TODO: Solve this problem from the root and get rid of these particular listeners
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class OrderLineExpiryModelAttributeSetInstanceListener implements IModelAttributeSetInstanceListener

@@ -40,7 +40,7 @@ import java.util.List;
 /**
  * Dashboard item change request
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Builder
 @Value

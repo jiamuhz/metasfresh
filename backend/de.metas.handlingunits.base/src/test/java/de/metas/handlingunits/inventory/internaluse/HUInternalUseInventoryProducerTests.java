@@ -93,7 +93,7 @@ import static org.assertj.core.api.Assertions.*;
  * It was added to identify bugs in a different person's issue, but the problems were solved by manual testing before I could get to finish this.
  * Feel free to fix and extend it.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @SuppressWarnings("OptionalGetWithoutIsPresent")
 @ExtendWith(AdempiereTestWatcher.class)

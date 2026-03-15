@@ -35,7 +35,7 @@ import lombok.NonNull;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class CompositeAttributeStorageListener implements IAttributeStorageListener

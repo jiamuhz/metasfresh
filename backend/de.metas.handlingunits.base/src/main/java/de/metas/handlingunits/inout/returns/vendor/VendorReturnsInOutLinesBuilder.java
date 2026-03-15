@@ -35,7 +35,7 @@ import de.metas.util.Services;
 /**
  * Builder for vendor return inout lines that are for non-packing material products
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 class VendorReturnsInOutLinesBuilder extends AbstractQualityReturnsInOutLinesBuilder

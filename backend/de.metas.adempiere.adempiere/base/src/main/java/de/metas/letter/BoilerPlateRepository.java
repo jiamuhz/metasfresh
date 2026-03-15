@@ -34,7 +34,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.translate;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Repository

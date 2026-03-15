@@ -40,7 +40,7 @@ import lombok.ToString;
  * 
  * It also contains {@link #getOrderBys()}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ToString

@@ -27,7 +27,7 @@ import de.metas.cache.model.CacheInvalidateMultiRequest;
 /**
  * Cache reset listener.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @see CacheMgt#addCacheResetListener(String, ICacheResetListener)
  */

@@ -51,7 +51,7 @@ public interface IRolePermLoggingBL extends ISingletonService
 	/**
 	 * Thrown by the {@code log*()} methods if the respective given {@code id} does not reference an actually existing record.
 	 * 
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 *
 	 */
 	class NoSuchForeignKeyException extends AdempiereException

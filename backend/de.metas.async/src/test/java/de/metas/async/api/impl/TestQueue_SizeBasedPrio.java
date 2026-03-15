@@ -45,7 +45,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Enqueue a number of workpackages and verify their priorities.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class TestQueue_SizeBasedPrio

@@ -36,7 +36,7 @@ import org.eevolution.model.I_PP_Order_BOMLine;
 /**
  * Manufacturing order BOM Line callout
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * @author based on initial version developed by Victor Perez, Teo Sarca under ADempiere project
  */
 @Callout(I_PP_Order_BOMLine.class)

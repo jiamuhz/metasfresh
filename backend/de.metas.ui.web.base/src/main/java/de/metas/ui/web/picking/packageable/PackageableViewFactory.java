@@ -50,7 +50,7 @@ import java.util.Set;
 /**
  * Factory class for {@link PackageableView} intances.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @ViewFactory(windowId = PickingConstants.WINDOWID_PickingView_String, viewTypes = { JSONViewDataType.grid, JSONViewDataType.includedView })
 public class PackageableViewFactory implements IViewFactory

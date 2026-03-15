@@ -45,7 +45,7 @@ import de.metas.util.Services;
 /**
  * This process makes sure that all tables
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class Add_Tables_to_DLM

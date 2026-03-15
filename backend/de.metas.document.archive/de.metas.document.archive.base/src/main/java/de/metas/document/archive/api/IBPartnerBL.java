@@ -30,7 +30,7 @@ import org.compiere.model.I_AD_User;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IBPartnerBL extends ISingletonService

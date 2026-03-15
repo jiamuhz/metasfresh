@@ -36,7 +36,7 @@ import java.util.function.Supplier;
  * Implementors are responsible for the "type" specific handling of given <code>model</code>s,
  * depending one whether under the hood they are actually {@link org.compiere.model.PO}'s or {@link org.compiere.model.GridTab}s.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IInterfaceWrapperHelper

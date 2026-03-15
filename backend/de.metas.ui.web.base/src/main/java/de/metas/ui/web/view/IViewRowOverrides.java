@@ -25,7 +25,7 @@ package de.metas.ui.web.view;
 /**
  * To be implemented by {@link IView}s which want to also override {@link IViewRow} properties.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @see ViewRowOverridesHelper
  */
 public interface IViewRowOverrides

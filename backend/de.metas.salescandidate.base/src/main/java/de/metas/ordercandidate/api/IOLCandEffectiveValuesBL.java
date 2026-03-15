@@ -25,7 +25,7 @@ import java.util.Optional;
  * Use this service to get the "actual" values for a given order line candidate. If this service has no getter for a given field (like <code>DateCandidate</code>), it is save to get the value directly
  * from the olCand instead.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IOLCandEffectiveValuesBL extends ISingletonService
 {

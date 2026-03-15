@@ -38,7 +38,7 @@ import de.metas.util.Services;
 /**
  * Helper class used to check if all preconditions are met in order to show a process to Gear.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ProcessPreconditionChecker

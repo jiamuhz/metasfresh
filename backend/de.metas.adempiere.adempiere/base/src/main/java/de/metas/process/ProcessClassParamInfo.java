@@ -54,7 +54,7 @@ import java.time.ZonedDateTime;
 /**
  * Contains information about process class fields which were marked as parameters (i.e. annotated with {@link Param}).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 public class ProcessClassParamInfo

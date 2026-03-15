@@ -55,7 +55,7 @@ import java.util.stream.Stream;
 /**
  * A list of {@link LookupValue}s with some more debug properties attached.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Immutable
 @EqualsAndHashCode(exclude = "debugProperties")

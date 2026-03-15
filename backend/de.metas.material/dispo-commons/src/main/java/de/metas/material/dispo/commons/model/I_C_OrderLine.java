@@ -26,7 +26,7 @@ package de.metas.material.dispo.commons.model;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface I_C_OrderLine extends org.compiere.model.I_C_OrderLine

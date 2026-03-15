@@ -39,7 +39,7 @@ import java.util.Optional;
 /**
  * Wraps an {@link LookupDataSourceFetcher}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 final class LookupDataSourceAdapter implements LookupDataSource
 {

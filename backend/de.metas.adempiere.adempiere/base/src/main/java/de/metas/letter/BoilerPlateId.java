@@ -36,7 +36,7 @@ import java.util.Objects;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Value

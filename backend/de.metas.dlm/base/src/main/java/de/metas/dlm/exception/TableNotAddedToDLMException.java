@@ -31,7 +31,7 @@ import de.metas.util.StringUtils;
 /**
  * Can be thrown if a table is not (yet) ready for DLM. See {@link CreatePartitionRequest.OnNotDLMTable#FAIL}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class TableNotAddedToDLMException extends AdempiereException

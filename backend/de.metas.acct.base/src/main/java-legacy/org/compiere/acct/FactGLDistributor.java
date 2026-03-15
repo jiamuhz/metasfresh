@@ -54,7 +54,7 @@ import java.util.List;
  * Helper class to apply {@link I_GL_Distribution}s on a given list of {@link FactLine}s.
  * It is used internally by {@link Fact}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 /* package */class FactGLDistributor
 {

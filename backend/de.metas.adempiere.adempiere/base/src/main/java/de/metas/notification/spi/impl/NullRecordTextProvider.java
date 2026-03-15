@@ -31,7 +31,7 @@ import de.metas.notification.spi.IRecordTextProvider;
 /**
  * {@link IRecordTextProvider} implementation which always return {@link Optional#absent()}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class NullRecordTextProvider implements IRecordTextProvider

@@ -48,7 +48,7 @@ import java.util.regex.Pattern;
  * DLM_Referenced_Table_Name = c_payment_tbl; DLM_Referencing_Table_Name = c_bankstatementline_ref; DLM_Referencig_Column_Name = c_payment_id;
  *
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class DLMReferenceExceptionWrapper implements IExceptionWrapper<DBException>

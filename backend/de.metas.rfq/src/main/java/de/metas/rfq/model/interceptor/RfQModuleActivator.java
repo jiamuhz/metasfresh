@@ -29,7 +29,7 @@ import org.adempiere.ad.modelvalidator.IModelValidationEngine;
 /**
  * RfQ module activator
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class RfQModuleActivator extends AbstractModuleInterceptor
 {

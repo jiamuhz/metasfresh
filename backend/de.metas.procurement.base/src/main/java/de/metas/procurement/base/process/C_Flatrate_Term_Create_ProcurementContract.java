@@ -50,7 +50,7 @@ import de.metas.util.Services;
 /**
  * Process used to create procurement contracts
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Process(requiresCurrentRecordWhenCalledFromGear = false)

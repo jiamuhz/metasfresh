@@ -19,7 +19,7 @@ import org.compiere.util.DB;
  * <li>apply the discount schema: {@link I_M_PriceList_Version#getM_DiscountSchema()}
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class M_PriceList_Create extends JavaProcess

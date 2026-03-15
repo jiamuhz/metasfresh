@@ -43,7 +43,7 @@ import org.slf4j.Logger;
  * Command to lock a sheet using a given password. If some column are to remain unlocked, edit the template accordingly
  * (see src/main/jasperreports/de/metas/docs/deliveryplanning/deliveryplanning.xls for how to use it)
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class LockSheetCommand extends AbstractCommand

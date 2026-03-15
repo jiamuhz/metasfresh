@@ -35,7 +35,7 @@ import de.metas.util.Services;
 /**
  * {@link IPaymentBatch} implementation.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class PaymentBatch implements IPaymentBatch

@@ -29,7 +29,7 @@ import de.metas.util.ISingletonService;
 /**
  * Service used to register and get {@link IFlatrateTermEventListener}s.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface IFlatrateTermEventService extends ISingletonService

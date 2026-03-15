@@ -48,7 +48,7 @@ import static org.junit.Assert.assertThat;
  * This class tests with a number of records that a re always connected in the same manner (see {@link #setup()}).
  * The differences between the tests are about which records are partitioned and which records aren't.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PartitionerServiceAttachToPartitionTests

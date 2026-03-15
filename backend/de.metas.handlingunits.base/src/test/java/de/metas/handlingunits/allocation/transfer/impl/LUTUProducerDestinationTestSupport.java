@@ -67,7 +67,7 @@ import static org.junit.Assert.assertThat;
  * Contains masterdata and common stuff to be used by different tests.
  * This class is convenient whenever you want to test with HUs that were created by the {@link LUTUProducerDestination}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class LUTUProducerDestinationTestSupport
 {

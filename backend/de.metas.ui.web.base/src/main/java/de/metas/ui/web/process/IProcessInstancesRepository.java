@@ -33,7 +33,7 @@ import de.metas.ui.web.window.model.IDocumentChangesCollector;
 /**
  * Process descriptors and instances repository.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IProcessInstancesRepository

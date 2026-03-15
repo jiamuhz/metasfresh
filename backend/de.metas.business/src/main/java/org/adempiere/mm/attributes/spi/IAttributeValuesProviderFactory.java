@@ -27,7 +27,7 @@ import org.compiere.model.I_M_Attribute;
 /**
  * {@link IAttributeValuesProvider} factory.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IAttributeValuesProviderFactory extends IAttributeValueHandler

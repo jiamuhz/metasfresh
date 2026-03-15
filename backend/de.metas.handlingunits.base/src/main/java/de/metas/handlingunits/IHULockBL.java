@@ -32,7 +32,7 @@ import java.util.Collection;
 /**
  * Handling units locking service
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IHULockBL extends ISingletonService

@@ -31,7 +31,7 @@ import org.springframework.stereotype.Service;
 /**
  * Converts {@link Event}s to {@link MaterialEvent}s and vice versa.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Service

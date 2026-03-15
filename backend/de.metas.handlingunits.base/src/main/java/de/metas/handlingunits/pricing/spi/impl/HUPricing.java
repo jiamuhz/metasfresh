@@ -30,7 +30,7 @@ import java.util.Optional;
  * to make sure that our super class will ignore those product price records that have a {@code M_HU_PI_Item_Product_ID} set.<br>
  * That way this class can reuse a lot of stuff like the {@link #applies(IPricingContext, IPricingResult)} method from its superclass.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class HUPricing extends AttributePricing
 {

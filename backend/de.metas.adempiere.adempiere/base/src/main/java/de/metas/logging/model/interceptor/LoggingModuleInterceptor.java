@@ -32,7 +32,7 @@ import de.metas.util.Check;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class LoggingModuleInterceptor extends AbstractModuleInterceptor

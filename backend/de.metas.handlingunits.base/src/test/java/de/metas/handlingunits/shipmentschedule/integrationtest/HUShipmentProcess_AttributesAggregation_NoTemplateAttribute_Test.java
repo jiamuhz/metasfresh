@@ -49,7 +49,7 @@ import de.metas.util.Services;
  *
  * Same as for {@link HUShipmentProcess_AttributesAggregation_WithSameTemplateAttribute_Test}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task FRESH-578 #275
  */
 public class HUShipmentProcess_AttributesAggregation_NoTemplateAttribute_Test

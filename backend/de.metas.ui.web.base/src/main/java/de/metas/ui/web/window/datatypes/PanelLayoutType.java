@@ -32,7 +32,7 @@ import com.google.common.collect.Maps;
 /**
  * Describes how a panel of elements shall be rendered.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public enum PanelLayoutType

@@ -44,7 +44,7 @@ import de.metas.util.Services;
 /**
  * This little class is specialized in executing the jasper process whose {@code AD_Process_ID} is specified in @c{@code SysConfig} {@value #SYSCONFIG_ReceiptScheduleHUPOSJasper_Process}
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class HUReceiptScheduleReportExecutor

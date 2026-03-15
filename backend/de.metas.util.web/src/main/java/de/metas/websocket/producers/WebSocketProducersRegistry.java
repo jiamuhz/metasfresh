@@ -60,7 +60,7 @@ import java.util.stream.Stream;
  * <li>as soon as there is a subscriber for a websocket topic it will create/start a {@link WebSocketProducer} and it will call it on a given rate.
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public final class WebSocketProducersRegistry
 {

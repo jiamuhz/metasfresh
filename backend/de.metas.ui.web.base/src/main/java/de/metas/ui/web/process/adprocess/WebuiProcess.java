@@ -34,7 +34,7 @@ import de.metas.ui.web.window.datatypes.PanelLayoutType;
 /**
  * Annotation used to specify more webui related options to a process.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Inherited

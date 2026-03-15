@@ -35,7 +35,7 @@ import org.eevolution.model.I_DD_OrderLine;
 /**
  * Wraps {@link I_DD_OrderLine} and makes it behave like {@link IAttributeSetInstanceAware}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 class DDOrderLineAttributeSetInstanceAware implements IAttributeSetInstanceAware
 {

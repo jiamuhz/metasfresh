@@ -51,7 +51,7 @@ import java.util.List;
  * NOTE: by default, all methods will send the events after the current DB transaction is committed.
  * If there is no current transaction, the events will be sent right away.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Component
 @ConditionalOnBean(SimpMessagingTemplate.class)

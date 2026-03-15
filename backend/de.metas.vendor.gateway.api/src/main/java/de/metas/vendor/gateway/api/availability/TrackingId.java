@@ -30,7 +30,7 @@ import lombok.Value;
 /**
  * An external ID used to track availability requests.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Value
 public class TrackingId

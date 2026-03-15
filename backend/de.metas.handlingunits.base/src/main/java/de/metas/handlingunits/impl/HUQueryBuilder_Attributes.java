@@ -60,7 +60,7 @@ import java.util.Set;
 /**
  * {@link HUQueryBuilder} attributes related filtering
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @EqualsAndHashCode
 @ToString(of = { "onlyAttributes", "barcode" })

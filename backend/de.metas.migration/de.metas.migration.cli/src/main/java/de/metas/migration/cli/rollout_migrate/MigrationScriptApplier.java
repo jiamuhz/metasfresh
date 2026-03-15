@@ -42,7 +42,7 @@ import lombok.NonNull;
 /**
  * This class does the "main" thing of the tool, i.e. it runns the migration scripts.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @AllArgsConstructor

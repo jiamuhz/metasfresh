@@ -77,7 +77,7 @@ import static de.metas.ui.web.picking.PickingConstants.SYS_CONFIG_SHOW_ALL_PICKI
 /**
  * Factory to create {@link PickingSlotView}s instances. This includes assigning a number of picking related processed to the view.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ViewFactory(windowId = PickingConstants.WINDOWID_PickingSlotView_String, viewTypes = { JSONViewDataType.grid, JSONViewDataType.includedView })

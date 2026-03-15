@@ -39,7 +39,7 @@ import java.util.Properties;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class CreateCounterDocPP extends WorkpackageProcessorAdapter

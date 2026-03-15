@@ -41,7 +41,7 @@ import de.metas.dlm.partitioner.config.PartitionerConfigLine.LineBuilder;
  * <p>
  * Almost immutable; only the {@link #getDLM_Partition_Config_Reference_ID()} property is mutable.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PartitionerConfigReference

@@ -59,7 +59,7 @@ import java.util.List;
  * selected I_M_Product_LotNumber_Quarantine entries. If such HUs are found, they will
  * all be put in a DD_Order and sent to the Quarantine warehouse.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class WEBUI_M_Product_LotNumber_Quarantine extends ViewBasedProcessTemplate
 		implements

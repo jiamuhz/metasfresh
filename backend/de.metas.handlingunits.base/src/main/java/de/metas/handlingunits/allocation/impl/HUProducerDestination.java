@@ -23,7 +23,7 @@ import lombok.NonNull;
  * <p>
  * For most real world use cases, you will probably want to use {@link LUTUProducerDestination} instead of this one.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class HUProducerDestination extends AbstractProducerDestination

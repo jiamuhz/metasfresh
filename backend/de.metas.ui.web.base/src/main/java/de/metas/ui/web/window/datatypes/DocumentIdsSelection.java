@@ -49,7 +49,7 @@ import java.util.stream.Stream;
  * <p>
  * Basically consists of a set of {@link DocumentId}s but it all has the {@link #isAll()} flag.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Immutable
 @ToString

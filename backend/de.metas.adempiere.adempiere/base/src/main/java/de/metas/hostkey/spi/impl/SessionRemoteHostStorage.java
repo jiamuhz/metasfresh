@@ -33,7 +33,7 @@ import de.metas.util.Services;
  */
 /**
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://github.com/metasfresh/metasfresh/issues/1274
  */
 public class SessionRemoteHostStorage implements IHostKeyStorage

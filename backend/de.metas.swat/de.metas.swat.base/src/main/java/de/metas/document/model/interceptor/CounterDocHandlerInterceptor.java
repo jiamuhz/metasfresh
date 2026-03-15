@@ -37,7 +37,7 @@ import de.metas.util.Services;
 /**
  * Interceptor used to intercept {@link IDocument}s that might need a counter document
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class CounterDocHandlerInterceptor extends AbstractModelInterceptor

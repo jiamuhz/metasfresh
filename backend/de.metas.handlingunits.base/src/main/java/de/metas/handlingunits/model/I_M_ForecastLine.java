@@ -28,7 +28,7 @@ import java.math.BigDecimal;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface I_M_ForecastLine extends org.compiere.model.I_M_ForecastLine

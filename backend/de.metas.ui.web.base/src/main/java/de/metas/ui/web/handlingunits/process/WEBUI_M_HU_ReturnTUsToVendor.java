@@ -56,7 +56,7 @@ import de.metas.util.collections.CollectionUtils;
 /**
  * Partial vendor return.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://github.com/metasfresh/metasfresh/issues/2391
  */
 public class WEBUI_M_HU_ReturnTUsToVendor extends HUEditorProcessTemplate implements IProcessPrecondition

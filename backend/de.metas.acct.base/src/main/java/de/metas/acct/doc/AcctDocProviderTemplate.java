@@ -40,7 +40,7 @@ import java.util.Set;
 /**
  * Convenient {@link IAcctDocProvider} implementation.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public abstract class AcctDocProviderTemplate implements IAcctDocProvider
 {

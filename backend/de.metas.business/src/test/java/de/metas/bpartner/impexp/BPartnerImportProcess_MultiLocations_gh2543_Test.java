@@ -57,7 +57,7 @@ import de.metas.util.Services;
 /**
  * Test case described in https://github.com/metasfresh/metasfresh/issues/2543
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @RunWith(SpringRunner.class)

@@ -114,7 +114,7 @@ import static java.math.BigDecimal.ZERO;
  * This class contains business logic run by clients when they transform HUs.
  * Use {@link #newInstance(IHUContext)} to obtain an instance.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * task https://github.com/metasfresh/metasfresh-webui/issues/181
  */
 public class HUTransformService

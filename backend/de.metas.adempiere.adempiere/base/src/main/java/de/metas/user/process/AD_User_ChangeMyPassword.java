@@ -42,7 +42,7 @@ import de.metas.util.hash.HashableString;
 /**
  * Change current (selected and logged in) user's password.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class AD_User_ChangeMyPassword extends JavaProcess implements IProcessPrecondition

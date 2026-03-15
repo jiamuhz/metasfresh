@@ -58,7 +58,7 @@ import lombok.NonNull;
  * An instance of the respective service interface implementation is obtained using the {@link #get(Class)} method.<br>
  * Note that instead of returning the actual implementation that was registered or located, the {@link #get(Class)} returns a proxy which allows us to implement <b>caching</b> by using the {@link Cached} annotation.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class Services

@@ -42,7 +42,7 @@ import de.metas.util.Check;
 /**
  * Command to hide a range of columns if a given condition is met.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class HideColumnIfCommand extends AbstractCommand

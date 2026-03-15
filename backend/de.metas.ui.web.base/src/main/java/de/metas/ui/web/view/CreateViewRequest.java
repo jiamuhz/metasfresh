@@ -62,7 +62,7 @@ import java.util.Set;
 /**
  * Request to create a new {@link IView}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Value
 public class CreateViewRequest

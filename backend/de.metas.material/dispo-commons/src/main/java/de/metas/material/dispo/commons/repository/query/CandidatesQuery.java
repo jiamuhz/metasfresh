@@ -49,7 +49,7 @@ import java.util.List;
 /**
  * Identifies a set of candidates.
  * 这里的 Candidate 是指 MD_Candidate
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 @With

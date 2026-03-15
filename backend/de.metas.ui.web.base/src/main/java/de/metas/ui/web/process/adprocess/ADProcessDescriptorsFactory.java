@@ -89,7 +89,7 @@ import java.util.stream.Stream;
 /**
  * Creates {@link ProcessDescriptor}s from {@link I_AD_Process} based processes
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 /* package */ class ADProcessDescriptorsFactory
 {

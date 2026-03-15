@@ -39,7 +39,7 @@ import lombok.Value;
  * Contains data about the document a given {@link I_M_ShipmentSchedule} references via its {@code AD_Table_ID} and {@code Reference_ID} columns.
  * Instances are generally created by {@link ShipmentScheduleReferencedLineFactory}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Value

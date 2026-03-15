@@ -29,7 +29,7 @@ import org.elasticsearch.client.RestHighLevelClient;
 /**
  * This is the main gateway to de.metas.elasticsearch module.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IESSystem extends ISingletonService
 {

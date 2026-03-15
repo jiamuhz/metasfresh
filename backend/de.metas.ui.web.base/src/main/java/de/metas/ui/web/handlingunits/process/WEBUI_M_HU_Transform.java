@@ -72,7 +72,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.load;
 /**
  * HU transformation process (template).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Profile(Profiles.PROFILE_Webui)
 public class WEBUI_M_HU_Transform

@@ -43,7 +43,7 @@ import lombok.Value;
 /**
  * Creates or updates unprocessed inventory lines for a given {@link I_M_Inventory} record.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 public class InventoryLinesCreationCtx

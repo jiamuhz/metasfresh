@@ -30,7 +30,7 @@ import org.adempiere.misc.service.impl.POService;
 /**
  * <b>IMPORTANT</p>: this class is old. Most of the stuff done in here is obsolete and could be removed.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class StandardServices implements IAddOn

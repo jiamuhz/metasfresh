@@ -27,7 +27,7 @@ import org.compiere.model.I_C_Payment;
 /**
  * Implementations of this interface are responsible for providing the {@link IPaymentBatch} for {@link I_C_Payment}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IPaymentBatchProvider

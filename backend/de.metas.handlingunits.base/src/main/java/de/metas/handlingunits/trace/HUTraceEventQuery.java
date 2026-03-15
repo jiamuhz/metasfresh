@@ -51,7 +51,7 @@ import java.util.OptionalInt;
  * <li>there is the mandatory {@link RecursionMode}
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 @Builder

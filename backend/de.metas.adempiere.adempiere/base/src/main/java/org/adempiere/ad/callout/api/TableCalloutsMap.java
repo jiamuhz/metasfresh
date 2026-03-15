@@ -50,7 +50,7 @@ import de.metas.util.Check;
  *
  * 一个数据库表中 callout column <-> callout instance list  [MAP]
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

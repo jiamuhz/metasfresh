@@ -33,7 +33,7 @@ import javax.annotation.Nullable;
 /**
  * Create Internal Use Inventory and destroy given HUs.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * Task initial task https://github.com/metasfresh/metasfresh-webui-api/issues/396
  */
 public class WEBUI_M_HU_Mass_Disposal extends WEBUI_M_HU_InternalUse_Template

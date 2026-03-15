@@ -52,7 +52,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.save;
 /**
  * This class sets up basic master data like partners, addresses, users, flatrate conditions, flarate transitions that can be used in testing.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class FlatrateTermTestHelper
 {

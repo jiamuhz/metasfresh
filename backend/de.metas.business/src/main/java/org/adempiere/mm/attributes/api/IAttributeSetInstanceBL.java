@@ -19,7 +19,7 @@ import java.util.function.Predicate;
 /**
  * Service to create and update AttributeInstances and AttributeSetInstances.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IAttributeSetInstanceBL extends ISingletonService
 {

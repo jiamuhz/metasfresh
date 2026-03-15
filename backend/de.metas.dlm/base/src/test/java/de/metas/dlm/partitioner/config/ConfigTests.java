@@ -33,7 +33,7 @@ import org.junit.Test;
 /**
  * If tests fail in here, i recommend to first make sure all tests in {@link PartitionerConfigBuilderTest} succeed.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ConfigTests

@@ -60,7 +60,7 @@ import java.util.Map;
 /**
  * Hint: use {@link ProductPrices} to get an instance.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ProductPriceQuery

@@ -32,7 +32,7 @@ import java.util.List;
  * Listens to bank statements events.
  * To register a new listener, please use {@link IBankStatementListenerService}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IBankStatementListener

@@ -31,7 +31,7 @@ import static org.mockito.Mockito.mock;
 /**
  * This class tests {@link IPPOrderBOMBL} in convert with {@link IPPOrderBOMDAO}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class PPOrderBOMBLTest
 {

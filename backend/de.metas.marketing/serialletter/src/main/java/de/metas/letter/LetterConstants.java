@@ -28,7 +28,7 @@ import lombok.experimental.UtilityClass;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

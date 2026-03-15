@@ -30,7 +30,7 @@ import de.metas.handlingunits.model.I_M_HU;
 /**
  * Annotate implementations of this interface with {@link Component} and they will be automatically discovered.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface IHUToReceiveValidator

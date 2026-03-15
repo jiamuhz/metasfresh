@@ -32,7 +32,7 @@ import de.metas.process.ProcessInstanceInfo;
 /**
  * Implementors can be registered in {@link HUDocumentFactoryService} and will then be invoked accordingly by its {@code create..} methods.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IHUDocumentFactory

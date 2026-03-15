@@ -41,7 +41,7 @@ import de.metas.util.Services;
 /**
  * Accepts an {@link OrderCheckupBarcode}, searches for coresponding manufacturing order and then opens Issue/Receipt panel for it.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://github.com/metasfresh/metasfresh-webui-api/issues/280
  */
 @WebuiProcess(layoutType = PanelLayoutType.SingleOverlayField)

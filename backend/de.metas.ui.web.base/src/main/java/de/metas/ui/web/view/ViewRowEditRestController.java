@@ -48,7 +48,7 @@ import java.util.List;
 /**
  * API for editing a view row.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * Task <a href="https://github.com/metasfresh/metasfresh-webui-api/issues/577">577</a>
  */
 @RestController

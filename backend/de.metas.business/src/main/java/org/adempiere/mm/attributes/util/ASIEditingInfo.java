@@ -56,7 +56,7 @@ import java.util.stream.Stream;
 /**
  * Helper class used to provide informations to the ASI editor.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class ASIEditingInfo

@@ -31,7 +31,7 @@ import javax.annotation.Nullable;
 /**
  * JSON null marker.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Schema(description = "null-value")

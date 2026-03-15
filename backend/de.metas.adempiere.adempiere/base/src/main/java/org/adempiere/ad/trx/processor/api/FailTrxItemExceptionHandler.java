@@ -27,7 +27,7 @@ import org.adempiere.exceptions.AdempiereException;
 /**
  * An {@link ITrxItemProcessorExecutor}'s exception handler which fails on first error.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class FailTrxItemExceptionHandler implements ITrxItemExceptionHandler

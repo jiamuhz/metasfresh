@@ -30,7 +30,7 @@ import java.lang.reflect.InvocationTargetException;
 /**
  * To be used when it comes to class loading. Can be extended/overridden for testing.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class ClassInstanceProvider implements IClassInstanceProvider
 {

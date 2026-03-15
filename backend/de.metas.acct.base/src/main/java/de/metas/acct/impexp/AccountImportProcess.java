@@ -52,7 +52,7 @@ import java.util.Properties;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class AccountImportProcess extends SimpleImportProcessTemplate<I_I_ElementValue>

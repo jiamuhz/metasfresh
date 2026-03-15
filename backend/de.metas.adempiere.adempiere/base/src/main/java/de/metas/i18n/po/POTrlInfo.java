@@ -33,7 +33,7 @@ import java.util.Optional;
 /**
  * Persistent object's translation info.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
 @Value

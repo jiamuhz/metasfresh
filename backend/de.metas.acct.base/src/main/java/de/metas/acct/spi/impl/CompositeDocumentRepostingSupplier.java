@@ -36,7 +36,7 @@ import de.metas.util.Services;
 /**
  * Composite Document reposting handler
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class CompositeDocumentRepostingSupplier implements IDocumentRepostingSupplier

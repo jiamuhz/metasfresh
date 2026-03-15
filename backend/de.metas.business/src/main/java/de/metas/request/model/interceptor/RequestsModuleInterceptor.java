@@ -30,7 +30,7 @@ import org.compiere.model.I_R_Request;
 /**
  * {@link I_R_Request}s module main initializer.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class RequestsModuleInterceptor extends AbstractModuleInterceptor

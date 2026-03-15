@@ -52,7 +52,7 @@ import java.util.Iterator;
  * It would be cleaner to use the <code>WorkpackageProcessorTask</code>, but I wasn't able to refactor it and make it usable.
  * Note that the WPs are processed with the context of this process.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class C_Queue_WorkPackage_ProcessSelection extends JavaProcess
 {

@@ -39,7 +39,7 @@ import java.util.function.Supplier;
 /**
  * This handler is a wrapper/delegator for {@link POWrapper}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class POInterfaceWrapperHelper extends AbstractInterfaceWrapperHelper
 {

@@ -33,7 +33,7 @@ import lombok.NonNull;
 /**
  * Constraint used to determine if the UI elements (windows, tabs, fields, menu, processes etc) shall be displayed in UI.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * Task http://dewiki908/mediawiki/index.php/09474_make_entity_type_disableable_and_hidable_for_certains_roles_%28107519600505%29
  */
 public final class UIDisplayedEntityTypes extends Constraint

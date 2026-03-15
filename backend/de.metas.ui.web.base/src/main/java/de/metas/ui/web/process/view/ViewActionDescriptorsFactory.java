@@ -53,7 +53,7 @@ import lombok.NonNull;
 /**
  * Factory method used extract {@link ViewActionDescriptorsList} from different sources.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ViewActionDescriptorsFactory

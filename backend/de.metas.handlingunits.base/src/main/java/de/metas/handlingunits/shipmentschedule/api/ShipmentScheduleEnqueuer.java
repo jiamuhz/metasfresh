@@ -340,7 +340,7 @@ public class ShipmentScheduleEnqueuer
 	/**
 	 * Contains the enqueuer's result. Right now it's just two counters, but might be extended in future.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 * @implSpec <a href="https://metasfresh.atlassian.net/browse/FRESH-342">task</a>
 	 */
 	public static class Result implements IEnqueueResult

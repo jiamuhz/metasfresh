@@ -56,7 +56,7 @@ public class ShipmentScheduleReferencedLineFactory
 	/**
 	 * See {@link ShipmentScheduleReferencedLineFactory#createFor(I_M_ShipmentSchedule)}.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 *
 	 */
 	public static final class UnsupportedShipmentScheduleTableId extends AdempiereException

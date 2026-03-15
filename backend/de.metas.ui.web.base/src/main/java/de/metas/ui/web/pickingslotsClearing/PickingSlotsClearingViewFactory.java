@@ -60,7 +60,7 @@ import java.util.List;
 /**
  * Browse Picking slots
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @implNote task https://github.com/metasfresh/metasfresh/issues/518
  */
 @ViewFactory(windowId = PickingSlotsClearingViewFactory.WINDOW_ID_STRING)

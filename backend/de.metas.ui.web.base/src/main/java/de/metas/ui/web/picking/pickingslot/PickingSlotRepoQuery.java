@@ -38,7 +38,7 @@ import java.util.Set;
 /**
  * Used in the repo services, to specify which data we want to be retrieved.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Value

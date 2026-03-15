@@ -43,7 +43,7 @@ import lombok.NonNull;
 /**
  * Default value expression used to provide a preliminary auto-sequence for "Value"-like fields.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://github.com/metasfresh/metasfresh/issues/2303
  */
 public class AutoSequenceDefaultValueExpression implements IStringExpression

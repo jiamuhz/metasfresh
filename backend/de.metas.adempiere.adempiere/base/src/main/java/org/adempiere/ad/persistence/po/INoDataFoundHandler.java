@@ -29,7 +29,7 @@ import org.adempiere.util.lang.IContextAware;
  * load a record for a certain table name using certain keys.
  * To make it happen, register your implementor using {@link NoDataFoundHandlers#addHandler(INoDataFoundHandler)}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface INoDataFoundHandler

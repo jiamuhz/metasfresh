@@ -17,7 +17,7 @@ import java.util.Set;
 /**
  * Calculates product's low level code (LLC) and also checks for BOM cycles (it is throwing {@link BOMCycleException} in that case).
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 /* package */class ProductLowLevelCalculator
 {

@@ -28,7 +28,7 @@ import org.eevolution.model.I_PP_OrderCandidate_PP_Order;
  * A dedicated model interceptor whose job it is to fire events on the {@link MetasfreshEventBusService}.<br>
  * I add this into a dedicated interceptor (as opposed to adding the method to {@link PP_Order}) because there is at least one test case where I want {@link PP_Order} to be invoked without events being fired.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Interceptor(I_PP_Order.class)
 public class PP_Order_PostMaterialEvent

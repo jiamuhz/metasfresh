@@ -31,7 +31,7 @@ import lombok.NonNull;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * @author https://stackoverflow.com/a/41748361/2410079
  */
 final class BatchSpliterator<E> implements Spliterator<List<E>>

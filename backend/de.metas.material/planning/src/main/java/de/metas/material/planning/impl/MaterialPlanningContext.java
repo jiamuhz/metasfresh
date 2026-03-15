@@ -41,7 +41,7 @@ import java.util.Properties;
 /**
  * It's possible to create instances of this class directly (intended for testing), but generally, please use a factory to do it.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Data
 @VisibleForTesting

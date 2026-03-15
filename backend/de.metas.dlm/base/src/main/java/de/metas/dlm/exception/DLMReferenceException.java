@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
 /**
  * Instances of this exceptions should be created by {@link DBException#wrapIfNeeded(Throwable)} via {@link DLMReferenceExceptionWrapper}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class DLMReferenceException extends DBException

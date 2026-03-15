@@ -46,7 +46,7 @@ import de.metas.util.hash.HashableString;
  * 
  * For current logged in user, the {@link AD_User_ChangeMyPassword} shall be used.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class AD_User_ChangePassword extends JavaProcess implements IProcessPrecondition

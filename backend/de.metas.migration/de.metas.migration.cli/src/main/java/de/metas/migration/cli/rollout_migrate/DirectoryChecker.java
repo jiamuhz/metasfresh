@@ -30,7 +30,7 @@ import lombok.NonNull;
 /**
  * This class checks if given directories are OK.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 class DirectoryChecker

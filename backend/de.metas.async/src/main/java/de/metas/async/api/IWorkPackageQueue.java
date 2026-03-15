@@ -48,7 +48,7 @@ import java.util.concurrent.Future;
 /**
  * Use {@link IWorkPackageQueueFactory} to get an instance.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IWorkPackageQueue

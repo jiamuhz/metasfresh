@@ -29,7 +29,7 @@ import org.compiere.process.AbstractImportJavaProcess;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ImportAccount extends AbstractImportJavaProcess<I_I_ElementValue>

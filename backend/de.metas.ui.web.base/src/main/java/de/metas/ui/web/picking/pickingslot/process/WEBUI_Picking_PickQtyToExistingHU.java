@@ -58,7 +58,7 @@ import static de.metas.ui.web.picking.PickingConstants.MSG_WEBUI_PICKING_SELECT_
  * Note: this process is declared in the {@code AD_Process} table, but <b>not</b> added to it's respective window or table via application dictionary.<br>
  * Instead it is assigned to it's place by {@link PickingSlotViewFactory}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class WEBUI_Picking_PickQtyToExistingHU

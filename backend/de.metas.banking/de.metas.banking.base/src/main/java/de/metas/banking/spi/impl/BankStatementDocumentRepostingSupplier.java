@@ -33,7 +33,7 @@ import lombok.NonNull;
 /**
  * * Document reposting handler for C_BankStatement
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class BankStatementDocumentRepostingSupplier implements IDocumentRepostingSupplier

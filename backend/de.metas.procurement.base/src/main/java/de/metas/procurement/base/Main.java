@@ -43,7 +43,7 @@ import java.util.List;
 /**
  * Module activator
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public class Main extends AbstractModuleInterceptor
 {

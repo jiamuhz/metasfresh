@@ -51,7 +51,7 @@ import de.metas.util.Services;
  * <p>
  * Note: we assume that this handler will always be called last, when other handlers already did their stuff with {@link I_C_Printing_Queue_Recipient}s.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://github.com/metasfresh/metasfresh/issues/1081
  */
 public class C_Printing_Queue_RecipientHandler extends PrintingQueueHandlerAdapter

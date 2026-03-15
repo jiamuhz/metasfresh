@@ -35,7 +35,7 @@ import lombok.NonNull;
 /**
  * Compares the DB's version from {@code AD_Systemm.DBVersion} with the rollout package's version from {@code build-info.properties}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @Builder

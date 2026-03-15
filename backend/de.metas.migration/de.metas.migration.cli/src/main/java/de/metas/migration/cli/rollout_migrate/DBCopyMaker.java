@@ -41,7 +41,7 @@ import lombok.NonNull;
 /**
  * Creates a copy of the DB {@link #getOriginalDbName()} (also called the template elsewhere).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Builder

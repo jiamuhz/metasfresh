@@ -31,7 +31,7 @@ import java.util.Optional;
 /**
  * Dedicated service for document numbers. Instead of handling document number change in the code, please invoke this service's {@link #fireDocumentNoChange(Object, String)} method.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IDocumentNoBL extends ISingletonService

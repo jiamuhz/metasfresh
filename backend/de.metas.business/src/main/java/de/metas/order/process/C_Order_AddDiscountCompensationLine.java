@@ -40,7 +40,7 @@ import de.metas.product.ProductId;
 /**
  * Add compensation order line to existing group.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class C_Order_AddDiscountCompensationLine extends OrderCompensationGroupProcess
 {

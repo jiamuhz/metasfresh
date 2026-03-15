@@ -28,7 +28,7 @@ import org.compiere.util.CStatementVO;
 /**
  * Query statistics collector
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public interface IQueryStatisticsCollector
 {

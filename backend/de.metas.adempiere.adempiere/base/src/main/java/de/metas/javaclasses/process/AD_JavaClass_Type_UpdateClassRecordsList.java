@@ -30,7 +30,7 @@ import de.metas.process.JavaProcess;
 /**
  * This process invokes {@link IJavaClassTypeBL#updateClassRecordsList(I_AD_JavaClass_Type)} with the currently selected {@link I_AD_JavaClass_Type}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Process(requiresCurrentRecordWhenCalledFromGear = true)

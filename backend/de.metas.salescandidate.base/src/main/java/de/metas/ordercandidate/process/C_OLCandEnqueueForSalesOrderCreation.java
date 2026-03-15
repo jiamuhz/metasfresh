@@ -21,7 +21,7 @@ import org.compiere.SpringContextHolder;
  * <p>
  * The actual work is done by {@link de.metas.ordercandidate.api.OLCandsProcessorExecutor#process()}
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class C_OLCandEnqueueForSalesOrderCreation extends JavaProcess
 {

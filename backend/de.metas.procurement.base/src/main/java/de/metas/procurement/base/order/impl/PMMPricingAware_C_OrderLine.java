@@ -63,7 +63,7 @@ import javax.annotation.Nullable;
  * <b>IMPORTANT:</b> The setters do not alter the wrapped orderline itself, because we currently only use this implementation in an {@link IPricingRule} implementation.
  * But is should not be hard to add an option to also alter the wrapped olderLine in future, if needed.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PMMPricingAware_C_OrderLine implements IPMMPricingAware

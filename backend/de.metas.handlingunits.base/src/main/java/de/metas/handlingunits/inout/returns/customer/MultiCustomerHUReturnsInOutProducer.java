@@ -69,7 +69,7 @@ import java.util.Set;
  * Note: For the time being ( task #1306) there is no requirement to have returns from customer created for more than 1 customer at the same time.
  * But nevertheless, I am writing the implementation similar with the Vendor Return part, to have them structured and to allow the possibility to perform the return from customer also from a POS.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public class MultiCustomerHUReturnsInOutProducer
 {

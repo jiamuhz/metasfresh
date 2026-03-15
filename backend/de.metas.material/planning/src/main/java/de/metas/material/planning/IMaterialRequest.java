@@ -12,7 +12,7 @@ import java.time.Instant;
  *
  * Note that there is a sub interface in libero which contains additional fields and it therefore more tightly coupled to libero.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IMaterialRequest

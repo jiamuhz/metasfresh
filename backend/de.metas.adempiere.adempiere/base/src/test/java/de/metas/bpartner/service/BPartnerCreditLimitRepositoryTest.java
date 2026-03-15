@@ -61,7 +61,7 @@ import static org.assertj.core.api.Assertions.*;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class BPartnerCreditLimitRepositoryTest

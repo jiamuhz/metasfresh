@@ -30,7 +30,7 @@ import lombok.Getter;
  * This exception is (currently) handled in our async framework. Throw it to indicate that an external service can't be connected to with.
  * If {@link #getRetryAdvisedIMillis()} is greater than zero, the async framework will schedule a retry.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class ServiceConnectionException extends RuntimeException
 {

@@ -31,7 +31,7 @@ import de.metas.i18n.TranslatableStrings;
  * if the {@code invokeHandlers()} method returned @{code true}, but the code in change of the retry is somehwere else in the call stack.
  * 
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("serial")

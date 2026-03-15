@@ -35,7 +35,7 @@ import lombok.Value;
 /**
  * This class holds the config from the command line tool's parameters
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Builder
 @Value

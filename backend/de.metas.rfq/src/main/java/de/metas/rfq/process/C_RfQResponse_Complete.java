@@ -30,7 +30,7 @@ import de.metas.util.Services;
 /**
  * Complete given {@link I_C_RfQResponse}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class C_RfQResponse_Complete extends JavaProcess
 {

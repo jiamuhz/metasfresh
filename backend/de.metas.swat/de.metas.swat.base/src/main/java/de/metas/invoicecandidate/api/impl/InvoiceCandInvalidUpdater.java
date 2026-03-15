@@ -560,7 +560,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.newInstance;
 	/**
 	 * IC update result.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 */
 	private static final class ICUpdateResult
 	{

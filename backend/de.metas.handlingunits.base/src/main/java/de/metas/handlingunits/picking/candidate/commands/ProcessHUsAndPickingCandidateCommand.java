@@ -80,7 +80,7 @@ import java.util.Set;
  * <p>
  * The status will be changed from InProgress to Processed.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public class ProcessHUsAndPickingCandidateCommand
 {

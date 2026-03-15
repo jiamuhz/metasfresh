@@ -55,7 +55,7 @@ import java.util.Set;
 /**
  * Null implementation. Has no children, not attributes, is never disposed nor virtual.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class NullAttributeStorage implements IAttributeStorage

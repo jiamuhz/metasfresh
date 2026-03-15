@@ -48,7 +48,7 @@ import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
  *
  * Note: please take care that the respective parameter's default value is among the list returned by your method implementation.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Inherited

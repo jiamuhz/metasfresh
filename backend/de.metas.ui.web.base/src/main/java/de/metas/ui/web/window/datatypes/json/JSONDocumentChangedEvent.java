@@ -53,7 +53,7 @@ import java.util.function.IntFunction;
  * <p>
  * Event sent by frontend when the user wants to change some fields.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Schema(description = "document-change-event")
 @JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)

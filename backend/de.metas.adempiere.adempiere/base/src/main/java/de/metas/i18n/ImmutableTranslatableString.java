@@ -34,7 +34,7 @@ import java.util.Set;
 /**
  * Immutable {@link ITranslatableString} implementation.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @EqualsAndHashCode
 public final class ImmutableTranslatableString implements ITranslatableString

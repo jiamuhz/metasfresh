@@ -39,7 +39,7 @@ import de.metas.common.util.CoalesceUtil;
  * task 09833
  * Default ctx provider for printing info of C_PrintJobInstructions. (Fallback to the original print job instruction's error message, as it used to be before the ctx providers were added)
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class DefaultPrintingRecordTextProvider implements IRecordTextProvider

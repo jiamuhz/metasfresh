@@ -32,7 +32,7 @@ import org.compiere.model.I_M_Attribute;
 import de.metas.util.ISingletonService;
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ICountryAttributeDAO extends ISingletonService

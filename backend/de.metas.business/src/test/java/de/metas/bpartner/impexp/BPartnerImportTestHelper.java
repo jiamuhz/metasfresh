@@ -41,7 +41,7 @@ import lombok.experimental.UtilityClass;
 /**
  * A collection of bpartner import test helpers.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @UtilityClass

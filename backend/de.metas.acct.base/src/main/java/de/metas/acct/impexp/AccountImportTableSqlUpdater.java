@@ -38,7 +38,7 @@ import lombok.experimental.UtilityClass;
  * A helper class for {@link AccountImportProcess} that performs SQL updates on the {@link I_ElementValue} table.
  * Those updates complements the data from existing metasfresh records and flag those import records that can't yet be imported.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

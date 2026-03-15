@@ -54,7 +54,7 @@ import lombok.NonNull;
 /**
  * Used to specify expectations related to a single HU. Hint: use within the greater framework of {@link HUsExpectation}
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @param <ParentExpectationType>
  */

@@ -40,7 +40,7 @@ import de.metas.banking.bankstatement.match.api.IPaymentBatchFactory;
  * 
  * NOTE to developer: please consider extending {@link PaymentBatch}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IPaymentBatch

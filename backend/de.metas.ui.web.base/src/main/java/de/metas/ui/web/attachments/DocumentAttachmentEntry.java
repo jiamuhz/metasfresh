@@ -37,7 +37,7 @@ import de.metas.ui.web.window.datatypes.DocumentId;
 /**
  * Attachment entry
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ToString

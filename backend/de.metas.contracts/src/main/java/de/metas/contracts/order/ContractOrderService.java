@@ -40,7 +40,7 @@ import javax.annotation.Nullable;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Service

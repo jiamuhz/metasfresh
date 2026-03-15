@@ -35,7 +35,7 @@ import java.util.Properties;
 /**
  * Fluent {@link I_I_Flatrate_Term} factory
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Builder
 @Value

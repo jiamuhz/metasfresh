@@ -37,7 +37,7 @@ import lombok.NonNull;
 /**
  * Listens to bank statement events and manages the relation with pay selections.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PaySelectionBankStatementListener implements IBankStatementListener

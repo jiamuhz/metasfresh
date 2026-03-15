@@ -55,7 +55,7 @@ import java.util.List;
 /**
  * This process opens a HU editor window within the production window
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class WEBUI_PP_Order_HUEditor_Launcher
 		extends ViewBasedProcessTemplate

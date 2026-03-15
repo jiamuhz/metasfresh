@@ -43,7 +43,7 @@ import de.metas.util.Check;
 /**
  * Wraps a {@link I_PMM_QtyReport_Event} and behaves like an {@link IPMMPricingAware}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PMMPricingAware_QtyReportEvent implements IPMMPricingAware

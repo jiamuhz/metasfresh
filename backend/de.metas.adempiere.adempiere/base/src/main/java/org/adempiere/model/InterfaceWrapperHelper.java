@@ -87,7 +87,7 @@ import java.util.stream.Collectors;
  * This class is heavily used throughout metasfresh. To understand what it's all about see the javadoc of {@link #create(Object, Class)}.
  * It internally relates on a {@link CompositeInterfaceWrapperHelper} which in turn supports all the types that are supported by this class.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @UtilityClass
 public class InterfaceWrapperHelper

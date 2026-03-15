@@ -65,7 +65,7 @@ import lombok.NonNull;
  * <li>Update the item storage's <b>tare</b> value using business logic from {@link WeightTareAttributeValueCallout} and pushing up the change
  * <li>Preserve the original CU-per-TU qty by splitting off partial quantities from the aggregate HU into a "real" HU.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *         task: https://github.com/metasfresh/metasfresh/issues/460
  */
 public class AggregateHUTrxListener implements IHUTrxListener

@@ -39,7 +39,7 @@ import lombok.NonNull;
 /**
  * Helper class used to fill process parameters with default values provided by {@link IProcessDefaultParametersProvider}s.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class ProcessDefaultParametersUpdater

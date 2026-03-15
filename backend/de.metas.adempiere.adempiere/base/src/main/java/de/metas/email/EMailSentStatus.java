@@ -45,7 +45,7 @@ import de.metas.util.Check;
 /**
  * EMail sent status.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @see EMail#send()
  */
 @SuppressWarnings("serial")

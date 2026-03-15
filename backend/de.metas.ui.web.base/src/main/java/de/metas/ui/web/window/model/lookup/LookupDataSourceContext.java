@@ -67,7 +67,7 @@ import java.util.stream.Stream;
 /**
  * Effective context used to validate lookups data.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Immutable
 @ToString

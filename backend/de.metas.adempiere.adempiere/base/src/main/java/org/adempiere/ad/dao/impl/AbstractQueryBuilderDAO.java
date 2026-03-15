@@ -47,7 +47,7 @@ import lombok.NonNull;
 /**
  * Base implementation for {@link IQueryBuilderDAO}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public abstract class AbstractQueryBuilderDAO implements IQueryBuilderDAO

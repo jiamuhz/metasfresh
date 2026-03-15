@@ -36,7 +36,7 @@ import org.compiere.util.Util.ArrayKey;
 /**
  * Used by {@link CreatePOLineFromSOLinesAggregator} to create the keys that decide which sales order line belongs to which purchase order line.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 class CreatePOLineFromSOLinesAggregationKeyBuilder extends AbstractOrderLineAggregationKeyBuilder
 {

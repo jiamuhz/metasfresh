@@ -28,7 +28,7 @@ import org.compiere.util.Env;
 /**
  * {@link IProcessDefaultParametersProvider}'s parameter.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IProcessDefaultParameter

@@ -38,7 +38,7 @@ import java.util.List;
 /**
  * Aggregates {@link PurchaseOrderItem}s and creates completed purchase orders ({@link I_C_Order}).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class PurchaseOrderFromItemsAggregator
 		extends MapReduceAggregator<PurchaseOrderFromItemFactory, PurchaseOrderItem>

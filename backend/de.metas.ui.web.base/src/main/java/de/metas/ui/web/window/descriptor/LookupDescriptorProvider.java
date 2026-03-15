@@ -29,7 +29,7 @@ import java.util.Optional;
 /**
  * Provides {@link LookupDescriptor} for a given {@link LookupScope}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @FunctionalInterface
 public interface LookupDescriptorProvider

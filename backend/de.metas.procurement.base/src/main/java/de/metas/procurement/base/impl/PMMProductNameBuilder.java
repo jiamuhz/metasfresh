@@ -40,7 +40,7 @@ import de.metas.util.Services;
 /**
  * {@link I_PMM_Product} ProductName builder.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PMMProductNameBuilder

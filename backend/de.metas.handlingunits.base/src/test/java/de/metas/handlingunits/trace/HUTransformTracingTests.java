@@ -61,7 +61,7 @@ import de.metas.util.StringUtils;
  * Leans on {@link HUTransformTestsBase} and verifies that the correct {@link HUTraceEvent}s were created.
  * To test additional use cases, move the respective testing code from {@link HUTransformServiceTests} to {@link HUTransformTestsBase}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class HUTransformTracingTests
 {

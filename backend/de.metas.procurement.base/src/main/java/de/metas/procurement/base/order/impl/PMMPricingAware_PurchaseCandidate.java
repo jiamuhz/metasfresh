@@ -45,7 +45,7 @@ import de.metas.util.Services;
 /**
  * Wraps a {@link I_PMM_PurchaseCandidate} and behaves like an {@link IPMMPricingAware}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 class PMMPricingAware_PurchaseCandidate implements IPMMPricingAware

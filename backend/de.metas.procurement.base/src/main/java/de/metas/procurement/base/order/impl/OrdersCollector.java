@@ -46,7 +46,7 @@ import de.metas.util.Services;
  * <li>notifies on event bus that an order was generated
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class OrdersCollector implements IOrdersCollector

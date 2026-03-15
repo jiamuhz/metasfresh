@@ -62,7 +62,7 @@ import java.util.stream.Stream;
  * <p>
  * Note that technically this is contained in the left-hand side {@link PackageableView}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class PickingSlotView implements IView
 {

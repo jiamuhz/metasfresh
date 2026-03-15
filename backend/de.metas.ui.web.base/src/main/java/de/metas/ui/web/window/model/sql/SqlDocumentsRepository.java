@@ -88,7 +88,7 @@ import java.util.stream.Collectors;
 /**
  * IMPORTANT: please make sure this is state-less and thread-safe
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public final class SqlDocumentsRepository implements DocumentsRepository
 {

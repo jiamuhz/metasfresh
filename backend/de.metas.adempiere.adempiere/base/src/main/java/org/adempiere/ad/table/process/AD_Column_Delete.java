@@ -38,7 +38,7 @@ import de.metas.util.Services;
  * Deletes the selected AD_Column.
  * If asked, it can also delete the AD_Field(s) and the database column.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class AD_Column_Delete extends JavaProcess

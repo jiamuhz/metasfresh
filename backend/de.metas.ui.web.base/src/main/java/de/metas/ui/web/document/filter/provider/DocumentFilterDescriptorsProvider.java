@@ -34,7 +34,7 @@ import java.util.Collection;
 /**
  * Document filter descriptors provider
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface DocumentFilterDescriptorsProvider

@@ -32,7 +32,7 @@ import java.util.List;
 /**
  * Exception thrown when price list could not be found for a given pricing system.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class PriceListNotFoundException extends AdempiereException
 {

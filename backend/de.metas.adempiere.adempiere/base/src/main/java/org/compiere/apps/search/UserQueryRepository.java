@@ -58,7 +58,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.save;
 /**
  * Handles user queries.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class UserQueryRepository
 {

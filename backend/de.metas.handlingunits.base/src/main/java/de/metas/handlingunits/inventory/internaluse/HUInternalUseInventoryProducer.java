@@ -52,7 +52,7 @@ import java.util.List;
 /**
  * Creates and processes Internal Use Inventory documents to destroy given HUs.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class HUInternalUseInventoryProducer
 {

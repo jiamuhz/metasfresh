@@ -35,7 +35,7 @@ import de.metas.util.Services;
 /**
  * Base exception class for RfQ module
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class RfQException extends AdempiereException

@@ -27,7 +27,7 @@ import de.metas.util.ISingletonService;
 /**
  * Internal. Please don't use it!
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IDefaultCalloutProvider extends ICalloutProvider, ISingletonService

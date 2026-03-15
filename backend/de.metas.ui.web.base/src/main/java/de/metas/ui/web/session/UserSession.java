@@ -68,7 +68,7 @@ import java.util.function.Supplier;
 /**
  * User Session service
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Service
 public class UserSession
@@ -543,7 +543,7 @@ public class UserSession
 	 * Event fired when the user language was changed.
 	 * Usually it is user triggered.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 */
 	@lombok.Value
 	public static class LanguagedChangedEvent

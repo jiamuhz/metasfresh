@@ -39,7 +39,7 @@ import java.util.List;
  * <p>
  * Implementors shall just implement the simple factory functions like {@link #createConstantExpression(ExpressionContext, String)}, {@link #createGeneralExpression(ExpressionContext, String, List)} etc.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public abstract class AbstractChunkBasedExpressionCompiler<V, ET extends IExpression<V>> implements IExpressionCompiler<V, ET>
 {

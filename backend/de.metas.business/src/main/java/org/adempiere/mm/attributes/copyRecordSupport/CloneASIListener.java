@@ -33,7 +33,7 @@ import org.compiere.model.copy.ValueToCopyType;
 /**
  * This listener makes sure that when a PO with an ASI is copied, then the ASI is cloned.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class CloneASIListener implements OnRecordCopiedListener
 {

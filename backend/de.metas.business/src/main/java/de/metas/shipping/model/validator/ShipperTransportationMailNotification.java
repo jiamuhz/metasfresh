@@ -63,7 +63,7 @@ import java.util.StringTokenizer;
 /**
  * Supposed to send an email to a shipment's receiver when the shipper document is completed.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://metasfresh.atlassian.net/browse/FRESH-407 this MV doesn't really work. Whenever you actually need the feature, please let's reimplement it.
  */
 @Deprecated

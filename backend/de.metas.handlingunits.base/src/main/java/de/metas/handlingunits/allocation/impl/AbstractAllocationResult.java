@@ -5,7 +5,7 @@ import de.metas.handlingunits.allocation.IAllocationResult;
 /**
  * Implements common methods to be used in various {@link IAllocationResult} implementations.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 /* package */abstract class AbstractAllocationResult implements IAllocationResult

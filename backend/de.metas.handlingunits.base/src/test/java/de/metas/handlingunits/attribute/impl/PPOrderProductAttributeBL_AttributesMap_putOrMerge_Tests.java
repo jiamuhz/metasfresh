@@ -52,7 +52,7 @@ import de.metas.handlingunits.model.I_PP_Order_ProductAttribute;
 /**
  * Verifies the behavior of {@link AttributesMap#putOrMerge(I_PP_Order_ProductAttribute)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * @task https://github.com/metasfresh/metasfresh/issues/810
  */
 public class PPOrderProductAttributeBL_AttributesMap_putOrMerge_Tests

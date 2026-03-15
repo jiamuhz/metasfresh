@@ -36,7 +36,7 @@ import de.metas.util.Check;
 /**
  * Allows a tester to declare HU related expectations.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class HUsExpectation extends AbstractHUExpectation<Object>

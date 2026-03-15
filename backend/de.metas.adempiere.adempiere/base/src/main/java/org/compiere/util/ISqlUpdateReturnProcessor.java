@@ -34,7 +34,7 @@ import org.compiere.model.PO;
  * <p>
  * Hint: {@link PO} contains an inner class that implements this interface.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 

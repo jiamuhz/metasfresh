@@ -31,7 +31,7 @@ import org.compiere.model.I_I_DiscountSchema;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class MDiscountSchemaImportContext

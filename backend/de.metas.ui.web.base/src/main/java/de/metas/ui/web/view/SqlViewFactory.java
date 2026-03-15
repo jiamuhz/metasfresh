@@ -70,7 +70,7 @@ import java.util.function.Supplier;
  * View factory which is based on {@link DocumentEntityDescriptor} having SQL repository.<br>
  * Creates {@link DefaultView}s with are backed by a {@link SqlViewBinding}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Service
 public class SqlViewFactory implements IViewFactory

@@ -37,7 +37,7 @@ import java.util.ArrayList;
 /**
  * Immutable document type sequence map (indexed by AD_Client_ID, AD_Org_ID).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class DocTypeSequenceList

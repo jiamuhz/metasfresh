@@ -40,7 +40,7 @@ import lombok.Value;
 /**
  * Unifies different descriptors.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 @Builder

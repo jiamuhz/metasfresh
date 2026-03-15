@@ -32,7 +32,7 @@ import de.metas.inoutcandidate.model.I_M_ReceiptSchedule;
 /**
  * Implementations of this interface are responsible for providing the warehouse destination to be used for {@link I_M_ReceiptSchedule#setM_Warehouse_Dest(I_M_Warehouse)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IReceiptScheduleWarehouseDestProvider

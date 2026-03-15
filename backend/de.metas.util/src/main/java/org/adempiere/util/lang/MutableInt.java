@@ -27,7 +27,7 @@ import java.io.Serializable;
 /**
  * Mutable <code>int</code> wrapper.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("serial")

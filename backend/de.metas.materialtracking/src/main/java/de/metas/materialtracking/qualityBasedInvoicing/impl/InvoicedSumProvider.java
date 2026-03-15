@@ -39,7 +39,7 @@ import de.metas.util.Services;
 /**
  * This is the default implementation.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class InvoicedSumProvider implements IInvoicedSumProvider

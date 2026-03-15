@@ -33,7 +33,7 @@ import lombok.NonNull;
  * Holds a weak reference to a given {@link Field} to prevent classloader memory leaks.
  * If the weak reference expired, it will try to load the {@link Field} using current thread's class loader.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class FieldReference

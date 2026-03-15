@@ -36,7 +36,7 @@ import org.compiere.SpringContextHolder;
 /**
  * This process opens the HUsToPick view.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class WEBUI_Picking_HUEditor_Launcher extends PickingSlotViewBasedProcess
 {

@@ -36,7 +36,7 @@ import java.util.Set;
 /**
  * Declares data retrieval methods whose implementations are annotated as {@link Cached}
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ISourceHuDAO extends ISingletonService

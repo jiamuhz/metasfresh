@@ -30,7 +30,7 @@ import lombok.NonNull;
 /**
  * Document's standard action (e.g. new, delete, print etc).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://github.com/metasfresh/metasfresh-webui-api/issues/583
  */
 @JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)

@@ -41,7 +41,7 @@ import java.util.List;
 /**
  * Base class for receiving HUs from selected receipt schedule.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 /* package */ abstract class WEBUI_M_ReceiptSchedule_ReceiveHUs_Base extends ReceiptScheduleBasedProcess
 {

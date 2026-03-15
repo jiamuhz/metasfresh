@@ -27,7 +27,7 @@ import org.adempiere.ad.persistence.IModelInternalAccessor;
 /**
  * Base class for all {@link IInterfaceWrapperHelper} implementations.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public abstract class AbstractInterfaceWrapperHelper implements IInterfaceWrapperHelper

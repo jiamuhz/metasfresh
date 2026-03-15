@@ -34,7 +34,7 @@ import de.metas.logging.LogManager;
  *
  * To create a new instance please use {@link IClientUI#invokeAsync()}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface IClientUIAsyncInvoker
@@ -63,7 +63,7 @@ public interface IClientUIAsyncInvoker
 	/**
 	 * The UI asynchronous executor.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 * 
 	 *
 	 * @param <InitialValueType> an initial value which triggered current asynchronous processing (optional)
 	 * @param <ResultType> final result type
@@ -104,7 +104,7 @@ public interface IClientUIAsyncInvoker
 	 *
 	 * NOTE to developer: instead of implementing this interface, consider extending the {@link ClientUIAsyncRunnableAdapter}.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 * 
 	 *
 	 * @param <InitialValueType> an initial value which triggered current asynchronous processing (optional)
 	 * @param <ResultType> final result type
@@ -167,7 +167,7 @@ public interface IClientUIAsyncInvoker
 	/**
 	 * Easy to use {@link IClientUIAsyncRunnable} adapter.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 * 
 	 *
 	 * @param <InitialValueType>
 	 * @param <ResultType>

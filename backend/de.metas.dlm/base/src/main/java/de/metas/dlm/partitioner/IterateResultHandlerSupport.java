@@ -39,7 +39,7 @@ import de.metas.logging.LogManager;
 /**
  * Helper class that can be used within {@link IIterateResult} implementations.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class IterateResultHandlerSupport

@@ -37,7 +37,7 @@ import lombok.ToString;
 /**
  * User session changed event to be sent on websocket.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)

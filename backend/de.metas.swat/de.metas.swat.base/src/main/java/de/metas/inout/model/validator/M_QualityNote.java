@@ -36,7 +36,7 @@ import de.metas.util.Services;
  * 
  * This intercepts actions on M_QualityNote table and translates them in the M_AttributeValue entries linked with the qualityNotes
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Interceptor(I_M_QualityNote.class)

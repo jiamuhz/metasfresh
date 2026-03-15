@@ -31,7 +31,7 @@ import java.util.Objects;
 /**
  * Holds the {@link ILoggable} instance of current thread.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 final class ThreadLocalLoggableHolder
 {

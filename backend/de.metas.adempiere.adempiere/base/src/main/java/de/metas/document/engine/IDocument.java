@@ -20,7 +20,7 @@ import java.util.Properties;
  * but rather implement {@link DocumentHandler}.
  *
  * @author based on initial version of Jorg Janke
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IDocument
 {

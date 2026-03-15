@@ -33,7 +33,7 @@ import de.metas.util.Services;
  * For this it is important that the table {@link org.compiere.model.I_AD_SysConfig#Table_Name} itself is never DLM'ed.
  * Otherwise we can't guarantee that the data is found.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

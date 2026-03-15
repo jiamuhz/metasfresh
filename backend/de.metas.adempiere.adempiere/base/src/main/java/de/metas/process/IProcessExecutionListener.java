@@ -6,7 +6,7 @@ import de.metas.logging.LogManager;
  * {@link JavaProcess} execution listener to be used by {@link ProcessExecutor}.
  *
  * @author authors of earlier versions of this class are: Jorg Janke
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IProcessExecutionListener
 {

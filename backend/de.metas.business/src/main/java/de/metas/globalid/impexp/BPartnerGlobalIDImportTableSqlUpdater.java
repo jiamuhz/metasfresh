@@ -39,7 +39,7 @@ import lombok.experimental.UtilityClass;
 /**
  * A helper class for {@link BPartnerGlobalIDImportProcess} that updates {@link I_I_BPartner_GlobalID} table.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

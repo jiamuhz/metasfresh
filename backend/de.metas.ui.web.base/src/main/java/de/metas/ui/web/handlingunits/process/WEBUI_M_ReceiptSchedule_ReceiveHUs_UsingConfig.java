@@ -37,7 +37,7 @@ import java.math.BigDecimal;
 /**
  * Receive planning HUs using given configuration (parameters).
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class WEBUI_M_ReceiptSchedule_ReceiveHUs_UsingConfig extends WEBUI_M_ReceiptSchedule_ReceiveHUs_Base implements IProcessDefaultParametersProvider

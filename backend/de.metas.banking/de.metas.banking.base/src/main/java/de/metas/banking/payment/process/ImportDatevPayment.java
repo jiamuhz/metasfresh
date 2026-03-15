@@ -6,7 +6,7 @@ import org.compiere.process.AbstractImportJavaProcess;
 import de.metas.banking.model.I_I_Datev_Payment;
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  * 
  * Import {@link I_I_Datev_Payment} records to {@link I_C_Payment}.
  *

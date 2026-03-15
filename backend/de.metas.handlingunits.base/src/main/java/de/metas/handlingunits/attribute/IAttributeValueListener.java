@@ -27,7 +27,7 @@ import org.adempiere.mm.attributes.spi.IAttributeValueContext;
 /**
  * Implementors can be registered by calling {@link IAttributeValue#addAttributeValueListener(IAttributeValueListener)}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IAttributeValueListener

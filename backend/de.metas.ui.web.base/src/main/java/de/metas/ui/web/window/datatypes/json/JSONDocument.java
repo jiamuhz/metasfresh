@@ -60,7 +60,7 @@ import java.util.stream.Collectors;
  * [ { field:someFieldName }, {...} ]
  * </code>
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @ToString(callSuper = true)
 public final class JSONDocument extends JSONDocumentBase

@@ -46,7 +46,7 @@ import de.metas.dlm.partitioner.IterateResultHandlerSupport;
 /**
  * This class is heavily used by {@link PartitionerService} when it looks for records to be assigned to a partition.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class CreatePartitionIterateResult implements IStorableIterateResult

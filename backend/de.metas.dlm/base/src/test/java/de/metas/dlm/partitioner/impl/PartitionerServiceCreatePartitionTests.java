@@ -64,7 +64,7 @@ import org.junit.jupiter.api.Timeout;
 /**
  * Different tests for {@link PartitionerService#createPartition0(CreatePartitionRequest)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class PartitionerServiceCreatePartitionTests

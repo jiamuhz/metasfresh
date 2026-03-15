@@ -37,7 +37,7 @@ import java.util.function.Predicate;
 /**
  * Abstract {@link IPackingItem} implementation which forwards all calls to {@link #getDelegate()}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 abstract class ForwardingPackingItem implements IPackingItem

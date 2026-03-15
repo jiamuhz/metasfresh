@@ -40,7 +40,7 @@ import lombok.Value;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Value

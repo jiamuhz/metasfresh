@@ -71,7 +71,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.saveRecord;
  * <p>
  * This is a general purpose class to be used by other more specific factories.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class OrderFactory
 {

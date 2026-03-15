@@ -31,7 +31,7 @@ import de.metas.util.ISingletonService;
  * <li>schedule the invalidated candidates to be updated
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IInvoiceCandUpdateSchedulerService extends ISingletonService

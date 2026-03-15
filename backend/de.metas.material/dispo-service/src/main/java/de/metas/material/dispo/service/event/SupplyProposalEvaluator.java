@@ -42,7 +42,7 @@ import lombok.Value;
 /**
  * This class has the job to figure out if a particular supply "proposal" creates a kind of circle.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Service
@@ -100,7 +100,7 @@ public class SupplyProposalEvaluator
 	/**
 	 * This class defines how the evaluator wants to receive it's proposals.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 *
 	 */
 	@Value

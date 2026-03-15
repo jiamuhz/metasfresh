@@ -52,7 +52,7 @@ import java.util.Properties;
 /**
  * This class has the job of managing a {@link I_M_HU_LUTU_Configuration} for a particular {@link I_PP_Order}..it might retrieve that ppOrder's lutuConfig or create a new default one.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 /* package */class PPOrderDocumentLUTUConfigurationHandler extends AbstractDocumentLUTUConfigurationHandler<I_PP_Order>
 {

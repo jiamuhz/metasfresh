@@ -35,7 +35,7 @@ import org.slf4j.Logger;
 /**
  * {@link UserNotification}'s message formatter.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 final class UserNotificationDetailMessageFormat extends EventMessageFormatTemplate

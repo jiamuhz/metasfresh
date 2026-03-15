@@ -43,7 +43,7 @@ import java.util.Optional;
 
 /**
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public final class OlAndSched

@@ -42,7 +42,7 @@ import java.util.regex.Pattern;
 /**
  * This class contains the static methods and constants around {@link CtxName}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @UtilityClass
 public class CtxNames

@@ -57,7 +57,7 @@ import java.util.stream.Collectors;
 /**
  * Class to retrieve {@link PickingSlotRow}s that are displayed in the {@link PickingSlotView}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Component
 public class PickingSlotViewRepository

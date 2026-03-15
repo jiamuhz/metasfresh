@@ -55,7 +55,7 @@ import de.metas.util.Check;
  *
  * WARNING: this is a pure expression whom evaluation depends only on {@link Evaluatee} with one exception: it fetches the {@link IUserRolePermissions} based on {@link #PARAM_UserRolePermissionsKey}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

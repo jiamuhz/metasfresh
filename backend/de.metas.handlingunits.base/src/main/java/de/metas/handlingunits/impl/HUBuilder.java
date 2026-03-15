@@ -73,7 +73,7 @@ import java.util.stream.Collectors;
  * <p>
  * This builder also creates {@link I_M_HU_Item} for the new {@link I_M_HU} it creates (see {@link HUNodeIncludedItemBuilder}), but out of itself it doesn't create any child HUs.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 /* package */final class HUBuilder extends AbstractHUIterator implements IHUBuilder
 {

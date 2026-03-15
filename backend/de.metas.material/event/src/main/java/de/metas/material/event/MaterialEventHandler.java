@@ -30,7 +30,7 @@ import java.util.Collection;
 /**
  * Implementors of this interface are registered to {@link MaterialEventHandlerRegistry}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  * @param <T> the sort of {@link MaterialEvent} which the handler shall handle in its {@link #handleEvent(MaterialEvent)} method.<br>
  *            May be an abstract type.

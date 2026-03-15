@@ -37,7 +37,7 @@ import de.metas.util.Services;
  * Quick workaround process for HUs that need to be restored to a snapshot version.
  * This process actually only makes sense is a troubleshooting scenario, so please only use it if you know what you are doing.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @task https://github.com/metasfresh/metasfresh/issues/2112
  */

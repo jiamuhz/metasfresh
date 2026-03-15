@@ -43,7 +43,7 @@ import javax.annotation.Nullable;
  * 
  * It's main purpose is to be used in callouts.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IPreliminaryDocumentNoBuilder

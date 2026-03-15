@@ -25,7 +25,7 @@ package org.adempiere.ad.wrapper;
 /**
  * A common interface that shall allow us to handle e.g. POs, Grid-Records, POJOs, composites and more in a uniform way.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface IInterfaceWrapper

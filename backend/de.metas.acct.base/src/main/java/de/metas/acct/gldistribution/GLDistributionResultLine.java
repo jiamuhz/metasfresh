@@ -32,7 +32,7 @@ import lombok.NonNull;
 /**
  * Result line of a {@link GLDistributionBuilder} run.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Data

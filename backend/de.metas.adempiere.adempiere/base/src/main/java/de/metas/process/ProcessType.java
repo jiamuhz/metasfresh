@@ -31,7 +31,7 @@ import org.compiere.model.X_AD_Process;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @AllArgsConstructor
 public enum ProcessType implements ReferenceListAwareEnum

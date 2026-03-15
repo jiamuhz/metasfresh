@@ -64,7 +64,7 @@ import java.util.stream.Stream;
  *
  * NOTE to developers: introduced to hide behind legacy attachments code.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 final class DocumentAttachments

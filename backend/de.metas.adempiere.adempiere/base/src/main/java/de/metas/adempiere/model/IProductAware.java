@@ -8,7 +8,7 @@ import org.compiere.model.I_M_Product;
 /**
  * {@link org.adempiere.model.InterfaceWrapperHelper#asColumnReferenceAwareOrNull(Object, Class)} to obtain an instance.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IProductAware

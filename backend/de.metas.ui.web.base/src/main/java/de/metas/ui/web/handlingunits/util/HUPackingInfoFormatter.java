@@ -37,7 +37,7 @@ import javax.annotation.Nullable;
 /**
  * {@link IHUPackingInfo} formatter.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class HUPackingInfoFormatter

@@ -36,7 +36,7 @@ import org.eevolution.api.BOMComponentIssueMethod;
 /**
  * Reverse(and deletes) a draft manufacturing order issue/receipt candidate.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * Task https://github.com/metasfresh/metasfresh-webui-api/issues/356
  */
 public class WEBUI_PP_Order_ReverseCandidate

@@ -69,7 +69,7 @@ import java.util.stream.Collectors;
  *
  * Introduced in #1062
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 class VendorReturnsInOutProducer extends AbstractReturnsInOutProducer

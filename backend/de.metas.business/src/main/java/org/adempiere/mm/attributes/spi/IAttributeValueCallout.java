@@ -7,7 +7,7 @@ import org.adempiere.mm.attributes.api.IAttributeSet;
 import org.compiere.model.I_M_Attribute;
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IAttributeValueCallout

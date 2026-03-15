@@ -51,7 +51,7 @@ import java.util.Optional;
 /**
  * SQL migration script file logger.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 class MigrationScriptFileLogger
 {

@@ -46,7 +46,7 @@ import lombok.NonNull;
  *
  * NOTE: this is not serializable, so please DO NOT CACHE IT
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class DocumentQuery

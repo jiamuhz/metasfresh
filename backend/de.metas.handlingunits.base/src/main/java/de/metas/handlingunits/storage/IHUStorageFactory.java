@@ -38,7 +38,7 @@ import java.util.stream.Stream;
  * Factory for HU related quantities.<br>
  * Use {@link IHandlingUnitsBL#getStorageFactory()}, unless you have a {@link IHUContext} to get it from.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IHUStorageFactory

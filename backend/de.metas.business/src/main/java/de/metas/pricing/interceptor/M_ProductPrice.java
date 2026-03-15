@@ -43,7 +43,7 @@ import java.util.Optional;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @implSpec Prevent users from creating duplicate main prices <a href="https://github.com/metasfresh/metasfresh/issues/2510">2510</a>
  */
 @Interceptor(I_M_ProductPrice.class)

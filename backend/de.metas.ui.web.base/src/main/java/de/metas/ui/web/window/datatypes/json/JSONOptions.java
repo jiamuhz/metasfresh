@@ -46,7 +46,7 @@ import java.time.ZoneId;
 /**
  * JSON context: provide different options and filters to be used when the API responses are converted to/from JSON.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @ToString(doNotUseGetters = true)
 @EqualsAndHashCode(doNotUseGetters = true)

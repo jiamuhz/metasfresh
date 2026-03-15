@@ -42,7 +42,7 @@ import de.metas.util.Services;
 /**
  * Configures HostKey for webui
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * Task https://github.com/metasfresh/metasfresh-webui-api/issues/264
  */
 @Configuration

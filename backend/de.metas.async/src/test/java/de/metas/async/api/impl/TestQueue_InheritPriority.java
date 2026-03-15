@@ -52,7 +52,7 @@ import static org.junit.Assert.assertThat;
 /**
  * See {@link #test_forwardWorkPackagePrio()}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class TestQueue_InheritPriority
 {

@@ -76,7 +76,7 @@ import java.util.stream.Stream;
  * <li>and stream HUs</li>
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 public class LeastRecentTransactionStrategy implements HUsForInventoryStrategy

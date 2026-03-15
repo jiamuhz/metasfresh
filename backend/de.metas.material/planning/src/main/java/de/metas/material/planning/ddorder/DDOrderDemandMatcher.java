@@ -33,7 +33,7 @@ import de.metas.util.Loggables;
  * The business logic of the {@link #matches(IMaterialPlanningContext)} method is coming from
  * <code>/de.metas.adempiere.libero.libero/src/main/java/org/eevolution/mrp/spi/impl/DDOrderMRPSupplyProducer.java</code>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Service

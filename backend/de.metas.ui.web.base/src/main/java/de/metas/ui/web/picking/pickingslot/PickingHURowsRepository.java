@@ -72,7 +72,7 @@ import java.util.function.Supplier;
 /**
  * This class is used by {@link PickingSlotViewRepository} and provides the HUs that are related to picking.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Service

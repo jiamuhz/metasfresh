@@ -47,7 +47,7 @@ import java.util.concurrent.Executors;
 /**
  * This component listens to all cache invalidation events (see {@link CacheMgt}) and invalidates the lookup descriptors which depend on a given table(s).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Component

@@ -45,7 +45,7 @@ import java.util.Set;
 /**
  * {@link IValidationRule} implementation which filters only those DocActions on which are suitable for current document status and user's role has access to them.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public final class DocActionValidationRule extends AbstractJavaValidationRule
 {

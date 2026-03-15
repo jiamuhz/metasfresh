@@ -42,7 +42,7 @@ import de.metas.util.Check;
  * <p>
  * Almost immutable; only the {@link #getDLM_Partition_Config_Line_ID()} property is mutable.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PartitionerConfigLine

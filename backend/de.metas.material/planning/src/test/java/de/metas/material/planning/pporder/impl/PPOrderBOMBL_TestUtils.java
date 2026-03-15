@@ -37,7 +37,7 @@ import lombok.experimental.UtilityClass;
  * Contains code to set stuff needed needed not directly for the tests,
  * but because the tests work with {@link I_PP_Order} etc and the code under tests works with {@link PPOrder} pojos.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

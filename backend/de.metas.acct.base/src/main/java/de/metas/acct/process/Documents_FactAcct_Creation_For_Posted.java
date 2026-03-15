@@ -44,7 +44,7 @@ import de.metas.util.Services;
 /**
  * The documents (created one day before) that were marked as posted but have no fact accounts will be reposted by this process
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class Documents_FactAcct_Creation_For_Posted extends JavaProcess

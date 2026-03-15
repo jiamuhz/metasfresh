@@ -60,7 +60,7 @@ import lombok.NonNull;
  *
  * This implementation shall be used when dealing with small amount of HUs.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 class HUEditorViewRowBuffer_FullyCached implements HUEditorViewRowBuffer

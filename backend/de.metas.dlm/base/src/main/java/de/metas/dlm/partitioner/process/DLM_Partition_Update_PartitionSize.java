@@ -29,7 +29,7 @@ import de.metas.util.Services;
 /**
  * Invokes {@link IDLMService#updatePartitionSize(I_DLM_Partition)} on the currently selected partitions.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class DLM_Partition_Update_PartitionSize extends JavaProcess

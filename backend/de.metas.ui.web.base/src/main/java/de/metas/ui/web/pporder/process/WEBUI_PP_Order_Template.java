@@ -33,7 +33,7 @@ import de.metas.ui.web.process.adprocess.ViewBasedProcessTemplate;
 /**
  * Template class for all processes which are based on {@link PPOrderLinesView}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public abstract class WEBUI_PP_Order_Template

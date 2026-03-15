@@ -53,7 +53,7 @@ import java.util.function.Predicate;
  * <p>
  * Takes {@link WebuiHUTransformParameters} as input and transform given HU by calling the proper {@link HUTransformService} methods.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class WebuiHUTransformCommand
 {

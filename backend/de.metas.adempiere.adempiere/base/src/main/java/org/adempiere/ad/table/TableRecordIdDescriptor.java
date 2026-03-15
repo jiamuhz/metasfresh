@@ -54,7 +54,7 @@ import lombok.Value;
  * @see PartitionerServiceOld#augmentPartitionerConfig(PartitionerConfig, java.util.List)
  * @see DLMReferenceException#getTableReferenceDescriptor()
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Value

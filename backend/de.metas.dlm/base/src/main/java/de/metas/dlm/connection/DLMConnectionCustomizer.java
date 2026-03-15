@@ -30,7 +30,7 @@ import de.metas.connection.ITemporaryConnectionCustomizer;
  *
  * @see IConnectionCustomizerService#registerTemporaryCustomizer(ITemporaryConnectionCustomizer).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

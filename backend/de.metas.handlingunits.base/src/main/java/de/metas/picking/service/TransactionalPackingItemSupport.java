@@ -41,7 +41,7 @@ import de.metas.util.Services;
 /**
  * Transactional support helper for {@link TransactionalPackingItem}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 final class TransactionalPackingItemSupport
@@ -130,7 +130,7 @@ final class TransactionalPackingItemSupport
 	/**
 	 * Transactional item state holder.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 *
 	 */
 	private static final class ItemState

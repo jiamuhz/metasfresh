@@ -57,7 +57,7 @@ import javax.annotation.Nullable;
 /**
  * Quick input instance
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class QuickInput

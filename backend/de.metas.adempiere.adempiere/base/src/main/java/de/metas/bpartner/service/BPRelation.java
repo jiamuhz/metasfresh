@@ -41,7 +41,7 @@ import static de.metas.common.util.CoalesceUtil.coalesce;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Value

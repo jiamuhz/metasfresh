@@ -40,7 +40,7 @@ import java.util.stream.Stream;
 /**
  * HU Editor: Move selected HU to direct warehouse (aka Materialentnahme)
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class WEBUI_M_HU_MoveToDirectWarehouse extends HUEditorProcessTemplate implements IProcessPrecondition

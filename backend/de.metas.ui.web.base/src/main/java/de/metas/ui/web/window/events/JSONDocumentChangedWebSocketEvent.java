@@ -51,7 +51,7 @@ import java.util.Objects;
  * <p>
  * Event sent by backend when a document was changed.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 @EqualsAndHashCode

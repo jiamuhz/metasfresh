@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * Service which allows us to PUSH from metasfresh server to webui server.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IWebuiPush extends ISingletonService

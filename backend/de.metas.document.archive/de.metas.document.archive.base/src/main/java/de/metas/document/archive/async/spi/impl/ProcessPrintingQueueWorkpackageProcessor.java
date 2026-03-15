@@ -18,7 +18,7 @@ import java.util.Properties;
  * Iterates the workpackage's POs and for each po retrieves the referencing {@code AD_Archive} records
  * and invokes {@link IArchiveEventManager#fireVoidDocument(org.compiere.model.I_AD_Archive)} on them.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class ProcessPrintingQueueWorkpackageProcessor implements IWorkpackageProcessor
 {

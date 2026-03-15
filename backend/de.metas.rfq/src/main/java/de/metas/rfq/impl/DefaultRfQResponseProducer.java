@@ -63,7 +63,7 @@ import de.metas.util.Services;
 /**
  * Default {@link IRfQResponse} producer.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class DefaultRfQResponseProducer implements IRfQResponseProducer

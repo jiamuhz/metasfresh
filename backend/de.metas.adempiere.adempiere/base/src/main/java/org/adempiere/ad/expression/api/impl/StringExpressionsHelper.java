@@ -32,7 +32,7 @@ import org.compiere.util.Evaluatee;
 /**
  * Contains miscellaneous helper methods for handling and evaluating string expressions.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class StringExpressionsHelper

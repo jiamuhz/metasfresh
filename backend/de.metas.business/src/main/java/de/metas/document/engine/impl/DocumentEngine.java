@@ -68,7 +68,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.getTableId;
 /**
  * Document Action Engine
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @author based on original version of Jorg Janke
  */
 /* package */class DocumentEngine

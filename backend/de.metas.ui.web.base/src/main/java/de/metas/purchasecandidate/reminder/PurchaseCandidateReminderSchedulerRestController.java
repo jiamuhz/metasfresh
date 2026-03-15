@@ -43,7 +43,7 @@ import de.metas.ui.web.session.UserSession;
 /**
  * {@link PurchaseCandidateReminderScheduler} REST controller.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @RestController
 @RequestMapping(PurchaseCandidateReminderSchedulerRestController.ENDPOINT)

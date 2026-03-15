@@ -39,7 +39,7 @@ import de.metas.util.Services;
 /**
  * Create {@link I_C_RfQResponse}s from {@link I_C_RfQ}'s topic.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class C_RfQ_CreateResponses extends JavaProcess implements IProcessPrecondition

@@ -36,7 +36,7 @@ import de.metas.util.GuavaCollectors;
 /**
  * JSON representation of {@link DocumentQueryOrderBy}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class JSONViewOrderBy

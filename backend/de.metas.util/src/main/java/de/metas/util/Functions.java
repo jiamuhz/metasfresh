@@ -36,7 +36,7 @@ import com.google.common.base.MoreObjects;
 /**
  * Miscellaneous {@link Function} helpers.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class Functions
@@ -105,7 +105,7 @@ public final class Functions
 	 * IMPORTANT: some implementations might use some "key function" internally, which derives the given input and produced a cache. The value will be stored for that key.
 	 * So in this case, the function will serve from it's internal cache if there is already a precalculated result for the key which is derived from given <code>input</code>.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 *
 	 * @param <T> input type
 	 * @param <R> result type

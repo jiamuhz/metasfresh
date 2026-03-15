@@ -41,7 +41,7 @@ import java.math.BigDecimal;
 /**
  * Receive planning HUs using standard/default configuration.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class WEBUI_M_ReceiptSchedule_ReceiveHUs_UsingDefaults extends WEBUI_M_ReceiptSchedule_ReceiveHUs_Base
 {

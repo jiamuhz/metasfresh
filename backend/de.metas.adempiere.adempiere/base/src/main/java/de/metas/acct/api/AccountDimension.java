@@ -43,7 +43,7 @@ import java.util.Optional;
 /**
  * Immutable {@link AccountDimension} implementation
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public final class AccountDimension
 {

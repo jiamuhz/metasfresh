@@ -40,7 +40,7 @@ import lombok.ToString;
 /**
  * Send by the material planner when it came up with a distribution plan that could be turned into an {@link I_DD_Order}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @EqualsAndHashCode(callSuper = true)
 @ToString(callSuper = true)

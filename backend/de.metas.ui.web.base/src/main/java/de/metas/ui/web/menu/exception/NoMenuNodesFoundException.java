@@ -31,7 +31,7 @@ import de.metas.i18n.TranslatableStrings;
 /**
  * Exception thrown when requested node(s), indentified by ID or by query or by something else, were not found.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("serial")

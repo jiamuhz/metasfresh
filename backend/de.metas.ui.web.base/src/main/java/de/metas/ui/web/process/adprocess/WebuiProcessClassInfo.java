@@ -67,7 +67,7 @@ import java.util.stream.Stream;
 /**
  * Decorates a {@link ProcessClassInfo} and contains webui related information too.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public final class WebuiProcessClassInfo
 {

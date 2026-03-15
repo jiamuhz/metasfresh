@@ -44,7 +44,7 @@ import java.util.List;
 /**
  * This one is invoked by {@link IFlatrateTermEventService} if no other listener was registered for a particular conditions type.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class FallbackFlatrateTermEventListener implements IFlatrateTermEventListener

@@ -37,7 +37,7 @@ import java.util.Objects;
 /**
  * {@link IView}s repository.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public interface IViewsRepository
 {

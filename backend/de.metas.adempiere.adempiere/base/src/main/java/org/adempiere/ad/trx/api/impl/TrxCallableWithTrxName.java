@@ -47,7 +47,7 @@ import org.compiere.util.TrxRunnable;
  * </ul>
  * 
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @param <ResultType>
  */

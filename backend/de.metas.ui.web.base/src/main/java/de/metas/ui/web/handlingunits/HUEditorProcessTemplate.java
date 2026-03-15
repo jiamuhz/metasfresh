@@ -38,7 +38,7 @@ import java.util.stream.Stream;
 /**
  * A {@link ViewBasedProcessTemplate} implementation template which add convenient functionalities around {@link HUEditorView}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public abstract class HUEditorProcessTemplate extends ViewBasedProcessTemplate

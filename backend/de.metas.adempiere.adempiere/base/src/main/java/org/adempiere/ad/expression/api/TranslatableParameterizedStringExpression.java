@@ -48,7 +48,7 @@ import lombok.NonNull;
  * WARNING: this is a pure expression whom evaluation depends only on {@link Evaluatee} with one exception, the {@link Language#isBaseLanguage(String)} method used to determine if a given language is
  * the base language.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class TranslatableParameterizedStringExpression implements IStringExpression

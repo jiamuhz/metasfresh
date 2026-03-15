@@ -33,7 +33,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
  * <p>
  * NOTE: this exceptions binds to HTTP 404
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @SuppressWarnings("serial")
 @ResponseStatus(code = HttpStatus.NOT_FOUND)

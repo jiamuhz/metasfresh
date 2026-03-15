@@ -69,7 +69,7 @@ import lombok.NonNull;
 /**
  * This helper class declares master data and objects that are useful for testing.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class HUDocumentSelectTestHelper extends HUTestHelper

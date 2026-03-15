@@ -37,7 +37,7 @@ import de.metas.util.Services;
  * <p>
  * Hint: if you want to actually test trx related behavior (e.g. if some trx was committed and so on), then there is {@link MockedTrxManager}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PlainTrxManager extends AbstractTrxManager

@@ -33,7 +33,7 @@ import de.metas.util.Check;
 /**
  * {@link IFacetCollector} factory which is creating a composite {@link IFacetCollector} based on registered classes.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @param <ModelType>
  */

@@ -27,7 +27,7 @@ package de.metas.util;
  * Each invocation of {@link Services#get(Class)} with <code>class</code> being an IMultitonService will return a new instance of the service implementation.<br>
  * Also see {@link ISingletonService}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @see Services
  */

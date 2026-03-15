@@ -44,7 +44,7 @@ import lombok.NonNull;
 /**
  * This service wraps a {@link HUAndItemsDAO} and caches its results.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class CachedHUAndItemsDAO extends AbstractHUAndItemsDAO

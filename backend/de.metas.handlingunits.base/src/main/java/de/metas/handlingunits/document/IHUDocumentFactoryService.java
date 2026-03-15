@@ -33,7 +33,7 @@ import de.metas.util.ISingletonService;
 /**
  * this services acts as a composite HU document factory.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IHUDocumentFactoryService extends ISingletonService, IHUDocumentFactory

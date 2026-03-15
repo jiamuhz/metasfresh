@@ -52,7 +52,7 @@ import java.util.Properties;
  * <p>
  * NOTE: it's here and not inside UserSession class because it seems spring could not discover it
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Component
 @Primary

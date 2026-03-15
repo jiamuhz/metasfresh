@@ -50,7 +50,7 @@ import lombok.ToString;
 /**
  * Similar with {@link MapSessionRepository} but it's also firing session created/destroyed events.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ToString(of = { "defaultMaxInactiveInterval" })

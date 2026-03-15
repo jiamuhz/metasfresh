@@ -6,7 +6,7 @@ import de.metas.util.Services;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class InvoiceModuleInterceptor extends AbstractModuleInterceptor

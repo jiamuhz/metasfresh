@@ -56,7 +56,7 @@ import java.util.List;
  * <p>
  * It simply converts the filters to SQL using a given {@link SqlEntityBinding} to map filter parameters.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 /* package */final class SqlDefaultDocumentFilterConverter implements SqlDocumentFilterConverter
 {

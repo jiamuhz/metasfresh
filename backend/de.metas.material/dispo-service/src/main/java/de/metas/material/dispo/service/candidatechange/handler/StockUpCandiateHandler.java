@@ -46,7 +46,7 @@ import java.util.function.Function;
 /**
  * This handler might create a {@link SupplyRequiredEvent}, but does not decrease the protected stock quantity.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Service

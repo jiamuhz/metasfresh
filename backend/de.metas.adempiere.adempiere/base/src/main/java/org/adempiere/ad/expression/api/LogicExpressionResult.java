@@ -41,7 +41,7 @@ import java.util.Objects;
  * <li>{@link #toString()}: evaluation result, used parameters, expression that was evaluated
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

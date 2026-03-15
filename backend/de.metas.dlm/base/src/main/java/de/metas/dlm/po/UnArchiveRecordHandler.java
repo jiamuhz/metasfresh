@@ -47,7 +47,7 @@ import de.metas.util.Services;
  * This handler loads the given record (even if that record is archived) and sets its {@link IDLMAware#COLUMNNAME_DLM_Level} to {@link IMigratorService#DLM_Level_LIVE}.
  * For details, see {@link #invoke(String, Object[], IContextAware)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * @task https://github.com/metasfresh/metasfresh/issues/986
  */
 @Immutable

@@ -46,7 +46,7 @@ import org.junit.jupiter.api.Test;
 
 /**
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class LULoaderTest extends AbstractHUTest

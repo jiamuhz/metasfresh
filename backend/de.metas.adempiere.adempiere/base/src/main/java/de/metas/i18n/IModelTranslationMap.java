@@ -36,7 +36,7 @@ import javax.annotation.Nullable;
 /**
  * Contains all translated column values for a particular model (record) and for ALL languages.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IModelTranslationMap

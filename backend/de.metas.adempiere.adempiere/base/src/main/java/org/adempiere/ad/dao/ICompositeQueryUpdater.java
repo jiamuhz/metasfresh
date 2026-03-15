@@ -10,7 +10,7 @@ import java.math.BigDecimal;
 /**
  * Use {@link IQueryBL#createCompositeQueryUpdater(Class)} to get an instance.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @param <T> model class of the table to be updated.
  */

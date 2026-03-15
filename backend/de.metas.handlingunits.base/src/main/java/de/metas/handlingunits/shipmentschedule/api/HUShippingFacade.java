@@ -77,7 +77,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.load;
 /**
  * Facade which is able to generate shipping documents (generate shipment, add to shipper transportation, generate invoice).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @ToString(exclude = { "huShipperTransportationBL", "huShipmentScheduleDAO", "invoiceCandDAO", "invoiceCandBL", "trxManager", "inOutCandidateBL", "inOutDAO", "shipmentService" })
 public class HUShippingFacade

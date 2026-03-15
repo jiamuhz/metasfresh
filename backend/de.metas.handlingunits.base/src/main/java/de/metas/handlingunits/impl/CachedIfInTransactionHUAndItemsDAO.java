@@ -40,7 +40,7 @@ import lombok.NonNull;
 /**
  * This implementation delegated to either {@link CachedHUAndItemsDAO} or directly to {@link HUAndItemsDAO}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class CachedIfInTransactionHUAndItemsDAO implements IHUAndItemsDAO

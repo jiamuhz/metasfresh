@@ -59,7 +59,7 @@ import java.util.Properties;
 /**
  * Producer for multiple vendor returns for a given collection of HUs.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class MultiVendorHUReturnsInOutProducer
 {

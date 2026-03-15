@@ -31,7 +31,7 @@ import de.metas.util.ISingletonService;
 /**
  * Creates {@link IPaymentBatch}es.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IPaymentBatchFactory extends ISingletonService

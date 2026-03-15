@@ -34,7 +34,7 @@ import lombok.NonNull;
 /**
  * Wraps a given <code>text</code> and will call {@link Msg#translate(Properties, String, boolean)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @lombok.EqualsAndHashCode
 final class ADElementOrADMessageTranslatableString implements ITranslatableString

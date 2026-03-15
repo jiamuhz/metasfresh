@@ -33,7 +33,7 @@ import de.metas.process.ProcessPreconditionsResolution;
 /**
  * Process used to test parent and child views informations provided by webui frontend.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://github.com/metasfresh/metasfresh-webui-api/issues/755
  */
 public class WEBUI_TestParentChildViewParams extends ViewBasedProcessTemplate implements IProcessPrecondition

@@ -40,7 +40,7 @@ import java.util.Date;
  * This handler keeps track of the lad added records that have an {@code IsSOTrx} or {@code SOTrx} column.
  * If there was a record with {@code SOTrx='Y'} and then a record with {@code SOTrx='N'} is coming along (or vice versa, ofc), then it will use {@link Loggables} to log an informative message and return {@link AddResult#STOP}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class SalesPurchaseWatchDog implements IIterateResultHandler
 {

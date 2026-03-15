@@ -44,7 +44,7 @@ import java.util.List;
 /**
  * HU Editor: Extract requested amount of TUs and move them to direct warehouse (aka Materialentnahme)
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class WEBUI_M_HU_MoveTUsToDirectWarehouse extends HUEditorProcessTemplate implements IProcessPrecondition
 {

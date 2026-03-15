@@ -50,7 +50,7 @@ import de.metas.util.Check;
 /**
  * Wraps a given {@link IStringExpression} and caches it's evaluation results.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class CachedStringExpression implements ICachedStringExpression

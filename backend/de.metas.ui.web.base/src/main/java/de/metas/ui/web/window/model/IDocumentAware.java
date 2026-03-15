@@ -25,7 +25,7 @@ package de.metas.ui.web.window.model;
 /**
  * Interface implemented by all classes which can provide {@link Document}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IDocumentAware
 {

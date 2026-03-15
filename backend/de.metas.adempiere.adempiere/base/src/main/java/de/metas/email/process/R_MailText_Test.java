@@ -42,7 +42,7 @@ import de.metas.util.Services;
 /**
  * Test the {@link I_R_MailText}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class R_MailText_Test extends JavaProcess

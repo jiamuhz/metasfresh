@@ -32,7 +32,7 @@ import lombok.Value;
 /**
  * The result of {@link WebuiHUTransformCommand#execute()}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 @Builder

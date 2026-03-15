@@ -75,7 +75,7 @@ import java.util.function.IntFunction;
  * </ul>
  *
  * @author authors of earlier versions of this class are: Jorg Janke, Teo Sarca
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public abstract class JavaProcess implements ILoggable, IContextAware
 {

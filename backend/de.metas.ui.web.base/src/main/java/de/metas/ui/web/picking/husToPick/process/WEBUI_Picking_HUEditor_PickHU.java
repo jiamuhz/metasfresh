@@ -34,7 +34,7 @@ import de.metas.ui.web.picking.pickingslot.process.WEBUI_Picking_HUEditor_Launch
  * 
  * This process is called from the HU selection dialog that is opened by {@link WEBUI_Picking_HUEditor_Launcher}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class WEBUI_Picking_HUEditor_PickHU

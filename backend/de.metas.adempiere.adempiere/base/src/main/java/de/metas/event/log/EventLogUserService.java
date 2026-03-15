@@ -46,7 +46,7 @@ import lombok.Value;
 /**
  * Tools that can be used by code that uses the metasfresh event framework, when either posting or handling events.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Service

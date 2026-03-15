@@ -43,7 +43,7 @@ import lombok.NonNull;
 /**
  * Mutable document field change.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class DocumentFieldChange

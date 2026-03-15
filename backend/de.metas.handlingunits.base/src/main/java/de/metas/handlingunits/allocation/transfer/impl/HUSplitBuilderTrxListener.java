@@ -30,7 +30,7 @@ import de.metas.handlingunits.hutransaction.IHUTrxListener;
  * This listener is added to a {@link IHUContext} before a split or merge or sth similar is executed.
  * Its job is to invoke the other listeners' {@link IHUTrxListener#onSplitTransaction(IHUContext, IHUTransactionCandidate, IHUTransactionCandidate)} method if its own {@link #onUnloadLoadTransaction(IHUContext, IHUTransactionCandidate, IHUTransactionCandidate)} method is invoked.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 /* package */final class HUSplitBuilderTrxListener implements IHUTrxListener

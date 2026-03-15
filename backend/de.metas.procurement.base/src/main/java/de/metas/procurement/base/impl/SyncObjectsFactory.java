@@ -82,7 +82,7 @@ import java.util.concurrent.ExecutionException;
 /**
  * Factory used to create all sync objects that we are sending from metasfresh server to webui server.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class SyncObjectsFactory
 {

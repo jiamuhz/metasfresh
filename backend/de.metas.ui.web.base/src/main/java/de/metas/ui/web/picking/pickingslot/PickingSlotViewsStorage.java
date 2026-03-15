@@ -52,7 +52,7 @@ import java.util.stream.Stream;
  * 
  * It's not actually a storage. It just forwards all calls to {@link PackageableView} where the {@link PickingSlotView}s are stored, one per each row.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @Component

@@ -69,7 +69,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.loadOrNew;
 import static org.adempiere.model.InterfaceWrapperHelper.saveRecord;
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Repository
 public class BPartnerCreditLimitRepository

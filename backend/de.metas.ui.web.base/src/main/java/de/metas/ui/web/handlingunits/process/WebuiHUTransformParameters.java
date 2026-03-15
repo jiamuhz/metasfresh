@@ -35,7 +35,7 @@ import lombok.Value;
 /**
  * {@link WebuiHUTransformCommand} parameters.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Value

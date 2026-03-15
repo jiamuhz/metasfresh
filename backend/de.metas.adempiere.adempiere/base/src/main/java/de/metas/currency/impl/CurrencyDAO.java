@@ -60,7 +60,7 @@ import java.util.Map;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @deprecated TODO shall be merged into CurrencyRepository
  */
 @Deprecated

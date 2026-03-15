@@ -48,7 +48,7 @@ import de.metas.util.Services;
  * For each of those {@link I_DLM_Partition}s, the process loads its {@link Partition}, submits it to {@link ICoordinatorService#inspectPartition(Partition)}
  * and then stores the partition's new target DLM level in the DB.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class DLM_Partition_Inspect extends JavaProcess

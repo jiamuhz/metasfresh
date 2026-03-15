@@ -49,7 +49,7 @@ import java.util.function.Consumer;
 /**
  * Publishes document related events to websocket endpoints.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Component
 @RequiredArgsConstructor

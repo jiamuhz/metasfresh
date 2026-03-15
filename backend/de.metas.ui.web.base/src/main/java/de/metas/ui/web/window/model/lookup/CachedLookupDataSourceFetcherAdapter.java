@@ -42,7 +42,7 @@ import java.util.Optional;
 /**
  * Wraps a given {@link LookupDataSourceFetcher} and cached its retrieving methods.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public final class CachedLookupDataSourceFetcherAdapter implements LookupDataSourceFetcher
 {

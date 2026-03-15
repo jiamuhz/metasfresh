@@ -20,7 +20,7 @@ import lombok.ToString;
  * This classe's {@link #getHUItemStorage(I_M_HU_Item, IAllocationRequest)} can return a storage with an
  * "artificial" uppper bound that is different from the capacity defined in {@link I_M_HU_PI_Item_Product}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ToString

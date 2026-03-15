@@ -56,7 +56,7 @@ import lombok.NonNull;
  * Use {@link #newInstance(IHUContext, I_M_HU)} to get an instance for production use.
  *
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 /* package */class HUReceiptLinePartAttributes

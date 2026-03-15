@@ -46,7 +46,7 @@ import de.metas.util.Services;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ExportProductSpecifications extends JavaProcess implements IProcessPrecondition

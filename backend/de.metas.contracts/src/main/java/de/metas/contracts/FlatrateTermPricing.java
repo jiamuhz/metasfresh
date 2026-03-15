@@ -53,7 +53,7 @@ import java.time.LocalDate;
  * Note: this code use uses the pricing engine.
  * It does not care about special contract related pricing rules that might or might not be applied by the pricing engine.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 @Builder

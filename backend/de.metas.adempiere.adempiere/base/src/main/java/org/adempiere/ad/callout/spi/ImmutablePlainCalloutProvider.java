@@ -39,7 +39,7 @@ import de.metas.util.Check;
 /**
  * An immutable {@link ICalloutProvider} which providing convenient methods to add {@link ICalloutInstance}s while building.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

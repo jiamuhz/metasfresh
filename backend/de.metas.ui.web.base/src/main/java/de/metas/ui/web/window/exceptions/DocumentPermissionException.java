@@ -30,7 +30,7 @@ import org.adempiere.exceptions.AdempiereException;
 /**
  * Exception thrown when a required document permission was not granted.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public class DocumentPermissionException extends AdempiereException
 {

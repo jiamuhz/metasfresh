@@ -42,7 +42,7 @@ import java.util.List;
 /**
  * Mass enqueue {@link I_PMM_PurchaseCandidate} records to be processed and purchase orders to be generated.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class PMM_GenerateOrdersEnqueuer
 {

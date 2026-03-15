@@ -34,7 +34,7 @@ import de.metas.handlingunits.hutransaction.IHUTrxBL;
  * Implementors of this interface are altered by the allocation BL as the allocation takes place.<br>
  * Use {@link AllocationUtils} to obtain an instance to work with. 
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface IMutableAllocationResult extends IAllocationResult

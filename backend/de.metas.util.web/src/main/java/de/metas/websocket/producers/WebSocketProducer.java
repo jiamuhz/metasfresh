@@ -34,7 +34,7 @@ import java.util.List;
  * <p>
  * NOTE: if the implementation is annotated with {@link org.springframework.stereotype.Component} it will be automatically discovered by {@link WebSocketProducersRegistry} on start.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public interface WebSocketProducer
 {

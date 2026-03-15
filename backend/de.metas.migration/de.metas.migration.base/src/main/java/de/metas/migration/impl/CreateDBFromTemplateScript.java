@@ -36,7 +36,7 @@ import lombok.Setter;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class CreateDBFromTemplateScript implements IScript

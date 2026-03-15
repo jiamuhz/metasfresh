@@ -36,7 +36,7 @@ import de.metas.ui.web.window.datatypes.WindowId;
  * 
  * Please annotate your implementation with {@link Component} and it will be automatically discovered and used for {@link #getWindowId()}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IViewInvalidationAdvisor

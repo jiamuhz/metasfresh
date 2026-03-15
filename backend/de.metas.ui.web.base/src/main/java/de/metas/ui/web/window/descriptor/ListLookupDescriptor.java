@@ -41,7 +41,7 @@ import java.util.function.Function;
 /**
  * {@link LookupDescriptor} and {@link LookupDataSourceFetcher} implementation which is backed by a given {@link LookupValuesList} supplier.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("OptionalUsedAsFieldOrParameterType")

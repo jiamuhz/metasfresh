@@ -58,7 +58,7 @@ import java.util.stream.Stream;
 /**
  * Inserts {@link ImpDataLine}s into import tables.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 final class SqlInsertIntoImportTableCommand

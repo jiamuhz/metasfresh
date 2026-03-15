@@ -52,7 +52,7 @@ import java.util.function.IntFunction;
 /**
  * Also see {@link de.metas.ui.web.document.filter.sql.SqlDocumentFilterConverter}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Immutable
 @EqualsAndHashCode

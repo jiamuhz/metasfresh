@@ -45,7 +45,7 @@ import org.adempiere.warehouse.WarehouseId;
 /**
  * HU editor: Move selected HUs to a given quality issues warehouse
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * Task initial task https://github.com/metasfresh/metasfresh-webui-api/issues/396
  */
 public class WEBUI_M_HU_MoveToQualityWarehouse extends HUEditorProcessTemplate implements IProcessPrecondition

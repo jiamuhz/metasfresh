@@ -40,7 +40,7 @@ import static org.junit.Assert.assertThat;
 /**
  * Works together with {@link TestQueue_InheritPriority}. can't be an inner class of that test class because of reflection-instantiation problems.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class TestQueue_InheritPriority_WorkPackageProcessor implements IWorkpackageProcessor

@@ -33,7 +33,7 @@ import java.util.Properties;
 /**
  * {@link I_Fact_Acct_Log} DAO.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IFactAcctLogDAO extends ISingletonService

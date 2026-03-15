@@ -66,7 +66,7 @@ import de.metas.util.GuavaCollectors;
 /**
  * Handles all REST API exceptions
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Component
 // Order: IMPORTANT: because we want to call this handler before any other. Else, if it's the last one added, it might be that it will be never called

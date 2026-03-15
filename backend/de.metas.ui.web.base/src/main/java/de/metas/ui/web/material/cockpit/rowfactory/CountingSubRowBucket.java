@@ -50,7 +50,7 @@ import static de.metas.util.Check.assumeNotNull;
 /**
  * Mutable row representation that is used during the rows' loading
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @EqualsAndHashCode(of = "plantId")

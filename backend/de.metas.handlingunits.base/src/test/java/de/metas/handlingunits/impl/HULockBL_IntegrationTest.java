@@ -54,7 +54,7 @@ import java.util.List;
  * <Li>{@link IHUQueryBuilder#onlyLocked()}
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @ExtendWith(HULockBL_IntegrationTest.TestWatcher.class)
 public class HULockBL_IntegrationTest

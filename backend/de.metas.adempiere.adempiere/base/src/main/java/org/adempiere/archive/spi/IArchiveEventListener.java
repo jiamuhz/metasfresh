@@ -33,7 +33,7 @@ import org.compiere.model.I_AD_Archive;
 /**
  * Implementors can be registered to {@link IArchiveEventManager#registerArchiveEventListener(IArchiveEventListener)} and can then be fired using that manager.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IArchiveEventListener
 {

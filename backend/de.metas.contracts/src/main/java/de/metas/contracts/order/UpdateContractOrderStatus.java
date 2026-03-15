@@ -44,7 +44,7 @@ import de.metas.order.OrderId;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class UpdateContractOrderStatus

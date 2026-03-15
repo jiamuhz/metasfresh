@@ -47,7 +47,7 @@ import de.metas.util.Services;
 /**
  * Default destination warehouse provider.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 /* package */final class DefaultFromOrderLineWarehouseDestProvider implements IReceiptScheduleWarehouseDestProvider

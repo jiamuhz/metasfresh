@@ -19,7 +19,7 @@ import lombok.ToString;
  * <p>
  * As far as i see, it needs to be initialized using {@link #addUnpackedItem(IPackingItem)} or {@link #addUnpackedItems(Collection)}, before the fun can start.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ToString

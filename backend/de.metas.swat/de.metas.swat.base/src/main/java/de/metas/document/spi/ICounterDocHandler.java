@@ -27,7 +27,7 @@ import de.metas.document.engine.IDocument;
 /**
  * Note: Implementers usually extend {@link CounterDocumentHandlerAdapter}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ICounterDocHandler

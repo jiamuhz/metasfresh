@@ -109,7 +109,7 @@ import java.util.function.Supplier;
  * <li>in case of material issue: consume/destroy the HU, create CC
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class HUPPOrderIssueReceiptCandidatesProcessor
 {

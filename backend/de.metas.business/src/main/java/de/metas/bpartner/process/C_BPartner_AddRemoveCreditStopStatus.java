@@ -22,7 +22,7 @@ import org.compiere.model.I_C_BPartner;
  * This process set credit status to Credit Stop or removes it, in function by parameter <code>IsSetCreditStop</code> <br>
  * The status <code>CreditStop</code> is removed only if a new credit limit was added and that new credit limit allows it
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class C_BPartner_AddRemoveCreditStopStatus extends JavaProcess implements IProcessPrecondition

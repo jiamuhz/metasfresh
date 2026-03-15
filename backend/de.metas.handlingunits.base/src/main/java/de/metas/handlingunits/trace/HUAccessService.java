@@ -48,7 +48,7 @@ import lombok.NonNull;
 /**
  * The job of this service is to access the {@link I_M_HU}s and hu-items, hu-storages etc, to get the data needed by {@link HUTraceEventsService}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Service

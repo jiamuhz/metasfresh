@@ -34,7 +34,7 @@ import lombok.NonNull;
 /**
  * This class loads the local settings properties file and return a {@link DBConnectionSettingProperties} instance.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @AllArgsConstructor

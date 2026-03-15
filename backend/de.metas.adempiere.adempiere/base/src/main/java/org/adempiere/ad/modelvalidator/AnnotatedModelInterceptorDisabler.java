@@ -39,7 +39,7 @@ import java.util.Set;
 /**
  * This class allows us to disable annotated model interceptors via {@link org.compiere.model.I_AD_SysConfig} records.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * task https://github.com/metasfresh/metasfresh/issues/2482
  */
 /* package */ class AnnotatedModelInterceptorDisabler

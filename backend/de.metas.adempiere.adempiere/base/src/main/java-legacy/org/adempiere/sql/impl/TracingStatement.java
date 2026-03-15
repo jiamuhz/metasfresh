@@ -36,7 +36,7 @@ import java.sql.Statement;
 /**
  * {@link CStatement} wrapper which traces SQL queries
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @param <StatementType>
  */

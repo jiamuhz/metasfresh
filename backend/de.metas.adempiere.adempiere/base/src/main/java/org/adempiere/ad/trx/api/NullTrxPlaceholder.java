@@ -35,7 +35,7 @@ import javax.annotation.Nullable;
 /**
  * {@link ITrx} implementation to be used as null/out-of-transaction placeholder where null {@link ITrx} are not allowed (e.g. guava cache).
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class NullTrxPlaceholder implements ITrx

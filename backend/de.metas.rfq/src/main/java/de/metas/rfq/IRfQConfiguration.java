@@ -30,7 +30,7 @@ import de.metas.util.ISingletonService;
  * 
  * This is the central point for registering all your producers, factories etc.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IRfQConfiguration extends ISingletonService

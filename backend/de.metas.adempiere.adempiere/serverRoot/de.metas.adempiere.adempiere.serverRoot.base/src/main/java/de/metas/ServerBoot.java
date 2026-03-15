@@ -67,7 +67,7 @@ import java.util.concurrent.TimeUnit;
 /**
  * metasfresh server boot.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @SpringBootApplication(scanBasePackages = { "de.metas", "org.adempiere" })
 @ServletComponentScan(value = { "de.metas", "org.adempiere" })

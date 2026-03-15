@@ -49,7 +49,7 @@ import java.util.List;
  * A helper class for {@link InventoryImportProcess} that performs the "dirty" but efficient SQL updates on the {@link I_I_Inventory} table.
  * Those updates complements the data from existing metasfresh records and flag those import records that can't yet be imported.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @UtilityClass
 final class MInventoryImportTableSqlUpdater

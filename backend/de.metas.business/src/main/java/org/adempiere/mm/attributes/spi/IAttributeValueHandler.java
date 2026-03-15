@@ -27,7 +27,7 @@ import org.compiere.model.I_M_Attribute;
 /**
  * Implementations of this interface are used for attribute handling. They are assigned to attributes via {@link I_M_Attribute#COLUMN_AD_JavaClass_ID}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IAttributeValueHandler
 {

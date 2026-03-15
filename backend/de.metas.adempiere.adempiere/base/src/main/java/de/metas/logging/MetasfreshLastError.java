@@ -36,7 +36,7 @@ import org.slf4j.Logger;
  *
  * NOTE: in future we will remove this class, because the feature is legacy.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @deprecated
  */

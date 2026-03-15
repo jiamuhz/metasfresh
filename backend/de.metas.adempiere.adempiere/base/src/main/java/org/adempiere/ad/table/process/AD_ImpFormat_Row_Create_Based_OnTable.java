@@ -43,7 +43,7 @@ import lombok.NonNull;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class AD_ImpFormat_Row_Create_Based_OnTable extends JavaProcess

@@ -31,7 +31,7 @@ import org.compiere.util.Evaluatee;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Value

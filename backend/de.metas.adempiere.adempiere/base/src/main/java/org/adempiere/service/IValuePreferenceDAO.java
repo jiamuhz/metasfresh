@@ -31,7 +31,7 @@ import java.util.Properties;
 /**
  * We moved this code from a legacy codebase's IValuePreferenceBL implementation.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://github.com/metasfresh/metasfresh/issues/1771
  */
 public interface IValuePreferenceDAO extends ISingletonService

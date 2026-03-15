@@ -46,7 +46,7 @@ import java.util.Set;
 /**
  * Miscellaneous descriptors building helpers.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public final class DescriptorsFactoryHelper
 {

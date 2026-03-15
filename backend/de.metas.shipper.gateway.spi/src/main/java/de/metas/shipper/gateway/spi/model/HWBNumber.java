@@ -28,7 +28,7 @@ import lombok.EqualsAndHashCode;
 /**
  * House Way Bill (HWB)
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @see https://en.wikipedia.org/wiki/Global_Identification_Number_for_Consignment
  */
 @EqualsAndHashCode

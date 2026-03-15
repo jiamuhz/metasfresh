@@ -22,7 +22,7 @@ import java.util.List;
 /**
  * DAO to support {@link M_InOut_Handler} and {@link M_InOutLine_Handler}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @Service

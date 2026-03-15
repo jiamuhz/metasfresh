@@ -31,7 +31,7 @@ import lombok.EqualsAndHashCode;
 /**
  * Error message.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @EqualsAndHashCode

@@ -37,7 +37,7 @@ import lombok.ToString;
  *
  * To create new instances, please use {@link SqlDocumentFilterConverters}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

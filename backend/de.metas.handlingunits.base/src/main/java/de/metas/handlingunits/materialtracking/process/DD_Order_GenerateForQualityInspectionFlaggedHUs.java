@@ -49,7 +49,7 @@ import java.util.Iterator;
 /**
  * Process used to generate DD_Orders to move the HUs flagged as "scheduled from Quality Inspection" from a given warehouse to a given warehouse.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @implNote task 08639
  */
 public class DD_Order_GenerateForQualityInspectionFlaggedHUs extends JavaProcess

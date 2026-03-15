@@ -28,7 +28,7 @@ import java.util.Set;
 /**
  * Reads all Messages and stores them in a HashMap
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @author based on initial version of Jorg Janke
  * @deprecated Please use {@link IMsgBL}
  */

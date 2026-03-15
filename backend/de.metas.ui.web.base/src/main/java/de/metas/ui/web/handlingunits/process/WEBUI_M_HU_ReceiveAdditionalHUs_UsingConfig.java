@@ -53,7 +53,7 @@ import java.util.Optional;
 /**
  * Receive planning HUs using given configuration (parameters).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class WEBUI_M_HU_ReceiveAdditionalHUs_UsingConfig extends HUEditorProcessTemplate implements IProcessDefaultParametersProvider
 {

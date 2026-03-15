@@ -50,7 +50,7 @@ import java.util.function.Supplier;
  * <p>
  * Note that technically this view also contains the right-hand side {@link PickingSlotView}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class PackageableView extends AbstractCustomView<PackageableRow>
 {

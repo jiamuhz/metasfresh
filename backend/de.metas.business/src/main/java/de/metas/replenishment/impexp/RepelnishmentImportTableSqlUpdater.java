@@ -40,7 +40,7 @@ import static de.metas.impexp.format.ImportTableDescriptor.COLUMNNAME_I_IsImport
 /**
  * A helper class for {@link ReplenishmentImportProcess} that updates {@link I_I_Replenish} table.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

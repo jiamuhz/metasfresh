@@ -34,7 +34,7 @@ import de.metas.util.Services;
 /**
  * Generates purchase orders from {@link I_PMM_PurchaseCandidate}s by utilizing {@link OrdersAggregator}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class OrdersGenerator

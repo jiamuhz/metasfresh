@@ -27,7 +27,7 @@ import de.metas.util.Services;
 /**
  * Provides {@link ICalloutInstance}s from {@link I_AD_ColumnCallout}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 class DefaultCalloutProvider implements IDefaultCalloutProvider

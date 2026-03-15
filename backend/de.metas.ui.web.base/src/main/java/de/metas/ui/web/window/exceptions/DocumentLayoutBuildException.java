@@ -30,7 +30,7 @@ import org.springframework.web.bind.annotation.ResponseStatus;
 /**
  * Exception thrown by {@link DocumentDescriptorFactory} on any layout building issue.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @ResponseStatus(code = HttpStatus.NOT_FOUND)
 public class DocumentLayoutBuildException extends AdempiereException

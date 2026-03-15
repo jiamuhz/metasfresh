@@ -40,7 +40,7 @@ import de.metas.util.Services;
  * <p>
  * Note that the linking of those allocation lines is likely triggered via {@link MaterialTrackableDocumentByASIInterceptor}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class PaymentAllocationLineMaterialTrackingListener extends MaterialTrackingListenerAdapter

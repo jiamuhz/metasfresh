@@ -59,7 +59,7 @@ import java.util.Optional;
 /**
  * Facade of all services on which this REST endpoints depends
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Service
 public class BpartnerPriceListServicesFacade

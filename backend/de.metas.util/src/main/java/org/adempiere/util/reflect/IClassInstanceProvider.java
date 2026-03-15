@@ -27,7 +27,7 @@ import de.metas.util.Check;
 /**
  * To be used when it comes to class loading.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IClassInstanceProvider

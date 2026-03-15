@@ -34,7 +34,7 @@ import lombok.Value;
 /**
  * Fluent {@link I_I_BPartner} factory
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Builder
 @Value

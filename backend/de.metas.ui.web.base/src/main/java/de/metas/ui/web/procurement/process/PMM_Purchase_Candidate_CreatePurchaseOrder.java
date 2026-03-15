@@ -43,7 +43,7 @@ import de.metas.util.Services;
 /**
  * Mass enqueue {@link I_PMM_PurchaseCandidate} records to be processed and purchase orders to be generated.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Profile(Profiles.PROFILE_Webui)
 public class PMM_Purchase_Candidate_CreatePurchaseOrder

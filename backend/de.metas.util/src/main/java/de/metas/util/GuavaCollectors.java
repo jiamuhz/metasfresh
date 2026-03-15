@@ -55,7 +55,7 @@ import java.util.stream.StreamSupport;
 
 /**
  * @author based on <a href="https://gist.github.com/JakeWharton/9734167">GIST</a>
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @UtilityClass
 public final class GuavaCollectors

@@ -56,7 +56,7 @@ import java.util.function.Supplier;
 /**
  * Language.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * @author based on initial version developed by Jorg Janke
  */
 public final class Language implements Serializable

@@ -25,7 +25,7 @@ package de.metas.ui.web.view;
 /**
  * {@link IViewRow} record type
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IViewRowType

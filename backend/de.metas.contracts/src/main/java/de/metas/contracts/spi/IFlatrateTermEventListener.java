@@ -27,7 +27,7 @@ import de.metas.contracts.model.I_C_Flatrate_Term;
 /**
  * {@link I_C_Flatrate_Term} lifecycle handler.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IFlatrateTermEventListener

@@ -36,7 +36,7 @@ import de.metas.dlm.partitioner.IIterateResultHandler.AddResult;
  * <p>
  * The crawler uses it both to add the records it found and to get the next record to load the incoming and outgoing references for.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface IIterateResult

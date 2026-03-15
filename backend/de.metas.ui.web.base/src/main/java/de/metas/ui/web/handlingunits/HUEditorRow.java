@@ -81,7 +81,7 @@ import java.util.function.Function;
 /**
  * HU Editor's row
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @EqualsAndHashCode
 public final class HUEditorRow implements IViewRow

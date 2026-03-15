@@ -33,7 +33,7 @@ import de.metas.util.ISingletonService;
  * In other words, programatic callouts should be registered per-module and at one place within each module.<br>
  * However, since this interface extends {@link ISingletonService}, an instance can also be obtained via {@link de.metas.util.Services#get(Class)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IProgramaticCalloutProvider extends ICalloutProvider, ISingletonService

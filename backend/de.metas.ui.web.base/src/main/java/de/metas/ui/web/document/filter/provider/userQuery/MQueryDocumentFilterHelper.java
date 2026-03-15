@@ -40,7 +40,7 @@ import lombok.experimental.UtilityClass;
 /**
  * Helper class used to convert {@link MQuery}s to {@link DocumentFilter}.s
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

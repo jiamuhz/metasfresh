@@ -34,7 +34,7 @@ import javax.annotation.Nullable;
 /**
  * This class contains methods to obtain and work with {@link ILoggable}s.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

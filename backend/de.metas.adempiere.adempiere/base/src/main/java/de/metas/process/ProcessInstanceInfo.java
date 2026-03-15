@@ -101,7 +101,7 @@ import java.util.Set;
  * NOTE to developers: when changing this class, please keep in mind that it always shall be fully restorable from AD_PInstance_ID.
  *
  * @author authors of earlier versions of this class are: Jorg Janke, victor.perez@e-evolution.com
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @SuppressWarnings({ "OptionalUsedAsFieldOrParameterType" })
 public final class ProcessInstanceInfo implements Serializable

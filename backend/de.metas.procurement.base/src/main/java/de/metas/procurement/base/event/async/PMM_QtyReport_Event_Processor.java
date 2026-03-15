@@ -32,7 +32,7 @@ import de.metas.procurement.base.model.I_PMM_QtyReport_Event;
  * Workpackage processor to create {@link I_PMM_PurchaseCandidate}s from {@link I_PMM_QtyReport_Event}s.<br>
  * The actual work is done by {@link PMMQtyReportEventsProcessor}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PMM_QtyReport_Event_Processor extends WorkpackageProcessorAdapter

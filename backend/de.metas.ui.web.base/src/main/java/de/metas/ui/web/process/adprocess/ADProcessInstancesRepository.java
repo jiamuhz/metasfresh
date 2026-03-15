@@ -85,7 +85,7 @@ import java.util.stream.Stream;
 /**
  * {@link IProcessInstancesRepository} implementation for metasfresh {@link I_AD_Process}s.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Component
 public class ADProcessInstancesRepository implements IProcessInstancesRepository

@@ -69,7 +69,7 @@ import static de.metas.attachments.AttachmentTags.TAGNAME_SEND_VIA_EMAIL;
  * The recipient's email address is taken from {@link I_C_Doc_Outbound_Log#getCurrentEMailAddress()}.
  * Where this column is empty, no mail is send.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class MailWorkpackageProcessor implements IWorkpackageProcessor
 {

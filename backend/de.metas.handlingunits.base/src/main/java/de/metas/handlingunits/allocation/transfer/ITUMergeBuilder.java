@@ -40,7 +40,7 @@ import de.metas.quantity.Quantity;
  * <p>
  * Use the constructor of {@link TUMergeBuilder} to get an instance.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ITUMergeBuilder

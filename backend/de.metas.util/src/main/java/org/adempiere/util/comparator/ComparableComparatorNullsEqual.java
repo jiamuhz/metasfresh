@@ -27,7 +27,7 @@ import java.util.Comparator;
 /**
  * If any of the given arguments to compare is {@code null}, then this compoarator returns 0, i.e. treads them as equal.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @param <T>
  */

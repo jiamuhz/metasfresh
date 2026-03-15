@@ -75,7 +75,7 @@ import java.util.concurrent.ScheduledFuture;
 /**
  * Class responsible with notifying all users which have {@link #NOTIFICATION_GROUP_NAME} in one of their roles about which purchase candidates are due.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Component
 public class PurchaseCandidateReminderScheduler implements InitializingBean

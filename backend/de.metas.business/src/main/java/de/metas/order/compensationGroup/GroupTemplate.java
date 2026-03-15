@@ -39,7 +39,7 @@ import java.util.List;
  * <p>
  * It contains an name/productCategoryId and a list of compensation products to be added on group creation.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 public class GroupTemplate

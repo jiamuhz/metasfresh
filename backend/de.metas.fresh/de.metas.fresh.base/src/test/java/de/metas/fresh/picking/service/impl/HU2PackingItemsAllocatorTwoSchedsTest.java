@@ -70,7 +70,7 @@ import static org.junit.Assert.assertThat;
  * Tests the behavior of {@link HU2PackingItemsAllocator} with two {@link IPackingItem}s that contain at least two {@link I_M_ShipmentSchedule}.
  * Note: if these tests fail, it makes sense to first verify that all tests in {@link HU2PackingItemsAllocatorTest} works.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class HU2PackingItemsAllocatorTwoSchedsTest extends AbstractHUTest

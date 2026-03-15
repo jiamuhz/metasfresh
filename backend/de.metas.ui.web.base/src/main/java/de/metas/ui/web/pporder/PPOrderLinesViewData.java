@@ -42,7 +42,7 @@ import java.util.stream.Stream;
 /**
  * Contains {@link PPOrderLinesView}'s data
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Immutable
 final class PPOrderLinesViewData

@@ -42,7 +42,7 @@ import java.util.Map;
 /**
  * Base class for all "Document"-ish JSONs
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 // @JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE) // cannot use it because of "otherProperties"

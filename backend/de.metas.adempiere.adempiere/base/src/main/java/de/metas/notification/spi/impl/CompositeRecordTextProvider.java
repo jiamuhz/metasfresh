@@ -38,7 +38,7 @@ import de.metas.util.Check;
  * task 09833
  * Composite to gather all the registered notification ctx providers and return the most fit message from them
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class CompositeRecordTextProvider implements IRecordTextProvider

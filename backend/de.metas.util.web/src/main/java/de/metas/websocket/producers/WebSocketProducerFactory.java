@@ -27,7 +27,7 @@ import de.metas.websocket.WebsocketTopicName;
 /**
  * Implementations of this interface are responsible for creating {@link WebSocketProducer}s.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface WebSocketProducerFactory
 {

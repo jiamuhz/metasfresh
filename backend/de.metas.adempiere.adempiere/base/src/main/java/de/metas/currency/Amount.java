@@ -45,7 +45,7 @@ import java.util.stream.Stream;
 /**
  * Amount datatype: a {@link BigDecimal} value and a currency code.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 public class Amount implements Comparable<Amount>

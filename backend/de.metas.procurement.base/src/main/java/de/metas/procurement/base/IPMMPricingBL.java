@@ -29,7 +29,7 @@ import de.metas.util.ISingletonService;
 /**
  * BL used to calculate the pricing for various PMM models.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IPMMPricingBL extends ISingletonService

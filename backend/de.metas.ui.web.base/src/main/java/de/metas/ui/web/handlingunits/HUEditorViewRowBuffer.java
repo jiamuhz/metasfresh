@@ -41,7 +41,7 @@ import lombok.NonNull;
  *
  * Implementations of this interface are responsible for fetching the {@link HUEditorRow}s and (maybe)caching them.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 interface HUEditorViewRowBuffer

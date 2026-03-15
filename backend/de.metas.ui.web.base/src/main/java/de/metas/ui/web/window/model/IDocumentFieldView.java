@@ -39,7 +39,7 @@ import java.util.OptionalInt;
 /**
  * Document field view.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * @implNote This interface it's just a view of a {@link Document}'s field. Please don't setters or any other method which can chance document field's state.
  */
 public interface IDocumentFieldView

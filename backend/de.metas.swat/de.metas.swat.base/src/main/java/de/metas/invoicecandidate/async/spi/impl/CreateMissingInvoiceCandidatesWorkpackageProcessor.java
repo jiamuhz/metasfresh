@@ -56,7 +56,7 @@ import java.util.Properties;
  * <p>
  * To schedule an invoice candidates creation for a given model, please use {@link #schedule(Object)}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class CreateMissingInvoiceCandidatesWorkpackageProcessor extends WorkpackageProcessorAdapter
 {

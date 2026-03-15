@@ -38,7 +38,7 @@ import de.metas.util.Services;
 /**
  * A mocked processor for testing.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @Ignore

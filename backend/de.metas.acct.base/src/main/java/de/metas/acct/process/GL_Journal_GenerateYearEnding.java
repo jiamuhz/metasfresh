@@ -59,7 +59,7 @@ import java.util.List;
 /**
  * Process used to create year ending bookings.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class GL_Journal_GenerateYearEnding extends JavaProcess implements IProcessDefaultParametersProvider
 {

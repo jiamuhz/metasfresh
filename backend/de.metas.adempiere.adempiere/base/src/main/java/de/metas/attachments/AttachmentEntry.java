@@ -23,7 +23,7 @@ import java.util.Set;
 /**
  * Attachment entry
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 @ToString

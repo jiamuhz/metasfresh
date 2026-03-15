@@ -32,7 +32,7 @@ import javax.annotation.Nullable;
  * Predicate used to filter {@link NamePair} items based on given {@link IValidationContext}.
  * For more helping tools, please check {@link NamePairPredicates}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface INamePairPredicate

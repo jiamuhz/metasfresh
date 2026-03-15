@@ -38,7 +38,7 @@ import lombok.Value;
  * <li>locatorId</li>
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Value
 @JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)

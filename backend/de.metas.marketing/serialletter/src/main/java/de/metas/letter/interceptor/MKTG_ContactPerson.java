@@ -33,7 +33,7 @@ import lombok.NonNull;
 
 /**
  * Note: we need no MI because what would be that MI's job is done when {@link de.metas.marketing.base.model.ContactPerson}'s are loaded and stored in the repository
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Callout(I_MKTG_ContactPerson.class)
 @Component

@@ -36,7 +36,7 @@ import java.util.List;
 /**
  * Invoice candidates testing helper.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class InvoiceCandidatesTestHelper

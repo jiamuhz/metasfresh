@@ -68,7 +68,7 @@ import java.util.Map;
  */
 
 /**
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Component

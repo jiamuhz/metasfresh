@@ -36,7 +36,7 @@ import org.slf4j.LoggerFactory;
 /**
  * This class gets the binary tool's version from its {@code MANIFEST.MF}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 final class BinaryVersion

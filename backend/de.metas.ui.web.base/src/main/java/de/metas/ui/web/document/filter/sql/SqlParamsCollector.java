@@ -41,7 +41,7 @@ import lombok.NonNull;
 /**
  * Helper class used to collect SQL parameters and convert parameter values to strings with correct SQL syntax. See the unit tests for usage examples.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @EqualsAndHashCode

@@ -27,7 +27,7 @@ import org.compiere.model.I_AD_PInstance;
 /**
  * Selected included rows of a {@link I_AD_PInstance#getAD_Table_ID()} / {@link I_AD_PInstance#getRecord_ID()}.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface I_AD_PInstance_SelectedIncludedRecords

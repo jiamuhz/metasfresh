@@ -41,7 +41,7 @@ import de.metas.util.Check;
  * One instance specifies all tables whose records shall be part of DLM.
  * Almost immutable; only the {@link #getDLM_Partition_Config_ID()} property is mutable.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class PartitionConfig

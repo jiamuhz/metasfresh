@@ -43,7 +43,7 @@ import de.metas.util.Services;
 /**
  * Invokes the two DB functions {@code dlm.load_production_table_rows()} and {@code dlm.update_production_table()} until they are all processed.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  * @task https://github.com/metasfresh/metasfresh/issues/969
  */
 public class DLM_MassMigrate extends JavaProcess

@@ -30,7 +30,7 @@ import org.adempiere.ad.callout.spi.ICalloutProvider;
 /**
  * A {@link ICalloutProvider} which supplies no callouts.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public final class NullCalloutProvider implements ICalloutProvider

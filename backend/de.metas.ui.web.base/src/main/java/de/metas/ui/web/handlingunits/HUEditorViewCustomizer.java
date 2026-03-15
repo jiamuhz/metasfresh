@@ -29,7 +29,7 @@ import org.springframework.stereotype.Component;
  *
  * Implementations of this interface which are annotated with {@link Component} will be automatically discovered and registered.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface HUEditorViewCustomizer

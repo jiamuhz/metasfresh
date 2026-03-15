@@ -31,7 +31,7 @@ import de.metas.util.Loggables;
 /**
  * Cleans up stale <code>M_ShipmentSchedule_Recompute</code> records that might prevent ICs from getting updated.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  * @task https://metasfresh.atlassian.net/browse/FRESH-342
  * @task https://github.com/metasfresh/metasfresh/issues/298

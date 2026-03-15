@@ -15,7 +15,7 @@ import org.adempiere.tools.AdempiereToolsHelper;
 /**
  * Helper CLI tool to generate java constants code for a given AD_Reference_ID.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class AD_Ref_List_GenerateJavaConstants

@@ -32,7 +32,7 @@ import java.util.Optional;
 /**
  * {@link VATCode} DAO
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public interface IVATCodeDAO extends ISingletonService
 {

@@ -41,7 +41,7 @@ import de.metas.util.Services;
 /**
  * Invokes {@link IPartitionerService#createPartition(CreatePartitionRequestDELME)} for a specified number of times.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Process(requiresCurrentRecordWhenCalledFromGear = false)

@@ -30,7 +30,7 @@ import de.metas.util.Services;
 
 /**
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public class C_RfQ_RankResponses extends JavaProcess

@@ -40,7 +40,7 @@ import lombok.NonNull;
 /**
  * Helper class used to copy a given ASI.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ASICopy

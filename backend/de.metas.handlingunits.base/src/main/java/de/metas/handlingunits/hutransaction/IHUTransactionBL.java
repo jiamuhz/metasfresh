@@ -11,7 +11,7 @@ import org.adempiere.util.lang.impl.TableRecordReference;
 /**
  * Declare business logic to create different {@link IHUTransactionCandidate}s for different purposes.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface IHUTransactionBL extends ISingletonService

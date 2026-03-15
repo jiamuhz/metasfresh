@@ -27,7 +27,7 @@ import lombok.NonNull;
 /**
  * The "main" class that sets up and calls {@link RolloutMigrate} to do the actual work.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public class Main
 {

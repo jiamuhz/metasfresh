@@ -24,7 +24,7 @@ import lombok.NonNull;
 /**
  * Helper class used to create {@link I_M_InOutLine}s for a given inout header.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class EmptiesInOutLinesProducer extends AbstractPackingMaterialDocumentLinesBuilder

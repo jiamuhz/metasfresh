@@ -38,7 +38,7 @@ import java.util.Optional;
 /**
  * AD_Client_ID
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 @Value

@@ -46,7 +46,7 @@ import de.metas.util.Services;
 /**
  * Base class for all HU Shipment process tests which are focused how the shipment lines are aggregated based on HU's attributes.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task FRESH-578 #275
  */
 public abstract class HUShipmentProcess_AttributesAggregation_Base extends AbstractHUShipmentProcessIntegrationTest

@@ -32,7 +32,7 @@ import com.fasterxml.jackson.databind.SerializerProvider;
 /**
  * {@link JSONNullValue} serializer.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class JSONNullValueSerializer extends JsonSerializer<JSONNullValue>

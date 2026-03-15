@@ -41,7 +41,7 @@ import java.util.function.Function;
  * This class is used by {@link HUSplitBuilder} but can also be called from others. It does the "generic" splitting work while HUSplitBuilder has a lot of setters that can help callers in setting up a particular {@link IHUProducerAllocationDestination} which is then passed to this class.
  * If you have your own {@link IAllocationSource}, {@link IAllocationDestination} etc, you can call this class directly.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class HUSplitBuilderCoreEngine
 {

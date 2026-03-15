@@ -77,7 +77,7 @@ import lombok.NonNull;
 /**
  * WEBUI AD_Process based process instance controller
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 /* package */final class ADProcessInstanceController implements IProcessInstanceController

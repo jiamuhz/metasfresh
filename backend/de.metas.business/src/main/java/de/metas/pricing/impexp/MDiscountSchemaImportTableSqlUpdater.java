@@ -39,7 +39,7 @@ import lombok.experimental.UtilityClass;
  * A helper class for {@link DiscountSchemaImportProcess} that performs the "dirty" but efficient SQL updates on the {@link I_I_DiscountSchema} table.
  * Those updates complements the data from existing metasfresh records and flag those import records that can't yet be imported.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

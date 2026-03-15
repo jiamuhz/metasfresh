@@ -76,7 +76,7 @@ import java.util.Set;
 /**
  * Helper class used to fill {@link WebuiHUTransformParameters} (default values, lookups etc).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class WebuiHUTransformParametersFiller
 {

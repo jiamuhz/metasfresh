@@ -50,7 +50,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.load;
 /**
  * Handles {@link I_M_InOut}s. Mainly all invoice candidates creation logic is delegated to {@link M_InOutLine_Handler}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class M_InOut_Handler extends AbstractInvoiceCandidateHandler
 {

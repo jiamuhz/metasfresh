@@ -46,7 +46,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.newInstance;
 /**
  * Manufacturing order callout
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @author based on initial version developed by Victor Perez, Teo Sarca under ADempiere project
  */
 @Callout(I_PP_Order.class)

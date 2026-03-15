@@ -55,7 +55,7 @@ import java.util.stream.Collectors;
 /**
  * Helper class to build the SQLs to query the view data.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 public class SqlViewSelectData
 {

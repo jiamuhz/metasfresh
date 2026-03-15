@@ -27,7 +27,7 @@ import org.adempiere.util.lang.ITableRecordReference;
 /**
  * Implementors can be registered using {@link IIterateResult#registerHandler(IIterateResultListener)} and will then be notified about every new record that is added to the result.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IIterateResultHandler

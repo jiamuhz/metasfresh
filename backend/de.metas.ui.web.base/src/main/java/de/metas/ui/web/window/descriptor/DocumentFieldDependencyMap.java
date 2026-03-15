@@ -40,7 +40,7 @@ import java.util.Set;
 /**
  * Immutable document field's dependencies map.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public final class DocumentFieldDependencyMap
 {

@@ -41,7 +41,7 @@ import java.util.function.Supplier;
 /**
  * Allows to combine a number of different handlers and will delegate the actual works to the particular handler for the particular type of <code>model</code>.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class CompositeInterfaceWrapperHelper implements IInterfaceWrapperHelper
 {

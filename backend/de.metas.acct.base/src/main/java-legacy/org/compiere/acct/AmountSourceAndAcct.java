@@ -11,7 +11,7 @@ import de.metas.util.Check;
 /**
  * Immutable helper class which stores the a pair of amounts in source currency and in accounted currency.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 final class AmountSourceAndAcct

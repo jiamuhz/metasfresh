@@ -77,7 +77,7 @@ import java.util.Properties;
  * <p>
  * This shall be a short living object.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 class ClientSetup
 {

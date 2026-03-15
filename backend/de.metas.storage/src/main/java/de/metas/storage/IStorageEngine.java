@@ -31,7 +31,7 @@ import java.util.List;
 /**
  * Use {@link IStorageEngineService#getStorageEngine()} to get an instance.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IStorageEngine

@@ -37,7 +37,7 @@ import java.util.Set;
  * <p>
  * This process is the webui alternative for swing's side action: de.metas.invoicecandidate.callout.IC_ApproveForInvoicing_Action
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * task https://github.com/metasfresh/metasfresh/issues/2361
  */
 public class C_Invoice_Candidate_ApproveForInvoicing extends C_Invoice_Candidate_ProcessHelper

@@ -42,7 +42,7 @@ import java.util.stream.Stream;
  * View data repository.
  * This repository is responsible for fetching {@link IViewRow} or even their models.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IViewDataRepository

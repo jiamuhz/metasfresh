@@ -31,7 +31,7 @@ import lombok.NonNull;
  * <li>override displayed process caption
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @FunctionalInterface
 public interface IProcessPrecondition

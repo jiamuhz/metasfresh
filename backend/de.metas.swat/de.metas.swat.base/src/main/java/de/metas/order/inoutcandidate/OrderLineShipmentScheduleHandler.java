@@ -75,7 +75,7 @@ import static org.adempiere.model.InterfaceWrapperHelper.newInstance;
 /**
  * Default implementation for sales order lines.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  */
 @Component
 public class OrderLineShipmentScheduleHandler extends ShipmentScheduleHandler

@@ -50,7 +50,7 @@ import java.util.UUID;
 /**
  * This component listens to all cache invalidation events (see {@link CacheMgt}) and invalidates the right documents or included documents from {@link DocumentCollection}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Component
 public class DocumentCacheInvalidationDispatcher implements ICacheResetListener

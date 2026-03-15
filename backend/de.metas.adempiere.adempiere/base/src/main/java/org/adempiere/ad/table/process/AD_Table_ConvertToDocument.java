@@ -40,7 +40,7 @@ import org.compiere.model.I_AD_Table;
  * If the definition of a document table is to change (it needs extra columns), change AD_Table_Document_Template directly and run this process again for each document table that is to be extended.
  * Except from the extra columns, the document table must also have its own AD_Workflow which is specified in an AD_Process, linked with DocAction and Processing columns.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class AD_Table_ConvertToDocument extends JavaProcess

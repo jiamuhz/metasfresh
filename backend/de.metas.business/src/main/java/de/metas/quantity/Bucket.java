@@ -35,7 +35,7 @@ import lombok.NonNull;
 /**
  * This is {@link Capacity} that also has "level", i.e. it contains a quantity that already occupates a part of it.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 @EqualsAndHashCode

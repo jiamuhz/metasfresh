@@ -40,7 +40,7 @@ import de.metas.product.ProductId;
  *
  * Use the {@link HUSplitBuilder} constructor to get an instance.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * 
  * @see ITUMergeBuilder
  */

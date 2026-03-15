@@ -60,7 +60,7 @@ import de.metas.util.Services;
 /**
  * Helper class used to reverse the receipts for a given set of HUs.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ReceiptCorrectHUsProcessor

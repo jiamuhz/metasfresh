@@ -33,7 +33,7 @@ import de.metas.handlingunits.model.I_M_HU_PI;
  * 
  * Check {@link HUPackingInfos} for creating various instances.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IHUPackingInfo

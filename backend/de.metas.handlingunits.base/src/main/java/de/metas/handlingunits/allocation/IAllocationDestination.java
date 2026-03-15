@@ -26,7 +26,7 @@ import de.metas.handlingunits.IHUContext;
 
 /**
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IAllocationDestination

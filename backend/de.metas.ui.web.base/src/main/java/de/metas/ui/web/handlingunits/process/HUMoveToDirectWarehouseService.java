@@ -49,7 +49,7 @@ import java.util.Iterator;
 /**
  * HU Editor service: Move selected HUs to direct warehouse (aka Materialentnahme)
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class HUMoveToDirectWarehouseService
 {

@@ -48,7 +48,7 @@ import lombok.NonNull;
  * 
  * The status will be changed from Processed to Closed.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class ClosePickingCandidateCommand

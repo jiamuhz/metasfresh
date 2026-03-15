@@ -62,7 +62,7 @@ import java.util.Optional;
 /**
  * Creates/Updates/Deletes PO translations.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class POTrlRepository
 {

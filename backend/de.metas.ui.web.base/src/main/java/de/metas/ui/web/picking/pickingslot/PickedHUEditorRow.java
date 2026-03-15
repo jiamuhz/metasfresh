@@ -36,7 +36,7 @@ import java.util.function.Function;
 /**
  * Immutable pojo that contains the HU editor as retrieved from {@link HUEditorViewRepository} plus the the {@code processed} value from the respective picking candidate.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 // the fully qualified annotations are a workaround for a javac problem with maven
 @lombok.Value

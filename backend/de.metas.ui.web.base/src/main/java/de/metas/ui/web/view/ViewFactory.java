@@ -34,7 +34,7 @@ import de.metas.ui.web.view.json.JSONViewDataType;
 /**
  * Used to annotate {@link IViewFactory} implementations which shall be automatically discovered and registered.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Target({ ElementType.TYPE })

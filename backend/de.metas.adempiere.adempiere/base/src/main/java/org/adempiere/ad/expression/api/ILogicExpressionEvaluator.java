@@ -28,7 +28,7 @@ import org.compiere.util.Evaluatee;
 /**
  * Logic expression evaluator
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ILogicExpressionEvaluator extends IExpressionEvaluator<ILogicExpression, Boolean>

@@ -56,7 +56,7 @@ import javax.annotation.Nullable;
 /**
  * Descriptor of a method annotated with {@link ViewAction}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ToString

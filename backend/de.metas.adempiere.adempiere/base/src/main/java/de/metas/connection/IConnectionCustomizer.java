@@ -30,7 +30,7 @@ import java.sql.Connection;
  * About thread-safety: I can't prove that implementors need to be thread-safe without further research,
  * but unless you proved they don't need to be thread-safe, i strongly urge everyone to make them thread-safe.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface IConnectionCustomizer

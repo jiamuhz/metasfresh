@@ -59,7 +59,7 @@ import java.util.Optional;
 /**
  * Rows shown in {@link PackageableView}. Each row basically represents one {@link I_M_Packageable_V}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ToString(exclude = "values")

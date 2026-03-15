@@ -54,7 +54,7 @@ import lombok.NonNull;
  * <li>expect: LU2's attribute is copied to second shipment line's ASI
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task FRESH-578 #275
  */
 public class HUShipmentProcess_AttributesAggregation_WithDifferentTemplateAttribute_Test extends HUShipmentProcess_AttributesAggregation_Base

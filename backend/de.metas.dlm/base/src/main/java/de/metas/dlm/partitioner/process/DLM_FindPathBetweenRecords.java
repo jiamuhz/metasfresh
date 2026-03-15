@@ -41,7 +41,7 @@ import de.metas.util.Services;
  * This process can be useful if the user found two records that should not be in the same partition but still are.
  * He/She can then use this process to figure out how those records are connected.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public class DLM_FindPathBetweenRecords extends JavaProcess

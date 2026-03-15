@@ -410,7 +410,7 @@ public final class CalloutExecutor implements ICalloutExecutor
 	/**
 	 * Internal object for collecting statistics when we run callouts.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 *
 	 *
 	 */
 	private static final class CalloutStatisticsEntry

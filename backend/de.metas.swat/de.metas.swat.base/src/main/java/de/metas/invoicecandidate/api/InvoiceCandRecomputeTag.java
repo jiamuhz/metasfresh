@@ -33,7 +33,7 @@ import lombok.Getter;
 /**
  * Immutable recompute tag used to tag invoice candidates.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @EqualsAndHashCode

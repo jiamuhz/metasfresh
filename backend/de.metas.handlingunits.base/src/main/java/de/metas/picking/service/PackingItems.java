@@ -46,7 +46,7 @@ import lombok.experimental.UtilityClass;
 /**
  * Helper class used to manage {@link IPackingItem} instances.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @UtilityClass

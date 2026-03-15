@@ -39,7 +39,7 @@ import lombok.NonNull;
 /**
  * this class updates the DB's {@code AD_System.DBVersion} column.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Builder

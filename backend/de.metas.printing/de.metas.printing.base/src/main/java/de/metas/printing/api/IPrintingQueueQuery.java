@@ -31,7 +31,7 @@ import de.metas.security.permissions.Access;
  * Used in {@link IPrintingQueueBL#createPrintingQueueSources(java.util.Properties, IPrintingQueueQuery)} to specify which printing queue items shall be returned by the source.<br>
  * Use {@link IPrintingQueueBL#createPrintingQueueQuery()} to create an instance.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface IPrintingQueueQuery

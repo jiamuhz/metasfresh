@@ -26,7 +26,7 @@ import java.util.stream.Stream;
 
 /**
  * See {@link HUsForInventoryStrategies} for creating different instances.
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  */
 public interface HUsForInventoryStrategy

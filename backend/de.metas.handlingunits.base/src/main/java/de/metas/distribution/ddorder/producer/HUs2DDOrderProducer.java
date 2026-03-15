@@ -87,7 +87,7 @@ import java.util.concurrent.atomic.AtomicBoolean;
  * <p>
  * Task 08639
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class HUs2DDOrderProducer
 {

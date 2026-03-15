@@ -46,7 +46,7 @@ import java.util.stream.Stream;
 /**
  * Builds up a list of HUs for certain product, locator and warehouse, which have stock
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @Value
 public class LocatorAndProductStrategy implements HUsForInventoryStrategy

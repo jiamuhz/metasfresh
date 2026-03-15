@@ -13,7 +13,7 @@ import java.util.Optional;
 /**
  * Immutable Context Name. Use the methods for {@link CtxNames} to obtain instances.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @SuppressWarnings({ "OptionalUsedAsFieldOrParameterType", "OptionalAssignedToNull" })
 public final class CtxName

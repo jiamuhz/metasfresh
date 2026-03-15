@@ -31,7 +31,7 @@ import de.metas.i18n.TranslatableStrings;
 /**
  * Exception thrown when a deprecated REST API is called but this is not allowed.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @SuppressWarnings("serial")

@@ -54,7 +54,7 @@ import lombok.Value;
 /**
  * View document (row).
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 public class JSONViewRow extends JSONDocumentBase implements JSONViewRowBase
 {

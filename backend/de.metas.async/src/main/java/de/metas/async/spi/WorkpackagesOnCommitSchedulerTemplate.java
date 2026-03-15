@@ -55,7 +55,7 @@ import static de.metas.async.AsyncBatchId.NONE_ASYNC_BATCH_ID;
 /**
  * Template class for implementing algorithms which are collecting items, group them in workpackages and submit the workpackages when the transaction is committed.
  *
- * @author metas-dev <dev@metasfresh.com>
+ * 
  *
  * @param <ItemType> item type to be collected.
  */
@@ -265,7 +265,7 @@ public abstract class WorkpackagesOnCommitSchedulerTemplate<ItemType>
 	/**
 	 * Collector class responsible to collecting items and enqueuing a workpackage which will process the collected items.
 	 *
-	 * @author metas-dev <dev@metasfresh.com>
+	 * 
 	 */
 	protected final class Collector
 	{

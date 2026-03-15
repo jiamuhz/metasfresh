@@ -29,7 +29,7 @@ import java.util.Set;
  * A string which can be translated to a given <code>AD_Language</code>.<br>
  * For more helpers, check {@link TranslatableStrings}.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 public interface ITranslatableString

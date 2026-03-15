@@ -37,7 +37,7 @@ import lombok.ToString;
 /**
  * {@link IModelTranslationMap} implementation which lazy loads all translations of a given database record, identified by {@link POTrlInfo} and a given recordId.
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @ToString

@@ -38,7 +38,7 @@ import org.assertj.core.api.Assertions;
  * To access both the assertJ assertions and the metasfresh ones.<br>
  * Thanks to http://joel-costigliola.github.io/assertj/assertj-core-custom-assertions.html
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  * @task https://github.com/metasfresh/metasfresh/issues/3006
  *
  */

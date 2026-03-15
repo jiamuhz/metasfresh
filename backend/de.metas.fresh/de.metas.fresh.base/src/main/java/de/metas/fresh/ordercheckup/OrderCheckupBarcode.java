@@ -39,7 +39,7 @@ import lombok.EqualsAndHashCode;
 /**
  * {@link I_C_Order_MFGWarehouse_ReportLine#COLUMNNAME_Barcode}'s barcode format.
  * 
- * @author metas-dev <dev@metasfresh.com>
+ *
  *
  */
 @Immutable

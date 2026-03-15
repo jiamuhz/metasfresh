@@ -59,7 +59,7 @@ import java.util.Optional;
  * <li>get the {@link MQuery} to be used when the window is opened: {@link #createZoomQuery()}
  * </ul>
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 @ToString
 public class RecordWindowFinder

@@ -60,7 +60,7 @@ import java.util.Set;
  * This is the common structure for a process that moves HUs from a warehouse to another.
  * Is extended by specific processes, depending of their particular requirements
  *
- * @author metas-dev <dev@metasfresh.com>
+ *
  */
 
 abstract class WEBUI_M_HU_MoveToAnotherWarehouse_Template extends HUEditorProcessTemplate implements IProcessPrecondition
