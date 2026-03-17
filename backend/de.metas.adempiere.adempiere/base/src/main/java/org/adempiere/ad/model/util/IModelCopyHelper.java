@@ -29,7 +29,7 @@ import org.adempiere.model.InterfaceWrapperHelper;
  *
  * If you want to create a new instance of this helper, use {@link InterfaceWrapperHelper#copy()}.
  *
- * @author tsa
+ * 实现者 内含 源Model 和 目标Model, 实现两者之间的 Copy
  *
  */
 public interface IModelCopyHelper
