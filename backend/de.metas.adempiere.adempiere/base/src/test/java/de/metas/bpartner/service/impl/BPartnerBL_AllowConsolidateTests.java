@@ -33,7 +33,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import de.metas.interfaces.I_C_BPartner;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.organization.OrgId;
 import de.metas.user.UserRepository;
 import de.metas.util.Services;

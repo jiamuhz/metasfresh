@@ -29,7 +29,7 @@ import de.metas.contracts.model.I_C_Invoice_Clearing_Alloc;
 import de.metas.invoicecandidate.api.IInvoiceCandDAO;
 import de.metas.invoicecandidate.location.adapter.InvoiceCandidateLocationAdapterFactory;
 import de.metas.invoicecandidate.model.I_C_ILCandHandler;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.materialtracking.IMaterialTrackingPPOrderBL;
 import de.metas.materialtracking.model.I_C_Invoice_Candidate;
 import de.metas.materialtracking.model.I_PP_Order;

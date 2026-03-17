@@ -26,7 +26,7 @@ import de.metas.contracts.modular.IModularContractTypeHandler;
 import de.metas.contracts.modular.impl.ShippingNotificationForSalesModularContractHandler;
 import de.metas.contracts.modular.invgroup.interceptor.ModCntrInvoicingGroupRepository;
 import de.metas.contracts.modular.log.ModularContractLogDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.shippingnotification.ShippingNotificationService;
 import de.metas.shippingnotification.model.I_M_Shipping_NotificationLine;
 import lombok.NonNull;

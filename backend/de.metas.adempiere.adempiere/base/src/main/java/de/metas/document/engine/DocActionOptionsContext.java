@@ -2,7 +2,7 @@ package de.metas.document.engine;
 
 import com.google.common.collect.ImmutableSet;
 import de.metas.document.DocTypeId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.security.UserRolePermissionsKey;
 import lombok.AccessLevel;
 import lombok.Builder;

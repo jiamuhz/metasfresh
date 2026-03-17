@@ -25,7 +25,7 @@ package de.metas.invoice;
 import com.google.common.collect.Interner;
 import com.google.common.collect.Interners;
 import de.metas.currency.Amount;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import lombok.Builder;
 import lombok.EqualsAndHashCode;

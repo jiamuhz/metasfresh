@@ -29,7 +29,7 @@ import de.metas.allocation.api.IAllocationBL.InvoiceDiscountAndWriteOffRequest;
 import de.metas.allocation.api.IAllocationDAO;
 import de.metas.i18n.AdMessageKey;
 import de.metas.i18n.IMsgBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import de.metas.process.JavaProcess;
 import de.metas.process.RunOutOfTrx;

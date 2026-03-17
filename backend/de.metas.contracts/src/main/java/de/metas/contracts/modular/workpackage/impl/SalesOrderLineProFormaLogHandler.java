@@ -35,7 +35,7 @@ import de.metas.document.DocTypeId;
 import de.metas.document.engine.DocStatus;
 import de.metas.i18n.BooleanWithReason;
 import de.metas.i18n.ExplainedOptional;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.money.Money;
 import de.metas.order.IOrderBL;

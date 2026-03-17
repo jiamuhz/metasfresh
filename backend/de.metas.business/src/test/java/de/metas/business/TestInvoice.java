@@ -19,7 +19,7 @@ import com.google.common.collect.ImmutableList;
 import de.metas.bpartner.BPartnerId;
 import de.metas.document.DocTypeId;
 import de.metas.invoice.InvoiceId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import lombok.Builder;
 import lombok.Data;

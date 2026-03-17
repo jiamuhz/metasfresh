@@ -19,7 +19,7 @@ import com.google.common.collect.ImmutableMap;
 import de.metas.inout.ShipmentScheduleId;
 import de.metas.inoutcandidate.api.ShipmentScheduleUserChangeRequest;
 import de.metas.inoutcandidate.api.ShipmentScheduleUserChangeRequest.ShipmentScheduleUserChangeRequestBuilder;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import de.metas.ui.web.pattribute.WebuiASIEditingInfo;
 import de.metas.ui.web.pattribute.WebuiASIEditingInfoAware;

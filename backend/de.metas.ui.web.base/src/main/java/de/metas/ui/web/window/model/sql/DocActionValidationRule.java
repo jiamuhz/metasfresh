@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableSet;
 import de.metas.document.DocTypeId;
 import de.metas.document.engine.DocActionOptionsContext;
 import de.metas.document.engine.IDocActionOptionsBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.security.UserRolePermissionsKey;
 import de.metas.ui.web.window.WindowConstants;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;

@@ -10,7 +10,6 @@ import de.metas.document.engine.IDocument;
 import de.metas.document.engine.IDocumentBL;
 import de.metas.document.location.DocumentLocation;
 import de.metas.freighcost.FreightCostRule;
-import de.metas.lang.SOTrx;
 import de.metas.logging.TableRecordMDC;
 import de.metas.order.location.adapter.OrderDocumentLocationAdapterFactory;
 import de.metas.organization.IOrgDAO;

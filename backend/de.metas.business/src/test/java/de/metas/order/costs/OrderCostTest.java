@@ -5,7 +5,7 @@ import de.metas.bpartner.BPartnerId;
 import de.metas.business.BusinessTestHelper;
 import de.metas.costing.CostElementId;
 import de.metas.currency.CurrencyPrecision;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.money.Money;
 import de.metas.order.OrderId;

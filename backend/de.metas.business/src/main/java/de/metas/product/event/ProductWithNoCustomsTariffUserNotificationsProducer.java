@@ -14,7 +14,7 @@ import com.google.common.collect.ImmutableList;
 
 import de.metas.event.Topic;
 import de.metas.event.Type;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.notification.INotificationBL;
 import de.metas.notification.UserNotificationRequest;
 import de.metas.notification.UserNotificationRequest.TargetRecordAction;

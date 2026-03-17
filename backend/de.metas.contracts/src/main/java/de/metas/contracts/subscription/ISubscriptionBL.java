@@ -31,7 +31,7 @@ import de.metas.contracts.model.X_C_SubscriptionProgress;
 import de.metas.contracts.order.model.I_C_Order;
 import de.metas.contracts.order.model.I_C_OrderLine;
 import de.metas.inoutcandidate.model.I_M_ShipmentSchedule;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.pricing.PricingSystemId;
 import de.metas.pricing.exceptions.ProductNotOnPriceListException;
 import de.metas.process.PInstanceId;

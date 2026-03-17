@@ -34,7 +34,7 @@ import de.metas.contracts.modular.log.LogEntryContractType;
 import de.metas.contracts.modular.log.ModularContractLogService;
 import de.metas.contracts.modular.settings.ModularContractSettings;
 import de.metas.contracts.modular.settings.ModularContractSettingsDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.IOrderBL;
 import de.metas.order.OrderId;
 import de.metas.order.OrderLineId;

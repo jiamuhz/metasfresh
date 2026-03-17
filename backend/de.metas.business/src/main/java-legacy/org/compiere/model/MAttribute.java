@@ -33,7 +33,7 @@ import org.adempiere.util.LegacyAdapters;
 import org.compiere.util.DB;
 import org.compiere.util.Env;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.Check;
 import de.metas.util.Services;
 

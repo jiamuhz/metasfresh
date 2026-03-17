@@ -9,7 +9,7 @@ import javax.annotation.Nullable;
 
 import de.metas.adempiere.model.I_C_Invoice;
 import de.metas.bpartner.BPartnerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.Value;

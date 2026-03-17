@@ -20,7 +20,7 @@
  * #L%
  */
 
-package de.metas.lang;
+package de.metas.util;
 
 import de.metas.util.collections.CollectionUtils;
 import lombok.NonNull;
@@ -32,8 +32,6 @@ import java.util.stream.Collectors;
 
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
-
-import de.metas.util.Check;
 
 /**
  * Helps with columns that pack >=1 external ID string(s).

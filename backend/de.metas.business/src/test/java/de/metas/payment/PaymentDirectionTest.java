@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 
 import de.metas.currency.Amount;
 import de.metas.currency.CurrencyCode;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.money.Money;
 

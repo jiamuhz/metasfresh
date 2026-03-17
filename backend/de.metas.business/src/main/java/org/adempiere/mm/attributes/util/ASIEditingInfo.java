@@ -3,7 +3,7 @@ package org.adempiere.mm.attributes.util;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Sets;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.IProductBL;
 import de.metas.product.ProductId;
 import de.metas.util.Check;

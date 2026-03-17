@@ -37,7 +37,7 @@ import org.springframework.stereotype.Component;
 import de.metas.handlingunits.IHUPIItemProductDAO;
 import de.metas.handlingunits.IHUPIItemProductQuery;
 import de.metas.handlingunits.model.I_M_HU_PI_Item_Product;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.pricing.PriceListId;
 import de.metas.pricing.PriceListVersionId;
 import de.metas.pricing.service.IPriceListDAO;

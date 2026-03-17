@@ -4,7 +4,7 @@ import de.metas.inout.InOutAndLineId;
 import de.metas.inout.InOutId;
 import de.metas.invoice.InvoiceId;
 import de.metas.invoice.InvoiceLineId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.organization.ClientAndOrgId;
 import de.metas.organization.OrgId;
 import de.metas.product.ProductId;

@@ -28,7 +28,7 @@ import de.metas.contracts.model.I_C_Invoice_Clearing_Alloc;
 import de.metas.inout.model.I_M_InOutLine;
 import de.metas.invoicecandidate.api.IInvoiceCandDAO;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.materialtracking.IMaterialTrackingDAO;
 import de.metas.materialtracking.model.I_M_Material_Tracking;

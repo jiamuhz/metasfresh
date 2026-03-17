@@ -11,7 +11,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import de.metas.invoicecandidate.InvoiceCandidateId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import de.metas.order.InvoiceRule;
 import de.metas.pricing.InvoicableQtyBasedOn;

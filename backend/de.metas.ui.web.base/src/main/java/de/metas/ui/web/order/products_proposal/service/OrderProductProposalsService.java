@@ -16,7 +16,7 @@ import de.metas.document.engine.DocStatus;
 import de.metas.handlingunits.HUPIItemProductId;
 import de.metas.handlingunits.IHUPIItemProductBL;
 import de.metas.handlingunits.model.I_C_OrderLine;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.money.CurrencyId;
 import de.metas.money.Money;

@@ -10,7 +10,7 @@ import de.metas.document.dimension.Dimension;
 import de.metas.document.dimension.DimensionService;
 import de.metas.i18n.AdMessageKey;
 import de.metas.interfaces.I_C_OrderLine;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.order.IOrderBL;
 import de.metas.order.IOrderLineBL;

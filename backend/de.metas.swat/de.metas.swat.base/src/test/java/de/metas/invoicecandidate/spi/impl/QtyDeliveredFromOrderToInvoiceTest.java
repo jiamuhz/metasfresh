@@ -18,7 +18,7 @@ import de.metas.invoicecandidate.internalbusinesslogic.InvoiceCandidateRecordSer
 import de.metas.invoicecandidate.model.I_C_ILCandHandler;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
 import de.metas.invoicecandidate.spi.InvoiceCandidateGenerateRequest;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.InvoiceRule;
 import de.metas.order.impl.OrderEmailPropagationSysConfigRepository;
 import de.metas.order.invoicecandidate.C_OrderLine_Handler;

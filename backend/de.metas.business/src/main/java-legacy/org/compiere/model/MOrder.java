@@ -47,7 +47,7 @@ import de.metas.document.sequence.IDocumentNoBuilder;
 import de.metas.document.sequence.IDocumentNoBuilderFactory;
 import de.metas.freighcost.FreightCostRule;
 import de.metas.i18n.IMsgBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.DeliveryRule;
 import de.metas.order.DeliveryViaRule;
 import de.metas.order.IOrderBL;

@@ -17,10 +17,6 @@
 package org.compiere.model;
 
 import java.io.Serializable;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
-import java.sql.Timestamp;
 import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
@@ -32,12 +28,10 @@ import java.util.stream.Stream;
 import javax.annotation.Nullable;
 
 import org.adempiere.ad.table.api.IADTableDAO;
-import org.adempiere.ad.trx.api.ITrx;
 import org.adempiere.service.ISysConfigBL;
 import org.compiere.model.MQuery.Operator;
 import org.compiere.util.DB;
 import org.compiere.util.DisplayType;
-import org.compiere.util.Env;
 import org.compiere.util.KeyNamePair;
 import org.compiere.util.TimeUtil;
 import org.compiere.util.ValueNamePair;
@@ -46,7 +40,7 @@ import org.slf4j.Logger;
 import com.google.common.collect.ImmutableList;
 
 import de.metas.i18n.IMsgBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.process.PInstanceId;
 import de.metas.util.Check;

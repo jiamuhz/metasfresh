@@ -23,7 +23,7 @@
 package de.metas.servicerepair.project.service.commands.createQuotationFromProjectCommand;
 
 import de.metas.currency.CurrencyPrecision;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.money.Money;
 import de.metas.order.OrderLineDetailCreateRequest;

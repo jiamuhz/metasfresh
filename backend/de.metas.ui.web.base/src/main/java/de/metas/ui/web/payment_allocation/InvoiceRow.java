@@ -31,7 +31,7 @@ import de.metas.i18n.ITranslatableString;
 import de.metas.invoice.InvoiceAmtMultiplier;
 import de.metas.invoice.InvoiceDocBaseType;
 import de.metas.invoice.InvoiceId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyConversionTypeId;
 import de.metas.organization.ClientAndOrgId;
 import de.metas.ui.web.view.IViewRow;

@@ -36,7 +36,7 @@ import de.metas.invoice.InvoiceVerificationSetLineId;
 import de.metas.invoice.service.IInvoiceDAO;
 import de.metas.invoice.service.IInvoiceVerificationBL;
 import de.metas.invoice.service.InvoiceVerificationRunStatus;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.location.ILocationDAO;
 import de.metas.location.LocationId;

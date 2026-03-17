@@ -8,7 +8,7 @@ import de.metas.bpartner.BPartnerId;
 import de.metas.costing.CostElementId;
 import de.metas.inout.InOutAndLineId;
 import de.metas.inout.InOutId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.money.Money;
 import de.metas.order.OrderAndLineId;

@@ -22,7 +22,7 @@
 
 package de.metas.purchasecandidate.purchaseordercreation;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.pricing.IEditablePricingContext;
 import de.metas.pricing.IPricingResult;
 import de.metas.pricing.service.IPricingBL;

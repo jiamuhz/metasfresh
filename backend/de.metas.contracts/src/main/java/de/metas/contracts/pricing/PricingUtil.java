@@ -22,7 +22,7 @@
 
 package de.metas.contracts.pricing;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.pricing.IEditablePricingContext;
 import de.metas.pricing.IPricingContext;

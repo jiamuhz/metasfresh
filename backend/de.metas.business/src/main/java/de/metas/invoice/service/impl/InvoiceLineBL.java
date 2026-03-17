@@ -18,7 +18,7 @@ import de.metas.invoice.location.adapter.InvoiceDocumentLocationAdapterFactory;
 import de.metas.invoice.service.IInvoiceBL;
 import de.metas.invoice.service.IInvoiceDAO;
 import de.metas.invoice.service.IInvoiceLineBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.location.LocationId;
 import de.metas.logging.LogManager;

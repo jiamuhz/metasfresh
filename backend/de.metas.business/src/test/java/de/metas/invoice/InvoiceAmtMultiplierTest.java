@@ -24,7 +24,7 @@ package de.metas.invoice;
 
 import de.metas.currency.Amount;
 import de.metas.currency.CurrencyCode;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
 

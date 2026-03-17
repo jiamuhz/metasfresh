@@ -6,7 +6,7 @@ import de.metas.currency.CurrencyPrecision;
 import de.metas.inout.InOutAndLineId;
 import de.metas.inout.InOutId;
 import de.metas.inout.InOutLineId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import de.metas.order.OrderAndLineId;
 import de.metas.order.OrderId;

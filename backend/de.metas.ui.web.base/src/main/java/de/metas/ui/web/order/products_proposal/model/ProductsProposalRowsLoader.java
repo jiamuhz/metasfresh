@@ -37,7 +37,7 @@ import de.metas.handlingunits.model.I_M_ProductPrice;
 import de.metas.i18n.IMsgBL;
 import de.metas.i18n.ITranslatableString;
 import de.metas.i18n.TranslatableStrings;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.money.CurrencyId;
 import de.metas.organization.ClientAndOrgId;

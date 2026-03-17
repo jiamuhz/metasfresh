@@ -25,7 +25,7 @@ package de.metas.allocation.api;
 import com.google.common.collect.SetMultimap;
 import de.metas.bpartner.BPartnerId;
 import de.metas.invoice.InvoiceId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import de.metas.organization.ClientAndOrgId;
 import de.metas.payment.PaymentId;

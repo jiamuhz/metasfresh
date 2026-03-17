@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableSet;
 import de.metas.handlingunits.model.I_M_ForecastLine;
 import de.metas.handlingunits.order.api.IHUOrderBL;
 import de.metas.i18n.IMsgBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.material.cockpit.availableforsales.AvailableForSalesConfigRepo;
 import de.metas.product.ProductId;
 import de.metas.ui.web.material.adapter.AvailableForSaleAdapter;

@@ -10,7 +10,7 @@ import de.metas.bpartner_product.IBPartnerProductBL;
 import de.metas.handlingunits.HUPIItemProductId;
 import de.metas.invoice.service.IInvoiceBL;
 import de.metas.invoice.service.IInvoiceLineBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import de.metas.ui.web.quickinput.IQuickInputProcessor;
 import de.metas.ui.web.quickinput.QuickInput;

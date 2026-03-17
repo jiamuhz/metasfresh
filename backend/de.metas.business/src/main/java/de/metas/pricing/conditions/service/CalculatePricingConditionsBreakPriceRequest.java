@@ -1,7 +1,7 @@
 package de.metas.pricing.conditions.service;
 
 import de.metas.bpartner.BPartnerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.pricing.conditions.PricingConditionsBreak;
 import lombok.Builder;
 import lombok.Value;

@@ -22,7 +22,7 @@
 
 package de.metas.requisition;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.organization.OrgId;
 import lombok.NonNull;
 import org.compiere.model.I_M_Requisition;

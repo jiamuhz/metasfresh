@@ -6,7 +6,7 @@ import de.metas.bpartner.BPartnerId;
 import de.metas.bpartner.product.stats.BPartnerProductStats;
 import de.metas.bpartner.product.stats.BPartnerProductStats.LastInvoiceInfo;
 import de.metas.bpartner.product.stats.BPartnerProductStatsService;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.money.MoneyService;
 import de.metas.order.OrderId;

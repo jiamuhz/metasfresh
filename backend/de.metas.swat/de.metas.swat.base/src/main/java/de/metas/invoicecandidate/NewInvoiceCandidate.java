@@ -28,7 +28,7 @@ import de.metas.contracts.FlatrateTermId;
 import de.metas.document.DocTypeId;
 import de.metas.invoice.detail.InvoiceDetailItem;
 import de.metas.invoicecandidate.spi.ILCandHandlerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.InvoiceRule;
 import de.metas.organization.OrgId;
 import de.metas.payment.paymentterm.PaymentTermId;

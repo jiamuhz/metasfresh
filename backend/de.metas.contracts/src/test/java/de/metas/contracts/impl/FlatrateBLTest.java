@@ -21,7 +21,7 @@ import de.metas.contracts.model.X_C_Flatrate_Transition;
 import de.metas.contracts.modular.settings.ModularContractSettingsBL;
 import de.metas.contracts.modular.settings.ModularContractSettingsDAO;
 import de.metas.invoicecandidate.model.I_C_ILCandHandler;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.organization.OrgId;
 import de.metas.pricing.rules.MockedPricingRule;
 import de.metas.product.IProductActivityProvider;

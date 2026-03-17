@@ -16,7 +16,6 @@ import javax.annotation.Nullable;
 
 import org.slf4j.Logger;
 
-import java.util.Objects;
 import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
@@ -28,7 +27,7 @@ import de.metas.bpartner.BPartnerType;
 import de.metas.bpartner.service.IBPartnerBL;
 import de.metas.bpartner.service.IBPartnerDAO;
 import de.metas.inout.IInOutDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.money.Money;
 import de.metas.order.OrderLineId;

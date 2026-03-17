@@ -5,7 +5,7 @@ import de.metas.bpartner.BPartnerId;
 import de.metas.i18n.TranslatableStrings;
 import de.metas.invoice.InvoiceLineId;
 import de.metas.invoice.service.IInvoiceBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.MoneyService;
 import de.metas.order.costs.OrderCostService;
 import de.metas.process.AdProcessId;

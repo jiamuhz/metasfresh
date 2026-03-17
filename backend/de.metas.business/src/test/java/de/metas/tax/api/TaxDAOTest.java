@@ -24,7 +24,7 @@ package de.metas.tax.api;
 
 import de.metas.bpartner.BPartnerId;
 import de.metas.bpartner.BPartnerLocationAndCaptureId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.ICountryAreaBL;
 import de.metas.location.LocationId;
 import de.metas.organization.OrgId;

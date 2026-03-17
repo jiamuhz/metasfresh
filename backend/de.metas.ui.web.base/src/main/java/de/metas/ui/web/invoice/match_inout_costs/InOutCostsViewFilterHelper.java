@@ -2,7 +2,7 @@ package de.metas.ui.web.invoice.match_inout_costs;
 
 import de.metas.bpartner.BPartnerId;
 import de.metas.i18n.TranslatableStrings;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.OrderId;
 import de.metas.order.costs.OrderCostTypeId;
 import de.metas.order.costs.inout.InOutCostQuery;

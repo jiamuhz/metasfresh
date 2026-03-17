@@ -30,7 +30,7 @@ import de.metas.contracts.IFlatrateDAO;
 import de.metas.contracts.commission.commissioninstance.businesslogic.CommissionPoints;
 import de.metas.contracts.location.ContractLocationHelper;
 import de.metas.contracts.model.I_C_Flatrate_Term;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import de.metas.organization.OrgId;
 import de.metas.pricing.IEditablePricingContext;

@@ -7,7 +7,7 @@ import de.metas.bpartner.product.stats.BPartnerProductStatsService;
 import de.metas.bpartner.service.IBPartnerDAO;
 import de.metas.common.util.time.SystemTime;
 import de.metas.i18n.ITranslatableString;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.pricing.PriceListVersionId;
 import de.metas.pricing.PricingSystemId;

@@ -23,7 +23,7 @@
 package de.metas.document.references.zoom_into;
 
 import de.metas.cache.CCache;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.util.Check;
 import lombok.Builder;

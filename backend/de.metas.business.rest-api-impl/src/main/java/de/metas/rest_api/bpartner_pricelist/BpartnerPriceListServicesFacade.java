@@ -8,7 +8,7 @@ import de.metas.bpartner.service.BPartnerQuery;
 import de.metas.bpartner.service.IBPartnerDAO;
 import de.metas.currency.CurrencyCode;
 import de.metas.currency.ICurrencyDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.location.ICountryDAO;
 import de.metas.money.CurrencyId;

@@ -32,7 +32,7 @@ import org.compiere.util.Env;
 
 import de.metas.i18n.AdMessageKey;
 import de.metas.i18n.IMsgBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.Services;
 
 public class AttributeRestrictedException extends AdempiereException

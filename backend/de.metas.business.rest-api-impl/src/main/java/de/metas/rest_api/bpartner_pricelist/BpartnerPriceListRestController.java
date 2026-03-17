@@ -2,7 +2,7 @@ package de.metas.rest_api.bpartner_pricelist;
 
 import de.metas.Profiles;
 import de.metas.common.util.time.SystemTime;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.rest_api.bpartner_pricelist.command.GetPriceListCommand;
 import de.metas.rest_api.bpartner_pricelist.response.JsonResponsePriceList;
 import de.metas.rest_api.utils.IdentifierString;

@@ -6,7 +6,7 @@ import de.metas.bpartner.product.stats.BPartnerProductStatsEventSender;
 import de.metas.bpartner.product.stats.InOutChangedEvent;
 import de.metas.inout.IInOutDAO;
 import de.metas.inout.model.I_M_InOut;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.material.MovementType;
 import de.metas.product.ProductId;
 import de.metas.util.Services;

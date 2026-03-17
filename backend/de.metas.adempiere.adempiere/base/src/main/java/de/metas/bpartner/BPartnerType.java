@@ -1,6 +1,6 @@
 package de.metas.bpartner;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 
 /*
  * #%L

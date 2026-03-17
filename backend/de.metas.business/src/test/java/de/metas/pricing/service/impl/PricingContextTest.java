@@ -36,7 +36,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import de.metas.bpartner.BPartnerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.pricing.IEditablePricingContext;
 import de.metas.pricing.PriceListId;

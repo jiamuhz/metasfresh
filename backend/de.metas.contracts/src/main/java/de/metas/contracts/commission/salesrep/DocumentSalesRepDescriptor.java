@@ -2,7 +2,7 @@ package de.metas.contracts.commission.salesrep;
 
 import de.metas.contracts.commission.Beneficiary;
 import de.metas.contracts.commission.Customer;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.organization.OrgId;
 import lombok.Getter;
 import lombok.NonNull;

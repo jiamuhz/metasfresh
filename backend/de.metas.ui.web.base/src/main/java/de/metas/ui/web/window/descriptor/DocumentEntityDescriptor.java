@@ -9,7 +9,7 @@ import de.metas.common.util.CoalesceUtil;
 import de.metas.copy_with_details.CopyRecordFactory;
 import de.metas.i18n.ITranslatableString;
 import de.metas.i18n.TranslatableStrings;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.printing.esb.base.util.Check;
 import de.metas.process.AdProcessId;

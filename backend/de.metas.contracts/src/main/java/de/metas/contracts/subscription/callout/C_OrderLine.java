@@ -24,7 +24,7 @@ package de.metas.contracts.subscription.callout;
 
 import de.metas.contracts.order.model.I_C_OrderLine;
 import de.metas.contracts.subscription.ISubscriptionBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.IOrderLineBL;
 import de.metas.order.OrderLinePriceUpdateRequest;
 import de.metas.order.OrderLinePriceUpdateRequest.ResultUOM;

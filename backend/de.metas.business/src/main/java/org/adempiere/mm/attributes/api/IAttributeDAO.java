@@ -1,7 +1,7 @@
 package org.adempiere.mm.attributes.api;
 
 import de.metas.i18n.ITranslatableString;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.ISingletonService;
 import lombok.NonNull;
 import org.adempiere.mm.attributes.AttributeCode;

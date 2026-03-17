@@ -8,7 +8,7 @@ import com.fasterxml.jackson.databind.annotation.JsonPOJOBuilder;
 
 import de.metas.bpartner.BPartnerId;
 import de.metas.bpartner.product.stats.InOutChangedEvent.InOutChangedEventBuilder;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import de.metas.util.Check;
 import lombok.Builder;

@@ -29,7 +29,7 @@ import de.metas.contracts.modular.invgroup.InvoicingGroupId;
 import de.metas.contracts.modular.settings.ModularContractTypeId;
 import de.metas.contracts.modular.settings.ModuleConfigId;
 import de.metas.invoicecandidate.InvoiceCandidateId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import de.metas.organization.LocalDateAndOrgId;
 import de.metas.product.ProductId;

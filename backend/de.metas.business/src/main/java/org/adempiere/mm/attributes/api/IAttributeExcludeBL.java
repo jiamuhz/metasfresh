@@ -4,7 +4,7 @@ import org.adempiere.mm.attributes.AttributeSetId;
 import org.compiere.model.I_M_Attribute;
 import org.compiere.model.I_M_AttributeSetExclude;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.ISingletonService;
 
 public interface IAttributeExcludeBL extends ISingletonService

@@ -12,7 +12,7 @@ import de.metas.contracts.ConditionsId;
 import de.metas.handlingunits.HUPIItemProductId;
 import de.metas.i18n.ITranslatableString;
 import de.metas.i18n.TranslatableStrings;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.order.IOrderLineInputValidator;
 import de.metas.order.OrderId;

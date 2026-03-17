@@ -11,7 +11,7 @@ import de.metas.invoice.matchinv.MatchInvCostPart;
 import de.metas.invoice.matchinv.MatchInvId;
 import de.metas.invoice.matchinv.MatchInvQuery;
 import de.metas.invoice.matchinv.MatchInvType;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.money.Money;
 import de.metas.order.costs.OrderCostTypeId;

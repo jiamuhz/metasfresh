@@ -46,7 +46,7 @@ import de.metas.invoicecandidate.model.I_C_Invoice;
 import de.metas.invoicecandidate.model.I_C_InvoiceCandidate_InOutLine;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
 import de.metas.invoicecandidate.process.params.InvoicingParams;
-import de.metas.lang.ExternalIdsUtil;
+import de.metas.util.ExternalIdsUtil;
 import de.metas.location.CountryId;
 import de.metas.logging.TableRecordMDC;
 import de.metas.order.IOrderDAO;

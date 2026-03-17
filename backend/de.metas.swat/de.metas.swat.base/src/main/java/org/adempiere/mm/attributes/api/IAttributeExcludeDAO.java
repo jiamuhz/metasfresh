@@ -29,7 +29,7 @@ import org.adempiere.mm.attributes.AttributeSetId;
 import org.adempiere.model.I_M_AttributeSetExcludeLine;
 import org.compiere.model.I_M_AttributeSetExclude;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.ISingletonService;
 
 public interface IAttributeExcludeDAO extends ISingletonService

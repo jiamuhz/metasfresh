@@ -1,6 +1,6 @@
 package de.metas.ui.web.pattribute;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import de.metas.ui.web.config.WebConfig;
 import de.metas.ui.web.pattribute.json.JSONASIDocument;

@@ -36,7 +36,7 @@ import de.metas.document.engine.DocStatus;
 import de.metas.error.AdIssueId;
 import de.metas.i18n.AdMessageKey;
 import de.metas.i18n.BooleanWithReason;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.LocationId;
 import de.metas.logging.LogManager;
 import de.metas.money.CurrencyConversionTypeId;

@@ -30,7 +30,7 @@ import de.metas.currency.Amount;
 import de.metas.currency.CurrencyCode;
 import de.metas.currency.ICurrencyBL;
 import de.metas.document.IDocTypeDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.organization.ClientAndOrgId;
 import de.metas.process.RelatedProcessDescriptor;
 import de.metas.product.ProductId;

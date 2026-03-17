@@ -24,7 +24,7 @@ package de.metas.document.invoicingpool;
 
 import de.metas.cache.CCache;
 import de.metas.document.DocTypeId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
 import org.compiere.model.I_C_DocType_Invoicing_Pool;

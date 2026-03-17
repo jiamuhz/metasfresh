@@ -50,7 +50,7 @@ import de.metas.invoicecandidate.NewInvoiceCandidate;
 import de.metas.invoicecandidate.api.IInvoiceCandidateHandlerDAO;
 import de.metas.invoicecandidate.externallyreferenced.InvoiceCandidateRepository;
 import de.metas.invoicecandidate.externallyreferenced.ManualCandidateService;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.IOrderDAO;
 import de.metas.order.InvoiceRule;
 import de.metas.order.OrderAndLineId;

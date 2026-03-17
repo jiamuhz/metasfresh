@@ -5,7 +5,7 @@ import com.fasterxml.jackson.annotation.JsonProperty;
 import de.metas.common.util.CoalesceUtil;
 import de.metas.invoicecandidate.InvoiceCandidateId;
 import de.metas.invoicecandidate.internalbusinesslogic.InvoiceCandidate.ToInvoiceExclOverride.InvoicedQtys;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.order.InvoiceRule;
 import de.metas.pricing.InvoicableQtyBasedOn;

@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository;
 import de.metas.bpartner.BPartnerId;
 import de.metas.contracts.commission.Beneficiary;
 import de.metas.contracts.commission.Customer;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.organization.OrgId;
 import lombok.NonNull;
 

@@ -23,7 +23,7 @@
 package de.metas.document.invoicingpool;
 
 import de.metas.document.DocTypeId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import lombok.Builder;
 import lombok.Builder.Default;

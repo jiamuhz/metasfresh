@@ -30,7 +30,7 @@ import org.compiere.model.I_M_PricingSystem;
 import org.compiere.util.TimeUtil;
 
 import de.metas.bpartner.BPartnerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.materialtracking.qualityBasedInvoicing.IVendorInvoicingInfo;
 import de.metas.money.CurrencyId;
 import de.metas.pricing.IEditablePricingContext;

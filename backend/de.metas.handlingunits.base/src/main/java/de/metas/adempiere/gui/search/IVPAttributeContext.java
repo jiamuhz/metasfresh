@@ -4,7 +4,7 @@ import org.adempiere.warehouse.WarehouseId;
 
 import de.metas.bpartner.BPartnerId;
 import de.metas.document.DocTypeId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 
 /*

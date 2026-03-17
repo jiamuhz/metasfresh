@@ -3,7 +3,7 @@ package de.metas.rest_api.bpartner_pricelist;
 import de.metas.adempiere.model.I_M_Product;
 import de.metas.bpartner.BPartnerId;
 import de.metas.currency.CurrencyCode;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.money.CurrencyId;
 import de.metas.pricing.PriceListId;

@@ -29,7 +29,7 @@ import de.metas.contracts.commission.commissioninstance.businesslogic.sales.comm
 import de.metas.contracts.commission.commissioninstance.businesslogic.sales.commissiontrigger.salesinvoiceline.SalesInvoiceLineDocumentId;
 import de.metas.invoice.InvoiceLineId;
 import de.metas.invoicecandidate.InvoiceCandidateId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.organization.OrgId;
 import de.metas.product.ProductId;

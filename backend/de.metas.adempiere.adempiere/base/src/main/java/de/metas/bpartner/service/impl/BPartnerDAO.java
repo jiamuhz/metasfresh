@@ -51,7 +51,7 @@ import de.metas.cache.annotation.CacheTrx;
 import de.metas.document.DocTypeId;
 import de.metas.email.EMailAddress;
 import de.metas.i18n.AdMessageKey;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.location.ILocationDAO;
 import de.metas.location.LocationId;

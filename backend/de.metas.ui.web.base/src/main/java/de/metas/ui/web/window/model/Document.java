@@ -9,7 +9,7 @@ import de.metas.document.engine.IDocument;
 import de.metas.document.engine.IDocumentBL;
 import de.metas.document.exceptions.DocumentProcessingException;
 import de.metas.i18n.BooleanWithReason;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.letters.model.Letters;
 import de.metas.logging.LogManager;
 import de.metas.organization.OrgId;

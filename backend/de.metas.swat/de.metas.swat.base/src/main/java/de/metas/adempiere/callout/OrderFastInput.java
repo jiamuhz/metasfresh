@@ -32,7 +32,7 @@ import de.metas.bpartner_product.IBPartnerProductBL;
 import de.metas.document.location.DocumentLocation;
 import de.metas.freighcost.FreightCostRule;
 import de.metas.interfaces.I_C_OrderLine;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.order.IOrderBL;
 import de.metas.order.IOrderLineBL;

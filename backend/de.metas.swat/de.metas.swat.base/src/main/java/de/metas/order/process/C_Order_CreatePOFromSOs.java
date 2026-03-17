@@ -3,7 +3,7 @@ package de.metas.order.process;
 import de.metas.bpartner.BPartnerId;
 import de.metas.bpartner.ShipmentAllocationBestBeforePolicy;
 import de.metas.i18n.AdMessageKey;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.notification.INotificationBL;
 import de.metas.notification.UserNotificationRequest;
 import de.metas.order.OrderId;

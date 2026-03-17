@@ -3,7 +3,7 @@ package de.metas.ui.web.order.products_proposal.view;
 import com.google.common.collect.ImmutableList;
 import de.metas.bpartner.BPartnerId;
 import de.metas.i18n.TranslatableStrings;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.order.OrderId;
 import de.metas.organization.ClientAndOrgId;

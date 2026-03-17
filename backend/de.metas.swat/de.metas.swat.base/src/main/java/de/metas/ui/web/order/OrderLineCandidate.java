@@ -26,7 +26,7 @@ import de.metas.bpartner.BPartnerId;
 import de.metas.bpartner.ShipmentAllocationBestBeforePolicy;
 import de.metas.contracts.ConditionsId;
 import de.metas.handlingunits.HUPIItemProductId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.OrderId;
 import de.metas.order.compensationGroup.GroupId;
 import de.metas.product.ProductId;

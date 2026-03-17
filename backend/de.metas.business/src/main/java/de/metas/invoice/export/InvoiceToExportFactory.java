@@ -33,7 +33,7 @@ import de.metas.invoice_gateway.spi.model.MetasfreshVersion;
 import de.metas.invoice_gateway.spi.model.Money;
 import de.metas.invoice_gateway.spi.model.ProductId;
 import de.metas.invoice_gateway.spi.model.export.InvoiceToExport;
-import de.metas.lang.ExternalIdsUtil;
+import de.metas.util.ExternalIdsUtil;
 import de.metas.logging.LogManager;
 import de.metas.money.CurrencyId;
 import de.metas.tax.api.ITaxDAO;

@@ -2,7 +2,7 @@ package de.metas.order.costs;
 
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.MoneyService;
 import de.metas.order.IOrderBL;
 import de.metas.order.OrderAndLineId;

@@ -10,7 +10,7 @@ import de.metas.contracts.commission.salesrep.DocumentSalesRepDescriptorFactory;
 import de.metas.contracts.commission.salesrep.DocumentSalesRepDescriptorService;
 import de.metas.invoice.InvoiceId;
 import de.metas.invoice.service.IInvoiceDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import de.metas.util.Services;
 import lombok.NonNull;

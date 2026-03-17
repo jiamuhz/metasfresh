@@ -1,7 +1,6 @@
 package de.metas.order;
 
 import de.metas.bpartner.BPartnerId;
-import de.metas.lang.SOTrx;
 import de.metas.product.ProductId;
 
 import javax.annotation.Nullable;

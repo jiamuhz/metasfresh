@@ -29,7 +29,7 @@ import de.metas.inout.InOutLineId;
 import de.metas.inout.InOutLineQuery;
 import de.metas.inout.location.adapter.InOutDocumentLocationAdapterFactory;
 import de.metas.interfaces.I_C_BPartner;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.material.MovementType;
 import de.metas.money.CurrencyConversionTypeId;
 import de.metas.money.Money;

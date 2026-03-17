@@ -1,7 +1,7 @@
 package de.metas.payment;
 
 import de.metas.currency.Amount;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import lombok.NonNull;
 

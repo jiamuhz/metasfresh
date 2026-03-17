@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import de.metas.currency.Amount;
 import de.metas.edi.model.I_C_Order;
 import de.metas.invoice.InvoiceLineId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import de.metas.money.MoneyService;
 import de.metas.order.costs.OrderCostService;

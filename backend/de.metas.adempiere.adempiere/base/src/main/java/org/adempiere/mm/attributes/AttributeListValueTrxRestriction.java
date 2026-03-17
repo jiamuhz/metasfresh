@@ -5,7 +5,7 @@ import javax.annotation.Nullable;
 import org.adempiere.exceptions.AdempiereException;
 import org.compiere.model.X_M_AttributeValue;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.lang.ReferenceListAwareEnum;
 import lombok.Getter;
 

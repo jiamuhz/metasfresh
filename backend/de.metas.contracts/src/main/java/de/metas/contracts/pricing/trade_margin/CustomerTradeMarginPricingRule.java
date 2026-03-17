@@ -34,7 +34,7 @@ import de.metas.contracts.commission.commissioninstance.services.CommissionConfi
 import de.metas.contracts.commission.commissioninstance.services.margin.MarginCommissionConfigFactory;
 import de.metas.invoice.InvoiceId;
 import de.metas.invoice.service.IInvoiceDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.money.CurrencyId;
 import de.metas.money.Money;

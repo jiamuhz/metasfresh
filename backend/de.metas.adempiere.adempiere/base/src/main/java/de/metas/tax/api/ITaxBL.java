@@ -23,7 +23,7 @@ package de.metas.tax.api;
  */
 
 import de.metas.bpartner.BPartnerLocationAndCaptureId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.organization.OrgId;
 import de.metas.util.ISingletonService;
 import lombok.NonNull;

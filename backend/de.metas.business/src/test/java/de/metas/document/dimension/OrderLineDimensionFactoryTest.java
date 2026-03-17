@@ -1,6 +1,6 @@
 package de.metas.document.dimension;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.OrderId;
 import lombok.Builder;
 import lombok.NonNull;

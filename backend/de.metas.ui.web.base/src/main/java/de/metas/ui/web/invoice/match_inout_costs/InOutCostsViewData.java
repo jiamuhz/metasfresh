@@ -2,7 +2,7 @@ package de.metas.ui.web.invoice.match_inout_costs;
 
 import de.metas.i18n.TranslatableStrings;
 import de.metas.invoice.InvoiceLineId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.ui.web.document.filter.DocumentFilter;
 import de.metas.ui.web.view.ViewHeaderProperties;
 import de.metas.ui.web.view.ViewHeaderPropertiesGroup;

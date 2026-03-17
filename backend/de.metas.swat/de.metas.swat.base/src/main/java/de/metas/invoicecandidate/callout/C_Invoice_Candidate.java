@@ -11,7 +11,7 @@ import de.metas.invoicecandidate.model.I_C_ILCandHandler;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
 import de.metas.invoicecandidate.model.X_C_Invoice_Candidate;
 import de.metas.invoicecandidate.spi.impl.ManualCandidateHandler;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.compensationGroup.Group;
 import de.metas.organization.IOrgDAO;
 import de.metas.organization.OrgId;

@@ -6,7 +6,7 @@ import de.metas.cache.model.CacheInvalidateMultiRequest;
 import de.metas.common.util.time.SystemTime;
 import de.metas.currency.CurrencyPrecision;
 import de.metas.currency.ICurrencyDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.money.CurrencyId;
 import de.metas.pricing.PriceListId;

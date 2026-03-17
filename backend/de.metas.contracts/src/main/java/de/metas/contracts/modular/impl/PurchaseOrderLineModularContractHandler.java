@@ -40,7 +40,7 @@ import de.metas.contracts.modular.settings.ModularContractSettings;
 import de.metas.contracts.modular.settings.ModularContractSettingsDAO;
 import de.metas.i18n.AdMessageKey;
 import de.metas.inout.IInOutDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.IOrderBL;
 import de.metas.order.OrderId;
 import de.metas.order.OrderLineId;

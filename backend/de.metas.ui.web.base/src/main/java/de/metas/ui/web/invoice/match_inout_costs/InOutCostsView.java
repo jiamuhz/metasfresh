@@ -2,7 +2,7 @@ package de.metas.ui.web.invoice.match_inout_costs;
 
 import com.google.common.collect.ImmutableList;
 import de.metas.invoice.InvoiceLineId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.process.RelatedProcessDescriptor;
 import de.metas.ui.web.document.filter.DocumentFilterDescriptor;
 import de.metas.ui.web.document.filter.DocumentFilterList;

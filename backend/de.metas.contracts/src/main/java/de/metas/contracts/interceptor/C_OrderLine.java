@@ -2,7 +2,7 @@ package de.metas.contracts.interceptor;
 
 import de.metas.contracts.order.model.I_C_OrderLine;
 import de.metas.contracts.subscription.ISubscriptionBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.IOrderLineBL;
 import de.metas.order.compensationGroup.GroupId;
 import de.metas.order.compensationGroup.GroupTemplateId;

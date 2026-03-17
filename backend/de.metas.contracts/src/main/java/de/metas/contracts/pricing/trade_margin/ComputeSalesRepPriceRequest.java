@@ -23,7 +23,7 @@
 package de.metas.contracts.pricing.trade_margin;
 
 import de.metas.bpartner.BPartnerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.product.ProductId;
 import de.metas.quantity.Quantity;

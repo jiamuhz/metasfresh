@@ -10,7 +10,7 @@ import javax.annotation.Nullable;
 import org.compiere.model.I_C_Order;
 
 import de.metas.bpartner.BPartnerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.Value;

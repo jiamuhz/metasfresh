@@ -23,7 +23,7 @@
 package de.metas.contracts.modular.settings;
 
 import de.metas.calendar.standard.YearAndCalendarId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import lombok.Builder;
 import lombok.NonNull;

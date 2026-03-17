@@ -6,7 +6,7 @@ import org.adempiere.exceptions.AdempiereException;
 
 import de.metas.i18n.ITranslatableString;
 import de.metas.i18n.TranslatableStrings;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.Value;

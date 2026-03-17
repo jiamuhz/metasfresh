@@ -2,15 +2,13 @@ package de.metas.invoicecandidate.internalbusinesslogic;
 
 import de.metas.inout.model.I_M_InOut;
 import de.metas.invoicecandidate.InvoiceCandidateIds;
-import de.metas.invoicecandidate.api.IInvoiceCandDAO;
 import de.metas.invoicecandidate.model.I_C_InvoiceCandidate_InOutLine;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import de.metas.uom.CreateUOMConversionRequest;
 import de.metas.uom.UomId;
 import de.metas.uom.impl.UOMTestHelper;
-import de.metas.util.Services;
 import org.adempiere.test.AdempiereTestHelper;
 import org.compiere.model.I_C_UOM;
 import org.compiere.model.I_M_InOutLine;

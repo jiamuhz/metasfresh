@@ -24,7 +24,7 @@ package de.metas.document.references.related_documents.generic;
 
 import de.metas.document.references.related_documents.RelatedDocumentsCountSupplier;
 import de.metas.document.references.related_documents.RelatedDocumentsPermissions;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import lombok.NonNull;
 import lombok.ToString;

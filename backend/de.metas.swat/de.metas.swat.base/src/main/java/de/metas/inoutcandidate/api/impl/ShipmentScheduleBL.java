@@ -33,7 +33,7 @@ import de.metas.inoutcandidate.location.ShipmentScheduleLocationsUpdater;
 import de.metas.inoutcandidate.location.adapter.ShipmentScheduleDocumentLocationAdapterFactory;
 import de.metas.inoutcandidate.model.I_M_ShipmentSchedule;
 import de.metas.inoutcandidate.shippingnotification.ShippingNotificationFromShipmentScheduleProducer;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.lock.api.ILockManager;
 import de.metas.logging.LogManager;
 import de.metas.logging.TableRecordMDC;

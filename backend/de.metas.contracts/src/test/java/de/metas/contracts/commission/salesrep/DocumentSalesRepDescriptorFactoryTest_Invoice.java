@@ -5,7 +5,7 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.params.ParameterizedTest;
 import org.junit.jupiter.params.provider.CsvSource;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 
 /*
  * #%L

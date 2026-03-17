@@ -42,7 +42,7 @@ import de.metas.invoice.InvoiceId;
 import de.metas.invoice.InvoiceLineId;
 import de.metas.invoice.InvoiceTax;
 import de.metas.invoice.service.impl.AdjustmentChargeCreateRequest;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.order.OrderId;
 import de.metas.payment.PaymentRule;

@@ -2,7 +2,7 @@ package de.metas.payment.paymentterm.impl;
 
 import de.metas.bpartner.BPartnerId;
 import de.metas.common.util.CoalesceUtil;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.organization.OrgId;
 import de.metas.util.lang.ExternalId;
 import lombok.Builder;

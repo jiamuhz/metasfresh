@@ -10,7 +10,7 @@ import org.compiere.model.I_M_Attribute;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableSet;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
 import lombok.Builder;

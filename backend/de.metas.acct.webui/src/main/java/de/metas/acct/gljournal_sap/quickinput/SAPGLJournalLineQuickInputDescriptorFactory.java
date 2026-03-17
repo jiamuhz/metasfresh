@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableSet;
 import de.metas.acct.model.I_SAP_GLJournalLine;
 import de.metas.ad_reference.ReferenceId;
 import de.metas.i18n.IMsgBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.quickinput.config.QuickInputConfigLayout;
 import de.metas.ui.web.quickinput.IQuickInputDescriptorFactory;
 import de.metas.ui.web.quickinput.QuickInputDescriptor;

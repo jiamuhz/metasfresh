@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import de.metas.bpartner.BPartnerId;
 import de.metas.currency.Currency;
 import de.metas.handlingunits.HUPIItemProductId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.order.OrderId;
 import de.metas.organization.ClientAndOrgId;

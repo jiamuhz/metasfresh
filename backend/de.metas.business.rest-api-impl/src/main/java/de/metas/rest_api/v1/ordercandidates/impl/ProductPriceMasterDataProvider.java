@@ -3,7 +3,7 @@ package de.metas.rest_api.v1.ordercandidates.impl;
 import de.metas.bpartner.BPartnerId;
 import de.metas.bpartner.BPartnerLocationId;
 import de.metas.bpartner.service.IBPartnerDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.pricing.PriceListId;
 import de.metas.pricing.PriceListVersionId;

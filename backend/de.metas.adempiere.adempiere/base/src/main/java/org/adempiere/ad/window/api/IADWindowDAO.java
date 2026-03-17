@@ -2,7 +2,7 @@ package org.adempiere.ad.window.api;
 
 import com.google.common.collect.ImmutableSet;
 import de.metas.i18n.ITranslatableString;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.ISingletonService;
 import lombok.NonNull;
 import org.adempiere.ad.dao.IQueryBuilder;

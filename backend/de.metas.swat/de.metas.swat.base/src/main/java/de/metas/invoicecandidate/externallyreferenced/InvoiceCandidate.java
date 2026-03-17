@@ -32,7 +32,7 @@ import de.metas.invoice.detail.InvoiceDetailItem;
 import de.metas.invoicecandidate.InvoiceCandidateId;
 import de.metas.invoicecandidate.NewInvoiceCandidate;
 import de.metas.invoicecandidate.spi.ILCandHandlerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.order.InvoiceRule;
 import de.metas.organization.OrgId;

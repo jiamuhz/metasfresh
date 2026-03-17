@@ -1,7 +1,7 @@
 package de.metas.invoice;
 
 import de.metas.document.DocBaseType;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.lang.ReferenceListAwareEnum;
 import de.metas.util.lang.ReferenceListAwareEnums;
 import de.metas.util.lang.ReferenceListAwareEnums.ValuesIndex;

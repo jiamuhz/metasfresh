@@ -9,7 +9,6 @@ import org.adempiere.mm.attributes.AttributeSetInstanceId;
 import org.adempiere.warehouse.WarehouseId;
 
 import de.metas.bpartner.BPartnerId;
-import de.metas.lang.SOTrx;
 import de.metas.organization.OrgId;
 import de.metas.payment.paymentterm.PaymentTermId;
 import de.metas.product.ProductId;

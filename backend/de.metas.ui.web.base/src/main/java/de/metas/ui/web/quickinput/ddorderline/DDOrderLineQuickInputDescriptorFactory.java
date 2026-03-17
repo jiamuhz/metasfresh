@@ -24,7 +24,7 @@ package de.metas.ui.web.quickinput.ddorderline;
 
 import com.google.common.collect.ImmutableSet;
 import de.metas.i18n.IMsgBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.ad_reference.ReferenceId;
 import de.metas.ui.web.quickinput.IQuickInputDescriptorFactory;
 import de.metas.ui.web.quickinput.QuickInputConstants;

@@ -6,7 +6,7 @@ import java.time.LocalDate;
 
 import javax.annotation.Nullable;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.time.InstantInterval;
 import org.adempiere.exceptions.AdempiereException;
 

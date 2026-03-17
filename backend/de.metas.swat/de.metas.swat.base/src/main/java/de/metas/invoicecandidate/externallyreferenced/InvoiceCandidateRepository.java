@@ -40,7 +40,7 @@ import de.metas.invoicecandidate.location.adapter.InvoiceCandidateLocationAdapte
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
 import de.metas.invoicecandidate.model.I_C_Invoice_Detail;
 import de.metas.invoicecandidate.spi.ILCandHandlerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.InvoiceRule;
 import de.metas.organization.IOrgDAO;
 import de.metas.organization.OrgId;

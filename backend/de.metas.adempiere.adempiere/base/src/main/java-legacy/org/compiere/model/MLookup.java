@@ -16,7 +16,7 @@
  *****************************************************************************/
 package org.compiere.model;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.AbstractPropertiesProxy;
 import de.metas.util.Check;
 import de.metas.util.Services;

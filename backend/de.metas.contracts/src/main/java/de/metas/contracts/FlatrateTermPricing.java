@@ -6,7 +6,7 @@ import de.metas.common.util.CoalesceUtil;
 import de.metas.contracts.location.ContractLocationHelper;
 import de.metas.contracts.model.I_C_Flatrate_Term;
 import de.metas.i18n.AdMessageKey;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.pricing.IEditablePricingContext;
 import de.metas.pricing.IPricingResult;
 import de.metas.pricing.PriceListId;

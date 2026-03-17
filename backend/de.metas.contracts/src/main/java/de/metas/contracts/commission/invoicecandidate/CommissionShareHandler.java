@@ -21,7 +21,7 @@ import de.metas.invoicecandidate.spi.AbstractInvoiceCandidateHandler;
 import de.metas.invoicecandidate.spi.IInvoiceCandidateHandler;
 import de.metas.invoicecandidate.spi.InvoiceCandidateGenerateRequest;
 import de.metas.invoicecandidate.spi.InvoiceCandidateGenerateResult;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.LocationId;
 import de.metas.logging.LogManager;
 import de.metas.organization.IOrgDAO;

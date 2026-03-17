@@ -24,7 +24,7 @@ package de.metas.deliveryplanning.invoicecandidate;
 
 import de.metas.deliveryplanning.DeliveryPlanningService;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.OrderLineId;
 import de.metas.order.invoicecandidate.OrderLineHandlerExtension;
 import lombok.NonNull;

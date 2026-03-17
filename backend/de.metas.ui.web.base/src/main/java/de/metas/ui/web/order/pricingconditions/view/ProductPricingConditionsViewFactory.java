@@ -1,6 +1,6 @@
 package de.metas.ui.web.order.pricingconditions.view;
 
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.Money;
 import de.metas.pricing.IEditablePricingContext;
 import de.metas.pricing.IPricingContext;

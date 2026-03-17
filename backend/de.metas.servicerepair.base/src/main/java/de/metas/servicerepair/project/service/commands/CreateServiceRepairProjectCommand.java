@@ -28,7 +28,7 @@ import de.metas.document.location.DocumentLocation;
 import de.metas.inout.IInOutBL;
 import de.metas.inout.InOutId;
 import de.metas.inout.location.adapter.InOutDocumentLocationAdapterFactory;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.organization.IOrgDAO;
 import de.metas.organization.OrgId;

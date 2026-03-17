@@ -51,7 +51,7 @@ import de.metas.invoice.InvoiceId;
 import de.metas.invoice.InvoiceLineId;
 import de.metas.invoice.service.IInvoiceBL;
 import de.metas.invoice.service.impl.InvoiceDAO;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.ILocationBL;
 import de.metas.location.LocationId;
 import de.metas.money.CurrencyId;

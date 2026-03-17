@@ -5,7 +5,7 @@ import de.metas.cache.CCache;
 import de.metas.common.util.CoalesceUtil;
 import de.metas.i18n.ITranslatableString;
 import de.metas.i18n.TranslatableStrings;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.util.Check;
 import de.metas.util.Services;

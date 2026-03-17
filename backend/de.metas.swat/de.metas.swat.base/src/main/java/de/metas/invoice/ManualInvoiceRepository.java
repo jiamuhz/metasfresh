@@ -31,7 +31,7 @@ import de.metas.document.DocTypeId;
 import de.metas.impex.InputDataSourceId;
 import de.metas.invoice.request.CreateManualInvoiceLineRequest;
 import de.metas.invoice.request.CreateManualInvoiceRequest;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.organization.OrgId;
 import de.metas.pricing.PriceListId;

@@ -40,7 +40,7 @@ import de.metas.common.util.pair.ImmutablePair;
 import org.compiere.util.TimeUtil;
 
 import de.metas.bpartner.BPartnerLocationId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.tourplanning.api.IDeliveryDayAllocable;
 import de.metas.tourplanning.api.IDeliveryDayBL;
 import de.metas.tourplanning.api.IDeliveryDayDAO;

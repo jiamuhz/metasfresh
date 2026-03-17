@@ -1,4 +1,4 @@
-package de.metas.lang;
+package de.metas.order;
 
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;

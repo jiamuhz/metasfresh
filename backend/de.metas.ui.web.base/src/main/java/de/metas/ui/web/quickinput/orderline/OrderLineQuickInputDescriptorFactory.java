@@ -7,7 +7,7 @@ import de.metas.bpartner.service.IBPartnerBL;
 import de.metas.contracts.model.I_C_Flatrate_Conditions;
 import de.metas.i18n.IMsgBL;
 import de.metas.i18n.ITranslatableString;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.material.cockpit.availableforsales.AvailableForSalesConfigRepo;
 import de.metas.ui.web.material.adapter.AvailableForSaleAdapter;
 import de.metas.ui.web.material.adapter.AvailableToPromiseAdapter;

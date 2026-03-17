@@ -45,7 +45,7 @@ import org.compiere.model.I_M_Attribute;
 
 import de.metas.fresh.model.I_C_BPartner;
 import de.metas.i18n.AdMessageKey;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.Check;
 import de.metas.util.Services;
 

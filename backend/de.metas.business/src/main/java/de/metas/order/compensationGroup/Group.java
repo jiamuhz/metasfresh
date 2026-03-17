@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import de.metas.bpartner.BPartnerId;
 import de.metas.contracts.ConditionsId;
 import de.metas.currency.CurrencyPrecision;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.acct.api.ActivityId;
 import de.metas.quantity.Quantity;
 import de.metas.util.GuavaCollectors;

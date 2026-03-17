@@ -27,7 +27,7 @@ import de.metas.contracts.callorder.summary.model.CallOrderSummary;
 import de.metas.contracts.callorder.summary.model.CallOrderSummaryData;
 import de.metas.contracts.callorder.summary.model.CallOrderSummaryId;
 import de.metas.contracts.model.I_C_CallOrderSummary;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.OrderId;
 import de.metas.order.OrderLineId;
 import de.metas.product.ProductId;

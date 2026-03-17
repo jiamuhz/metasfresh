@@ -11,7 +11,7 @@ import de.metas.inoutcandidate.api.IShipmentSchedulePA;
 import de.metas.inoutcandidate.invalidation.IShipmentScheduleInvalidateBL;
 import de.metas.inoutcandidate.model.I_M_ShipmentSchedule;
 import de.metas.interfaces.I_C_BPartner;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.Services;
 
 @Validator(I_C_BPartner.class)

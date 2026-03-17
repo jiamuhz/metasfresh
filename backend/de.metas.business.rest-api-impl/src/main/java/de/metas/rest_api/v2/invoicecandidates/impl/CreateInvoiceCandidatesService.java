@@ -50,7 +50,7 @@ import de.metas.invoicecandidate.externallyreferenced.InvoiceCandidateLookupKey;
 import de.metas.invoicecandidate.externallyreferenced.InvoiceCandidateRepository;
 import de.metas.invoicecandidate.externallyreferenced.ManualCandidateService;
 import de.metas.invoicecandidate.spi.impl.ManualCandidateHandler;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.money.Money;
 import de.metas.organization.IOrgDAO;

@@ -50,7 +50,7 @@ import org.slf4j.Logger;
 
 import de.metas.bpartner.BPartnerId;
 import de.metas.document.DocTypeId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.product.ProductId;
 import de.metas.util.Services;

@@ -35,7 +35,7 @@ import de.metas.contracts.model.I_ModCntr_Settings;
 import de.metas.contracts.model.I_ModCntr_Type;
 import de.metas.contracts.model.X_C_Flatrate_Conditions;
 import de.metas.contracts.modular.ModularContractHandlerType;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.organization.OrgId;
 import de.metas.pricing.PricingSystemId;

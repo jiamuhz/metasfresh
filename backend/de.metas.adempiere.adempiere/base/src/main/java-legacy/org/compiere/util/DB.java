@@ -26,7 +26,7 @@ import com.google.common.collect.ImmutableSet;
 import de.metas.cache.CacheMgt;
 import de.metas.common.util.pair.ImmutablePair;
 import de.metas.document.sequence.IDocumentNoBuilderFactory;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.logging.MetasfreshLastError;
 import de.metas.organization.OrgId;

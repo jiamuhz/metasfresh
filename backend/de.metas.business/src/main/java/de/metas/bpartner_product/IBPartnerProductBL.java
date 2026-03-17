@@ -1,7 +1,7 @@
 package de.metas.bpartner_product;
 
 import de.metas.bpartner.BPartnerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import de.metas.util.ISingletonService;
 

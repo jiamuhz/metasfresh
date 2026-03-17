@@ -11,7 +11,7 @@ import de.metas.common.util.pair.ImmutablePair;
 import org.junit.jupiter.api.Test;
 
 import de.metas.bpartner.BPartnerLocationId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.tourplanning.TourPlanningTestBase;
 import de.metas.tourplanning.model.TourId;
 

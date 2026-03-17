@@ -30,7 +30,7 @@ import de.metas.inout.location.adapter.InOutDocumentLocationAdapterFactory;
 import de.metas.interfaces.I_C_OrderLine;
 import de.metas.invoice.location.adapter.InvoiceDocumentLocationAdapterFactory;
 import de.metas.invoice.service.IInvoiceBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.logging.LogManager;
 import de.metas.organization.OrgId;

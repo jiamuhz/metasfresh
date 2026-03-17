@@ -31,7 +31,7 @@ import de.metas.inoutcandidate.spi.ShipmentScheduleReferencedLine;
 import de.metas.inoutcandidate.spi.ShipmentScheduleReferencedLineFactory;
 import de.metas.inoutcandidate.spi.impl.CompositeCandidateProcessor;
 import de.metas.inoutcandidate.spi.impl.ShipmentScheduleOrderReferenceProvider;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.material.cockpit.stock.StockRepository;
 import de.metas.order.DeliveryRule;

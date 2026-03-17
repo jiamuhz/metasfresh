@@ -1,7 +1,7 @@
 package de.metas.order.costs.inout;
 
 import de.metas.bpartner.BPartnerId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.order.OrderId;
 import de.metas.order.costs.OrderCostTypeId;
 import lombok.Builder;

@@ -27,7 +27,7 @@ import de.metas.common.util.CoalesceUtil;
 import de.metas.currency.Amount;
 import de.metas.invoice.InvoiceAmtMultiplier;
 import de.metas.invoice.InvoiceId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.organization.ClientAndOrgId;
 import de.metas.organization.OrgId;
 import lombok.Builder;

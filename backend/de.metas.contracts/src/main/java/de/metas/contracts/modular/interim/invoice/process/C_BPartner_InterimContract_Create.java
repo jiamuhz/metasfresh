@@ -31,7 +31,7 @@ import de.metas.contracts.modular.interim.bpartner.BPartnerInterimContractServic
 import de.metas.contracts.modular.interim.invoice.service.IInterimFlatrateTermService;
 import de.metas.i18n.AdMessageKey;
 import de.metas.i18n.IMsgBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.process.IProcessPrecondition;
 import de.metas.process.IProcessPreconditionsContext;
 import de.metas.process.JavaProcess;

@@ -14,7 +14,7 @@ import de.metas.document.DocTypeId;
 import de.metas.error.AdIssueId;
 import de.metas.error.IErrorManager;
 import de.metas.freighcost.FreightCostRule;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.logging.LogManager;
 import de.metas.money.CurrencyId;

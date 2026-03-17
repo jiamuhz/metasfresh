@@ -27,7 +27,6 @@ import de.metas.contracts.modular.ModularContractService;
 import de.metas.contracts.modular.log.LogEntryContractType;
 import de.metas.contracts.modular.log.ModularContractLogDAO;
 import de.metas.i18n.AdMessageKey;
-import de.metas.lang.SOTrx;
 import de.metas.order.IOrderDAO;
 import de.metas.util.Services;
 import lombok.NonNull;

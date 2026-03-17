@@ -26,7 +26,7 @@ import de.metas.bpartner.BPartnerId;
 import de.metas.calendar.standard.CalendarId;
 import de.metas.calendar.standard.YearId;
 import de.metas.contracts.flatrate.TypeConditions;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import lombok.Builder;
 import lombok.NonNull;

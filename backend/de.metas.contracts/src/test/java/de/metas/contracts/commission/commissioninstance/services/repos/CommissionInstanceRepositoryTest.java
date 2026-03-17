@@ -38,7 +38,7 @@ import de.metas.contracts.commission.model.I_C_Commission_Share;
 import de.metas.invoice.InvoiceLineId;
 import de.metas.invoicecandidate.InvoiceCandidateId;
 import de.metas.invoicecandidate.model.I_C_Invoice_Candidate;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.money.CurrencyId;
 import de.metas.organization.OrgId;
 import de.metas.product.ProductId;

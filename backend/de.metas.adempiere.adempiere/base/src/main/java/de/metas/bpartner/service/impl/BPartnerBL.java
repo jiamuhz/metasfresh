@@ -20,7 +20,7 @@ import de.metas.bpartner.service.IBPartnerDAO;
 import de.metas.greeting.GreetingId;
 import de.metas.i18n.AdMessageKey;
 import de.metas.i18n.Language;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.location.CountryId;
 import de.metas.location.ILocationBL;
 import de.metas.location.ILocationDAO;

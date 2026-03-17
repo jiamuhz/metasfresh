@@ -1,7 +1,7 @@
 package de.metas.tourplanning.api;
 
 import de.metas.bpartner.BPartnerLocationId;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.tourplanning.model.I_M_DeliveryDay;
 import de.metas.tourplanning.model.I_M_DeliveryDay_Alloc;
 import de.metas.tourplanning.model.I_M_TourVersionLine;

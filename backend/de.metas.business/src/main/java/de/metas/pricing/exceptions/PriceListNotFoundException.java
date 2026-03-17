@@ -2,7 +2,7 @@ package de.metas.pricing.exceptions;
 
 import de.metas.i18n.AdMessageKey;
 import de.metas.i18n.ITranslatableString;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import org.adempiere.exceptions.AdempiereException;
 
 import java.util.List;

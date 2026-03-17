@@ -44,7 +44,7 @@ import org.compiere.model.I_C_Country;
 import org.compiere.model.I_M_Attribute;
 
 import de.metas.i18n.AdMessageKey;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.util.Services;
 
 public class Country2CountryAwareAttributeService implements ICountryAwareAttributeService

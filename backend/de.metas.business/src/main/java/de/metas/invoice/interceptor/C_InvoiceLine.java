@@ -9,7 +9,7 @@ import de.metas.document.dimension.DimensionService;
 import de.metas.invoice.InvoiceId;
 import de.metas.invoice.service.IInvoiceBL;
 import de.metas.invoice.service.IInvoiceLineBL;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.product.ProductId;
 import de.metas.tax.api.ITaxDAO;
 import de.metas.tax.api.Tax;

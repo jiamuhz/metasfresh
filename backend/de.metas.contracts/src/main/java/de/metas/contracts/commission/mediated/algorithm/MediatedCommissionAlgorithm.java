@@ -39,7 +39,7 @@ import de.metas.contracts.commission.commissioninstance.businesslogic.sales.comm
 import de.metas.contracts.commission.commissioninstance.businesslogic.sales.commissiontrigger.CommissionTriggerType;
 import de.metas.contracts.commission.model.I_C_Commission_Share;
 import de.metas.contracts.commission.model.I_C_MediatedCommissionSettings;
-import de.metas.lang.SOTrx;
+import de.metas.order.SOTrx;
 import de.metas.logging.LogManager;
 import de.metas.logging.TableRecordMDC;
 import lombok.NonNull;
