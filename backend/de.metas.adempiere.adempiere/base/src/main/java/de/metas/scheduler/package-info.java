@@ -22,6 +22,8 @@
 
 /**
  * Code around <code>AD_Scheduler</code>
+ *
+ * AD_Scheduler --- 定时任务配置总表
  */
 package de.metas.scheduler;
 

@@ -1,0 +1,7 @@
+/**
+ * AD_JavaClass 就是 metasfresh 的“Java 类注册簿”。它把静态的 Java 代码和动态的系统配置、用户界面连接了起来
+ */
+
+package de.metas.javaclasses;
+
+
