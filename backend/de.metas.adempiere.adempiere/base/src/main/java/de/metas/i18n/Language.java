@@ -72,40 +72,10 @@ public final class Language implements Serializable
 	@VisibleForTesting
 	public static final String AD_Language_en_AU = "en_AU";
 
-	private static final String AD_Language_ca_ES = "ca_ES";
-	private static final String AD_Language_hr_HR = "hr_HR";
 	private static final String AD_Language_de_DE = "de_DE";
 	private static final String AD_Language_de_CH = "de_CH"; // 03362
-	private static final String AD_Language_it_IT = "it_IT";
-	private static final String AD_Language_es_ES = "es_ES";
-	private static final String AD_Language_es_MX = "es_MX";
-	private static final String AD_Language_es_CO = "es_CO";
-	private static final String AD_Language_es_DO = "es_DO";
-	private static final String AD_Language_fr_FR = "fr_FR";
-	private static final String AD_Language_fr_CA = "fr_CA";
-	private static final String AD_Language_bg_BG = "bg_BG";
-	private static final String AD_Language_th_TH = "th_TH";
-	private static final String AD_Language_pl_PL = "pl_PL";
 	private static final String AD_Language_zh_TW = "zh_TW";
-	private static final String AD_Language_nl_NL = "nl_NL";
-	private static final String AD_Language_no_NO = "no_NO";
-	private static final String AD_Language_pt_BR = "pt_BR";
-	private static final String AD_Language_ru_RU = "ru_RU";
-	private static final String AD_Language_sl_SI = "sl_SI";
-	private static final String AD_Language_sr_RS = "sr_RS";
-	private static final String AD_Language_sv_SE = "sv_SE";
-	private static final String AD_Language_vi_VN = "vi_VN";
 	private static final String AD_Language_zh_CN = "zh_CN";
-	private static final String AD_Language_da_DK = "da_DK";
-	private static final String AD_Language_ms_MY = "ms_MY";
-	private static final String AD_Language_fa_IR = "fa_IR";
-	private static final String AD_Language_fi_FI = "fi_FI";
-	private static final String AD_Language_ro_RO = "ro_RO";
-	private static final String AD_Language_ja_JP = "ja_JP";
-	private static final String AD_Language_in_ID = "in_ID";
-	private static final String AD_Language_ar_TN = "ar_TN";
-	private static final String AD_Language_hu_HU = "hu_HU";
-	private static final String AD_Language_el_GR = "el_GR";
 
 	/** System Languages. */
 	private static final CopyOnWriteArrayList<Language> s_languages = new CopyOnWriteArrayList<>(new Language[] {
@@ -114,15 +84,6 @@ public final class Language implements Serializable
 					MediaSize.NA.LETTER), 							    // Base Language
 			// ordered by locale
 			// Not predefined Locales - need to define decimal Point and date pattern (not sure about time)
-			new Language("\uFE94\uFEF4\uFE91\uFEAE\uFECC\uFEDF\uFE8D (AR)",
-					AD_Language_ar_TN, new Locale("ar", "TN"), Boolean.TRUE, "dd.MM.yyyy",
-					MediaSize.ISO.A4),
-			new Language("\u0411\u044A\u043B\u0433\u0430\u0440\u0441\u043A\u0438 (BG)",
-					AD_Language_bg_BG, new Locale("bg", "BG"), Boolean.FALSE, "dd/MM/yyyy",
-					MediaSize.ISO.A4),
-			new Language("Catal\u00e0",
-					AD_Language_ca_ES, new Locale("ca", "ES"), null, "dd/MM/yyyy",
-					MediaSize.ISO.A4),
 			new Language("Deutsch",
 					AD_Language_de_DE, Locale.GERMANY, Boolean.FALSE, "dd.MM.yyyy",
 					MediaSize.ISO.A4),
@@ -130,98 +91,11 @@ public final class Language implements Serializable
 			new Language("Deutsch (Schweiz)",
 					AD_Language_de_CH, new Locale("de", "CH"), Boolean.FALSE, "dd.MM.yyyy",
 					MediaSize.ISO.A4),
-			new Language("Dansk",
-					AD_Language_da_DK, new Locale("da", "DK"), Boolean.FALSE, "dd-MM-yyyy",
-					MediaSize.ISO.A4),
 			new Language("English (AU)",
 					AD_Language_en_AU, new Locale("en", "AU"), null, "dd/MM/yyyy",
 					MediaSize.ISO.A4),
 			new Language("English (UK)",
 					AD_Language_en_GB, Locale.UK, null, null,
-					MediaSize.ISO.A4),
-			new Language("Espa\u00f1ol",
-					AD_Language_es_ES, new Locale("es", "ES"), Boolean.FALSE, "dd/MM/yyyy",
-					MediaSize.ISO.A4),
-			new Language("Espa\u00f1ol (MX)",
-					AD_Language_es_MX, new Locale("es", "MX"), Boolean.TRUE, "dd/MM/yyyy",
-					MediaSize.NA.LETTER),
-			new Language("Espa\u00f1ol (CO)",
-					AD_Language_es_CO, new Locale("es", "ES"), Boolean.FALSE, "dd/MM/yyyy",
-					MediaSize.NA.LETTER),
-			new Language("Espa\u00f1ol (VE)",
-					AD_Language_es_ES, new Locale("es", "ES"), Boolean.FALSE, "dd/MM/yyyy",
-					MediaSize.ISO.A4),
-			new Language("Espa\u00f1ol (EC)",
-					AD_Language_es_ES, new Locale("es", "ES"), Boolean.FALSE, "dd/MM/yyyy",
-					MediaSize.ISO.A4),
-			new Language("Espa\u00f1ol (DO)",
-					AD_Language_es_DO, new Locale("es", "DO"), Boolean.TRUE, "dd/MM/yyyy",
-					MediaSize.ISO.A4),
-			new Language("\u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac (GR)",
-					AD_Language_el_GR, new Locale("el", "GR"), Boolean.FALSE, "dd/MM/yyyy",
-					MediaSize.ISO.A4),
-			new Language("Farsi",
-					AD_Language_fa_IR, new Locale("fa", "IR"), Boolean.FALSE, "dd-MM-yyyy",
-					MediaSize.ISO.A4),
-			new Language("Finnish",
-					AD_Language_fi_FI, new Locale("fi", "FI"), Boolean.TRUE, "dd.MM.yyyy",
-					MediaSize.ISO.A4),
-			new Language("Fran\u00e7ais",
-					AD_Language_fr_FR, Locale.FRANCE, null, null, 		// dd.MM.yy
-					MediaSize.ISO.A4),
-			new Language("Fran\u00e7ais (CA)",
-					AD_Language_fr_CA, new Locale("fr", "CA"), Boolean.TRUE, "MM/dd/yyyy", 	// MM/dd/yy
-					MediaSize.NA.LETTER),
-			new Language("Hrvatski",
-					AD_Language_hr_HR, new Locale("hr", "HR"), null, "dd.MM.yyyy",
-					MediaSize.ISO.A4),
-			new Language("Indonesia Bahasa",
-					AD_Language_in_ID, new Locale("in", "ID"), Boolean.FALSE, "dd-MM-yyyy",
-					MediaSize.ISO.A4),
-			new Language("Italiano",
-					AD_Language_it_IT, Locale.ITALY, null, null, 		// dd.MM.yy
-					MediaSize.ISO.A4),
-			new Language("\u65e5\u672c\u8a9e (JP)",
-					AD_Language_ja_JP, Locale.JAPAN, null, null,
-					MediaSize.ISO.A4),
-			new Language("Malaysian",
-					AD_Language_ms_MY, new Locale("ms", "MY"), Boolean.FALSE, "dd-MM-yyyy",
-					MediaSize.ISO.A4),
-			new Language("Magyar (HU)",
-					AD_Language_hu_HU, new Locale("hu", "HU"), Boolean.FALSE, "yyyy.MM.dd",
-					MediaSize.ISO.A4),
-			new Language("Nederlands",
-					AD_Language_nl_NL, new Locale("nl", "NL"), Boolean.FALSE, "dd-MM-yyyy",
-					MediaSize.ISO.A4),
-			new Language("Norsk",
-					AD_Language_no_NO, new Locale("no", "NO"), Boolean.FALSE, "dd/MM/yyyy",
-					MediaSize.ISO.A4),
-			new Language("Polski",
-					AD_Language_pl_PL, new Locale("pl", "PL"), Boolean.FALSE, "dd-MM-yyyy",
-					MediaSize.ISO.A4),
-			new Language("Portuguese (BR)",
-					AD_Language_pt_BR, new Locale("pt", "BR"), Boolean.FALSE, "dd/MM/yyyy",
-					MediaSize.ISO.A4),
-			new Language("Rom\u00e2n\u0103",
-					AD_Language_ro_RO, new Locale("ro", "RO"), Boolean.FALSE, "dd.MM.yyyy",
-					MediaSize.ISO.A4),
-			new Language("\u0420\u0443\u0441\u0441\u043a\u0438\u0439 (Russian)",
-					AD_Language_ru_RU, new Locale("ru", "RU"), Boolean.FALSE, "dd-MM-yyyy",
-					MediaSize.ISO.A4),
-			new Language("Slovenski",
-					AD_Language_sl_SI, new Locale("sl", "SI"), null, "dd.MM.yyyy",
-					MediaSize.ISO.A4),
-			new Language("\u0421\u0440\u043F\u0441\u043A\u0438 (RS)",
-					AD_Language_sr_RS, new Locale("sr", "RS"), null, "dd.MM.yyyy",
-					MediaSize.ISO.A4),
-			new Language("Svenska",
-					AD_Language_sv_SE, new Locale("sv", "SE"), Boolean.FALSE, "yyyy-MM-dd",
-					MediaSize.ISO.A4),
-			new Language("\u0e44\u0e17\u0e22 (TH)",
-					AD_Language_th_TH, new Locale("th", "TH"), Boolean.FALSE, "dd/MM/yyyy",
-					MediaSize.ISO.A4),
-			new Language("Vi\u1EC7t Nam",
-					AD_Language_vi_VN, new Locale("vi", "VN"), Boolean.FALSE, "dd-MM-yyyy",
 					MediaSize.ISO.A4),
 			// Need to have (Windows) Asian Language Pack installed to view properly
 			new Language("\u7b80\u4f53\u4e2d\u6587 (CN)",
