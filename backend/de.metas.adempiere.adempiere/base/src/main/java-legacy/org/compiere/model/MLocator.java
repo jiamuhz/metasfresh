@@ -20,6 +20,8 @@ import java.sql.ResultSet;
 import java.util.Properties;
 
 /**
+ *  库位
+ *
  *	Warehouse Locator Object
  *
  *  @author 	Jorg Janke

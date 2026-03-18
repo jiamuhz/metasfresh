@@ -34,6 +34,8 @@ import de.metas.util.Check;
 import de.metas.util.StringUtils;
 
 /**
+ *  地理位置
+ *
  *	Location (Address)
  *
  *  @author Jorg Janke
