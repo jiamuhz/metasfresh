@@ -21,6 +21,8 @@ import java.util.Properties;
 
 
 /**
+ *  “预扣税”或 “代扣税”
+ *
  *	Withholding Model
  *	
  *  @author Jorg Janke

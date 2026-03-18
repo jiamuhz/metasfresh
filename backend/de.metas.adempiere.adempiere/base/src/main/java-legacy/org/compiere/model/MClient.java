@@ -48,6 +48,8 @@ import de.metas.util.Check;
 import de.metas.util.Services;
 
 /**
+ *  租户
+ *
  *  Client Model
  *
  *  @author Jorg Janke

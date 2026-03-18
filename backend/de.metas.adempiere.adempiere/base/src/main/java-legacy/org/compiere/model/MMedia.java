@@ -27,6 +27,8 @@ import org.slf4j.Logger;
 import de.metas.logging.LogManager;
 
 /**
+ * CM  - Content Management
+ *
  * 	Web Media Model
  *	
  *  @author Jorg Janke

@@ -27,6 +27,7 @@ import org.adempiere.exceptions.FillMandatoryException;
 import org.compiere.util.DB;
 
 /**
+ *  内容状态  内容管理 - CM
  * 	Container Stage Model
  *	
  *  @author Jorg Janke

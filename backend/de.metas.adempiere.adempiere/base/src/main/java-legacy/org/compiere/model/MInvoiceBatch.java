@@ -26,6 +26,10 @@ import org.compiere.util.Env;
 
 
 /**
+ * C_InvoiceBatch 理解为一个 “费用发票的临时暂存区” 或 “批处理工作台”。
+ * 当你有一堆零散的费用发票（比如员工报销的出租车票、餐费）需要录入系统时，
+ * 可以先用 C_InvoiceBatch 统一记下来，核对无误后，再一键生成正式的会计凭证（C_Invoice）
+ *
  *	Invoice Batch Header Model
  *	
  *  @author Jorg Janke

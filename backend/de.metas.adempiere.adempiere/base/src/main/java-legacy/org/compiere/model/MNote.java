@@ -28,6 +28,8 @@ import java.sql.ResultSet;
 import java.util.Properties;
 
 /**
+ *  AD_Note 的主要作用是集中存放所有面向用户的系统级通知
+ *
  *  Note Model
  *
  *  @author Jorg Janke

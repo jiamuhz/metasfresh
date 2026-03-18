@@ -20,6 +20,7 @@ import java.sql.ResultSet;
 import java.util.Properties;
 
 /**
+ *  租户 信息
  *  Client Info Model
  *
  *  @author Jorg Janke

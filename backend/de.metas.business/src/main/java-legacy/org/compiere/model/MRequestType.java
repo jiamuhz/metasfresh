@@ -35,6 +35,8 @@ import de.metas.security.IUserRolePermissions;
 import de.metas.logging.LogManager;
 
 /**
+ * 请求  <-->  工单
+ *
  *	Request Type Model
  *	
  *  @author Jorg Janke

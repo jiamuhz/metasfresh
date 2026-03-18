@@ -24,7 +24,7 @@ import java.util.Properties;
 import org.compiere.util.Env;
 
 /**
- *	Service Level Agreement Measure
+ *	Service Level Agreement Measure  服务水平协议度量
  *	
  *  @author Jorg Janke
  *  @version $Id: MSLAMeasure.java,v 1.3 2006/07/30 00:51:03 jjanke Exp $

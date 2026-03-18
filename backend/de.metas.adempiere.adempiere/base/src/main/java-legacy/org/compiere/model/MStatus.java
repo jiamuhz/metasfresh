@@ -30,6 +30,8 @@ import org.compiere.util.DB;
 import org.compiere.util.Env;
 
 /**
+ *  工单状态
+ *
  * 	Request Status Model
  *  @author Jorg Janke
  *  @version $Id: MStatus.java,v 1.2 2006/07/30 00:51:05 jjanke Exp $

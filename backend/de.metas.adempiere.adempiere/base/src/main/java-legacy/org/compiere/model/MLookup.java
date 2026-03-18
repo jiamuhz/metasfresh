@@ -52,6 +52,8 @@ import java.util.concurrent.ExecutionException;
 import java.util.concurrent.Future;
 
 /**
+ * 实现下拉框、搜索框等数据查找功能的基础组件
+ *
  * An intelligent MutableComboBoxModel, which determines what can be cached.
  *
  * <pre>

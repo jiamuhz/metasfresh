@@ -24,6 +24,7 @@ import java.sql.Timestamp;
 import java.util.Properties;
 
 /**
+ * 物料事务
  * Material Transaction Model
  *
  * @author Jorg Janke

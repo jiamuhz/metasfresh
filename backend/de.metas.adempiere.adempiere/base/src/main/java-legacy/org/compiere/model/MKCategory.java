@@ -19,6 +19,12 @@ package org.compiere.model;
 import java.sql.ResultSet;
 import java.util.Properties;
 
+/**
+ * 知识类别
+ *
+ * 知识管理（Knowledge Management，即 K_ 前缀的含义）
+ *
+ */
 
 public class MKCategory extends X_K_Category
 {

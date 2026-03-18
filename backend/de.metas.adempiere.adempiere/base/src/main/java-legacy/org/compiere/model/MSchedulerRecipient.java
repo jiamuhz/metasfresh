@@ -20,6 +20,8 @@ import java.sql.ResultSet;
 import java.util.Properties;
 
 /**
+ *  描述: 任务执行完后，该通知谁？
+ *
  * 	Scheduler Recipient Model
  *	
  *  @author Jorg Janke

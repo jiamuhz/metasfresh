@@ -21,6 +21,8 @@ import java.util.Properties;
 
 
 /**
+ * 市场营销活动
+ *
  *	Campaign model
  *	
  *  @author Jorg Janke

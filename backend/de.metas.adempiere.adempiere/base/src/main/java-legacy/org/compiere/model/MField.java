@@ -6,6 +6,7 @@ import java.util.Properties;
 import org.adempiere.model.InterfaceWrapperHelper;
 
 /**
+ * 选项卡 中的 字段
  * Field Model
  * 
  * @author Jorg Janke

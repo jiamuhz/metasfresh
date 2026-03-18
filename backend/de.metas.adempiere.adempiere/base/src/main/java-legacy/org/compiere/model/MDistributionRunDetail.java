@@ -41,7 +41,7 @@ public class MDistributionRunDetail extends X_T_DistributionRunDetail
 	private static final long serialVersionUID = -8679063565056887913L;
 
 	/**
-	 * 	Get Distribution Dun details
+	 * 	Get Distribution Run details
 	 *	@param ctx context
 	 *	@param M_DistributionRun_ID id
 	 *	@param orderBP if true ordered by Business Partner otherwise Run Line

@@ -29,6 +29,8 @@ import de.metas.logging.LogManager;
 import org.compiere.util.DB;
 
 /**
+ *  "兴趣话题登记表"，用于记录各种可供用户（联系人）订阅的话题分类，是实现精准营销和个性化信息推送的基础
+ *
  *  Interest Area.
  * 	Note: if model is changed, update
  * 	org.compiere.wstore.Info.getInterests()

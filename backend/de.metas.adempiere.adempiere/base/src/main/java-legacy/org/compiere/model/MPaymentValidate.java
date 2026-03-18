@@ -24,7 +24,7 @@ import de.metas.logging.LogManager;
 
 
 /**
- *	Payment Validion Routines
+ *	Payment Validation Routines
  *	
  *  @author Jorg Janke
  *  @version $Id: MPaymentValidate.java,v 1.2 2006/07/30 00:51:05 jjanke Exp $

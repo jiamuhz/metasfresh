@@ -24,6 +24,8 @@ import org.adempiere.exceptions.FillMandatoryException;
 import org.adempiere.model.InterfaceWrapperHelper;
 
 /**
+ * 会计科目（如资产、负债、收入等）
+ *
  * Accounting Element Model.
  * 
  * @author Jorg Janke

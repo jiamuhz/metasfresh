@@ -26,6 +26,7 @@ import org.slf4j.Logger;
 import de.metas.logging.LogManager;
 
 /**
+ * 内容容器 - CM_Container 的主要职责是定义和管理内容在门户网站上的布局位置和展示方式
  * Container Model
  * 
  * @author Yves Sandfort

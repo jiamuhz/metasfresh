@@ -25,7 +25,7 @@ import org.compiere.util.DB;
 import org.compiere.util.Env;
 
 /**
- *	Service Level Agreement Goals
+ *	Service Level Agreement Goals 。 服务水平协议目标
  *	
  *  @author Jorg Janke
  *  @version $Id: MSLAGoal.java,v 1.3 2006/07/30 00:51:03 jjanke Exp $

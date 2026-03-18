@@ -26,6 +26,12 @@ import org.compiere.util.DisplayType;
 import de.metas.util.Services;
 
 /**
+ * validationtype   L (list) T (table)   D (data)
+ *   为 D 时：  ad_reference_id  <--->  org.compiere.util.DisplayType  确定具体类型
+ *   为 T 时：  ad_ref_table + ad_reference_id   确定 ad_table  ;  ad_val_rule_id (from ad_column 表) 确定 where 条件
+ *   为 L 时：  ad_ref_list + ad_reference_id   确定 List 值的集合
+ *   为 S 时：  (SQL): 使用SQL查询获取数据
+ *
  * Note: maybe what you are looking for is here: {@link DisplayType}.
  *
  * @author Tobias Schoeneberg, www.metas.de - FR [ 2897194 ] Advanced Zoom and RelationTypes

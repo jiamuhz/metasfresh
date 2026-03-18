@@ -49,6 +49,8 @@ import de.metas.util.Services;
 import lombok.NonNull;
 
 /**
+ * 主要作用： 列名 --> 标准化列名
+ *
  * Query Descriptor. Maintains restrictions (WHERE clause)
  *
  * @author Jorg Janke

@@ -49,6 +49,8 @@ import java.util.function.Predicate;
 import java.util.stream.Stream;
 
 /**
+ * 数据库表结构的静态信息
+ *
  * Persistent Object Info. Provides structural information
  *
  * @author Jorg Janke

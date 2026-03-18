@@ -22,6 +22,7 @@ import java.util.Properties;
 import de.metas.cache.CCache;
 
 /**
+ *  R_Resolution: 记录工单 “问题是如何解决的”
  * 	Request Resolution Model
  *  @author Jorg Janke
  *  @version $Id: MResolution.java,v 1.2 2006/07/30 00:51:03 jjanke Exp $

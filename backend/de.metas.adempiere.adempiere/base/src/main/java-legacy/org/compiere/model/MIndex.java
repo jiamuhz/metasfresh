@@ -28,6 +28,7 @@ import org.adempiere.exceptions.FillMandatoryException;
 import org.compiere.util.DB;
 
 /**
+ *  关键字索引 - 用于全文检索
  * 	Text Index Model
  *	
  *  @author Yves Sandfort

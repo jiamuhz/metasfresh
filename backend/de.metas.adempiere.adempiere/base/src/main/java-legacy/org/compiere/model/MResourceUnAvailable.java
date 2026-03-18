@@ -15,6 +15,8 @@ import java.time.ZoneId;
 import java.util.Properties;
 
 /**
+ * 描述：资源不可用时间段
+ *
  * Resource Unavailable
  * 
  * @author Jorg Janke

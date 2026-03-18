@@ -457,6 +457,7 @@ public interface I_AD_Client
 	public void setMMPolicy (java.lang.String MMPolicy);
 
 	/**
+	 * 物料管理策略
 	 * Get Materialfluß.
 	 * Material Movement Policy
 	 *

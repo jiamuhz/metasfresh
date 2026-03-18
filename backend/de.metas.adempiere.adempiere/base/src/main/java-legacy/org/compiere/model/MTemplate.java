@@ -25,6 +25,7 @@ import java.util.Properties;
 import org.compiere.util.DB;
 
 /**
+ * 内容模版 - 内容管理
  * Web Template Model
  * 
  * @author Yves Sandfort

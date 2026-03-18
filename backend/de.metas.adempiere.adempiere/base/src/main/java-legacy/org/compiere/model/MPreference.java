@@ -20,6 +20,7 @@ import java.sql.ResultSet;
 import java.util.Properties;
 
 /**
+ *  偏好模型
  *	Preference Model
  *	
  *  @author Jorg Janke

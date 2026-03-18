@@ -29,6 +29,8 @@ import de.metas.logging.LogManager;
 import de.metas.util.Services;
 
 /**
+ * 用于控制同一租户（Client）内不同组织（Organization）之间数据共享规则的核心配置表
+ *
  * Client Share Info
  * 
  * @author Jorg Janke

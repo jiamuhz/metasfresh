@@ -27,7 +27,8 @@ import org.compiere.util.DB;
 import de.metas.cache.CCache;
 
 /**
- *	Service Level Agreement Criteria Model
+ *	PA_ 前缀指 Performance Analysis 绩效分析
+ *	SLA_ : Service Level Agreement Criteria Model  “服务水平协议标准”
  *	
  *  @author Jorg Janke
  *  @version $Id: MSLACriteria.java,v 1.3 2006/07/30 00:51:05 jjanke Exp $

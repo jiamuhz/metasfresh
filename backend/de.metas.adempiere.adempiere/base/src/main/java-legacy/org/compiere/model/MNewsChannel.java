@@ -23,6 +23,8 @@ import java.util.Properties;
 import org.compiere.util.DB;
 
 /**
+ * 新闻频道 - 内容管理
+ *
  * News Channel Model
  * 
  * @author Yves Sandfort

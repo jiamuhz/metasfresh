@@ -22,6 +22,8 @@ import java.util.Properties;
 import de.metas.cache.CCache;
 
 /**
+ *  R_ : Request --> 工单
+ *
  * 	Request Category Model
  *  @author Jorg Janke
  *  @version $Id: MRequestCategory.java,v 1.2 2006/07/30 00:51:05 jjanke Exp $
