@@ -79,7 +79,7 @@ public class MRolePermRequest extends X_AD_Role_PermRequest
 		final Properties ctx = Env.getCtx();
 
 		Services.get(ISysConfigBL.class).setValue(SYSCONFIG_PermLogLevel, permLogLevel, Env.getClientId(), OrgId.ANY);
-		Env.setContext(ctx, "P|" + SYSCONFIG_PermLogLevel, permLogLevel);
+		Env.setContextItem(ctx, "P|" + SYSCONFIG_PermLogLevel, permLogLevel);
 	}
 
 	public static void logWindowAccess(final RoleId roleId, final int id, final Boolean access)

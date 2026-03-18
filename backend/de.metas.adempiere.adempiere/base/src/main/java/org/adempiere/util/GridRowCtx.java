@@ -300,7 +300,7 @@ public class GridRowCtx extends Properties implements Evaluatee
 		final int tabNo = getTabNo();
 		
 		// Check value at Tab level, fallback to Window level
-		final String value = Env.getContext(this, windowNo, tabNo, variableName, Scope.Window);
+		final String value = Env.getContextItem(this, windowNo, tabNo, variableName, Scope.Window);
 		return value;
 	}
 }

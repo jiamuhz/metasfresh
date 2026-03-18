@@ -186,7 +186,7 @@ public class MRPTestHelper
 			adClient = InterfaceWrapperHelper.create(ctx, I_AD_Client.class, ITrx.TRXNAME_None);
 			InterfaceWrapperHelper.save(adClient);
 			adClientId = adClient.getAD_Client_ID();
-			Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, adClientId);
+			Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, adClientId);
 		}
 		else
 		{
@@ -198,7 +198,7 @@ public class MRPTestHelper
 		{
 			adOrg01 = createOrg("Org01");
 			adOrgId = adOrg01.getAD_Org_ID();
-			Env.setContext(ctx, Env.CTXNAME_AD_Org_ID, adOrgId);
+			Env.setContextItem(ctx, Env.CTXNAME_AD_Org_ID, adOrgId);
 		}
 		else
 		{

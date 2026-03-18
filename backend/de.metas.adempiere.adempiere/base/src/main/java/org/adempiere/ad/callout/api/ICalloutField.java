@@ -96,7 +96,7 @@ public interface ICalloutField
 	 */
 	default void putContext(final String name, final String value)
 	{
-		Env.setContext(getCtx(), name, value);
+		Env.setContextItem(getCtx(), name, value);
 	}
 
 	/**
@@ -104,12 +104,12 @@ public interface ICalloutField
 	 */
 	default void putWindowContext(final String name, final String value)
 	{
-		Env.setContext(getCtx(), getWindowNo(), name, value);
+		Env.setContextItem(getCtx(), getWindowNo(), name, value);
 	}
 
 	default void putContext(final String name, final boolean value)
 	{
-		Env.setContext(getCtx(), getWindowNo(), name, value);
+		Env.setContextItem(getCtx(), getWindowNo(), name, value);
 	}
 
 	/**
@@ -117,12 +117,12 @@ public interface ICalloutField
 	 */
 	default void putWindowContext(final String name, final boolean value)
 	{
-		Env.setContext(getCtx(), getWindowNo(), name, value);
+		Env.setContextItem(getCtx(), getWindowNo(), name, value);
 	}
 
 	default void putContext(final String name, final java.util.Date value)
 	{
-		Env.setContext(getCtx(), getWindowNo(), name, value);
+		Env.setContextItem(getCtx(), getWindowNo(), name, value);
 	}
 
 	/**
@@ -130,22 +130,22 @@ public interface ICalloutField
 	 */
 	default void putContext(final String name, final int value)
 	{
-		Env.setContext(getCtx(), getWindowNo(), name, value);
+		Env.setContextItem(getCtx(), getWindowNo(), name, value);
 	}
 
 	default int getGlobalContextAsInt(final String name)
 	{
-		return Env.getContextAsInt(getCtx(), name);
+		return Env.getContextItemAsInt(getCtx(), name);
 	}
 
 	default int getTabInfoContextAsInt(final String name)
 	{
-		return Env.getContextAsInt(getCtx(), getWindowNo(), Env.TAB_INFO, name);
+		return Env.getContextItemAsInt(getCtx(), getWindowNo(), Env.TAB_INFO, name);
 	}
 
 	default boolean getContextAsBoolean(final String name)
 	{
-		return DisplayType.toBoolean(Env.getContext(getCtx(), getWindowNo(), name));
+		return DisplayType.toBoolean(Env.getContextItem(getCtx(), getWindowNo(), name));
 	}
 
 	boolean isLookupValuesContainingId(@NonNull RepoIdAware id);

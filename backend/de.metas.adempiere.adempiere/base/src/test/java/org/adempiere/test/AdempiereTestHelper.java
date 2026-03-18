@@ -156,7 +156,7 @@ public class AdempiereTestHelper
 
 		// Base Language
 		Language.setBaseLanguage(() -> AD_LANGUAGE);
-		Env.setContext(ctx, Env.CTXNAME_AD_Language, AD_LANGUAGE);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Language, AD_LANGUAGE);
 
 		// Reset System Time and random UUID
 		SystemTime.resetTimeSource();
@@ -209,7 +209,7 @@ public class AdempiereTestHelper
 		adClient.setAD_Language(AD_LANGUAGE);
 		InterfaceWrapperHelper.save(adClient);
 
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, adClient.getAD_Client_ID());
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, adClient.getAD_Client_ID());
 	}
 
 	private static void createSystemRecords()

@@ -220,9 +220,9 @@ public final class Language implements Serializable
 			// Update current context
 			// TODO: consider removing this part because we shall not update the context from here. it's not expected at all.
 			final Properties ctx = Env.getCtx();
-			if (Check.isEmpty(Env.getContext(ctx, Env.CTXNAME_AD_Language), true))
+			if (Check.isEmpty(Env.getContextItem(ctx, Env.CTXNAME_AD_Language), true))
 			{
-				Env.setContext(ctx, Env.CTXNAME_AD_Language, language.getAD_Language());
+				Env.setContextItem(ctx, Env.CTXNAME_AD_Language, language.getAD_Language());
 			}
 
 			return language;

@@ -166,7 +166,7 @@ public abstract class ReceiptScheduleTestBase
 		ctx = Env.getCtx();
 		date = SystemTime.asTimestamp();
 		date2 = de.metas.common.util.time.SystemTime.asDayTimestamp();
-		Env.setContext(ctx, Env.CTXNAME_Date, date2);
+		Env.setContextItem(ctx, Env.CTXNAME_Date, date2);
 
 		// Master data
 		final I_AD_Org org = InterfaceWrapperHelper.create(ctx, I_AD_Org.class, ITrx.TRXNAME_None);

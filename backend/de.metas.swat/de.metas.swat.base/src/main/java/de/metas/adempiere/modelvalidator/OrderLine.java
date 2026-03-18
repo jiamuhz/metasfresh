@@ -83,7 +83,7 @@ public class OrderLine implements ModelValidator
 		// updating the freight cost amount, if necessary
 		final MOrder orderPO = (MOrder)ol.getC_Order();
 
-		final String dontUpdateOrder = Env.getContext(po.getCtx(), OrderFastInput.OL_DONT_UPDATE_ORDER + orderPO.get_ID());
+		final String dontUpdateOrder = Env.getContextItem(po.getCtx(), OrderFastInput.OL_DONT_UPDATE_ORDER + orderPO.get_ID());
 		if (Check.isEmpty(dontUpdateOrder) || !"Y".equals(dontUpdateOrder))
 		{
 			final boolean newOrDelete = type == TYPE_AFTER_NEW || type == TYPE_AFTER_DELETE;

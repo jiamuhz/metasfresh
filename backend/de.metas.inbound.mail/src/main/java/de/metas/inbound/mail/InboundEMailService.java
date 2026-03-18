@@ -70,8 +70,8 @@ public class InboundEMailService
 	private static IAutoCloseable switchContext(@NonNull final InboundEMailConfig config)
 	{
 		final Properties ctx = Env.newTemporaryCtx();
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, config.getAdClientId().getRepoId());
-		Env.setContext(ctx, Env.CTXNAME_AD_Org_ID, config.getOrgId().getRepoId());
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, config.getAdClientId().getRepoId());
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Org_ID, config.getOrgId().getRepoId());
 
 		return Env.switchContext(ctx);
 	}

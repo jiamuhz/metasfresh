@@ -75,7 +75,7 @@ public class GetArchiveManualTest
 
 		Env.setClientId(ctx, clientId);
 		final int adSessionId = 1014302;
-		Env.setContext(ctx, Env.CTXNAME_AD_Session_ID, adSessionId);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Session_ID, adSessionId);
 
 		// factory = new ArchiveStorageFactory();
 		// factory.registerArchiveStorage(IArchiveStorageFactory.STORAGETYPE_Filesystem, IArchiveStorageFactory.AccessMode.CLIENT, RemoteArchiveStorage.class);

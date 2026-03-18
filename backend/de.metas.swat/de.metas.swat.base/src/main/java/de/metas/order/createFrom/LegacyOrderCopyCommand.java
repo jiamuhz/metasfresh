@@ -66,8 +66,8 @@ public class LegacyOrderCopyCommand
 
 		newOrder.setAD_Org_ID(originalOrder.getAD_Org_ID());
 
-		newOrder.setDatePromised(Env.getContextAsDate(Env.getCtx(), "#Date"));
-		newOrder.setDateOrdered(Env.getContextAsDate(Env.getCtx(), "#Date"));
+		newOrder.setDatePromised(Env.getContextItemAsDate(Env.getCtx(), "#Date"));
+		newOrder.setDateOrdered(Env.getContextItemAsDate(Env.getCtx(), "#Date"));
 
 		newOrder.setAD_OrgTrx_ID(originalOrder.getAD_OrgTrx_ID());
 		newOrder.setC_Activity_ID(originalOrder.getC_Activity_ID());

@@ -121,12 +121,12 @@ public class LocalReportServer implements IReportServer
 			final Integer adClientId = InterfaceWrapperHelper.getValueOrNull(record, "AD_Client_ID");
 			if (adClientId != null)
 			{
-				Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, adClientId);
+				Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, adClientId);
 			}
 			final Integer adOrgId = InterfaceWrapperHelper.getValueOrNull(record, "AD_Org_ID");
 			if (adOrgId != null)
 			{
-				Env.setContext(ctx, Env.CTXNAME_AD_Org_ID, adOrgId);
+				Env.setContextItem(ctx, Env.CTXNAME_AD_Org_ID, adOrgId);
 			}
 		}
 		catch (final Exception ex)

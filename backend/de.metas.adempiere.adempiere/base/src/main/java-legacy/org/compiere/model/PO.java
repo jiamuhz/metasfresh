@@ -67,7 +67,6 @@ import org.compiere.util.Env;
 import org.compiere.util.Evaluatee;
 import org.compiere.util.Evaluatee2;
 import org.compiere.util.ISqlUpdateReturnProcessor;
-import org.compiere.util.Ini;
 import org.compiere.util.SecureEngine;
 import org.compiere.util.Trace;
 import org.compiere.util.TrxRunnable2;
@@ -2310,7 +2309,7 @@ public abstract class PO
 		// FRESH-314: create a change log also if there is no AD_Session_ID; also store the AD_PInstance_ID
 		final MFSession session = get_Session();
 		final int adSessionId = session != null ? session.getAD_Session_ID() : 0;
-		final PInstanceId adPInstanceId = PInstanceId.ofRepoIdOrNull(Env.getContextAsInt(getCtx(), Env.CTXNAME_AD_PInstance_ID));
+		final PInstanceId adPInstanceId = PInstanceId.ofRepoIdOrNull(Env.getContextItemAsInt(getCtx(), Env.CTXNAME_AD_PInstance_ID));
 
 		final int adClientId = getAD_Client_ID();
 		final boolean isInsertChangeLogEvent = X_AD_ChangeLog.EVENTCHANGELOG_Insert.equals(changeLogType);

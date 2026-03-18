@@ -79,7 +79,7 @@ public class RestHttpArchiveEndpoint implements IArchiveEndpoint
 
 	private int getAD_Session_ID()
 	{
-		return Env.getContextAsInt(Env.getCtx(), Env.CTXNAME_AD_Session_ID);
+		return Env.getContextItemAsInt(Env.getCtx(), Env.CTXNAME_AD_Session_ID);
 	}
 
 	@Override

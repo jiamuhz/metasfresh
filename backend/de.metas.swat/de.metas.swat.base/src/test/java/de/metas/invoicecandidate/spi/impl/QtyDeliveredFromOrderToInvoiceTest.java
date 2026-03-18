@@ -101,7 +101,7 @@ public class QtyDeliveredFromOrderToInvoiceTest
 	public void beforeEach()
 	{
 		AdempiereTestHelper.get().init();
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_Client_ID, clientId.getRepoId());
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_Client_ID, clientId.getRepoId());
 
 		final List<DimensionFactory<?>> dimensionFactories = new ArrayList<>();
 		dimensionFactories.add(new OrderLineDimensionFactory());

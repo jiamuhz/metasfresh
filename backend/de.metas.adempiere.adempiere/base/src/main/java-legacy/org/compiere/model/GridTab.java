@@ -869,10 +869,10 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 					parentColumnName = linkColumnName;
 				}
 
-				String value = Env.getContext(ctx, m_vo.WindowNo, getParentTabNo(), parentColumnName, true);
+				String value = Env.getContextItem(ctx, m_vo.WindowNo, getParentTabNo(), parentColumnName, true);
 				if (Env.isPropertyValueNull(parentColumnName, value))
 				{
-					value = Env.getContext(ctx, m_vo.WindowNo, parentColumnName, true); // back compatibility
+					value = Env.getContextItem(ctx, m_vo.WindowNo, parentColumnName, true); // back compatibility
 				}
 
 				// Same link value?
@@ -1719,7 +1719,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 	{
 		m_keyColumnName = keyColumnName;
 		final Properties ctx = getCtx();
-		Env.setContext(ctx, m_vo.getWindowNo(), m_vo.getTabNo(), CTX_KeyColumnName, keyColumnName);
+		Env.setContextItem(ctx, m_vo.getWindowNo(), m_vo.getTabNo(), CTX_KeyColumnName, keyColumnName);
 
 		attachmentsMap.setKeyColumnName(keyColumnName);
 	}
@@ -1782,7 +1782,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 		}
 
 		final Properties ctx = getCtx();
-		Env.setContext(ctx, m_vo.getWindowNo(), m_vo.getTabNo(), CTX_LinkColumnName, m_linkColumnName);
+		Env.setContextItem(ctx, m_vo.getWindowNo(), m_vo.getTabNo(), CTX_LinkColumnName, m_linkColumnName);
 	}	// setLinkColumnName
 
 	/**
@@ -1816,7 +1816,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 		}
 		// Same link column value
 		final Properties ctx = getCtx();
-		final String value = Env.getContext(ctx, m_vo.WindowNo, getLinkColumnName());
+		final String value = Env.getContextItem(ctx, m_vo.WindowNo, getLinkColumnName());
 		return m_linkValue.equals(value);
 	}	// isCurrent
 
@@ -2055,7 +2055,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 			return true;
 		}
 
-		final boolean isActive = "Y".equals(Env.getContext(ctx, windowNo, tabNo, "IsActive", Scope.Tab));
+		final boolean isActive = "Y".equals(Env.getContextItem(ctx, windowNo, tabNo, "IsActive", Scope.Tab));
 		if (!isActive)
 		{
 			return true;
@@ -2067,13 +2067,13 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 
 	/* package */static final boolean isProcessed(final Properties ctx, final int windowNo, final int tabNo)
 	{
-		final boolean processed = "Y".equals(Env.getContext(ctx, windowNo, tabNo, "Processed", Scope.Tab));
+		final boolean processed = "Y".equals(Env.getContextItem(ctx, windowNo, tabNo, "Processed", Scope.Tab));
 		if (processed)
 		{
 			return true;
 		}
 
-		final boolean processing = "Y".equals(Env.getContext(ctx, windowNo, tabNo, "Processing", Scope.Tab));
+		final boolean processing = "Y".equals(Env.getContextItem(ctx, windowNo, tabNo, "Processing", Scope.Tab));
 		if (processing)
 		{
 			return true;
@@ -2176,7 +2176,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 	public String get_ValueAsString(final String variableName)
 	{
 		final Properties ctx = getCtx();
-		return Env.getContext(ctx, m_vo.WindowNo, variableName, true);
+		return Env.getContextItem(ctx, m_vo.WindowNo, variableName, true);
 	}	// get_ValueAsString
 
 	/**
@@ -2392,7 +2392,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 				rs = pstmt.executeQuery();
 				if (rs.next())
 				{
-					Env.setContext(getCtx(), m_vo.WindowNo, "OrderType", rs.getString(1));
+					Env.setContextItem(getCtx(), m_vo.WindowNo, "OrderType", rs.getString(1));
 				}
 			}
 			catch (final SQLException e)
@@ -2899,7 +2899,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 
 		Env.setContextAsInt(getCtx(), getWindowNo(), getTabNo(), CTX_CurrentRow, m_currentRow);
 
-		Env.setContext(getCtx(), getWindowNo(), getTabNo(), CTX_RowLoading, "Y");
+		Env.setContextItem(getCtx(), getWindowNo(), getTabNo(), CTX_RowLoading, "Y");
 		try
 		{
 			// Clear tab context
@@ -2999,7 +2999,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 		}
 		finally
 		{
-			Env.setContext(Env.getCtx(), getWindowNo(), getTabNo(), CTX_RowLoading, null);
+			Env.setContextItem(Env.getCtx(), getWindowNo(), getTabNo(), CTX_RowLoading, null);
 		}
 	}   // setCurrentRow
 
@@ -3377,7 +3377,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 				return ((Boolean)oo).booleanValue();
 			}
 		}
-		return "Y".equals(Env.getContext(getCtx(), m_vo.WindowNo, columnName));
+		return "Y".equals(Env.getContextItem(getCtx(), m_vo.WindowNo, columnName));
 	}	// isProcessed
 
 	/**
@@ -3668,7 +3668,7 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 				break;
 			}
 			tabNo--;
-			currentLevel = Env.getContextAsInt(getCtx(), m_vo.WindowNo, tabNo, GridTab.CTX_TabLevel);
+			currentLevel = Env.getContextItemAsInt(getCtx(), m_vo.WindowNo, tabNo, GridTab.CTX_TabLevel);
 		}
 		return tabNo;
 	}
@@ -3973,13 +3973,13 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 				if (queryColumn.endsWith("_ID"))
 				{
 					query.addRestriction(queryColumn, Operator.EQUAL,
-							new Integer(Env.getContextAsInt(ctx, getWindowNo(), queryColumn)),
+							new Integer(Env.getContextItemAsInt(ctx, getWindowNo(), queryColumn)),
 							infoName, infoDisplay);
 				}
 				else
 				{
 					query.addRestriction(queryColumn, Operator.EQUAL,
-							Env.getContext(ctx, getWindowNo(), queryColumn),
+							Env.getContextItem(ctx, getWindowNo(), queryColumn),
 							infoName, infoDisplay);
 				}
 			}
@@ -4064,8 +4064,8 @@ public class GridTab implements DataStatusListener, Evaluatee, Serializable, ICa
 		final Properties ctx = getCtx();
 		final int windowNo = getWindowNo();
 		final int tabNo = getTabNo();
-		final String keyPrefix = Env.createContextName(windowNo, tabNo, "");
-		final String keyPrefixToExclude = Env.createContextName(windowNo, tabNo, CTX_Prefix);
+		final String keyPrefix = Env.createContextItemName(windowNo, tabNo, "");
+		final String keyPrefixToExclude = Env.createContextItemName(windowNo, tabNo, CTX_Prefix);
 
 		Env.removeContextMatching(ctx, key -> {
 			if (key == null)

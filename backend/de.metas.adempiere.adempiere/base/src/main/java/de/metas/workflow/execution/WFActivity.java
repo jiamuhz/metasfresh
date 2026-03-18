@@ -950,7 +950,7 @@ public class WFActivity
 			// not a column
 			{
 				// try Env
-				final String env = Env.getContext(Env.getCtx(), columnName);
+				final String env = Env.getContextItem(Env.getCtx(), columnName);
 				if (Check.isEmpty(env))
 				{
 					log.warn("{} - not column nor environment ={}({})", attributeName, columnName, attributeValue);

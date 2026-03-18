@@ -974,7 +974,7 @@ public class MOrder extends X_C_Order implements IDocument
 			}
 			else
 			{
-				setC_Currency_ID(Env.getContextAsInt(getCtx(), "#C_Currency_ID"));
+				setC_Currency_ID(Env.getContextItemAsInt(getCtx(), "#C_Currency_ID"));
 			}
 		}
 

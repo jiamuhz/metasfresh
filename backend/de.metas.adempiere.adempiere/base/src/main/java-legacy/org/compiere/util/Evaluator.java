@@ -147,7 +147,7 @@ public class Evaluator
 			s_log.trace("{}={}", variable, eval);
 			if (Check.isEmpty(eval, true))
 			{
-				eval = Env.getContext(Env.getCtx(), variable);
+				eval = Env.getContextItem(Env.getCtx(), variable);
 			}
 			finalExpression = finalExpression.replaceFirst("@"+variable+"@", eval);
 			//	

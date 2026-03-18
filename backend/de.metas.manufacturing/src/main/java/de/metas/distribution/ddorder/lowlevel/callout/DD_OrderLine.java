@@ -93,7 +93,7 @@ public class DD_OrderLine
 			if (QtyOrdered == null)
 				QtyOrdered = QtyEntered;
 			final boolean conversion = QtyEntered.compareTo(QtyOrdered) != 0;
-			Env.setContext(ctx, windowNo, "UOMConversion", conversion);
+			Env.setContextItem(ctx, windowNo, "UOMConversion", conversion);
 			ddOrderLine.setQtyOrdered(QtyOrdered);
 		}
 		// QtyEntered changed - calculate QtyOrdered
@@ -113,7 +113,7 @@ public class DD_OrderLine
 				QtyOrdered = QtyEntered;
 			boolean conversion = QtyEntered.compareTo(QtyOrdered) != 0;
 			logger.debug("UOM={}, QtyEntered={}, conversion={}, QtyOrdered={}", C_UOM_To_ID, QtyEntered, conversion, QtyOrdered);
-			Env.setContext(ctx, windowNo, "UOMConversion", conversion);
+			Env.setContextItem(ctx, windowNo, "UOMConversion", conversion);
 			ddOrderLine.setQtyOrdered(QtyOrdered);
 		}
 		// QtyOrdered changed - calculate QtyEntered (should not happen)
@@ -134,7 +134,7 @@ public class DD_OrderLine
 				QtyEntered = QtyOrdered;
 			final boolean conversion = QtyOrdered.compareTo(QtyEntered) != 0;
 			logger.debug("UOM={}, QtyEntered={}, conversion={}, QtyOrdered={}", C_UOM_To_ID, QtyEntered, conversion, QtyOrdered);
-			Env.setContext(ctx, windowNo, "UOMConversion", conversion);
+			Env.setContextItem(ctx, windowNo, "UOMConversion", conversion);
 			ddOrderLine.setQtyEntered(QtyEntered);
 		}
 		else

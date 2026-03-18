@@ -32,10 +32,8 @@ package org.adempiere.process;
 import java.math.BigDecimal;
 import java.sql.Timestamp;
 import java.util.ArrayList;
-import org.slf4j.Logger;
 
 import de.metas.document.engine.IDocument;
-import de.metas.logging.LogManager;
 import de.metas.process.ProcessInfoParameter;
 import de.metas.process.JavaProcess;
 
@@ -146,7 +144,7 @@ public class ImmediateBankTransfer extends JavaProcess
 
 		//	Login Date
 		if (p_StatementDate == null)
-			p_StatementDate = Env.getContextAsDate(getCtx(), "#Date");
+			p_StatementDate = Env.getContextItemAsDate(getCtx(), "#Date");
 		if (p_StatementDate == null)
 			p_StatementDate = new Timestamp(System.currentTimeMillis());			
 

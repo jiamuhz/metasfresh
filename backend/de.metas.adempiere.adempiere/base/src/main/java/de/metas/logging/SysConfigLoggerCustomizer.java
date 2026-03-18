@@ -73,7 +73,7 @@ class SysConfigLoggerCustomizer implements ILoggerCustomizer
 				return;
 			}
 
-			if (Env.getContextAsInt(Env.getCtx(), Env.CTXNAME_AD_Session_ID) <= 0)
+			if (Env.getContextItemAsInt(Env.getCtx(), Env.CTXNAME_AD_Session_ID) <= 0)
 			{
 				// Likewise, if there is no session (yet), we are not interested in trying to get any services.
 				// It might not be impossible, but we didn't yet need to customize any of those early loggers

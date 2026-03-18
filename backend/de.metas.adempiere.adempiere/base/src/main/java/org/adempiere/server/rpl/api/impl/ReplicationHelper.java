@@ -31,7 +31,7 @@ public class ReplicationHelper
 		if (value instanceof Integer)
 		{
 			final Integer valueInt = (Integer)value;
-			final Integer valueOldInt = Env.containsKey(ctx, name) ? Env.getContextAsInt(ctx, name) : null;
+			final Integer valueOldInt = Env.containsKey(ctx, name) ? Env.getContextItemAsInt(ctx, name) : null;
 			if (Objects.equals(valueInt, valueOldInt))
 			{
 				// nothing to do
@@ -39,7 +39,7 @@ public class ReplicationHelper
 			}
 			else if (overwrite || valueOldInt == null)
 			{
-				Env.setContext(ctx, name, valueInt);
+				Env.setContextItem(ctx, name, valueInt);
 			}
 			else
 			{
@@ -52,7 +52,7 @@ public class ReplicationHelper
 		else if (value instanceof Timestamp)
 		{
 			final Timestamp valueTS = (Timestamp)value;
-			final Timestamp valueOldTS = Env.containsKey(ctx, name) ? Env.getContextAsDate(ctx, name) : null;
+			final Timestamp valueOldTS = Env.containsKey(ctx, name) ? Env.getContextItemAsDate(ctx, name) : null;
 			if (Objects.equals(valueTS, valueOldTS))
 			{
 				// nothing to do
@@ -60,7 +60,7 @@ public class ReplicationHelper
 			}
 			else if (overwrite || valueOldTS == null)
 			{
-				Env.setContext(ctx, name, valueTS);
+				Env.setContextItem(ctx, name, valueTS);
 			}
 			else
 			{
@@ -73,7 +73,7 @@ public class ReplicationHelper
 		else
 		{
 			final String valueStr = value == null ? null : value.toString();
-			final String valueOldStr = Env.containsKey(ctx, name) ? Env.getContext(ctx, name) : null;
+			final String valueOldStr = Env.containsKey(ctx, name) ? Env.getContextItem(ctx, name) : null;
 			if (Objects.equals(valueStr, valueOldStr))
 			{
 				// nothing to do
@@ -81,7 +81,7 @@ public class ReplicationHelper
 			}
 			else if (overwrite || valueOldStr == null)
 			{
-				Env.setContext(ctx, name, valueStr);
+				Env.setContextItem(ctx, name, valueStr);
 			}
 			else
 			{

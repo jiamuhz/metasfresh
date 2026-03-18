@@ -63,7 +63,7 @@ public class ColumnBL implements IColumnBL
 		// Try with Prefix_AD_Table_ID
 		tableColumnName = prefix + ITableRecordReference.COLUMNNAME_AD_Table_ID;
 
-		contextADTableID = Env.getContextAsInt(m_ctx, m_curWindowNo, tableColumnName);
+		contextADTableID = Env.getContextItemAsInt(m_ctx, m_curWindowNo, tableColumnName);
 
 		if (contextADTableID > 0)
 		{
@@ -73,7 +73,7 @@ public class ColumnBL implements IColumnBL
 		// try with Prefix_Table_ID
 		tableColumnName = prefix + "Table_ID";
 
-		contextADTableID = Env.getContextAsInt(m_ctx, tableColumnName);
+		contextADTableID = Env.getContextItemAsInt(m_ctx, tableColumnName);
 
 		// the found context table ID or 0 if not found
 		return contextADTableID;

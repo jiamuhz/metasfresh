@@ -191,7 +191,7 @@ public class AbstractICTestSupport extends AbstractTestSupport
 
 		final I_AD_Client client = InterfaceWrapperHelper.newInstance(I_AD_Client.class);
 		saveRecord(client);
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_Client_ID, client.getAD_Client_ID());
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_Client_ID, client.getAD_Client_ID());
 		clientId = ClientId.ofRepoId(client.getAD_Client_ID());
 
 		modelInterceptorsRegistered = false;
@@ -199,7 +199,7 @@ public class AbstractICTestSupport extends AbstractTestSupport
 		// registerModelInterceptors();
 
 		final Properties ctx = Env.getCtx();
-		Env.setContext(ctx, Env.CTXNAME_Date, SystemTime.asDayTimestamp());
+		Env.setContextItem(ctx, Env.CTXNAME_Date, SystemTime.asDayTimestamp());
 
 		// final String trxName = Trx.createTrxName();
 		final String trxName = ITrx.TRXNAME_ThreadInherited;

@@ -99,11 +99,11 @@ public class UserAuthTokenService
 		final UserInfo userInfo = getUserInfo(token.getUserId());
 
 		final Properties ctx = Env.newTemporaryCtx();
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, permissions.getClientId().getRepoId());
-		Env.setContext(ctx, Env.CTXNAME_AD_Org_ID, OrgId.toRepoId(token.getOrgId()));
-		Env.setContext(ctx, Env.CTXNAME_AD_User_ID, UserId.toRepoId(permissions.getUserId()));
-		Env.setContext(ctx, Env.CTXNAME_AD_Role_ID, RoleId.toRepoId(permissions.getRoleId()));
-		Env.setContext(ctx, Env.CTXNAME_AD_Language, userInfo.getAdLanguage());
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, permissions.getClientId().getRepoId());
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Org_ID, OrgId.toRepoId(token.getOrgId()));
+		Env.setContextItem(ctx, Env.CTXNAME_AD_User_ID, UserId.toRepoId(permissions.getUserId()));
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Role_ID, RoleId.toRepoId(permissions.getRoleId()));
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Language, userInfo.getAdLanguage());
 		return ctx;
 	}
 

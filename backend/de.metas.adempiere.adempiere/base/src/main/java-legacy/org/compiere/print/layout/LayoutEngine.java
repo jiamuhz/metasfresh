@@ -317,9 +317,9 @@ public class LayoutEngine implements Pageable, Printable, Doc
 		m_printFont = MPrintFont.get(format.getAD_PrintFont_ID());
 
 		// Print Context
-		Env.setContext(m_printCtx, Page.CONTEXT_REPORTNAME, m_format.getName());
-		Env.setContext(m_printCtx, Page.CONTEXT_HEADER, Env.getHeader(m_printCtx, 0));
-		Env.setContext(m_printCtx, Env.CTXNAME_AD_Language, m_format.getLanguage().getAD_Language());
+		Env.setContextItem(m_printCtx, Page.CONTEXT_REPORTNAME, m_format.getName());
+		Env.setContextItem(m_printCtx, Page.CONTEXT_HEADER, Env.getHeader(m_printCtx, 0));
+		Env.setContextItem(m_printCtx, Env.CTXNAME_AD_Language, m_format.getLanguage().getAD_Language());
 
 		if (m_hasLayout && doLayout)
 			layout();            // re-calculate
@@ -535,12 +535,12 @@ public class LayoutEngine implements Pageable, Printable, Doc
 		if (m_tableElement != null)
 		{
 			final String pageInfo = String.valueOf(m_tableElement.getPageYCount());
-			Env.setContext(m_printCtx, Page.CONTEXT_PAGECOUNT, pageInfo);
+			Env.setContextItem(m_printCtx, Page.CONTEXT_PAGECOUNT, pageInfo);
 		}
 		Timestamp now = new Timestamp(System.currentTimeMillis());
-		Env.setContext(m_printCtx, Page.CONTEXT_DATE,
+		Env.setContextItem(m_printCtx, Page.CONTEXT_DATE,
 				DisplayType.getDateFormat(DisplayType.Date, m_format.getLanguage()).format(now));
-		Env.setContext(m_printCtx, Page.CONTEXT_TIME,
+		Env.setContextItem(m_printCtx, Page.CONTEXT_TIME,
 				DisplayType.getDateFormat(DisplayType.DateTime, m_format.getLanguage()).format(now));
 
 		//

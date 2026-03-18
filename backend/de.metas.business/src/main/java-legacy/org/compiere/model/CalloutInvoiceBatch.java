@@ -92,7 +92,7 @@ public class CalloutInvoiceBatch extends CalloutEngine
 		final boolean isAllowOnlyBillToDefault_Contact = Services.get(ISysConfigBL.class)
 				.getBooleanValue(CalloutInvoice.SYS_Config_C_Invoice_SOTrx_OnlyAllowBillToDefault_Contact, false);
 
-		final boolean isSOTrx = Env.getContext(ctx, WindowNo, "IsSOTrx").equals("Y");
+		final boolean isSOTrx = Env.getContextItem(ctx, WindowNo, "IsSOTrx").equals("Y");
 
 		final StringBuilder sql = new StringBuilder().append("SELECT p.AD_Language,p.C_PaymentTerm_ID,"
 				+ " COALESCE(p.M_PriceList_ID,g.M_PriceList_ID) AS M_PriceList_ID, p.PaymentRule,p.POReference,"
@@ -136,7 +136,7 @@ public class CalloutInvoiceBatch extends CalloutEngine
 				PaymentRule paymentRule_NOTUSED = PaymentRule.ofNullableCode(rs.getString(isSOTrx ? "PaymentRule" : "PaymentRulePO"));
 				if (paymentRule_NOTUSED != null)
 				{
-					if (Env.getContext(ctx, WindowNo, "DocBaseType").endsWith("C")) // credit memo
+					if (Env.getContextItem(ctx, WindowNo, "DocBaseType").endsWith("C")) // credit memo
 					{
 						paymentRule_NOTUSED = PaymentRule.OnCredit;
 					}
@@ -157,9 +157,9 @@ public class CalloutInvoiceBatch extends CalloutEngine
 				int locID = rs.getInt("C_BPartner_Location_ID");
 				//	overwritten by InfoBP selection - works only if InfoWindow
 				//	was used otherwise creates error (uses last value, may belong to differnt BP)
-				if (C_BPartner_ID.toString().equals(Env.getContext(ctx, WindowNo, Env.TAB_INFO, "C_BPartner_ID")))
+				if (C_BPartner_ID.toString().equals(Env.getContextItem(ctx, WindowNo, Env.TAB_INFO, "C_BPartner_ID")))
 				{
-					final String loc = Env.getContext(ctx, WindowNo, Env.TAB_INFO, "C_BPartner_Location_ID");
+					final String loc = Env.getContextItem(ctx, WindowNo, Env.TAB_INFO, "C_BPartner_Location_ID");
 					if (loc.length() > 0)
 					{
 						locID = Integer.parseInt(loc);
@@ -176,9 +176,9 @@ public class CalloutInvoiceBatch extends CalloutEngine
 
 				//	Contact - overwritten by InfoBP selection
 				int contID = rs.getInt("AD_User_ID");
-				if (C_BPartner_ID.toString().equals(Env.getContext(ctx, WindowNo, Env.TAB_INFO, "C_BPartner_ID")))
+				if (C_BPartner_ID.toString().equals(Env.getContextItem(ctx, WindowNo, Env.TAB_INFO, "C_BPartner_ID")))
 				{
-					final String cont = Env.getContext(ctx, WindowNo, Env.TAB_INFO, "AD_User_ID");
+					final String cont = Env.getContextItem(ctx, WindowNo, Env.TAB_INFO, "AD_User_ID");
 					if (cont.length() > 0)
 					{
 						contID = Integer.parseInt(cont);
@@ -253,7 +253,7 @@ public class CalloutInvoiceBatch extends CalloutEngine
 	private void setDocumentNo (final Properties ctx, final int WindowNo, final GridTab mTab)
 	{
 		//	Get last line
-		final int C_InvoiceBatch_ID = Env.getContextAsInt(ctx, WindowNo, "C_InvoiceBatch_ID");
+		final int C_InvoiceBatch_ID = Env.getContextItemAsInt(ctx, WindowNo, "C_InvoiceBatch_ID");
 		final String sql = "SELECT COALESCE(MAX(C_InvoiceBatchLine_ID),0) FROM C_InvoiceBatchLine WHERE C_InvoiceBatch_ID=?";
 		final int C_InvoiceBatchLine_ID = DB.getSQLValue(null, sql, C_InvoiceBatch_ID);
 		if (C_InvoiceBatchLine_ID == 0)
@@ -263,8 +263,8 @@ public class CalloutInvoiceBatch extends CalloutEngine
 		final MInvoiceBatchLine last = new MInvoiceBatchLine(Env.getCtx(), C_InvoiceBatchLine_ID, null);
 
 		//	Need to Increase when different DocType or BP
-		final int C_DocType_ID = Env.getContextAsInt(ctx, WindowNo, "C_DocType_ID");
-		final int C_BPartner_ID = Env.getContextAsInt(ctx, WindowNo, "C_BPartner_ID");
+		final int C_DocType_ID = Env.getContextItemAsInt(ctx, WindowNo, "C_DocType_ID");
+		final int C_BPartner_ID = Env.getContextItemAsInt(ctx, WindowNo, "C_BPartner_ID");
 		if (C_DocType_ID == last.getC_DocType_ID()
 			&& C_BPartner_ID == last.getC_BPartner_ID())
 		{
@@ -399,8 +399,8 @@ public class CalloutInvoiceBatch extends CalloutEngine
 		}
 
 		//	Calculate Tax Amount
-		final boolean IsSOTrx = "Y".equals(Env.getContext(Env.getCtx(), WindowNo, "IsSOTrx"));
-		final boolean IsTaxIncluded = "Y".equals(Env.getContext(Env.getCtx(), WindowNo, "IsTaxIncluded"));
+		final boolean IsSOTrx = "Y".equals(Env.getContextItem(Env.getCtx(), WindowNo, "IsSOTrx"));
+		final boolean IsTaxIncluded = "Y".equals(Env.getContextItem(Env.getCtx(), WindowNo, "IsTaxIncluded"));
 
 		BigDecimal TaxAmt = null;
 		if (mField.getColumnName().equals("TaxAmt"))

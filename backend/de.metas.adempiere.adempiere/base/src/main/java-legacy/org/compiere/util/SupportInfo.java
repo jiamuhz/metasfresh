@@ -77,14 +77,14 @@ public class SupportInfo
 		sb.append(getMsg("Database")).append(eq).append(getDatabaseInfo()).append(NL);
 		sb.append(getMsg("Schema")).append(eq).append(CConnection.get().getDbUid()).append(NL);
 		//
-		sb.append(getMsg("AD_User_ID")).append(eq).append(Env.getContext(Env.getCtx(), "#AD_User_Name")).append(NL);
-		sb.append(getMsg("AD_Role_ID")).append(eq).append(Env.getContext(Env.getCtx(), "#AD_Role_Name")).append(NL);
+		sb.append(getMsg("AD_User_ID")).append(eq).append(Env.getContextItem(Env.getCtx(), "#AD_User_Name")).append(NL);
+		sb.append(getMsg("AD_Role_ID")).append(eq).append(Env.getContextItem(Env.getCtx(), "#AD_Role_Name")).append(NL);
 		//
-		sb.append(getMsg("AD_Client_ID")).append(eq).append(Env.getContext(Env.getCtx(), "#AD_Client_Name")).append(NL);
-		sb.append(getMsg("AD_Org_ID")).append(eq).append(Env.getContext(Env.getCtx(), "#AD_Org_Name")).append(NL);
+		sb.append(getMsg("AD_Client_ID")).append(eq).append(Env.getContextItem(Env.getCtx(), "#AD_Client_Name")).append(NL);
+		sb.append(getMsg("AD_Org_ID")).append(eq).append(Env.getContextItem(Env.getCtx(), "#AD_Org_Name")).append(NL);
 		//
-		sb.append(getMsg("Date")).append(eq).append(Env.getContext(Env.getCtx(), Env.CTXNAME_Date)).append(NL);
-		sb.append(getMsg("Printer")).append(eq).append(Env.getContext(Env.getCtx(), Env.CTXNAME_Printer)).append(NL);
+		sb.append(getMsg("Date")).append(eq).append(Env.getContextItem(Env.getCtx(), Env.CTXNAME_Date)).append(NL);
+		sb.append(getMsg("Printer")).append(eq).append(Env.getContextItem(Env.getCtx(), Env.CTXNAME_Printer)).append(NL);
 		//
 		// Show Implementation Vendor / Version - teo_sarca, [ 1622855 ]
 		sb.append(getMsg("ImplementationVendor")).append(eq).append(org.compiere.Adempiere.getImplementationVendor()).append(NL);

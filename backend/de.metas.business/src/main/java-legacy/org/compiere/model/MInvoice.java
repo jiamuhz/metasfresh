@@ -59,7 +59,6 @@ import de.metas.tax.api.CalculateTaxResult;
 import de.metas.tax.api.ITaxBL;
 import de.metas.tax.api.Tax;
 import de.metas.tax.api.TaxId;
-import de.metas.tax.api.TaxUtils;
 import de.metas.util.Check;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -670,7 +669,7 @@ public class MInvoice extends X_C_Invoice implements IDocument
 			}
 			else
 			{
-				setC_Currency_ID(Env.getContextAsInt(getCtx(), "#C_Currency_ID"));
+				setC_Currency_ID(Env.getContextItemAsInt(getCtx(), "#C_Currency_ID"));
 			}
 		}
 
@@ -688,7 +687,7 @@ public class MInvoice extends X_C_Invoice implements IDocument
 		// Payment Term
 		if (getC_PaymentTerm_ID() <= 0)
 		{
-			int paymentTermId = Env.getContextAsInt(getCtx(), "#C_PaymentTerm_ID");
+			int paymentTermId = Env.getContextItemAsInt(getCtx(), "#C_PaymentTerm_ID");
 			if (paymentTermId != 0)
 			{
 				setC_PaymentTerm_ID(paymentTermId);
@@ -1074,7 +1073,7 @@ public class MInvoice extends X_C_Invoice implements IDocument
 
 			MCash cash;
 
-			final int posId = Env.getContextAsInt(getCtx(), Env.POS_ID);
+			final int posId = Env.getContextItemAsInt(getCtx(), Env.POS_ID);
 
 			if (posId != 0)
 			{

@@ -223,8 +223,8 @@ public class TableSequenceChecker implements ITableSequenceChecker
 		if (sequence == null)
 		{
 			final Properties ctxSystem = Env.deriveCtx(ctx);
-			Env.setContext(ctxSystem, Env.CTXNAME_AD_Client_ID, 0);
-			Env.setContext(ctxSystem, Env.CTXNAME_AD_Org_ID, 0);
+			Env.setContextItem(ctxSystem, Env.CTXNAME_AD_Client_ID, 0);
+			Env.setContextItem(ctxSystem, Env.CTXNAME_AD_Org_ID, 0);
 			final IContextAware contextProvider = PlainContextAware.newWithTrxName(ctxSystem, trxName);
 
 			final I_AD_Sequence sequenceNew = InterfaceWrapperHelper.newInstance(I_AD_Sequence.class, contextProvider, true); // useCLientOrgFromProvider=true

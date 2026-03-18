@@ -86,8 +86,8 @@ public class ManualCandidateHandlerTest extends AbstractICTestSupport
 	public void init()
 	{
 		final Properties ctx = Env.getCtx();
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, 1);
-		Env.setContext(ctx, Env.CTXNAME_AD_Language, "de_CH");
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, 1);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Language, "de_CH");
 
 		this.invoiceCandBL = Services.get(IInvoiceCandBL.class);
 		this.invoiceCandDAO = Services.get(IInvoiceCandDAO.class);
@@ -413,8 +413,8 @@ public class ManualCandidateHandlerTest extends AbstractICTestSupport
 	{
 
 		final Properties ctx = Env.getCtx();
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, 1);
-		Env.setContext(ctx, Env.CTXNAME_AD_Language, "de_CH");
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, 1);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Language, "de_CH");
 
 		final BPartnerLocationId billBPartnerAndLocationId = BPartnerLocationId.ofRepoId(1, 2);
 
@@ -688,8 +688,8 @@ public class ManualCandidateHandlerTest extends AbstractICTestSupport
 	public void testWithOrder()
 	{
 		final Properties ctx = Env.getCtx();
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, 1);
-		Env.setContext(ctx, Env.CTXNAME_AD_Language, "de_CH");
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, 1);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Language, "de_CH");
 
 		final I_C_Order order1 = order("1");
 		final BPartnerLocationId billBPartnerAndLocationId = BPartnerLocationId.ofRepoId(1, 2);

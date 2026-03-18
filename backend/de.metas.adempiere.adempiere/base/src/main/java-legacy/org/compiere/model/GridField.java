@@ -494,7 +494,7 @@ public class GridField
 
 		//
 		// Field is the Link Column of the tab
-		if (m_vo.getColumnName().equals(Env.getContext(getGridFieldContext(), m_vo.WindowNo, m_vo.TabNo, GridTab.CTX_LinkColumnName)))
+		if (m_vo.getColumnName().equals(Env.getContextItem(getGridFieldContext(), m_vo.WindowNo, m_vo.TabNo, GridTab.CTX_LinkColumnName)))
 		{
 			log.trace(m_vo.getColumnName() + " NO - LinkColumn");
 			return false;
@@ -503,9 +503,9 @@ public class GridField
 		// Role Access & Column Access
 		if (checkContext)
 		{
-			final ClientId clientId = ClientId.ofRepoIdOrSystem(Env.getContextAsInt(rowCtx, m_vo.WindowNo, m_vo.TabNo, "AD_Client_ID"));
-			final OrgId orgId = OrgId.ofRepoIdOrAny(Env.getContextAsInt(rowCtx, m_vo.WindowNo, m_vo.TabNo, "AD_Org_ID"));
-			String keyColumn = Env.getContext(rowCtx, m_vo.WindowNo, m_vo.TabNo, GridTab.CTX_KeyColumnName);
+			final ClientId clientId = ClientId.ofRepoIdOrSystem(Env.getContextItemAsInt(rowCtx, m_vo.WindowNo, m_vo.TabNo, "AD_Client_ID"));
+			final OrgId orgId = OrgId.ofRepoIdOrAny(Env.getContextItemAsInt(rowCtx, m_vo.WindowNo, m_vo.TabNo, "AD_Org_ID"));
+			String keyColumn = Env.getContextItem(rowCtx, m_vo.WindowNo, m_vo.TabNo, GridTab.CTX_KeyColumnName);
 			if ("EntityType".equals(keyColumn))
 			{
 				keyColumn = "AD_EntityType_ID";
@@ -514,7 +514,7 @@ public class GridField
 			 {
 				keyColumn += "_ID";			// AD_Language_ID
 			}
-			int Record_ID = Env.getContextAsInt(rowCtx, m_vo.WindowNo, m_vo.TabNo, keyColumn);
+			int Record_ID = Env.getContextItemAsInt(rowCtx, m_vo.WindowNo, m_vo.TabNo, keyColumn);
 			int AD_Table_ID = m_vo.getAD_Table_ID();
 
 			final IUserRolePermissions role = Env.getUserRolePermissions(getGridFieldContext());
@@ -651,7 +651,7 @@ public class GridField
 		if (isParentValue()
 				&& (m_vo.DefaultValue == null || m_vo.DefaultValue.length() == 0))
 		{
-			String parent = Env.getContext(ctx, m_vo.WindowNo, m_vo.getColumnName());
+			String parent = Env.getContextItem(ctx, m_vo.WindowNo, m_vo.getColumnName());
 			log.debug("[Parent] " + m_vo.getColumnName() + "=" + parent);
 			return createDefault(parent);
 		}
@@ -747,7 +747,7 @@ public class GridField
 				}
 				else if (defStr.indexOf('@') != -1)			// it is a variable
 				{
-					defStr = Env.getContext(ctx, m_vo.WindowNo, defStr.replace('@', ' ').trim());
+					defStr = Env.getContextItem(ctx, m_vo.WindowNo, defStr.replace('@', ' ').trim());
 				}
 				else if (defStr.indexOf("'") != -1)			// it is a 'String'
 				{
@@ -825,7 +825,7 @@ public class GridField
 
 	private TableAccessLevel getTableAccessLevel(final Properties ctx)
 	{
-		final String accessLevelStr = Env.getContext(ctx, m_vo.WindowNo, m_vo.TabNo, GridTab.CTX_AccessLevel);
+		final String accessLevelStr = Env.getContextItem(ctx, m_vo.WindowNo, m_vo.TabNo, GridTab.CTX_AccessLevel);
 		if (Check.isEmpty(accessLevelStr))
 		{
 			return TableAccessLevel.None;
@@ -977,7 +977,7 @@ public class GridField
 	{
 		final Properties ctx = getGridFieldContext();
 		final boolean onlyWindow = true;
-		return Env.getContext(ctx, m_vo.WindowNo, variableName, onlyWindow);
+		return Env.getContextItem(ctx, m_vo.WindowNo, variableName, onlyWindow);
 	}	// get_ValueAsString
 
 	/**************************************************************************
@@ -1357,7 +1357,7 @@ public class GridField
 		}
 		else
 		{
-			String LinkColumnName = Env.getContext(getGridFieldContext(), m_vo.WindowNo, m_vo.TabNo, GridTab.CTX_LinkColumnName);
+			String LinkColumnName = Env.getContextItem(getGridFieldContext(), m_vo.WindowNo, m_vo.TabNo, GridTab.CTX_LinkColumnName);
 			if (LinkColumnName == null || LinkColumnName.length() == 0)
 			{
 				m_parentValue = Boolean.FALSE; // teo_sarca, [ 1673886 ]
@@ -1509,20 +1509,20 @@ public class GridField
 		else if (m_value instanceof Boolean)
 		{
 			backupValue(); // teo_sarca [ 1699826 ]
-			Env.setContext(ctx, m_vo.WindowNo, m_vo.getColumnName(), ((Boolean)m_value).booleanValue());
-			Env.setContext(ctx, m_vo.WindowNo, m_vo.TabNo, m_vo.getColumnName(), m_value == null ? null : (((Boolean)m_value) ? "Y" : "N"));
+			Env.setContextItem(ctx, m_vo.WindowNo, m_vo.getColumnName(), ((Boolean)m_value).booleanValue());
+			Env.setContextItem(ctx, m_vo.WindowNo, m_vo.TabNo, m_vo.getColumnName(), m_value == null ? null : (((Boolean)m_value) ? "Y" : "N"));
 		}
 		else if (m_value instanceof Timestamp)
 		{
 			backupValue(); // teo_sarca [ 1699826 ]
-			Env.setContext(ctx, m_vo.WindowNo, m_vo.getColumnName(), (Timestamp)m_value);
-			Env.setContext(ctx, m_vo.WindowNo, m_vo.TabNo, m_vo.getColumnName(), m_value == null ? null : m_value.toString().substring(0, m_value.toString().indexOf(".")));
+			Env.setContextItem(ctx, m_vo.WindowNo, m_vo.getColumnName(), (Timestamp)m_value);
+			Env.setContextItem(ctx, m_vo.WindowNo, m_vo.TabNo, m_vo.getColumnName(), m_value == null ? null : m_value.toString().substring(0, m_value.toString().indexOf(".")));
 		}
 		else
 		{
 			backupValue(); // teo_sarca [ 1699826 ]
-			Env.setContext(ctx, m_vo.WindowNo, m_vo.getColumnName(), m_value == null ? null : m_value.toString());
-			Env.setContext(ctx, m_vo.WindowNo, m_vo.TabNo, m_vo.getColumnName(), m_value == null ? null : m_value.toString());
+			Env.setContextItem(ctx, m_vo.WindowNo, m_vo.getColumnName(), m_value == null ? null : m_value.toString());
+			Env.setContextItem(ctx, m_vo.WindowNo, m_vo.TabNo, m_vo.getColumnName(), m_value == null ? null : m_value.toString());
 		}
 	}
 
@@ -1764,16 +1764,16 @@ public class GridField
 		final Properties ctx = getGridFieldContext();
 		boolean result = false;
 		int tabNo = m_vo.TabNo;
-		int currentLevel = Env.getContextAsInt(ctx, m_vo.WindowNo, tabNo, GridTab.CTX_TabLevel);
+		int currentLevel = Env.getContextItemAsInt(ctx, m_vo.WindowNo, tabNo, GridTab.CTX_TabLevel);
 		if (tabNo > 1 && currentLevel > 1)
 		{
 			while (tabNo >= 1 && !result)
 			{
 				tabNo--;
-				int level = Env.getContextAsInt(ctx, m_vo.WindowNo, tabNo, GridTab.CTX_TabLevel);
+				int level = Env.getContextItemAsInt(ctx, m_vo.WindowNo, tabNo, GridTab.CTX_TabLevel);
 				if (level > 0 && level < currentLevel)
 				{
-					String linkColumn = Env.getContext(ctx, m_vo.WindowNo, tabNo, GridTab.CTX_LinkColumnName);
+					String linkColumn = Env.getContextItem(ctx, m_vo.WindowNo, tabNo, GridTab.CTX_LinkColumnName);
 					if (m_vo.getColumnName().equals(linkColumn))
 					{
 						result = true;
@@ -1801,7 +1801,7 @@ public class GridField
 		if (!m_isBackupValue)
 		{
 			final Properties ctx = getGridFieldContext();
-			m_backupValue = Env.getContext(ctx, m_vo.WindowNo, m_vo.getColumnName());
+			m_backupValue = Env.getContextItem(ctx, m_vo.WindowNo, m_vo.getColumnName());
 			if (log.isTraceEnabled())
 			{
 				log.trace("Backup " + m_vo.WindowNo + "|" + m_vo.getColumnName() + "=" + m_backupValue);
@@ -1824,7 +1824,7 @@ public class GridField
 				log.trace("Restore " + m_vo.WindowNo + "|" + m_vo.getColumnName() + "=" + m_backupValue);
 			}
 			final Properties ctx = getGridFieldContextRW();
-			Env.setContext(ctx, m_vo.WindowNo, m_vo.getColumnName(), m_backupValue);
+			Env.setContextItem(ctx, m_vo.WindowNo, m_vo.getColumnName(), m_backupValue);
 		}
 	}
 
@@ -1992,7 +1992,7 @@ public class GridField
 	{
 		//
 		// Check Tab level IsActive
-		String isActiveStr = Env.getContext(ctx, m_vo.WindowNo, m_vo.TabNo, "IsActive", Scope.Tab);
+		String isActiveStr = Env.getContextItem(ctx, m_vo.WindowNo, m_vo.TabNo, "IsActive", Scope.Tab);
 		if (!Check.isEmpty(isActiveStr, true))
 		{
 			return "Y".equals(isActiveStr);
@@ -2004,7 +2004,7 @@ public class GridField
 		final int parentTabNo = gridTab != null ? gridTab.getParentTabNo() : -1;
 		if (parentTabNo >= 0)
 		{
-			isActiveStr = Env.getContext(ctx, m_vo.WindowNo, parentTabNo, "IsActive", Scope.Tab);
+			isActiveStr = Env.getContextItem(ctx, m_vo.WindowNo, parentTabNo, "IsActive", Scope.Tab);
 			if (!Check.isEmpty(isActiveStr, true))
 			{
 				return "Y".equals(isActiveStr);
@@ -2013,7 +2013,7 @@ public class GridField
 
 		//
 		// Check Window level IsActive
-		isActiveStr = Env.getContext(ctx, m_vo.WindowNo, Env.TAB_None, "IsActive", Scope.Window);
+		isActiveStr = Env.getContextItem(ctx, m_vo.WindowNo, Env.TAB_None, "IsActive", Scope.Window);
 		if (!Check.isEmpty(isActiveStr, true))
 		{
 			return "Y".equals(isActiveStr);
@@ -2249,6 +2249,6 @@ public class GridField
 	@Override
 	public int getContextAsInt(String name)
 	{
-		return Env.getContextAsInt(getCtx(), getWindowNo(), name);
+		return Env.getContextItemAsInt(getCtx(), getWindowNo(), name);
 	}
 }

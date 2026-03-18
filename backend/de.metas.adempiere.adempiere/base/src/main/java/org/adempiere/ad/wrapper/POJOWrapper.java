@@ -316,8 +316,8 @@ public class POJOWrapper implements InvocationHandler, IInterfaceWrapper
 						|| Env.getAD_Org_ID(ctxPO) != adOrgId)
 				{
 					ctx = Env.deriveCtx(ctxPO); // won't change the original.
-					Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, adClientId);
-					Env.setContext(ctx, Env.CTXNAME_AD_Org_ID, adOrgId);
+					Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, adClientId);
+					Env.setContextItem(ctx, Env.CTXNAME_AD_Org_ID, adOrgId);
 				}
 				else
 				{

@@ -78,17 +78,17 @@ public class LoginContext
 
 	public void setProperty(final String name, final String value)
 	{
-		Env.setContext(getCtx(), name, value);
+		Env.setContextItem(getCtx(), name, value);
 	}
 
 	public void setProperty(final String name, final boolean valueBoolean)
 	{
-		Env.setContext(getCtx(), name, valueBoolean);
+		Env.setContextItem(getCtx(), name, valueBoolean);
 	}
 
 	public void setProperty(final String name, final int valueInt)
 	{
-		Env.setContext(getCtx(), name, valueInt);
+		Env.setContextItem(getCtx(), name, valueInt);
 	}
 
 	private int getMandatoryPropertyAsInt(final String name)
@@ -100,32 +100,32 @@ public class LoginContext
 	private Optional<Integer> getOptionalPropertyAsInt(final String name)
 	{
 		final Properties ctx = getCtx();
-		if (Env.getContext(ctx, name).isEmpty())    // could be number 0
+		if (Env.getContextItem(ctx, name).isEmpty())    // could be number 0
 		{
 			return Optional.empty();
 		}
-		final int valueInt = Env.getContextAsInt(ctx, name);
+		final int valueInt = Env.getContextItemAsInt(ctx, name);
 		return Optional.of(valueInt);
 	}
 
 	private int getPropertyAsInt(final String name)
 	{
-		return Env.getContextAsInt(getCtx(), name);
+		return Env.getContextItemAsInt(getCtx(), name);
 	}
 
 	private void setProperty(final String name, final LocalDate valueDate)
 	{
-		Env.setContext(getCtx(), name, TimeUtil.asDate(valueDate));
+		Env.setContextItem(getCtx(), name, TimeUtil.asDate(valueDate));
 	}
 
 	private LocalDate getPropertyAsLocalDate(final String name)
 	{
-		return TimeUtil.asLocalDate(Env.getContextAsDate(getCtx(), name));
+		return TimeUtil.asLocalDate(Env.getContextItemAsDate(getCtx(), name));
 	}
 
 	private boolean getPropertyAsBoolean(final String name)
 	{
-		return DisplayType.toBoolean(Env.getContext(getCtx(), name));
+		return DisplayType.toBoolean(Env.getContextItem(getCtx(), name));
 	}
 
 	public void setAutoCommit(final boolean autoCommit)

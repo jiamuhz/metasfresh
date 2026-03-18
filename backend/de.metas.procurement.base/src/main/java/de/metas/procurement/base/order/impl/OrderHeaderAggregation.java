@@ -146,7 +146,7 @@ public class OrderHeaderAggregation
 		final Properties ctx = InterfaceWrapperHelper.getCtx(order);
 		if (order.getSalesRep_ID() <= 0)
 		{
-			order.setSalesRep_ID(Env.getContextAsInt(ctx, Env.CTXNAME_SalesRep_ID));
+			order.setSalesRep_ID(Env.getContextItemAsInt(ctx, Env.CTXNAME_SalesRep_ID));
 		}
 		if (order.getSalesRep_ID() <= 0)
 		{

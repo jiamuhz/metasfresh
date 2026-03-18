@@ -64,7 +64,7 @@ import de.metas.ui.web.window.model.IDocumentFieldView;
 	@Override
 	public int getContextAsInt(final String name)
 	{
-		return Env.getContextAsInt(Env.getCtx(), windowNo, name);
+		return Env.getContextItemAsInt(Env.getCtx(), windowNo, name);
 	}
 
 }

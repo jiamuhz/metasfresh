@@ -57,12 +57,12 @@ public class CalloutCashJournal extends CalloutEngine
 		}
 		
 		int C_InvoicePaySchedule_ID = 0;
-		if (Env.getContextAsInt (ctx, WindowNo, Env.TAB_INFO, "C_Invoice_ID") == C_Invoice_ID.intValue ()
-			&& Env.getContextAsInt (ctx, WindowNo, Env.TAB_INFO, "C_InvoicePaySchedule_ID") != 0)
-			C_InvoicePaySchedule_ID = Env.getContextAsInt (ctx, WindowNo, Env.TAB_INFO, "C_InvoicePaySchedule_ID");
+		if (Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "C_Invoice_ID") == C_Invoice_ID.intValue ()
+			&& Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "C_InvoicePaySchedule_ID") != 0)
+			C_InvoicePaySchedule_ID = Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "C_InvoicePaySchedule_ID");
 
 		//  Date
-		Timestamp ts = Env.getContextAsDate(ctx, WindowNo, "DateAcct");     //  from C_Cash
+		Timestamp ts = Env.getContextItemAsDate(ctx, WindowNo, "DateAcct");     //  from C_Cash
 		if (ts == null)
 			ts = new Timestamp(System.currentTimeMillis());
 		//
@@ -95,7 +95,7 @@ public class CalloutCashJournal extends CalloutEngine
 				mTab.setValue("Amount", PayAmt.subtract(DiscountAmt));
 				mTab.setValue("DiscountAmt", DiscountAmt);
 				mTab.setValue("WriteOffAmt", Env.ZERO);
-				Env.setContext(ctx, WindowNo, "InvTotalAmt", PayAmt.toString());
+				Env.setContextItem(ctx, WindowNo, "InvTotalAmt", PayAmt.toString());
 			}
 		}
 		catch (SQLException e)
@@ -129,7 +129,7 @@ public class CalloutCashJournal extends CalloutEngine
 		if (isCalloutActive() || !"I".equals(mTab.getValue("CashType")))
 			return "";
 		//  Check, if InvTotalAmt exists
-		String total = Env.getContext(ctx, WindowNo, "InvTotalAmt");
+		String total = Env.getContextItem(ctx, WindowNo, "InvTotalAmt");
 		if (total == null || total.length() == 0)
 			return "";
 		BigDecimal InvTotalAmt = new BigDecimal(total);

@@ -408,8 +408,8 @@ public class ServerSyncBL implements IServerSyncBL
 
 		// required because if the ctx contains #AD_Client_ID = 0, we might not get the term's C_Flatrate_DataEntries from the DAO further down,
 		// and also the new even record needs to have the PMM_Product's AD_Client_ID and AD_Org_ID
-		Env.setContext(tempCtx, Env.CTXNAME_AD_Client_ID, pmmProduct.getAD_Client_ID());
-		Env.setContext(tempCtx, Env.CTXNAME_AD_Org_ID, pmmProduct.getAD_Org_ID());
+		Env.setContextItem(tempCtx, Env.CTXNAME_AD_Client_ID, pmmProduct.getAD_Client_ID());
+		Env.setContextItem(tempCtx, Env.CTXNAME_AD_Org_ID, pmmProduct.getAD_Org_ID());
 
 		try (final IAutoCloseable ignored = Env.switchContext(tempCtx))
 		{

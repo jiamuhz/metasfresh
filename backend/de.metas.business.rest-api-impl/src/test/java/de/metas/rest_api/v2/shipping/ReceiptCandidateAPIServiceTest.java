@@ -78,7 +78,7 @@ class ReceiptCandidateAPIServiceTest
 	void beforeEach()
 	{
 		AdempiereTestHelper.get().init();
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_Client_ID, ClientId.METASFRESH.getRepoId());
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_Client_ID, ClientId.METASFRESH.getRepoId());
 
 		bPartner = BusinessTestHelper.createBPartner("bpartner");
 		bPartnerLocation = BusinessTestHelper.createBPartnerLocation(bPartner);

@@ -330,27 +330,27 @@ public class Scheduler extends AdempiereServer
 		final IClientDAO clientDAO = Services.get(IClientDAO.class);
 		final ClientId clientId = ClientId.ofRepoId(m_model.getAD_Client_ID());
 		final I_AD_Client schedClient = clientDAO.getById(clientId);
-		Env.setContext(schedulerCtx, Env.CTXNAME_AD_Client_ID, schedClient.getAD_Client_ID());
-		Env.setContext(schedulerCtx, Env.CTXNAME_AD_Language, schedClient.getAD_Language());
+		Env.setContextItem(schedulerCtx, Env.CTXNAME_AD_Client_ID, schedClient.getAD_Client_ID());
+		Env.setContextItem(schedulerCtx, Env.CTXNAME_AD_Language, schedClient.getAD_Language());
 
 		//
 		// AD_Org, M_Warehouse
 		final OrgId orgId = OrgId.ofRepoId(m_model.getAD_Org_ID());
-		Env.setContext(schedulerCtx, Env.CTXNAME_AD_Org_ID, orgId.getRepoId());
+		Env.setContextItem(schedulerCtx, Env.CTXNAME_AD_Org_ID, orgId.getRepoId());
 		if (orgId.isRegular())
 		{
 			final OrgInfo schedOrg = Services.get(IOrgDAO.class).getOrgInfoById(orgId);
 			if (schedOrg.getWarehouseId() != null)
 			{
-				Env.setContext(schedulerCtx, Env.CTXNAME_M_Warehouse_ID, schedOrg.getWarehouseId().getRepoId());
+				Env.setContextItem(schedulerCtx, Env.CTXNAME_M_Warehouse_ID, schedOrg.getWarehouseId().getRepoId());
 			}
 		}
 
 		//
 		// AD_User_ID, SalesRep_ID
 		final UserId adUserId = getUserId();
-		Env.setContext(schedulerCtx, Env.CTXNAME_AD_User_ID, adUserId.getRepoId());
-		Env.setContext(schedulerCtx, Env.CTXNAME_SalesRep_ID, adUserId.getRepoId());
+		Env.setContextItem(schedulerCtx, Env.CTXNAME_AD_User_ID, adUserId.getRepoId());
+		Env.setContextItem(schedulerCtx, Env.CTXNAME_SalesRep_ID, adUserId.getRepoId());
 
 		//
 		// AD_Role
@@ -376,12 +376,12 @@ public class Scheduler extends AdempiereServer
 					m_model.getName(), adUserId, orgId, m_model);
 			roleId = role.getRoleId();
 		}
-		Env.setContext(schedulerCtx, Env.CTXNAME_AD_Role_ID, roleId.getRepoId());
+		Env.setContextItem(schedulerCtx, Env.CTXNAME_AD_Role_ID, roleId.getRepoId());
 
 		//
 		// Date
 		final Timestamp date = SystemTime.asDayTimestamp();
-		Env.setContext(schedulerCtx, Env.CTXNAME_Date, date);
+		Env.setContextItem(schedulerCtx, Env.CTXNAME_Date, date);
 
 		return schedulerCtx;
 	}
@@ -578,7 +578,7 @@ public class Scheduler extends AdempiereServer
 			columnName = columnName.substring(0, index);
 
 			// try Env
-			final String env = Env.getContext(schedulerCtx, columnName);
+			final String env = Env.getContextItem(schedulerCtx, columnName);
 			if (Check.isEmpty(env))
 			{
 				log.warn(parameterName + " - not in environment =" + columnName + "(" + variable + ")");

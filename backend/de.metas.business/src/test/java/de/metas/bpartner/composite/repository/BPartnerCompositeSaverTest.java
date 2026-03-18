@@ -91,7 +91,7 @@ public class BPartnerCompositeSaverTest
 
 		createLocationData();
 
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_Org_ID, ORG_ID);
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_Org_ID, ORG_ID);
 	}
 
 	private void createLocationData()

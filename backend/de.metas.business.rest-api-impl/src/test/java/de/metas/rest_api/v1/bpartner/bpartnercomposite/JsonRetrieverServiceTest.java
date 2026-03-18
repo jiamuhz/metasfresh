@@ -100,7 +100,7 @@ class JsonRetrieverServiceTest
 
 		createBPartnerData(0);
 
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_Org_ID, AD_ORG_ID);
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_Org_ID, AD_ORG_ID);
 	}
 
 	@Test

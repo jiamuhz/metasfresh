@@ -55,7 +55,7 @@ public class ArchiveStorageFactoryTest
 		client.setStoreArchiveOnFileSystem(false);
 		InterfaceWrapperHelper.save(client);
 
-		Env.setContext(ctx, "#AD_Client_ID", client.getAD_Client_ID());
+		Env.setContextItem(ctx, "#AD_Client_ID", client.getAD_Client_ID());
 
 		factory = new ArchiveStorageFactory();
 	}

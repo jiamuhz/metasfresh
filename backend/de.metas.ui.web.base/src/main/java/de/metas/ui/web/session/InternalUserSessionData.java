@@ -113,8 +113,8 @@ import java.util.Properties;
 
 		// Context
 		ctx = new Properties();
-		Env.setContext(ctx, WebRestApiContextProvider.CTXNAME_IsServerContext, false);
-		Env.setContext(ctx, WebRestApiContextProvider.CTXNAME_IsWebUI, true);
+		Env.setContextItem(ctx, WebRestApiContextProvider.CTXNAME_IsServerContext, false);
+		Env.setContextItem(ctx, WebRestApiContextProvider.CTXNAME_IsWebUI, true);
 
 		UserSession.logger.trace("User session created: {}", this);
 	}
@@ -230,17 +230,17 @@ import java.util.Properties;
 
 	public String getUserName()
 	{
-		return Env.getContext(getCtx(), Env.CTXNAME_AD_User_Name);
+		return Env.getContextItem(getCtx(), Env.CTXNAME_AD_User_Name);
 	}
 
 	public String getRoleName()
 	{
-		return Env.getContext(getCtx(), Env.CTXNAME_AD_Role_Name);
+		return Env.getContextItem(getCtx(), Env.CTXNAME_AD_Role_Name);
 	}
 
 	String getAdLanguage()
 	{
-		return Env.getContext(getCtx(), Env.CTXNAME_AD_Language);
+		return Env.getContextItem(getCtx(), Env.CTXNAME_AD_Language);
 	}
 
 	Language getLanguage()
@@ -254,7 +254,7 @@ import java.util.Properties;
 	String verifyLanguageAndSet(final Language lang)
 	{
 		final Properties ctx = getCtx();
-		final String adLanguageOld = Env.getContext(ctx, Env.CTXNAME_AD_Language);
+		final String adLanguageOld = Env.getContextItem(ctx, Env.CTXNAME_AD_Language);
 
 		//
 		// Check the language (and update it if needed)
@@ -263,7 +263,7 @@ import java.util.Properties;
 		//
 		// Actual update
 		final String adLanguageNew = validLang.getAD_Language();
-		Env.setContext(ctx, Env.CTXNAME_AD_Language, adLanguageNew);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Language, adLanguageNew);
 		this.locale = validLang.getLocale();
 		UserSession.logger.debug("Changed AD_Language: {} -> {}, {}", adLanguageOld, adLanguageNew, validLang);
 

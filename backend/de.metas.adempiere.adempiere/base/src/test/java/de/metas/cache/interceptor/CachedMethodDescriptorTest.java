@@ -14,8 +14,6 @@ import org.junit.Test;
 import de.metas.cache.annotation.CacheCtx;
 import de.metas.cache.annotation.CacheIgnore;
 import de.metas.cache.annotation.CacheTrx;
-import de.metas.cache.interceptor.CacheKeyBuilder;
-import de.metas.cache.interceptor.CachedMethodDescriptor;
 
 public class CachedMethodDescriptorTest
 {
@@ -54,22 +52,22 @@ public class CachedMethodDescriptorTest
 		final CachedMethodDescriptor methodDescriptor = new CachedMethodDescriptor(method);
 
 		final Properties ctx = new Properties();
-		Env.setContext(ctx, "#AD_Client_ID", 100);
-		Env.setContext(ctx, "#AD_Role_ID", 100);
-		Env.setContext(ctx, "#AD_User_ID", 100);
-		Env.setContext(ctx, "#AD_Org_ID", 123);
+		Env.setContextItem(ctx, "#AD_Client_ID", 100);
+		Env.setContextItem(ctx, "#AD_Role_ID", 100);
+		Env.setContextItem(ctx, "#AD_User_ID", 100);
+		Env.setContextItem(ctx, "#AD_Org_ID", 123);
 
 		final int testId = 100;
 		final Object[] params = new Object[] { ctx, testId };
 
 		final Object keyArray1 = methodDescriptor.createKeyBuilder(testObj, params).buildKey();
 
-		Env.setContext(ctx, "#AD_Org_ID", 124);
+		Env.setContextItem(ctx, "#AD_Org_ID", 124);
 		final Object keyArray2 = methodDescriptor.createKeyBuilder(testObj, params).buildKey();
 
 		Assert.assertEquals(keyArray1, keyArray2);
 
-		Env.setContext(ctx, "#AD_Client_ID", 101);
+		Env.setContextItem(ctx, "#AD_Client_ID", 101);
 		final Object keyArray3 = methodDescriptor.createKeyBuilder(testObj, params).buildKey();
 		Assert.assertNotEquals(keyArray1, keyArray3);
 	}
@@ -82,17 +80,17 @@ public class CachedMethodDescriptorTest
 		final CachedMethodDescriptor methodDescriptor = new CachedMethodDescriptor(method);
 
 		final Properties ctx = new Properties();
-		Env.setContext(ctx, "#AD_Client_ID", 100);
-		Env.setContext(ctx, "#AD_Role_ID", 100);
-		Env.setContext(ctx, "#AD_User_ID", 100);
-		Env.setContext(ctx, "#AD_Org_ID", 123);
+		Env.setContextItem(ctx, "#AD_Client_ID", 100);
+		Env.setContextItem(ctx, "#AD_Role_ID", 100);
+		Env.setContextItem(ctx, "#AD_User_ID", 100);
+		Env.setContextItem(ctx, "#AD_Org_ID", 123);
 
 		final int testId = 100;
 		final Object[] params = new Object[] { ctx, testId };
 
 		final Object key1 = methodDescriptor.createKeyBuilder(testObj, params).buildKey();
 
-		Env.setContext(ctx, "#AD_Client_ID", 101);
+		Env.setContextItem(ctx, "#AD_Client_ID", 101);
 		final Object key2 = methodDescriptor.createKeyBuilder(testObj, params).buildKey();
 		Assert.assertEquals(key1, key2);
 	}

@@ -364,20 +364,20 @@ import java.util.Properties;
 		if (Integer.class.equals(targetType)
 				|| int.class.equals(targetType))
 		{
-			return Env.getContextAsInt(getCtx(), variableName);
+			return Env.getContextItemAsInt(getCtx(), variableName);
 		}
 		else if (java.util.Date.class.equals(targetType)
 				|| Timestamp.class.equals(targetType))
 		{
-			return Env.getContextAsDate(getCtx(), variableName);
+			return Env.getContextItemAsDate(getCtx(), variableName);
 		}
 		else if (Boolean.class.equals(targetType))
 		{
-			final String valueStr = Env.getContext(getCtx(), variableName);
+			final String valueStr = Env.getContextItem(getCtx(), variableName);
 			return DisplayType.toBoolean(valueStr, null);
 		}
 
-		final String valueStr = Env.getContext(getCtx(), variableName);
+		final String valueStr = Env.getContextItem(getCtx(), variableName);
 
 		//
 		// Use some default value

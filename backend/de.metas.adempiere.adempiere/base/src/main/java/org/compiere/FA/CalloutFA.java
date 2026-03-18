@@ -70,7 +70,7 @@ public class CalloutFA extends CalloutEngine
 				if (rs.next())
 				{
 //					Charges - Set Context
-						Env.setContext(ctx, WindowNo, "A_DEPRECIATION_MANUAL_PERIOD", rs.getString("A_Term"));					
+						Env.setContextItem(ctx, WindowNo, "A_DEPRECIATION_MANUAL_PERIOD", rs.getString("A_Term"));
 						mTab.setValue ("A_DEPRECIATION_MANUAL_PERIOD", rs.getString("A_Term"));
 		
 				}
@@ -120,7 +120,7 @@ public class CalloutFA extends CalloutEngine
 //					Charges - Set Context
 					if (  (!rs.getString("DepreciationType").equals("TAB")) || (!rs.getString("DepreciationType").equals("MAN")) )
 					{
-						Env.setContext(ctx, WindowNo, "A_DEPRECIATION_MANUAL_PERIOD", "");					
+						Env.setContextItem(ctx, WindowNo, "A_DEPRECIATION_MANUAL_PERIOD", "");
 						//mTab.setValue ("A_Depreciation_Manual_Period", null);
 						mTab.setValue ("A_Depreciation_Manual_Amount", null);
 						mTab.setValue ("A_Depreciation_Table_Header_ID", null);

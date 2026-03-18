@@ -25,9 +25,7 @@ import de.metas.order.compensationGroup.OrderGroupRepository;
 import de.metas.organization.IOrgDAO;
 import de.metas.organization.OrgId;
 import de.metas.organization.OrgInfoUpdateRequest;
-import de.metas.pricing.attributebased.impl.AttributePricing;
 import de.metas.pricing.rules.Discount;
-import de.metas.pricing.rules.price_list_version.PriceListVersionConfiguration;
 import de.metas.pricing.rules.price_list_version.PriceListVersionPricingRule;
 import de.metas.user.UserRepository;
 import de.metas.util.Services;
@@ -146,11 +144,11 @@ public class FlatrateTermTestHelper
 
 		adClient = InterfaceWrapperHelper.create(ctx, I_AD_Client.class, ITrx.TRXNAME_None);
 		InterfaceWrapperHelper.save(adClient);
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, adClient.getAD_Client_ID());
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, adClient.getAD_Client_ID());
 
 		adOrg = InterfaceWrapperHelper.create(ctx, I_AD_Org.class, ITrx.TRXNAME_None);
 		InterfaceWrapperHelper.save(adOrg);
-		Env.setContext(ctx, Env.CTXNAME_AD_Org_ID, adOrg.getAD_Org_ID());
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Org_ID, adOrg.getAD_Org_ID());
 
 		Services.get(IOrgDAO.class).createOrUpdateOrgInfo(OrgInfoUpdateRequest.builder()
 				.orgId(OrgId.ofRepoId(adOrg.getAD_Org_ID()))

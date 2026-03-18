@@ -79,7 +79,6 @@ import org.compiere.util.Env;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.Mockito;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 
@@ -165,7 +164,7 @@ class ContactRestControllerTest
 
 		createBPartnerData(0);
 
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_Org_ID, AD_ORG_ID);
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_Org_ID, AD_ORG_ID);
 	}
 
 	@Test

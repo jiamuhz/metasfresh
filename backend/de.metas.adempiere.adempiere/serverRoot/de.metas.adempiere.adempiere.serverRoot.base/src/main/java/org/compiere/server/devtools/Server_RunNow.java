@@ -67,11 +67,11 @@ public class Server_RunNow
 		Env.getSingleAdempiereInstance(null).startup(RunMode.BACKEND);
 
 		final Properties ctx = Env.getCtx();
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, 0);
-		Env.setContext(ctx, Env.CTXNAME_AD_Org_ID, 0);
-		Env.setContext(ctx, Env.CTXNAME_AD_User_ID, 0);
-		Env.setContext(ctx, Env.CTXNAME_AD_Role_ID, 0);
-		Env.setContext(ctx, Env.CTXNAME_AD_Session_ID, Env.CTXVALUE_AD_SESSION_ID_NONE);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, 0);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Org_ID, 0);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_User_ID, 0);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Role_ID, 0);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Session_ID, Env.CTXVALUE_AD_SESSION_ID_NONE);
 
 		//
 		// Start all servers

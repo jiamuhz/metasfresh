@@ -82,8 +82,8 @@ public class PPOrderMInOutLineRetrievalServiceTest
 		//
 		// Create an AD_SysConfig for SaveDecoupledHUAttributesDAO.SYSCONFIG_AutoFlushEnabledInitial, to make sure that the HU_Attributes that are set by the ReceiptInOutLineHUAssignmentListener are actually stored.
 		final Properties deriveCtx = Env.deriveCtx(Env.getCtx());
-		Env.setContext(deriveCtx, Env.CTXNAME_AD_Client_ID, 0);
-		Env.setContext(deriveCtx, Env.CTXNAME_AD_Org_ID, 0);
+		Env.setContextItem(deriveCtx, Env.CTXNAME_AD_Client_ID, 0);
+		Env.setContextItem(deriveCtx, Env.CTXNAME_AD_Org_ID, 0);
 		final I_AD_SysConfig sysConfig = InterfaceWrapperHelper.newInstance(I_AD_SysConfig.class);
 		sysConfig.setName(SaveDecoupledHUAttributesDAO.SYSCONFIG_AutoFlushEnabledInitial);
 		sysConfig.setValue("Y");

@@ -101,7 +101,7 @@ public abstract class InfoQueryCriteriaBPSonsorAbstract implements IInfoQueryCri
 		if (sno == null)
 			return null;
 
-		final Timestamp date = TimeUtil.trunc(Env.getContextAsDate(Env.getCtx(), "#Date"), TimeUtil.TRUNC_DAY);
+		final Timestamp date = TimeUtil.trunc(Env.getContextItemAsDate(Env.getCtx(), "#Date"), TimeUtil.TRUNC_DAY);
 		//
 		final String whereClause = "EXISTS (SELECT 1 FROM C_Sponsor_Salesrep ssr"
 				+ " JOIN C_Sponsor sp ON (ssr.C_Sponsor_ID = sp.C_Sponsor_ID)"

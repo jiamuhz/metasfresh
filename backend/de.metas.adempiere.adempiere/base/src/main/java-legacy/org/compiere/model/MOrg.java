@@ -138,7 +138,7 @@ public class MOrg extends X_AD_Org
 			MAccount.updateValueDescription(getCtx(), "AD_Org_ID=" + getAD_Org_ID(), get_TrxName());
 
 			final String elementOrgTrx = Env.CTXNAME_AcctSchemaElementPrefix + X_C_AcctSchema_Element.ELEMENTTYPE_OrgTrx;
-			if ("Y".equals(Env.getContext(getCtx(), elementOrgTrx)))
+			if ("Y".equals(Env.getContextItem(getCtx(), elementOrgTrx)))
 			{
 				MAccount.updateValueDescription(getCtx(), "AD_OrgTrx_ID=" + getAD_Org_ID(), get_TrxName());
 			}

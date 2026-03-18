@@ -282,7 +282,7 @@ public class CreatePOFromSOsAggregator extends MapReduceAggregator<I_C_Order, I_
 		// * if not set use it from context
 		if (purchaseOrder.getSalesRep_ID() <= 0)
 		{
-			purchaseOrder.setSalesRep_ID(Env.getContextAsInt(ctx, Env.CTXNAME_SalesRep_ID));
+			purchaseOrder.setSalesRep_ID(Env.getContextItemAsInt(ctx, Env.CTXNAME_SalesRep_ID));
 		}
 		if (purchaseOrder.getSalesRep_ID() <= 0)
 		{

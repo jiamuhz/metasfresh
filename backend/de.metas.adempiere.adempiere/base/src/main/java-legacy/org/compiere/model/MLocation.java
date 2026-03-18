@@ -649,8 +649,8 @@ public class MLocation extends X_C_Location
 	{
 		//	Value/Name change in Account
 		if (!newRecord
-			&& ("Y".equals(Env.getContext(getCtx(), Env.CTXNAME_AcctSchemaElementPrefix + AcctSchemaElementType.LocationFrom.getCode())) 
-				|| "Y".equals(Env.getContext(getCtx(), Env.CTXNAME_AcctSchemaElementPrefix + AcctSchemaElementType.LocationTo.getCode())))
+			&& ("Y".equals(Env.getContextItem(getCtx(), Env.CTXNAME_AcctSchemaElementPrefix + AcctSchemaElementType.LocationFrom.getCode()))
+				|| "Y".equals(Env.getContextItem(getCtx(), Env.CTXNAME_AcctSchemaElementPrefix + AcctSchemaElementType.LocationTo.getCode())))
 			&& (is_ValueChanged("Postal") || is_ValueChanged("City"))
 			)
 			MAccount.updateValueDescription(getCtx(),

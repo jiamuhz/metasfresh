@@ -325,7 +325,7 @@ public class OrderFastInput extends CalloutEngine
 		//
 		// set OL_DONT_UPDATE_ORDER to inform the ol's model validator not to update the order
 		final String dontUpdateOrderLock = OL_DONT_UPDATE_ORDER + order.getC_Order_ID();
-		Env.setContext(ctx, dontUpdateOrderLock, true);
+		Env.setContextItem(ctx, dontUpdateOrderLock, true);
 		try
 		{
 			InterfaceWrapperHelper.save(ol);

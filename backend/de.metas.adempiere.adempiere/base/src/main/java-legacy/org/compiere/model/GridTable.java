@@ -423,7 +423,7 @@ public class GridTable extends AbstractTableModel
 
 		//
 		log.debug(m_SQL_Count);
-		Env.setContext(m_ctx, m_WindowNo, m_TabNo, GridTab.CTX_SQL, m_SQL);
+		Env.setContextItem(m_ctx, m_WindowNo, m_TabNo, GridTab.CTX_SQL, m_SQL);
 		return m_SQL;
 	}	// createSelectSql
 
@@ -3144,7 +3144,7 @@ public class GridTable extends AbstractTableModel
 	private int getParentTabNo()
 	{
 		int tabNo = m_TabNo;
-		int currentLevel = Env.getContextAsInt(m_ctx, m_WindowNo, tabNo, GridTab.CTX_TabLevel);
+		int currentLevel = Env.getContextItemAsInt(m_ctx, m_WindowNo, tabNo, GridTab.CTX_TabLevel);
 		int parentLevel = currentLevel - 1;
 		if (parentLevel < 0)
 		{
@@ -3153,7 +3153,7 @@ public class GridTable extends AbstractTableModel
 		while (parentLevel != currentLevel)
 		{
 			tabNo--;
-			currentLevel = Env.getContextAsInt(m_ctx, m_WindowNo, tabNo, GridTab.CTX_TabLevel);
+			currentLevel = Env.getContextItemAsInt(m_ctx, m_WindowNo, tabNo, GridTab.CTX_TabLevel);
 		}
 		return tabNo;
 	}
@@ -3223,15 +3223,15 @@ public class GridTable extends AbstractTableModel
 		// BF [ 2910358 ]
 		// Restore the Original Value for Key Column Name based in Tab Context
 		// Value
-		String parentKey = Env.getContext(m_ctx, m_WindowNo, getParentTabNo(), CTX_KeyColumnName);
+		String parentKey = Env.getContextItem(m_ctx, m_WindowNo, getParentTabNo(), CTX_KeyColumnName);
 
 		if (!Check.isEmpty(parentKey, true))
 		{
-			String valueKey = Env.getContext(m_ctx, m_WindowNo, getParentTabNo(), parentKey);
+			String valueKey = Env.getContextItem(m_ctx, m_WindowNo, getParentTabNo(), parentKey);
 
 			if (valueKey != null && valueKey.length() > 0)
 			{
-				Env.setContext(m_ctx, m_WindowNo, parentKey, valueKey);
+				Env.setContextItem(m_ctx, m_WindowNo, parentKey, valueKey);
 			}
 		}
 
@@ -3331,7 +3331,7 @@ public class GridTable extends AbstractTableModel
 			m_SQL += " ORDER BY " + m_orderClause;
 		}
 		log.debug(m_SQL_Count);
-		Env.setContext(m_ctx, m_WindowNo, m_TabNo, "SQL", m_SQL);
+		Env.setContextItem(m_ctx, m_WindowNo, m_TabNo, "SQL", m_SQL);
 		return m_SQL;
 	} // createSelectSql
 

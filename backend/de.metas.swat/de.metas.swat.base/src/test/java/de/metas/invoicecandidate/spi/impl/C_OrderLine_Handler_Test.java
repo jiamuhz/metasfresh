@@ -103,8 +103,8 @@ public class C_OrderLine_Handler_Test extends AbstractICTestSupport
 		initStuff();
 
 		final Properties ctx = Env.getCtx();
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, 1);
-		Env.setContext(ctx, Env.CTXNAME_AD_Language, "de_CH");
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, 1);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Language, "de_CH");
 
 		final List<DimensionFactory<?>> dimensionFactories = new ArrayList<>();
 		dimensionFactories.add(new OrderLineDimensionFactory());

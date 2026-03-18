@@ -163,8 +163,8 @@ public class C_Flatrate_Term
 			// otherwise both the lookup of existing DocTypes and the creation of new doc types
 			// (MDocType.setGL_Category_ID() ) will fail.
 			final Properties localCtx = Env.deriveCtx(Env.getCtx());
-			Env.setContext(localCtx, Env.CTXNAME_AD_Client_ID, org.getAD_Client_ID());
-			Env.setContext(localCtx, Env.CTXNAME_AD_Org_ID, org.getAD_Org_ID());
+			Env.setContextItem(localCtx, Env.CTXNAME_AD_Client_ID, org.getAD_Client_ID());
+			Env.setContextItem(localCtx, Env.CTXNAME_AD_Org_ID, org.getAD_Org_ID());
 
 			final Optional<org.compiere.model.I_C_DocType> existingDocType = docTypeDAO
 					.retrieveDocType(DocTypeQuery.builder()

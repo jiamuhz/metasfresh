@@ -885,7 +885,7 @@ public final class ProcessInstanceInfo implements Serializable
 			final String contextLanguage = Env.getAD_Language(ctx);
 			final I_AD_Client processClient = clientDAO.getById(adClientId);
 			final String languageToUse = contextLanguage != null ? contextLanguage : processClient.getAD_Language();
-			Env.setContext(processCtx, Env.CTXNAME_AD_Language, languageToUse);
+			Env.setContextItem(processCtx, Env.CTXNAME_AD_Language, languageToUse);
 
 			//
 			// AD_Org, M_Warehouse
@@ -896,7 +896,7 @@ public final class ProcessInstanceInfo implements Serializable
 				final OrgInfo schedOrg = Services.get(IOrgDAO.class).getOrgInfoById(adOrgId);
 				if (schedOrg.getWarehouseId() != null)
 				{
-					Env.setContext(processCtx, Env.CTXNAME_M_Warehouse_ID, schedOrg.getWarehouseId().getRepoId());
+					Env.setContextItem(processCtx, Env.CTXNAME_M_Warehouse_ID, schedOrg.getWarehouseId().getRepoId());
 				}
 			}
 
@@ -921,12 +921,12 @@ public final class ProcessInstanceInfo implements Serializable
 						.orElse(null);
 				adRoleId = role == null ? null : role.getRoleId();
 			}
-			Env.setContext(processCtx, Env.CTXNAME_AD_Role_ID, RoleId.toRepoId(adRoleId, Env.CTXVALUE_AD_Role_ID_NONE));
+			Env.setContextItem(processCtx, Env.CTXNAME_AD_Role_ID, RoleId.toRepoId(adRoleId, Env.CTXVALUE_AD_Role_ID_NONE));
 
 			//
 			// Date
 			final Timestamp date = SystemTime.asDayTimestamp();
-			Env.setContext(processCtx, Env.CTXNAME_Date, date);
+			Env.setContextItem(processCtx, Env.CTXNAME_Date, date);
 
 			//
 			// Allow using the where clause in expressions.
@@ -935,7 +935,7 @@ public final class ProcessInstanceInfo implements Serializable
 			final String whereClause = getWhereClause();
 			if (EmptyUtil.isNotBlank(whereClause))
 			{
-				Env.setContext(processCtx, Env.CTXNAME_PROCESS_SELECTION_WHERECLAUSE, whereClause);
+				Env.setContextItem(processCtx, Env.CTXNAME_PROCESS_SELECTION_WHERECLAUSE, whereClause);
 			}
 
 			//
@@ -946,13 +946,13 @@ public final class ProcessInstanceInfo implements Serializable
 				for (final String windowCtxName : WINDOW_CTXNAMES_TO_COPY)
 				{
 					final boolean onlyWindow = true;
-					final String value = Env.getContext(ctx, windowNo, windowCtxName, onlyWindow);
+					final String value = Env.getContextItem(ctx, windowNo, windowCtxName, onlyWindow);
 					if (Env.isPropertyValueNull(windowCtxName, value))
 					{
 						continue;
 					}
 
-					Env.setContext(processCtx, windowNo, windowCtxName, value);
+					Env.setContextItem(processCtx, windowNo, windowCtxName, value);
 				}
 			}
 
@@ -1874,7 +1874,7 @@ public final class ProcessInstanceInfo implements Serializable
 			// Get Language directly from window context, if any (08966)
 			{
 				// Note: onlyWindow is true, otherwise the login language would be returned if no other language was found
-				final String languageString = Env.getContext(ctx, windowNo, "AD_Language", true);
+				final String languageString = Env.getContextItem(ctx, windowNo, "AD_Language", true);
 				if (!Env.isPropertyValueNull("AD_Language", languageString))
 				{
 					return Language.getLanguage(languageString);
@@ -1884,7 +1884,7 @@ public final class ProcessInstanceInfo implements Serializable
 			//
 			// Get Language from the BPartner set in window context, if any (03040)
 			{
-				final int bpartnerId = Env.getContextAsInt(ctx, windowNo, "C_BPartner_ID");
+				final int bpartnerId = Env.getContextItemAsInt(ctx, windowNo, "C_BPartner_ID");
 				if (bpartnerId > 0)
 				{
 					final Language lang = Services.get(IBPartnerBL.class).getLanguage(ctx, bpartnerId);

@@ -66,8 +66,8 @@ public final class WebRestApiContextProvider implements ContextProvider, Seriali
 		//
 		// Create the server context
 		serverCtx = new Properties();
-		Env.setContext(serverCtx, CTXNAME_IsServerContext, true);
-		Env.setContext(serverCtx, CTXNAME_IsWebUI, true);
+		Env.setContextItem(serverCtx, CTXNAME_IsServerContext, true);
+		Env.setContextItem(serverCtx, CTXNAME_IsWebUI, true);
 	}
 
 	@Override

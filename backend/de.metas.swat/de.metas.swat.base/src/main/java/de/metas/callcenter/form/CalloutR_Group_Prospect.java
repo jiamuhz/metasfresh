@@ -47,9 +47,9 @@ public class CalloutR_Group_Prospect extends CalloutEngine
 		I_R_Group_Prospect gp = InterfaceWrapperHelper.create(mTab, I_R_Group_Prospect.class);
 		
 		int AD_User_ID = 0;
-		if (gp.getC_BPartner_ID() == Env.getContextAsInt(ctx, WindowNo, Env.TAB_INFO, "C_BPartner_ID"))
+		if (gp.getC_BPartner_ID() == Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "C_BPartner_ID"))
 		{
-			AD_User_ID = Env.getContextAsInt(ctx, WindowNo, Env.TAB_INFO, "AD_User_ID");
+			AD_User_ID = Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "AD_User_ID");
 		}
 		if (AD_User_ID > 0)
 			gp.setAD_User_ID(AD_User_ID);

@@ -341,7 +341,7 @@ public abstract class JavaProcess implements ILoggable, IContextAware
 		// We might want to access this information (currently in AD_ChangeLog)
 		// Note: using copyCtx because derviveCtx is not safe with Env.switchContext()
 		_ctx = Env.copyCtx(pi.getCtx());
-		Env.setContext(_ctx, Env.CTXNAME_AD_PInstance_ID, PInstanceId.toRepoId(pi.getPinstanceId()));
+		Env.setContextItem(_ctx, Env.CTXNAME_AD_PInstance_ID, PInstanceId.toRepoId(pi.getPinstanceId()));
 
 		//
 		// Load annotated parameters

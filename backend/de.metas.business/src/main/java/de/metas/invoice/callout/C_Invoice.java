@@ -140,7 +140,7 @@ public class C_Invoice
 		}
 
 		// FRESH-488: Kept from old callout
-		Env.setContext(field.getCtx(), field.getWindowNo(), I_C_DocType.COLUMNNAME_HasCharges, documentNoInfo.isHasChanges());
+		Env.setContextItem(field.getCtx(), field.getWindowNo(), I_C_DocType.COLUMNNAME_HasCharges, documentNoInfo.isHasChanges());
 
 		// DocumentNo
 		if (documentNoInfo.isDocNoControlled())
@@ -151,7 +151,7 @@ public class C_Invoice
 		// FRESH-488: Kept from old callout
 		// DocBaseType - Set Context
 		final String docBaseType = documentNoInfo.getDocBaseType();
-		Env.setContext(field.getCtx(), field.getWindowNo(), I_C_DocType.COLUMNNAME_DocBaseType, docBaseType);
+		Env.setContextItem(field.getCtx(), field.getWindowNo(), I_C_DocType.COLUMNNAME_DocBaseType, docBaseType);
 
 		// Task FRESH-488: Set the payment rule to the one from the sys config independent of doctype-letters
 		final PaymentRule paymentRule = invoiceBL.getDefaultPaymentRule();

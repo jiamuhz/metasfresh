@@ -40,7 +40,7 @@ public class SessionBL implements ISessionBL
 	@Override
 	public MFSession getCurrentSession(@NonNull final Properties ctx)
 	{
-		final int AD_Session_ID = Env.getContextAsInt(ctx, Env.CTXNAME_AD_Session_ID);
+		final int AD_Session_ID = Env.getContextItemAsInt(ctx, Env.CTXNAME_AD_Session_ID);
 		logger.debug("The given ctx has {}={}", Env.CTXNAME_AD_Session_ID, AD_Session_ID);
 		return getSessionById(ctx, AD_Session_ID);
 	}

@@ -119,14 +119,14 @@ public class GridTabVO implements Evaluatee, Serializable
 	 */
 	private static boolean loadTabDetails(final GridTabVO vo, final ResultSet rs) throws SQLException
 	{
-		boolean showTrl = "Y".equals(Env.getContext(vo.ctx, "#ShowTrl"));
+		boolean showTrl = "Y".equals(Env.getContextItem(vo.ctx, "#ShowTrl"));
 		final boolean showAcct = true; // "Y".equals(Env.getContext(vo.ctx, Env.CTXNAME_ShowAcct));
-		final boolean showAdvanced = "Y".equals(Env.getContext(vo.ctx, "#ShowAdvanced"));
+		final boolean showAdvanced = "Y".equals(Env.getContextItem(vo.ctx, "#ShowAdvanced"));
 		final boolean loadAllLanguages = vo.loadAllLanguages;
 
 		{
 			vo.adTabId = AdTabId.ofRepoId(rs.getInt("AD_Tab_ID"));
-			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_AD_Tab_ID, String.valueOf(vo.adTabId.getRepoId()));
+			Env.setContextItem(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_AD_Tab_ID, String.valueOf(vo.adTabId.getRepoId()));
 
 			vo.templateTabId = AdTabId.ofRepoIdOrNull(rs.getInt(I_AD_Tab.COLUMNNAME_Template_Tab_ID));
 
@@ -188,11 +188,11 @@ public class GridTabVO implements Evaluatee, Serializable
 
 			//	Access Level
 			vo.AccessLevel = TableAccessLevel.forAccessLevel(rs.getString("AccessLevel"));
-			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_AccessLevel, vo.AccessLevel.getAccessLevelString());
+			Env.setContextItem(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_AccessLevel, vo.AccessLevel.getAccessLevelString());
 
 			//	Table Access
 			vo.AD_Table_ID = rs.getInt("AD_Table_ID");
-			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_AD_Table_ID, String.valueOf(vo.AD_Table_ID));
+			Env.setContextItem(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_AD_Table_ID, String.valueOf(vo.AD_Table_ID));
 
 			//
 			// Apply role permissions
@@ -318,7 +318,7 @@ public class GridTabVO implements Evaluatee, Serializable
 			{
 				vo.TabLevel = 0;
 			}
-			Env.setContext(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_TabLevel, String.valueOf(vo.TabLevel)); // metas: tsa: set this value here because here is the right place
+			Env.setContextItem(vo.ctx, vo.WindowNo, vo.TabNo, GridTab.CTX_TabLevel, String.valueOf(vo.TabLevel)); // metas: tsa: set this value here because here is the right place
 
 			//
 			vo.IsSortTab = rs.getString("IsSortTab").equals("Y");
@@ -739,14 +739,14 @@ public class GridTabVO implements Evaluatee, Serializable
 	@Override
 	public String get_ValueAsString(final String variableName)
 	{
-		return Env.getContext(ctx, WindowNo, variableName, false);    // not just window
+		return Env.getContextItem(ctx, WindowNo, variableName, false);    // not just window
 	}    //	get_ValueAsString
 
 	protected GridTabVO clone(final Properties ctx, final int windowNo)
 	{
 		final GridTabVO clone = new GridTabVO(ctx, windowNo, this.TabNo, this.loadAllLanguages, this.applyRolePermissions);
 		clone.adWindowId = adWindowId;
-		Env.setContext(ctx, windowNo, clone.TabNo, GridTab.CTX_AD_Tab_ID, clone.adTabId != null ? String.valueOf(clone.adTabId.getRepoId()) : null);
+		Env.setContextItem(ctx, windowNo, clone.TabNo, GridTab.CTX_AD_Tab_ID, clone.adTabId != null ? String.valueOf(clone.adTabId.getRepoId()) : null);
 		//
 		clone.adTabId = adTabId;
 		clone.captions = this.captions.copy();
@@ -774,8 +774,8 @@ public class GridTabVO implements Evaluatee, Serializable
 		clone.AD_Image_ID = AD_Image_ID;
 		clone.Included_Tab_ID = Included_Tab_ID;
 		clone.ReplicationType = ReplicationType;
-		Env.setContext(ctx, windowNo, clone.TabNo, GridTab.CTX_AccessLevel, clone.AccessLevel.getAccessLevelString());
-		Env.setContext(ctx, windowNo, clone.TabNo, GridTab.CTX_AD_Table_ID, String.valueOf(clone.AD_Table_ID));
+		Env.setContextItem(ctx, windowNo, clone.TabNo, GridTab.CTX_AccessLevel, clone.AccessLevel.getAccessLevelString());
+		Env.setContextItem(ctx, windowNo, clone.TabNo, GridTab.CTX_AD_Table_ID, String.valueOf(clone.AD_Table_ID));
 
 		//
 		clone.IsSortTab = IsSortTab;

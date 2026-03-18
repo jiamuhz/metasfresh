@@ -193,14 +193,14 @@ public class Helper
 		final I_AD_Client client = printingDAO.newInstance(ctx, I_AD_Client.class, ITrx.TRXNAME_None);
 		client.setStoreArchiveOnFileSystem(false);
 		InterfaceWrapperHelper.save(client);
-		Env.setContext(ctx, "#AD_Client_ID", client.getAD_Client_ID());
+		Env.setContextItem(ctx, "#AD_Client_ID", client.getAD_Client_ID());
 
 		//
 		// Login user
 		final I_AD_User loggedUser = printingDAO.newInstance(ctx, I_AD_User.class, ITrx.TRXNAME_None);
 		loggedUser.setName("loggedUser-" + getClass().getSimpleName());
 		printingDAO.save(loggedUser);
-		Env.setContext(ctx, "#AD_User_ID", loggedUser.getAD_User_ID());
+		Env.setContextItem(ctx, "#AD_User_ID", loggedUser.getAD_User_ID());
 
 		//
 		// AD_Session
@@ -208,7 +208,7 @@ public class Helper
 		session.setHostKey(HOSTKEY_Host01);
 		session.setLoginUsername(loggedUser.getName());
 		printingDAO.save(session);
-		Env.setContext(ctx, Env.CTXNAME_AD_Session_ID, session.getAD_Session_ID());
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Session_ID, session.getAD_Session_ID());
 
 		//
 		// Base Language

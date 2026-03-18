@@ -40,7 +40,7 @@ public class PrintClientsBLTest extends AbstractPrintingTest
 	{
 		final Properties ctx = Env.deriveCtx(Env.getCtx());
 		final int adSessionId = 12345;
-		Env.setContext(ctx, Env.CTXNAME_AD_Session_ID, adSessionId);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Session_ID, adSessionId);
 
 		final String hostKey = "hostKeyTest01";
 
@@ -56,7 +56,7 @@ public class PrintClientsBLTest extends AbstractPrintingTest
 	{
 		final Properties ctx = Env.deriveCtx(Env.getCtx());
 		final int adSessionId = 12345;
-		Env.setContext(ctx, Env.CTXNAME_AD_Session_ID, adSessionId);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Session_ID, adSessionId);
 
 		final String hostKey1 = "hostKeyTest01-01";
 		final I_AD_Print_Clients entry1 = Services.get(IPrintClientsBL.class).createPrintClientsEntry(ctx, hostKey1);

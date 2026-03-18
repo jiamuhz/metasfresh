@@ -169,8 +169,8 @@ public final class UserPreference implements Serializable
 	private static final Properties createDAOCtx()
 	{
 		final Properties ctx = Env.deriveCtx(Env.getCtx());
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, Env.CTXVALUE_AD_Client_ID_System);
-		Env.setContext(ctx, Env.CTXNAME_AD_Org_ID, Env.CTXVALUE_AD_Org_ID_System);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, Env.CTXVALUE_AD_Client_ID_System);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Org_ID, Env.CTXVALUE_AD_Org_ID_System);
 		return ctx;
 	}
 
@@ -321,8 +321,8 @@ public final class UserPreference implements Serializable
 
 	public void updateContext(final Properties ctx)
 	{
-		Env.setContext(ctx, "#ShowTrl", true);
-		Env.setContext(ctx, "#ShowAdvanced", true);
+		Env.setContextItem(ctx, "#ShowTrl", true);
+		Env.setContextItem(ctx, "#ShowAdvanced", true);
 		Env.setAutoCommit(ctx, isPropertyBool(P_AUTO_COMMIT));
 		Env.setAutoNew(ctx, isPropertyBool(P_AUTO_NEW));
 	}

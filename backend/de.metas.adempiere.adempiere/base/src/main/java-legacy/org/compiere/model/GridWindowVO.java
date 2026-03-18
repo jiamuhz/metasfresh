@@ -597,10 +597,10 @@ public class GridWindowVO implements Serializable
 	{
 		final Properties ctx = getCtx();
 		final int windowNo = getWindowNo();
-		Env.setContext(ctx, windowNo, Env.CTXNAME_IsSOTrx, isSOTrx());
+		Env.setContextItem(ctx, windowNo, Env.CTXNAME_IsSOTrx, isSOTrx());
 		
 		//	Put base table of window in ctx (for VDocAction)
-		Env.setContext(ctx, windowNo, CTXNAME_BaseTable_ID, getBaseTable_ID());
+		Env.setContextItem(ctx, windowNo, CTXNAME_BaseTable_ID, getBaseTable_ID());
 	}
 
 // metas: begin

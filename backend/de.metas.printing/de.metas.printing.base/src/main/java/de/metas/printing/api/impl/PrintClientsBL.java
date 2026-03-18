@@ -56,7 +56,7 @@ public class PrintClientsBL implements IPrintClientsBL
 			printClientsEntry.setHostKey(hostkey);
 		}
 
-		printClientsEntry.setAD_Session_ID(Env.getContextAsInt(ctx, Env.CTXNAME_AD_Session_ID));
+		printClientsEntry.setAD_Session_ID(Env.getContextItemAsInt(ctx, Env.CTXNAME_AD_Session_ID));
 		printClientsEntry.setDateLastPoll(SystemTime.asTimestamp());
 		InterfaceWrapperHelper.save(printClientsEntry);
 		

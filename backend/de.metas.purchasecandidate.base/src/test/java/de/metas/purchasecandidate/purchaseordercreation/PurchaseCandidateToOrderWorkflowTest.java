@@ -82,7 +82,7 @@ public class PurchaseCandidateToOrderWorkflowTest
 	public void init()
 	{
 		AdempiereTestHelper.get().init();
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_Org_ID, 5);
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_Org_ID, 5);
 
 		EACH = createUOM("Ea");
 		ONE = Quantity.of(BigDecimal.ONE, EACH);

@@ -98,7 +98,7 @@ public class RemoteArchiveStorageTests
 		client.setUnixArchivePath(client.getWindowsArchivePath());
 		client.setStoreArchiveOnFileSystem(true);
 		InterfaceWrapperHelper.save(client);
-		Env.setContext(ctx, "#AD_Client_ID", client.getAD_Client_ID());
+		Env.setContextItem(ctx, "#AD_Client_ID", client.getAD_Client_ID());
 
 		Ini.setClient(true);
 

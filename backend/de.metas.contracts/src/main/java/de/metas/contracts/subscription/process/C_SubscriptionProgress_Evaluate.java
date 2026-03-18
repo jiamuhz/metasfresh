@@ -52,7 +52,7 @@ public class C_SubscriptionProgress_Evaluate extends JavaProcess
 {
 	private final ISubscriptionBL subscriptionBL = Services.get(ISubscriptionBL.class);
 
-	private final Timestamp currentDate = TimeUtil.truncToDay(Env.getContextAsDate(getCtx(), Env.CTXNAME_Date));
+	private final Timestamp currentDate = TimeUtil.truncToDay(Env.getContextItemAsDate(getCtx(), Env.CTXNAME_Date));
 
 	@Override
 	@RunOutOfTrx

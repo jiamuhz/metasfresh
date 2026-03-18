@@ -404,7 +404,7 @@ public class ImportHelper implements IImportHelper
 
 	private void handleDocumentReplication(final PO documentObj)
 	{
-		Env.setContext(documentObj.getCtx(), Env.CTXNAME_AD_Client_ID, documentObj.getAD_Client_ID());
+		Env.setContextItem(documentObj.getCtx(), Env.CTXNAME_AD_Client_ID, documentObj.getAD_Client_ID());
 		try
 		{
 			if (!Services.get(IDocumentBL.class).processIt(documentObj))
@@ -591,7 +591,7 @@ public class ImportHelper implements IImportHelper
 		// if we imported a record that has an AD_Session_ID column, then set its value to the session-id which we are importing with (if any).
 		if (po.getPOInfo().hasColumnName(I_AD_Session.COLUMNNAME_AD_Session_ID))
 		{
-			final int adSessionId = Env.getContextAsInt(ctx, Env.CTXNAME_AD_Session_ID);
+			final int adSessionId = Env.getContextItemAsInt(ctx, Env.CTXNAME_AD_Session_ID);
 			if (adSessionId > 0)
 			{
 				po.set_ValueOfColumn(I_AD_Session.COLUMNNAME_AD_Session_ID, adSessionId);

@@ -354,7 +354,7 @@ public class MDDOrder extends X_DD_Order implements IDocument
 		// Default Warehouse
 		if (getM_Warehouse_ID() <= 0)
 		{
-			final int warehouseId = Env.getContextAsInt(getCtx(), Env.CTXNAME_M_Warehouse_ID);
+			final int warehouseId = Env.getContextItemAsInt(getCtx(), Env.CTXNAME_M_Warehouse_ID);
 			if (warehouseId > 0)
 			{
 				setM_Warehouse_ID(warehouseId);

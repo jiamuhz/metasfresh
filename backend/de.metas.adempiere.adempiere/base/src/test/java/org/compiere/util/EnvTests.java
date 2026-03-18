@@ -131,20 +131,20 @@ public class EnvTests
 		}
 	}
 
-	private <T> T setContextAndTest(Properties ctx, String context, Class<T> type)
+	private <T> T setContextItemAndTest(Properties ctx, String context, Class<T> type)
 	{
 		final T value = nextValue(type, "Value_" + context);
 		if (type == String.class)
 		{
-			Env.setContext(ctx, context, (String)value);
+			Env.setContextItem(ctx, context, (String)value);
 		}
 		else if (type == int.class)
 		{
-			Env.setContext(ctx, context, (Integer)value);
+			Env.setContextItem(ctx, context, (Integer)value);
 		}
 		else if (type == Timestamp.class)
 		{
-			Env.setContext(ctx, context, (Timestamp)value);
+			Env.setContextItem(ctx, context, (Timestamp)value);
 		}
 		else
 		{
@@ -159,19 +159,19 @@ public class EnvTests
 	}
 
 	@SuppressWarnings("unchecked")
-	private <T> T getContext(Properties ctx, String context, Class<T> type)
+	private <T> T getContextItem(Properties ctx, String context, Class<T> type)
 	{
 		if (type == String.class)
 		{
-			return (T)Env.getContext(ctx, context);
+			return (T)Env.getContextItem(ctx, context);
 		}
 		else if (type == int.class)
 		{
-			return (T)(Integer)Env.getContextAsInt(ctx, context);
+			return (T)(Integer)Env.getContextItemAsInt(ctx, context);
 		}
 		else if (type == Timestamp.class)
 		{
-			return (T)Env.getContextAsDate(ctx, context);
+			return (T)Env.getContextItemAsDate(ctx, context);
 		}
 		else
 		{
@@ -181,7 +181,7 @@ public class EnvTests
 
 	private <T> void assertContextSet(final Properties ctx, String context, Class<T> type, T valueExpected)
 	{
-		final T valueActual = getContext(ctx, context, type);
+		final T valueActual = getContextItem(ctx, context, type);
 		final String message = "Invalid context value for " + context
 				+ "\n Context: " + ctx;
 		assertThat(valueActual).as(message).isEqualTo(valueExpected);
@@ -189,7 +189,7 @@ public class EnvTests
 
 	private void assertContextNotSet(final Properties ctx, final String context)
 	{
-		final String valueActual = Env.getContext(ctx, context);
+		final String valueActual = Env.getContextItem(ctx, context);
 		final String message = "Context value for " + context + " shall not be set"
 				+ "\n Context: " + ctx;
 		assertThat(valueActual).as(message).isSameAs(Env.CTXVALUE_NullString);
@@ -218,45 +218,45 @@ public class EnvTests
 		}
 	}
 
-	private <T> T setContextAndTest(Properties ctx, int WindowNo, String context, Class<T> type)
+	private <T> T setContextItemAndTest(Properties ctx, int WindowNo, String context, Class<T> type)
 	{
 		final T value = nextValue(type, "Value_window" + WindowNo + "_" + context);
 		if (type == String.class)
 		{
-			Env.setContext(ctx, WindowNo, context, (String)value);
+			Env.setContextItem(ctx, WindowNo, context, (String)value);
 		}
 		else if (type == int.class)
 		{
-			Env.setContext(ctx, WindowNo, context, (Integer)value);
+			Env.setContextItem(ctx, WindowNo, context, (Integer)value);
 		}
 		else if (type == Timestamp.class)
 		{
-			Env.setContext(ctx, WindowNo, context, (Timestamp)value);
+			Env.setContextItem(ctx, WindowNo, context, (Timestamp)value);
 		}
 		else
 		{
 			throw new RuntimeException("Type " + type + " not supported");
 		}
-		final T valueActual = getContext(ctx, WindowNo, context, type);
+		final T valueActual = getContextItem(ctx, WindowNo, context, type);
 		assertThat(valueActual).isEqualTo(value);
 
 		return value;
 	}
 
 	@SuppressWarnings("unchecked")
-	private <T> T getContext(Properties ctx, int WindowNo, String context, Class<T> type)
+	private <T> T getContextItem(Properties ctx, int WindowNo, String context, Class<T> type)
 	{
 		if (type == String.class)
 		{
-			return (T)Env.getContext(ctx, WindowNo, context);
+			return (T)Env.getContextItem(ctx, WindowNo, context);
 		}
 		else if (type == int.class)
 		{
-			return (T)(Integer)Env.getContextAsInt(ctx, WindowNo, context);
+			return (T)(Integer)Env.getContextItemAsInt(ctx, WindowNo, context);
 		}
 		else if (type == Timestamp.class)
 		{
-			return (T)Env.getContextAsDate(ctx, WindowNo, context);
+			return (T)Env.getContextItemAsDate(ctx, WindowNo, context);
 		}
 		else
 		{
@@ -265,19 +265,19 @@ public class EnvTests
 	}
 
 	@SuppressWarnings("unchecked")
-	private <T> T getContext(Properties ctx, int WindowNo, String context, boolean onlyWindow, Class<T> type)
+	private <T> T getContextItem(Properties ctx, int WindowNo, String context, boolean onlyWindow, Class<T> type)
 	{
 		if (type == String.class)
 		{
-			return (T)Env.getContext(ctx, WindowNo, context, onlyWindow);
+			return (T)Env.getContextItem(ctx, WindowNo, context, onlyWindow);
 		}
 		else if (type == int.class)
 		{
-			return (T)(Integer)Env.getContextAsInt(ctx, WindowNo, context, onlyWindow);
+			return (T)(Integer)Env.getContextItemAsInt(ctx, WindowNo, context, onlyWindow);
 		}
 		else if (type == Timestamp.class)
 		{
-			return (T)Env.getContextAsDate(ctx, WindowNo, context, onlyWindow);
+			return (T)Env.getContextItemAsDate(ctx, WindowNo, context, onlyWindow);
 		}
 		else
 		{
@@ -285,12 +285,12 @@ public class EnvTests
 		}
 	}
 
-	private <T> T setContextAndTest(Properties ctx, int WindowNo, int TabNo, String context, Class<T> type)
+	private <T> T setContextItemAndTest(Properties ctx, int WindowNo, int TabNo, String context, Class<T> type)
 	{
 		final T value = nextValue(type, "Value_window" + WindowNo + "_Tab" + TabNo + "_" + context);
 		if (type == String.class)
 		{
-			Env.setContext(ctx, WindowNo, TabNo, context, (String)value);
+			Env.setContextItem(ctx, WindowNo, TabNo, context, (String)value);
 		}
 		else if (type == int.class)
 		{
@@ -298,32 +298,32 @@ public class EnvTests
 		}
 		else if (type == Timestamp.class)
 		{
-			Env.setContextAsDate(ctx, WindowNo, TabNo, context, (Timestamp)value);
+			Env.setContextItemAsDate(ctx, WindowNo, TabNo, context, (Timestamp)value);
 		}
 		else
 		{
 			throw new RuntimeException("Type " + type + " not supported");
 		}
-		final T valueActual = getContext(ctx, WindowNo, TabNo, context, type);
+		final T valueActual = getContextItem(ctx, WindowNo, TabNo, context, type);
 		assertThat(valueActual).isEqualTo(value);
 
 		return value;
 	}
 
 	@SuppressWarnings("unchecked")
-	private <T> T getContext(Properties ctx, int WindowNo, int TabNo, String context, Class<T> type)
+	private <T> T getContextItem(Properties ctx, int WindowNo, int TabNo, String context, Class<T> type)
 	{
 		if (type == String.class)
 		{
-			return (T)Env.getContext(ctx, WindowNo, TabNo, context);
+			return (T)Env.getContextItem(ctx, WindowNo, TabNo, context);
 		}
 		else if (type == int.class)
 		{
-			return (T)(Integer)Env.getContextAsInt(ctx, WindowNo, TabNo, context);
+			return (T)(Integer)Env.getContextItemAsInt(ctx, WindowNo, TabNo, context);
 		}
 		else if (type == Timestamp.class)
 		{
-			return (T)Env.getContextAsDate(ctx, WindowNo, TabNo, context);
+			return (T)Env.getContextItemAsDate(ctx, WindowNo, TabNo, context);
 		}
 		else
 		{
@@ -332,19 +332,19 @@ public class EnvTests
 	}
 
 	@SuppressWarnings("unchecked")
-	private <T> T getContext(Properties ctx, int WindowNo, int TabNo, String context, boolean onlyTab, Class<T> type)
+	private <T> T getContextItem(Properties ctx, int WindowNo, int TabNo, String context, boolean onlyTab, Class<T> type)
 	{
 		if (type == String.class)
 		{
-			return (T)Env.getContext(ctx, WindowNo, TabNo, context, onlyTab);
+			return (T)Env.getContextItem(ctx, WindowNo, TabNo, context, onlyTab);
 		}
 		else if (type == int.class)
 		{
-			return (T)(Integer)Env.getContextAsInt(ctx, WindowNo, TabNo, context, onlyTab);
+			return (T)(Integer)Env.getContextItemAsInt(ctx, WindowNo, TabNo, context, onlyTab);
 		}
 		else if (type == Timestamp.class)
 		{
-			return (T)Env.getContextAsDate(ctx, WindowNo, TabNo, context, onlyTab);
+			return (T)Env.getContextItemAsDate(ctx, WindowNo, TabNo, context, onlyTab);
 		}
 		else
 		{
@@ -353,132 +353,132 @@ public class EnvTests
 	}
 
 	// Test: Env.getContext(ctx, WindowNo, context)
-	private <T> void testGetContext(T expectedValue, Properties ctx, int WindowNo, String context, Class<T> type)
+	private <T> void testGetContextItem(T expectedValue, Properties ctx, int WindowNo, String context, Class<T> type)
 	{
-		assertThat(getContext(ctx, WindowNo, context, type)).isEqualTo(expectedValue);
+		assertThat(getContextItem(ctx, WindowNo, context, type)).isEqualTo(expectedValue);
 
 		T defaultValue = defaultValue("Default_W" + WindowNo + "_" + context, type);
 		T expectedValue2 = Objects.equals(expectedValue, getNoValue(type)) ? defaultValue : expectedValue;
-		assertThat(getContext(ctx, WindowNo, name(context, defaultValue, type), type)).isEqualTo(expectedValue2);
+		assertThat(getContextItem(ctx, WindowNo, name(context, defaultValue, type), type)).isEqualTo(expectedValue2);
 	}
 
 	// Test: Env.getContext(ctx, WindowNo, TabNo, context);
-	private <T> void testGetContext(T expectedValue, Properties ctx, int WindowNo, int TabNo, String context, Class<T> type)
+	private <T> void testGetContextItem(T expectedValue, Properties ctx, int WindowNo, int TabNo, String context, Class<T> type)
 	{
-		assertThat(getContext(ctx, WindowNo, TabNo, context, type)).isEqualTo(expectedValue);
+		assertThat(getContextItem(ctx, WindowNo, TabNo, context, type)).isEqualTo(expectedValue);
 
 		T defaultValue = defaultValue("Default_W" + WindowNo + "_T" + TabNo + "_" + context, type);
 		T expectedValue2 = Objects.equals(expectedValue, getNoValue(type)) ? defaultValue : expectedValue;
-		assertThat(getContext(ctx, WindowNo, TabNo, name(context, defaultValue, type), type)).isEqualTo(expectedValue2);
+		assertThat(getContextItem(ctx, WindowNo, TabNo, name(context, defaultValue, type), type)).isEqualTo(expectedValue2);
 	}
 
 	// Test: Env.getContext(ctx, WindowNo, context, onlyWindow);
-	private <T> void testGetContext(T expectedValue, Properties ctx, int WindowNo, String context, boolean onlyWindow, Class<T> type)
+	private <T> void testGetContextItem(T expectedValue, Properties ctx, int WindowNo, String context, boolean onlyWindow, Class<T> type)
 	{
-		assertThat(getContext(ctx, WindowNo, context, onlyWindow, type)).isEqualTo(expectedValue);
+		assertThat(getContextItem(ctx, WindowNo, context, onlyWindow, type)).isEqualTo(expectedValue);
 
 		T defaultValue = defaultValue("DefaultValue_W" + WindowNo + "_" + context, type);
 		T expectedValue2 = Objects.equals(expectedValue, getNoValue(type)) ? defaultValue : expectedValue;
-		assertThat(getContext(ctx, WindowNo, name(context, defaultValue, type), onlyWindow, type)).isEqualTo(expectedValue2);
+		assertThat(getContextItem(ctx, WindowNo, name(context, defaultValue, type), onlyWindow, type)).isEqualTo(expectedValue2);
 	}
 
 	// Test: Env.getContext(ctx, WindowNo, TabNo, context, onlyTab);
-	private <T> void testGetContext(T expectedValue, Properties ctx, int WindowNo, int TabNo, String context, boolean onlyTab, Class<T> type)
+	private <T> void testGetContextItem(T expectedValue, Properties ctx, int WindowNo, int TabNo, String context, boolean onlyTab, Class<T> type)
 	{
-		assertThat(getContext(ctx, WindowNo, TabNo, context, onlyTab, type)).isEqualTo(expectedValue);
+		assertThat(getContextItem(ctx, WindowNo, TabNo, context, onlyTab, type)).isEqualTo(expectedValue);
 
 		T defaultValue = defaultValue("DefaultValue_W" + WindowNo + "_T" + TabNo + "_" + context, type);
 		T expectedValue2 = Objects.equals(expectedValue, getNoValue(type)) ? defaultValue : expectedValue;
-		assertThat(getContext(ctx, WindowNo, TabNo, name(context, defaultValue, type), onlyTab, type)).isEqualTo(expectedValue2);
+		assertThat(getContextItem(ctx, WindowNo, TabNo, name(context, defaultValue, type), onlyTab, type)).isEqualTo(expectedValue2);
 	}
 
 	private void testRemove(Properties ctx, String context)
 	{
-		Env.setContext(ctx, context, (String)null);
+		Env.setContextItem(ctx, context, (String)null);
 		assertContextNotSet(ctx, context);
 	}
 
 	private void testRemove(Properties ctx, int WindowNo, String context)
 	{
-		Env.setContext(ctx, WindowNo, context, (String)null);
+		Env.setContextItem(ctx, WindowNo, context, (String)null);
 		assertContextNotSet(ctx, WindowNo + "|" + context);
 	}
 
 	private void testRemove(Properties ctx, int WindowNo, int TabNo, String context)
 	{
-		Env.setContext(ctx, WindowNo, TabNo, context, (String)null);
+		Env.setContextItem(ctx, WindowNo, TabNo, context, (String)null);
 		assertContextNotSet(ctx, WindowNo + "|" + TabNo + "|" + context);
 	}
 
 	@SuppressWarnings("unused")
-	private <T> void testGetContext(Class<T> type)
+	private <T> void testGetContextItem(Class<T> type)
 	{
 		final Properties ctx = newContext();
-		final T vglobal1 = setContextAndTest(ctx, "#global1", type);
-		final T value1_global = setContextAndTest(ctx, "#name1", type);
-		final T value1_window1 = setContextAndTest(ctx, 1, "name1", type);
-		final T value1_window1_global = setContextAndTest(ctx, 1, "#name1", type);
-		final T value2_window1 = setContextAndTest(ctx, 1, "name2", type);
-		final T value1_window1_tab1 = setContextAndTest(ctx, 1, 1, "name1", type);
-		final T value1_window1_tab2 = setContextAndTest(ctx, 1, 2, "name1", type);
-		final T value1_window1_tabInfo = setContextAndTest(ctx, 1, Env.TAB_INFO, "name1", type);
+		final T vglobal1 = setContextItemAndTest(ctx, "#global1", type);
+		final T value1_global = setContextItemAndTest(ctx, "#name1", type);
+		final T value1_window1 = setContextItemAndTest(ctx, 1, "name1", type);
+		final T value1_window1_global = setContextItemAndTest(ctx, 1, "#name1", type);
+		final T value2_window1 = setContextItemAndTest(ctx, 1, "name2", type);
+		final T value1_window1_tab1 = setContextItemAndTest(ctx, 1, 1, "name1", type);
+		final T value1_window1_tab2 = setContextItemAndTest(ctx, 1, 2, "name1", type);
+		final T value1_window1_tabInfo = setContextItemAndTest(ctx, 1, Env.TAB_INFO, "name1", type);
 
 		//
 		// Test: Env.getContext(ctx, WindowNo, context)
-		testGetContext(value1_global, ctx, 2, "name1", type);
-		testGetContext(vglobal1, ctx, 2, "global1", type);
+		testGetContextItem(value1_global, ctx, 2, "name1", type);
+		testGetContextItem(vglobal1, ctx, 2, "global1", type);
 
 		//
 		// Test: Env.getContext(ctx, WindowNo, TabNo, context);
-		testGetContext(value1_window1_tab1, ctx, 1, 1, "name1", type);
-		testGetContext(value1_window1, ctx, 1, 3, "name1", type);
-		testGetContext(value1_window1_tabInfo, ctx, 1, Env.TAB_INFO, "name1", type);
-		testGetContext(vglobal1, ctx, 1, 3, "global1", type);
+		testGetContextItem(value1_window1_tab1, ctx, 1, 1, "name1", type);
+		testGetContextItem(value1_window1, ctx, 1, 3, "name1", type);
+		testGetContextItem(value1_window1_tabInfo, ctx, 1, Env.TAB_INFO, "name1", type);
+		testGetContextItem(vglobal1, ctx, 1, 3, "global1", type);
 
 		//
 		// Test: Env.getContext(ctx, WindowNo, context, onlyWindow);
-		testGetContext(value1_window1, ctx, 1, "name1", false, type);
-		testGetContext(value1_window1, ctx, 1, "name1", true, type);
-		testGetContext(vglobal1, ctx, 1, "global1", false, type);
+		testGetContextItem(value1_window1, ctx, 1, "name1", false, type);
+		testGetContextItem(value1_window1, ctx, 1, "name1", true, type);
+		testGetContextItem(vglobal1, ctx, 1, "global1", false, type);
 		if (type != Timestamp.class) // TODO: following method returns current timestamp:
 		{
-			testGetContext(getNoValue(type), ctx, 1, "global1", true, type);
+			testGetContextItem(getNoValue(type), ctx, 1, "global1", true, type);
 		}
 
 		//
 		// Test: Env.getContext(ctx, WindowNo, TabNo, context, onlyTab);
-		testGetContext(value1_window1_tab1, ctx, 1, 1, "name1", false, type);
-		testGetContext(value1_window1_tab1, ctx, 1, 1, "name1", true, type);
-		testGetContext(value1_window1_tab2, ctx, 1, 2, "name1", false, type);
-		testGetContext(value1_window1_tab2, ctx, 1, 2, "name1", true, type);
-		testGetContext(value1_window1, ctx, 1, 3, "name1", false, type);
+		testGetContextItem(value1_window1_tab1, ctx, 1, 1, "name1", false, type);
+		testGetContextItem(value1_window1_tab1, ctx, 1, 1, "name1", true, type);
+		testGetContextItem(value1_window1_tab2, ctx, 1, 2, "name1", false, type);
+		testGetContextItem(value1_window1_tab2, ctx, 1, 2, "name1", true, type);
+		testGetContextItem(value1_window1, ctx, 1, 3, "name1", false, type);
 		if (type != Timestamp.class) // TODO: following method returns current timestamp:
 		{
-			testGetContext(getNoValue(type), ctx, 1, 3, "name1", true, type);
-			testGetContext(getNoValue(type), ctx, 1, Env.TAB_INFO, "name2", false, type);
-			testGetContext(getNoValue(type), ctx, 1, Env.TAB_INFO, "name2", true, type);
-			testGetContext(getNoValue(type), ctx, 1, 3, "global1", true, type);
+			testGetContextItem(getNoValue(type), ctx, 1, 3, "name1", true, type);
+			testGetContextItem(getNoValue(type), ctx, 1, Env.TAB_INFO, "name2", false, type);
+			testGetContextItem(getNoValue(type), ctx, 1, Env.TAB_INFO, "name2", true, type);
+			testGetContextItem(getNoValue(type), ctx, 1, 3, "global1", true, type);
 		}
-		testGetContext(value1_window1_tabInfo, ctx, 1, Env.TAB_INFO, "name1", false, type);
-		testGetContext(value1_window1_tabInfo, ctx, 1, Env.TAB_INFO, "name1", true, type);
-		testGetContext(vglobal1, ctx, 1, 3, "global1", false, type);
+		testGetContextItem(value1_window1_tabInfo, ctx, 1, Env.TAB_INFO, "name1", false, type);
+		testGetContextItem(value1_window1_tabInfo, ctx, 1, Env.TAB_INFO, "name1", true, type);
+		testGetContextItem(vglobal1, ctx, 1, 3, "global1", false, type);
 
 		//
 		// Test: explicit global (window level)
-		testGetContext(vglobal1, ctx, 1, "#global1", false, type);
-		testGetContext(vglobal1, ctx, 1, "#global1", true, type);
-		testGetContext(value1_window1_global, ctx, 1, "#name1", false, type);
-		testGetContext(value1_window1_global, ctx, 1, "#name1", true, type);
+		testGetContextItem(vglobal1, ctx, 1, "#global1", false, type);
+		testGetContextItem(vglobal1, ctx, 1, "#global1", true, type);
+		testGetContextItem(value1_window1_global, ctx, 1, "#name1", false, type);
+		testGetContextItem(value1_window1_global, ctx, 1, "#name1", true, type);
 
 		//
 		// Test: explicit global (tab level)
-		testGetContext(vglobal1, ctx, 1, 1, "#global1", false, type);
+		testGetContextItem(vglobal1, ctx, 1, 1, "#global1", false, type);
 
 		// TODO: fails because on tab level, explicit global is not supported. Is this a bug?
 		// testGetContext("vglobal1", Env.getContext(ctx, 1, 1, "#global1", true, type);
 		if (type != Timestamp.class) // TODO: following method returns current timestamp:
 		{
-			testGetContext(getNoValue(type), ctx, 1, 1, "#global1", true, type);
+			testGetContextItem(getNoValue(type), ctx, 1, 1, "#global1", true, type);
 		}
 
 		//
@@ -497,9 +497,9 @@ public class EnvTests
 		// Test org.compiere.util.Env.setContext(Properties, int, int, String, String)
 		// which is not removing the key in case value is null (like other methods do)
 		// but instead is setting the value to "" or 0 (if context ends with _ID)
-		Env.setContext(ctx, 10, 10, "TestName", (String)null);
+		Env.setContextItem(ctx, 10, 10, "TestName", (String)null);
 		assertThat(ctx.get("10|10|TestName")).isEqualTo("");
-		Env.setContext(ctx, 10, 10, "TestName_ID", (String)null);
+		Env.setContextItem(ctx, 10, 10, "TestName_ID", (String)null);
 		assertThat(ctx.get("10|10|TestName_ID")).isEqualTo("0");
 	}
 
@@ -508,7 +508,7 @@ public class EnvTests
 	{
 		for (Class<?> type : new Class<?>[] { String.class, int.class, Timestamp.class })
 		{
-			testGetContext(type);
+			testGetContextItem(type);
 		}
 	}
 
@@ -517,7 +517,7 @@ public class EnvTests
 	{
 		final Properties ctx = newContext();
 		final int windowNo = 1234;
-		Env.setContext(ctx, windowNo, "C_BPartner_ID", "100");
+		Env.setContextItem(ctx, windowNo, "C_BPartner_ID", "100");
 
 		final String sql = "@NotExistingField_ID/13@=13" +
 				" AND C_BPartner_Location.C_BPartner_ID=@C_BPartner_ID/-1@" +
@@ -538,7 +538,7 @@ public class EnvTests
 		assertThat(Env.parseContext(ctx, 999999, sql, false)) // onlyWindow=false
 				.isEqualTo(sqlParsed2);
 
-		Env.setContext(ctx, "#NotExistingField_ID", "112233");
+		Env.setContextItem(ctx, "#NotExistingField_ID", "112233");
 		final String sqlParsed3 = "112233=13" +
 				" AND C_BPartner_Location.C_BPartner_ID=100" +
 				" AND C_BPartner_Location.IsShipTo='Y'" +
@@ -551,8 +551,8 @@ public class EnvTests
 	public void test_Env_globalVarsWithoutHash()
 	{
 		final Properties ctx = newContext();
-		Env.setContext(ctx, "Login.RememberMe", true);
-		assertThat(Env.getContext(ctx, "Login.RememberMe"))
+		Env.setContextItem(ctx, "Login.RememberMe", true);
+		assertThat(Env.getContextItem(ctx, "Login.RememberMe"))
 				.as("Login.RememberMe should be Yes")
 				.isEqualTo("Y");
 	}
@@ -562,16 +562,16 @@ public class EnvTests
 	{
 		final Properties ctxParent = newContext();
 		assertDefaults(ctxParent, null); // no defaults
-		Env.setContext(ctxParent, Env.CTXNAME_AD_Client_ID, 1);
-		Env.setContext(ctxParent, Env.CTXNAME_AD_Org_ID, 2);
-		Env.setContext(ctxParent, Env.CTXNAME_AD_User_ID, 3);
-		Env.setContext(ctxParent, Env.CTXNAME_AD_Role_ID, 4);
-		Env.setContext(ctxParent, "DummyNotGlobal1", "DummyNotGlobal1_Value");
+		Env.setContextItem(ctxParent, Env.CTXNAME_AD_Client_ID, 1);
+		Env.setContextItem(ctxParent, Env.CTXNAME_AD_Org_ID, 2);
+		Env.setContextItem(ctxParent, Env.CTXNAME_AD_User_ID, 3);
+		Env.setContextItem(ctxParent, Env.CTXNAME_AD_Role_ID, 4);
+		Env.setContextItem(ctxParent, "DummyNotGlobal1", "DummyNotGlobal1_Value");
 
 		final Properties ctx = newContext(ctxParent);
 		assertDefaults(ctx, ctxParent);
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, 10); // override the AD_Client_ID
-		Env.setContext(ctx, "DummyNotGlobal2", "DummyNotGlobal2_Value");
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, 10); // override the AD_Client_ID
+		Env.setContextItem(ctx, "DummyNotGlobal2", "DummyNotGlobal2_Value");
 
 		// Create the light context which includes only global properties
 		final Properties ctxLight = Env.getRemoteCallCtx(ctx);

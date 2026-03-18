@@ -255,7 +255,7 @@ public class MClick extends X_W_Click
 	public static void main (String[] args)
 	{
 		Adempiere.startup(true);
-		Env.setContext(Env.getCtx(), "#AD_Client_ID", 1000000);
+		Env.setContextItem(Env.getCtx(), "#AD_Client_ID", 1000000);
 		MClick[] clicks = getUnprocessed(Env.getCtx());
 		int counter = 0;
 		for (int i = 0; i < clicks.length; i++)

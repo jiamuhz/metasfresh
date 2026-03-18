@@ -97,7 +97,7 @@ public class MBPartner extends X_C_BPartner
 		//
 		if (C_BPartner_ID == -1)
 		{
-			initTemplate(Env.getContextAsInt(ctx, "AD_Client_ID"));
+			initTemplate(Env.getContextItemAsInt(ctx, "AD_Client_ID"));
 			C_BPartner_ID = 0;
 		}
 		if (C_BPartner_ID == 0)

@@ -471,19 +471,19 @@ public class HUTestHelper
 		// Setup context: #AD_Client_ID
 		adClient = InterfaceWrapperHelper.create(ctx, I_AD_Client.class, ITrx.TRXNAME_None);
 		InterfaceWrapperHelper.save(adClient);
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, adClient.getAD_Client_ID());
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, adClient.getAD_Client_ID());
 
 		//
 		// Setup context: #AD_Role_ID
 		adRole = InterfaceWrapperHelper.create(ctx, I_AD_Role.class, ITrx.TRXNAME_None);
 		adRole.setName("TestRole");
 		InterfaceWrapperHelper.save(adRole);
-		Env.setContext(ctx, Env.CTXNAME_AD_Role_ID, adRole.getAD_Role_ID());
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Role_ID, adRole.getAD_Role_ID());
 
 		//
 		// Setup context: #Date
 		today = LocalDate.of(2013, Month.NOVEMBER, 1).atStartOfDay(SystemTime.zoneId());
-		Env.setContext(ctx, Env.CTXNAME_Date, TimeUtil.asDate(today));
+		Env.setContextItem(ctx, Env.CTXNAME_Date, TimeUtil.asDate(today));
 		
 		//
 		// Setup module interceptors
@@ -1831,7 +1831,7 @@ public class HUTestHelper
 		Check.assume(Adempiere.isUnitTestMode(), "This method shall be executed only in JUnit test mode");
 
 		final IMutableHUContext huContext = getHUContext();
-		final ZonedDateTime date = TimeUtil.asZonedDateTime(Env.getContextAsDate(Env.getCtx(), "#Date")); // FIXME use context date for now
+		final ZonedDateTime date = TimeUtil.asZonedDateTime(Env.getContextItemAsDate(Env.getCtx(), "#Date")); // FIXME use context date for now
 
 		final IAllocationSource source = HUListAllocationSourceDestination.of(sourceHUs);
 
@@ -1865,7 +1865,7 @@ public class HUTestHelper
 		Check.assume(Adempiere.isUnitTestMode(), "This method shall be executed only in JUnit test mode");
 
 		final IMutableHUContext huContext = getHUContext();
-		final ZonedDateTime date = TimeUtil.asZonedDateTime(Env.getContextAsDate(Env.getCtx(), "#Date")); // FIXME use context date for now
+		final ZonedDateTime date = TimeUtil.asZonedDateTime(Env.getContextItemAsDate(Env.getCtx(), "#Date")); // FIXME use context date for now
 
 		final IAllocationSource source = HUListAllocationSourceDestination.of(sourceHUs);
 		final HUProducerDestination destination = HUProducerDestination.of(destinationHuPI);

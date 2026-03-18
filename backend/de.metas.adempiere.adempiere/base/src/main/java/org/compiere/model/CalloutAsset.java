@@ -30,7 +30,7 @@ public class CalloutAsset extends CalloutEngine
 		if (value == null || isCalloutActive())
 			return "";
 
-		int AD_Client_ID = Env.getContextAsInt(ctx, WindowNo, "AD_Client_ID");
+		int AD_Client_ID = Env.getContextItemAsInt(ctx, WindowNo, "AD_Client_ID");
 		Timestamp DateAcct = null;
 		if (colName.equals("DateAcct"))
 			DateAcct = (Timestamp)value;

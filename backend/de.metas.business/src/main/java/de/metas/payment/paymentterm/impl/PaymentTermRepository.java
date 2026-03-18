@@ -100,7 +100,7 @@ public class PaymentTermRepository implements IPaymentTermRepository
 	@Override
 	public Optional<PaymentTermId> getDefaultPaymentTermId()
 	{
-		final int contextPaymentTerm = Env.getContextAsInt(Env.getCtx(), "#C_PaymentTerm_ID");
+		final int contextPaymentTerm = Env.getContextItemAsInt(Env.getCtx(), "#C_PaymentTerm_ID");
 		if (contextPaymentTerm > 0)
 		{
 			return Optional.of(PaymentTermId.ofRepoId(contextPaymentTerm));

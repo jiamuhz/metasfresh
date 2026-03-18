@@ -170,11 +170,11 @@ public class MADBoilerPlateVar extends X_AD_BoilerPlate_Var
 				if (token.endsWith("_ID"))
 				{
 					// metas-ts; 01950: the token ends with _ID, so we assume an int value
-					tokenValue = Env.getContextAsInt(ctx, windowNo, token, false);
+					tokenValue = Env.getContextItemAsInt(ctx, windowNo, token, false);
 				}
 				else
 				{
-					tokenValue = Env.getContext(ctx, windowNo, token, false);
+					tokenValue = Env.getContextItem(ctx, windowNo, token, false);
 				}
 			}
 			if ((tokenValue == null || tokenValue.toString().length() == 0) && (token.startsWith("#") || token.startsWith("$")))
@@ -183,11 +183,11 @@ public class MADBoilerPlateVar extends X_AD_BoilerPlate_Var
 				if (token.endsWith("_ID"))
 				{
 					// metas-ts; 01950: the token ends with _ID, so we assume an int value
-					tokenValue = Env.getContextAsInt(ctx, token);
+					tokenValue = Env.getContextItemAsInt(ctx, token);
 				}
 				else
 				{
-					tokenValue = Env.getContext(ctx, token);
+					tokenValue = Env.getContextItem(ctx, token);
 				}
 			}
 			if (tokenValue == null || tokenValue.toString().length() == 0)

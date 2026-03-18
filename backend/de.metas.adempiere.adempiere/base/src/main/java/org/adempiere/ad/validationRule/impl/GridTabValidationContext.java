@@ -45,7 +45,7 @@ public class GridTabValidationContext implements IValidationContext
 		this.tabNo = tabNo;
 		this.tableName = tableName;
 
-		final int contextTableId = Env.getContextAsInt(ctx, windowNo, tabNo, GridTab.CTX_AD_Table_ID, true);
+		final int contextTableId = Env.getContextItemAsInt(ctx, windowNo, tabNo, GridTab.CTX_AD_Table_ID, true);
 		if (contextTableId <= 0)
 		{
 			this.contextTableName = null;
@@ -69,7 +69,7 @@ public class GridTabValidationContext implements IValidationContext
 	}
 
 	/**
-	 * Gets the context value for the given {@code variableName} by calling {@link Env#getContext(Properties, int, int, String, Scope)} with {@link Scope#Window}.
+	 * Gets the context value for the given {@code variableName} by calling {@link Env#getContextItem(Properties, int, int, String, Scope)} with {@link Scope#Window}.
 	 */
 	@Override
 	public String get_ValueAsString(final String variableName)
@@ -82,7 +82,7 @@ public class GridTabValidationContext implements IValidationContext
 		}
 
 		// only checking the window scope; global scope might contain default values (e.g. #C_DocTypeTarget_ID) that might confuse a validation rule
-		final String value = Env.getContext(ctx, windowNo, tabNo, variableName, Scope.Window);
+		final String value = Env.getContextItem(ctx, windowNo, tabNo, variableName, Scope.Window);
 		if (Env.isNumericPropertyName(variableName) && Env.isPropertyValueNull(variableName, value))
 		{
 			// Because empty fields are not exported in context, even if they are present in Tab

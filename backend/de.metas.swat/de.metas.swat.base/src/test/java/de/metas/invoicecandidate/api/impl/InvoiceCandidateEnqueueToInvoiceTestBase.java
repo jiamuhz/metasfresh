@@ -163,7 +163,7 @@ abstract class InvoiceCandidateEnqueueToInvoiceTestBase
 		user.setAD_User_ID(0);
 		user.setNotificationType(X_AD_User.NOTIFICATIONTYPE_Notice);
 		InterfaceWrapperHelper.save(user);
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_User_ID, user.getAD_User_ID());
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_User_ID, user.getAD_User_ID());
 
 		//
 		// Process all workpackages synchronously

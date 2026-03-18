@@ -55,7 +55,7 @@ public class ValuePreferenceDAO implements IValuePreferenceDAO
 
 		final String contextName = getContextKey(preference);
 		InterfaceWrapperHelper.delete(preference);
-		Env.setContext(ctx, contextName, (String)null);
+		Env.setContextItem(ctx, contextName, (String)null);
 		return true;
 	}
 
@@ -81,7 +81,7 @@ public class ValuePreferenceDAO implements IValuePreferenceDAO
 
 		preference.setValue(valueStr);
 		InterfaceWrapperHelper.save(preference);
-		Env.setContext(ctx, getContextKey(preference), valueStr);
+		Env.setContextItem(ctx, getContextKey(preference), valueStr);
 	}
 
 	private I_AD_Preference fetch(final Properties ctx, final String attribute, final int adClientId, final int adOrgId, final int adUserId, final int adWindowId)

@@ -64,8 +64,8 @@ public class InvoiceBLTest
 		SpringContextHolder.registerJUnitBean(new OrderEmailPropagationSysConfigRepository(sysConfigBL));
 
 		final Properties ctx = Env.getCtx();
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, 1);
-		Env.setContext(ctx, Env.CTXNAME_AD_Language, "de_CH");
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, 1);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Language, "de_CH");
 
 		invoiceBL = Services.get(IInvoiceBL.class);
 	}

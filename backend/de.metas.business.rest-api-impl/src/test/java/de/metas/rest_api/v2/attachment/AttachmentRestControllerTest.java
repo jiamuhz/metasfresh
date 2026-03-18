@@ -59,7 +59,7 @@ public class AttachmentRestControllerTest
 	void init()
 	{
 		AdempiereTestHelper.get().init();
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_User_ID, 10); // will be in the attachment-entry's CreatedUpdatedInfo
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_User_ID, 10); // will be in the attachment-entry's CreatedUpdatedInfo
 
 		queryBL = Services.get(IQueryBL.class);
 

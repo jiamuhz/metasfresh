@@ -142,7 +142,7 @@ public class Page
 	 */
 	public void paint (Graphics2D g2D, Rectangle bounds, boolean isView, boolean isCopy)
 	{
-		Env.setContext(m_ctx, CONTEXT_PAGE, m_pageInfo);
+		Env.setContextItem(m_ctx, CONTEXT_PAGE, m_pageInfo);
 	//	log.trace( "PrintContext", CONTEXT_PAGE + "=" + m_pageInfo);
 		//
 		StringBuffer sb = new StringBuffer();
@@ -153,7 +153,7 @@ public class Page
 				.append(m_pageCount);
 		else
 			sb.append(" ");
-		Env.setContext(m_ctx, CONTEXT_MULTIPAGE, sb.toString());
+		Env.setContextItem(m_ctx, CONTEXT_MULTIPAGE, sb.toString());
 	//	log.trace( "PrintContext", CONTEXT_MULTIPAGE + "=" + sb.toString());
 		//
 		sb = new StringBuffer();
@@ -163,7 +163,7 @@ public class Page
 				.append(")");
 		else
 			sb.append(" ");
-		Env.setContext(m_ctx, CONTEXT_COPY, sb.toString());
+		Env.setContextItem(m_ctx, CONTEXT_COPY, sb.toString());
 	//	log.trace( "PrintContext copy=" + isCopy, CONTEXT_COPY + "=" + sb.toString());
 
 		//	Paint Background

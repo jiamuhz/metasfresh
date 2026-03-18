@@ -200,8 +200,8 @@ public class ArchiveBL implements IArchiveBL
 			return request.getCtx();
 		}
 		final Properties ctxToUse = Env.deriveCtx(request.getCtx());
-		Env.setContext(ctxToUse, Env.CTXNAME_AD_Client_ID, record.getAD_Client_ID());
-		Env.setContext(ctxToUse, Env.CTXNAME_AD_Org_ID, record.getAD_Org_ID());
+		Env.setContextItem(ctxToUse, Env.CTXNAME_AD_Client_ID, record.getAD_Client_ID());
+		Env.setContextItem(ctxToUse, Env.CTXNAME_AD_Org_ID, record.getAD_Org_ID());
 		// setClientOrg(archivedPO);
 
 		return ctxToUse;

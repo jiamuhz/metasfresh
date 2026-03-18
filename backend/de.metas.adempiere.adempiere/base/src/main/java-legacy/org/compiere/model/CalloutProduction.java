@@ -45,10 +45,10 @@ public class CalloutProduction extends CalloutEngine
 		if (M_Product_ID == null || M_Product_ID.intValue() == 0)
 			return "";
 		//	Set Attribute
-		if (Env.getContextAsInt(ctx, WindowNo, Env.TAB_INFO, "M_Product_ID") == M_Product_ID.intValue()
-			&& Env.getContextAsInt(ctx, WindowNo, Env.TAB_INFO, "M_AttributeSetInstance_ID") != 0)
+		if (Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "M_Product_ID") == M_Product_ID.intValue()
+			&& Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "M_AttributeSetInstance_ID") != 0)
 		{
-			mTab.setValue("M_AttributeSetInstance_ID", new Integer(Env.getContextAsInt(ctx, WindowNo, Env.TAB_INFO, "M_AttributeSetInstance_ID")));
+			mTab.setValue("M_AttributeSetInstance_ID", new Integer(Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "M_AttributeSetInstance_ID")));
 		}
 		else
 		{

@@ -40,7 +40,7 @@ public interface IProcessDefaultParameter
 	String getColumnName();
 
 	/**
-	 * Do something like invoking {@link Env#getContextAsInt(java.util.Properties, int, String)} with the caller's {@code ctx} and {@code WindowNo}.
+	 * Do something like invoking {@link Env#getContextItemAsInt(java.util.Properties, int, String)} with the caller's {@code ctx} and {@code WindowNo}.
 	 * 
 	 * @param name
 	 * @return

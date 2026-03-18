@@ -47,7 +47,7 @@ public class EnvContext implements IContext
 		if (Context.CTX_SessionId.equals(name))
 		{
 			final Properties ctx = Env.getCtx();
-			return Env.getContext(ctx, Env.CTXNAME_AD_Session_ID);
+			return Env.getContextItem(ctx, Env.CTXNAME_AD_Session_ID);
 		}
 
 		return null;

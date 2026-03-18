@@ -285,26 +285,26 @@ public final class Evaluatees
 		@Override
 		public String get_ValueAsString(final String variableName)
 		{
-			return Env.getContext(ctx, windowNo, variableName, onlyWindow);
+			return Env.getContextItem(ctx, windowNo, variableName, onlyWindow);
 		}
 
 		@Override
 		public Integer get_ValueAsInt(final String variableName, final Integer defaultValue)
 		{
-			return Env.getContextAsInt(ctx, windowNo, variableName, onlyWindow);
+			return Env.getContextItemAsInt(ctx, windowNo, variableName, onlyWindow);
 		}
 
 		@Override
 		public Date get_ValueAsDate(final String variableName, final Date defaultValue)
 		{
-			return Env.getContextAsDate(ctx, windowNo, variableName, onlyWindow);
+			return Env.getContextItemAsDate(ctx, windowNo, variableName, onlyWindow);
 		}
 
 		@Nullable
 		@Override
 		public <T> T get_ValueAsObject(final String variableName)
 		{
-			final String value = Env.getContext(ctx, windowNo, variableName, onlyWindow);
+			final String value = Env.getContextItem(ctx, windowNo, variableName, onlyWindow);
 			if (Env.isPropertyValueNull(variableName, value))
 			{
 				return null;

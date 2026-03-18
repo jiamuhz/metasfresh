@@ -223,7 +223,7 @@ public class MFSession
 
 		if (ctxToUpdate != null)
 		{
-			Env.setContext(ctxToUpdate, CTX_Prefix + I_AD_Session.COLUMNNAME_HostKey, hostKey); // now this should also solve gh #1314
+			Env.setContextItem(ctxToUpdate, CTX_Prefix + I_AD_Session.COLUMNNAME_HostKey, hostKey); // now this should also solve gh #1314
 		}
 	}
 
@@ -305,13 +305,13 @@ public class MFSession
 		// If not force, update the context only if the context #AD_Session_ID is same as our session ID.
 		// Even if there is no value in context, the session won't be updated.
 		// Keep this logic because we are calling this method on afterSave too.
-		final int ctxSessionId = Env.getContextAsInt(ctx, Env.CTXNAME_AD_Session_ID);
+		final int ctxSessionId = Env.getContextItemAsInt(ctx, Env.CTXNAME_AD_Session_ID);
 		if (ctxSessionId > 0 && ctxSessionId != sessionId)
 		{
 			log.debug("Different AD_Session_ID found in context and force=false.");
 		}
 
-		Env.setContext(ctx, Env.CTXNAME_AD_Session_ID, sessionId);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Session_ID, sessionId);
 
 		final PO po = InterfaceWrapperHelper.getStrictPO(sessionPO);
 		final int cols = po.get_ColumnCount();
@@ -323,7 +323,7 @@ public class MFSession
 			}
 			final String columnName = po.get_ColumnName(i);
 			final String value = po.get_ValueAsString(columnName);
-			Env.setContext(ctx, CTX_Prefix + columnName, value);
+			Env.setContextItem(ctx, CTX_Prefix + columnName, value);
 		}
 
 		return true;

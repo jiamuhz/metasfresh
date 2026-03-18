@@ -30,7 +30,7 @@ public class AttachmentEntryServiceTest
 	public void init()
 	{
 		AdempiereTestHelper.get().init();
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_User_ID, 10); // will be in the attachment-entry's CreatedUpdatedInfo
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_User_ID, 10); // will be in the attachment-entry's CreatedUpdatedInfo
 
 		bpartnerRecord = newInstance(I_C_BPartner.class);
 		saveRecord(bpartnerRecord);

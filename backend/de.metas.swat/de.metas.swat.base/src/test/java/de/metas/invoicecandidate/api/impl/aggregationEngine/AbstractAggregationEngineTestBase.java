@@ -90,8 +90,8 @@ public abstract class AbstractAggregationEngineTestBase extends AbstractICTestSu
 	public void init()
 	{
 		final Properties ctx = Env.getCtx();
-		Env.setContext(ctx, Env.CTXNAME_AD_Client_ID, 1);
-		Env.setContext(ctx, Env.CTXNAME_AD_Language, "de_CH");
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Client_ID, 1);
+		Env.setContextItem(ctx, Env.CTXNAME_AD_Language, "de_CH");
 
 		manualHandler = InterfaceWrapperHelper.newInstance(I_C_ILCandHandler.class);
 		manualHandler.setTableName(ManualCandidateHandler.MANUAL);

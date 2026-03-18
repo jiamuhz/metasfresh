@@ -50,12 +50,12 @@ public class LogicExpressionCompilerTests
 		final Properties ctx = Env.getCtx();
 		if (adClientId < 0)
 		{
-			Env.setContext(ctx, "#AD_Client_ID", "");
+			Env.setContextItem(ctx, "#AD_Client_ID", "");
 			expectedClientId = 0;
 		}
 		else
 		{
-			Env.setContext(Env.getCtx(), "#AD_Client_ID", adClientId);
+			Env.setContextItem(Env.getCtx(), "#AD_Client_ID", adClientId);
 			expectedClientId = adClientId;
 		}
 

@@ -1132,7 +1132,7 @@ public final class DocumentFieldDescriptor
 			{
 				addOldValueToContextConsumer = value -> {
 					final int repoId = ((LookupValue.IntegerLookupValue)value).getIdAsInt();
-					Env.setContext(Env.getCtx(), lastValueCtxName, repoId);
+					Env.setContextItem(Env.getCtx(), lastValueCtxName, repoId);
 				};
 			}
 			else

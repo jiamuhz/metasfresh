@@ -47,7 +47,6 @@ import de.metas.inout.location.adapter.InOutDocumentLocationAdapterFactory;
 import de.metas.invoice.matchinv.MatchInvType;
 import de.metas.invoice.matchinv.service.MatchInvoiceService;
 import de.metas.invoice.service.IInvoiceDAO;
-import de.metas.invoice.service.impl.InvoiceDAO;
 import de.metas.logging.LogManager;
 import de.metas.materialtransaction.IMTransactionDAO;
 import de.metas.order.DeliveryRule;
@@ -2530,7 +2529,7 @@ public class MInOut extends X_M_InOut implements IDocument
 	@Override
 	public int getC_Currency_ID()
 	{
-		return Env.getContextAsInt(getCtx(), "$C_Currency_ID");
+		return Env.getContextItemAsInt(getCtx(), "$C_Currency_ID");
 	} // getC_Currency_ID
 
 	/**

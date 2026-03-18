@@ -78,7 +78,7 @@ public class HUMovementGeneratorTests
 		org = InterfaceWrapperHelper.newInstance(I_AD_Org.class);
 		InterfaceWrapperHelper.save(org);
 
-		Env.setContext(testsupport.helper.ctx, Env.CTXNAME_AD_Org_ID, org.getAD_Org_ID());
+		Env.setContextItem(testsupport.helper.ctx, Env.CTXNAME_AD_Org_ID, org.getAD_Org_ID());
 
 		Services.registerService(IProductActivityProvider.class, ProductActivityProvider.createInstanceForUnitTesting());
 	}

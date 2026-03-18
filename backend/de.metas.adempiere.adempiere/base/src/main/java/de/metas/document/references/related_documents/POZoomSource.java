@@ -191,11 +191,11 @@ public final class POZoomSource implements IZoomSource
 
 			if (val instanceof Integer)
 			{
-				Env.setContext(privateCtx, "#" + po.get_ColumnName(i), (Integer)val);
+				Env.setContextItem(privateCtx, "#" + po.get_ColumnName(i), (Integer)val);
 			}
 			else if (val instanceof String)
 			{
-				Env.setContext(privateCtx, "#" + po.get_ColumnName(i), (String)val);
+				Env.setContextItem(privateCtx, "#" + po.get_ColumnName(i), (String)val);
 			}
 		}
 

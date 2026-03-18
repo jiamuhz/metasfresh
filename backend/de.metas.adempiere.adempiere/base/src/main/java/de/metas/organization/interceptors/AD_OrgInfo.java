@@ -50,6 +50,6 @@ public class AD_OrgInfo
 		final OrgInfo orgInfo = OrgDAO.toOrgInfo(orgInfoRecord);
 		final StoreCreditCardNumberMode ccStoreMode = orgInfo.getStoreCreditCardNumberMode();
 
-		Env.setContext(Env.getCtx(), Env.CTXNAME_StoreCreditCardData, ccStoreMode.getCode());
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_StoreCreditCardData, ccStoreMode.getCode());
 	}
 }

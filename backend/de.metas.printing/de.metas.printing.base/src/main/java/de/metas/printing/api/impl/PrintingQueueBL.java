@@ -111,8 +111,8 @@ public class PrintingQueueBL implements IPrintingQueueBL
 		try (final MDC.MDCCloseable ignore = TableRecordMDC.putTableRecordReference(archiveRecord))
 		{
 			final Properties localCtx = Env.deriveCtx(InterfaceWrapperHelper.getCtx(archiveRecord));
-			Env.setContext(localCtx, Env.CTXNAME_AD_Client_ID, archiveRecord.getAD_Client_ID());
-			Env.setContext(localCtx, Env.CTXNAME_AD_Org_ID, archiveRecord.getAD_Org_ID());
+			Env.setContextItem(localCtx, Env.CTXNAME_AD_Client_ID, archiveRecord.getAD_Client_ID());
+			Env.setContextItem(localCtx, Env.CTXNAME_AD_Org_ID, archiveRecord.getAD_Org_ID());
 
 			final String trxName = InterfaceWrapperHelper.getTrxName(archiveRecord);
 

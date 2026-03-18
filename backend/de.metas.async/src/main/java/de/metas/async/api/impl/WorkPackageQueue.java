@@ -201,8 +201,8 @@ public class WorkPackageQueue implements IWorkPackageQueue
 		// AD_Client_ID/AD_Org_ID
 		final ClientId clientId = ClientId.ofRepoId(workPackage.getAD_Client_ID());
 		final OrgId orgId = OrgId.ofRepoId(workPackage.getAD_Org_ID());
-		Env.setContext(workPackageCtx, Env.CTXNAME_AD_Client_ID, clientId.getRepoId());
-		Env.setContext(workPackageCtx, Env.CTXNAME_AD_Org_ID, orgId.getRepoId());
+		Env.setContextItem(workPackageCtx, Env.CTXNAME_AD_Client_ID, clientId.getRepoId());
+		Env.setContextItem(workPackageCtx, Env.CTXNAME_AD_Org_ID, orgId.getRepoId());
 
 		//
 		// User
@@ -215,8 +215,8 @@ public class WorkPackageQueue implements IWorkPackageQueue
 		{
 			userId = UserId.ofRepoIdOrSystem(workPackage.getCreatedBy());
 		}
-		Env.setContext(workPackageCtx, Env.CTXNAME_AD_User_ID, userId.getRepoId());
-		Env.setContext(workPackageCtx, Env.CTXNAME_SalesRep_ID, userId.getRepoId());
+		Env.setContextItem(workPackageCtx, Env.CTXNAME_AD_User_ID, userId.getRepoId());
+		Env.setContextItem(workPackageCtx, Env.CTXNAME_SalesRep_ID, userId.getRepoId());
 
 		//
 		// Role
@@ -236,14 +236,14 @@ public class WorkPackageQueue implements IWorkPackageQueue
 					.orElse(null);
 			roleId = role == null ? null : role.getRoleId();
 		}
-		Env.setContext(workPackageCtx, Env.CTXNAME_AD_Role_ID, RoleId.toRepoId(roleId, Env.CTXVALUE_AD_Role_ID_NONE));
+		Env.setContextItem(workPackageCtx, Env.CTXNAME_AD_Role_ID, RoleId.toRepoId(roleId, Env.CTXVALUE_AD_Role_ID_NONE));
 
 		// FRESH-314: also store #AD_PInstance_ID, we might want to access this information (currently in AD_ChangeLog)
-		Env.setContext(workPackageCtx, Env.CTXNAME_AD_PInstance_ID, workPackage.getAD_PInstance_ID());
+		Env.setContextItem(workPackageCtx, Env.CTXNAME_AD_PInstance_ID, workPackage.getAD_PInstance_ID());
 
 		//
 		// Session: N/A
-		Env.setContext(workPackageCtx, Env.CTXNAME_AD_Session_ID, Env.CTXVALUE_AD_SESSION_ID_NONE);
+		Env.setContextItem(workPackageCtx, Env.CTXNAME_AD_Session_ID, Env.CTXVALUE_AD_SESSION_ID_NONE);
 	}
 
 	@Override

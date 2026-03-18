@@ -213,7 +213,7 @@ public class AcctModuleInterceptor extends AbstractModuleInterceptor
 				final OrgId adOrgId = OrgId.ofRepoId(adOrgRepoId);
 				final Instant date = Env.getDate(ctx).toInstant();
 				final CurrencyConversionTypeId conversionTypeId = currenciesRepo.getDefaultConversionTypeId(adClientId, adOrgId, date);
-				Env.setContext(ctx, CTXNAME_C_ConversionType_ID, conversionTypeId.getRepoId());
+				Env.setContextItem(ctx, CTXNAME_C_ConversionType_ID, conversionTypeId.getRepoId());
 			}
 			catch (Exception e)
 			{

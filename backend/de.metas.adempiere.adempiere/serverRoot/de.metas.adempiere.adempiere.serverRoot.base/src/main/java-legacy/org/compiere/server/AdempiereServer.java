@@ -104,7 +104,7 @@ public abstract class AdempiereServer extends Thread
 		m_ctx = Env.deriveCtx(model.getCtx());
 
 		final I_AD_Client adClient = Services.get(IClientDAO.class).retriveClient(m_ctx);
-		Env.setContext(m_ctx, Env.CTXNAME_AD_Client_ID, adClient.getAD_Client_ID());
+		Env.setContextItem(m_ctx, Env.CTXNAME_AD_Client_ID, adClient.getAD_Client_ID());
 
 		m_initialNapSecs = initialNapSecs;
 	}	// ServerBase

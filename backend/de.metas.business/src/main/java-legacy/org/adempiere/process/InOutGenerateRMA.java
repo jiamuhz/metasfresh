@@ -91,7 +91,7 @@ public class InOutGenerateRMA extends JavaProcess
 				log.error("Unknown Parameter: " + name);
 		}
 
-		m_movementDate = Env.getContextAsDate(getCtx(), "#Date");
+		m_movementDate = Env.getContextItemAsDate(getCtx(), "#Date");
 		if (m_movementDate == null)
 		{
 			m_movementDate = new Timestamp(System.currentTimeMillis());

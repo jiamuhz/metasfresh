@@ -289,7 +289,7 @@ public class SwatValidator implements ModelValidator
 		if (defaultSalesRepId > 0)
 		{
 			log.info("Set " + Env.CTXNAME_SalesRep_ID + "=" + defaultSalesRepId + " from " + SYSCONFIG_DEFAULT_SalesRep_ID);
-			Env.setContext(ctx, Env.CTXNAME_SalesRep_ID, defaultSalesRepId);
+			Env.setContextItem(ctx, Env.CTXNAME_SalesRep_ID, defaultSalesRepId);
 		}
 
 		return null;

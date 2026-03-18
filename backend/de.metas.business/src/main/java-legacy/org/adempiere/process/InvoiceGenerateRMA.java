@@ -74,7 +74,7 @@ public class InvoiceGenerateRMA extends JavaProcess
                 log.error("Unknown Parameter: " + name);
         }
         
-        m_dateinvoiced = Env.getContextAsDate(getCtx(), "#Date");
+        m_dateinvoiced = Env.getContextItemAsDate(getCtx(), "#Date");
         if (m_dateinvoiced == null)
         {
             m_dateinvoiced = new Timestamp(System.currentTimeMillis());

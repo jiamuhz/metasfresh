@@ -129,7 +129,7 @@ public class PPOrderRequestedEventHandlerTests
 	public void init()
 	{
 		AdempiereTestHelper.get().init();
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_Client_ID, adClientId.getRepoId());
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_Client_ID, adClientId.getRepoId());
 
 		SpringContextHolder.registerJUnitBean(new ProductBOMVersionsDAO());
 

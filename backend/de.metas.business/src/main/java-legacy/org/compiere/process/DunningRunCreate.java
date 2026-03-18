@@ -95,7 +95,7 @@ public class DunningRunCreate extends JavaProcess
 		
 		// metas: begin: us315
 		if (p_SalesRep_ID <= 0)
-			p_SalesRep_ID = Env.getContextAsInt(getCtx(), Env.CTXNAME_SalesRep_ID);
+			p_SalesRep_ID = Env.getContextItemAsInt(getCtx(), Env.CTXNAME_SalesRep_ID);
 		// metas: end: us315
 	}	//	prepare
 	

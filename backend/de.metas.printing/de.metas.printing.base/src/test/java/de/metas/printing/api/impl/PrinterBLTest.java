@@ -35,7 +35,6 @@ import java.util.List;
 
 import org.adempiere.ad.wrapper.POJOWrapper;
 import org.adempiere.test.AdempiereTestHelper;
-import org.assertj.core.api.Assertions;
 import org.compiere.util.Env;
 import org.junit.Assert;
 import org.junit.Before;
@@ -64,7 +63,7 @@ public class PrinterBLTest extends AbstractPrintingTest
 	{
 		AdempiereTestHelper.get().init();
 		printerBL = new PrinterBL();
-		Env.setContext(Env.getCtx(), Env.CTXNAME_AD_User_ID, CTX_USER_ID);
+		Env.setContextItem(Env.getCtx(), Env.CTXNAME_AD_User_ID, CTX_USER_ID);
 	}
 
 	@Test

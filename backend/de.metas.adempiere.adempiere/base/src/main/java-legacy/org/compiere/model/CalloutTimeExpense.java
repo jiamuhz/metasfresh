@@ -63,7 +63,7 @@ public class CalloutTimeExpense extends CalloutEngine
 		BigDecimal priceActual = null;
 
 		// get expense date - or default to today's date
-		Timestamp DateExpense = Env.getContextAsDate(ctx, WindowNo, "DateExpense");
+		Timestamp DateExpense = Env.getContextItemAsDate(ctx, WindowNo, "DateExpense");
 		if (DateExpense == null)
 		{
 			DateExpense = new Timestamp(System.currentTimeMillis());
@@ -91,7 +91,7 @@ public class CalloutTimeExpense extends CalloutEngine
 					+ " ORDER BY pv.ValidFrom DESC";
 			pstmt = DB.prepareStatement(sql, null);
 			pstmt.setInt(1, M_Product_ID.intValue());
-			pstmt.setInt(2, Env.getContextAsInt(ctx, WindowNo, "M_PriceList_ID"));
+			pstmt.setInt(2, Env.getContextItemAsInt(ctx, WindowNo, "M_PriceList_ID"));
 			rs = pstmt.executeQuery();
 			while (rs.next() && noPrice)
 			{
@@ -142,7 +142,7 @@ public class CalloutTimeExpense extends CalloutEngine
 				DB.close(rs, pstmt);
 				pstmt = DB.prepareStatement(sql, null);
 				pstmt.setInt(1, M_Product_ID.intValue());
-				pstmt.setInt(2, Env.getContextAsInt(ctx, WindowNo, "M_PriceList_ID"));
+				pstmt.setInt(2, Env.getContextItemAsInt(ctx, WindowNo, "M_PriceList_ID"));
 				rs = pstmt.executeQuery();
 				while (rs.next() && noPrice)
 				{
@@ -214,8 +214,8 @@ public class CalloutTimeExpense extends CalloutEngine
 		// get values
 		BigDecimal ExpenseAmt = (BigDecimal)mTab.getValue("ExpenseAmt");
 		CurrencyId C_Currency_From_ID = CurrencyId.ofRepoId((Integer)mTab.getValue("C_Currency_ID"));
-		CurrencyId C_Currency_To_ID = CurrencyId.ofRepoId(Env.getContextAsInt(ctx, "$C_Currency_ID"));
-		Instant DateExpense = Env.getContextAsDate(ctx, WindowNo, "DateExpense").toInstant();
+		CurrencyId C_Currency_To_ID = CurrencyId.ofRepoId(Env.getContextItemAsInt(ctx, "$C_Currency_ID"));
+		Instant DateExpense = Env.getContextItemAsDate(ctx, WindowNo, "DateExpense").toInstant();
 		//
 		log.debug("Amt=" + ExpenseAmt + ", C_Currency_ID=" + C_Currency_From_ID);
 		// Converted Amount = Unit price
@@ -223,8 +223,8 @@ public class CalloutTimeExpense extends CalloutEngine
 		// convert if required
 		if (ConvertedAmt.signum() != 0 && !CurrencyId.equals(C_Currency_From_ID, C_Currency_To_ID))
 		{
-			ClientId AD_Client_ID = ClientId.ofRepoId(Env.getContextAsInt(ctx, WindowNo, "AD_Client_ID"));
-			OrgId AD_Org_ID = OrgId.ofRepoId(Env.getContextAsInt(ctx, WindowNo, "AD_Org_ID"));
+			ClientId AD_Client_ID = ClientId.ofRepoId(Env.getContextItemAsInt(ctx, WindowNo, "AD_Client_ID"));
+			OrgId AD_Org_ID = OrgId.ofRepoId(Env.getContextItemAsInt(ctx, WindowNo, "AD_Org_ID"));
 			ConvertedAmt = Services.get(ICurrencyBL.class).convert(
 					ConvertedAmt,
 					C_Currency_From_ID,

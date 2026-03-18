@@ -49,12 +49,12 @@ public class C_Order extends OrderFastInput
 
 		final Properties ctx = calloutField.getCtx();
 		final int WindowNo = calloutField.getWindowNo();
-		if ("Y".equals(Env.getContext(ctx, WindowNo, FLAGNAME)))
+		if ("Y".equals(Env.getContextItem(ctx, WindowNo, FLAGNAME)))
 		{
 			return NO_ERROR;
 		}
 
-		Env.setContext(ctx, WindowNo, FLAGNAME, "Y");
+		Env.setContextItem(ctx, WindowNo, FLAGNAME, "Y");
 		try
 		{
 
@@ -73,7 +73,7 @@ public class C_Order extends OrderFastInput
 		}
 		finally
 		{
-			Env.setContext(ctx, WindowNo, FLAGNAME, (String)null);
+			Env.setContextItem(ctx, WindowNo, FLAGNAME, (String)null);
 		}
 	}
 
