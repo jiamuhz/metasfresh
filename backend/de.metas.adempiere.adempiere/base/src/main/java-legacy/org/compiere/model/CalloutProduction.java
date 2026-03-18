@@ -42,13 +42,13 @@ public class CalloutProduction extends CalloutEngine
 	public String product (Properties ctx, int WindowNo, GridTab mTab, GridField mField, Object value)
 	{
 		Integer M_Product_ID = (Integer)value;
-		if (M_Product_ID == null || M_Product_ID.intValue() == 0)
+		if (M_Product_ID == null || M_Product_ID == 0)
 			return "";
 		//	Set Attribute
 		if (Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "M_Product_ID") == M_Product_ID.intValue()
 			&& Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "M_AttributeSetInstance_ID") != 0)
 		{
-			mTab.setValue("M_AttributeSetInstance_ID", new Integer(Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "M_AttributeSetInstance_ID")));
+			mTab.setValue("M_AttributeSetInstance_ID", Env.getContextItemAsInt(ctx, WindowNo, Env.TAB_INFO, "M_AttributeSetInstance_ID"));
 		}
 		else
 		{
