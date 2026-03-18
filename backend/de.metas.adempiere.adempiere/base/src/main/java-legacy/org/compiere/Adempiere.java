@@ -33,7 +33,6 @@ import org.adempiere.ad.service.ADSystemInfo;
 import org.adempiere.ad.service.IDeveloperModeBL;
 import org.adempiere.ad.service.ISystemBL;
 import org.adempiere.ad.service.impl.DeveloperModeBL;
-import org.adempiere.context.SwingContextProvider;
 import org.adempiere.context.ThreadLocalContextProvider;
 import org.adempiere.exceptions.AdempiereException;
 import org.adempiere.service.IClientDAO;
@@ -594,11 +593,7 @@ public class Adempiere
 
 		//
 		// Setup context provider (task 08859)
-		if (RunMode.SWING_CLIENT == runMode)
-		{
-			Env.setContextProvider(new SwingContextProvider());
-		}
-		else if (RunMode.BACKEND == runMode)
+    if (RunMode.BACKEND == runMode)
 		{
 			Env.setContextProvider(new ThreadLocalContextProvider());
 		}
