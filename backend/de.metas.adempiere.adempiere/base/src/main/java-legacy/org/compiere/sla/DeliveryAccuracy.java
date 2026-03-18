@@ -33,7 +33,8 @@ import org.slf4j.Logger;
 import de.metas.logging.LogManager;
 
 /**
- *	SLA Delivery Accuracy.
+ *  SLA  Servicce Level Agreement  服务水平协议
+ *	SLA Delivery Accuracy.  --  交付准确率
  *	How accurate is the promise date?
  *	<p>
  *	The measure are the average days between promise date (PO/SO) and delivery date

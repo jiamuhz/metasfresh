@@ -27,7 +27,7 @@ import de.metas.process.JavaProcess;
 
 
 /**
- *	Service Level Agreement Measure.
+ *	Service Level Agreement Measure.   度量
  *	Calculate/update the actual measure.
  *	
  *  @author Jorg Janke
