@@ -70,18 +70,18 @@ public final class DocumentLayoutDescriptor
 	private final DocumentLayoutElementDescriptor docActionElementDescriptor;
 
 	/**
-	 * 文档的单文档Layout方案
+	 * 文档的 Header Tab Layout方案
 	 */
 	private final DocumentFormLayout formLayout;
 
 	/**
-	 * 文档的文档列表Layout方案
+	 * 文档的 文档列表 Layout方案
 	 */
 	private final ViewLayout gridViewLayout;
 
 	/**
 	 * Side list layout
-	 * 右侧边栏的文档列表Layout方案
+	 * 右侧边栏的 文档列表 Layout方案
 	 */
 	private final ViewLayout sideListViewLayout;
 
@@ -92,13 +92,13 @@ public final class DocumentLayoutDescriptor
 
 	/**
 	 * Single row layout: included tabs.
-	 * 文档的单文档Layout方案中 下方详情Tabs
+	 * 文档 Header Tab 下方的 Level=1 详情Tabs
 	 */
 	private final Map<DetailId, DocumentLayoutDetailDescriptor> details;
 
 	/**
 	 * {@link #details} plus their included details.
-	 * 文档的单文档Layout方案中 下方详情Tabs + 后代详情Tabs
+	 * 文档 Header Tab 下方的 ALL Level Tabs (详情Tabs + 后代详情Tabs)
 	 */
 	private final Map<DetailId, DocumentLayoutDetailDescriptor> allDetails;
 
