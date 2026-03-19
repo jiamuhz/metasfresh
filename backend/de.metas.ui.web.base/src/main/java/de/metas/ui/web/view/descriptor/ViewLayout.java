@@ -44,7 +44,14 @@ import java.util.Set;
 import java.util.concurrent.atomic.AtomicInteger;
 import java.util.stream.Stream;
 
-
+/**
+ * 多条数据的表格窗口
+ *
+ * 表格结构（列、列宽、分组、汇总）
+ *
+ * 业务场景:	搜索并列出所有符合条件的销售订单
+ *
+ */
 
 public class ViewLayout implements ETagAware
 {

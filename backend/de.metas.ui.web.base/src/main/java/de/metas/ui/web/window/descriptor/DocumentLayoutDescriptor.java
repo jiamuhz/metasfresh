@@ -47,7 +47,12 @@ import java.util.Map;
  */
 
 /**
- * 文档窗口布局
+ * 单个业务单据的窗口
+ *
+ * 分层结构（页签、字段组、字段）
+ *
+ * 业务场景:	查看/编辑一张销售订单的完整信息
+ * 
  */
 
 public final class DocumentLayoutDescriptor
