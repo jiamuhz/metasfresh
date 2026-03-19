@@ -30,7 +30,7 @@ import java.util.stream.Stream;
 
 
 /**
- * 单据列表-表格
+ * 列表视图 - 表格方式
  */
 
 public interface IView
