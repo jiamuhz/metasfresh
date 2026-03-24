@@ -3,6 +3,8 @@ package org.adempiere.ad.expression.api;
 import de.metas.util.ISingletonService;
 
 /**
+ * 新架构  <-- 旧架构（Evaluator 工具类）
+ *
  * Expressions factory. Used for compiling various types of expressions.
  * 
  * @author tsa

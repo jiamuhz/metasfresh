@@ -31,6 +31,8 @@ import de.metas.util.Services;
 
 
 /**
+ *  旧架构 Evaluator 表达式求值器 --> 新框架 IExpressionFactory
+ *
  *	Expression Evaluator	
  *	
  *  @author Jorg Janke

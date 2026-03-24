@@ -31,6 +31,8 @@ import java.sql.Timestamp;
 import java.util.Optional;
 
 /**
+ * Evaluatee 是一个变量求值上下文环境
+ *
  * Evaluator source.
  * <p>
  * To create {@link Evaluatee} instances, please use {@link Evaluatees}.
