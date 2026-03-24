@@ -55,8 +55,26 @@ public interface IView
 		return ViewHeaderProperties.EMPTY;
 	}
 
+	/**
+	 * 它回答了一个问题：“在系统中，有哪些地方（视图/文档）引用了当前视图里的记录？”
+	 * 例如：
+	 *  一个“销售订单”视图中的订单，可能被“发货单”视图引用
+	 *  一个“产品”视图中的产品，可能被多个“BOM（物料清单）”视图引用
+	 *  一个“业务伙伴”视图中的客户，可能被“合同”、“订单”等多个视图引用
+	 *
+	 * 当用户在某个视图中操作时，系统需要知道这个视图的数据还被哪些地方使用，以便：
+	 * 数据联动：当主视图数据变化时，通知关联视图更新
+	 * 引用检查：删除数据前检查是否被其他地方引用
+	 * 导航支持：支持用户从当前视图跳转到引用它的其他视图
+	 * 缓存管理：当数据变更时，使相关视图的缓存失效
+	 */
 	Set<DocumentPath> getReferencingDocumentPaths();
 
+	/**
+	 * 自身身份
+	 * 我是谁？我代表哪个业务文档？
+	 * @return
+	 */
 	@Nullable
 	default WebuiDocumentReferenceId getDocumentReferenceId()
 	{
@@ -77,10 +95,13 @@ public interface IView
 	}
 
 	/**
-	 * @return In case this is an included view, this method will return the parent's viewId. Else null will be returned.
+	 * included view case, this method will return the parent's viewId. Else null will be returned.
 	 */
 	ViewId getParentViewId();
 
+	/**
+	 * included view case, this method will return the parent's view row id. Else null will be returned.
+	 */
 	DocumentId getParentRowId();
 
 	long size();

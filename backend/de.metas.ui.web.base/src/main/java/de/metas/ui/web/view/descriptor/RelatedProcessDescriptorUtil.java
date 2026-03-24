@@ -27,6 +27,9 @@ import de.metas.process.RelatedProcessDescriptor;
 import lombok.NonNull;
 import lombok.experimental.UtilityClass;
 
+/**
+ * 根据 processClass 找到 对应的 ad_process 项
+ */
 @UtilityClass
 public class RelatedProcessDescriptorUtil
 {
