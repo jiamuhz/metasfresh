@@ -27,6 +27,9 @@ import java.util.Optional;
 @Value
 public class SqlAndParams
 {
+	String sql;
+	List<Object> sqlParams;
+
 	public static SqlAndParams EMPTY = builder().build();
 
 	public static Builder builder()
@@ -157,9 +160,6 @@ public class SqlAndParams
 	}
 
 	private static final SqlParamsInliner sqlParamsInliner = SqlParamsInliner.builder().failOnError(true).build();
-
-	String sql;
-	List<Object> sqlParams;
 
 	private SqlAndParams(@NonNull final CharSequence sql, @Nullable final Object[] sqlParamsArray)
 	{
