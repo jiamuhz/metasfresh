@@ -39,7 +39,7 @@ public class DocumentProcessingException extends AdempiereException
 		final TranslatableStringBuilder msg = TranslatableStrings.builder();
 		if (message == null || Check.isBlank(message))
 		{
-			msg.append("Error Processing Document");
+			msg.append("错误:"); // "Error Processing Document"
 		}
 		else
 		{
@@ -69,11 +69,14 @@ public class DocumentProcessingException extends AdempiereException
 			}
 		}
 
-		msg.append("\n").appendADElement("Document").append(": ").append(documentInfo);
+		//msg.append("\n").appendADElement("Document").append(": ").append(documentInfo); // 移除了 .appendADElement("Document").append(": ")
+		msg.append("\n").append(documentInfo);
+
 		msg.append("\n").appendADElement("DocAction").append(": ").append(docAction);
 		if (!Check.isEmpty(processMsg, true))
 		{
-			msg.append("\n").appendADElement("ProcessMsg").append(": ").append(processMsg);
+			//msg.append("\n").appendADMessage("ProcessMsg").append(": ").append(processMsg); // 移除了 .appendADMessage("ProcessMsg").append(": ")
+			msg.append("\n").append(processMsg);
 		}
 
 		return msg.build();
