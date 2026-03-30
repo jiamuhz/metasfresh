@@ -285,4 +285,10 @@ public final class TranslatableStringBuilder
 		return append(value);
 	}
 
+	public TranslatableStringBuilder appendADMessage(final String columnName)
+	{
+		final ITranslatableString value = msgBL.translatable(columnName);
+		return append(value);
+	}
+
 }
