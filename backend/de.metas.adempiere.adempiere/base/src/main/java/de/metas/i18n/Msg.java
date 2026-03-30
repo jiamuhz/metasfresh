@@ -402,6 +402,8 @@ public final class Msg
 	/**************************************************************************
 	 * "Translate" text.
 	 *
+	 * 从 AD_Message 表 + AD_Element 表 进行翻译
+	 *
 	 * <pre>
 	 *		- Check AD_Message.AD_Message 	->	MsgText
 	 *		- Check AD_Element.ColumnName	->	Name

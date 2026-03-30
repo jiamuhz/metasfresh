@@ -7,6 +7,11 @@ import org.adempiere.ad.modelvalidator.annotations.Interceptor;
  * Implementing classes are called by the system if they have been registered in the <code>AD_Tab_Callout</code> table.
  * Other than common (column-)callouts implementers are not called if a specific field is changed, but rather on general
  * user events such as "new record", "delete" etc.
+ *
+ * 实现类如果在 AD_Tab_Callout 表中注册，就会被系统调用。
+ * 与在 AD_COLUMNCallout 表中注册的 column callout 不同，实现类不是在特定字段更改时被调用，
+ * 而是在用户常规事件（如"新建记录"、"删除"等）时被调用。
+ *
  * <p>
  * <p>
  * Note:
