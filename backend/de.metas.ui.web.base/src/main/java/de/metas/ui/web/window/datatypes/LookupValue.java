@@ -53,6 +53,11 @@ import java.util.Set;
 import java.util.function.Function;
 import java.util.function.IntFunction;
 
+/**
+ *
+ * LookupValue 就是有 内部值 和 显示值  
+ *
+ */
 public abstract class LookupValue
 {
 	@Nullable
@@ -244,12 +249,16 @@ public abstract class LookupValue
 
 	public static ITranslatableString unknownCaption(final Object id) {return TranslatableStrings.constant("<" + id + ">");}
 
-	protected final Object id;
-	protected final ITranslatableString displayName;
+	/**
+	 * LookupValue 属性
+	 */
+	protected final Object id;  // 内部值
+	protected final ITranslatableString displayName;  // 显示值
 	protected final ITranslatableString description;
 	private final Boolean active;
 	private final ImmutableMap<String, Object> additionalAttributes;
 	protected final ValueNamePairValidationInformation validationInformation;
+
 
 	private LookupValue(
 			@NonNull final Object id,
