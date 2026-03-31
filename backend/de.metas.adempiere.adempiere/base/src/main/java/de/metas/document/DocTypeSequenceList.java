@@ -126,7 +126,10 @@ public final class DocTypeSequenceList
 	{
 		ClientId adClientId;
 		OrgId adOrgId;
+
+		// 来自 AD_DocType 表
 		DocSequenceId docSequenceId;
+
 		CountryId countryId;
 		SeqNo seqNo;
 
