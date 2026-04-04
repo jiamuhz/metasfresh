@@ -37,6 +37,8 @@ import java.util.stream.Collectors;
 /**
  * Class to retrieve {@link PickingSlotRow}s that are displayed in the {@link PickingSlotView}.
  *
+ * 拣货终端视图的数据仓库，负责获取和组织拣货相关数据。
+ * 原因数据结构复杂，直接 SQL 方式不能获取，需要代码来处理复杂逻辑
  *
  */
 @Component
