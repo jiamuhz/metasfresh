@@ -28,8 +28,8 @@ public class SqlViewRowFieldBinding implements SqlEntityFieldBinding
 		Object retrieveValue(ResultSet rs, String adLanguage) throws SQLException;
 	}
 
-	@NonNull String fieldName;
-	@NonNull String columnName;
+	@NonNull String fieldName;  /* 界面字段名 */
+	@NonNull String columnName;  /* 数据库列名 */ 
 	boolean keyColumn;
 	@NonNull DocumentFieldWidgetType widgetType;
 	boolean virtualColumn;
