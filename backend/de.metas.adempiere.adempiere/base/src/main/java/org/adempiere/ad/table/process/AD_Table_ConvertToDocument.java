@@ -40,7 +40,11 @@ import org.compiere.model.I_AD_Table;
  * If the definition of a document table is to change (it needs extra columns), change AD_Table_Document_Template directly and run this process again for each document table that is to be extended.
  * Except from the extra columns, the document table must also have its own AD_Workflow which is specified in an AD_Process, linked with DocAction and Processing columns.
  *
- *
+ *此流程用于向指定数据表中添加单据特定的详细信息。
+ * 一个单据表必须包含某些特定列，这些列是从 AD_Table_Document_Template 表复制而来的。
+ * AD_Table_Document_Template 仅定义在应用字典中，它并不是数据库中的真实数据表（至少目前不是）。
+ * 如果需要修改某个单据表的定义（例如需要增加额外的列），应直接修改 AD_Table_Document_Template，然后再次运行此流程，针对每个需要扩展的单据表执行一次。
+ * 除了这些额外列之外，单据表还必须拥有自己的 AD_Workflow（工作流），该工作流在 AD_Process 中指定，并通过 DocAction 和 Processing 列与之关联。
  *
  */
 public class AD_Table_ConvertToDocument extends JavaProcess

@@ -26,11 +26,8 @@ import java.util.Map;
 
   
 /**
- * 单个业务单据的窗口
  *
- * 分层结构（页签、字段组、字段）
- *
- * 业务场景:	查看/编辑一张销售订单的完整信息
+ * 文档布局 ：包含各种文档布局描述
  *
  */
 
@@ -68,11 +65,6 @@ public final class DocumentLayoutDescriptor
 	 * 右侧边栏的 文档列表 Layout方案
 	 */
 	private final ViewLayout sideListViewLayout;
-
-	// private final Map<DocumentLayoutDetailGroupDescriptor, List<DocumentLayoutDetailDescriptor>> detailGroupToDetails = new HashMap<>();
-	//
-
-	// private final Map<DetailId, DocumentLayoutDetailDescriptor> details;
 
 	/**
 	 * Single row layout: included tabs.

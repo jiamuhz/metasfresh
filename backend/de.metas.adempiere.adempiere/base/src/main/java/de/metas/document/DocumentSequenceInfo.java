@@ -17,8 +17,9 @@ public class DocumentSequenceInfo
 	private final int adSequenceId;
 	private final String name;
 
-	//
+	// 增加步长
 	private final int incrementNo;
+
 	private final IStringExpression prefix;
 	private final IStringExpression suffix;
 	private final String decimalPattern;
