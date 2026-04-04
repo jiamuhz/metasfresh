@@ -37,6 +37,12 @@ import java.util.Objects;
  * #L%
  */
 
+/**
+ * 简单理解：当你的订单行存储了 C_BPartner_ID = 123，SqlSelectDisplayValue 负责生成类似这样的 SQL：
+ *
+ * (SELECT Name FROM C_BPartner WHERE C_BPartner_ID = 123) AS BPartnerName
+ */
+
 @EqualsAndHashCode
 @ToString
 public class SqlSelectDisplayValue
