@@ -44,6 +44,12 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Stream;
 
+/**
+ *
+ * 视图的“配置清单”：定义了一个数据视图从哪来（SQL）、有哪些字段、如何过滤、如何排序、如何分组
+ *
+ */
+
 @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
 public class SqlViewBinding implements SqlEntityBinding
 {

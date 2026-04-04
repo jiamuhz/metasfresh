@@ -14,6 +14,12 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 
+/**
+ *
+ * 简单理解：它是 SqlViewBinding 中每个字段的“配置清单”
+ * 定义了一个字段的前端名、数据库列、类型、如何取值、如何排序
+ *
+ */
 
 @Value
 public class SqlViewRowFieldBinding implements SqlEntityFieldBinding
