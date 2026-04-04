@@ -65,6 +65,19 @@ import java.util.function.Consumer;
 import java.util.function.Supplier;
 import java.util.stream.Stream;
 
+/**
+ *
+ * DocumentEntityDescriptor 是 metasfresh WebUI 中窗口/表单的“元数据蓝图”，它定义了：
+ *
+ * 文档实体（如销售订单、业务伙伴）有哪些字段、字段类型、验证规则
+ * 包含的子实体（如订单行、订单税务）如何组织
+ * 数据绑定（从数据库读取/写入）
+ * 调用规则（Callout）、只读逻辑、显示逻辑
+ * 排序、过滤、打印等行为
+ *
+ * 简单理解：它相当于一个窗口或页签的“类定义”，而 Document 对象是该类的“实例”
+ *
+ */
   
 @SuppressWarnings("OptionalUsedAsFieldOrParameterType")
 public class DocumentEntityDescriptor
