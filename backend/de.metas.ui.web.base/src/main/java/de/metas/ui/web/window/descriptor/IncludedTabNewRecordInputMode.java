@@ -13,7 +13,9 @@ import javax.annotation.Nullable;
 @AllArgsConstructor
 public enum IncludedTabNewRecordInputMode implements ReferenceListAwareEnum
 {
+	//允许所有可用的新建记录方式（例如：标准表单、快速输入等）
 	ALL_AVAILABLE_METHODS(X_AD_Tab.INCLUDEDTABNEWRECORDINPUTMODE_ALL_AVAILABLE_METHODS),
+
 	QUICK_INPUT_ONLY(X_AD_Tab.INCLUDEDTABNEWRECORDINPUTMODE_QuickInputOnly);
 
 	@Getter

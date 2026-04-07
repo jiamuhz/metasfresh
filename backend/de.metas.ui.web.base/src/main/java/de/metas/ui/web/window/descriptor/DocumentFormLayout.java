@@ -18,8 +18,6 @@ import lombok.NonNull;
 /**
  * Single row layout (applies for header document but also for included document, when editing in advanced mode).
  *
- *
- *
  * 表单布局，用于 Header Tab  and  Advanced Edit Dialog
  * @作者  嘉木
  */
