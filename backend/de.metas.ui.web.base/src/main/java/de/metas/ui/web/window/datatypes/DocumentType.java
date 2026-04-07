@@ -25,6 +25,10 @@ import lombok.NonNull;
  * #L%
  */
 
+/**
+ * 每种文档 都有对应的 Layout
+ */
+
 public enum DocumentType
 {
 	Window("W"), //
