@@ -39,9 +39,16 @@ public abstract class AbstractModuleInterceptor extends AbstractModelInterceptor
 		Check.assume(Services.isAutodetectServices(), "We work with activated service auto detection");
 
 		onBeforeInit();
+
+		// 往 engine 中注册 interceptor
 		registerInterceptors(engine);
+
+		// 往 ITabCalloutFactory 中注册 tab callout
 		registerTabCallouts(Services.get(ITabCalloutFactory.class));
+
+		// 往 IProgramaticCalloutProvider 中注册 callout
 		registerCallouts(Services.get(IProgramaticCalloutProvider.class));
+
 		setupCaching(Services.get(IModelCacheService.class));
 		setupEventBus();
 		setupMigrationScriptsLogger();
