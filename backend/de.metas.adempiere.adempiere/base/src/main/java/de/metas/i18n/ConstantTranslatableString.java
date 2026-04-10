@@ -31,10 +31,10 @@ import java.util.Set;
  */
 
 @EqualsAndHashCode
-/* package */ final class ConstantTranslatableString implements ITranslatableString
+/* package */ public final class ConstantTranslatableString implements ITranslatableString
 {
 	@NonNull
-	static ConstantTranslatableString of(@Nullable final String value)
+  public static ConstantTranslatableString of(@Nullable final String value)
 	{
 		final boolean anyLanguage = false;
 		return of(value, anyLanguage);
