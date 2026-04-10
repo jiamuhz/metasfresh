@@ -36,7 +36,7 @@ import java.util.function.IntFunction;
 /**
  *
  * LookupValue 就是有 内部值 和 显示值  
- *
+ * eg:  id --> name
  */
 public abstract class LookupValue
 {
