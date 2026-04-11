@@ -40,6 +40,18 @@ import java.util.function.IntFunction;
  */
 public abstract class LookupValue
 {
+
+	/**
+	 * LookupValue 属性
+	 */
+	protected final Object id;  // 内部值
+	protected final ITranslatableString displayName;  // 显示值
+	protected final ITranslatableString description;
+	private final Boolean active;
+	private final ImmutableMap<String, Object> additionalAttributes;
+	protected final ValueNamePairValidationInformation validationInformation;
+
+
 	@Nullable
 	public static Object normalizeId(@Nullable final Object idObj, final boolean numericKey)
 	{
@@ -228,17 +240,6 @@ public abstract class LookupValue
 	}
 
 	public static ITranslatableString unknownCaption(final Object id) {return TranslatableStrings.constant("<" + id + ">");}
-
-	/**
-	 * LookupValue 属性
-	 */
-	protected final Object id;  // 内部值
-	protected final ITranslatableString displayName;  // 显示值
-	protected final ITranslatableString description;
-	private final Boolean active;
-	private final ImmutableMap<String, Object> additionalAttributes;
-	protected final ValueNamePairValidationInformation validationInformation;
-
 
 	private LookupValue(
 			@NonNull final Object id,
