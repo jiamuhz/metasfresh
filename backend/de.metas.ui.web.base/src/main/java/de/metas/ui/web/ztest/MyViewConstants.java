@@ -12,8 +12,8 @@ public final class MyViewConstants
 	public static final WindowId WINDOWID_PackageableView = WindowId.of(WindowConstants.PACKAGEABLE_VIEW_AD_WINDOW_ID); // FIXME: HARDCODED
 	public static final String WINDOWID_MyView_String = "1000011"; // FIXME: HARDCODED
 	public static final WindowId WINDOWID_MyView = WindowId.fromJson(WINDOWID_MyView_String);
-	public static final String WINDOWID_MySubView_String = "mysubview";
-	public static final WindowId WINDOWID_MySubView = WindowId.fromJson(WINDOWID_MySubView_String);
+	public static final String WINDOWID_MyIncludedView_String = "myincludedview";
+	public static final WindowId WINDOWID_MyIncludedView = WindowId.fromJson(WINDOWID_MyIncludedView_String);
 
 	public static final AdMessageKey MSG_WEBUI_PICKING_NO_PROCESSED_RECORDS = AdMessageKey.of("WEBUI_Picking_No_Processed_Records");
 	public static final AdMessageKey MSG_WEBUI_PICKING_SELECT_PICKED_HU = AdMessageKey.of("WEBUI_Picking_SelectPickedHU");

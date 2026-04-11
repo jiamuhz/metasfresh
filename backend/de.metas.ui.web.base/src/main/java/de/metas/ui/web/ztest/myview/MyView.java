@@ -1,19 +1,20 @@
 package de.metas.ui.web.ztest.myview;
 
-import de.metas.handlingunits.picking.PickingCandidateService;
 import de.metas.i18n.ITranslatableString;
 import de.metas.inoutcandidate.model.I_M_Packageable_V;
 import de.metas.ui.web.document.filter.provider.NullDocumentFilterDescriptorsProvider;
-import de.metas.ui.web.picking.pickingslot.PickingSlotView;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.template.AbstractCustomView;
 import de.metas.ui.web.window.datatypes.DocumentId;
+import de.metas.ui.web.ztest.myincludedview.MyIncludedView;
 import lombok.Builder;
 import lombok.NonNull;
 
 import javax.annotation.Nullable;
+import java.util.concurrent.ConcurrentHashMap;
+import java.util.function.Supplier;
 
 
 /**
@@ -27,7 +28,7 @@ public class MyView extends AbstractCustomView<MyViewRow>
 	}
 
 
-	//private final ConcurrentHashMap<DocumentId, PickingSlotView> pickingSlotsViewByRowId = new ConcurrentHashMap<>();
+	private final ConcurrentHashMap<DocumentId, MyIncludedView> myIncludedViewByRowId = new ConcurrentHashMap<>();
 
 	@Builder
 	private MyView(
@@ -62,34 +63,32 @@ public class MyView extends AbstractCustomView<MyViewRow>
 		}
 	}
 
-	/*
-	public void setPickingSlotView(@NonNull final DocumentId rowId, @NonNull final PickingSlotView pickingSlotView)
+	public void setMyIncludedView(@NonNull final DocumentId rowId, @NonNull final MyIncludedView pickingSlotView)
 	{
-		pickingSlotsViewByRowId.put(rowId, pickingSlotView);
+		myIncludedViewByRowId.put(rowId, pickingSlotView);
 	}
 
-	public void removePickingSlotView(@NonNull final DocumentId rowId, @NonNull final ViewCloseAction viewCloseAction)
+	public void removeMyIncludedView(@NonNull final DocumentId rowId, @NonNull final ViewCloseAction viewCloseAction)
 	{
-		final PickingSlotView view = pickingSlotsViewByRowId.remove(rowId);
+		final MyIncludedView view = myIncludedViewByRowId.remove(rowId);
 		if (view != null)
 		{
 			view.close(viewCloseAction);
 		}
 	}
 
-	public PickingSlotView getPickingSlotViewOrNull(@NonNull final DocumentId rowId)
+	public MyIncludedView getMyIncludedViewOrNull(@NonNull final DocumentId rowId)
 	{
-		return pickingSlotsViewByRowId.get(rowId);
+		return myIncludedViewByRowId.get(rowId);
 	}
 
-	public PickingSlotView computePickingSlotViewIfAbsent(@NonNull final DocumentId rowId, @NonNull final Supplier<PickingSlotView> pickingSlotViewFactory)
+	public MyIncludedView computeMyIncludedViewIfAbsent(@NonNull final DocumentId rowId, @NonNull final Supplier<MyIncludedView> myIncludedViewSupplier)
 	{
-		return pickingSlotsViewByRowId.computeIfAbsent(rowId, id -> pickingSlotViewFactory.get());
+		return myIncludedViewByRowId.computeIfAbsent(rowId, id -> myIncludedViewSupplier.get());
 	}
 
-	public void invalidatePickingSlotViews()
+	public void invalidateMyIncludedViews()
 	{
-		pickingSlotsViewByRowId.values().forEach(PickingSlotView::invalidateAll);
+		myIncludedViewByRowId.values().forEach(MyIncludedView::invalidateAll);
 	}
-	*/
 }
