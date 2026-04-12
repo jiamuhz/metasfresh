@@ -62,12 +62,14 @@ public class MyView extends AbstractCustomView<MyViewRow>
 			//closePickingCandidatesFromRackSystemPickingSlots();
 		}
 	}
-	
+
+	// rowId 是 MyView 中的 DocumentId
 	public void setMyIncludedView(@NonNull final DocumentId rowId, @NonNull final MyIncludedView myIncludedView)
 	{
 		myIncludedViewByRowId.put(rowId, myIncludedView);
 	}
 
+	// rowId 是 MyView 中的 DocumentId
 	public void removeMyIncludedView(@NonNull final DocumentId rowId, @NonNull final ViewCloseAction viewCloseAction)
 	{
 		final MyIncludedView view = myIncludedViewByRowId.remove(rowId);
@@ -77,11 +79,13 @@ public class MyView extends AbstractCustomView<MyViewRow>
 		}
 	}
 
+	// rowId 是 MyView 中的 DocumentId
 	public MyIncludedView getMyIncludedViewOrNull(@NonNull final DocumentId rowId)
 	{
 		return myIncludedViewByRowId.get(rowId);
 	}
 
+	// rowId 是 MyView 中的 DocumentId
 	public MyIncludedView computeMyIncludedViewIfAbsent(@NonNull final DocumentId rowId, @NonNull final Supplier<MyIncludedView> myIncludedViewSupplier)
 	{
 		return myIncludedViewByRowId.computeIfAbsent(rowId, id -> myIncludedViewSupplier.get());
