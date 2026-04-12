@@ -220,7 +220,7 @@ public abstract class ViewBasedProcessTemplate extends JavaProcess
 	{
 		final DocumentIdsSelection selectedRowIds = getSelectedRowIds();
 		final DocumentId documentId = selectedRowIds.getSingleDocumentId();
-		return getView().getById(documentId);
+		return getView().getRowDataById(documentId);
 	}
 
 	@OverridingMethodsMustInvokeSuper

@@ -58,7 +58,7 @@ public abstract class HUsToReturnViewBasedProcess extends ViewBasedProcessTempla
 		}
 
 		final DocumentId rowId = selectedRowIds.getSingleDocumentId();
-		return getView().getById(rowId);
+		return getView().getRowDataById(rowId);
 	}
 
 	@Override

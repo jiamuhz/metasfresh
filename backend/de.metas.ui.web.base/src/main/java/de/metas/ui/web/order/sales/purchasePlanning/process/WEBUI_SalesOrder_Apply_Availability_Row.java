@@ -106,11 +106,11 @@ public class WEBUI_SalesOrder_Apply_Availability_Row extends PurchaseViewBasedPr
 
 				.map(availabilityRowId -> ImmutablePair.of( // map to pair (availabilityRowId, availabilityRow)
 						availabilityRowId,
-						view.getById(availabilityRowId.toDocumentId())))
+						view.getRowDataById(availabilityRowId.toDocumentId())))
 				.filter(availabilityRowId2row -> isPositive(availabilityRowId2row.getRight().getQtyToPurchase()))
 
 				.map(availabilityRowId2row -> ImmutablePair.of( // map to pair (lineRow, availabilityRow)
-						view.getById(availabilityRowId2row.getLeft().toLineRowId().toDocumentId()),
+						view.getRowDataById(availabilityRowId2row.getLeft().toLineRowId().toDocumentId()),
 						availabilityRowId2row.getRight()))
 				.filter(lineRow2availabilityRow -> !lineRow2availabilityRow.getLeft().isProcessed())
 

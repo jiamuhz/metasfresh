@@ -220,7 +220,7 @@ public class HUEditorView implements IView
 	}
 
 	@Override
-	public HUEditorRow getById(final DocumentId rowId) throws EntityNotFoundException
+	public HUEditorRow getRowDataById(final DocumentId rowId) throws EntityNotFoundException
 	{
 		return rowsBuffer.getById(rowId);
 	}

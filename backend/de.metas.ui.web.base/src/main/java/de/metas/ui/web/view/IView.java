@@ -164,7 +164,7 @@ public interface IView
 		return ImmutableMap.of();
 	}
 
-	IViewRow getById(DocumentId rowId) throws EntityNotFoundException;
+	IViewRow getRowDataById(DocumentId rowId) throws EntityNotFoundException;
 
 	LookupValuesList getFilterParameterDropdown(String filterId, String filterParameterName, ViewFilterParameterLookupEvaluationCtx ctx);
 

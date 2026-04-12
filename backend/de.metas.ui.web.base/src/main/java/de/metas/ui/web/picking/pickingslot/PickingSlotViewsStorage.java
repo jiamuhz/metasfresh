@@ -120,7 +120,7 @@ public class PickingSlotViewsStorage implements IViewsStorage4GivenWindow
 			return packageableView.computePickingSlotViewIfAbsent(
 					packageableRowId,
 					() -> {
-						final PackageableRow packageableRow = packageableView.getById(packageableRowId);
+						final PackageableRow packageableRow = packageableView.getRowDataById(packageableRowId);
 						final CreateViewRequest createViewRequest = CreateViewRequest
 								.builder(PickingConstants.WINDOWID_PickingSlotView, JSONViewDataType.includedView)
 								.setParentViewId(packageableView.getViewId())

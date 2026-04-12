@@ -114,7 +114,7 @@ public class MyIncludedViewsStorage implements IViewsStorage4GivenWindow
 			return myView.computeMyIncludedViewIfAbsent(
 					myViweRowId,
 					() -> {
-						final MyViewRow myViewRow = myView.getById(myViweRowId);
+						final MyViewRow myViewRow = myView.getRowDataById(myViweRowId);
 						final CreateViewRequest createViewRequest = CreateViewRequest
 								.builder(MyViewConstants.WINDOWID_MyIncludedView, JSONViewDataType.includedView)
 								.setParentViewId(myView.getViewId())

@@ -18,7 +18,6 @@ import de.metas.handlingunits.IHUAssignmentBL;
 import de.metas.handlingunits.IHUAssignmentDAO;
 import de.metas.handlingunits.allocation.transfer.HUTransformService;
 import de.metas.handlingunits.allocation.transfer.HUTransformService.HUsToNewTUsRequest;
-import de.metas.handlingunits.inout.IHUInOutBL;
 import de.metas.handlingunits.model.I_M_HU;
 import de.metas.process.IProcessPrecondition;
 import de.metas.process.Param;
@@ -66,7 +65,7 @@ public class WEBUI_M_HU_ReturnTUsToVendor extends HUEditorProcessTemplate implem
 		}
 
 		final DocumentId rowId = selectedRowIds.getSingleDocumentId();
-		final HUEditorRow huRow = getView().getById(rowId);
+		final HUEditorRow huRow = getView().getRowDataById(rowId);
 		if (huRow.isLU())
 		{
 			if (!huRow.hasIncludedTUs())

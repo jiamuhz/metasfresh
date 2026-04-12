@@ -67,7 +67,7 @@ public class ViewRowAttributesRestController
 
 		final ViewId viewId = ViewId.of(windowIdStr, viewIdStr);
 		final ViewRowAttributesLayout layout = viewsRepo.getView(viewId)
-				.getById(DocumentId.of(rowIdStr))
+				.getRowDataById(DocumentId.of(rowIdStr))
 				.getAttributes()
 				.getLayout();
 
@@ -86,7 +86,7 @@ public class ViewRowAttributesRestController
 		final ViewId viewId = ViewId.of(windowIdStr, viewIdStr);
 		final DocumentId rowId = DocumentId.of(rowIdStr);
 		return viewsRepo.getView(viewId)
-				.getById(rowId)
+				.getRowDataById(rowId)
 				.getAttributes()
 				.toJson(newJSONOptions());
 	}
@@ -105,7 +105,7 @@ public class ViewRowAttributesRestController
 		final DocumentId rowId = DocumentId.of(rowIdStr);
 		return Execution.callInNewExecution("processChanges", () -> {
 			viewsRepo.getView(viewId)
-					.getById(rowId)
+					.getRowDataById(rowId)
 					.getAttributes()
 					.processChanges(events);
 			return JSONDocument.ofEvents(Execution.getCurrentDocumentChangesCollectorOrNull(), newJSONDocumentOptions());
@@ -126,7 +126,7 @@ public class ViewRowAttributesRestController
 		final ViewId viewId = ViewId.of(windowIdStr, viewIdStr);
 		final DocumentId rowId = DocumentId.of(rowIdStr);
 		return viewsRepo.getView(viewId)
-				.getById(rowId)
+				.getRowDataById(rowId)
 				.getAttributes()
 				.getAttributeTypeahead(attributeName, query)
 				.transform(this::toJSONLookupValuesList);
@@ -150,7 +150,7 @@ public class ViewRowAttributesRestController
 		final ViewId viewId = ViewId.of(windowIdStr, viewIdStr);
 		final DocumentId rowId = DocumentId.of(rowIdStr);
 		return viewsRepo.getView(viewId)
-				.getById(rowId)
+				.getRowDataById(rowId)
 				.getAttributes()
 				.getAttributeDropdown(attributeName)
 				.transform(this::toJSONLookupValuesList);

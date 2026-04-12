@@ -95,7 +95,7 @@ public class ViewRowEditRestController
 		final RowEditingContext editingCtx = createRowEditingContext(viewId, rowId);
 		view.patchViewRow(editingCtx, fieldChangeRequests);
 
-		final IViewRow row = view.getById(rowId);
+		final IViewRow row = view.getRowDataById(rowId);
 		final IViewRowOverrides rowOverrides = ViewRowOverridesHelper.getViewRowOverrides(view);
 		final JSONOptions jsonOpts = newJSONOptions();
 

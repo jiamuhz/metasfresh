@@ -150,7 +150,7 @@ public class ASIRestController
 			@NonNull final DocumentId rowId)
 	{
 		final IView view = viewsRepository.getView(viewId);
-		final IViewRow row = view.getById(rowId);
+		final IViewRow row = view.getRowDataById(rowId);
 
 		if (row instanceof WebuiASIEditingInfoAware)
 		{

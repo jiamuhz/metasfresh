@@ -137,7 +137,7 @@ public class PurchaseView implements IEditableView
 	}
 
 	@Override
-	public PurchaseRow getById(final DocumentId rowId) throws EntityNotFoundException
+	public PurchaseRow getRowDataById(final DocumentId rowId) throws EntityNotFoundException
 	{
 		return rows.getById(rowId);
 	}

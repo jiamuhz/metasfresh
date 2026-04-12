@@ -49,7 +49,7 @@ public class WEBUI_M_HU_MoveTUsToDirectWarehouse extends HUEditorProcessTemplate
 		}
 
 		final DocumentId rowId = selectedRowIds.getSingleDocumentId();
-		final HUEditorRow huRow = getView().getById(rowId);
+		final HUEditorRow huRow = getView().getRowDataById(rowId);
 		if (huRow.isLU())
 		{
 			if (!huRow.hasIncludedTUs())

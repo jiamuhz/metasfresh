@@ -237,7 +237,7 @@ public abstract class AbstractCustomView<T extends IViewRow> implements IView
 	}
 
 	@Override
-	public final T getById(@NonNull final DocumentId rowId) throws EntityNotFoundException
+	public final T getRowDataById(@NonNull final DocumentId rowId) throws EntityNotFoundException
 	{
 		return rowsData.getById(rowId);
 	}

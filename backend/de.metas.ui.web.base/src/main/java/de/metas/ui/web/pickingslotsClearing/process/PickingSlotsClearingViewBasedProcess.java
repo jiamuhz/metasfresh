@@ -159,7 +159,7 @@ public abstract class PickingSlotsClearingViewBasedProcess extends ViewBasedProc
 	{
 		final DocumentIdsSelection selectedRowIds = getSelectedPackingHUsRowIds();
 		final DocumentId rowId = selectedRowIds.getSingleDocumentId();
-		return getPackingHUsView().getById(rowId);
+		return getPackingHUsView().getRowDataById(rowId);
 	}
 
 	protected IAllocationRequestBuilder prepareUnloadRequest(@NonNull final I_M_HU fromHU, @NonNull final BigDecimal qtyCU)

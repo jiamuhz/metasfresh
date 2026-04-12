@@ -155,7 +155,7 @@ public class PickingSlotView implements IView
 	}
 
 	@Override
-	public PickingSlotRow getById(@NonNull final DocumentId id) throws EntityNotFoundException
+	public PickingSlotRow getRowDataById(@NonNull final DocumentId id) throws EntityNotFoundException
 	{
 		return rows.getById(id);
 	}

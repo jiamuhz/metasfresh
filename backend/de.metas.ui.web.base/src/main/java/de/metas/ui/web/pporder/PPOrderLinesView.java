@@ -141,7 +141,7 @@ public class PPOrderLinesView implements IView
 		{
 			return null;
 		}
-		final PPOrderLineRow ppOrderLine = getById(documentId);
+		final PPOrderLineRow ppOrderLine = getRowDataById(documentId);
 		if (ppOrderLine == null)
 		{
 			return null; // just be sure to avoid an NPE in here
@@ -199,7 +199,7 @@ public class PPOrderLinesView implements IView
 	}
 
 	@Override
-	public PPOrderLineRow getById(final DocumentId documentId) throws EntityNotFoundException
+	public PPOrderLineRow getRowDataById(final DocumentId documentId) throws EntityNotFoundException
 	{
 		final PPOrderLineRowId ppOrderLineRowId = PPOrderLineRowId.fromDocumentId(documentId);
 		return getData().getById(ppOrderLineRowId);

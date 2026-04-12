@@ -114,13 +114,13 @@ public class PricingConditionsView extends AbstractCustomView<PricingConditionsR
 	@Override
 	public LookupValuesPage getFieldTypeahead(final RowEditingContext ctx, final String fieldName, final String query)
 	{
-		return getById(ctx.getRowId()).getFieldTypeahead(fieldName, query);
+		return getRowDataById(ctx.getRowId()).getFieldTypeahead(fieldName, query);
 	}
 
 	@Override
 	public LookupValuesList getFieldDropdown(final RowEditingContext ctx, final String fieldName)
 	{
-		return getById(ctx.getRowId()).getFieldDropdown(fieldName);
+		return getRowDataById(ctx.getRowId()).getFieldDropdown(fieldName);
 	}
 
 	public boolean hasEditableRow()

@@ -199,7 +199,7 @@ import lombok.NonNull;
 		}
 
 		final PackageableView packageableView = PackageableView.cast(viewsRepo.getView(packageablesViewId));
-		return packageableView.getById(packageableRowId);
+		return packageableView.getRowDataById(packageableRowId);
 	}
 
 	protected PickingSlotRow getPickingSlotRow()
@@ -208,7 +208,7 @@ import lombok.NonNull;
 		final DocumentId pickingSlotRowId = huView.getParentRowId();
 
 		final PickingSlotView pickingSlotView = getPickingSlotView();
-		return pickingSlotView.getById(pickingSlotRowId);
+		return pickingSlotView.getRowDataById(pickingSlotRowId);
 	}
 
 	protected final void invalidateAndGoBackToPickingSlotsView()

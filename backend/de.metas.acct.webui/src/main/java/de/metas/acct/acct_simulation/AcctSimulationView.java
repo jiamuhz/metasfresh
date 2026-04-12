@@ -51,9 +51,9 @@ class AcctSimulationView extends AbstractCustomView<AcctRow> implements IEditabl
 
 	public boolean isReadonly() {return getRowsData().isReadonly();}
 
-	public LookupValuesPage getFieldTypeahead(RowEditingContext ctx, String fieldName, String query) {return getById(ctx.getRowId()).getFieldTypeahead(fieldName, query);}
+	public LookupValuesPage getFieldTypeahead(RowEditingContext ctx, String fieldName, String query) {return getRowDataById(ctx.getRowId()).getFieldTypeahead(fieldName, query);}
 
-	public LookupValuesList getFieldDropdown(RowEditingContext ctx, String fieldName) {return getById(ctx.getRowId()).getFieldDropdown(fieldName);}
+	public LookupValuesList getFieldDropdown(RowEditingContext ctx, String fieldName) {return getRowDataById(ctx.getRowId()).getFieldDropdown(fieldName);}
 
 	@Override
 	public ViewHeaderProperties getHeaderProperties() {return getRowsData().getHeaderProperties();}

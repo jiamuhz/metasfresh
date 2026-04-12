@@ -431,7 +431,7 @@ public final class DefaultView implements IEditableView
 	}
 
 	@Override
-	public IViewRow getById(final DocumentId rowId)
+	public IViewRow getRowDataById(final DocumentId rowId)
 	{
 		assertNotClosed();
 		return getOrRetrieveById(rowId);
@@ -741,7 +741,7 @@ public final class DefaultView implements IEditableView
 	@NonNull
 	private DocumentPath getRowDocumentPath(final DocumentId rowId)
 	{
-		return Check.assumeNotNull(getById(rowId).getDocumentPath(), "No documentPath for {}", rowId);
+		return Check.assumeNotNull(getRowDataById(rowId).getDocumentPath(), "No documentPath for {}", rowId);
 	}
 
 	private void patchDocument(

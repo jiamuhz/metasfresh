@@ -74,7 +74,7 @@ public class MD_Cockpit_DocumentDetail_Display extends MaterialCockpitViewBasedP
 
 		return getSelectedRowIds()
 				.stream()
-				.map(materialCockpitView::getById)
+				.map(materialCockpitView::getRowDataById)
 				.flatMap(row -> row.getAllIncludedCockpitRecordIds().stream())
 				.collect(ImmutableSet.toImmutableSet());
 	}

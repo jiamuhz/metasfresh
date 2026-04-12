@@ -100,7 +100,7 @@ public class WEBUI_M_HU_MoveCUQtyToAnotherLocator extends HUEditorProcessTemplat
 		}
 
 		final DocumentId rowId = selectedRowIds.getSingleDocumentId();
-		final HUEditorRow huRow = getView().getById(rowId);
+		final HUEditorRow huRow = getView().getRowDataById(rowId);
 
 		if (!huRow.isCU())
 		{

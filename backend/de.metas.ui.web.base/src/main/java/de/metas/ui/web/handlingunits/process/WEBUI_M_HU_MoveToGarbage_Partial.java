@@ -77,7 +77,7 @@ public class WEBUI_M_HU_MoveToGarbage_Partial extends HUEditorProcessTemplate im
 		}
 
 		final DocumentId rowId = selectedRowIds.getSingleDocumentId();
-		final HUEditorRow huRow = getView().getById(rowId);
+		final HUEditorRow huRow = getView().getRowDataById(rowId);
 		if (huRow.isLU())
 		{
 			if (!huRow.hasIncludedTUs())

@@ -212,7 +212,7 @@ public class ProcessRestController
 			if (singleDocumentPath == null && viewSelectedRowIds.isSingleDocumentId())
 			{
 				final IView view = viewsRepo.getView(viewId);
-				singleDocumentPath = view.getById(viewSelectedRowIds.getSingleDocumentId()).getDocumentPath();
+				singleDocumentPath = view.getRowDataById(viewSelectedRowIds.getSingleDocumentId()).getDocumentPath();
 			}
 
 			final CreateProcessInstanceRequest request = CreateProcessInstanceRequest.builder()
