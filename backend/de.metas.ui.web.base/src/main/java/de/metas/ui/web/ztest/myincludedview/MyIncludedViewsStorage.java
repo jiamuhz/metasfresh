@@ -57,11 +57,13 @@ public class MyIncludedViewsStorage implements IViewsStorage4GivenWindow
 		final ViewId myIncludedViewId = myIncludedView.getViewId();
 		final MyView myView = getMyViewByMyIncludedViewId(myIncludedViewId);
 
+		// myIncludedViewId 对应的 myView 中的 文档行
 		final DocumentId rowId = extractRowId(myIncludedViewId);
 
 		myView.setMyIncludedView(rowId, MyIncludedView.cast(myIncludedView));
 	}
 
+	// 创建 MyIncludedView 的 ViewId
 	public static ViewId createViewId(@NonNull final ViewId myViewId, @NonNull final DocumentId myViewRowId)
 	{
 		if (!MyViewConstants.WINDOWID_MyView.equals(myViewId.getWindowId()))
@@ -73,18 +75,21 @@ public class MyIncludedViewsStorage implements IViewsStorage4GivenWindow
 		return ViewId.ofParts(MyViewConstants.WINDOWID_MyIncludedView, myViewId.getViewIdPart(), myViewRowId.toJson());
 	}
 
+	// 获取 myIncludedViewId 对应的 MyView 的 ViewId
 	private static ViewId extractMyViewId(final ViewId myIncludedViewId)
 	{
 		final String viewIdPart = myIncludedViewId.getViewIdPart();
 		return ViewId.ofParts(MyViewConstants.WINDOWID_MyView, viewIdPart);
 	}
 
+	// 获取 myIncludedViewId 对应的 MyView 中的 文档行
 	private static DocumentId extractRowId(@NonNull final ViewId myIncludedViewId)
 	{
 		final String rowIdStr = myIncludedViewId.getPart(2);
 		return DocumentId.of(rowIdStr);
 	}
 
+	// 获取 myIncludedViewId 对应的 MyView
 	private MyView getMyViewByMyIncludedViewId(final ViewId myIncludedViewId)
 	{
 		final ViewId myViewId = extractMyViewId(myIncludedViewId);
