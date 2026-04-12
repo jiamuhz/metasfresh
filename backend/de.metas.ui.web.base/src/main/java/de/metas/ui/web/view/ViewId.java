@@ -22,6 +22,14 @@ import java.util.Objects;
 @EqualsAndHashCode
 public final class ViewId
 {
+	private static final String SEPARATOR = "-";
+	private static final Splitter SPLITTER = Splitter.on(SEPARATOR).trimResults();
+	private static final Joiner JOINER = Joiner.on(SEPARATOR);
+
+	private final WindowId windowId;
+	private final String viewId;
+	private final ImmutableList<String> parts;
+
 	public static ViewId of(@Nullable final String windowIdStr, @NonNull final String viewIdStr)
 	{
 		final WindowId expectedWindowId = windowIdStr == null ? null : WindowId.fromJson(windowIdStr);
@@ -92,14 +100,6 @@ public final class ViewId
 		final String viewIdStr = JOINER.join(parts);
 		return new ViewId(viewIdStr, parts, windowId);
 	}
-
-	private static final String SEPARATOR = "-";
-	private static final Splitter SPLITTER = Splitter.on(SEPARATOR).trimResults();
-	private static final Joiner JOINER = Joiner.on(SEPARATOR);
-
-	private final WindowId windowId;
-	private final String viewId;
-	private final ImmutableList<String> parts;
 
 	private ViewId(
 			@NonNull final String viewIdStr,

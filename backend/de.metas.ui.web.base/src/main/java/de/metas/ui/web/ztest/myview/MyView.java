@@ -62,10 +62,10 @@ public class MyView extends AbstractCustomView<MyViewRow>
 			//closePickingCandidatesFromRackSystemPickingSlots();
 		}
 	}
-
-	public void setMyIncludedView(@NonNull final DocumentId rowId, @NonNull final MyIncludedView pickingSlotView)
+	
+	public void setMyIncludedView(@NonNull final DocumentId rowId, @NonNull final MyIncludedView myIncludedView)
 	{
-		myIncludedViewByRowId.put(rowId, pickingSlotView);
+		myIncludedViewByRowId.put(rowId, myIncludedView);
 	}
 
 	public void removeMyIncludedView(@NonNull final DocumentId rowId, @NonNull final ViewCloseAction viewCloseAction)
