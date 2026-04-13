@@ -59,35 +59,4 @@ public class MyIncludedView extends AbstractCustomView<MyIncludedViewRow>
 			//closePickingCandidatesFromRackSystemPickingSlots();
 		}
 	}
-
-	/*
-	public void setPickingSlotView(@NonNull final DocumentId rowId, @NonNull final PickingSlotView pickingSlotView)
-	{
-		pickingSlotsViewByRowId.put(rowId, pickingSlotView);
-	}
-
-	public void removePickingSlotView(@NonNull final DocumentId rowId, @NonNull final ViewCloseAction viewCloseAction)
-	{
-		final PickingSlotView view = pickingSlotsViewByRowId.remove(rowId);
-		if (view != null)
-		{
-			view.close(viewCloseAction);
-		}
-	}
-
-	public PickingSlotView getPickingSlotViewOrNull(@NonNull final DocumentId rowId)
-	{
-		return pickingSlotsViewByRowId.get(rowId);
-	}
-
-	public PickingSlotView computePickingSlotViewIfAbsent(@NonNull final DocumentId rowId, @NonNull final Supplier<PickingSlotView> pickingSlotViewFactory)
-	{
-		return pickingSlotsViewByRowId.computeIfAbsent(rowId, id -> pickingSlotViewFactory.get());
-	}
-
-	public void invalidatePickingSlotViews()
-	{
-		pickingSlotsViewByRowId.values().forEach(PickingSlotView::invalidateAll);
-	}
-	*/
 }

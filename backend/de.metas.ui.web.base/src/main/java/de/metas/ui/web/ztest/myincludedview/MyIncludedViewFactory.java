@@ -62,7 +62,7 @@ public class MyIncludedViewFactory implements IViewFactory
 
 		return MyIncludedView.builder()
 				.viewId(viewId)
-			  .description( ConstantTranslatableString.of("MySubView") )
+			  .description( ConstantTranslatableString.of("MyIncludedView") )
 				.rowsData(rowsData)
 				.build();
 	}
