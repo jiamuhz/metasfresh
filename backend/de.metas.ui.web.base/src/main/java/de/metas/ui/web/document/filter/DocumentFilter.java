@@ -38,6 +38,16 @@ import java.util.function.IntFunction;
 @ToString
 public final class DocumentFilter
 {
+	@Getter
+	private final String filterId;
+	private final ITranslatableString caption;
+
+	private final ImmutableList<DocumentFilterParam> parameters;
+	private final ImmutableMap<String, DocumentFilterParam> parametersByName;
+	private final ImmutableSet<String> internalParameterNames;
+	@Getter
+	private final boolean facetFilter;
+
 	public static DocumentFilter singleParameterFilter(
 			@NonNull final String filterId,
 			final String fieldName,
@@ -93,16 +103,6 @@ public final class DocumentFilter
 						.build())
 				.build();
 	}
-
-	@Getter
-	private final String filterId;
-	private final ITranslatableString caption;
-
-	private final ImmutableList<DocumentFilterParam> parameters;
-	private final ImmutableMap<String, DocumentFilterParam> parametersByName;
-	private final ImmutableSet<String> internalParameterNames;
-	@Getter
-	private final boolean facetFilter;
 
 	@Builder(toBuilder = true)
 	private DocumentFilter(

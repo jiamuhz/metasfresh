@@ -25,6 +25,10 @@ import java.util.stream.Stream;
 @ToString
 public class DocumentFilterList
 {
+	public static final DocumentFilterList EMPTY = new DocumentFilterList(ImmutableMap.of());
+
+	private final ImmutableMap<String, DocumentFilter> filtersById;
+
 	public static DocumentFilterList ofList(@Nullable final Collection<DocumentFilter> list)
 	{
 		return list != null && !list.isEmpty()
@@ -58,10 +62,6 @@ public class DocumentFilterList
 	{
 		return GuavaCollectors.collectUsingListAccumulator(DocumentFilterList::ofList);
 	}
-
-	public static final DocumentFilterList EMPTY = new DocumentFilterList(ImmutableMap.of());
-
-	private final ImmutableMap<String, DocumentFilter> filtersById;
 
 	private DocumentFilterList(@NonNull final ImmutableMap<String, DocumentFilter> filtersById)
 	{
