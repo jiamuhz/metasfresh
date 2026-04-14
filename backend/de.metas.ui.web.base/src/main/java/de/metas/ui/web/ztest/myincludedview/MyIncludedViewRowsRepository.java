@@ -47,8 +47,8 @@ public class MyIncludedViewRowsRepository
 
 	private List<MyIncludedViewRow> retrieveRowsByShipmentScheduleIds(final ViewId viewId)
 	{
-		MyIncludedViewRow myIncludedViewRow = createMyRow(viewId,  550, "apple", "yellow");
-		MyIncludedViewRow myIncludedViewRow2 = createMyRow(viewId, 670, "strawberry", "red");
+		MyIncludedViewRow myIncludedViewRow = createMyRow(viewId,  1000013, "apple", "yellow");
+		MyIncludedViewRow myIncludedViewRow2 = createMyRow(viewId, 1000014, "strawberry", "red");
 		List<MyIncludedViewRow> rows = ImmutableList.of(myIncludedViewRow, myIncludedViewRow2);
 		return rows;
 	}

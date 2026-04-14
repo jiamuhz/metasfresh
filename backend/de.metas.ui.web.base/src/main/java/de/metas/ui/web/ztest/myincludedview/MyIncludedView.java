@@ -1,7 +1,9 @@
 package de.metas.ui.web.ztest.myincludedview;
 
+import com.google.common.collect.ImmutableList;
 import de.metas.i18n.ITranslatableString;
 import de.metas.inoutcandidate.model.I_M_Packageable_V;
+import de.metas.process.RelatedProcessDescriptor;
 import de.metas.ui.web.document.filter.provider.NullDocumentFilterDescriptorsProvider;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.ViewCloseAction;
@@ -12,6 +14,7 @@ import lombok.Builder;
 import lombok.NonNull;
 
 import javax.annotation.Nullable;
+import java.util.List;
 
 
 /**
@@ -24,17 +27,19 @@ public class MyIncludedView extends AbstractCustomView<MyIncludedViewRow>
 		return (MyIncludedView)view;
 	}
 
-
-	//private final ConcurrentHashMap<DocumentId, PickingSlotView> pickingSlotsViewByRowId = new ConcurrentHashMap<>();
+	private final List<RelatedProcessDescriptor> additionalRelatedProcessDescriptors;
 
 	@Builder
 	private MyIncludedView(
-			@NonNull final ViewId viewId,
-			@Nullable final ITranslatableString description,
-			@NonNull final MyIncludedViewRowsData rowsData)
+		@NonNull final ViewId viewId,
+		@Nullable final ITranslatableString description,
+		@NonNull final MyIncludedViewRowsData rowsData,
+		@Nullable final List<RelatedProcessDescriptor> additionalRelatedProcessDescriptors
+	)
 	{
 		super(viewId, description, rowsData, NullDocumentFilterDescriptorsProvider.instance);
-	}
+    this.additionalRelatedProcessDescriptors = additionalRelatedProcessDescriptors;
+  }
 
 	@Override
 	protected MyIncludedViewRowsData getRowsData()
@@ -58,5 +63,11 @@ public class MyIncludedView extends AbstractCustomView<MyIncludedViewRow>
 		{
 			//closePickingCandidatesFromRackSystemPickingSlots();
 		}
+	}
+
+	@Override
+	public List<RelatedProcessDescriptor> getAdditionalRelatedProcessDescriptors()
+	{
+		return additionalRelatedProcessDescriptors;
 	}
 }
