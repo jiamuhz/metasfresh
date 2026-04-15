@@ -76,10 +76,6 @@ public final class ImmutableDocumentFilterDescriptorsProvider implements Documen
 	}
 
 	//
-	//
-	//
-	//
-	//
 
 	public static class Builder
 	{

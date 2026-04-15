@@ -18,6 +18,8 @@ import java.util.Optional;
 @ToString
 final class CompositeDocumentFilterDescriptorsProvider implements DocumentFilterDescriptorsProvider
 {
+	private final ImmutableList<DocumentFilterDescriptorsProvider> providers;
+
 	public static DocumentFilterDescriptorsProvider compose(@NonNull final List<DocumentFilterDescriptorsProvider> providers)
 	{
 		if (providers.isEmpty())
@@ -40,8 +42,6 @@ final class CompositeDocumentFilterDescriptorsProvider implements DocumentFilter
 
 		return new CompositeDocumentFilterDescriptorsProvider(nonNullProviders);
 	}
-
-	private final ImmutableList<DocumentFilterDescriptorsProvider> providers;
 
 	private CompositeDocumentFilterDescriptorsProvider(@NonNull final ImmutableList<DocumentFilterDescriptorsProvider> providers)
 	{
