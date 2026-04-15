@@ -18,6 +18,8 @@ import lombok.NonNull;
 @Immutable
 public final class ImmutableDocumentFilterDescriptorsProvider implements DocumentFilterDescriptorsProvider
 {
+	private final ImmutableMap<String, DocumentFilterDescriptor> descriptorsByFilterId;
+
 	public static ImmutableDocumentFilterDescriptorsProvider of(final List<DocumentFilterDescriptor> descriptors)
 	{
 		if (descriptors == null || descriptors.isEmpty())
@@ -42,8 +44,6 @@ public final class ImmutableDocumentFilterDescriptorsProvider implements Documen
 	}
 
 	private static final ImmutableDocumentFilterDescriptorsProvider EMPTY = new ImmutableDocumentFilterDescriptorsProvider();
-
-	private final ImmutableMap<String, DocumentFilterDescriptor> descriptorsByFilterId;
 
 	private ImmutableDocumentFilterDescriptorsProvider(final List<DocumentFilterDescriptor> descriptors)
 	{
