@@ -34,7 +34,7 @@ public interface SqlEntityBinding
 		return getFieldByFieldName(fieldName).getSqlOrderBy();
 	}
 
-	default DocumentFilterDescriptorsProvider getFilterDescriptors()
+	default DocumentFilterDescriptorsProvider getFilterDescriptorsProvider()
 	{
 		throw new UnsupportedOperationException();
 	}

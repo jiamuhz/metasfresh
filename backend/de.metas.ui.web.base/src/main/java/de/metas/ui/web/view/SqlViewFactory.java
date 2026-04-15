@@ -57,7 +57,7 @@ public class SqlViewFactory implements IViewFactory
 {
 	private static final Logger logger = LogManager.getLogger(SqlViewFactory.class);
 	private final WebuiDocumentReferencesService webuiDocumentReferencesService;
-	private final ViewLayoutFactory viewLayouts;
+	private final ViewLayoutFactory viewLayoutsFactory;
 	private final CompositeDefaultViewProfileIdProvider defaultProfileIdProvider;
 	private final ViewHeaderPropertiesProviderMap headerPropertiesProvider;
 
@@ -88,7 +88,7 @@ public class SqlViewFactory implements IViewFactory
 				.viewInvalidationAdvisors(viewInvalidationAdvisors)
 				.build();
 
-		this.viewLayouts = ViewLayoutFactory.builder()
+		this.viewLayoutsFactory = ViewLayoutFactory.builder()
 				.documentDescriptorFactory(documentDescriptorFactory)
 				.viewBindingsFactory(viewBindingsFactory)
 				.viewCustomizers(viewCustomizers)
@@ -110,7 +110,7 @@ public class SqlViewFactory implements IViewFactory
 	@Override
 	public List<ViewProfile> getAvailableProfiles(final WindowId windowId)
 	{
-		return viewLayouts.getAvailableProfiles(windowId);
+		return viewLayoutsFactory.getAvailableProfiles(windowId);
 	}
 
 	public void setDefaultProfileId(@NonNull final WindowId windowId, final ViewProfileId profileId)
@@ -125,7 +125,7 @@ public class SqlViewFactory implements IViewFactory
 			@Nullable final ViewProfileId profileId)
 	{
 		final ViewProfileId profileIdEffective = !ViewProfileId.isNull(profileId) ? profileId : defaultProfileIdProvider.getDefaultProfileIdByWindowId(windowId);
-		return viewLayouts.getViewLayout(windowId, viewDataType, profileIdEffective);
+		return viewLayoutsFactory.getViewLayout(windowId, viewDataType, profileIdEffective);
 	}
 
 	@Override
@@ -135,7 +135,7 @@ public class SqlViewFactory implements IViewFactory
 
 		final JSONViewDataType viewType = request.getViewType();
 		final ViewProfileId profileId = !ViewProfileId.isNull(request.getProfileId()) ? request.getProfileId() : defaultProfileIdProvider.getDefaultProfileIdByWindowId(windowId);
-		final SqlViewBinding sqlViewBinding = viewLayouts.getViewBinding(windowId, viewType.getRequiredFieldCharacteristic(), profileId);
+		final SqlViewBinding sqlViewBinding = viewLayoutsFactory.getViewBinding(windowId, viewType.getRequiredFieldCharacteristic(), profileId);
 		final SqlViewDataRepository viewDataRepository = new SqlViewDataRepository(sqlViewBinding);
 
 		final DefaultView.Builder viewBuilder = DefaultView.builder(viewDataRepository)
@@ -161,7 +161,7 @@ public class SqlViewFactory implements IViewFactory
 
 		if (request.isUseAutoFilters())
 		{
-			final List<DocumentFilter> autoFilters = createAutoFilters(sqlViewBinding.getViewFilterDescriptors().getAll());
+			final List<DocumentFilter> autoFilters = createAutoFilters(sqlViewBinding.getViewFilterDescriptorsProvider().getAll());
 			viewBuilder.addFiltersIfAbsent(autoFilters);
 		}
 
@@ -304,7 +304,7 @@ public class SqlViewFactory implements IViewFactory
 
 	public SqlViewKeyColumnNamesMap getKeyColumnNamesMap(@NonNull final WindowId windowId)
 	{
-		final SqlViewBinding sqlBindings = viewLayouts.getViewBinding(windowId, DocumentFieldDescriptor.Characteristic.PublicField, ViewProfileId.NULL);
+		final SqlViewBinding sqlBindings = viewLayoutsFactory.getViewBinding(windowId, DocumentFieldDescriptor.Characteristic.PublicField, ViewProfileId.NULL);
 		return sqlBindings.getSqlViewKeyColumnNamesMap();
 	}
 

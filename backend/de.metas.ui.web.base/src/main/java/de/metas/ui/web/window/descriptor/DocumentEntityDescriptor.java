@@ -144,7 +144,7 @@ public class DocumentEntityDescriptor
 	//
 	// View related
 	@Getter
-	private final DocumentFilterDescriptorsProvider filterDescriptors;
+	private final DocumentFilterDescriptorsProvider filterDescriptorsProvider;
 	@Getter
 	private final boolean refreshViewOnChangeEvents;
 
@@ -201,7 +201,7 @@ public class DocumentEntityDescriptor
 
 		//
 		// View
-		filterDescriptors = builder.createFilterDescriptors();
+		filterDescriptorsProvider = builder.createFilterDescriptorsProvider();
 		refreshViewOnChangeEvents = builder.isRefreshViewOnChangeEvents();
 		// legacy:
 		adTabId = builder.getAdTabId();
@@ -1092,7 +1092,7 @@ public class DocumentEntityDescriptor
 			return calloutExecutorBuilder.build();
 		}
 
-		private DocumentFilterDescriptorsProvider createFilterDescriptors()
+		private DocumentFilterDescriptorsProvider createFilterDescriptorsProvider()
 		{
 			final DocumentFilterDescriptorsProvidersService filterDescriptorsProvidersService = this.filterDescriptorsProvidersService != null
 					? this.filterDescriptorsProvidersService

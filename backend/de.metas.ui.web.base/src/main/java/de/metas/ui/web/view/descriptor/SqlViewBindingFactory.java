@@ -120,10 +120,10 @@ public class SqlViewBindingFactory
 		final DocumentEntityDescriptor entityDescriptor = documentDescriptorFactory.getDocumentEntityDescriptor(windowId);
 		final Set<String> displayFieldNames = entityDescriptor.getFieldNamesWithCharacteristic(key.getRequiredFieldCharacteristic());
 		final SqlDocumentEntityDataBindingDescriptor entityBinding = SqlDocumentEntityDataBindingDescriptor.cast(entityDescriptor.getDataBinding());
-		final DocumentFilterDescriptorsProvider filterDescriptors = entityDescriptor.getFilterDescriptors();
+		final DocumentFilterDescriptorsProvider filterDescriptorsProvider = entityDescriptor.getFilterDescriptorsProvider();
 
 		final SqlViewBinding.Builder builder = createBuilderForEntityBindingAndFieldNames(entityBinding, displayFieldNames)
-				.filterDescriptors(filterDescriptors)
+				.filterDescriptorsProvider(filterDescriptorsProvider)
 				.refreshViewOnChangeEvents(entityDescriptor.isRefreshViewOnChangeEvents())
 				.viewInvalidationAdvisor(getViewInvalidationAdvisor(windowId))
 				.queryIfNoFilters(entityDescriptor.isQueryIfNoFilters());

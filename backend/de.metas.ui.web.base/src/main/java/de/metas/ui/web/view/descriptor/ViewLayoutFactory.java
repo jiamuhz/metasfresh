@@ -60,7 +60,7 @@ public class ViewLayoutFactory
 				viewLayoutKey.getWindowId(),
 				viewLayoutKey.getViewDataType().getRequiredFieldCharacteristic(),
 				viewLayoutKey.getProfileId());
-		final Collection<DocumentFilterDescriptor> filters = sqlViewBinding.getViewFilterDescriptors().getAll();
+		final Collection<DocumentFilterDescriptor> filters = sqlViewBinding.getViewFilterDescriptorsProvider().getAll();
 		final boolean hasTreeSupport = sqlViewBinding.hasGroupingFields();
 
 		final ViewLayout.ChangeBuilder viewLayoutBuilder = viewLayoutOrig.toBuilder()

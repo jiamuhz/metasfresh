@@ -69,7 +69,7 @@ public class SqlViewBinding implements SqlEntityBinding
 	private final DocumentQueryOrderByList defaultOrderBys;
 	private final OrderByFieldNameAliasMap orderByFieldNameAliasMap;
 
-	private final DocumentFilterDescriptorsProvider filterDescriptors;
+	private final DocumentFilterDescriptorsProvider filterDescriptorsProvider;
 	private final SqlDocumentFilterConvertersList filterConverters;
 	@Getter
 	private final boolean refreshViewOnChangeEvents;
@@ -136,7 +136,7 @@ public class SqlViewBinding implements SqlEntityBinding
 		orderByFieldNameAliasMap = builder.buildOrderByFieldNameAliasMap();
 		defaultOrderBys = builder.getDefaultOrderBys();
 
-		filterDescriptors = builder.getViewFilterDescriptors();
+		filterDescriptorsProvider = builder.getViewFilterDescriptors();
 		filterConverters = builder.buildViewFilterConverters();
 
 		filterConverterDecorator = Optional.ofNullable(builder.sqlDocumentFilterConverterDecorator);
@@ -212,15 +212,14 @@ public class SqlViewBinding implements SqlEntityBinding
 		return rowCustomizer;
 	}
 
-	@Override
-	public DocumentFilterDescriptorsProvider getFilterDescriptors()
+	public DocumentFilterDescriptorsProvider getFilterDescriptorsProvider()
 	{
-		return getViewFilterDescriptors();
+		return getViewFilterDescriptorsProvider();
 	}
 
-	public DocumentFilterDescriptorsProvider getViewFilterDescriptors()
+	public DocumentFilterDescriptorsProvider getViewFilterDescriptorsProvider()
 	{
-		return filterDescriptors;
+		return filterDescriptorsProvider;
 	}
 
 	@Override
@@ -339,7 +338,7 @@ public class SqlViewBinding implements SqlEntityBinding
 		@Nullable
 		private ArrayList<DocumentQueryOrderBy> defaultOrderBys;
 		private final OrderByFieldNameAliasMap.OrderByFieldNameAliasMapBuilder orderByFieldNameAliasMap = OrderByFieldNameAliasMap.builder();
-		private DocumentFilterDescriptorsProvider filterDescriptors = NullDocumentFilterDescriptorsProvider.instance;
+		private DocumentFilterDescriptorsProvider filterDescriptorsProvider = NullDocumentFilterDescriptorsProvider.instance;
 		private final SqlDocumentFilterConvertersList.Builder filterConverters = SqlDocumentFilterConverters.listBuilder();
 		private boolean refreshViewOnChangeEvents;
 
@@ -508,15 +507,15 @@ public class SqlViewBinding implements SqlEntityBinding
 			return this;
 		}
 
-		public Builder filterDescriptors(@NonNull final DocumentFilterDescriptorsProvider filterDescriptors)
+		public Builder filterDescriptorsProvider(@NonNull final DocumentFilterDescriptorsProvider filterDescriptorsProvider)
 		{
-			this.filterDescriptors = filterDescriptors;
+			this.filterDescriptorsProvider = filterDescriptorsProvider;
 			return this;
 		}
 
 		private DocumentFilterDescriptorsProvider getViewFilterDescriptors()
 		{
-			return filterDescriptors;
+			return filterDescriptorsProvider;
 		}
 
 		private SqlDocumentFilterConvertersList buildViewFilterConverters()

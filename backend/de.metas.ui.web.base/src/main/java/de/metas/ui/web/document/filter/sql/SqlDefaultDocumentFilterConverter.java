@@ -159,7 +159,7 @@ import java.util.List;
 
 	private DocumentFilterParamDescriptor getParameterDescriptor(final String filterId, final String parameterName)
 	{
-		return entityBinding.getFilterDescriptors().getByFilterId(filterId).getParameterByName(parameterName);
+		return entityBinding.getFilterDescriptorsProvider().getByFilterId(filterId).getParameterByName(parameterName);
 	}
 
 	private static IQueryFilterModifier extractFieldModifier(final DocumentFieldWidgetType widgetType)

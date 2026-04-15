@@ -38,7 +38,7 @@ public final class DocumentFilterDescriptorsProvidersService
 		final ImmutableList<DocumentFilterDescriptorsProvider> providers = providerFactories
 				.stream()
 				.filter(DocumentFilterDescriptorsProviderFactory::isActive)
-				.map(provider -> provider.createFiltersProvider(context, fields))
+				.map(providerFactory -> providerFactory.createFiltersProvider(context, fields))
 				.filter(NullDocumentFilterDescriptorsProvider::isNotNull)
 				.collect(ImmutableList.toImmutableList());
 

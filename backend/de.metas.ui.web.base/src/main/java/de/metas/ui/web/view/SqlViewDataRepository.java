@@ -86,7 +86,7 @@ class SqlViewDataRepository implements IViewDataRepository
 		keyColumnNamesMap = sqlBindings.getSqlViewKeyColumnNamesMap();
 		widgetTypesByFieldName = sqlBindings.getMapFieldNameVsWidgetType();
 		sqlViewSelect = sqlBindings.getSqlViewSelect();
-		viewFilterDescriptors = sqlBindings.getViewFilterDescriptors();
+		viewFilterDescriptors = sqlBindings.getViewFilterDescriptorsProvider();
 		viewRowIdsOrderedSelectionFactory = SqlViewRowIdsOrderedSelectionFactory.of(sqlBindings);
 		defaultOrderBys = sqlBindings.getDefaultOrderBys();
 

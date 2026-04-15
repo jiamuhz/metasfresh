@@ -251,7 +251,7 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 		// View filters and converters
 		{
 			sqlViewBinding
-					.filterDescriptors(createFilterDescriptorsProvider())
+					.filterDescriptorsProvider(createFilterDescriptorsProvider())
 					.filterConverter(HUBarcodeSqlDocumentFilterConverter.instance)
 					.filterConverter(HUIdsFilterHelper.SQL_DOCUMENT_FILTER_CONVERTER)
 					.filterConverters(createFilterConverters());
@@ -269,14 +269,14 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 
 	protected final DocumentFilterDescriptorsProvider getViewFilterDescriptors()
 	{
-		return getSqlViewBinding().getViewFilterDescriptors();
+		return getSqlViewBinding().getViewFilterDescriptorsProvider();
 	}
 
 	@OverridingMethodsMustInvokeSuper
 	protected DocumentFilterDescriptorsProvider createFilterDescriptorsProvider()
 	{
 		final DocumentEntityDescriptor huEntityDescriptor = getHUEntityDescriptor();
-		final Collection<DocumentFilterDescriptor> huStandardFilters = huEntityDescriptor.getFilterDescriptors().getAll();
+		final Collection<DocumentFilterDescriptor> huStandardFilters = huEntityDescriptor.getFilterDescriptorsProvider().getAll();
 		return ImmutableDocumentFilterDescriptorsProvider.builder()
 				.addDescriptors(huStandardFilters)
 				.addDescriptor(HUBarcodeSqlDocumentFilterConverter.createDocumentFilterDescriptor())
