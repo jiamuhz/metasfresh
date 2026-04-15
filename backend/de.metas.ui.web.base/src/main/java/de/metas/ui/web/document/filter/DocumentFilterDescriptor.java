@@ -209,7 +209,11 @@ public final class DocumentFilterDescriptor
 		private DocumentFilterInlineRenderMode inlineRenderMode;
 
 		private PanelLayoutType parametersLayoutType;
+
+		// 用户可配置的参数
 		private final List<DocumentFilterParamDescriptor.Builder> parameters = new ArrayList<>();
+
+		// 内部固定参数
 		private final List<DocumentFilterParam> internalParameters = new ArrayList<>();
 
 		private boolean facetFilter;
