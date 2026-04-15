@@ -20,7 +20,7 @@ import javax.annotation.Nullable;
 import java.util.Collection;
 import java.util.List;
 
-public class ViewLayoutFactory
+public class SqlViewLayoutFactory
 {
 	private final DocumentDescriptorFactory documentDescriptorFactory;
 	private final SqlViewBindingFactory viewBindingsFactory;
@@ -30,7 +30,7 @@ public class ViewLayoutFactory
 	private final transient CCache<ViewLayoutKey, ViewLayout> cache = CCache.newCache("SqlViewLayouts", 20, 0);
 
 	@Builder
-	private ViewLayoutFactory(
+	private SqlViewLayoutFactory(
 			@NonNull final DocumentDescriptorFactory documentDescriptorFactory,
 			@NonNull final SqlViewBindingFactory viewBindingsFactory,
 			@NonNull final SqlViewCustomizerMap viewCustomizers,

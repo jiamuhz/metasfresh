@@ -24,7 +24,7 @@ import de.metas.ui.web.view.descriptor.SqlViewBindingFactory;
 import de.metas.ui.web.view.descriptor.SqlViewCustomizerMap;
 import de.metas.ui.web.view.descriptor.SqlViewKeyColumnNamesMap;
 import de.metas.ui.web.view.descriptor.ViewLayout;
-import de.metas.ui.web.view.descriptor.ViewLayoutFactory;
+import de.metas.ui.web.view.descriptor.SqlViewLayoutFactory;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.DocumentPath;
@@ -57,7 +57,7 @@ public class SqlViewFactory implements IViewFactory
 {
 	private static final Logger logger = LogManager.getLogger(SqlViewFactory.class);
 	private final WebuiDocumentReferencesService webuiDocumentReferencesService;
-	private final ViewLayoutFactory viewLayoutsFactory;
+	private final SqlViewLayoutFactory viewLayoutsFactory;
 	private final CompositeDefaultViewProfileIdProvider defaultProfileIdProvider;
 	private final ViewHeaderPropertiesProviderMap headerPropertiesProvider;
 
@@ -88,7 +88,7 @@ public class SqlViewFactory implements IViewFactory
 				.viewInvalidationAdvisors(viewInvalidationAdvisors)
 				.build();
 
-		this.viewLayoutsFactory = ViewLayoutFactory.builder()
+		this.viewLayoutsFactory = SqlViewLayoutFactory.builder()
 				.documentDescriptorFactory(documentDescriptorFactory)
 				.viewBindingsFactory(viewBindingsFactory)
 				.viewCustomizers(viewCustomizers)
