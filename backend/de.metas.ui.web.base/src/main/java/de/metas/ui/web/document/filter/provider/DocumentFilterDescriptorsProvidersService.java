@@ -31,7 +31,7 @@ public final class DocumentFilterDescriptorsProvidersService
 		logger.info("Provider factories: {}", providerFactories);
 	}
 
-	public DocumentFilterDescriptorsProvider createFiltersProvider(
+	public DocumentFilterDescriptorsProvider createFilterDescriptorsProvider(
 			@NonNull final CreateFiltersProviderContext context,
 			@NonNull final Collection<DocumentFieldDescriptor> fields)
 	{

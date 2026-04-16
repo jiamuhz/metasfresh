@@ -57,7 +57,7 @@ import java.util.stream.Stream;
 
 
 
-class SqlViewDataRepository implements IViewDataRepository
+class SqlViewDataRepository implements ISqlViewDataRepository
 {
 	private static final Logger logger = LogManager.getLogger(SqlViewDataRepository.class);
 

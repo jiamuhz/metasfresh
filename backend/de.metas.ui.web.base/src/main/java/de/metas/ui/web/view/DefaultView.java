@@ -226,7 +226,7 @@ public final class DefaultView implements IEditableView
 	}
 
 	/**
-	 * Returns the table name as provided by our internal {@link IViewDataRepository}.
+	 * Returns the table name as provided by our internal {@link ISqlViewDataRepository}.
 	 */
 	@Override
 	public String getTableNameOrNull(@Nullable final DocumentId ignored)

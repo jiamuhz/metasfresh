@@ -3,11 +3,8 @@ package de.metas.ui.web.document.filter.provider.standard;
 import com.google.common.collect.ImmutableList;
 import de.metas.i18n.IMsgBL;
 import de.metas.i18n.TranslatableStrings;
-import de.metas.ui.web.view.DefaultView;
-import de.metas.ui.web.view.IViewDataRepository;
-import de.metas.ui.web.view.IViewsRepository;
-import de.metas.ui.web.view.ViewEvaluationCtx;
-import de.metas.ui.web.view.ViewId;
+import de.metas.ui.web.view.*;
+import de.metas.ui.web.view.ISqlViewDataRepository;
 import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.LookupValue.StringLookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
@@ -131,7 +128,7 @@ final class FacetsFilterLookupDescriptor extends SimpleLookupDescriptorTemplate
 
 	private FacetFilterViewCache createFacetFilterViewCache(final DefaultView view)
 	{
-		final IViewDataRepository viewDataRepository = view.getViewDataRepository();
+		final ISqlViewDataRepository viewDataRepository = view.getViewDataRepository();
 		final ViewEvaluationCtx viewEvalCtx = view.getViewEvaluationCtx();
 		final String selectionId = view.getDefaultSelectionBeforeFacetsFiltering().getSelectionId();
 

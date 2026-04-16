@@ -1108,7 +1108,7 @@ public class DocumentEntityDescriptor
 					.isAutodetectDefaultDateFilter(isAutodetectDefaultDateFilter())
 					.build();
 
-			return filterDescriptorsProvidersService.createFiltersProvider(context, fields);
+			return filterDescriptorsProvidersService.createFilterDescriptorsProvider(context, fields);
 		}
 
 		public Builder setFilterDescriptorsProvidersService(final DocumentFilterDescriptorsProvidersService filterDescriptorsProvidersService)

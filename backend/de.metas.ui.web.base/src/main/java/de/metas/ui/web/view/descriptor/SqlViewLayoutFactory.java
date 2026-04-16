@@ -23,8 +23,8 @@ import java.util.List;
 public class SqlViewLayoutFactory
 {
 	private final DocumentDescriptorFactory documentDescriptorFactory;
-	private final SqlViewBindingFactory viewBindingsFactory;
-	private final SqlViewCustomizerMap viewCustomizers;
+	private final SqlViewBindingFactory sqlViewBindingsFactory;
+	private final SqlViewCustomizerMap sqlViewCustomizers;
 	private final GeoLocationDocumentService geoLocationDocumentService;
 
 	private final transient CCache<ViewLayoutKey, ViewLayout> cache = CCache.newCache("SqlViewLayouts", 20, 0);
@@ -32,13 +32,13 @@ public class SqlViewLayoutFactory
 	@Builder
 	private SqlViewLayoutFactory(
 			@NonNull final DocumentDescriptorFactory documentDescriptorFactory,
-			@NonNull final SqlViewBindingFactory viewBindingsFactory,
-			@NonNull final SqlViewCustomizerMap viewCustomizers,
+			@NonNull final SqlViewBindingFactory sqlViewBindingsFactory,
+			@NonNull final SqlViewCustomizerMap sqlViewCustomizers,
 			@NonNull final GeoLocationDocumentService geoLocationDocumentService)
 	{
 		this.documentDescriptorFactory = documentDescriptorFactory;
-		this.viewBindingsFactory = viewBindingsFactory;
-		this.viewCustomizers = viewCustomizers;
+		this.sqlViewBindingsFactory = sqlViewBindingsFactory;
+		this.sqlViewCustomizers = sqlViewCustomizers;
 		this.geoLocationDocumentService = geoLocationDocumentService;
 	}
 
@@ -72,7 +72,7 @@ public class SqlViewLayoutFactory
 		//
 		// Customize the view layout
 		// NOTE to developer: keep it last, right before build().
-		final SqlViewCustomizer sqlViewCustomizer = viewCustomizers.getOrNull(viewLayoutKey.getWindowId(), viewLayoutKey.getProfileId());
+		final SqlViewCustomizer sqlViewCustomizer = sqlViewCustomizers.getOrNull(viewLayoutKey.getWindowId(), viewLayoutKey.getProfileId());
 		if (sqlViewCustomizer != null)
 		{
 			sqlViewCustomizer.customizeViewLayout(viewLayoutBuilder);
@@ -86,12 +86,12 @@ public class SqlViewLayoutFactory
 			@Nullable final Characteristic requiredFieldCharacteristic,
 			@Nullable final ViewProfileId profileId)
 	{
-		return viewBindingsFactory.getViewBinding(windowId, requiredFieldCharacteristic, profileId);
+		return sqlViewBindingsFactory.getViewBinding(windowId, requiredFieldCharacteristic, profileId);
 	}
 
 	public List<ViewProfile> getAvailableProfiles(final WindowId windowId)
 	{
-		return viewCustomizers.getViewProfilesByWindowId(windowId);
+		return sqlViewCustomizers.getViewProfilesByWindowId(windowId);
 	}
 
 	@Value

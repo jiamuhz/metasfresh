@@ -25,7 +25,7 @@ import java.util.stream.Stream;
  *
  *
  */
-public interface IViewDataRepository
+public interface ISqlViewDataRepository
 {
 	String getTableName();
 
