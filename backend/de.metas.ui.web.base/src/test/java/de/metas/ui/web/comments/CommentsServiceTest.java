@@ -109,19 +109,19 @@ class CommentsServiceTest
 						.build();
 
 				@Override
-				public boolean isWindowIdSupported(@Nullable final WindowDocumentTypeId windowId)
+				public boolean isWindowIdSupported(@Nullable final WindowDocumentTypeId windowDocumentTypeId)
 				{
 					return false;
 				}
 
 				@Override
-				public DocumentDescriptor getDocumentDescriptor(final WindowDocumentTypeId windowId) throws DocumentLayoutBuildException
+				public DocumentDescriptor getDocumentDescriptor(final WindowDocumentTypeId windowDocumentTypeId) throws DocumentLayoutBuildException
 				{
 					return documentDescriptor;
 				}
 
 				@Override
-				public void invalidateForWindow(final WindowDocumentTypeId windowId)
+				public void invalidateForWindow(final WindowDocumentTypeId windowDocumentTypeId)
 				{
 
 				}

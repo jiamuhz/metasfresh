@@ -21,23 +21,23 @@ public interface DocumentDescriptorFactory
 	/**
 	 * Tell the caller if they can expect this instance's methods to work with the given {@code windowId}.
 	 *
-	 * @param windowId may be {@code null}. If {@code null}, then return {@code false}.
+	 * @param windowDocumentTypeId may be {@code null}. If {@code null}, then return {@code false}.
 	 */
-	boolean isWindowIdSupported(@Nullable WindowDocumentTypeId windowId);
+	boolean isWindowIdSupported(@Nullable WindowDocumentTypeId windowDocumentTypeId);
 
-	DocumentDescriptor getDocumentDescriptor(WindowDocumentTypeId windowId) throws DocumentLayoutBuildException;
+	DocumentDescriptor getDocumentDescriptor(WindowDocumentTypeId windowDocumentTypeId) throws DocumentLayoutBuildException;
 
-	void invalidateForWindow(WindowDocumentTypeId windowId);
+	void invalidateForWindow(WindowDocumentTypeId windowDocumentTypeId);
 
 	default DocumentEntityDescriptor getDocumentEntityDescriptor(final int AD_Window_ID)
 	{
-		final WindowDocumentTypeId windowId = WindowDocumentTypeId.of(AD_Window_ID);
-		return getDocumentDescriptor(windowId).getEntityDescriptor();
+		final WindowDocumentTypeId windowDocumentTypeId = WindowDocumentTypeId.of(AD_Window_ID);
+		return getDocumentDescriptor(windowDocumentTypeId).getEntityDescriptor();
 	}
 
-	default DocumentEntityDescriptor getDocumentEntityDescriptor(@NonNull final WindowDocumentTypeId windowId)
+	default DocumentEntityDescriptor getDocumentEntityDescriptor(@NonNull final WindowDocumentTypeId windowDocumentTypeId)
 	{
-		return getDocumentDescriptor(windowId).getEntityDescriptor();
+		return getDocumentDescriptor(windowDocumentTypeId).getEntityDescriptor();
 	}
 
 	default String getTableNameOrNull(final int AD_Window_ID)
