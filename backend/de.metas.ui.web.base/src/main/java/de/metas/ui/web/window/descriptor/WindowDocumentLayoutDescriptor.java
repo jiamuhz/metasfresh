@@ -31,7 +31,7 @@ import java.util.Map;
  *
  */
 
-public final class DocumentLayoutDescriptor
+public final class WindowDocumentLayoutDescriptor
 {
 	public static Builder builder()
 	{
@@ -84,7 +84,7 @@ public final class DocumentLayoutDescriptor
 	@Getter
 	private final DebugProperties debugProperties;
 
-	private DocumentLayoutDescriptor(@NonNull final Builder builder)
+	private WindowDocumentLayoutDescriptor(@NonNull final Builder builder)
 	{
 		windowDocumentTypeId = builder.windowDocumentTypeId;
 		Check.assumeNotNull(windowDocumentTypeId, "builder.windowId may not be null; builder={}", builder);
@@ -183,7 +183,7 @@ public final class DocumentLayoutDescriptor
 
 	public static final class Builder
 	{
-		private static final Logger logger = LogManager.getLogger(DocumentLayoutDescriptor.Builder.class);
+		private static final Logger logger = LogManager.getLogger(WindowDocumentLayoutDescriptor.Builder.class);
 
 		private WindowDocumentTypeId windowDocumentTypeId;
 		private ITranslatableString caption = TranslatableStrings.empty();
@@ -211,7 +211,7 @@ public final class DocumentLayoutDescriptor
 					.toString();
 		}
 
-		public DocumentLayoutDescriptor build()
+		public WindowDocumentLayoutDescriptor build()
 		{
 			//
 			// Debug informations:
@@ -222,7 +222,7 @@ public final class DocumentLayoutDescriptor
 				putDebugProperty("generator-duration", stopwatch.toString());
 			}
 
-			return new DocumentLayoutDescriptor(this);
+			return new WindowDocumentLayoutDescriptor(this);
 		}
 
 		private Map<DetailId, DocumentLayoutDetailDescriptor> buildDetails()

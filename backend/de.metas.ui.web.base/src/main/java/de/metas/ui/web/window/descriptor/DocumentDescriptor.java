@@ -18,7 +18,7 @@ public final class DocumentDescriptor implements ETagAware
 		return new Builder();
 	}
 
-	private final DocumentLayoutDescriptor layout;
+	private final WindowDocumentLayoutDescriptor layout;
 	private final DocumentEntityDescriptor entityDescriptor;
 
 	// ETag support
@@ -41,7 +41,7 @@ public final class DocumentDescriptor implements ETagAware
 				.toString();
 	}
 
-	public DocumentLayoutDescriptor getLayout()
+	public WindowDocumentLayoutDescriptor getLayout()
 	{
 		return layout;
 	}
@@ -79,7 +79,7 @@ public final class DocumentDescriptor implements ETagAware
 	//
 	public static final class Builder
 	{
-		private DocumentLayoutDescriptor layout;
+		private WindowDocumentLayoutDescriptor layout;
 		private DocumentEntityDescriptor entityDescriptor;
 
 		private Builder()
@@ -91,7 +91,7 @@ public final class DocumentDescriptor implements ETagAware
 			return new DocumentDescriptor(this);
 		}
 
-		public Builder setLayout(final DocumentLayoutDescriptor layout)
+		public Builder setLayout(final WindowDocumentLayoutDescriptor layout)
 		{
 			this.layout = layout;
 			return this;

@@ -13,7 +13,7 @@ import de.metas.ui.web.document.filter.json.JSONDocumentFilterDescriptor;
 import de.metas.ui.web.window.WindowConstants;
 import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
-import de.metas.ui.web.window.descriptor.DocumentLayoutDescriptor;
+import de.metas.ui.web.window.descriptor.WindowDocumentLayoutDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFormLayout;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -29,7 +29,7 @@ import java.util.Map;
 @Schema(description = "layout")
 public final class JSONDocumentLayout
 {
-	public static JSONDocumentLayout ofHeaderLayout(final DocumentLayoutDescriptor layout, final JSONDocumentLayoutOptions options)
+	public static JSONDocumentLayout ofHeaderLayout(final WindowDocumentLayoutDescriptor layout, final JSONDocumentLayoutOptions options)
 	{
 		return new JSONDocumentLayout(layout, options);
 	}
@@ -98,7 +98,7 @@ public final class JSONDocumentLayout
 	 * Header layout constructor
 	 */
 	private JSONDocumentLayout(
-			@NonNull final DocumentLayoutDescriptor layout,
+			@NonNull final WindowDocumentLayoutDescriptor layout,
 			@NonNull final JSONDocumentLayoutOptions options)
 	{
 		this.windowId = layout.getWindowDocumentTypeId();

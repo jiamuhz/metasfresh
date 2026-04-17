@@ -25,7 +25,7 @@ import de.metas.ui.web.window.descriptor.CreateFiltersProviderContext;
 import de.metas.ui.web.window.descriptor.DocumentDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutDescriptor;
+import de.metas.ui.web.window.descriptor.WindowDocumentLayoutDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFormLayout;
 import de.metas.ui.web.window.descriptor.factory.DocumentDescriptorFactory;
 import de.metas.ui.web.window.exceptions.DocumentLayoutBuildException;
@@ -96,7 +96,7 @@ class CommentsServiceTest
 			documentDescriptorFactory = new DocumentDescriptorFactory()
 			{
 				final DocumentDescriptor documentDescriptor = DocumentDescriptor.builder()
-						.setLayout(DocumentLayoutDescriptor.builder()
+						.setLayout(WindowDocumentLayoutDescriptor.builder()
 								.setWindowDocumentTypeId(WINDOW_ID)
 								.setSingleRowLayout(DocumentFormLayout.builder())
 								.setGridView(ViewLayout.builder())

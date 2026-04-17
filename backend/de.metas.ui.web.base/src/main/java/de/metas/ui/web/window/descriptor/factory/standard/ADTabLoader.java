@@ -5,7 +5,7 @@ import org.compiere.model.GridTabVO;
 import org.compiere.model.GridWindowVO;
 
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentLayoutDescriptor;
+import de.metas.ui.web.window.descriptor.WindowDocumentLayoutDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
 import lombok.Builder;
 import lombok.NonNull;
@@ -22,7 +22,7 @@ public class ADTabLoader
 	LayoutFactory rootLayoutFactory;
 
 	@NonNull
-	DocumentLayoutDescriptor.Builder layoutBuilder;
+	WindowDocumentLayoutDescriptor.Builder layoutBuilder;
 
 	public void load()
 	{
