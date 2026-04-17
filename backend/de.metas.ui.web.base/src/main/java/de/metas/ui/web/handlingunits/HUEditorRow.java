@@ -13,7 +13,6 @@ import de.metas.handlingunits.report.HUToReport;
 import de.metas.handlingunits.storage.IHUProductStorage;
 import de.metas.order.OrderLineId;
 import de.metas.product.ProductId;
-import de.metas.project.ProjectId;
 import de.metas.quantity.Quantity;
 import de.metas.ui.web.exceptions.EntityNotFoundException;
 import de.metas.ui.web.handlingunits.report.HUEditorRowAsHUToReport;
@@ -29,7 +28,7 @@ import de.metas.ui.web.window.datatypes.DocumentPath;
 import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.LookupValue.IntegerLookupValue;
 import de.metas.ui.web.window.datatypes.MediaType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONLookupValue;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.WidgetSize;
@@ -69,7 +68,7 @@ public final class HUEditorRow implements IViewRow
 	public static final String SYSCFG_PREFIX = "de.metas.ui.web.handlingunits.field";
 
 
-	public static Builder builder(final WindowId windowId)
+	public static Builder builder(final WindowDocumentTypeId windowId)
 	{
 		return new Builder(windowId);
 	}
@@ -674,7 +673,7 @@ public final class HUEditorRow implements IViewRow
 	//
 	public static final class Builder
 	{
-		private final WindowId windowId;
+		private final WindowDocumentTypeId windowId;
 		private HUEditorRowId _rowId;
 		private Boolean topLevel;
 		private HUEditorRowType type;
@@ -709,7 +708,7 @@ public final class HUEditorRow implements IViewRow
 		@Nullable
 		private HUEditorRowAttributesProvider attributesProvider;
 
-		private Builder(@NonNull final WindowId windowId)
+		private Builder(@NonNull final WindowDocumentTypeId windowId)
 		{
 			this.windowId = windowId;
 		}

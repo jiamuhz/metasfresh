@@ -2,7 +2,7 @@ package de.metas.ui.web.window.descriptor;
 
 import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFetcher;
@@ -98,7 +98,7 @@ public abstract class SimpleLookupDescriptorTemplate implements LookupDescriptor
 	}
 
 	@Override
-	public Optional<WindowId> getZoomIntoWindowId()
+	public Optional<WindowDocumentTypeId> getZoomIntoWindowId()
 	{
 		return Optional.empty();
 	}

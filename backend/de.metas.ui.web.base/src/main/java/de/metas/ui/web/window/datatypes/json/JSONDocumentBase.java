@@ -9,7 +9,7 @@ import com.google.common.base.MoreObjects;
 import com.google.common.collect.Maps;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.exceptions.InvalidDocumentPathException;
 import lombok.Getter;
 
@@ -30,7 +30,7 @@ public abstract class JSONDocumentBase
 {
 	@JsonProperty("windowId")
 	@JsonInclude(JsonInclude.Include.NON_EMPTY)
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 
 	@JsonProperty("id")
 	@JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -124,7 +124,7 @@ public abstract class JSONDocumentBase
 	}
 
 	@JsonIgnore
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return windowId;
 	}

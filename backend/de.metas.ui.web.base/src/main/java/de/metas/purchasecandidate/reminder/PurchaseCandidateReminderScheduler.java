@@ -25,7 +25,7 @@ import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.adempiere.ad.element.api.AdWindowId;
@@ -252,11 +252,11 @@ public class PurchaseCandidateReminderScheduler implements InitializingBean
 	}
 
 	@SuppressWarnings("SameParameterValue")
-	private WindowId getWindowId(final String tableName)
+	private WindowDocumentTypeId getWindowId(final String tableName)
 	{
 		final AdWindowId adWindowId = RecordWindowFinder.findAdWindowId(tableName)
 				.orElseThrow(() -> new AdempiereException("No window found for " + tableName));
-		return WindowId.of(adWindowId);
+		return WindowDocumentTypeId.of(adWindowId);
 	}
 
 	private static class RemindersQueue

@@ -23,7 +23,7 @@
 package de.metas.ui.web.kpi.data;
 
 import de.metas.i18n.ITranslatableString;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.Value;
@@ -35,7 +35,8 @@ import javax.annotation.Nullable;
 public class KPIZoomIntoDetailsInfo
 {
 	@NonNull ITranslatableString filterCaption;
-	@Nullable WindowId targetWindowId;
+	@Nullable
+  WindowDocumentTypeId targetWindowId;
 	@NonNull String tableName;
 	@NonNull String sqlWhereClause;
 }

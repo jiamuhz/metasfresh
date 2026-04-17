@@ -36,7 +36,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Check;
 import de.metas.util.Services;
@@ -49,7 +49,7 @@ import static de.metas.ui.web.order.attachmenteditor.process.C_Order_AttachmentV
 public class OrderAttachmentViewFactory implements IViewFactory
 {
 	public static final String OrderAttachmentView_String = "OrderAttachmentView";
-	public static final WindowId WINDOWID = WindowId.fromJson(OrderAttachmentView_String);
+	public static final WindowDocumentTypeId WINDOWID = WindowDocumentTypeId.fromJson(OrderAttachmentView_String);
 
 	private final AttachmentEntryService attachmentEntryService;
 	private final OrderAttachmentRowsRepository rowsRepo;
@@ -88,7 +88,7 @@ public class OrderAttachmentViewFactory implements IViewFactory
 	}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		return ViewLayout.builder()
 				.setWindowId(WINDOWID)

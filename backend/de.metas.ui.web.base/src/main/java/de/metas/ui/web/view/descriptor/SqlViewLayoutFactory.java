@@ -9,7 +9,7 @@ import de.metas.ui.web.view.SqlViewCustomizer;
 import de.metas.ui.web.view.ViewProfile;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
 import de.metas.ui.web.window.descriptor.factory.DocumentDescriptorFactory;
 import lombok.Builder;
@@ -43,7 +43,7 @@ public class SqlViewLayoutFactory
 	}
 
 	public ViewLayout getViewLayout(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final JSONViewDataType viewDataType,
 			@Nullable final ViewProfileId profileId)
 	{
@@ -82,14 +82,14 @@ public class SqlViewLayoutFactory
 	}
 
 	public SqlViewBinding getViewBinding(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@Nullable final Characteristic requiredFieldCharacteristic,
 			@Nullable final ViewProfileId profileId)
 	{
 		return sqlViewBindingsFactory.getViewBinding(windowId, requiredFieldCharacteristic, profileId);
 	}
 
-	public List<ViewProfile> getAvailableProfiles(final WindowId windowId)
+	public List<ViewProfile> getAvailableProfiles(final WindowDocumentTypeId windowId)
 	{
 		return sqlViewCustomizers.getViewProfilesByWindowId(windowId);
 	}
@@ -97,7 +97,8 @@ public class SqlViewLayoutFactory
 	@Value
 	private static class ViewLayoutKey
 	{
-		@NonNull WindowId windowId;
+		@NonNull
+		WindowDocumentTypeId windowId;
 		@NonNull JSONViewDataType viewDataType;
 		@Nullable ViewProfileId profileId;
 	}

@@ -2,7 +2,7 @@ package de.metas.ui.web.window.model.lookup;
 
 import de.metas.document.references.zoom_into.CustomizedWindowInfo;
 import de.metas.document.references.zoom_into.CustomizedWindowInfoMap;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.Value;
@@ -25,10 +25,10 @@ public class DocumentZoomIntoInfo
 
 	@NonNull String tableName;
 	Integer recordId;
-	WindowId windowId;
+	WindowDocumentTypeId windowId;
 
 	@SuppressWarnings("OptionalUsedAsFieldOrParameterType")
-	public DocumentZoomIntoInfo overrideWindowIdIfPossible(@Nullable final Optional<WindowId> windowId)
+	public DocumentZoomIntoInfo overrideWindowIdIfPossible(@Nullable final Optional<WindowDocumentTypeId> windowId)
 	{
 		if (windowId == null || !windowId.isPresent())
 		{
@@ -50,17 +50,17 @@ public class DocumentZoomIntoInfo
 			return this;
 		}
 
-		final WindowId customizedWindowId = customizedWindowInfoMap
+		final WindowDocumentTypeId customizedWindowId = customizedWindowInfoMap
 				.getCustomizedWindowInfo(adWindowId)
 				.map(CustomizedWindowInfo::getCustomizationWindowId)
-				.map(WindowId::of)
+				.map(WindowDocumentTypeId::of)
 				.orElse(null);
 		if (customizedWindowId == null)
 		{
 			return this;
 		}
 
-		return !WindowId.equals(this.windowId, customizedWindowId)
+		return !WindowDocumentTypeId.equals(this.windowId, customizedWindowId)
 				? toBuilder().windowId(customizedWindowId).build()
 				: this;
 	}

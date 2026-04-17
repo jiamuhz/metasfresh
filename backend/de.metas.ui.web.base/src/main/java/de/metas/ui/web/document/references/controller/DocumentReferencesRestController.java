@@ -16,7 +16,7 @@ import de.metas.ui.web.menu.MenuTreeRepository;
 import de.metas.ui.web.session.UserSession;
 import de.metas.ui.web.window.controller.WindowRestController;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
 import de.metas.util.Services;
 import io.swagger.v3.oas.annotations.tags.Tag;
@@ -102,7 +102,7 @@ public class DocumentReferencesRestController
 			@PathVariable("documentId") final String documentId)
 	{
 		final DocumentPath documentPath = DocumentPath.rootDocumentPath(
-				WindowId.fromJson(windowIdStr),
+				WindowDocumentTypeId.fromJson(windowIdStr),
 				documentId);
 
 		return streamRootDocumentReferences(documentPath);
@@ -116,7 +116,7 @@ public class DocumentReferencesRestController
 			@PathVariable("tabId") final String tabIdStr,
 			@PathVariable("rowId") final String rowIdStr)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.includedDocumentPath(windowId, documentIdStr, tabIdStr, rowIdStr);
 
 		return streamRootDocumentReferences(documentPath);

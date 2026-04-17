@@ -9,7 +9,7 @@ import com.google.common.collect.ImmutableMap;
 import de.metas.i18n.ITranslatableString;
 import de.metas.ui.web.document.filter.DocumentFilterList;
 import de.metas.websocket.WebsocketTopicName;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.LookupDescriptor;
 import de.metas.ui.web.window.descriptor.LookupDescriptorProvider;
 import lombok.Builder;
@@ -38,7 +38,7 @@ public final class BoardDescriptor
 
 	// Source document info
 	@NonNull
-	private final WindowId documentWindowId;
+	private final WindowDocumentTypeId documentWindowId;
 	@NonNull
 	private LookupDescriptorProvider documentLookupDescriptorProvider;
 

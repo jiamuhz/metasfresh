@@ -2,7 +2,7 @@ package de.metas.ui.web.window;
 
 import com.google.common.collect.ImmutableSet;
 import de.metas.logging.LogManager;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import org.slf4j.Logger;
 
 import java.util.Set;
@@ -23,7 +23,7 @@ public final class WindowConstants
 	 */
 	public static final Logger logger = LogManager.getLogger(WindowConstants.class.getPackage().getName());
 
-	public static final WindowId WINDOWID_UserProfile = WindowId.of(53100); // FIXME: HARDCODED
+	public static final WindowDocumentTypeId WINDOWID_UserProfile = WindowDocumentTypeId.of(53100); // FIXME: HARDCODED
 
 	public static final String FIELDNAME_DocumentNo = "DocumentNo";
 	public static final String FIELDNAME_Value = "Value";

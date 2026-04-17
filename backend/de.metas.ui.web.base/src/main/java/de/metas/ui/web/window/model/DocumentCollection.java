@@ -26,7 +26,7 @@ import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 import de.metas.ui.web.window.datatypes.DocumentPath;
 import de.metas.ui.web.window.datatypes.DocumentType;
 import de.metas.ui.web.window.datatypes.LookupValue;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
@@ -86,7 +86,7 @@ public class DocumentCollection
 	private final CopyRecordService copyRecordService;
 
 	private final Cache<DocumentKey, Document> rootDocuments;
-	private final ConcurrentHashMap<String, Set<WindowId>> tableName2windowIds = new ConcurrentHashMap<>();
+	private final ConcurrentHashMap<String, Set<WindowDocumentTypeId>> tableName2windowIds = new ConcurrentHashMap<>();
 
 	/* package */ DocumentCollection(
 			@NonNull final DocumentDescriptorFactory documentDescriptorFactory,
@@ -116,20 +116,20 @@ public class DocumentCollection
 	}
 
 	/**
-	 * Delegates to the {@link DocumentDescriptorFactory#isWindowIdSupported(WindowId)} of this instance's {@code documentDescriptorFactory}.
+	 * Delegates to the {@link DocumentDescriptorFactory#isWindowIdSupported(WindowDocumentTypeId)} of this instance's {@code documentDescriptorFactory}.
 	 */
 	public boolean isWindowIdSupported(
-			@Nullable final WindowId windowId)
+			@Nullable final WindowDocumentTypeId windowId)
 	{
 		return documentDescriptorFactory.isWindowIdSupported(windowId);
 	}
 
-	public final DocumentDescriptor getDocumentDescriptor(final WindowId windowId)
+	public final DocumentDescriptor getDocumentDescriptor(final WindowDocumentTypeId windowId)
 	{
 		return documentDescriptorFactory.getDocumentDescriptor(windowId);
 	}
 
-	public final DocumentEntityDescriptor getDocumentEntityDescriptor(final WindowId windowId)
+	public final DocumentEntityDescriptor getDocumentEntityDescriptor(final WindowDocumentTypeId windowId)
 	{
 		final DocumentDescriptor descriptor = documentDescriptorFactory.getDocumentDescriptor(windowId);
 		return descriptor.getEntityDescriptor();
@@ -143,13 +143,13 @@ public class DocumentCollection
 			return;
 		}
 
-		final Set<WindowId> windowIds = tableName2windowIds.computeIfAbsent(tableName, k -> Collections.newSetFromMap(new ConcurrentHashMap<>()));
+		final Set<WindowDocumentTypeId> windowIds = tableName2windowIds.computeIfAbsent(tableName, k -> Collections.newSetFromMap(new ConcurrentHashMap<>()));
 		windowIds.add(entityDescriptor.getWindowId());
 	}
 
-	private Set<WindowId> getCachedWindowIdsForTableName(final String tableName)
+	private Set<WindowDocumentTypeId> getCachedWindowIdsForTableName(final String tableName)
 	{
-		final Set<WindowId> windowIds = tableName2windowIds.get(tableName);
+		final Set<WindowDocumentTypeId> windowIds = tableName2windowIds.get(tableName);
 		return windowIds != null && !windowIds.isEmpty() ? ImmutableSet.copyOf(windowIds) : ImmutableSet.of();
 	}
 
@@ -323,7 +323,7 @@ public class DocumentCollection
 			throw new InvalidDocumentPathException(documentPath, "new document ID was expected");
 		}
 
-		final WindowId windowId = documentPath.getWindowId();
+		final WindowDocumentTypeId windowId = documentPath.getWindowId();
 		final DocumentEntityDescriptor entityDescriptor = getDocumentEntityDescriptor(windowId);
 		assertNewDocumentAllowed(entityDescriptor);
 
@@ -518,7 +518,7 @@ public class DocumentCollection
 		return documentDescriptorFactory.getTableRecordReference(documentPath);
 	}
 
-	public WindowId getWindowId(
+	public WindowDocumentTypeId getWindowId(
 			@NonNull final DocumentZoomIntoInfo zoomIntoInfo)
 	{
 		if (zoomIntoInfo.getWindowId() != null)
@@ -546,7 +546,7 @@ public class DocumentCollection
 					.setParameter("zoomIntoInfo", zoomIntoInfo);
 		}
 
-		return WindowId.of(zoomInto_adWindowId);
+		return WindowDocumentTypeId.of(zoomInto_adWindowId);
 	}
 
 	public boolean isValidDocumentPath(final DocumentPath documentPath)
@@ -569,7 +569,7 @@ public class DocumentCollection
 
 		//
 		// Find the root window ID
-		final WindowId zoomIntoWindowIdEffective = getWindowId(zoomIntoInfo);
+		final WindowDocumentTypeId zoomIntoWindowIdEffective = getWindowId(zoomIntoInfo);
 
 		final DocumentEntityDescriptor rootEntityDescriptor = getDocumentEntityDescriptor(zoomIntoWindowIdEffective);
 		final String zoomIntoTableName = zoomIntoInfo.getTableName();
@@ -649,7 +649,7 @@ public class DocumentCollection
 	}
 
 	public void invalidateDocumentsByWindowId(
-			@NonNull final WindowId windowId)
+			@NonNull final WindowDocumentTypeId windowId)
 
 	{
 		final ImmutableList<DocumentKey> documentKeys = rootDocuments.asMap().keySet()
@@ -686,7 +686,7 @@ public class DocumentCollection
 
 		for (final DocumentEntityDescriptor entityDescriptor : entityDescriptors)
 		{
-			final WindowId windowId = entityDescriptor.getWindowId();
+			final WindowDocumentTypeId windowId = entityDescriptor.getWindowId();
 			final DocumentKey rootDocumentKey = DocumentKey.of(windowId, rootDocumentId);
 			final Document rootDocument = rootDocuments.getIfPresent(rootDocumentKey);
 			if (rootDocument != null)
@@ -728,7 +728,7 @@ public class DocumentCollection
 			@NonNull final DocumentToInvalidate documentToInvalidate,
 			@NonNull final DocumentEntityDescriptor entityDescriptor)
 	{
-		final WindowId windowId = entityDescriptor.getWindowId();
+		final WindowDocumentTypeId windowId = entityDescriptor.getWindowId();
 		final DocumentId rootDocumentId = documentToInvalidate.getDocumentId();
 
 		websocketPublisher.staleRootDocument(windowId, rootDocumentId);
@@ -869,7 +869,7 @@ public class DocumentCollection
 		}
 
 		public static DocumentKey of(
-				@NonNull final WindowId windowId,
+				@NonNull final WindowDocumentTypeId windowId,
 				@NonNull final DocumentId documentId)
 		{
 			return new DocumentKey(DocumentType.Window, windowId.toDocumentId(), documentId);
@@ -929,10 +929,10 @@ public class DocumentCollection
 					&& Objects.equals(documentId, other.documentId);
 		}
 
-		public WindowId getWindowId()
+		public WindowDocumentTypeId getWindowId()
 		{
 			Check.assume(documentType == DocumentType.Window, "documentType shall be {} but it was {}", DocumentType.Window, documentType);
-			return WindowId.of(documentTypeId);
+			return WindowDocumentTypeId.of(documentTypeId);
 		}
 
 		public DocumentId getDocumentId()

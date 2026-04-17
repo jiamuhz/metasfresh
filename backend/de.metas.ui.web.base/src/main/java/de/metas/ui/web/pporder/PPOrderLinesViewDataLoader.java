@@ -40,7 +40,7 @@ import de.metas.ui.web.view.ViewHeaderProperties;
 import de.metas.ui.web.view.ViewHeaderPropertiesGroup;
 import de.metas.ui.web.view.ViewHeaderProperty;
 import de.metas.ui.web.view.descriptor.SqlViewBinding;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.GuavaCollectors;
 import de.metas.util.Services;
 import lombok.Builder;
@@ -64,7 +64,7 @@ import java.util.function.Function;
 
 class PPOrderLinesViewDataLoader
 {
-	public static PPOrderLinesViewDataLoaderBuilder builder(final WindowId viewWindowId)
+	public static PPOrderLinesViewDataLoaderBuilder builder(final WindowDocumentTypeId viewWindowId)
 	{
 		return new PPOrderLinesViewDataLoaderBuilder().viewWindowId(viewWindowId);
 	}
@@ -88,7 +88,7 @@ class PPOrderLinesViewDataLoader
 
 	@Builder
 	public PPOrderLinesViewDataLoader(
-			final WindowId viewWindowId,
+			final WindowDocumentTypeId viewWindowId,
 			final ASIViewRowAttributesProvider asiAttributesProvider,
 			@NonNull final SqlViewBinding huSQLViewBinding,
 			@NonNull final HUReservationService huReservationService,

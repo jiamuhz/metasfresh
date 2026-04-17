@@ -23,7 +23,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import de.metas.util.lang.RepoIdAware;
 import lombok.Getter;
@@ -122,7 +122,7 @@ public final class JSONProcessInstanceResult
 		{
 			final NewRecordAction newRecordAction = (NewRecordAction)resultAction;
 			return new JSONNewRecordAction(
-					WindowId.fromJson(newRecordAction.getWindowId()),
+					WindowDocumentTypeId.fromJson(newRecordAction.getWindowId()),
 					newRecordAction.getFieldValues(),
 					newRecordAction.getTargetTab()
 			);
@@ -172,7 +172,7 @@ public final class JSONProcessInstanceResult
 	@lombok.Getter
 	public static class JSONOpenViewAction extends JSONResultAction
 	{
-		private final WindowId windowId;
+		private final WindowDocumentTypeId windowId;
 		private final String viewId;
 		@JsonInclude(JsonInclude.Include.NON_EMPTY)
 		private final String profileId;
@@ -192,7 +192,7 @@ public final class JSONProcessInstanceResult
 	@lombok.Getter
 	public static class JSONOpenIncludedViewAction extends JSONResultAction
 	{
-		private final WindowId windowId;
+		private final WindowDocumentTypeId windowId;
 		private final String viewId;
 		private final JSONViewDataType viewType = JSONViewDataType.includedView;
 		@JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -211,12 +211,12 @@ public final class JSONProcessInstanceResult
 	@lombok.Getter
 	public static class JSONOpenSingleDocumentAction extends JSONResultAction
 	{
-		private final WindowId windowId;
+		private final WindowDocumentTypeId windowId;
 		private final String documentId;
 		private final boolean advanced = false;
 		private final ProcessExecutionResult.RecordsToOpen.TargetTab targetTab;
 
-		public JSONOpenSingleDocumentAction(final WindowId windowId, final String documentId, final ProcessExecutionResult.RecordsToOpen.TargetTab targetTab)
+		public JSONOpenSingleDocumentAction(final WindowDocumentTypeId windowId, final String documentId, final ProcessExecutionResult.RecordsToOpen.TargetTab targetTab)
 		{
 			super("openDocument");
 			this.windowId = windowId;
@@ -240,7 +240,7 @@ public final class JSONProcessInstanceResult
 	@lombok.Getter
 	public static class JSONSelectViewRowsAction extends JSONResultAction
 	{
-		private final WindowId windowId;
+		private final WindowDocumentTypeId windowId;
 		private final String viewId;
 		private final Set<String> rowIds;
 
@@ -298,13 +298,13 @@ public final class JSONProcessInstanceResult
 	@lombok.Getter
 	public static class JSONNewRecordAction extends JSONResultAction
 	{
-		@NonNull private final WindowId windowId;
+		@NonNull private final WindowDocumentTypeId windowId;
 		@NonNull private final Map<String, String> fieldValues;
 
 		@NonNull private final String targetTab;
 
 		public JSONNewRecordAction(
-				@NonNull final WindowId windowId,
+				@NonNull final WindowDocumentTypeId windowId,
 				@Nullable final Map<String, String> fieldValues,
 				@NonNull final ProcessExecutionResult.WebuiNewRecord.TargetTab targetTab)
 		{

@@ -33,7 +33,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 
@@ -52,9 +52,9 @@ abstract class ProductsProposalViewFactoryTemplate implements IViewFactory, IVie
 			.expireAfterAccess(1, TimeUnit.HOURS)
 			.build();
 
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 
-	protected ProductsProposalViewFactoryTemplate(@NonNull final WindowId windowId)
+	protected ProductsProposalViewFactoryTemplate(@NonNull final WindowDocumentTypeId windowId)
 	{
 		this.windowId = windowId;
 	}
@@ -65,13 +65,13 @@ abstract class ProductsProposalViewFactoryTemplate implements IViewFactory, IVie
 	}
 
 	@Override
-	public final WindowId getWindowId()
+	public final WindowDocumentTypeId getWindowId()
 	{
 		return windowId;
 	}
 
 	@Override
-	public final ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public final ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		final ViewLayoutKey key = ViewLayoutKey.of(windowId, viewDataType);
 		return viewLayoutCache.getOrLoad(key, this::createViewLayout);
@@ -194,7 +194,7 @@ abstract class ProductsProposalViewFactoryTemplate implements IViewFactory, IVie
 	@lombok.Value(staticConstructor = "of")
 	protected static final class ViewLayoutKey
 	{
-		WindowId windowId;
+		WindowDocumentTypeId windowId;
 		JSONViewDataType viewDataType;
 	}
 }

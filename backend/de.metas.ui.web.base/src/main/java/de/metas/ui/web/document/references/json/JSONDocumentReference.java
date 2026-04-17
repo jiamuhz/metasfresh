@@ -9,7 +9,7 @@ import de.metas.logging.LogManager;
 import de.metas.ui.web.document.filter.DocumentFilter;
 import de.metas.ui.web.document.filter.json.JSONDocumentFilter;
 import de.metas.ui.web.document.references.WebuiDocumentReference;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
 import lombok.NonNull;
 import lombok.ToString;
@@ -69,7 +69,7 @@ public final class JSONDocumentReference
 	private final String caption;
 
 	@JsonProperty("targetWindowId")
-	private final WindowId targetWindowId;
+	private final WindowDocumentTypeId targetWindowId;
 	@JsonProperty("targetCategory")
 	private final String targetCategory;
 

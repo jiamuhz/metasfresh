@@ -33,7 +33,7 @@ import de.metas.ui.web.order.pricingconditions.view.PricingConditionsRowsLoader.
 import de.metas.ui.web.order.pricingconditions.view.PricingConditionsRowsLoader.SourceDocumentLine;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.ViewFactory;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import de.metas.util.Services;
 import de.metas.util.collections.CollectionUtils;
@@ -66,7 +66,7 @@ import lombok.NonNull;
 public class OrderLinePricingConditionsViewFactory extends PricingConditionsViewFactoryTemplate
 {
 	public static final String WINDOW_ID_STRING = "orderLinePricingConditions";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	public OrderLinePricingConditionsViewFactory(
 			@NonNull final LookupDataSourceFactory lookupDataSourceFactory

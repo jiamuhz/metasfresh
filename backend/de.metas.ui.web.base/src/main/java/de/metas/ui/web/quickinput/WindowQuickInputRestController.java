@@ -8,7 +8,7 @@ import de.metas.ui.web.window.controller.Execution;
 import de.metas.ui.web.window.controller.WindowRestController;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONDocument;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentChangedEvent;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentLayoutOptions;
@@ -99,7 +99,7 @@ public class WindowQuickInputRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentEntityDescriptor includedDocumentDescriptor = documentsCollection.getDocumentEntityDescriptor(windowId)
 				.getIncludedEntityByDetailId(DetailId.fromJson(tabIdStr));
 
@@ -122,7 +122,7 @@ public class WindowQuickInputRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentEntityDescriptor includedDocumentDescriptor = documentsCollection.getDocumentEntityDescriptor(windowId)
 				.getIncludedEntityByDetailId(DetailId.fromJson(tabIdStr));
 
@@ -144,7 +144,7 @@ public class WindowQuickInputRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath rootDocumentPath = DocumentPath.rootDocumentPath(windowId, documentIdStr);
 		final DetailId detailId = DetailId.fromJson(tabIdStr);
 

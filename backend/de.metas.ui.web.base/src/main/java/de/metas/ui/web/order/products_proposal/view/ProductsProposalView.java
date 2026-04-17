@@ -24,7 +24,7 @@ import de.metas.ui.web.view.ViewHeaderProperties;
 import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.template.AbstractCustomView;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.Builder;
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
@@ -48,7 +48,7 @@ public class ProductsProposalView extends AbstractCustomView<ProductsProposalRow
 
 	@Builder
 	private ProductsProposalView(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final ProductsProposalRowsData rowsData,
 			@Nullable final List<RelatedProcessDescriptor> processes,
 			@Nullable final ViewId initialViewId)

@@ -17,7 +17,7 @@ import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.descriptor.annotation.ViewColumnHelper.ClassViewColumnOverrides;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.MediaType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 import org.compiere.util.DB;
 
@@ -27,7 +27,7 @@ import javax.annotation.Nullable;
 public class HUsToReturnViewFactory extends HUEditorViewFactoryTemplate
 {
 	static final String Window_ID_String = "541011"; // FIXME: hardcoded
-	private static final WindowId Window_ID = WindowId.fromJson(Window_ID_String);
+	private static final WindowDocumentTypeId Window_ID = WindowDocumentTypeId.fromJson(Window_ID_String);
 
 	public static final String PARAM_HUsToReturnViewContext = "HUsToReturnViewContext";
 

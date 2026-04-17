@@ -26,7 +26,7 @@ import de.metas.security.UserRolePermissionsKey;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 import org.adempiere.util.lang.impl.TableRecordReferenceSet;
 
@@ -43,10 +43,10 @@ public interface IViewsRepository
 {
 	IViewsStorage4GivenWindow getViewsStorageFor(ViewId viewId);
 
-	List<ViewProfile> getAvailableProfiles(WindowId windowId, JSONViewDataType viewDataType);
+	List<ViewProfile> getAvailableProfiles(WindowDocumentTypeId windowId, JSONViewDataType viewDataType);
 
 	ViewLayout getViewLayout(
-			@NonNull WindowId windowId,
+			@NonNull WindowDocumentTypeId windowId,
 			@NonNull JSONViewDataType viewDataType,
 			@Nullable ViewProfileId profileId,
 			@Nullable UserRolePermissionsKey permissionsKey);

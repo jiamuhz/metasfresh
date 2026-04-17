@@ -1,7 +1,7 @@
 package de.metas.ui.web.pickingV2;
 
 import de.metas.ui.web.view.ViewProfileId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 
 /*
  * #%L
@@ -28,10 +28,10 @@ import de.metas.ui.web.window.datatypes.WindowId;
 public class PickingConstantsV2
 {
 	public static final String WINDOWID_PackageableView_String = "540485"; // FIXME: HARDCODED
-	public static final WindowId WINDOWID_PackageableView = WindowId.fromJson(WINDOWID_PackageableView_String);
+	public static final WindowDocumentTypeId WINDOWID_PackageableView = WindowDocumentTypeId.fromJson(WINDOWID_PackageableView_String);
 
 	public static final String WINDOWID_ProductsToPickView_String = "picking_v2_productsToPick";
-	public static final WindowId WINDOWID_ProductsToPickView = WindowId.fromJson(WINDOWID_ProductsToPickView_String);
+	public static final WindowDocumentTypeId WINDOWID_ProductsToPickView = WindowDocumentTypeId.fromJson(WINDOWID_ProductsToPickView_String);
 
 	public static final ViewProfileId PROFILE_ID_ProductsToPickView_Review = ViewProfileId.fromJson("review");
 }

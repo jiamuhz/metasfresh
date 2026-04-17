@@ -7,7 +7,7 @@ import com.google.common.base.Joiner;
 import com.google.common.base.Preconditions;
 import com.google.common.base.Splitter;
 import com.google.common.collect.ImmutableList;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.lang.UIDStringUtil;
 import lombok.EqualsAndHashCode;
 import lombok.NonNull;
@@ -26,20 +26,20 @@ public final class ViewId
 	private static final Splitter SPLITTER = Splitter.on(SEPARATOR).trimResults();
 	private static final Joiner JOINER = Joiner.on(SEPARATOR);
 
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 	private final String viewId;
 	private final ImmutableList<String> parts;
 
 	public static ViewId of(@Nullable final String windowIdStr, @NonNull final String viewIdStr)
 	{
-		final WindowId expectedWindowId = windowIdStr == null ? null : WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId expectedWindowId = windowIdStr == null ? null : WindowDocumentTypeId.fromJson(windowIdStr);
 		return ofViewIdString(viewIdStr, expectedWindowId);
 	}
 
 	@JsonCreator
 	public static ViewId fromJson(@NonNull final String json)
 	{
-		final WindowId expectedWindowId = null; // N/A
+		final WindowDocumentTypeId expectedWindowId = null; // N/A
 		return ofViewIdString(json, expectedWindowId);
 	}
 
@@ -48,11 +48,11 @@ public final class ViewId
 	 */
 	public static ViewId ofViewIdString(@NonNull final String viewIdStr)
 	{
-		final WindowId expectedWindowId = null; // N/A
+		final WindowDocumentTypeId expectedWindowId = null; // N/A
 		return ofViewIdString(viewIdStr, expectedWindowId);
 	}
 
-	public static ViewId ofViewIdString(@NonNull final String viewIdStr, @Nullable final WindowId expectedWindowId)
+	public static ViewId ofViewIdString(@NonNull final String viewIdStr, @Nullable final WindowDocumentTypeId expectedWindowId)
 	{
 		final List<String> parts = SPLITTER.splitToList(viewIdStr);
 		if (parts.size() < 2)
@@ -60,7 +60,7 @@ public final class ViewId
 			throw new AdempiereException("Invalid viewId: " + viewIdStr);
 		}
 
-		final WindowId windowId = WindowId.fromJson(parts.get(0));
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(parts.get(0));
 		if (expectedWindowId != null)
 		{
 			Preconditions.checkArgument(Objects.equals(windowId, expectedWindowId), "Invalid windowId: %s (viewId=%s). Expected windowId was %s", windowId, viewIdStr, expectedWindowId);
@@ -69,7 +69,7 @@ public final class ViewId
 		return new ViewId(viewIdStr, ImmutableList.copyOf(parts), windowId);
 	}
 
-	public static ViewId random(@NonNull final WindowId windowId)
+	public static ViewId random(@NonNull final WindowDocumentTypeId windowId)
 	{
 		final String viewIdPart = UIDStringUtil.createNext();
 		final ImmutableList<String> parts = ImmutableList.of(windowId.toJson(), viewIdPart);
@@ -85,7 +85,7 @@ public final class ViewId
 	 * @param otherParts optional other parts
 	 * @return ViewId
 	 */
-	public static ViewId ofParts(@NonNull final WindowId windowId, @NonNull final String viewIdPart, @NonNull final String... otherParts)
+	public static ViewId ofParts(@NonNull final WindowDocumentTypeId windowId, @NonNull final String viewIdPart, @NonNull final String... otherParts)
 	{
 		final ImmutableList.Builder<String> partsBuilder = ImmutableList.<String>builder()
 				.add(windowId.toJson()) // 0
@@ -104,7 +104,7 @@ public final class ViewId
 	private ViewId(
 			@NonNull final String viewIdStr,
 			@NonNull final ImmutableList<String> parts,
-			@NonNull final WindowId windowId)
+			@NonNull final WindowDocumentTypeId windowId)
 	{
 		this.windowId = windowId;
 		viewId = viewIdStr;
@@ -114,7 +114,7 @@ public final class ViewId
 	/**
 	 * @return never {@code null}
 	 */
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return windowId;
 	}
@@ -175,7 +175,7 @@ public final class ViewId
 		return parts.size() > 2 ? parts.subList(2, parts.size()) : ImmutableList.of();
 	}
 
-	public ViewId withWindowId(@NonNull final WindowId newWindowId)
+	public ViewId withWindowId(@NonNull final WindowDocumentTypeId newWindowId)
 	{
 		if (windowId.equals(newWindowId))
 		{
@@ -192,7 +192,7 @@ public final class ViewId
 		return new ViewId(newViewId, newParts, newWindowId);
 	}
 
-	public void assertWindowId(@NonNull final WindowId expectedWindowId)
+	public void assertWindowId(@NonNull final WindowDocumentTypeId expectedWindowId)
 	{
 		if (!windowId.equals(expectedWindowId))
 		{

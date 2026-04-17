@@ -48,7 +48,7 @@ import de.metas.ui.web.view.descriptor.SqlViewSelectData;
 import de.metas.ui.web.view.descriptor.SqlViewSelectionQueryBuilder;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONLookupValue;
 import de.metas.ui.web.window.model.DocumentQueryOrderByList;
 import de.metas.ui.web.window.model.sql.SqlOptions;
@@ -105,7 +105,7 @@ public class SqlHUEditorViewRepository implements HUEditorViewRepository
 	private final IMsgBL msgBL = Services.get(IMsgBL.class);
 	private final IQueryBL queryBL = Services.get(IQueryBL.class);
 
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 
 	private final HUEditorRowAttributesProvider attributesProvider;
 	private final HUEditorRowIsProcessedPredicate rowProcessedPredicate;
@@ -121,7 +121,7 @@ public class SqlHUEditorViewRepository implements HUEditorViewRepository
 
 	@Builder
 	private SqlHUEditorViewRepository(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final SqlViewBinding sqlViewBinding,
 			@Nullable final HUEditorRowAttributesProvider attributesProvider,
 			@Nullable final HUEditorRowIsProcessedPredicate rowProcessedPredicate,

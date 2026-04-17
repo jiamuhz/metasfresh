@@ -4,7 +4,7 @@ package de.metas.ui.web.window.descriptor.factory;
 
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
@@ -23,19 +23,19 @@ public interface DocumentDescriptorFactory
 	 *
 	 * @param windowId may be {@code null}. If {@code null}, then return {@code false}.
 	 */
-	boolean isWindowIdSupported(@Nullable WindowId windowId);
+	boolean isWindowIdSupported(@Nullable WindowDocumentTypeId windowId);
 
-	DocumentDescriptor getDocumentDescriptor(WindowId windowId) throws DocumentLayoutBuildException;
+	DocumentDescriptor getDocumentDescriptor(WindowDocumentTypeId windowId) throws DocumentLayoutBuildException;
 
-	void invalidateForWindow(WindowId windowId);
+	void invalidateForWindow(WindowDocumentTypeId windowId);
 
 	default DocumentEntityDescriptor getDocumentEntityDescriptor(final int AD_Window_ID)
 	{
-		final WindowId windowId = WindowId.of(AD_Window_ID);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.of(AD_Window_ID);
 		return getDocumentDescriptor(windowId).getEntityDescriptor();
 	}
 
-	default DocumentEntityDescriptor getDocumentEntityDescriptor(@NonNull final WindowId windowId)
+	default DocumentEntityDescriptor getDocumentEntityDescriptor(@NonNull final WindowDocumentTypeId windowId)
 	{
 		return getDocumentDescriptor(windowId).getEntityDescriptor();
 	}

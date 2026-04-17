@@ -11,7 +11,7 @@ import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.IncludedViewLayout;
 import de.metas.ui.web.view.descriptor.ViewLayout;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentLayoutElement;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentLayoutOptions;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
@@ -38,10 +38,10 @@ public final class JSONViewLayout
 	@JsonProperty("type")
 	@JsonInclude(JsonInclude.Include.NON_NULL)
 	@Deprecated
-	private final WindowId type;
+	private final WindowDocumentTypeId type;
 	@JsonProperty("windowId")
 	@JsonInclude(JsonInclude.Include.NON_NULL)
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 
 	@JsonProperty("profileId")
 	@JsonInclude(JsonInclude.Include.NON_NULL)

@@ -8,7 +8,7 @@ import de.metas.cache.CCache.CacheMapType;
 import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import lombok.NonNull;
 import org.compiere.model.I_AD_SysConfig;
@@ -141,7 +141,7 @@ class FullyCachedLookupDataSource implements LookupDataSource
 	}
 
 	@Override
-	public Optional<WindowId> getZoomIntoWindowId()
+	public Optional<WindowDocumentTypeId> getZoomIntoWindowId()
 	{
 		return fetcher.getZoomIntoWindowId();
 	}

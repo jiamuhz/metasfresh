@@ -10,7 +10,7 @@ import de.metas.i18n.Language;
 import de.metas.letter.BoilerPlateId;
 import de.metas.ui.web.session.UserSession;
 import de.metas.ui.web.window.WindowConstants;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.DateTimeConverters;
 import de.metas.ui.web.window.datatypes.json.JSONLookupValue;
 import lombok.NonNull;
@@ -71,7 +71,7 @@ public class JSONUserSession
 
 	@JsonProperty("userProfileWindowId")
 	@JsonInclude(JsonInclude.Include.NON_NULL)
-	private final WindowId userProfileWindowId;
+	private final WindowDocumentTypeId userProfileWindowId;
 	@JsonProperty("userProfileId")
 	@JsonInclude(JsonInclude.Include.NON_NULL)
 	private final Integer userProfileId;

@@ -15,7 +15,7 @@ import de.metas.ui.web.handlingunits.HUEditorRow;
 import de.metas.ui.web.handlingunits.HUEditorRowId;
 import de.metas.ui.web.handlingunits.HUEditorRowType;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSource;
 import de.metas.ui.web.window.model.lookup.NullLookupDataSource;
 import org.adempiere.test.AdempiereTestHelper;
@@ -93,12 +93,12 @@ public class PickingSlotViewRepositoryTests
 					pickingSlotId,
 					new PickedHUEditorRow(
 							HUEditorRow
-									.builder(WindowId.of(423))
+									.builder(WindowDocumentTypeId.of(423))
 									.setRowId(HUEditorRowId.ofTopLevelHU(HuId.ofRepoId(100)))
 									.setType(HUEditorRowType.TU)
 									.setTopLevel(true)
 									.addIncludedRow(HUEditorRow
-											.builder(WindowId.of(423))
+											.builder(WindowDocumentTypeId.of(423))
 											.setRowId(HUEditorRowId.ofHU(HuId.ofRepoId(101), HuId.ofRepoId(100)))
 											.setType(HUEditorRowType.VHU)
 											.setTopLevel(false)
@@ -176,7 +176,7 @@ public class PickingSlotViewRepositoryTests
 	public void testCreateSourceHURow()
 	{
 		final HUEditorRow huEditorRow = HUEditorRow
-				.builder(WindowId.of(423))
+				.builder(WindowDocumentTypeId.of(423))
 				.setRowId(HUEditorRowId.ofTopLevelHU(HuId.ofRepoId(100)))
 				.setType(HUEditorRowType.TU)
 				.setTopLevel(true)

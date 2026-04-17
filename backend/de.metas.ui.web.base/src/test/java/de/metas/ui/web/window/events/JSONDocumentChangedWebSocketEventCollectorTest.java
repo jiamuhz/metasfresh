@@ -2,7 +2,7 @@ package de.metas.ui.web.window.events;
 
 import de.metas.common.util.time.SystemTime;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Nested;
 import org.junit.jupiter.api.Test;
@@ -11,7 +11,7 @@ import static org.assertj.core.api.Assertions.assertThat;
 
 class JSONDocumentChangedWebSocketEventCollectorTest
 {
-	private static final WindowId windowId1 = WindowId.of(1);
+	private static final WindowDocumentTypeId windowId1 = WindowDocumentTypeId.of(1);
 	// private static final WindowId windowId2 = WindowId.of(2);
 	private static final DocumentId documentId1 = DocumentId.of(1);
 	// private static final DocumentId documentId2 = DocumentId.of(2);

@@ -11,7 +11,7 @@ import de.metas.ui.web.document.filter.DocumentFilterDescriptor;
 import de.metas.ui.web.document.filter.json.JSONDocumentFilterDescriptor;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewOrderBy;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
 import io.swagger.v3.oas.annotations.media.Schema;
@@ -67,7 +67,7 @@ public final class JSONDocumentLayoutTab
 	}
 
 	@JsonProperty("windowId")
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 
 	@JsonProperty("tabId")
 	@Getter

@@ -40,7 +40,7 @@ import de.metas.ui.web.view.json.JSONViewResult;
 import de.metas.ui.web.websocket.WebsocketConfig;
 import de.metas.ui.web.window.WindowConstants;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
 import de.metas.ui.web.window.model.DocumentCollection;
 import de.metas.user.UserId;
@@ -177,7 +177,7 @@ public class DebugRestController
 	{
 		userSession.assertLoggedIn();
 
-		sqlViewFactory.setDefaultProfileId(WindowId.fromJson(windowIdStr), ViewProfileId.fromJson(profileIdStr));
+		sqlViewFactory.setDefaultProfileId(WindowDocumentTypeId.fromJson(windowIdStr), ViewProfileId.fromJson(profileIdStr));
 	}
 
 	@RequestMapping(value = "/eventBus/postEvent", method = RequestMethod.GET)
@@ -208,7 +208,7 @@ public class DebugRestController
 		if (targetType == UserNotificationTargetType.Window)
 		{
 			final String targetTableName = documentCollection.getDocumentDescriptorFactory()
-					.getDocumentDescriptor(WindowId.fromJson(targetDocumentType))
+					.getDocumentDescriptor(WindowDocumentTypeId.fromJson(targetDocumentType))
 					.getEntityDescriptor()
 					.getTableName();
 

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import de.metas.ui.web.document.filter.sql.SqlDocumentFilterConverter;
 import de.metas.ui.web.document.filter.sql.SqlDocumentFilterConverterDecorator;
 import de.metas.ui.web.view.descriptor.SqlViewBinding.Builder;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.sql.SqlSelectValue;
 
@@ -60,9 +60,9 @@ public class SqlViewBindingTest
 	public static class CustomSqlDocumentFilterConverterDecoratorProvider implements SqlDocumentFilterConverterDecorator
 	{
 		@Override
-		public WindowId getWindowId()
+		public WindowDocumentTypeId getWindowId()
 		{
-			return WindowId.of(23);
+			return WindowDocumentTypeId.of(23);
 		}
 
 		@Override

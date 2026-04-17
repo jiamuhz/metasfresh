@@ -30,7 +30,7 @@ import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 import de.metas.ui.web.window.datatypes.DocumentPath;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONDocument;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentAdvSearch;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentChangeLog;
@@ -179,7 +179,7 @@ public class WindowRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentDescriptor descriptor = documentCollection.getDocumentDescriptorFactory().getDocumentDescriptor(windowId);
 		DocumentPermissionsHelper.checkWindowAccess(descriptor.getEntityDescriptor(), userSession.getUserRolePermissions());
 
@@ -202,7 +202,7 @@ public class WindowRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DetailId detailId = DetailId.fromJson(tabIdStr);
 
 		final DocumentDescriptor descriptor = documentCollection.getDocumentDescriptorFactory().getDocumentDescriptor(windowId);
@@ -227,7 +227,7 @@ public class WindowRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.rootDocumentPath(windowId, documentIdStr);
 		final JSONDocumentOptions jsonOpts = newJSONDocumentOptions()
 				.showOnlyFieldsListStr(fieldsListStr)
@@ -249,7 +249,7 @@ public class WindowRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentId documentId = DocumentId.of(documentIdStr);
 		final DetailId tabId = DetailId.fromJson(tabIdStr);
 
@@ -318,7 +318,7 @@ public class WindowRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.includedDocumentPath(windowId, documentIdStr, tabIdStr, rowIdStr);
 		final JSONDocumentOptions jsonOpts = newJSONDocumentOptions()
 				.showOnlyFieldsListStr(fieldsListStr)
@@ -375,7 +375,7 @@ public class WindowRestController
 			@RequestBody final List<JSONDocumentChangedEvent> events)
 	{
 		final DocumentPath documentPath = DocumentPath.builder()
-				.setDocumentType(WindowId.fromJson(windowIdStr))
+				.setDocumentType(WindowDocumentTypeId.fromJson(windowIdStr))
 				.setDocumentId(documentIdStr)
 				.allowNewDocumentId()
 				.build();
@@ -394,7 +394,7 @@ public class WindowRestController
 			@RequestBody final List<JSONDocumentChangedEvent> events)
 	{
 		final DocumentPath documentPath = DocumentPath.builder()
-				.setDocumentType(WindowId.fromJson(windowIdStr))
+				.setDocumentType(WindowDocumentTypeId.fromJson(windowIdStr))
 				.setDocumentId(documentIdStr)
 				.setDetailId(detailIdStr)
 				.setRowId(rowIdStr)
@@ -452,7 +452,7 @@ public class WindowRestController
 	{
 		userSession.assertLoggedIn();
 
-		final DocumentPath fromDocumentPath = DocumentPath.rootDocumentPath(WindowId.fromJson(windowIdStr), DocumentId.of(documentIdStr));
+		final DocumentPath fromDocumentPath = DocumentPath.rootDocumentPath(WindowDocumentTypeId.fromJson(windowIdStr), DocumentId.of(documentIdStr));
 
 		final Document documentCopy = documentCollection.duplicateDocument(fromDocumentPath);
 		final JSONDocumentOptions jsonOpts = newJSONDocumentOptions().showAdvancedFields(advanced).build();
@@ -468,7 +468,7 @@ public class WindowRestController
 			//
 	)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.rootDocumentPath(windowId, documentId);
 		return deleteDocuments(ImmutableList.of(documentPath));
 	}
@@ -483,7 +483,7 @@ public class WindowRestController
 			//
 	)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final List<DocumentPath> documentPaths = DocumentPath.rootDocumentPathsList(windowId, idsListStr);
 		if (documentPaths.isEmpty())
 		{
@@ -509,7 +509,7 @@ public class WindowRestController
 			//
 	)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.includedDocumentPath(windowId, documentId, tabId, rowId);
 		return deleteDocuments(ImmutableList.of(documentPath));
 	}
@@ -531,7 +531,7 @@ public class WindowRestController
 	)
 	{
 		final DocumentPath documentPath = DocumentPath.builder()
-				.setDocumentType(WindowId.fromJson(windowIdStr))
+				.setDocumentType(WindowDocumentTypeId.fromJson(windowIdStr))
 				.setDocumentId(documentId)
 				.setDetailId(tabId)
 				.setRowIdsList(rowIdsListStr)
@@ -577,7 +577,7 @@ public class WindowRestController
 			//
 	)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.rootDocumentPath(windowId, documentId);
 		return getDocumentFieldTypeahead(documentPath, fieldName, query);
 	}
@@ -607,7 +607,7 @@ public class WindowRestController
 			//
 	)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.includedDocumentPath(windowId, documentId, tabId, rowId);
 		return getDocumentFieldTypeahead(documentPath, fieldName, query);
 	}
@@ -644,7 +644,7 @@ public class WindowRestController
 			//
 	)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.rootDocumentPath(windowId, documentId);
 		return getDocumentFieldDropdown(documentPath, fieldName);
 	}
@@ -668,7 +668,7 @@ public class WindowRestController
 			//
 	)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.includedDocumentPath(windowId, documentId, tabId, rowId);
 		return getDocumentFieldDropdown(documentPath, fieldName);
 	}
@@ -700,7 +700,7 @@ public class WindowRestController
 			//
 	)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.rootDocumentPath(windowId, documentId);
 		return getDocumentFieldZoomInto(documentPath, fieldName);
 	}
@@ -725,7 +725,7 @@ public class WindowRestController
 			//
 	)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.includedDocumentPath(windowId, documentId, tabId, rowId);
 		return getDocumentFieldZoomInto(documentPath, fieldName);
 	}
@@ -746,7 +746,7 @@ public class WindowRestController
 		}
 		else if (!zoomIntoInfo.isRecordIdPresent())
 		{
-			final WindowId windowId = documentCollection.getWindowId(zoomIntoInfo);
+			final WindowDocumentTypeId windowId = documentCollection.getWindowId(zoomIntoInfo);
 			jsonZoomIntoDocumentPath = JSONDocumentPath.newWindowRecord(windowId);
 		}
 		else
@@ -846,7 +846,7 @@ public class WindowRestController
 			@RequestParam(name = "selectedRowIds", required = false) final String selectedRowIdsAsStr,
 			@RequestParam(name = "disabled", defaultValue = "false") final boolean returnDisabled)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath rootDocumentPath = DocumentPath.rootDocumentPath(windowId, documentIdStr);
 		final DetailId selectedTabId = DetailId.fromJson(selectedTabIdStr);
 		final DocumentIdsSelection selectedRowIds = DocumentIdsSelection.ofCommaSeparatedString(selectedRowIdsAsStr);
@@ -889,7 +889,7 @@ public class WindowRestController
 			@PathVariable("documentId") final String documentIdStr,
 			@PathVariable("tabId") final String tabIdStr)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath rootDocumentPath = DocumentPath.rootDocumentPath(windowId, documentIdStr);
 		final DetailId selectedTabId = DetailId.fromJson(tabIdStr);
 		final Set<TableRecordReference> selectedIncludedRecords = ImmutableSet.of();
@@ -909,7 +909,7 @@ public class WindowRestController
 			@PathVariable("windowId") final String windowIdStr,
 			@PathVariable("documentId") final String documentIdStr)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath rootDocumentPath = DocumentPath.rootDocumentPath(windowId, documentIdStr);
 		final Set<TableRecordReference> selectedIncludedRecords = ImmutableSet.of();
 		final boolean returnDisabled = false;
@@ -931,7 +931,7 @@ public class WindowRestController
 			@PathVariable("rowId") final String rowIdStr,
 			@RequestParam(name = "disabled", defaultValue = "false") final boolean returnDisabled)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DetailId selectedTabId = DetailId.fromJson(tabIdStr);
 
 		final DocumentPath includedDocumentPath = DocumentPath.includedDocumentPath(windowId, documentIdStr, selectedTabId.toJson(), rowIdStr);
@@ -987,7 +987,7 @@ public class WindowRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.rootDocumentPath(windowId, documentIdStr);
 
 		final IDocumentChangesCollector changesCollector = NullDocumentChangesCollector.instance;
@@ -1025,13 +1025,13 @@ public class WindowRestController
 		final String advSearchWindowIdStr = body.getAdvSearchWindowId();
 		final String selectionIdStr = body.getSelectedId();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.rootDocumentPath(windowId, documentIdStr);
 
-		return Execution.callInNewExecution("window.advSearch", () -> advSearchResult0(WindowId.fromJson(advSearchWindowIdStr), selectionIdStr, documentPath, fieldName));
+		return Execution.callInNewExecution("window.advSearch", () -> advSearchResult0(WindowDocumentTypeId.fromJson(advSearchWindowIdStr), selectionIdStr, documentPath, fieldName));
 	}
 
-	private List<JSONDocument> advSearchResult0(final WindowId windowId, final String selectionIdStr, final DocumentPath documentPath, final String fieldName)
+	private List<JSONDocument> advSearchResult0(final WindowDocumentTypeId windowId, final String selectionIdStr, final DocumentPath documentPath, final String fieldName)
 	{
 		final IDocumentChangesCollector changesCollector = Execution.getCurrentDocumentChangesCollectorOrNull();
 		final JSONDocumentOptions jsonOpts = newJSONDocumentOptions().build();
@@ -1055,7 +1055,7 @@ public class WindowRestController
 	{
 		userSession.assertLoggedIn();
 
-		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowId.fromJson(windowIdStr), DocumentId.of(documentIdStr));
+		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowDocumentTypeId.fromJson(windowIdStr), DocumentId.of(documentIdStr));
 		documentCollection.invalidateRootDocument(documentPath);
 	}
 
@@ -1069,7 +1069,7 @@ public class WindowRestController
 	{
 		userSession.assertLoggedIn();
 
-		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowId.fromJson(windowIdStr), DocumentId.of(documentIdStr));
+		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowDocumentTypeId.fromJson(windowIdStr), DocumentId.of(documentIdStr));
 
 		// For now it's OK if we invalidate the whole root document
 		documentCollection.invalidateRootDocument(documentPath);
@@ -1081,7 +1081,7 @@ public class WindowRestController
 			@PathVariable("windowId") final String windowIdStr,
 			@PathVariable("documentId") final String documentIdStr)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentPath documentPath = DocumentPath.rootDocumentPath(windowId, documentIdStr);
 		return documentChangeLogService.getJSONDocumentChangeLog(documentPath);
 	}
@@ -1094,7 +1094,7 @@ public class WindowRestController
 			@PathVariable("tabId") final String tabIdStr,
 			@PathVariable("rowId") final String rowIdStr)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final DocumentId documentId = DocumentId.of(documentIdStr);
 		final DetailId tabId = DetailId.fromJson(tabIdStr);
 		final DocumentId rowId = DocumentId.of(rowIdStr);
@@ -1135,7 +1135,7 @@ public class WindowRestController
 				continue;
 			}
 
-			final WindowId windowId = WindowId.of(adWindowId);
+			final WindowDocumentTypeId windowId = WindowDocumentTypeId.of(adWindowId);
 			try
 			{
 				if (!allAdWidowIds.contains(adWindowId))

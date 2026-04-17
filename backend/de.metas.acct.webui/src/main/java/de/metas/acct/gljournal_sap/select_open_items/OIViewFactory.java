@@ -24,7 +24,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.LookupDescriptorProviders;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Check;
@@ -41,7 +41,7 @@ import java.util.function.Supplier;
 public class OIViewFactory implements IViewFactory
 {
 	public static final String WINDOWID_String = "SAPGLJournalSelectOpenItems";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOWID_String);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOWID_String);
 	private static final String VIEW_PARAM_SAP_GLJournal_ID = "SAP_GLJournal_ID";
 	private static final String VIEW_PARAM_InitialUserInput = "initialUserInput";
 
@@ -90,7 +90,7 @@ public class OIViewFactory implements IViewFactory
 	}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		return ViewLayout.builder()
 				.setWindowId(WINDOW_ID)

@@ -40,7 +40,7 @@ import de.metas.ui.web.kpi.descriptor.elasticsearch.ElasticsearchDatasourceDescr
 import de.metas.ui.web.kpi.descriptor.elasticsearch.ElasticsearchDatasourceFieldDescriptor;
 import de.metas.ui.web.kpi.descriptor.sql.SQLDatasourceDescriptor;
 import de.metas.ui.web.kpi.descriptor.sql.SQLDatasourceFieldDescriptor;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import de.metas.util.Services;
 import de.metas.util.StringUtils;
@@ -269,7 +269,7 @@ public class KPIRepository
 		final AdWindowId targetWindowId = AdWindowId.ofRepoIdOrNull(kpiDef.getAD_Window_ID());
 
 		return SQLDatasourceDescriptor.builder()
-				.targetWindowId(WindowId.ofNullable(targetWindowId))
+				.targetWindowId(WindowDocumentTypeId.ofNullable(targetWindowId))
 				.sourceTableName(sourceTableName)
 				.sqlFrom(kpiDef.getSQL_From())
 				.sqlWhereClause(kpiDef.getSQL_WhereClause())

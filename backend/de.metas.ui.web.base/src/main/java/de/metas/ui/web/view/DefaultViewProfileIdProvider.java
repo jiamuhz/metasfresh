@@ -1,6 +1,6 @@
 package de.metas.ui.web.view;
 
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 
 /*
  * #%L
@@ -26,5 +26,5 @@ import de.metas.ui.web.window.datatypes.WindowId;
 
 public interface DefaultViewProfileIdProvider
 {
-	ViewProfileId getDefaultProfileIdByWindowId(final WindowId windowId);
+	ViewProfileId getDefaultProfileIdByWindowId(final WindowDocumentTypeId windowId);
 }

@@ -7,7 +7,7 @@ import org.adempiere.util.lang.impl.TableRecordReferenceSet;
 import org.springframework.stereotype.Component;
 
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 
 /*
  * #%L
@@ -41,7 +41,7 @@ import de.metas.ui.web.window.datatypes.WindowId;
  */
 public interface IViewInvalidationAdvisor
 {
-	WindowId getWindowId();
+	WindowDocumentTypeId getWindowId();
 
 	Set<DocumentId> findAffectedRowIds(
 			final TableRecordReferenceSet recordRefs,

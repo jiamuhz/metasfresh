@@ -4,7 +4,7 @@ import de.metas.cache.CCache;
 import de.metas.i18n.ITranslatableString;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 
 import lombok.Builder;
 import lombok.NonNull;
@@ -43,7 +43,7 @@ public class PurchaseViewLayoutFactory
 		this.caption = caption;
 	}
 
-	public ViewLayout getViewLayout(@NonNull final WindowId windowId, @NonNull final JSONViewDataType viewDataType)
+	public ViewLayout getViewLayout(@NonNull final WindowDocumentTypeId windowId, @NonNull final JSONViewDataType viewDataType)
 	{
 		final LayoutKey key = LayoutKey.builder()
 				.windowId(windowId)
@@ -72,7 +72,7 @@ public class PurchaseViewLayoutFactory
 	@lombok.Builder
 	private static class LayoutKey
 	{
-		WindowId windowId;
+		WindowDocumentTypeId windowId;
 		JSONViewDataType viewDataType;
 	}
 }

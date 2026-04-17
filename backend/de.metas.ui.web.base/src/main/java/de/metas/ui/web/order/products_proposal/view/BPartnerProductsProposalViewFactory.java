@@ -22,7 +22,7 @@ import de.metas.ui.web.order.products_proposal.service.OrderProductProposalsServ
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewFactory;
 import de.metas.ui.web.view.descriptor.ViewLayout;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -39,7 +39,7 @@ import java.util.Set;
 public class BPartnerProductsProposalViewFactory extends ProductsProposalViewFactoryTemplate
 {
 	public static final String WINDOW_ID_STRING = "bpartnerProductsProposal";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	private final BPartnerProductStatsService bpartnerProductStatsService;
 	private final OrderProductProposalsService orderProductProposalsService;

@@ -8,7 +8,7 @@ import de.metas.process.ProcessExecutionResult.RecordsToOpen.OpenTarget;
 import de.metas.process.ProcessPreconditionsResolution;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.DocumentCollection;
 import de.metas.ui.web.window.model.NullDocumentChangesCollector;
 import de.metas.util.Check;
@@ -96,7 +96,7 @@ import org.compiere.model.I_M_InOut;
 	private int createDraftEmptiesDocument()
 	{
 		final DocumentPath documentPath = DocumentPath.builder()
-				.setDocumentType(WindowId.of(getTargetWindowId()))
+				.setDocumentType(WindowDocumentTypeId.of(getTargetWindowId()))
 				.setDocumentId(DocumentId.NEW_ID_STRING)
 				.allowNewDocumentId()
 				.build();

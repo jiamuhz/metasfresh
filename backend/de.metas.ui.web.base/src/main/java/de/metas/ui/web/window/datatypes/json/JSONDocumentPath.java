@@ -15,7 +15,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
 import de.metas.ui.web.window.datatypes.DocumentType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.util.Check;
 import lombok.Builder;
@@ -62,13 +62,14 @@ public class JSONDocumentPath
 		return jsonDocumentPath != null ? jsonDocumentPath.toDocumentPath() : null;
 	}
 
-	public static JSONDocumentPath newWindowRecord(@NonNull final WindowId windowId)
+	public static JSONDocumentPath newWindowRecord(@NonNull final WindowDocumentTypeId windowId)
 	{
 		return builder().windowId(windowId).documentId(DocumentId.NEW).build();
 	}
 
 	@JsonProperty("windowId")
-	@JsonInclude(JsonInclude.Include.NON_EMPTY) WindowId windowId;
+	@JsonInclude(JsonInclude.Include.NON_EMPTY)
+	WindowDocumentTypeId windowId;
 
 	@JsonProperty("processId")
 	@JsonInclude(JsonInclude.Include.NON_EMPTY) ProcessId processId;
@@ -93,7 +94,7 @@ public class JSONDocumentPath
 	@JsonCreator
 	@Builder
 	private JSONDocumentPath(
-			@JsonProperty("windowId") @Nullable final WindowId windowId,
+			@JsonProperty("windowId") @Nullable final WindowDocumentTypeId windowId,
 			@JsonProperty("processId") @Nullable final ProcessId processId,
 			@JsonProperty("viewId") @Nullable final ViewId viewId,
 			@JsonProperty("documentId") @Nullable final DocumentId documentId,

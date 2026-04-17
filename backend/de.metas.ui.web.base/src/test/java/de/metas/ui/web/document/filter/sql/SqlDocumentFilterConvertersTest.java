@@ -1,7 +1,7 @@
 package de.metas.ui.web.document.filter.sql;
 
 import de.metas.ui.web.document.filter.DocumentFilter;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.sql.SqlEntityBinding;
 import de.metas.ui.web.window.model.sql.SqlOptions;
 import org.junit.jupiter.api.Test;
@@ -60,7 +60,7 @@ public class SqlDocumentFilterConvertersTest
 		}
 
 		@Override
-		public WindowId getWindowId()
+		public WindowDocumentTypeId getWindowId()
 		{
 			throw new UnsupportedOperationException("getWindowId is not supposed to be called within this test");
 		}

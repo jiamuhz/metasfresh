@@ -11,7 +11,7 @@ import com.google.common.collect.ImmutableListMultimap;
 import com.google.common.collect.ImmutableSet;
 import de.metas.ui.web.document.filter.json.JSONDocumentFilterDescriptor;
 import de.metas.ui.web.window.WindowConstants;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
@@ -40,10 +40,10 @@ public final class JSONDocumentLayout
 	}
 
 	@JsonProperty("windowId")
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 	@JsonProperty("type")
 	@Deprecated
-	private final WindowId type;
+	private final WindowDocumentTypeId type;
 
 	@JsonProperty("tabId")
 	@JsonInclude(Include.NON_NULL)
@@ -236,7 +236,7 @@ public final class JSONDocumentLayout
 
 	private static void setAdvSearchWindows(
 			@NonNull final List<JSONDocumentLayoutSection> sections,
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@Nullable final DetailId tabId,
 			@NonNull final JSONDocumentLayoutOptions jsonOpts)
 	{

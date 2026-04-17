@@ -19,7 +19,7 @@ import de.metas.ui.web.view.ViewRow;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.DateTimeConverters;
 import de.metas.ui.web.window.descriptor.CreateFiltersProviderContext;
 import de.metas.ui.web.window.descriptor.DocumentDescriptor;
@@ -64,7 +64,7 @@ class CommentsServiceTest
 	public static final ZonedDateTime ZONED_DATE_TIME = ZonedDateTime.of(2020, Month.APRIL.getValue(), 23, 1, 1, 1, 0, ZoneId.of("UTC+8"));
 
 	public static final String DUMMY_TABLE_NAME = "DummyTable";
-	private static final WindowId WINDOW_ID = WindowId.of(123);
+	private static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.of(123);
 
 	private CommentsRepository commentsRepository;
 	private CommentsService commentsService;
@@ -109,19 +109,19 @@ class CommentsServiceTest
 						.build();
 
 				@Override
-				public boolean isWindowIdSupported(@Nullable final WindowId windowId)
+				public boolean isWindowIdSupported(@Nullable final WindowDocumentTypeId windowId)
 				{
 					return false;
 				}
 
 				@Override
-				public DocumentDescriptor getDocumentDescriptor(final WindowId windowId) throws DocumentLayoutBuildException
+				public DocumentDescriptor getDocumentDescriptor(final WindowDocumentTypeId windowId) throws DocumentLayoutBuildException
 				{
 					return documentDescriptor;
 				}
 
 				@Override
-				public void invalidateForWindow(final WindowId windowId)
+				public void invalidateForWindow(final WindowDocumentTypeId windowId)
 				{
 
 				}

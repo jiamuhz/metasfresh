@@ -16,7 +16,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import lombok.NonNull;
 
@@ -26,7 +26,7 @@ import javax.annotation.Nullable;
 public class PaymentsToReconcileViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	static final String WINDOW_ID_String = "paymentsToReconcile";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_String);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_String);
 
 	private final BankStatementReconciliationViewFactory banksStatementReconciliationViewFactory;
 
@@ -50,7 +50,7 @@ public class PaymentsToReconcileViewFactory implements IViewFactory, IViewsStora
 
 	@Override
 	public ViewLayout getViewLayout(
-			final WindowId windowId,
+			final WindowDocumentTypeId windowId,
 			final JSONViewDataType viewDataType,
 			final ViewProfileId profileId)
 	{
@@ -65,7 +65,7 @@ public class PaymentsToReconcileViewFactory implements IViewFactory, IViewsStora
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return WINDOW_ID;
 	}

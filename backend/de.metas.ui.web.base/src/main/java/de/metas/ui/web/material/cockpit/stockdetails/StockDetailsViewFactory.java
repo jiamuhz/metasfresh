@@ -37,7 +37,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 
 import javax.annotation.Nullable;
@@ -63,7 +63,7 @@ public class StockDetailsViewFactory implements IViewFactory, IViewsStorage4Give
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return MaterialCockpitUtil.WINDOW_MaterialCockpit_StockDetailView;
 	}
@@ -159,7 +159,7 @@ public class StockDetailsViewFactory implements IViewFactory, IViewsStorage4Give
 
 	@Override
 	public ViewLayout getViewLayout(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final JSONViewDataType viewDataType,
 			final ViewProfileId profileId)
 	{

@@ -26,7 +26,7 @@ import de.metas.ui.web.session.UserSession;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONPatchEvent;
 import de.metas.websocket.producers.WebSocketProducersRegistry;
 import de.metas.websocket.sender.WebsocketSender;
@@ -356,7 +356,7 @@ public class DashboardRestController
 
 	private ViewId createView(final KPIZoomIntoDetailsInfo detailsInfo)
 	{
-		final WindowId targetWindowId = getTargetWindowId(detailsInfo);
+		final WindowDocumentTypeId targetWindowId = getTargetWindowId(detailsInfo);
 
 		return viewRepo.createView(CreateViewRequest.builder(targetWindowId)
 				.addStickyFilters(DocumentFilter.builder()
@@ -369,16 +369,16 @@ public class DashboardRestController
 				.getViewId();
 	}
 
-	private WindowId getTargetWindowId(final KPIZoomIntoDetailsInfo detailsInfo)
+	private WindowDocumentTypeId getTargetWindowId(final KPIZoomIntoDetailsInfo detailsInfo)
 	{
-		final WindowId targetWindowId = detailsInfo.getTargetWindowId();
+		final WindowDocumentTypeId targetWindowId = detailsInfo.getTargetWindowId();
 		if (targetWindowId != null)
 		{
 			return targetWindowId;
 		}
 
 		return RecordWindowFinder.findAdWindowId(detailsInfo.getTableName())
-				.map(WindowId::of)
+				.map(WindowDocumentTypeId::of)
 				.orElseThrow(() -> new AdempiereException("No window available to show the details"));
 	}
 

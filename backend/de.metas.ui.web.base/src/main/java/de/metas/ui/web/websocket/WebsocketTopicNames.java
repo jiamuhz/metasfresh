@@ -2,7 +2,7 @@ package de.metas.ui.web.websocket;
 
 import com.google.common.base.Preconditions;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.user.UserId;
 import de.metas.util.Check;
 import de.metas.websocket.WebsocketTopicName;
@@ -38,7 +38,7 @@ public class WebsocketTopicNames
 	}
 
 	public static WebsocketTopicName buildDocumentTopicName(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final DocumentId documentId)
 	{
 		return WebsocketTopicName.ofString(TOPIC_Document + "/" + windowId.toJson() + "/" + documentId.toJson());

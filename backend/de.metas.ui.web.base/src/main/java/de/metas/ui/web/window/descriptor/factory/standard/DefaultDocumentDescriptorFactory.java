@@ -10,7 +10,7 @@ import org.springframework.stereotype.Service;
 
 import de.metas.cache.CCache;
 import de.metas.ui.web.dataentry.window.descriptor.factory.DataEntrySubTabBindingDescriptorBuilder;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentDescriptor;
 import de.metas.ui.web.window.descriptor.factory.DocumentDescriptorFactory;
 import de.metas.ui.web.window.exceptions.DocumentLayoutBuildException;
@@ -23,9 +23,9 @@ public class DefaultDocumentDescriptorFactory implements DocumentDescriptorFacto
 	@NonNull
 	final DataEntrySubTabBindingDescriptorBuilder dataEntrySubTabBindingDescriptorBuilder;
 
-	private final CCache<WindowId, DocumentDescriptor> documentDescriptorsByWindowId = new CCache<>(I_AD_Window.Table_Name + "#DocumentDescriptor", 50);
+	private final CCache<WindowDocumentTypeId, DocumentDescriptor> documentDescriptorsByWindowId = new CCache<>(I_AD_Window.Table_Name + "#DocumentDescriptor", 50);
 
-	private final Set<WindowId> unsupportedWindowIds = new HashSet<>();
+	private final Set<WindowDocumentTypeId> unsupportedWindowIds = new HashSet<>();
 
 	/* package */ DefaultDocumentDescriptorFactory(
 			@NonNull final DataEntrySubTabBindingDescriptorBuilder dataEntrySubTabBindingDescriptorBuilder)
@@ -34,13 +34,13 @@ public class DefaultDocumentDescriptorFactory implements DocumentDescriptorFacto
 	}
 
 	@Override
-	public void invalidateForWindow(@NonNull final WindowId windowId)
+	public void invalidateForWindow(@NonNull final WindowDocumentTypeId windowId)
 	{
 		documentDescriptorsByWindowId.remove(windowId);
 	}
 
 	@Override
-	public DocumentDescriptor getDocumentDescriptor(@NonNull final WindowId windowId)
+	public DocumentDescriptor getDocumentDescriptor(@NonNull final WindowDocumentTypeId windowId)
 	{
 		try
 		{
@@ -52,7 +52,7 @@ public class DefaultDocumentDescriptorFactory implements DocumentDescriptorFacto
 		}
 	}
 
-	private DefaultDocumentDescriptorLoader createDocumentDescriptorLoader(@NonNull final WindowId windowId)
+	private DefaultDocumentDescriptorLoader createDocumentDescriptorLoader(@NonNull final WindowDocumentTypeId windowId)
 	{
 		return new DefaultDocumentDescriptorLoader(
 				windowId.toAdWindowId(),
@@ -62,11 +62,11 @@ public class DefaultDocumentDescriptorFactory implements DocumentDescriptorFacto
 	/**
 	 * @return {@code false} if the given {@code windowId} * <br>
 	 *         is {@code null} <br>
-	 *         or its {@link WindowId#isInt()} returns {@code false}
-	 *         or it was declared unsupported via {@link #addUnsupportedWindowId(WindowId)}.
+	 *         or its {@link WindowDocumentTypeId#isInt()} returns {@code false}
+	 *         or it was declared unsupported via {@link #addUnsupportedWindowId(WindowDocumentTypeId)}.
 	 */
 	@Override
-	public boolean isWindowIdSupported(@Nullable final WindowId windowId)
+	public boolean isWindowIdSupported(@Nullable final WindowDocumentTypeId windowId)
 	{
 		if (windowId == null || !windowId.isInt() || unsupportedWindowIds.contains(windowId))
 		{
@@ -78,7 +78,7 @@ public class DefaultDocumentDescriptorFactory implements DocumentDescriptorFacto
 	/**
 	 * Tell this instance that it shall not attempt to work with the given window ID.
 	 */
-	public void addUnsupportedWindowId(@NonNull final WindowId windowId)
+	public void addUnsupportedWindowId(@NonNull final WindowDocumentTypeId windowId)
 	{
 		unsupportedWindowIds.add(windowId);
 	}

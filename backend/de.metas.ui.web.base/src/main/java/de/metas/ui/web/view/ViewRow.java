@@ -9,7 +9,7 @@ import de.metas.ui.web.handlingunits.HUEditorRowType;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
 import de.metas.ui.web.window.datatypes.LookupValue;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONNullValue;
 import lombok.NonNull;
 import lombok.ToString;
@@ -23,7 +23,7 @@ import java.util.Map;
 
 public final class ViewRow implements IViewRow
 {
-	public static Builder builder(final WindowId windowId)
+	public static Builder builder(final WindowDocumentTypeId windowId)
 	{
 		return new Builder(windowId);
 	}
@@ -160,7 +160,7 @@ public final class ViewRow implements IViewRow
 	@ToString
 	public static final class Builder
 	{
-		private final WindowId windowId;
+		private final WindowDocumentTypeId windowId;
 		private DocumentId rowId;
 		private DocumentId _rowIdEffective; // lazy
 		private DocumentId parentRowId;
@@ -169,7 +169,7 @@ public final class ViewRow implements IViewRow
 		private final Map<String, Object> values = new LinkedHashMap<>(); // preserve the insertion order of fields
 		private List<IViewRow> includedRows = null;
 
-		private Builder(@NonNull final WindowId windowId)
+		private Builder(@NonNull final WindowDocumentTypeId windowId)
 		{
 			this.windowId = windowId;
 		}

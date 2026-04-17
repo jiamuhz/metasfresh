@@ -25,7 +25,7 @@ import de.metas.ui.web.view.ViewFactory;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.descriptor.annotation.ViewColumnHelper.ClassViewColumnOverrides;
 import de.metas.ui.web.window.datatypes.DocumentIdIntSequence;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSource;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Check;
@@ -47,7 +47,7 @@ import java.util.Set;
 public class OtherSalePricesProductsProposalViewFactory extends ProductsProposalViewFactoryTemplate
 {
 	public static final String WINDOW_ID_STRING = "otherSalePricesProductsProposal";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	// services
 	private final BPartnerProductStatsService bpartnerProductStatsService;

@@ -28,7 +28,7 @@ import de.metas.bpartner.BPartnerLocationId;
 import de.metas.ui.web.view.SqlViewFactory;
 import de.metas.ui.web.view.descriptor.SqlViewKeyColumnNamesMap;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.Document;
 import de.metas.ui.web.window.model.DocumentFieldLogicExpressionResultRevaluator;
 import de.metas.ui.web.window.model.sql.SqlComposedKey;
@@ -50,7 +50,7 @@ public class AdvancedSearchBPartnerProcessor implements AdvancedSearchDescriptor
 
 	@Override
 	public void processSelection(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final Document document,
 			@NonNull final String bpartnerFieldName,
 			@NonNull final String selectionIdStr)

@@ -25,7 +25,7 @@ package de.metas.ui.web.window.datatypes.json;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.google.common.collect.ImmutableList;
 import de.metas.common.rest_api.v2.JsonErrorItem;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.Builder;
 import lombok.NonNull;
 import lombok.Value;
@@ -76,7 +76,8 @@ public class JsonWindowsHealthResponse
 	@Jacksonized
 	public static class Entry
 	{
-		@NonNull WindowId windowId;
+		@NonNull
+		WindowDocumentTypeId windowId;
 		@Nullable String windowName;
 
 		@JsonInclude(JsonInclude.Include.NON_EMPTY)

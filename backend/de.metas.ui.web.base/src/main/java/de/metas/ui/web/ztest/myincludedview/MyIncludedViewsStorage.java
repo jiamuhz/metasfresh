@@ -6,7 +6,7 @@ import de.metas.ui.web.view.*;
 import de.metas.ui.web.view.event.ViewChangesCollector;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.ztest.MyViewConstants;
 import de.metas.ui.web.ztest.myview.MyView;
 import de.metas.ui.web.ztest.myview.MyViewRow;
@@ -29,7 +29,7 @@ public class MyIncludedViewsStorage implements IViewsStorage4GivenWindow
 {
 	//@formatter:off
 	@Override
-	public WindowId getWindowId() { return MyViewConstants.WINDOWID_MyIncludedView; }
+	public WindowDocumentTypeId getWindowId() { return MyViewConstants.WINDOWID_MyIncludedView; }
 	//@formatter:off
 	
 	@Autowired

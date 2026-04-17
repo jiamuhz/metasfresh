@@ -28,7 +28,7 @@ import de.metas.logging.LogManager;
 import de.metas.ui.web.config.WebConfig;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JsonWindowsHealthResponse;
 import de.metas.ui.web.window.exceptions.DocumentLayoutBuildException;
 import de.metas.util.Services;
@@ -80,7 +80,7 @@ public class ViewHealthRestController
 		{
 			countCurrent++;
 
-			final WindowId windowId = WindowId.of(adWindowId);
+			final WindowDocumentTypeId windowId = WindowDocumentTypeId.of(adWindowId);
 
 			if (skipAdWindowIds.contains(adWindowId))
 			{

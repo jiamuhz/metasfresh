@@ -21,7 +21,7 @@ import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.websocket.WebsocketTopicNames;
 import de.metas.ui.web.window.controller.DocumentPermissionsHelper;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import de.metas.util.Services;
 import de.metas.websocket.WebsocketTopicName;
@@ -73,7 +73,7 @@ public class ViewsRepository implements IViewsRepository
 	@Value("${metasfresh.webui.view.truncateOnStartUp:true}")
 	private boolean truncateSelectionOnStartUp;
 
-	private final ImmutableMap<WindowId, IViewsStorage4GivenWindow> mapViewsStorages;  // IViewsStorage4GivenWindow Spring Beans
+	private final ImmutableMap<WindowDocumentTypeId, IViewsStorage4GivenWindow> mapViewsStorages;  // IViewsStorage4GivenWindow Spring Beans
 	private final IViewsStorage4GivenWindow defaultViewsStorage;
 
 	private final Executor async;
@@ -157,7 +157,7 @@ public class ViewsRepository implements IViewsRepository
 				continue;
 			}
 
-			final WindowId windowId = WindowId.fromJson(annotation.windowId());
+			final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(annotation.windowId());
 			factory.setWindowId(windowId);
 
 			JSONViewDataType[] viewTypes = annotation.viewTypes();
@@ -175,9 +175,9 @@ public class ViewsRepository implements IViewsRepository
 		return ImmutableMap.copyOf(factories);
 	}
 
-	private static ImmutableMap<WindowId, IViewsStorage4GivenWindow> createViewIndexStoragesMap(final List<IViewsStorage4GivenWindow> viewsIndexStorages)
+	private static ImmutableMap<WindowDocumentTypeId, IViewsStorage4GivenWindow> createViewIndexStoragesMap(final List<IViewsStorage4GivenWindow> viewsIndexStorages)
 	{
-		final ImmutableMap.Builder<WindowId, IViewsStorage4GivenWindow> map = ImmutableMap.builder();
+		final ImmutableMap.Builder<WindowDocumentTypeId, IViewsStorage4GivenWindow> map = ImmutableMap.builder();
 
 		for (final IViewsStorage4GivenWindow viewsIndexStorage : viewsIndexStorages)
 		{
@@ -187,7 +187,7 @@ public class ViewsRepository implements IViewsRepository
 				continue;
 			}
 
-			final WindowId windowId = viewsIndexStorage.getWindowId();
+			final WindowDocumentTypeId windowId = viewsIndexStorage.getWindowId();
 			Check.assumeNotNull(windowId, "{} shall not have windowId null", viewsIndexStorage);
 
 			map.put(windowId, viewsIndexStorage);
@@ -203,7 +203,7 @@ public class ViewsRepository implements IViewsRepository
 		return websocketActiveSubscriptionsIndex.hasSubscriptionsForTopicName(topicName);
 	}
 
-	private IViewFactory getFactory(final WindowId windowId, final JSONViewDataType viewType)
+	private IViewFactory getFactory(final WindowDocumentTypeId windowId, final JSONViewDataType viewType)
 	{
 		IViewFactory factory = mapViewFactories.get(ViewFactoryKey.of(windowId, viewType));
 		if (factory != null)
@@ -239,7 +239,7 @@ public class ViewsRepository implements IViewsRepository
 	}
 
 	@Override
-	public List<ViewProfile> getAvailableProfiles(final WindowId windowId, final JSONViewDataType viewDataType)
+	public List<ViewProfile> getAvailableProfiles(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType)
 	{
 		final IViewFactory factory = getFactory(windowId, viewDataType);
 		return factory.getAvailableProfiles(windowId);
@@ -247,7 +247,7 @@ public class ViewsRepository implements IViewsRepository
 
 	@Override
 	public ViewLayout getViewLayout(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final JSONViewDataType viewDataType,
 			@Nullable final ViewProfileId profileId,
 			@Nullable final UserRolePermissionsKey permissionsKey)
@@ -283,7 +283,7 @@ public class ViewsRepository implements IViewsRepository
 	{
 		logger.trace("Creating new view from {}", request);
 
-		final WindowId windowId = request.getViewId().getWindowId();
+		final WindowDocumentTypeId windowId = request.getViewId().getWindowId();
 		final JSONViewDataType viewType = request.getViewType();
 		final IViewFactory factory = getFactory(windowId, viewType);
 		final IView view = factory.createView(request);
@@ -483,7 +483,7 @@ public class ViewsRepository implements IViewsRepository
 	@lombok.Value(staticConstructor = "of")
 	private static class ViewFactoryKey
 	{
-		WindowId windowId;
+		WindowDocumentTypeId windowId;
 		JSONViewDataType viewType;
 	}
 

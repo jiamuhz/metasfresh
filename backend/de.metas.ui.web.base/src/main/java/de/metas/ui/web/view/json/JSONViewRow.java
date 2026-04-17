@@ -20,7 +20,7 @@ import de.metas.ui.web.view.IViewRowOverrides;
 import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewRowOverridesHelper;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentBase;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentField;
 import de.metas.ui.web.window.datatypes.json.JSONLayoutWidgetType;
@@ -199,7 +199,7 @@ public class JSONViewRow extends JSONDocumentBase implements JSONViewRowBase
 	@Value
 	private static class JSONIncludedViewId
 	{
-		WindowId windowId;
+		WindowDocumentTypeId windowId;
 		String viewId;
 	}
 }

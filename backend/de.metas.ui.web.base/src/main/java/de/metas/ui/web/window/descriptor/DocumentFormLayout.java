@@ -9,7 +9,7 @@ import com.google.common.collect.ImmutableList;
 
 import de.metas.i18n.ITranslatableString;
 import de.metas.i18n.TranslatableStrings;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import lombok.NonNull;
 
@@ -28,7 +28,7 @@ public class DocumentFormLayout
 		return new Builder();
 	}
 
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 	private final ITranslatableString caption;
 	private final ITranslatableString description;
 
@@ -56,7 +56,7 @@ public class DocumentFormLayout
 				.toString();
 	}
 
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return windowId;
 	}
@@ -99,7 +99,7 @@ public class DocumentFormLayout
 
 	public static final class Builder
 	{
-		public WindowId windowId;
+		public WindowDocumentTypeId windowId;
 		private ITranslatableString caption;
 		private ITranslatableString description;
 
@@ -134,7 +134,7 @@ public class DocumentFormLayout
 					.toString();
 		}
 
-		public Builder setWindowId(final WindowId windowId)
+		public Builder setWindowId(final WindowDocumentTypeId windowId)
 		{
 			this.windowId = windowId;
 			return this;

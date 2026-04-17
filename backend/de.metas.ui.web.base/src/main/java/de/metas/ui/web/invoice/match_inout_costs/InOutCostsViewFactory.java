@@ -25,7 +25,7 @@ import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.LookupValue;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.LookupDescriptorProviders;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Check;
@@ -43,7 +43,7 @@ import java.util.function.Supplier;
 public class InOutCostsViewFactory implements IViewFactory
 {
 	public static final String WINDOWID_String = "inoutCostsToMatch";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOWID_String);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOWID_String);
 
 	private static final String VIEW_PARAM_SOTrx = "soTrx";
 	private static final String VIEW_PARAM_invoiceLineId = "invoiceLineId";
@@ -68,7 +68,7 @@ public class InOutCostsViewFactory implements IViewFactory
 	}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		return ViewLayout.builder()
 				.setWindowId(WINDOW_ID)

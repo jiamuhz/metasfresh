@@ -1,6 +1,6 @@
 package de.metas.ui.web.view;
 
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.DocumentQueryOrderByList;
 import lombok.Builder;
 import lombok.NonNull;
@@ -47,7 +47,7 @@ public class ViewRowIdsOrderedSelection
 		return Objects.equals(s1, s2);
 	}
 
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return getViewId().getWindowId();
 	}

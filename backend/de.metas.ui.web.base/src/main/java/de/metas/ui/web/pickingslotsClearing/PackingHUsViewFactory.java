@@ -28,7 +28,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,7 +42,7 @@ import java.util.stream.Stream;
 public class PackingHUsViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	static final String WINDOW_ID_STRING = "packingHUs";
-	static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	// services
 	private final IADProcessDAO adProcessDAO = Services.get(IADProcessDAO.class);
@@ -51,7 +51,7 @@ public class PackingHUsViewFactory implements IViewFactory, IViewsStorage4GivenW
 	private IViewsRepository viewsRepo;
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		return huEditorViewFactory.getViewLayout(windowId, viewDataType, profileId);
 	}
@@ -76,7 +76,7 @@ public class PackingHUsViewFactory implements IViewFactory, IViewsStorage4GivenW
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return WINDOW_ID;
 	}

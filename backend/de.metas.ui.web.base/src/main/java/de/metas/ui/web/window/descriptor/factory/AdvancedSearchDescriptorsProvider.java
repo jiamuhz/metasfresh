@@ -2,7 +2,7 @@ package de.metas.ui.web.window.descriptor.factory;
 
 import de.metas.logging.LogManager;
 import de.metas.ui.web.view.SqlViewFactory;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.AdvancedSearchBPartnerProcessor;
 import de.metas.ui.web.window.descriptor.AdvancedSearchDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
@@ -57,7 +57,7 @@ public class AdvancedSearchDescriptorsProvider
 	{
 		this.documentDescriptors = documentDescriptors;
 		// FIXME: hardcoded AdvancedSearchDescriptor for C_BPartner_Adv_Search_v
-		final WindowId searchAssistantId = WindowId.of(sysConfigBL.getIntValue(SYSCONFIG_BPARTNER_SEARCH_WINDOW_ID, DEFAULT_B_PARTNER_SEARCH_WINDOW_ID));
+		final WindowDocumentTypeId searchAssistantId = WindowDocumentTypeId.of(sysConfigBL.getIntValue(SYSCONFIG_BPARTNER_SEARCH_WINDOW_ID, DEFAULT_B_PARTNER_SEARCH_WINDOW_ID));
 		addAdvancedSearchDescriptor(AdvancedSearchDescriptor.of(I_C_BPartner.Table_Name, searchAssistantId, new AdvancedSearchBPartnerProcessor(sqlViewFactory)));
 	}
 
@@ -76,11 +76,11 @@ public class AdvancedSearchDescriptorsProvider
 	 * @param windowId the window ID of the Advanced Search window
 	 * @return corresponding record descriptor from static map
 	 */
-	public AdvancedSearchDescriptor getAdvancedSearchDescriptor(final WindowId windowId)
+	public AdvancedSearchDescriptor getAdvancedSearchDescriptor(final WindowDocumentTypeId windowId)
 	{
 		return advSearchDescriptorsByTableName.values()
 				.stream()
-				.filter(descriptor -> WindowId.equals(windowId, descriptor.getWindowId()))
+				.filter(descriptor -> WindowDocumentTypeId.equals(windowId, descriptor.getWindowId()))
 				.findFirst()
 				.orElseThrow(() -> new AdempiereException("No advanced search quick input defined windowId=" + windowId));
 	}

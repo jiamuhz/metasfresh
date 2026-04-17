@@ -8,7 +8,7 @@ import com.google.common.base.MoreObjects;
 
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 
 
@@ -23,7 +23,7 @@ public final class QuickInputPath
 			, final String quickInputIdStr //
 	)
 	{
-		final DocumentPath rootDocumentPath = DocumentPath.rootDocumentPath(WindowId.fromJson(windowIdStr), documentIdStr);
+		final DocumentPath rootDocumentPath = DocumentPath.rootDocumentPath(WindowDocumentTypeId.fromJson(windowIdStr), documentIdStr);
 		final DetailId detailId = DetailId.fromJson(tabIdStr);
 		final DocumentId quickInputId = DocumentId.of(quickInputIdStr);
 		return new QuickInputPath(rootDocumentPath, detailId, quickInputId);

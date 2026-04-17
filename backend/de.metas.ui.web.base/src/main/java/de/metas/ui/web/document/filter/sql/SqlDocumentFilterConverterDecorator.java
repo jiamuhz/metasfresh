@@ -3,14 +3,14 @@ package de.metas.ui.web.document.filter.sql;
 import org.springframework.stereotype.Component;
 
 import de.metas.ui.web.view.SqlViewFactory;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 
  
 
 /**
  * Implementors shall be annotated with {@link Component}, discovered by spring and be autowired into {@link SqlViewFactory}.
  * <p>
- * When a view is created for the implementor's {@link WindowId}, the "normal" {@link SqlDocumentFilterConverter} can be wrapped.<br>
+ * When a view is created for the implementor's {@link WindowDocumentTypeId}, the "normal" {@link SqlDocumentFilterConverter} can be wrapped.<br>
  * It can later be called and its results be augmented.
  * 
  *
@@ -19,7 +19,7 @@ import de.metas.ui.web.window.datatypes.WindowId;
  */
 public interface SqlDocumentFilterConverterDecorator
 {
-	WindowId getWindowId();
+	WindowDocumentTypeId getWindowId();
 
 	SqlDocumentFilterConverter decorate(SqlDocumentFilterConverter converter);
 }

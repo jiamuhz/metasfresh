@@ -31,7 +31,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -40,7 +40,7 @@ import javax.annotation.Nullable;
 
 public abstract class PricingConditionsViewFactoryTemplate implements IViewFactory, IViewsStorage4GivenWindow
 {
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 
 	private final CCache<ViewLayoutKey, ViewLayout> //
 	viewLayoutCache = CCache.newCache(OrderLinePricingConditionsViewFactory.class + "#ViewLayout", 1, 0);
@@ -54,7 +54,7 @@ public abstract class PricingConditionsViewFactoryTemplate implements IViewFacto
 
 	protected PricingConditionsViewFactoryTemplate(
 			@NonNull final LookupDataSourceFactory lookupDataSourceFactory,
-			@NonNull final WindowId windowId)
+			@NonNull final WindowDocumentTypeId windowId)
 	{
 		this.windowId = windowId;
 		this.lookups = new PricingConditionsRowLookups(lookupDataSourceFactory);
@@ -66,13 +66,13 @@ public abstract class PricingConditionsViewFactoryTemplate implements IViewFacto
 	}
 
 	@Override
-	public final WindowId getWindowId()
+	public final WindowDocumentTypeId getWindowId()
 	{
 		return windowId;
 	}
 
 	@Override
-	public final ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public final ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		final ViewLayoutKey key = ViewLayoutKey.of(windowId, viewDataType);
 		return viewLayoutCache.getOrLoad(key, this::createViewLayout);
@@ -211,7 +211,7 @@ public abstract class PricingConditionsViewFactoryTemplate implements IViewFacto
 	@lombok.Value(staticConstructor = "of")
 	private static final class ViewLayoutKey
 	{
-		WindowId windowId;
+		WindowDocumentTypeId windowId;
 		JSONViewDataType viewDataType;
 	}
 }

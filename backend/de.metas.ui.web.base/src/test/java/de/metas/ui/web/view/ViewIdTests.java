@@ -16,7 +16,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.collect.ImmutableList;
 
 import de.metas.JsonObjectMapperHolder;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 
  
 
@@ -41,7 +41,7 @@ public class ViewIdTests
 			final ViewId viewId = ViewId.ofViewIdString("123-abcde");
 			assertViewIdMatching(viewId, "123", "abcde");
 
-			final ViewId viewId2 = viewId.withWindowId(WindowId.of(456));
+			final ViewId viewId2 = viewId.withWindowId(WindowDocumentTypeId.of(456));
 			assertViewIdMatching(viewId2, "456", "abcde");
 		}
 
@@ -49,7 +49,7 @@ public class ViewIdTests
 		public void sameWindowId()
 		{
 			final ViewId viewId = ViewId.ofViewIdString("123-abcde");
-			final ViewId viewId2 = viewId.withWindowId(WindowId.of(123));
+			final ViewId viewId2 = viewId.withWindowId(WindowDocumentTypeId.of(123));
 			assertThat(viewId).isSameAs(viewId2);
 		}
 	}
@@ -58,7 +58,7 @@ public class ViewIdTests
 	{
 		final String viewIdStr = windowIdStr + "-" + viewIdPart;
 
-		assertThat(viewId.getWindowId()).isEqualTo(WindowId.fromJson(windowIdStr));
+		assertThat(viewId.getWindowId()).isEqualTo(WindowDocumentTypeId.fromJson(windowIdStr));
 		assertThat(viewId.getViewId()).isEqualTo(viewIdStr);
 		assertThat(viewId.toJson()).isEqualTo(viewIdStr);
 		assertThat(viewId.getViewIdPart()).isEqualTo(viewIdPart);
@@ -71,7 +71,7 @@ public class ViewIdTests
 	{
 		final ViewId viewId = randomViewId();
 
-		final WindowId expectedWindowId = viewId.getWindowId();
+		final WindowDocumentTypeId expectedWindowId = viewId.getWindowId();
 		final ViewId viewId2 = ViewId.ofViewIdString(viewId.getViewId(), expectedWindowId);
 
 		assertThat(viewId2).isEqualTo(viewId);
@@ -93,7 +93,7 @@ public class ViewIdTests
 	{
 		final ViewId viewId = randomViewId();
 
-		final WindowId expectedWindowId = null;
+		final WindowDocumentTypeId expectedWindowId = null;
 		final ViewId viewId2 = ViewId.ofViewIdString(viewId.getViewId(), expectedWindowId);
 
 		assertThat(viewId2).isEqualTo(viewId);
@@ -115,7 +115,7 @@ public class ViewIdTests
 	{
 		final ViewId viewId = randomViewId();
 
-		final WindowId expectedWindowId = randomWindowIdButNot(viewId.getWindowId());
+		final WindowDocumentTypeId expectedWindowId = randomWindowIdButNot(viewId.getWindowId());
 
 		assertThatThrownBy(() -> ViewId.ofViewIdString(viewId.getViewId(), expectedWindowId))
 				.as("Exception is expected because windowId are not matching")
@@ -136,19 +136,19 @@ public class ViewIdTests
 
 	private final ViewId randomViewId()
 	{
-		final WindowId windowId = randomWindowId();
+		final WindowDocumentTypeId windowId = randomWindowId();
 		return ViewId.random(windowId);
 	}
 
-	private final WindowId randomWindowId()
+	private final WindowDocumentTypeId randomWindowId()
 	{
 		final int windowIdInt = random.nextInt(9000000) + 1;
-		return WindowId.of(windowIdInt);
+		return WindowDocumentTypeId.of(windowIdInt);
 	}
 
-	private final WindowId randomWindowIdButNot(final WindowId windowIdToExclude)
+	private final WindowDocumentTypeId randomWindowIdButNot(final WindowDocumentTypeId windowIdToExclude)
 	{
-		WindowId windowId = randomWindowId();
+		WindowDocumentTypeId windowId = randomWindowId();
 		while (windowId.equals(windowIdToExclude))
 		{
 			windowId = randomWindowId();
@@ -180,8 +180,8 @@ public class ViewIdTests
 	@Test
 	public void testSerializeDeserialize()
 	{
-		testSerializeDeserialize(ViewId.ofParts(WindowId.fromJson("windowId"), "viewIdPart"));
-		testSerializeDeserialize(ViewId.ofParts(WindowId.fromJson("windowId"), "viewIdPart", "otherPart1", "otherPart2"));
+		testSerializeDeserialize(ViewId.ofParts(WindowDocumentTypeId.fromJson("windowId"), "viewIdPart"));
+		testSerializeDeserialize(ViewId.ofParts(WindowDocumentTypeId.fromJson("windowId"), "viewIdPart", "otherPart1", "otherPart2"));
 	}
 
 	private void testSerializeDeserialize(final ViewId viewId)

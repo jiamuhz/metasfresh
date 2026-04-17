@@ -2,7 +2,7 @@ package de.metas.ui.web.window.events;
 
 import de.metas.common.util.time.SystemTime;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import de.metas.websocket.WebsocketEndpointAware;
 import de.metas.websocket.sender.WebsocketSender;
@@ -22,7 +22,7 @@ import static org.assertj.core.api.Assertions.assertThatThrownBy;
 
 class DocumentWebsocketPublisherTest
 {
-	private static final WindowId windowId1 = WindowId.of(1);
+	private static final WindowDocumentTypeId windowId1 = WindowDocumentTypeId.of(1);
 	private static final DocumentId documentId1 = DocumentId.of(1);
 
 	private ITrxManager trxManager;

@@ -17,7 +17,7 @@ import de.metas.ui.web.document.references.WebuiDocumentReferenceCandidate;
 import de.metas.ui.web.document.references.WebuiDocumentReferenceId;
 import de.metas.ui.web.window.WindowConstants;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDataBindingDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
@@ -90,7 +90,7 @@ public class WebuiDocumentReferencesService
 
 	public Optional<DocumentFilter> getDocumentReferenceFilter(
 			@NonNull final DocumentPath sourceDocumentPath,
-			@NonNull final WindowId targetWindowId,
+			@NonNull final WindowDocumentTypeId targetWindowId,
 			@Nullable final WebuiDocumentReferenceId documentReferenceId,
 			@NonNull final RelatedDocumentsPermissions permissions)
 	{
@@ -100,7 +100,7 @@ public class WebuiDocumentReferencesService
 
 	private Optional<WebuiDocumentReference> getDocumentReference(
 			@NonNull final DocumentPath sourceDocumentPath,
-			@NonNull final WindowId targetWindowId,
+			@NonNull final WindowDocumentTypeId targetWindowId,
 			@Nullable final WebuiDocumentReferenceId documentReferenceId,
 			@NonNull final RelatedDocumentsPermissions permissions)
 	{

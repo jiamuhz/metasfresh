@@ -8,7 +8,7 @@ import de.metas.dataentry.model.I_DataEntry_ListValue;
 import de.metas.dataentry.model.I_DataEntry_Section;
 import de.metas.dataentry.model.I_DataEntry_SubTab;
 import de.metas.dataentry.model.I_DataEntry_Tab;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.factory.DocumentDescriptorFactory;
 import de.metas.ui.web.window.model.DocumentCollection;
 import lombok.NonNull;
@@ -74,7 +74,7 @@ public class DataEntryInterceptorUtil
 		final int windowId = dataEntryGroupRecord.getDataEntry_TargetWindow_ID();
 		if (windowId > 0)
 		{
-			documentDescriptorFactory.invalidateForWindow(WindowId.of(windowId));
+			documentDescriptorFactory.invalidateForWindow(WindowDocumentTypeId.of(windowId));
 
 			final boolean forgetNotSavedDocuments = false;
 			documentCollection.cacheReset(forgetNotSavedDocuments);

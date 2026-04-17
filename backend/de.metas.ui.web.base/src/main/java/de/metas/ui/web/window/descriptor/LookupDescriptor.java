@@ -16,7 +16,7 @@ import com.google.common.collect.ImmutableSet;
 import de.metas.adempiere.service.impl.TooltipType;
 import de.metas.ui.web.window.datatypes.LookupValue.IntegerLookupValue;
 import de.metas.ui.web.window.datatypes.LookupValue.StringLookupValue;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFetcher;
 
@@ -31,7 +31,7 @@ public interface LookupDescriptor
 		return Optional.empty();
 	}
 
-	default Optional<WindowId> getZoomIntoWindowId()
+	default Optional<WindowDocumentTypeId> getZoomIntoWindowId()
 	{
 		return Optional.empty();
 	}

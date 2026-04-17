@@ -20,7 +20,7 @@ import de.metas.ui.web.view.ViewRowIdsSelection;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import lombok.Data;
 import lombok.NonNull;
@@ -39,7 +39,7 @@ public class JSONCreateProcessInstanceRequest
 	/** Document type (aka AD_Window_ID) */
 	@JsonProperty("windowId")
 	@JsonInclude(JsonInclude.Include.NON_EMPTY)
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 	//
 	@JsonProperty("documentId")
 	@JsonInclude(JsonInclude.Include.NON_EMPTY)
@@ -128,7 +128,7 @@ public class JSONCreateProcessInstanceRequest
 		//
 		// Called from single row
 		// FIXME: atm, the frontend is not providing the windowId. Create a task for that!
-		windowId = WindowId.fromNullableJson(windowIdStr);
+		windowId = WindowDocumentTypeId.fromNullableJson(windowIdStr);
 		this.documentId = documentId;
 		this.tabId = tabId;
 		this.rowId = rowId;
@@ -180,7 +180,7 @@ public class JSONCreateProcessInstanceRequest
 				.toString();
 	}
 
-	private static final DocumentPath createDocumentPathOrNull(final WindowId windowId, final String documentId, final String tabId, final String rowIdStr)
+	private static final DocumentPath createDocumentPathOrNull(final WindowDocumentTypeId windowId, final String documentId, final String tabId, final String rowIdStr)
 	{
 		if (windowId != null && !Check.isEmpty(documentId))
 		{
@@ -227,7 +227,7 @@ public class JSONCreateProcessInstanceRequest
 		return selectedIncludedDocumentPaths;
 	}
 
-	private static final List<DocumentPath> createSelectedIncludedDocumentPaths(final WindowId windowId, final String documentIdStr, final JSONSelectedIncludedTab selectedTab)
+	private static final List<DocumentPath> createSelectedIncludedDocumentPaths(final WindowDocumentTypeId windowId, final String documentIdStr, final JSONSelectedIncludedTab selectedTab)
 	{
 		if (windowId == null || Check.isEmpty(documentIdStr, true) || selectedTab == null)
 		{

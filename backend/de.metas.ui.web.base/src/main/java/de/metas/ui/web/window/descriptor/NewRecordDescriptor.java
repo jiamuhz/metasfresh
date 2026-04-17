@@ -1,7 +1,7 @@
 package de.metas.ui.web.window.descriptor;
 
 import de.metas.document.NewRecordContext;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.Document;
 import lombok.NonNull;
 import lombok.Value;
@@ -23,6 +23,7 @@ public class NewRecordDescriptor
 	}
 
 	@NonNull String tableName;
-	@NonNull WindowId newRecordWindowId;
+	@NonNull
+	WindowDocumentTypeId newRecordWindowId;
 	@NonNull NewRecordProcessor processor;
 }

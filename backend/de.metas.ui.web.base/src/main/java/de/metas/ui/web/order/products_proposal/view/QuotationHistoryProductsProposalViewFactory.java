@@ -46,7 +46,7 @@ import de.metas.ui.web.view.ViewFactory;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.descriptor.annotation.ViewColumnHelper;
 import de.metas.ui.web.window.datatypes.DocumentIdIntSequence;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSource;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Services;
@@ -66,7 +66,7 @@ import java.util.List;
 public class QuotationHistoryProductsProposalViewFactory extends ProductsProposalViewFactoryTemplate
 {
 	public static final String WINDOW_ID_STRING = "quotationHistoryProductsProposal";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	private final IDocTypeDAO docTypeDAO = Services.get(IDocTypeDAO.class);
 	private final ICurrencyBL currencyBL = Services.get(ICurrencyBL.class);

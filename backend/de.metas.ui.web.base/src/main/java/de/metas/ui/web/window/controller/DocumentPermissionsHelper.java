@@ -18,7 +18,7 @@ import de.metas.security.permissions.ElementPermission;
 import de.metas.ui.web.session.UserSession;
 import de.metas.ui.web.window.datatypes.DocumentPath;
 import de.metas.ui.web.window.datatypes.DocumentType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.exceptions.DocumentPermissionException;
 import de.metas.ui.web.window.exceptions.DocumentPermissionException.DocumentPermission;
@@ -59,7 +59,7 @@ public class DocumentPermissionsHelper
 	 *
 	 * @param viewId optional viewId, used only for error reporting
 	 */
-	public static void assertViewAccess(final WindowId windowId, @Nullable final String viewId, final IUserRolePermissions permissions)
+	public static void assertViewAccess(final WindowDocumentTypeId windowId, @Nullable final String viewId, final IUserRolePermissions permissions)
 	{
 		final AdWindowId adWindowId = windowId.toAdWindowIdOrNull();
 		if (adWindowId == null)

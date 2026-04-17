@@ -7,11 +7,10 @@ import de.metas.i18n.ConstantTranslatableString;
 import de.metas.process.AdProcessId;
 import de.metas.process.IADProcessDAO;
 import de.metas.process.RelatedProcessDescriptor;
-import de.metas.ui.web.picking.pickingslot.process.WEBUI_Picking_TU_Label;
 import de.metas.ui.web.view.*;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.ztest.MyViewConstants;
 import de.metas.ui.web.ztest.process.WEBUI_MyProcess4IncludedViewLauncher;
 import de.metas.util.Services;
@@ -41,7 +40,7 @@ public class MyIncludedViewFactory implements IViewFactory
 
 	@Override
 	public ViewLayout getViewLayout(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final JSONViewDataType viewDataType,
 			@Nullable final ViewProfileId profileId)
 	{

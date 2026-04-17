@@ -5,7 +5,7 @@ package de.metas.ui.web.window.descriptor.sql;
 import com.google.common.base.MoreObjects;
 import com.google.common.collect.ImmutableSet;
 import de.metas.adempiere.service.impl.TooltipType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
 import de.metas.ui.web.window.descriptor.LookupDescriptor;
 import de.metas.ui.web.window.descriptor.LookupDescriptorProvider;
@@ -40,7 +40,7 @@ public final class SqlLookupDescriptor implements ISqlLookupDescriptor
 	@NonNull final SqlForFetchingLookups sqlForFetchingExpression;
 	@NonNull final TableName lookupTableName;
 	@NonNull final TooltipType tooltipType;
-	@Nullable final WindowId zoomIntoWindowId;
+	@Nullable final WindowDocumentTypeId zoomIntoWindowId;
 
 	@Nullable final Integer pageLength;
 
@@ -53,7 +53,7 @@ public final class SqlLookupDescriptor implements ISqlLookupDescriptor
 			@NonNull final SqlForFetchingLookupById sqlForFetchingLookupByIdExpression,
 			@NonNull final SqlForFetchingLookups sqlForFetchingExpression,
 			@NonNull final TooltipType tooltipType,
-			@Nullable final WindowId zoomIntoWindowId,
+			@Nullable final WindowDocumentTypeId zoomIntoWindowId,
 			@Nullable final Integer pageLength)
 	{
 		this.filters = filters;

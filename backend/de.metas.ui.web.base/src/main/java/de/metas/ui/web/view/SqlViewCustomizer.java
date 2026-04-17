@@ -2,13 +2,13 @@ package de.metas.ui.web.view;
 
 import de.metas.ui.web.view.descriptor.SqlViewBinding;
 import de.metas.ui.web.view.descriptor.ViewLayout;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 
 
 
 public interface SqlViewCustomizer extends ViewRowCustomizer
 {
-	WindowId getWindowId();
+	WindowDocumentTypeId getWindowId();
 
 	ViewProfile getProfile();
 

@@ -6,7 +6,7 @@ import de.metas.document.references.related_documents.RelatedDocumentsEvaluation
 import de.metas.document.references.related_documents.RelatedDocumentsTargetWindow;
 import de.metas.i18n.ITranslatableString;
 import de.metas.ui.web.document.filter.provider.userQuery.MQueryDocumentFilterHelper;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 import lombok.ToString;
 
@@ -52,7 +52,7 @@ public class WebuiDocumentReferenceCandidate
 
 	private static WebuiDocumentReferenceTargetWindow toDocumentReferenceTargetWindow(@NonNull final RelatedDocumentsTargetWindow relatedDocumentsTargetWindow)
 	{
-		final WindowId windowId = WindowId.of(relatedDocumentsTargetWindow.getAdWindowId());
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.of(relatedDocumentsTargetWindow.getAdWindowId());
 		final String category = relatedDocumentsTargetWindow.getCategory();
 		return category != null
 				? WebuiDocumentReferenceTargetWindow.ofWindowIdAndCategory(windowId, category)

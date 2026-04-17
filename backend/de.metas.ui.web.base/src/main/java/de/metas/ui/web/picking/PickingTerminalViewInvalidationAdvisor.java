@@ -21,7 +21,7 @@ import de.metas.ui.web.view.IViewInvalidationAdvisor;
 import de.metas.ui.web.view.SqlViewRowIdsOrderedSelectionFactory;
 import de.metas.ui.web.view.descriptor.SqlViewKeyColumnNamesMap;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 
 /*
@@ -53,7 +53,7 @@ class PickingTerminalViewInvalidationAdvisor implements IViewInvalidationAdvisor
 	private PickingCandidateRepository pickingCandidateRepository;
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return PickingConstants.WINDOWID_PackageableView;
 	}

@@ -7,9 +7,8 @@ import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.fasterxml.jackson.annotation.JsonInclude;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import com.google.common.base.MoreObjects;
-import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
@@ -25,7 +24,6 @@ import lombok.Getter;
 import lombok.NonNull;
 
 import javax.annotation.Nullable;
-import java.util.List;
 import java.util.Map;
 import java.util.Set;
 
@@ -334,7 +332,7 @@ public final class JSONDocumentLayoutElementField
 	}
 
 	void setAdvSearchWindow(
-			final @NonNull WindowId windowId,
+			final @NonNull WindowDocumentTypeId windowId,
 			final @Nullable DetailId tabId,
 			final @NonNull JSONDocumentLayoutOptions jsonOpts)
 	{

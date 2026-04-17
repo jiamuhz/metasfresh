@@ -28,7 +28,7 @@ import de.metas.dataentry.model.I_DataEntry_SubTab;
 import de.metas.dataentry.model.I_DataEntry_Tab;
 import de.metas.i18n.TranslatableStrings;
 import de.metas.ui.web.document.filter.provider.DocumentFilterDescriptorsProvidersService;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDataBindingDescriptor;
@@ -60,7 +60,7 @@ public class DataEntryTabLoader
 	private final DocumentFilterDescriptorsProvidersService filterDescriptorsProvidersService;
 
 	AdWindowId adWindowId;
-	WindowId windowId;
+	WindowDocumentTypeId windowId;
 	DataEntrySubTabBindingDescriptorBuilder dataEntrySubTabBindingDescriptorBuilder;
 	DataEntryWebuiTools dataEntryWebuiTools;
 
@@ -69,7 +69,7 @@ public class DataEntryTabLoader
 			@Nullable final DocumentFilterDescriptorsProvidersService filterDescriptorsProvidersService,
 			//
 			@NonNull final AdWindowId adWindowId,
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final DataEntrySubTabBindingDescriptorBuilder dataEntrySubTabBindingDescriptorBuilder)
 	{
 		this.filterDescriptorsProvidersService = filterDescriptorsProvidersService;
@@ -105,7 +105,7 @@ public class DataEntryTabLoader
 	}
 
 	private ImmutableList<DocumentLayoutDetailDescriptor> createTabLayoutDescriptors(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final DataEntryTab dataEntryTab)
 	{
 		final ImmutableList.Builder<DocumentLayoutDetailDescriptor> subGroupLayoutDescriptors = ImmutableList.builder();
@@ -129,7 +129,7 @@ public class DataEntryTabLoader
 	}
 
 	private DocumentLayoutDetailDescriptor createSubTabLayoutDescriptor(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final DataEntrySubTab subTab)
 	{
 		final DetailId subgroupDetailId = createDetailIdFor(subTab);

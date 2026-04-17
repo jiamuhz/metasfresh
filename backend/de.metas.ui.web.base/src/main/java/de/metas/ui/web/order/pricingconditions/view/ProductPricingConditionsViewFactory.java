@@ -13,7 +13,7 @@ import de.metas.product.ProductAndCategoryAndManufacturerId;
 import de.metas.product.ProductId;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.ViewFactory;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Check;
 import de.metas.util.Services;
@@ -48,7 +48,7 @@ import java.util.Set;
 public class ProductPricingConditionsViewFactory extends PricingConditionsViewFactoryTemplate
 {
 	public static final String WINDOW_ID_STRING = "productPricingConditions";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	public ProductPricingConditionsViewFactory(
 			@NonNull final LookupDataSourceFactory lookupDataSourceFactory)

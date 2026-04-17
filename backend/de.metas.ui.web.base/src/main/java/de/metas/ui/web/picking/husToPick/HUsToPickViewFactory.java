@@ -32,7 +32,7 @@ import de.metas.ui.web.view.descriptor.annotation.ViewColumnHelper.ClassViewColu
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.MediaType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.DocumentQueryOrderBy;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -49,7 +49,7 @@ import java.util.function.Supplier;
 public class HUsToPickViewFactory extends HUEditorViewFactoryTemplate
 {
 	static final String WINDOW_ID_STRING = "husToPick";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	private final HUReservationDocumentFilterService huReservationDocumentFilterService;
 	private final IPackagingDAO packagingDAO = Services.get(IPackagingDAO.class);

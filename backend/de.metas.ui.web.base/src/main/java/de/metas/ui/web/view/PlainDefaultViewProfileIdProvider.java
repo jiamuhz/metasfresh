@@ -2,7 +2,7 @@ package de.metas.ui.web.view;
 
 import java.util.HashMap;
 
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 import lombok.ToString;
 
@@ -11,15 +11,15 @@ import lombok.ToString;
 @ToString
 public final class PlainDefaultViewProfileIdProvider implements DefaultViewProfileIdProvider
 {
-	private final HashMap<WindowId, ViewProfileId> defaultProfileIdByWindowId = new HashMap<>();
+	private final HashMap<WindowDocumentTypeId, ViewProfileId> defaultProfileIdByWindowId = new HashMap<>();
 
 	@Override
-	public ViewProfileId getDefaultProfileIdByWindowId(final WindowId windowId)
+	public ViewProfileId getDefaultProfileIdByWindowId(final WindowDocumentTypeId windowId)
 	{
 		return defaultProfileIdByWindowId.get(windowId);
 	}
 
-	public void setDefaultProfileId(@NonNull final WindowId windowId, final ViewProfileId profileId)
+	public void setDefaultProfileId(@NonNull final WindowDocumentTypeId windowId, final ViewProfileId profileId)
 	{
 		if (ViewProfileId.isNull(profileId))
 		{
@@ -31,7 +31,7 @@ public final class PlainDefaultViewProfileIdProvider implements DefaultViewProfi
 		}
 	}
 
-	public void setDefaultProfileIdIfAbsent(@NonNull final WindowId windowId, @NonNull final ViewProfileId profileId)
+	public void setDefaultProfileIdIfAbsent(@NonNull final WindowDocumentTypeId windowId, @NonNull final ViewProfileId profileId)
 	{
 		defaultProfileIdByWindowId.putIfAbsent(windowId, profileId);
 	}

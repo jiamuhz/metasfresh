@@ -39,7 +39,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
@@ -55,7 +55,7 @@ import static de.metas.ui.web.project.step.process.C_Project_WO_Step_ResolveRese
 public class ResolveReservationViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	public static final String ResolveReservationView_String = "resolveReservation";
-	public static final WindowId WINDOWID = WindowId.fromJson(ResolveReservationView_String);
+	public static final WindowDocumentTypeId WINDOWID = WindowDocumentTypeId.fromJson(ResolveReservationView_String);
 
 	@NonNull
 	private final DefaultViewsStorage views = new DefaultViewsStorage(Duration.ofHours(1));
@@ -99,7 +99,7 @@ public class ResolveReservationViewFactory implements IViewFactory, IViewsStorag
 	}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		final ITranslatableString caption = adProcessDAO.retrieveProcessNameByClassIfUnique(C_Project_WO_Step_ResolveReservationView_Launcher.class)
 				.orElse(null);
@@ -122,7 +122,7 @@ public class ResolveReservationViewFactory implements IViewFactory, IViewsStorag
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return WINDOWID;
 	}

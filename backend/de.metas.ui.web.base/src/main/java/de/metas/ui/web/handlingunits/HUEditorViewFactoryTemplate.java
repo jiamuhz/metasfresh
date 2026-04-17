@@ -50,7 +50,7 @@ import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.DocumentPath;
 import de.metas.ui.web.window.datatypes.PanelLayoutType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.factory.DocumentDescriptorFactory;
@@ -109,7 +109,7 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 	private final ImmutableListMultimap<String, HUEditorViewCustomizer> viewCustomizersByReferencingTableName;
 	private final ImmutableMap<String, HUEditorRowIsProcessedPredicate> rowProcessedPredicateByReferencingTableName;
 	private final ImmutableMap<String, Boolean> rowAttributesAlwaysReadonlyByReferencingTableName;
-	private WindowId windowId;
+	private WindowDocumentTypeId windowId;
 
 	private final transient CCache<Integer, SqlViewBinding> sqlViewBindingCache = CCache.newCache("SqlViewBinding", 1, 0);
 	private final transient CCache<ViewLayoutKey, ViewLayout> layouts = CCache.newLRUCache("HUEditorViewFactory#Layouts", 10, 0);
@@ -134,12 +134,12 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 	}
 
 	@Override
-	public void setWindowId(final WindowId windowId)
+	public void setWindowId(final WindowDocumentTypeId windowId)
 	{
 		this.windowId = windowId;
 	}
 
-	protected final WindowId getWindowId()
+	protected final WindowDocumentTypeId getWindowId()
 	{
 		return windowId;
 	}
@@ -165,7 +165,7 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 	 */
 	private DocumentEntityDescriptor getHUEntityDescriptor()
 	{
-		final WindowId windowId = getWindowId();
+		final WindowDocumentTypeId windowId = getWindowId();
 		if (windowId != null && documentDescriptorFactory.isWindowIdSupported(windowId))
 		{
 			return documentDescriptorFactory.getDocumentEntityDescriptor(windowId);
@@ -289,7 +289,7 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 	}
 
 	@Override
-	public final ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId_NOTUSED)
+	public final ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId_NOTUSED)
 	{
 		final ViewLayoutKey key = ViewLayoutKey.of(windowId, viewDataType);
 		return layouts.getOrLoad(key, this::createHUViewLayout);
@@ -297,7 +297,7 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 
 	private ViewLayout createHUViewLayout(final ViewLayoutKey key)
 	{
-		final WindowId windowId = key.getWindowId();
+		final WindowDocumentTypeId windowId = key.getWindowId();
 		final JSONViewDataType viewDataType = key.getViewDataType();
 
 		final Collection<DocumentFilterDescriptor> all = getViewFilterDescriptors().getAll();
@@ -343,7 +343,7 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 		// HUEditorView rows repository
 		final HUEditorViewRepository huEditorViewRepository;
 		{
-			final WindowId windowId = viewId.getWindowId();
+			final WindowDocumentTypeId windowId = viewId.getWindowId();
 			final boolean attributesAlwaysReadonly = rowAttributesAlwaysReadonlyByReferencingTableName.getOrDefault(referencingTableName, Boolean.TRUE);
 			final SqlHUEditorViewRepositoryBuilder huEditorViewRepositoryBuilder = SqlHUEditorViewRepository.builder()
 					.windowId(windowId)
@@ -427,7 +427,7 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 		final String referencingTableName;
 		if (!referencingDocumentPaths.isEmpty())
 		{
-			final WindowId referencingWindowId = referencingDocumentPaths.iterator().next().getWindowId(); // assuming all document paths have the same window
+			final WindowDocumentTypeId referencingWindowId = referencingDocumentPaths.iterator().next().getWindowId(); // assuming all document paths have the same window
 			referencingTableName = documentDescriptorFactory.getDocumentEntityDescriptor(referencingWindowId)
 					.getTableNameOrNull();
 		}
@@ -440,7 +440,7 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 
 	@Nullable
 	private DocumentFilter extractReferencedDocumentFilter(
-			@NonNull final WindowId targetWindowId,
+			@NonNull final WindowDocumentTypeId targetWindowId,
 			@Nullable final DocumentPath referencedDocumentPath,
 			@Nullable final WebuiDocumentReferenceId documentReferenceId)
 	{
@@ -593,7 +593,7 @@ public abstract class HUEditorViewFactoryTemplate implements IViewFactory
 	private static class ViewLayoutKey
 	{
 		@NonNull
-		WindowId windowId;
+		WindowDocumentTypeId windowId;
 
 		@NonNull
 		JSONViewDataType viewDataType;

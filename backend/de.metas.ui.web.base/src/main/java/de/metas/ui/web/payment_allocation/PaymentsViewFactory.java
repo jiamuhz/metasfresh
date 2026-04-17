@@ -32,7 +32,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.IncludedViewLayout;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
@@ -48,7 +48,7 @@ import java.util.stream.Stream;
 public class PaymentsViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	static final String WINDOW_ID_String = "540759"; // FIXME: HARDCODED
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_String);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_String);
 
 	private final IMsgBL msgBL = Services.get(IMsgBL.class);
 	private final PaymentAndInvoiceRowsRepo rowsRepo;
@@ -70,7 +70,7 @@ public class PaymentsViewFactory implements IViewFactory, IViewsStorage4GivenWin
 	}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		return ViewLayout.builder()
 				.setWindowId(WINDOW_ID)
@@ -171,7 +171,7 @@ public class PaymentsViewFactory implements IViewFactory, IViewsStorage4GivenWin
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return WINDOW_ID;
 	}

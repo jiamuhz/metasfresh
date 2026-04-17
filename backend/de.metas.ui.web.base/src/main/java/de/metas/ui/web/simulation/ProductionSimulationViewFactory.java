@@ -36,7 +36,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Check;
 import de.metas.util.Services;
@@ -48,7 +48,7 @@ import static de.metas.ui.web.simulation.process.C_Order_ProductionSimulationVie
 public class ProductionSimulationViewFactory implements IViewFactory
 {
 	public static final String ProductionSimulationView_String = "simulation";
-	public static final WindowId WINDOWID = WindowId.fromJson(ProductionSimulationView_String);
+	public static final WindowDocumentTypeId WINDOWID = WindowDocumentTypeId.fromJson(ProductionSimulationView_String);
 
 	private final  IADProcessDAO adProcessDAO = Services.get(IADProcessDAO.class);
 
@@ -83,7 +83,7 @@ public class ProductionSimulationViewFactory implements IViewFactory
 	}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		final ITranslatableString caption = adProcessDAO.retrieveProcessNameByClassIfUnique(C_Order_ProductionSimulationView_Launcher.class)
 				.orElse(null);

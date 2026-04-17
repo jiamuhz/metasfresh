@@ -14,7 +14,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.IncludedViewLayout;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import de.metas.util.lang.RepoIdAwares;
 import lombok.Builder;
@@ -53,7 +53,7 @@ public class PackageableViewFactory implements IViewFactory
 
 	@Override
 	public ViewLayout getViewLayout(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final JSONViewDataType viewDataType,
 			@Nullable final ViewProfileId profileId)
 	{

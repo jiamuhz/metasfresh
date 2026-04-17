@@ -1,7 +1,7 @@
 package de.metas.ui.web.view;
 
 import com.google.common.collect.ImmutableList;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.ToString;
 
 import java.util.List;
@@ -33,7 +33,7 @@ public final class CompositeDefaultViewProfileIdProvider implements DefaultViewP
 	}
 
 	@Override
-	public ViewProfileId getDefaultProfileIdByWindowId(final WindowId windowId)
+	public ViewProfileId getDefaultProfileIdByWindowId(final WindowDocumentTypeId windowId)
 	{
 		return providers.stream()
 				.map(provider -> provider.getDefaultProfileIdByWindowId(windowId))
@@ -42,17 +42,17 @@ public final class CompositeDefaultViewProfileIdProvider implements DefaultViewP
 				.orElse(ViewProfileId.NULL);
 	}
 
-	public void setDefaultProfileIdOverride(WindowId windowId, ViewProfileId profileId)
+	public void setDefaultProfileIdOverride(WindowDocumentTypeId windowId, ViewProfileId profileId)
 	{
 		overrides.setDefaultProfileId(windowId, profileId);
 	}
 
-	public void setDefaultProfileIdFallback(WindowId windowId, ViewProfileId profileId)
+	public void setDefaultProfileIdFallback(WindowDocumentTypeId windowId, ViewProfileId profileId)
 	{
 		fallback.setDefaultProfileId(windowId, profileId);
 	}
 	
-	public void setDefaultProfileIdFallbackIfAbsent(WindowId windowId, ViewProfileId profileId)
+	public void setDefaultProfileIdFallbackIfAbsent(WindowDocumentTypeId windowId, ViewProfileId profileId)
 	{
 		fallback.setDefaultProfileIdIfAbsent(windowId, profileId);
 	}

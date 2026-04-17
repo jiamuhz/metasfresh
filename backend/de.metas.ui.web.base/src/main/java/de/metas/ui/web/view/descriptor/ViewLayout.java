@@ -16,7 +16,7 @@ import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.annotation.ViewColumnHelper;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
@@ -63,7 +63,7 @@ public class ViewLayout implements ETagAware
 
 	private static final Logger logger = LogManager.getLogger(ViewLayout.class);
 
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 	private final DetailId detailId;
 	private final ViewProfileId profileId;
 
@@ -154,7 +154,7 @@ public class ViewLayout implements ETagAware
 	 * copy and override constructor
 	 */
 	private ViewLayout(final ViewLayout from,
-					   final WindowId windowId,
+					   final WindowDocumentTypeId windowId,
 					   final ViewProfileId profileId,
 					   final ImmutableList<DocumentFilterDescriptor> filters,
 					   @NonNull final DocumentQueryOrderByList defaultOrderBys,
@@ -227,7 +227,7 @@ public class ViewLayout implements ETagAware
 		return new ChangeBuilder(this);
 	}
 
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return windowId;
 	}
@@ -375,7 +375,7 @@ public class ViewLayout implements ETagAware
 	public static final class ChangeBuilder
 	{
 		private final ViewLayout from;
-		private WindowId windowId;
+		private WindowDocumentTypeId windowId;
 		private ViewProfileId profileId;
 		private Collection<DocumentFilterDescriptor> filters;
 		private String allowNewCaption;
@@ -389,7 +389,7 @@ public class ViewLayout implements ETagAware
 
 		public ViewLayout build()
 		{
-			final WindowId windowIdEffective = getWindowIdEffective();
+			final WindowDocumentTypeId windowIdEffective = getWindowIdEffective();
 			final ViewProfileId profileIdEffective = !ViewProfileId.isNull(profileId) ? profileId : from.profileId;
 			final ImmutableList<DocumentFilterDescriptor> filtersEffective = ImmutableList.copyOf(filters != null ? filters : from.getFilters());
 			final String allowNewCaptionEffective = allowNewCaption != null ? allowNewCaption : from.allowNewCaption;
@@ -429,13 +429,13 @@ public class ViewLayout implements ETagAware
 					elementsEffective);
 		}
 
-		public ChangeBuilder windowId(final WindowId windowId)
+		public ChangeBuilder windowId(final WindowDocumentTypeId windowId)
 		{
 			this.windowId = windowId;
 			return this;
 		}
 
-		private WindowId getWindowIdEffective()
+		private WindowDocumentTypeId getWindowIdEffective()
 		{
 			return windowId != null ? windowId : from.windowId;
 		}
@@ -565,7 +565,7 @@ public class ViewLayout implements ETagAware
 
 	public static final class Builder
 	{
-		private WindowId windowId;
+		private WindowDocumentTypeId windowId;
 		private DetailId detailId;
 		@Nullable private ITranslatableString caption;
 		@Nullable private ITranslatableString description;
@@ -621,7 +621,7 @@ public class ViewLayout implements ETagAware
 					.toString();
 		}
 
-		public Builder setWindowId(final WindowId windowId)
+		public Builder setWindowId(final WindowDocumentTypeId windowId)
 		{
 			this.windowId = windowId;
 			return this;

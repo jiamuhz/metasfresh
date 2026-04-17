@@ -1,6 +1,6 @@
 package de.metas.ui.web.window.descriptor;
 
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.Document;
 import lombok.NonNull;
 import lombok.Value;
@@ -35,10 +35,11 @@ public class AdvancedSearchDescriptor
 {
 	public interface AdvancedSearchSelectionProcessor
 	{
-		void processSelection(WindowId windowId, Document document, String bpartnerFieldName, String selectionIdStr);
+		void processSelection(WindowDocumentTypeId windowId, Document document, String bpartnerFieldName, String selectionIdStr);
 	}
 
 	@NonNull String tableName;
-	@NonNull WindowId windowId;
+	@NonNull
+	WindowDocumentTypeId windowId;
 	@NonNull AdvancedSearchSelectionProcessor processor;
 }

@@ -75,7 +75,7 @@ import de.metas.ui.web.window.WindowConstants;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
 import de.metas.ui.web.window.datatypes.LookupValue;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONLookupValue;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
@@ -171,7 +171,7 @@ public class BoardDescriptorRepository
 		{
 			adWindowId = RecordWindowFinder.findAdWindowId(tableName).get();
 		}
-		final WindowId documentWindowId = WindowId.of(adWindowId);
+		final WindowDocumentTypeId documentWindowId = WindowDocumentTypeId.of(adWindowId);
 
 		final DocumentEntityDescriptor documentEntityDescriptor = documentDescriptors.getDocumentEntityDescriptor(documentWindowId);
 		final SqlDocumentEntityDataBindingDescriptor documentBinding = documentEntityDescriptor.getDataBinding(SqlDocumentEntityDataBindingDescriptor.class);

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import de.metas.handlingunits.HuId;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 
  
 
@@ -20,7 +20,7 @@ public class HUEditorRowTest
 		final HuId topLevelHUId = HuId.ofRepoId(20);
 		final int windowId = 123;
 
-		final HUEditorRow huEditorRow = HUEditorRow.builder(WindowId.of(windowId))
+		final HUEditorRow huEditorRow = HUEditorRow.builder(WindowDocumentTypeId.of(windowId))
 				.setRowId(HUEditorRowId.ofHU(huId, topLevelHUId))
 				.setType(HUEditorRowType.TU)
 				.setTopLevel(false)

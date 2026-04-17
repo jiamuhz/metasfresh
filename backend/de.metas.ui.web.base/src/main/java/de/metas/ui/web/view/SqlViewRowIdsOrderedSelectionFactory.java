@@ -19,7 +19,7 @@ import de.metas.ui.web.view.descriptor.SqlViewSelectionQueryBuilder;
 import de.metas.ui.web.view.descriptor.SqlViewSelectionQueryBuilder.SqlCreateSelection;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.DocumentQueryOrderByList;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -147,7 +147,7 @@ public class SqlViewRowIdsOrderedSelectionFactory implements ViewRowIdsOrderedSe
 			@NonNull final DocumentQueryOrderByList orderBys,
 			@NonNull final SqlDocumentFilterConverterContext filterConverterCtx)
 	{
-		final WindowId windowId = fromSelection.getWindowId();
+		final WindowDocumentTypeId windowId = fromSelection.getWindowId();
 		final String fromSelectionId = fromSelection.getSelectionId();
 		final ViewId newViewId = ViewId.random(windowId);
 

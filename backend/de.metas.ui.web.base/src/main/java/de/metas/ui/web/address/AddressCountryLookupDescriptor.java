@@ -12,7 +12,7 @@ import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.LookupValue.IntegerLookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
 import de.metas.ui.web.window.descriptor.LookupDescriptor;
 import de.metas.ui.web.window.model.lookup.IdsToFilter;
@@ -198,7 +198,7 @@ public class AddressCountryLookupDescriptor implements LookupDescriptor, LookupD
 	}
 
 	@Override
-	public Optional<WindowId> getZoomIntoWindowId()
+	public Optional<WindowDocumentTypeId> getZoomIntoWindowId()
 	{
 		return Optional.empty();
 	}

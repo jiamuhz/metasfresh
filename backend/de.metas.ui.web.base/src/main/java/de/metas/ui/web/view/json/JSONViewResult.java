@@ -17,7 +17,7 @@ import de.metas.ui.web.view.IViewRowOverrides;
 import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.ViewResult;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
 import de.metas.util.GuavaCollectors;
 import de.metas.util.StringUtils;
@@ -58,9 +58,9 @@ public final class JSONViewResult
 	// View informations
 	@JsonProperty("type")
 	@Deprecated
-	private final WindowId type;
+	private final WindowDocumentTypeId type;
 	@JsonProperty("windowId")
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 	//
 	@JsonProperty("viewId")
 	private final String viewId;
@@ -71,7 +71,7 @@ public final class JSONViewResult
 
 	@JsonProperty("parentWindowId")
 	@JsonInclude(JsonInclude.Include.NON_NULL)
-	private final WindowId parentWindowId;
+	private final WindowDocumentTypeId parentWindowId;
 	//
 	@JsonProperty("parentViewId")
 	@JsonInclude(JsonInclude.Include.NON_NULL)
@@ -210,11 +210,11 @@ public final class JSONViewResult
 
 	@JsonCreator
 	private JSONViewResult( //
-							@JsonProperty("windowId") final WindowId windowId,
+							@JsonProperty("windowId") final WindowDocumentTypeId windowId,
 							@JsonProperty("viewId") final String viewId,
 							@JsonProperty("profileId") final ViewProfileId profileId,
 							//
-							@JsonProperty("parentWindowId") final WindowId parentWindowId,
+							@JsonProperty("parentWindowId") final WindowDocumentTypeId parentWindowId,
 							@JsonProperty("parentViewId") final String parentViewId,
 							//
 							@JsonProperty("description") final String description,

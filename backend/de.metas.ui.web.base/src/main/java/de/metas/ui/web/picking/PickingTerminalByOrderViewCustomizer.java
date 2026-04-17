@@ -14,7 +14,7 @@ import de.metas.ui.web.view.descriptor.SqlViewGroupingBinding;
 import de.metas.ui.web.view.descriptor.SqlViewRowIdsConverters;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.window.datatypes.LookupValue;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor;
@@ -41,7 +41,7 @@ public class PickingTerminalByOrderViewCustomizer implements SqlViewCustomizer
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return PickingConstants.WINDOWID_PackageableView;
 	}

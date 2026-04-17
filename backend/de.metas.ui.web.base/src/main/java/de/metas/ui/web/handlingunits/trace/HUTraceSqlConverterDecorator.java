@@ -6,7 +6,7 @@ import de.metas.handlingunits.trace.HUTraceRepository;
 import de.metas.ui.web.document.filter.sql.SqlDocumentFilterConverter;
 import de.metas.ui.web.document.filter.sql.SqlDocumentFilterConverterDecorator;
 import de.metas.ui.web.handlingunits.WEBUI_HU_Constants;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 
  
@@ -25,7 +25,7 @@ public class HUTraceSqlConverterDecorator implements SqlDocumentFilterConverterD
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return WEBUI_HU_Constants.WEBUI_HU_Trace_Window_ID;
 	}

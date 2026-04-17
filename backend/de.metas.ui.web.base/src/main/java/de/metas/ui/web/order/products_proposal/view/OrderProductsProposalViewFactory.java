@@ -28,7 +28,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.descriptor.annotation.ViewColumnHelper;
 import de.metas.ui.web.view.descriptor.annotation.ViewColumnHelper.ClassViewColumnOverrides;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -55,7 +55,7 @@ public class OrderProductsProposalViewFactory extends ProductsProposalViewFactor
 	private static final String SYSCONFIG_SUFIX = ".IsDisplayed";
 
 	static final String WINDOW_ID_STRING = "orderProductsProposal";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	private final IBPartnerDAO bpartnersRepo = Services.get(IBPartnerDAO.class);
 	private final ISysConfigBL sysConfigBL = Services.get(ISysConfigBL.class);

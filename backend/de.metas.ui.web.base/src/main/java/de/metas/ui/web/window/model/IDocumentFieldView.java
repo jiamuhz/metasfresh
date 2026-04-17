@@ -1,7 +1,7 @@
 package de.metas.ui.web.window.model;
 
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
@@ -101,5 +101,5 @@ public interface IDocumentFieldView
 	/**
 	 * @return optional WindowId to be used when zooming into
 	 */
-	Optional<WindowId> getZoomIntoWindowId();
+	Optional<WindowDocumentTypeId> getZoomIntoWindowId();
 }

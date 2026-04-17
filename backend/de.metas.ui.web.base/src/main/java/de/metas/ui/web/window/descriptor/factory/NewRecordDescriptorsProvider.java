@@ -3,7 +3,7 @@ package de.metas.ui.web.window.descriptor.factory;
 import de.metas.bpartner.BPartnerId;
 import de.metas.bpartner.quick_input.service.BPartnerQuickInputService;
 import de.metas.logging.LogManager;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.NewRecordDescriptor;
 import lombok.NonNull;
@@ -45,7 +45,7 @@ public class NewRecordDescriptorsProvider
 		{
 			addNewRecordDescriptor(NewRecordDescriptor.of(
 					I_C_BPartner.Table_Name,
-					WindowId.of(bpartnerQuickInputAdWindowId),
+					WindowDocumentTypeId.of(bpartnerQuickInputAdWindowId),
 					(document, newRecordContext) -> {
 						final I_C_BPartner_QuickInput template = InterfaceWrapperHelper.getPO(document);
 						final BPartnerId bpartnerId = bpartnerQuickInputService.createBPartnerFromTemplate(template, newRecordContext);
@@ -75,11 +75,11 @@ public class NewRecordDescriptorsProvider
 	 */
 	public NewRecordDescriptor getNewRecordDescriptor(final DocumentEntityDescriptor entityDescriptor)
 	{
-		final WindowId newRecordWindowId = entityDescriptor.getWindowId();
+		final WindowDocumentTypeId newRecordWindowId = entityDescriptor.getWindowId();
 
 		return newRecordDescriptorsByTableName.values()
 				.stream()
-				.filter(descriptor -> WindowId.equals(newRecordWindowId, descriptor.getNewRecordWindowId()))
+				.filter(descriptor -> WindowDocumentTypeId.equals(newRecordWindowId, descriptor.getNewRecordWindowId()))
 				.findFirst()
 				.orElseThrow(() -> new AdempiereException("No new record quick input defined windowId=" + newRecordWindowId));
 	}

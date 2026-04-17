@@ -14,7 +14,7 @@ import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.descriptor.annotation.ViewColumnHelper.ClassViewColumnOverrides;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.MediaType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.DocumentQueryOrderBy;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -25,7 +25,7 @@ import lombok.NonNull;
 public class HUsReservationViewFactory extends HUEditorViewFactoryTemplate
 {
 	static final String WINDOW_ID_STRING = "husToReserve";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	// services
 	private final transient IADProcessDAO adProcessDAO = Services.get(IADProcessDAO.class);

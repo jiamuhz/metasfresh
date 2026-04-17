@@ -18,7 +18,7 @@ import de.metas.ui.web.document.filter.provider.DocumentFilterDescriptorsProvide
 import de.metas.ui.web.window.datatypes.DataTypes;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDataBindingDescriptor.DocumentEntityDataBindingDescriptorBuilder;
 import de.metas.ui.web.window.descriptor.DocumentFieldDependencyMap.DependencyType;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
@@ -253,10 +253,10 @@ public class DocumentEntityDescriptor
 	/**
 	 * @return AD_Window_ID
 	 */
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		Check.assume(documentType == DocumentType.Window, "expected document type to be {} but it was {}", DocumentType.Window, documentType);
-		return WindowId.of(documentTypeId);
+		return WindowDocumentTypeId.of(documentTypeId);
 	}
 
 	@Nullable
@@ -559,10 +559,10 @@ public class DocumentEntityDescriptor
 			return getId();
 		}
 
-		public WindowId getWindowId()
+		public WindowDocumentTypeId getWindowId()
 		{
 			Check.assume(_documentType == DocumentType.Window, "expected document type to be {} but it was {}", DocumentType.Window, _documentType);
-			return WindowId.of(_documentTypeId);
+			return WindowDocumentTypeId.of(_documentTypeId);
 		}
 
 		public Builder setDetailId(@Nullable final DetailId detailId)

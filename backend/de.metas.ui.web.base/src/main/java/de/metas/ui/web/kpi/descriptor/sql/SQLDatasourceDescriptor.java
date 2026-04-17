@@ -27,7 +27,7 @@ import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
 import com.google.common.collect.Maps;
 import de.metas.common.util.CoalesceUtil;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import de.metas.util.StringUtils;
 import lombok.AccessLevel;
@@ -54,7 +54,8 @@ public class SQLDatasourceDescriptor
 	@NonNull IStringExpression sqlWhereClause;
 	@NonNull IStringExpression sqlDetailsWhereClause;
 	boolean applySecuritySettings;
-	@Nullable WindowId targetWindowId;
+	@Nullable
+  WindowDocumentTypeId targetWindowId;
 
 	@NonNull IStringExpression sqlSelect;
 
@@ -68,7 +69,7 @@ public class SQLDatasourceDescriptor
 	private SQLDatasourceDescriptor(
 			@NonNull final List<SQLDatasourceFieldDescriptor> fields,
 			final boolean applySecuritySettings,
-			@Nullable final WindowId targetWindowId,
+			@Nullable final WindowDocumentTypeId targetWindowId,
 			@NonNull final String sourceTableName,
 			@Nullable final String sqlFrom,
 			@Nullable final String sqlWhereClause,

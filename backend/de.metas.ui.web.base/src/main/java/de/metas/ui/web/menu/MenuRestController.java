@@ -10,7 +10,7 @@ import de.metas.ui.web.menu.datatypes.json.JSONPatchMenuNodeRequest;
 import de.metas.ui.web.menu.exception.NoMenuNodesFoundException;
 import de.metas.ui.web.session.UserSession;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentChangedEvent;
 import de.metas.ui.web.window.descriptor.factory.DocumentDescriptorFactory;
 import io.swagger.v3.oas.annotations.Operation;
@@ -189,7 +189,7 @@ public class MenuRestController
 	{
 		if (type == MenuNodeType.Window)
 		{
-			final String caption = documentDescriptorFactory.getDocumentDescriptor(WindowId.of(elementId))
+			final String caption = documentDescriptorFactory.getDocumentDescriptor(WindowDocumentTypeId.of(elementId))
 					.getLayout()
 					.getCaption(adLanguage);
 

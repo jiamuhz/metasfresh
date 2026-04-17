@@ -14,7 +14,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import de.metas.JsonObjectMapperHolder;
 import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 
 
@@ -33,13 +33,13 @@ public class JSONDocumentPathTest
 	{
 		// Root document
 		testSerializeDeserialize(JSONDocumentPath.builder()
-				.windowId(WindowId.fromJson("windowId"))
+				.windowId(WindowDocumentTypeId.fromJson("windowId"))
 				.documentId(DocumentId.of("documentId"))
 				.build());
 
 		// Included document
 		testSerializeDeserialize(JSONDocumentPath.builder()
-				.windowId(WindowId.fromJson("windowId"))
+				.windowId(WindowDocumentTypeId.fromJson("windowId"))
 				.documentId(DocumentId.of("documentId"))
 				.tabId(DetailId.fromPrefixAndId("tabId", 1))
 				.rowId(DocumentId.of("rowId"))
@@ -47,7 +47,7 @@ public class JSONDocumentPathTest
 
 		// View Row
 		testSerializeDeserialize(JSONDocumentPath.builder()
-				.viewId(ViewId.ofParts(WindowId.fromJson("windowId"), "viewId"))
+				.viewId(ViewId.ofParts(WindowDocumentTypeId.fromJson("windowId"), "viewId"))
 				.rowId(DocumentId.of("rowId"))
 				.build());
 	}

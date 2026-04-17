@@ -33,7 +33,7 @@ import de.metas.ui.web.handlingunits.HUEditorViewFactoryTemplate;
 import de.metas.ui.web.handlingunits.filter.HUIdsFilterHelper;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.ViewFactory;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 
@@ -41,7 +41,7 @@ import lombok.NonNull;
 public class HUsToIssueViewFactory extends HUEditorViewFactoryTemplate
 {
 	public static final String Window_ID_String = "husToIssueOnProject";
-	public static final WindowId Window_ID = WindowId.fromJson(Window_ID_String);
+	public static final WindowDocumentTypeId Window_ID = WindowDocumentTypeId.fromJson(Window_ID_String);
 
 	public static final String PARAM_HUsToIssueViewContext = "HUsToIssueViewContext";
 

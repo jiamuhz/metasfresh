@@ -34,7 +34,7 @@ import de.metas.ui.web.view.json.JSONViewRow;
 import de.metas.ui.web.window.controller.WindowRestController;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentLayoutOptions;
 import de.metas.ui.web.window.datatypes.json.JSONLookupValuesList;
 import de.metas.ui.web.window.datatypes.json.JSONLookupValuesPage;
@@ -132,7 +132,7 @@ public class ViewRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = extractWindowId(windowIdStr, jsonRequest.getWindowId());
+		final WindowDocumentTypeId windowId = extractWindowId(windowIdStr, jsonRequest.getWindowId());
 		final CreateViewRequest request = CreateViewRequest.builder(windowId, jsonRequest.getViewType())
 				.setProfileId(jsonRequest.getProfileId())
 				.setReferencingDocumentPaths(jsonRequest.getReferencingDocumentPaths())
@@ -170,13 +170,13 @@ public class ViewRestController
 		return JSONViewResult.of(result, rowOverrides, jsonOpts, viewRowCommentsSummary);
 	}
 
-	private static WindowId extractWindowId(final String pathWindowIdStr, final WindowId requestWindowId)
+	private static WindowDocumentTypeId extractWindowId(final String pathWindowIdStr, final WindowDocumentTypeId requestWindowId)
 	{
-		final WindowId pathWindowId = WindowId.fromNullableJson(pathWindowIdStr);
-		WindowId windowIdEffective = requestWindowId;
+		final WindowDocumentTypeId pathWindowId = WindowDocumentTypeId.fromNullableJson(pathWindowIdStr);
+		WindowDocumentTypeId windowIdEffective = requestWindowId;
 		if (windowIdEffective == null)
 		{
-			windowIdEffective = WindowId.fromJson(pathWindowIdStr);
+			windowIdEffective = WindowDocumentTypeId.fromJson(pathWindowIdStr);
 		}
 		else if (!Objects.equals(pathWindowId, windowIdEffective))
 		{
@@ -278,7 +278,7 @@ public class ViewRestController
 	{
 		userSession.assertLoggedIn();
 
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final ViewLayout viewLayout = viewsRepo.getViewLayout(windowId, viewDataType, ViewProfileId.fromJson(profileIdStr), userSession.getUserRolePermissionsKey());
 
 		return ETagResponseEntityBuilder.ofETagAware(request, viewLayout)
@@ -294,7 +294,7 @@ public class ViewRestController
 			@PathVariable(PARAM_WindowId) final String windowIdStr,
 			@RequestParam(name = PARAM_ViewDataType) final JSONViewDataType viewDataType)
 	{
-		final WindowId windowId = WindowId.fromJson(windowIdStr);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(windowIdStr);
 		final List<ViewProfile> availableProfiles = viewsRepo.getAvailableProfiles(windowId, viewDataType);
 		return JSONViewProfilesList.of(availableProfiles, userSession.getAD_Language());
 	}
@@ -548,7 +548,7 @@ public class ViewRestController
 	{
 		// userSession.assertLoggedIn(); // NOTE: not needed because we are forwarding to windowRestController
 
-		ViewId.ofViewIdString(viewIdStr, WindowId.fromJson(windowIdStr)); // just validate the windowId and viewId
+		ViewId.ofViewIdString(viewIdStr, WindowDocumentTypeId.fromJson(windowIdStr)); // just validate the windowId and viewId
 
 		// TODO: atm we are forwarding all calls to windowRestController hoping the document existing and has the same ID as view's row ID.
 
@@ -565,7 +565,7 @@ public class ViewRestController
 	{
 		userSession.assertLoggedIn();
 
-		final ViewId viewId = ViewId.ofViewIdString(viewIdStr, WindowId.fromJson(windowIdStr));
+		final ViewId viewId = ViewId.ofViewIdString(viewIdStr, WindowDocumentTypeId.fromJson(windowIdStr));
 
 		final ExcelFormat excelFormat = ExcelFormats.getDefaultFormat();
 		final File tmpFile = File.createTempFile("exportToExcel", "." + excelFormat.getFileExtension());

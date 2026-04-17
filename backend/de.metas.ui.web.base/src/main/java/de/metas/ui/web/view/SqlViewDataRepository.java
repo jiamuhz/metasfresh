@@ -23,7 +23,7 @@ import de.metas.ui.web.view.descriptor.SqlViewSelectData;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
 import de.metas.ui.web.window.datatypes.LookupValue;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONLookupValue;
 import de.metas.ui.web.window.datatypes.json.JSONNullValue;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
@@ -294,7 +294,7 @@ class SqlViewDataRepository implements ISqlViewDataRepository
 	@Nullable
 	private ViewRow.Builder loadViewRow(
 			@NonNull final ResultSet rs,
-			final WindowId windowId,
+			final WindowDocumentTypeId windowId,
 			final JSONOptions jsonOpts) throws SQLException
 	{
 		final boolean isRecordMissing = DisplayType.toBoolean(rs.getString(SqlViewSelectData.COLUMNNAME_IsRecordMissing));

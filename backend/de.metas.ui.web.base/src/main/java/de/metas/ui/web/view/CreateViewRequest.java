@@ -16,7 +16,7 @@ import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.OptionalBoolean;
 import de.metas.util.StringUtils;
 import de.metas.util.collections.CollectionUtils;
@@ -47,13 +47,13 @@ import java.util.Set;
 @Value
 public class CreateViewRequest
 {
-	public static Builder builder(final WindowId windowId)
+	public static Builder builder(final WindowDocumentTypeId windowId)
 	{
 		final ViewId viewId = ViewId.random(windowId);
 		return new Builder(viewId, JSONViewDataType.grid);
 	}
 
-	public static Builder builder(final WindowId windowId, final JSONViewDataType viewType)
+	public static Builder builder(final WindowDocumentTypeId windowId, final JSONViewDataType viewType)
 	{
 		final ViewId viewId = ViewId.random(windowId);
 		return new Builder(viewId, viewType);

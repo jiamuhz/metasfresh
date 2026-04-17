@@ -23,7 +23,7 @@ import de.metas.ui.web.menu.MenuNode.MenuNodeFilter.MenuNodeFilterResolution;
 import de.metas.ui.web.menu.MenuNode.MenuNodeType;
 import de.metas.ui.web.menu.exception.NoMenuNodesFoundException;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 
 import javax.annotation.Nullable;
@@ -135,7 +135,7 @@ public final class MenuTree
 		return node;
 	}
 
-	public Optional<MenuNode> getNewRecordNodeForWindowId(final WindowId windowId)
+	public Optional<MenuNode> getNewRecordNodeForWindowId(final WindowDocumentTypeId windowId)
 	{
 		final DocumentId elementId = windowId.toDocumentId();
 		final ArrayKey key = mkTypeAndElementIdKey(MenuNodeType.NewRecord, elementId);
@@ -176,7 +176,7 @@ public final class MenuTree
 	}
 
 	@Nullable
-	public MenuNode getTopLevelMenuGroupOrNull(final WindowId windowId)
+	public MenuNode getTopLevelMenuGroupOrNull(final WindowDocumentTypeId windowId)
 	{
 		final DocumentId elementId = windowId.toDocumentId();
 		final MenuNode node = getFirstNodeByElementIdOrNull(MenuNodeType.Window, elementId);

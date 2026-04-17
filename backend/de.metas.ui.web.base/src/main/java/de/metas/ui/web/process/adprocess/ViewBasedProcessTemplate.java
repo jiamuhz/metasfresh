@@ -15,7 +15,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.ViewRowIdsSelection;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import lombok.NonNull;
 import org.compiere.SpringContextHolder;
@@ -124,7 +124,7 @@ public abstract class ViewBasedProcessTemplate extends JavaProcess
 				.build());
 	}
 
-	protected final WindowId getWindowId()
+	protected final WindowDocumentTypeId getWindowId()
 	{
 		return getView().getViewId().getWindowId();
 	}

@@ -28,7 +28,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.IncludedViewLayout;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -37,7 +37,7 @@ import lombok.NonNull;
 public class BankStatementReconciliationViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	static final String WINDOW_ID_String = "bankStatementReconciliation";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_String);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_String);
 
 	private final IMsgBL msgBL = Services.get(IMsgBL.class);
 	private final IADProcessDAO adProcessDAO = Services.get(IADProcessDAO.class);
@@ -56,7 +56,7 @@ public class BankStatementReconciliationViewFactory implements IViewFactory, IVi
 	}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		Check.assumeEquals(windowId, WINDOW_ID, "windowId");
 
@@ -113,7 +113,7 @@ public class BankStatementReconciliationViewFactory implements IViewFactory, IVi
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return WINDOW_ID;
 	}

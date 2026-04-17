@@ -7,7 +7,7 @@ import de.metas.ui.web.comments.json.JSONCommentCreateRequest;
 import de.metas.ui.web.session.UserSession;
 import de.metas.ui.web.window.controller.WindowRestController;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONOptions;
 import de.metas.ui.web.window.descriptor.factory.DocumentDescriptorFactory;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -47,7 +47,7 @@ public class CommentsRestController
 	{
 		userSession.assertLoggedIn();
 
-		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowId.fromJson(windowIdStr), documentId);
+		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowDocumentTypeId.fromJson(windowIdStr), documentId);
 
 		final ZoneId zoneId = JSONOptions.of(userSession).getZoneId();
 		return commentsService.getRowCommentsAsJson(documentPath, zoneId);
@@ -62,7 +62,7 @@ public class CommentsRestController
 	{
 		userSession.assertLoggedIn();
 
-		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowId.fromJson(windowIdStr), documentId);
+		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowDocumentTypeId.fromJson(windowIdStr), documentId);
 
 		commentsService.addComment(documentPath, jsonCommentCreateRequest);
 	}

@@ -17,7 +17,7 @@ import de.metas.ui.web.view.event.ViewChangesCollector;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -40,7 +40,7 @@ public class PickingSlotViewsStorage implements IViewsStorage4GivenWindow
 {
 	//@formatter:off
 	@Override
-	public WindowId getWindowId() { return PickingConstants.WINDOWID_PickingSlotView; }
+	public WindowDocumentTypeId getWindowId() { return PickingConstants.WINDOWID_PickingSlotView; }
 	//@formatter:off
 	
 	@Autowired

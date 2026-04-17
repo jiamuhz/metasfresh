@@ -9,7 +9,7 @@ import de.metas.common.util.time.SystemTime;
 import de.metas.ui.web.websocket.WebsocketTopicNames;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.DateTimeConverters;
 import de.metas.ui.web.window.datatypes.json.JSONIncludedTabInfo;
 import de.metas.ui.web.window.descriptor.DetailId;
@@ -38,13 +38,13 @@ import java.util.Objects;
 @ToString
 final class JSONDocumentChangedWebSocketEvent implements WebsocketEndpointAware
 {
-	public static JSONDocumentChangedWebSocketEvent rootDocument(final WindowId windowId, final DocumentId documentId)
+	public static JSONDocumentChangedWebSocketEvent rootDocument(final WindowDocumentTypeId windowId, final DocumentId documentId)
 	{
 		return new JSONDocumentChangedWebSocketEvent(windowId, documentId);
 	}
 
 	@JsonProperty("windowId")
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 
 	@JsonProperty("id")
 	private final DocumentId id;
@@ -72,7 +72,7 @@ final class JSONDocumentChangedWebSocketEvent implements WebsocketEndpointAware
 	private Boolean activeTabStaled;
 
 	private JSONDocumentChangedWebSocketEvent(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final DocumentId id)
 	{
 		this.windowId = windowId;

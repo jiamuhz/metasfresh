@@ -9,7 +9,7 @@ import de.metas.i18n.TranslatableStrings;
 import de.metas.logging.LogManager;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.window.datatypes.DebugProperties;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.exceptions.DocumentLayoutDetailNotFoundException;
 import de.metas.util.Check;
 import lombok.Getter;
@@ -38,7 +38,7 @@ public final class DocumentLayoutDescriptor
 		return new Builder();
 	}
 
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 	private final ITranslatableString caption;
 
 	/**
@@ -121,7 +121,7 @@ public final class DocumentLayoutDescriptor
 				.toString();
 	}
 
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return windowId;
 	}
@@ -185,7 +185,7 @@ public final class DocumentLayoutDescriptor
 	{
 		private static final Logger logger = LogManager.getLogger(DocumentLayoutDescriptor.Builder.class);
 
-		private WindowId windowId;
+		private WindowDocumentTypeId windowId;
 		private ITranslatableString caption = TranslatableStrings.empty();
 		@Nullable private DocumentLayoutElementDescriptor documentSummaryElement;
 		@Nullable private DocumentLayoutElementDescriptor docActionElement;
@@ -265,7 +265,7 @@ public final class DocumentLayoutDescriptor
 			map.put(detail.getDetailId(), detail);
 		}
 
-		public Builder setWindowId(final WindowId windowId)
+		public Builder setWindowId(final WindowDocumentTypeId windowId)
 		{
 			this.windowId = windowId;
 			return this;

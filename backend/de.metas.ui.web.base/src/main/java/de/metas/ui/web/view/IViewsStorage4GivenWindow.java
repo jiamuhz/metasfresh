@@ -8,7 +8,7 @@ import javax.annotation.Nullable;
 
 import com.google.common.collect.ImmutableList;
 
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 
 /**
  * Implementations of this interface are responsible of storing {@link IView} references for a particular window ID identified by {@link #getWindowId()}.
@@ -21,7 +21,7 @@ public interface IViewsStorage4GivenWindow
 	/**
 	 * @return the window ID for whom this storage is storing the {@link IView} references. This method will be called by API on registration time.
 	 */
-	WindowId getWindowId();
+	WindowDocumentTypeId getWindowId();
 
 	/**
 	 * Don't call it directly. Will be called by API.

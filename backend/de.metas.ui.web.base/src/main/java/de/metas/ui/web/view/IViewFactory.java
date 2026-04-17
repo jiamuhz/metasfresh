@@ -6,7 +6,7 @@ import com.google.common.collect.ImmutableList;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 
 import java.util.List;
@@ -25,15 +25,15 @@ public interface IViewFactory
 	 * Sets the windowId on which this factory was bind.
 	 * Don't call it directly. Will be called by API.
 	 */
-	default void setWindowId(final WindowId windowId)
+	default void setWindowId(final WindowDocumentTypeId windowId)
 	{
 	}
 
 	IView createView(@NonNull CreateViewRequest request);
 
-	ViewLayout getViewLayout(WindowId windowId, JSONViewDataType viewDataType, ViewProfileId profileId);
+	ViewLayout getViewLayout(WindowDocumentTypeId windowId, JSONViewDataType viewDataType, ViewProfileId profileId);
 
-	default List<ViewProfile> getAvailableProfiles(final WindowId windowId)
+	default List<ViewProfile> getAvailableProfiles(final WindowDocumentTypeId windowId)
 	{
 		return ImmutableList.of();
 	}

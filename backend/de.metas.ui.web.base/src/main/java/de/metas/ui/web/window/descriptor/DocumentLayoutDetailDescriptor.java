@@ -3,7 +3,7 @@ package de.metas.ui.web.window.descriptor;
 import com.google.common.base.MoreObjects;
 import de.metas.i18n.ITranslatableString;
 import de.metas.ui.web.view.descriptor.ViewLayout;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import lombok.Getter;
 import lombok.NonNull;
@@ -25,14 +25,14 @@ import static de.metas.util.Check.assumeNotNull;
 public final class DocumentLayoutDetailDescriptor
 {
 	public static Builder builder(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final DetailId detailId)
 	{
 		return new Builder(windowId, detailId);
 	}
 
 	@Getter
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 	@Getter
 	private final DetailId detailId;
 	@Getter
@@ -126,7 +126,7 @@ public final class DocumentLayoutDetailDescriptor
 	@SuppressWarnings("UnusedReturnValue")
 	public static final class Builder
 	{
-		private final WindowId windowId;
+		private final WindowDocumentTypeId windowId;
 		private final DetailId detailId;
 		private String internalName;
 
@@ -146,7 +146,7 @@ public final class DocumentLayoutDetailDescriptor
 
 		private IncludedTabNewRecordInputMode newRecordInputMode = IncludedTabNewRecordInputMode.ALL_AVAILABLE_METHODS;
 
-		private Builder(@NonNull final WindowId windowId, @NonNull final DetailId detailId)
+		private Builder(@NonNull final WindowDocumentTypeId windowId, @NonNull final DetailId detailId)
 		{
 			this.windowId = windowId;
 			this.detailId = detailId;

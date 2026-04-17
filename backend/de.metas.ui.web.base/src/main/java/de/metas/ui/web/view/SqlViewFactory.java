@@ -28,7 +28,7 @@ import de.metas.ui.web.view.descriptor.SqlViewLayoutFactory;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldWidgetType;
@@ -108,19 +108,19 @@ public class SqlViewFactory implements IViewFactory
 	}
 
 	@Override
-	public List<ViewProfile> getAvailableProfiles(final WindowId windowId)
+	public List<ViewProfile> getAvailableProfiles(final WindowDocumentTypeId windowId)
 	{
 		return sqlViewLayoutsFactory.getAvailableProfiles(windowId);
 	}
 
-	public void setDefaultProfileId(@NonNull final WindowId windowId, final ViewProfileId profileId)
+	public void setDefaultProfileId(@NonNull final WindowDocumentTypeId windowId, final ViewProfileId profileId)
 	{
 		defaultProfileIdProvider.setDefaultProfileIdOverride(windowId, profileId);
 	}
 
 	@Override
 	public ViewLayout getViewLayout(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final JSONViewDataType viewDataType,
 			@Nullable final ViewProfileId profileId)
 	{
@@ -131,7 +131,7 @@ public class SqlViewFactory implements IViewFactory
 	@Override
 	public DefaultView createView(final @NonNull CreateViewRequest request)
 	{
-		final WindowId windowId = request.getViewId().getWindowId();
+		final WindowDocumentTypeId windowId = request.getViewId().getWindowId();
 
 		final JSONViewDataType viewType = request.getViewType();
 		final ViewProfileId profileId = !ViewProfileId.isNull(request.getProfileId()) ? request.getProfileId() : defaultProfileIdProvider.getDefaultProfileIdByWindowId(windowId);
@@ -176,7 +176,7 @@ public class SqlViewFactory implements IViewFactory
 
 	@Nullable
 	private DocumentFilter extractReferencedDocumentFilter(
-			@NonNull final WindowId targetWindowId,
+			@NonNull final WindowDocumentTypeId targetWindowId,
 			@Nullable final DocumentPath referencedDocumentPath,
 			@Nullable final WebuiDocumentReferenceId documentReferenceId)
 	{
@@ -302,7 +302,7 @@ public class SqlViewFactory implements IViewFactory
 		}
 	}
 
-	public SqlViewKeyColumnNamesMap getKeyColumnNamesMap(@NonNull final WindowId windowId)
+	public SqlViewKeyColumnNamesMap getKeyColumnNamesMap(@NonNull final WindowDocumentTypeId windowId)
 	{
 		final SqlViewBinding sqlBindings = sqlViewLayoutsFactory.getViewBinding(windowId, DocumentFieldDescriptor.Characteristic.PublicField, ViewProfileId.NULL);
 		return sqlBindings.getSqlViewKeyColumnNamesMap();

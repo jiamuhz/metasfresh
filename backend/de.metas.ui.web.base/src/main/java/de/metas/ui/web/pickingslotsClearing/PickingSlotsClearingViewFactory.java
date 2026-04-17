@@ -29,7 +29,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.IncludedViewLayout;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.adempiere.ad.window.api.IADWindowDAO;
@@ -47,7 +47,7 @@ import java.util.List;
 public class PickingSlotsClearingViewFactory implements IViewFactory
 {
 	static final String WINDOW_ID_STRING = "540371"; // Picking Tray Clearing
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	private final IADProcessDAO adProcessDAO = Services.get(IADProcessDAO.class);
 	private final PickingSlotViewRepository pickingSlotRepo;
@@ -57,7 +57,7 @@ public class PickingSlotsClearingViewFactory implements IViewFactory
 	public PickingSlotsClearingViewFactory(@NonNull final PickingSlotViewRepository pickingSlotRepo) {this.pickingSlotRepo = pickingSlotRepo;}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, @Nullable final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, @Nullable final ViewProfileId profileId)
 	{
 		// TODO: cache it
 

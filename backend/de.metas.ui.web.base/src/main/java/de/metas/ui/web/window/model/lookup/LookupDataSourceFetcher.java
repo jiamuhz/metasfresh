@@ -7,7 +7,7 @@ import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.LookupValue.IntegerLookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 
 import javax.annotation.Nullable;
@@ -69,7 +69,7 @@ public interface LookupDataSourceFetcher
 	/**
 	 * @return optional WindowId to be used when zooming into
 	 */
-	Optional<WindowId> getZoomIntoWindowId();
+	Optional<WindowDocumentTypeId> getZoomIntoWindowId();
 
 	void cacheInvalidate();
 }

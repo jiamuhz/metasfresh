@@ -12,7 +12,7 @@ import de.metas.logging.LogManager;
 import de.metas.ui.web.quickinput.QuickInputDescriptorFactoryService;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.window.datatypes.MediaType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
@@ -752,7 +752,7 @@ public class LayoutFactory
 	public final ViewLayout layoutSideListView()
 	{
 		final ViewLayout.Builder layoutBuilder = ViewLayout.builder()
-				.setWindowId(WindowId.of(getAdWindowId()))
+				.setWindowId(WindowDocumentTypeId.of(getAdWindowId()))
 				.setEmptyResultText(msgBL.getTranslatableMsgText(TAB_EMPTY_RESULT_TEXT))
 				.setEmptyResultHint(msgBL.getTranslatableMsgText(TAB_EMPTY_RESULT_HINT));
 

@@ -34,7 +34,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 
@@ -48,7 +48,7 @@ public abstract class PurchaseViewFactoryTemplate implements IViewFactory, IView
 	private final IADProcessDAO adProcessRepo = Services.get(IADProcessDAO.class);
 
 	// parameters
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 
 	//
 	private final Cache<ViewId, PurchaseView> views = CacheBuilder.newBuilder()
@@ -56,7 +56,7 @@ public abstract class PurchaseViewFactoryTemplate implements IViewFactory, IView
 			.build();
 
 	public PurchaseViewFactoryTemplate(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull Class<? extends JavaProcess> launcherProcessClass,
 			// services:
 			@NonNull final PurchaseDemandWithCandidatesService purchaseDemandWithCandidatesService,
@@ -89,7 +89,7 @@ public abstract class PurchaseViewFactoryTemplate implements IViewFactory, IView
 	protected abstract void onViewClosedByUser(PurchaseView purchaseView);
 
 	@Override
-	public final WindowId getWindowId()
+	public final WindowDocumentTypeId getWindowId()
 	{
 		return windowId;
 	}
@@ -101,7 +101,7 @@ public abstract class PurchaseViewFactoryTemplate implements IViewFactory, IView
 
 	@Override
 	public final ViewLayout getViewLayout(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final JSONViewDataType viewDataType,
 			@Nullable final ViewProfileId profileId)
 	{

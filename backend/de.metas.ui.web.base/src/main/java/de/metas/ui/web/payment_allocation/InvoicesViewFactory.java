@@ -14,7 +14,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.adempiere.service.ISysConfigBL;
@@ -26,7 +26,7 @@ import java.util.stream.Stream;
 public class InvoicesViewFactory implements IViewFactory, IViewsStorage4GivenWindow
 {
 	static final String WINDOW_ID_String = "invoicesToAllocate"; // FIXME: HARDCODED
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_String);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_String);
 
 	public static final String SYSCONFIG_EnablePreparedForAllocationFlag = "de.metas.ui.web.payment_allocation.EnablePreparedForAllocationFlag";
 
@@ -51,7 +51,7 @@ public class InvoicesViewFactory implements IViewFactory, IViewsStorage4GivenWin
 	}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		final ViewLayout.Builder layoutBuilder = ViewLayout.builder()
 				.setWindowId(WINDOW_ID)
@@ -74,7 +74,7 @@ public class InvoicesViewFactory implements IViewFactory, IViewsStorage4GivenWin
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return WINDOW_ID;
 	}

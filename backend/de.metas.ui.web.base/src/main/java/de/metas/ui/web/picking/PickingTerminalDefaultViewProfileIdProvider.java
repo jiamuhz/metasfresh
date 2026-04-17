@@ -7,7 +7,7 @@ import de.metas.picking.api.PickingConfig;
 import de.metas.picking.api.PickingConfigRepository;
 import de.metas.ui.web.view.DefaultViewProfileIdProvider;
 import de.metas.ui.web.view.ViewProfileId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 
  
 
@@ -18,7 +18,7 @@ public class PickingTerminalDefaultViewProfileIdProvider implements DefaultViewP
 	private PickingConfigRepository pickingConfigRepo;
 
 	@Override
-	public ViewProfileId getDefaultProfileIdByWindowId(WindowId windowId)
+	public ViewProfileId getDefaultProfileIdByWindowId(WindowDocumentTypeId windowId)
 	{
 		if (PickingConstants.WINDOWID_PackageableView.equals(windowId))
 		{

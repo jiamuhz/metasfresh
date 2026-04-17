@@ -1,7 +1,7 @@
 package de.metas.ui.web.handlingunits;
 
 import de.metas.i18n.AdMessageKey;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.experimental.UtilityClass;
 
 import static de.metas.ui.web.handlingunits.HUEditorRow.SYSCFG_PREFIX;
@@ -12,9 +12,9 @@ import static de.metas.ui.web.handlingunits.HUEditorRow.SYSCFG_PREFIX;
 public final class WEBUI_HU_Constants
 {
 	public static final String WEBUI_HU_Window_ID_String = "540189"; // FIXME: hardcoded
-	public static final WindowId WEBUI_HU_Window_ID = WindowId.fromJson(WEBUI_HU_Window_ID_String);
+	public static final WindowDocumentTypeId WEBUI_HU_Window_ID = WindowDocumentTypeId.fromJson(WEBUI_HU_Window_ID_String);
 
-	public static final WindowId WEBUI_HU_Trace_Window_ID = WindowId.fromJson("540353");
+	public static final WindowDocumentTypeId WEBUI_HU_Trace_Window_ID = WindowDocumentTypeId.fromJson("540353");
 
 	/**
 	 * This message has one parameter: QtyTU>

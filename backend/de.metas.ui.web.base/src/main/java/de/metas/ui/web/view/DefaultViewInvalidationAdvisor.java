@@ -7,7 +7,7 @@ import org.adempiere.util.lang.impl.TableRecordReferenceSet;
 import com.google.common.collect.ImmutableSet;
 
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 
 /*
@@ -41,7 +41,7 @@ public final class DefaultViewInvalidationAdvisor implements IViewInvalidationAd
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		// this method shall never be called
 		throw new UnsupportedOperationException();

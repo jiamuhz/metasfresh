@@ -4,7 +4,7 @@ import de.metas.cache.CCacheStats;
 import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 import org.compiere.util.Evaluatee;
 
@@ -55,7 +55,7 @@ public interface LookupDataSource extends LookupValueByIdSupplier
 	/**
 	 * @return optional WindowId to be used when zooming into
 	 */
-	Optional<WindowId> getZoomIntoWindowId();
+	Optional<WindowDocumentTypeId> getZoomIntoWindowId();
 
 	void cacheInvalidate();
 }

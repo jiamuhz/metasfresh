@@ -5,7 +5,7 @@ import de.metas.ad_reference.ReferenceId;
 import de.metas.adempiere.service.impl.TooltipType;
 import de.metas.common.util.CoalesceUtil;
 import de.metas.security.permissions.Access;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.LookupDescriptorProvider;
 import de.metas.ui.web.window.descriptor.factory.standard.DescriptorsFactoryHelper;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
@@ -104,7 +104,7 @@ final class SqlLookupDescriptorFactory
 				.sqlForFetchingLookupByIdExpression(sqlForFetchingLookupByIdExpression)
 				.sqlForFetchingExpression(sqlForFetchingExpression)
 				.tooltipType(this.tooltipType)
-				.zoomIntoWindowId(WindowId.ofNullable(zoomIntoAdWindowId))
+				.zoomIntoWindowId(WindowDocumentTypeId.ofNullable(zoomIntoAdWindowId))
 				.pageLength(pageLength)
 				.build();
 	}

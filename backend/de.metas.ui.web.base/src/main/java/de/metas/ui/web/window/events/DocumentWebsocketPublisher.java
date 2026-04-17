@@ -4,7 +4,7 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONDocument;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.util.Services;
@@ -105,22 +105,22 @@ public class DocumentWebsocketPublisher
 		websocketSender.convertAndSend(events);
 	}
 
-	public void staleRootDocument(final WindowId windowId, final DocumentId documentId)
+	public void staleRootDocument(final WindowDocumentTypeId windowId, final DocumentId documentId)
 	{
 		staleRootDocument(windowId, documentId, false);
 	}
 
-	public void staleRootDocument(final WindowId windowId, final DocumentId documentId, final boolean markActiveTabStaled)
+	public void staleRootDocument(final WindowDocumentTypeId windowId, final DocumentId documentId, final boolean markActiveTabStaled)
 	{
 		forCollector(collector -> collector.staleRootDocument(windowId, documentId, markActiveTabStaled));
 	}
 
-	public void staleTabs(final WindowId windowId, final DocumentId documentId, final Set<DetailId> tabIds)
+	public void staleTabs(final WindowDocumentTypeId windowId, final DocumentId documentId, final Set<DetailId> tabIds)
 	{
 		forCollector(collector -> collector.staleTabs(windowId, documentId, tabIds));
 	}
 
-	public void staleIncludedDocuments(final WindowId windowId, final DocumentId documentId, final DetailId tabId, final DocumentIdsSelection rowIds)
+	public void staleIncludedDocuments(final WindowDocumentTypeId windowId, final DocumentId documentId, final DetailId tabId, final DocumentIdsSelection rowIds)
 	{
 		forCollector(collector -> collector.staleIncludedDocuments(windowId, documentId, tabId, rowIds));
 	}
@@ -147,7 +147,7 @@ public class DocumentWebsocketPublisher
 
 	private static void collectFrom(final JSONDocumentChangedWebSocketEventCollector collector, final JSONDocument event)
 	{
-		final WindowId windowId = event.getWindowId();
+		final WindowDocumentTypeId windowId = event.getWindowId();
 		if (windowId == null)
 		{
 			return;

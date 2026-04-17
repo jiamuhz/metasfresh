@@ -15,58 +15,58 @@ import java.util.OptionalInt;
 
 
 @EqualsAndHashCode
-public final class WindowId
+public final class WindowDocumentTypeId
 {
 	@JsonCreator
-	public static WindowId fromJson(@NonNull final String json)
+	public static WindowDocumentTypeId fromJson(@NonNull final String json)
 	{
-		return new WindowId(json);
+		return new WindowDocumentTypeId(json);
 	}
 
 	@Nullable
-	public static WindowId fromNullableJson(@Nullable final String json)
+	public static WindowDocumentTypeId fromNullableJson(@Nullable final String json)
 	{
 		return json != null ? fromJson(json) : null;
 	}
 
-	public static WindowId of(final int windowIdInt)
+	public static WindowDocumentTypeId of(final int windowIdInt)
 	{
-		return new WindowId(windowIdInt);
+		return new WindowDocumentTypeId(windowIdInt);
 	}
 
-	public static WindowId of(@NonNull final AdWindowId adWindowId)
+	public static WindowDocumentTypeId of(@NonNull final AdWindowId adWindowId)
 	{
-		return new WindowId(adWindowId.getRepoId());
+		return new WindowDocumentTypeId(adWindowId.getRepoId());
 	}
 
-	public static WindowId of(final DocumentId documentTypeId)
+	public static WindowDocumentTypeId of(final DocumentId documentTypeId)
 	{
 		if (documentTypeId.isInt())
 		{
-			return new WindowId(documentTypeId.toInt());
+			return new WindowDocumentTypeId(documentTypeId.toInt());
 		}
 		else
 		{
-			return new WindowId(documentTypeId.toJson());
+			return new WindowDocumentTypeId(documentTypeId.toJson());
 		}
 	}
 
 	@Nullable
-	public static WindowId ofNullable(@Nullable final AdWindowId adWindowId)
+	public static WindowDocumentTypeId ofNullable(@Nullable final AdWindowId adWindowId)
 	{
-		return adWindowId != null ? new WindowId(adWindowId.getRepoId()) : null;
+		return adWindowId != null ? new WindowDocumentTypeId(adWindowId.getRepoId()) : null;
 	}
 
 	private final String value;
 	private transient OptionalInt valueInt = null; // lazy
 
-	private WindowId(final String value)
+	private WindowDocumentTypeId(final String value)
 	{
 		Check.assumeNotEmpty(value, "value is not empty");
 		this.value = value;
 	}
 
-	private WindowId(final int valueInt)
+	private WindowDocumentTypeId(final int valueInt)
 	{
 		Check.assumeGreaterThanZero(valueInt, "valueInt");
 		this.valueInt = OptionalInt.of(valueInt);
@@ -149,7 +149,7 @@ public final class WindowId
 		return DocumentId.of(value);
 	}
 
-	public static boolean equals(@Nullable final WindowId id1, @Nullable final WindowId id2)
+	public static boolean equals(@Nullable final WindowDocumentTypeId id1, @Nullable final WindowDocumentTypeId id2)
 	{
 		return Objects.equals(id1, id2);
 	}

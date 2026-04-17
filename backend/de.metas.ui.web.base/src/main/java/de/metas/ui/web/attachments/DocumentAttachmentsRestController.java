@@ -11,7 +11,7 @@ import de.metas.ui.web.session.UserSession;
 import de.metas.ui.web.window.controller.WindowRestController;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.factory.DocumentDescriptorFactory;
 import de.metas.ui.web.window.events.DocumentWebsocketPublisher;
 import lombok.NonNull;
@@ -65,7 +65,7 @@ public class DocumentAttachmentsRestController
 
 	private DocumentAttachments getDocumentAttachments(final String windowIdStr, final String documentId)
 	{
-		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowId.fromJson(windowIdStr), documentId);
+		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowDocumentTypeId.fromJson(windowIdStr), documentId);
 		return getDocumentAttachments(documentPath);
 	}
 
@@ -125,7 +125,7 @@ public class DocumentAttachmentsRestController
 	{
 		userSession.assertLoggedIn();
 
-		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowId.fromJson(windowIdStr), documentId);
+		final DocumentPath documentPath = DocumentPath.rootDocumentPath(WindowDocumentTypeId.fromJson(windowIdStr), documentId);
 		if (documentPath.isComposedKey())
 		{
 			// document with composed keys does not support attachments

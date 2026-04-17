@@ -18,7 +18,7 @@ import de.metas.ui.web.document.references.WebuiDocumentReferenceId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.util.Check;
 import de.metas.util.collections.CollectionUtils;
@@ -29,7 +29,7 @@ import de.metas.util.collections.CollectionUtils;
 public final class JSONCreateViewRequest
 {
 	@JsonProperty("documentType")
-	private final WindowId windowId;
+	private final WindowDocumentTypeId windowId;
 
 	@JsonProperty("viewType")
 	private final JSONViewDataType viewType;
@@ -58,7 +58,7 @@ public final class JSONCreateViewRequest
 
 	@JsonCreator
 	private JSONCreateViewRequest(
-			@JsonProperty("documentType") final WindowId windowId,
+			@JsonProperty("documentType") final WindowDocumentTypeId windowId,
 			@JsonProperty("viewType") final JSONViewDataType viewType,
 			@JsonProperty("profileId") final ViewProfileId profileId,
 			@JsonProperty("referencing") final JSONReferencing referencing,
@@ -92,7 +92,7 @@ public final class JSONCreateViewRequest
 			return ImmutableSet.of();
 		}
 
-		final WindowId windowId = WindowId.fromJson(referencing.getDocumentType());
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson(referencing.getDocumentType());
 
 		final String tabIdStr = referencing.getTabId();
 		if (tabIdStr == null)

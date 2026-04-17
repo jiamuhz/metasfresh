@@ -21,7 +21,7 @@ import de.metas.dataentry.layout.DataEntryTab;
 import de.metas.dataentry.layout.DataEntryTab.DocumentLinkColumnName;
 import de.metas.i18n.TranslatableStrings;
 import de.metas.ui.web.document.filter.provider.DocumentFilterDescriptorsProvidersService;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentLayoutOptions;
 import de.metas.ui.web.window.datatypes.json.JSONDocumentLayoutTab;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
@@ -59,7 +59,7 @@ public class DataEntryTabLoaderTest
 
 	private static DataEntryTabLoader createDataEntryTabLoader()
 	{
-		final WindowId windowId = WindowId.of(5);
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.of(5);
 
 		final DataEntryWebuiTools dataEntryWebuiTools = new DataEntryWebuiTools(new UserRepository());
 		final JSONDataEntryRecordMapper jsonDataEntryRecordMapper = new JSONDataEntryRecordMapper();

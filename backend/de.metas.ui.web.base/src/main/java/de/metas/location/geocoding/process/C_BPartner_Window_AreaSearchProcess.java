@@ -19,7 +19,7 @@ import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.window.datatypes.LookupValue.IntegerLookupValue;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.model.DocumentCollection;
 import de.metas.util.Services;
@@ -68,16 +68,16 @@ public class C_BPartner_Window_AreaSearchProcess extends JavaProcess
 
 	private IView createViewWithFilter(final DocumentFilter filter)
 	{
-		final WindowId windowId = getWindowId();
+		final WindowDocumentTypeId windowId = getWindowId();
 		return viewsRepo.createView(CreateViewRequest.builder(windowId)
 				.setFilters(DocumentFilterList.of(filter))
 				.build());
 	}
 
 	@NonNull
-	private WindowId getWindowId()
+	private WindowDocumentTypeId getWindowId()
 	{
-		return WindowId.of(getProcessInfo().getAdWindowId().getRepoId());
+		return WindowDocumentTypeId.of(getProcessInfo().getAdWindowId().getRepoId());
 	}
 
 	@NonNull

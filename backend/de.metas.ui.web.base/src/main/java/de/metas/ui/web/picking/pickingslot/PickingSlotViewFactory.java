@@ -36,7 +36,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.DocumentId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.Builder;
 import lombok.NonNull;
@@ -72,13 +72,13 @@ public class PickingSlotViewFactory implements IViewFactory
 	public PickingSlotViewFactory(final PickingSlotViewRepository pickingSlotRepo) {this.pickingSlotRepo = pickingSlotRepo;}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, @Nullable final ViewProfileId profileId_NOTUSED)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, @Nullable final ViewProfileId profileId_NOTUSED)
 	{
 		final ArrayKey cacheKey = ArrayKey.of(windowId, viewDataType);
 		return viewLayoutCache.getOrLoad(cacheKey, () -> createViewLayout(windowId, viewDataType));
 	}
 
-	private ViewLayout createViewLayout(final WindowId windowId, final JSONViewDataType viewDataType)
+	private ViewLayout createViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType)
 	{
 		if (!PickingConstants.WINDOWID_PickingSlotView.equals(windowId))
 		{

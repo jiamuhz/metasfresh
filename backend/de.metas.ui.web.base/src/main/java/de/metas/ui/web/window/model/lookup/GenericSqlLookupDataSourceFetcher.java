@@ -13,7 +13,7 @@ import de.metas.ui.web.window.datatypes.DebugProperties;
 import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.sql.SqlForFetchingLookupById;
 import de.metas.ui.web.window.descriptor.sql.SqlForFetchingLookups;
 import lombok.Builder;
@@ -46,7 +46,7 @@ public class GenericSqlLookupDataSourceFetcher implements LookupDataSourceFetche
 	@Getter @NonNull private final SqlForFetchingLookups sqlForFetchingLookups;
 	@Getter @NonNull private final SqlForFetchingLookupById sqlForFetchingLookupById;
 	@Nullable private final INamePairPredicate postQueryPredicate;
-	@Getter @NonNull private final Optional<WindowId> zoomIntoWindowId;
+	@Getter @NonNull private final Optional<WindowDocumentTypeId> zoomIntoWindowId;
 	@NonNull private final TooltipType tooltipType;
 
 	private final int pageLength;
@@ -62,7 +62,7 @@ public class GenericSqlLookupDataSourceFetcher implements LookupDataSourceFetche
 			@NonNull final SqlForFetchingLookups sqlForFetchingLookups,
 			@NonNull final SqlForFetchingLookupById sqlForFetchingLookupById,
 			@Nullable final INamePairPredicate postQueryPredicate,
-			@NonNull final Optional<WindowId> zoomIntoWindowId,
+			@NonNull final Optional<WindowDocumentTypeId> zoomIntoWindowId,
 			@NonNull final TooltipType tooltipType,
 			@Nullable final Integer pageLength)
 	{

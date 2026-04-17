@@ -4,7 +4,7 @@ import de.metas.ad_reference.ADReferenceService;
 import de.metas.handlingunits.reservation.HUReservationService;
 import de.metas.ui.web.view.ASIViewRowAttributesProvider;
 import de.metas.ui.web.view.descriptor.SqlViewBinding;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.Builder;
 import lombok.NonNull;
 import org.adempiere.util.lang.ExtendedMemorizingSupplier;
@@ -21,7 +21,7 @@ public class PPOrderLinesViewDataSupplier
 
 	@Builder
 	private PPOrderLinesViewDataSupplier(
-			@NonNull final WindowId viewWindowId,
+			@NonNull final WindowDocumentTypeId viewWindowId,
 			@NonNull final PPOrderId ppOrderId,
 			@Nullable final ASIViewRowAttributesProvider asiAttributesProvider,
 			@NonNull final SqlViewBinding huSQLViewBinding,

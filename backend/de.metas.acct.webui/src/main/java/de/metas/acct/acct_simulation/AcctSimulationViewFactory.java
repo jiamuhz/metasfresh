@@ -16,7 +16,7 @@ import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.adempiere.exceptions.AdempiereException;
@@ -29,7 +29,7 @@ import java.util.function.Supplier;
 class AcctSimulationViewFactory implements IViewFactory
 {
 	public static final String WINDOWID_String = "acctSimulation";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOWID_String);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOWID_String);
 
 	private static final String VIEW_PARAM_DocInfo = "docInfo";
 
@@ -47,7 +47,7 @@ class AcctSimulationViewFactory implements IViewFactory
 	public void setViewsRepository(final IViewsRepository viewsRepository) {this.viewsRepository = viewsRepository;}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType, final ViewProfileId profileId)
 	{
 		return ViewLayout.builder()
 				.setWindowId(WINDOW_ID)

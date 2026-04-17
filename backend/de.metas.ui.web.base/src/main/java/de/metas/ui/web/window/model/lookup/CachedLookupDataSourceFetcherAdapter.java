@@ -9,7 +9,7 @@ import de.metas.cache.CCacheStats;
 import de.metas.ui.web.window.datatypes.LookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext.Builder;
 import de.metas.util.Check;
 import lombok.NonNull;
@@ -160,7 +160,7 @@ public final class CachedLookupDataSourceFetcherAdapter implements LookupDataSou
 	}
 
 	@Override
-	public Optional<WindowId> getZoomIntoWindowId()
+	public Optional<WindowDocumentTypeId> getZoomIntoWindowId()
 	{
 		return delegate.getZoomIntoWindowId();
 	}

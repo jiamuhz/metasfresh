@@ -6,7 +6,7 @@ import de.metas.i18n.TranslatableStrings;
 import de.metas.logging.LogManager;
 import de.metas.ui.web.dataentry.window.descriptor.factory.DataEntrySubTabBindingDescriptorBuilder;
 import de.metas.ui.web.dataentry.window.descriptor.factory.DataEntryTabLoader;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDescriptor;
@@ -66,7 +66,7 @@ import java.util.List;
 		final DocumentDescriptor.Builder documentBuilder = DocumentDescriptor.builder();
 
 		final DocumentLayoutDescriptor.Builder layoutBuilder = DocumentLayoutDescriptor.builder()
-				.setWindowId(WindowId.of(gridWindowVO.getAdWindowId()))
+				.setWindowId(WindowDocumentTypeId.of(gridWindowVO.getAdWindowId()))
 				.setStopwatch(stopwatch)
 				.putDebugProperty("generator-name", toString());
 

@@ -25,7 +25,7 @@ import de.metas.ui.web.view.descriptor.IncludedViewLayout;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.factory.standard.LayoutFactory;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -52,7 +52,7 @@ public class PPOrderLinesViewFactory implements IViewFactory
 	private final HUReservationService huReservationService;
 	private final ADReferenceService adReferenceService;
 
-	private final transient CCache<WindowId, ViewLayout> layouts = CCache.newLRUCache("PPOrderLinesViewFactory#Layouts", 10, 0);
+	private final transient CCache<WindowDocumentTypeId, ViewLayout> layouts = CCache.newLRUCache("PPOrderLinesViewFactory#Layouts", 10, 0);
 
 	public PPOrderLinesViewFactory(
 			@NonNull final ASIRepository asiRepository,
@@ -119,12 +119,12 @@ public class PPOrderLinesViewFactory implements IViewFactory
 	}
 
 	@Override
-	public ViewLayout getViewLayout(final WindowId windowId, final JSONViewDataType viewDataType_NOTUSED, @Nullable final ViewProfileId profileId_NOTUSED)
+	public ViewLayout getViewLayout(final WindowDocumentTypeId windowId, final JSONViewDataType viewDataType_NOTUSED, @Nullable final ViewProfileId profileId_NOTUSED)
 	{
 		return layouts.getOrLoad(windowId, () -> createViewLayout(windowId));
 	}
 
-	private ViewLayout createViewLayout(final WindowId windowId)
+	private ViewLayout createViewLayout(final WindowDocumentTypeId windowId)
 	{
 		return ViewLayout.builder()
 				.setWindowId(windowId)

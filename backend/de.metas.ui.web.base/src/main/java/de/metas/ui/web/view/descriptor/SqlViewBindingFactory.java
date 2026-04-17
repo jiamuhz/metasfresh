@@ -13,7 +13,7 @@ import de.metas.ui.web.view.IViewInvalidationAdvisor;
 import de.metas.ui.web.view.SqlViewCustomizer;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.SqlViewRowFieldBinding.SqlViewRowFieldLoader;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor.Characteristic;
 import de.metas.ui.web.window.descriptor.LookupDescriptor;
@@ -42,8 +42,8 @@ public class SqlViewBindingFactory
 
 	private final DocumentDescriptorFactory documentDescriptorFactory;
 	private final ImmutableList<SqlDocumentFilterConverter> filterConverters;
-	private final ImmutableMap<WindowId, SqlDocumentFilterConverterDecorator> filterConvertorDecorators;
-	private final ImmutableMap<WindowId, IViewInvalidationAdvisor> viewInvalidationAdvisorsByWindowId;
+	private final ImmutableMap<WindowDocumentTypeId, SqlDocumentFilterConverterDecorator> filterConvertorDecorators;
+	private final ImmutableMap<WindowDocumentTypeId, IViewInvalidationAdvisor> viewInvalidationAdvisorsByWindowId;
 	private final SqlViewCustomizerMap viewCustomizers;
 
 	private final CCache<SqlViewBindingKey, SqlViewBinding> cache = CCache.newCache("SqlViewBindings", 20, 0);
@@ -70,7 +70,7 @@ public class SqlViewBindingFactory
 		this.viewCustomizers = viewCustomizers;
 	}
 
-	private static ImmutableMap<WindowId, SqlDocumentFilterConverterDecorator> makeDecoratorsMapAndHandleDuplicates(
+	private static ImmutableMap<WindowDocumentTypeId, SqlDocumentFilterConverterDecorator> makeDecoratorsMapAndHandleDuplicates(
 			@NonNull final Collection<SqlDocumentFilterConverterDecorator> providers)
 	{
 		try
@@ -86,12 +86,12 @@ public class SqlViewBindingFactory
 		}
 	}
 
-	private static ImmutableMap<WindowId, IViewInvalidationAdvisor> makeViewInvalidationAdvisorsMap(final List<IViewInvalidationAdvisor> viewInvalidationAdvisors)
+	private static ImmutableMap<WindowDocumentTypeId, IViewInvalidationAdvisor> makeViewInvalidationAdvisorsMap(final List<IViewInvalidationAdvisor> viewInvalidationAdvisors)
 	{
 		try
 		{
 			return Maps.uniqueIndex(viewInvalidationAdvisors, advisor -> {
-				final WindowId windowId = advisor.getWindowId();
+				final WindowDocumentTypeId windowId = advisor.getWindowId();
 				Check.assumeNotNull(windowId, "windowId shall not be null for {}", advisor);
 				return windowId;
 			});
@@ -106,7 +106,7 @@ public class SqlViewBindingFactory
 	}
 
 	SqlViewBinding getViewBinding(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@Nullable final Characteristic requiredFieldCharacteristic,
 			@Nullable final ViewProfileId profileId)
 	{
@@ -116,7 +116,7 @@ public class SqlViewBindingFactory
 
 	private SqlViewBinding createViewBinding(@NonNull final SqlViewBindingKey key)
 	{
-		final WindowId windowId = key.getWindowId();
+		final WindowDocumentTypeId windowId = key.getWindowId();
 		final DocumentEntityDescriptor entityDescriptor = documentDescriptorFactory.getDocumentEntityDescriptor(windowId);
 		final Set<String> displayFieldNames = entityDescriptor.getFieldNamesWithCharacteristic(key.getRequiredFieldCharacteristic());
 		final SqlDocumentEntityDataBindingDescriptor entityBinding = SqlDocumentEntityDataBindingDescriptor.cast(entityDescriptor.getDataBinding());
@@ -205,7 +205,7 @@ public class SqlViewBindingFactory
 				isDisplayColumnAvailable);
 	}
 
-	private IViewInvalidationAdvisor getViewInvalidationAdvisor(final WindowId windowId)
+	private IViewInvalidationAdvisor getViewInvalidationAdvisor(final WindowDocumentTypeId windowId)
 	{
 		return viewInvalidationAdvisorsByWindowId.getOrDefault(windowId, DefaultViewInvalidationAdvisor.instance);
 	}
@@ -232,7 +232,8 @@ public class SqlViewBindingFactory
 	@Value
 	private static class SqlViewBindingKey
 	{
-		@NonNull WindowId windowId;
+		@NonNull
+		WindowDocumentTypeId windowId;
 		@Nullable Characteristic requiredFieldCharacteristic;
 		@Nullable ViewProfileId profileId;
 	}

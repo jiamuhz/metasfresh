@@ -5,7 +5,7 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.RemovalNotification;
 import de.metas.logging.LogManager;
 import de.metas.ui.web.view.event.ViewChangesCollector;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 import org.slf4j.Logger;
 
@@ -32,7 +32,7 @@ public final class DefaultViewsStorage implements IViewsStorage4GivenWindow
 	}
 
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		throw new UnsupportedOperationException("windowId not available");
 	}

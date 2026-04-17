@@ -2,7 +2,7 @@ package de.metas.ui.web.picking;
 
 import de.metas.common.util.WindowConstants;
 import de.metas.i18n.AdMessageKey;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.experimental.UtilityClass;
 
  
@@ -10,11 +10,11 @@ import lombok.experimental.UtilityClass;
 @UtilityClass
 public final class PickingConstants
 {
-	public static final WindowId WINDOWID_PackageableView = WindowId.of(WindowConstants.PACKAGEABLE_VIEW_AD_WINDOW_ID); // FIXME: HARDCODED
+	public static final WindowDocumentTypeId WINDOWID_PackageableView = WindowDocumentTypeId.of(WindowConstants.PACKAGEABLE_VIEW_AD_WINDOW_ID); // FIXME: HARDCODED
 	public static final String WINDOWID_PickingView_String = "540350"; // FIXME: HARDCODED
-	public static final WindowId WINDOWID_PickingView = WindowId.fromJson(WINDOWID_PickingView_String);
+	public static final WindowDocumentTypeId WINDOWID_PickingView = WindowDocumentTypeId.fromJson(WINDOWID_PickingView_String);
 	public static final String WINDOWID_PickingSlotView_String = "pickingSlot";
-	public static final WindowId WINDOWID_PickingSlotView = WindowId.fromJson(WINDOWID_PickingSlotView_String);
+	public static final WindowDocumentTypeId WINDOWID_PickingSlotView = WindowDocumentTypeId.fromJson(WINDOWID_PickingSlotView_String);
 
 	public static final AdMessageKey MSG_WEBUI_PICKING_NO_PROCESSED_RECORDS = AdMessageKey.of("WEBUI_Picking_No_Processed_Records");
 	public static final AdMessageKey MSG_WEBUI_PICKING_SELECT_PICKED_HU = AdMessageKey.of("WEBUI_Picking_SelectPickedHU");

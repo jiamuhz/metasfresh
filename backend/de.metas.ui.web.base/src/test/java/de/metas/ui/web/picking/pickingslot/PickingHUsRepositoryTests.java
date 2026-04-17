@@ -31,7 +31,7 @@ import de.metas.ui.web.handlingunits.HUEditorRow;
 import de.metas.ui.web.handlingunits.HUEditorRowId;
 import de.metas.ui.web.handlingunits.HUEditorRowType;
 import de.metas.ui.web.handlingunits.HUEditorViewRepository;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.adempiere.test.AdempiereTestHelper;
@@ -152,7 +152,7 @@ public class PickingHUsRepositoryTests
 										   .build());
 
 		final HUEditorRow huEditorRow = HUEditorRow
-				.builder(WindowId.of(423))
+				.builder(WindowDocumentTypeId.of(423))
 				.setRowId(HUEditorRowId.ofTopLevelHU(huId))
 				.setType(HUEditorRowType.LU)
 				.setTopLevel(true)

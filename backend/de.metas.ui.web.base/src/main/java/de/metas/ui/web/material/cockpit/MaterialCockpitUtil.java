@@ -5,7 +5,7 @@ import org.compiere.util.Env;
 
 import de.metas.dimension.DimensionSpec;
 import de.metas.dimension.IDimensionspecDAO;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import de.metas.util.Services;
 import de.metas.common.util.CoalesceUtil;
@@ -15,13 +15,13 @@ import de.metas.common.util.CoalesceUtil;
 public final class MaterialCockpitUtil
 {
 	public static final String WINDOWID_MaterialCockpitView_String = "540376";
-	public static final WindowId WINDOWID_MaterialCockpitView = WindowId.fromJson(WINDOWID_MaterialCockpitView_String);
+	public static final WindowDocumentTypeId WINDOWID_MaterialCockpitView = WindowDocumentTypeId.fromJson(WINDOWID_MaterialCockpitView_String);
 
 	public static final String WINDOWID_MaterialCockpit_Detail_String = "540395";
-	public static final WindowId WINDOWID_MaterialCockpit_DetailView = WindowId.fromJson(WINDOWID_MaterialCockpitView_String);
+	public static final WindowDocumentTypeId WINDOWID_MaterialCockpit_DetailView = WindowDocumentTypeId.fromJson(WINDOWID_MaterialCockpitView_String);
 
 	public static final String WINDOW_MaterialCockpit_StockDetail_String = "540457";
-	public static final WindowId WINDOW_MaterialCockpit_StockDetailView = WindowId.of(Integer.parseInt(WINDOW_MaterialCockpit_StockDetail_String));
+	public static final WindowDocumentTypeId WINDOW_MaterialCockpit_StockDetailView = WindowDocumentTypeId.of(Integer.parseInt(WINDOW_MaterialCockpit_StockDetail_String));
 
 	public static final String SYSCONFIG_DIM_SPEC_INTERNAL_NAME = "de.metas.ui.web.material.cockpit.DIM_Dimension_Spec.InternalName";
 	public static final String DEFAULT_DIM_SPEC_INTERNAL_NAME = "Material_Cockpit_Default_Spec";

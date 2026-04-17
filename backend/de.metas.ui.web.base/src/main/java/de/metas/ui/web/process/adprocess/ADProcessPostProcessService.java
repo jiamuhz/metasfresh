@@ -30,7 +30,7 @@ import de.metas.ui.web.view.event.ViewChangesCollector;
 import de.metas.ui.web.view.json.JSONViewDataType;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.DocumentCollection;
 import de.metas.util.Services;
 import lombok.Builder;
@@ -210,10 +210,10 @@ public class ADProcessPostProcessService
 		final TableRecordReference recordRef = recordsToOpen.getFirstRecord();
 		final int documentId = recordRef.getRecord_ID();
 
-		WindowId windowId = WindowId.fromNullableJson(recordsToOpen.getWindowIdString());
+		WindowDocumentTypeId windowId = WindowDocumentTypeId.fromNullableJson(recordsToOpen.getWindowIdString());
 		if (windowId == null)
 		{
-			windowId = WindowId.ofNullable(RecordWindowFinder.findAdWindowId(recordRef).orElse(null));
+			windowId = WindowDocumentTypeId.ofNullable(RecordWindowFinder.findAdWindowId(recordRef).orElse(null));
 		}
 
 		return DocumentPath.rootDocumentPath(windowId, documentId);
@@ -246,14 +246,14 @@ public class ADProcessPostProcessService
 			}
 
 			final TableRecordReference firstRecordRef = TableRecordReference.of(tableName, recordIds.get(0));
-			final WindowId windowId = WindowId.of(RecordWindowFinder.findAdWindowId(firstRecordRef).get()); // assume all records are from same window
+			final WindowDocumentTypeId windowId = WindowDocumentTypeId.of(RecordWindowFinder.findAdWindowId(firstRecordRef).get()); // assume all records are from same window
 			return recordIds.stream()
 					.map(recordId -> DocumentPath.rootDocumentPath(windowId, recordId))
 					.collect(ImmutableSet.toImmutableSet());
 		}
 		else if (sourceRecordRef != null)
 		{
-			final WindowId windowId = WindowId.of(RecordWindowFinder.findAdWindowId(sourceRecordRef).get());
+			final WindowDocumentTypeId windowId = WindowDocumentTypeId.of(RecordWindowFinder.findAdWindowId(sourceRecordRef).get());
 			final DocumentPath documentPath = DocumentPath.rootDocumentPath(windowId, sourceRecordRef.getRecord_ID());
 			return ImmutableSet.of(documentPath);
 		}
@@ -275,14 +275,14 @@ public class ADProcessPostProcessService
 			return null; // shall not happen
 		}
 
-		final WindowId windowId_Override = WindowId.fromNullableJson(recordsToOpen.getWindowIdString()); // optional
+		final WindowDocumentTypeId windowId_Override = WindowDocumentTypeId.fromNullableJson(recordsToOpen.getWindowIdString()); // optional
 
 		//
 		// Create view create request builders from current records
-		final Map<WindowId, CreateViewRequest.Builder> viewRequestBuilders = new HashMap<>();
+		final Map<WindowDocumentTypeId, CreateViewRequest.Builder> viewRequestBuilders = new HashMap<>();
 		for (final TableRecordReference recordRef : recordRefs)
 		{
-			final WindowId recordWindowId = windowId_Override != null ? windowId_Override : WindowId.ofNullable(RecordWindowFinder.findAdWindowId(recordRef).orElse(null));
+			final WindowDocumentTypeId recordWindowId = windowId_Override != null ? windowId_Override : WindowDocumentTypeId.ofNullable(RecordWindowFinder.findAdWindowId(recordRef).orElse(null));
 			final CreateViewRequest.Builder viewRequestBuilder = viewRequestBuilders.computeIfAbsent(recordWindowId, key -> CreateViewRequest.builder(recordWindowId, JSONViewDataType.grid));
 
 			viewRequestBuilder.addFilterOnlyId(recordRef.getRecord_ID());

@@ -42,8 +42,8 @@ public class WindowIdTest
 	@Test
 	public void testEquals()
 	{
-		assertThat(WindowId.of(1234))
-				.isEqualTo(WindowId.fromJson("1234"));
+		assertThat(WindowDocumentTypeId.of(1234))
+				.isEqualTo(WindowDocumentTypeId.fromJson("1234"));
 	}
 
 	@Nested
@@ -60,17 +60,17 @@ public class WindowIdTest
 		@Test
 		public void testSerializeDeserialize()
 		{
-			testSerializeDeserialize(WindowId.of(123));
-			testSerializeDeserialize(WindowId.fromJson("windowId"));
+			testSerializeDeserialize(WindowDocumentTypeId.of(123));
+			testSerializeDeserialize(WindowDocumentTypeId.fromJson("windowId"));
 		}
 
-		private void testSerializeDeserialize(final WindowId windowId)
+		private void testSerializeDeserialize(final WindowDocumentTypeId windowId)
 		{
-			final WindowId windowIdDeserialized = fromJson(toJson(windowId));
+			final WindowDocumentTypeId windowIdDeserialized = fromJson(toJson(windowId));
 			assertThat(windowIdDeserialized).isEqualTo(windowId);
 		}
 
-		private String toJson(final WindowId windowId)
+		private String toJson(final WindowDocumentTypeId windowId)
 		{
 			try
 			{
@@ -82,11 +82,11 @@ public class WindowIdTest
 			}
 		}
 
-		private WindowId fromJson(final String json)
+		private WindowDocumentTypeId fromJson(final String json)
 		{
 			try
 			{
-				return jsonObjectMapper.readValue(json, WindowId.class);
+				return jsonObjectMapper.readValue(json, WindowDocumentTypeId.class);
 			}
 			catch (final IOException e)
 			{
@@ -101,13 +101,13 @@ public class WindowIdTest
 		@Test
 		public void parseOK()
 		{
-			assertThat(WindowId.fromJson("123").toInt()).isEqualTo(123);
+			assertThat(WindowDocumentTypeId.fromJson("123").toInt()).isEqualTo(123);
 		}
 
 		@Test
 		public void parseError()
 		{
-			final WindowId windowId = WindowId.fromJson("123a");
+			final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson("123a");
 			assertThatThrownBy(() -> windowId.toInt())
 					.isInstanceOf(AdempiereException.class)
 					.hasMessage("WindowId cannot be converted to int: 123a");
@@ -121,13 +121,13 @@ public class WindowIdTest
 		@Test
 		public void parseOK()
 		{
-			assertThat(WindowId.fromJson("123").toIntOr(-1)).isEqualTo(123);
+			assertThat(WindowDocumentTypeId.fromJson("123").toIntOr(-1)).isEqualTo(123);
 		}
 
 		@Test
 		public void parseError()
 		{
-			final WindowId windowId = WindowId.fromJson("123a");
+			final WindowDocumentTypeId windowId = WindowDocumentTypeId.fromJson("123a");
 			assertThat(windowId.toIntOr(-1)).isEqualTo(-1);
 		}
 	}

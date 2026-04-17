@@ -24,7 +24,7 @@ import de.metas.ui.web.process.descriptor.ProcessParamLookupValuesProvider;
 import de.metas.ui.web.view.IView;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DocumentLayoutElementFieldDescriptor.LookupSource;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceContext;
 import de.metas.util.GuavaCollectors;
@@ -86,8 +86,8 @@ public class WEBUI_M_HU_Pick extends ViewBasedProcessTemplate implements IProces
 	private ProcessPreconditionsResolution checkEligibleView()
 	{
 		final IView view = getView();
-		final WindowId windowId = view.getViewId().getWindowId();
-		if (WindowId.equals(windowId, HUsToPickViewFactory.WINDOW_ID))
+		final WindowDocumentTypeId windowId = view.getViewId().getWindowId();
+		if (WindowDocumentTypeId.equals(windowId, HUsToPickViewFactory.WINDOW_ID))
 		{
 			return ProcessPreconditionsResolution.rejectWithInternalReason("not needed in HUsToPick view");
 		}

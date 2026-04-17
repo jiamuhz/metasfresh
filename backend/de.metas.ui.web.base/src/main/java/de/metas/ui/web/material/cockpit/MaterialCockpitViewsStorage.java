@@ -11,7 +11,7 @@ import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewsStorage4GivenWindow;
 import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 import org.adempiere.util.lang.impl.TableRecordReferenceSet;
 import org.compiere.model.I_M_Product;
@@ -68,7 +68,7 @@ public class MaterialCockpitViewsStorage implements IViewsStorage4GivenWindow
 	 * @return {@link MaterialCockpitUtil#WINDOWID_MaterialCockpitView} since that'S what we want to store inside this service.
 	 */
 	@Override
-	public WindowId getWindowId()
+	public WindowDocumentTypeId getWindowId()
 	{
 		return MaterialCockpitUtil.WINDOWID_MaterialCockpitView;
 	}

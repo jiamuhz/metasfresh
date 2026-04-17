@@ -5,7 +5,7 @@ import de.metas.cache.CCacheStats;
 import de.metas.ui.web.window.datatypes.LookupValue.IntegerLookupValue;
 import de.metas.ui.web.window.datatypes.LookupValuesList;
 import de.metas.ui.web.window.datatypes.LookupValuesPage;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.DocumentZoomIntoInfo;
 import de.metas.ui.web.window.model.lookup.LookupDataSource;
 import de.metas.util.lang.RepoIdAware;
@@ -108,7 +108,7 @@ public class MockedLookupDataSource implements LookupDataSource
 	}
 
 	@Override
-	public Optional<WindowId> getZoomIntoWindowId()
+	public Optional<WindowDocumentTypeId> getZoomIntoWindowId()
 	{
 		return Optional.empty();
 	}

@@ -11,7 +11,7 @@ import de.metas.websocket.WebsocketEndpointAware;
 import de.metas.websocket.WebsocketTopicName;
 import de.metas.ui.web.websocket.WebsocketTopicNames;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 import lombok.Value;
 
@@ -29,7 +29,7 @@ public class JSONViewChanges implements WebsocketEndpointAware
 	@JsonProperty("viewId")
 	String viewId;
 	@JsonProperty("windowId")
-	WindowId windowId;
+	WindowDocumentTypeId windowId;
 
 	@JsonProperty("fullyChanged")
 	@JsonInclude(JsonInclude.Include.NON_NULL)

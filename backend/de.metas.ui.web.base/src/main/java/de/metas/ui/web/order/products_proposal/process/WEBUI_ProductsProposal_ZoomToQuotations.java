@@ -39,7 +39,7 @@ import de.metas.ui.web.view.IView;
 import de.metas.ui.web.view.IViewsRepository;
 import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.descriptor.SqlAndParams;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Services;
 import lombok.NonNull;
 import org.adempiere.ad.dao.ICompositeQueryFilter;
@@ -127,7 +127,7 @@ public class WEBUI_ProductsProposal_ZoomToQuotations extends ProductsProposalVie
 				.addParameter(getDocumentFilterParamOrderIds(selectedProductIds, selectedBPartnerId))
 				.build();
 
-		final WindowId windowId = WindowId.of(getQuotationWindowId());
+		final WindowDocumentTypeId windowId = WindowDocumentTypeId.of(getQuotationWindowId());
 
 		return CreateViewRequest
 				.builder(windowId)

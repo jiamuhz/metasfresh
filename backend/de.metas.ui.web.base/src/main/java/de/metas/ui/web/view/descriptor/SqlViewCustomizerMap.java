@@ -19,7 +19,7 @@ import com.google.common.collect.ImmutableMap;
 import de.metas.ui.web.view.SqlViewCustomizer;
 import de.metas.ui.web.view.ViewProfile;
 import de.metas.ui.web.view.ViewProfileId;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import lombok.NonNull;
 import lombok.ToString;
 
@@ -35,8 +35,8 @@ public final class SqlViewCustomizerMap
 	private static final Comparator<SqlViewCustomizer> ORDERED_COMPARATOR = Comparator.comparing(SqlViewCustomizerMap::getOrder);
 
 	private final ImmutableList<SqlViewCustomizer> viewCustomizers;
-	private ImmutableListMultimap<WindowId, ViewProfile> viewProfilesByWindowId;
-	private final ImmutableMap<WindowId, ImmutableMap<ViewProfileId, SqlViewCustomizer>> map;
+	private ImmutableListMultimap<WindowDocumentTypeId, ViewProfile> viewProfilesByWindowId;
+	private final ImmutableMap<WindowDocumentTypeId, ImmutableMap<ViewProfileId, SqlViewCustomizer>> map;
 
 	private SqlViewCustomizerMap(final Collection<SqlViewCustomizer> viewCustomizersCollection)
 	{
@@ -51,9 +51,9 @@ public final class SqlViewCustomizerMap
 		this.map = makeViewCustomizersMap(this.viewCustomizers);
 	}
 
-	private static ImmutableMap<WindowId, ImmutableMap<ViewProfileId, SqlViewCustomizer>> makeViewCustomizersMap(final ImmutableList<SqlViewCustomizer> viewCustomizers)
+	private static ImmutableMap<WindowDocumentTypeId, ImmutableMap<ViewProfileId, SqlViewCustomizer>> makeViewCustomizersMap(final ImmutableList<SqlViewCustomizer> viewCustomizers)
 	{
-		final Map<WindowId, ImmutableMap<ViewProfileId, SqlViewCustomizer>> map = viewCustomizers
+		final Map<WindowDocumentTypeId, ImmutableMap<ViewProfileId, SqlViewCustomizer>> map = viewCustomizers
 				.stream()
 				.sorted(ORDERED_COMPARATOR)
 				.collect(Collectors.groupingBy(
@@ -75,7 +75,7 @@ public final class SqlViewCustomizerMap
 	}
 
 	public SqlViewCustomizer getOrNull(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@Nullable final ViewProfileId profileId)
 	{
 		if (ViewProfileId.isNull(profileId))
@@ -92,19 +92,19 @@ public final class SqlViewCustomizerMap
 		return viewCustomizersByProfileId.get(profileId);
 	}
 
-	public void forEachWindowIdAndProfileId(@NonNull final BiConsumer<WindowId, ViewProfileId> consumer)
+	public void forEachWindowIdAndProfileId(@NonNull final BiConsumer<WindowDocumentTypeId, ViewProfileId> consumer)
 	{
 		viewCustomizers.forEach(viewCustomizer -> consumer.accept(viewCustomizer.getWindowId(), viewCustomizer.getProfile().getProfileId()));
 	}
 
-	public ImmutableListMultimap<WindowId, ViewProfile> getViewProfilesIndexedByWindowId()
+	public ImmutableListMultimap<WindowDocumentTypeId, ViewProfile> getViewProfilesIndexedByWindowId()
 	{
 		return viewCustomizers
 				.stream()
 				.collect(ImmutableListMultimap.toImmutableListMultimap(viewCustomizer -> viewCustomizer.getWindowId(), viewCustomizer -> viewCustomizer.getProfile()));
 	}
 
-	public List<ViewProfile> getViewProfilesByWindowId(WindowId windowId)
+	public List<ViewProfile> getViewProfilesByWindowId(WindowDocumentTypeId windowId)
 	{
 		return viewProfilesByWindowId.get(windowId);
 	}

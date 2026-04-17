@@ -43,7 +43,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.factory.standard.DefaultDocumentDescriptorFactory;
 import de.metas.util.Check;
 import de.metas.util.Services;
@@ -114,7 +114,7 @@ public class MaterialCockpitViewFactory implements IViewFactory
 	private void assertWindowIdOfRequestIsCorrect(@NonNull final CreateViewRequest request)
 	{
 		final ViewId viewId = request.getViewId();
-		final WindowId windowId = viewId.getWindowId();
+		final WindowDocumentTypeId windowId = viewId.getWindowId();
 
 		Check.errorUnless(MaterialCockpitUtil.WINDOWID_MaterialCockpitView.equals(windowId),
 						  "The parameter request needs to have WindowId={}, but has {} instead; request={};",
@@ -139,7 +139,7 @@ public class MaterialCockpitViewFactory implements IViewFactory
 
 	@Override
 	public ViewLayout getViewLayout(
-			@NonNull final WindowId windowId,
+			@NonNull final WindowDocumentTypeId windowId,
 			@NonNull final JSONViewDataType viewDataType,
 			@Nullable final ViewProfileId profileId)
 	{

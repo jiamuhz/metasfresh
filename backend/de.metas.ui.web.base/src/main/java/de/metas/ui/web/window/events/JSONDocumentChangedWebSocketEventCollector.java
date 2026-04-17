@@ -4,7 +4,7 @@ import com.google.common.annotations.VisibleForTesting;
 import com.google.common.collect.ImmutableList;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentIdsSelection;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.datatypes.json.JSONIncludedTabInfo;
 import de.metas.ui.web.window.descriptor.DetailId;
 import lombok.NonNull;
@@ -28,7 +28,7 @@ final class JSONDocumentChangedWebSocketEventCollector
 
 	//@formatter:off
 	@Value
-	private static class EventKey { WindowId windowId; DocumentId documentId; }
+	private static class EventKey { WindowDocumentTypeId windowId; DocumentId documentId; }
 	//@formatter:on
 
 	@Nullable private LinkedHashMap<EventKey, JSONDocumentChangedWebSocketEvent> _events; // null means collector closed
@@ -63,7 +63,7 @@ final class JSONDocumentChangedWebSocketEventCollector
 		return events == null || events.isEmpty();
 	}
 
-	private JSONDocumentChangedWebSocketEvent getCreateEvent(@NonNull final WindowId windowId, @NonNull final DocumentId documentId)
+	private JSONDocumentChangedWebSocketEvent getCreateEvent(@NonNull final WindowDocumentTypeId windowId, @NonNull final DocumentId documentId)
 	{
 		final EventKey key = new EventKey(windowId, documentId);
 
@@ -81,12 +81,12 @@ final class JSONDocumentChangedWebSocketEventCollector
 		return JSONDocumentChangedWebSocketEvent.rootDocument(key.getWindowId(), key.getDocumentId());
 	}
 
-	public void staleRootDocument(final WindowId windowId, final DocumentId documentId)
+	public void staleRootDocument(final WindowDocumentTypeId windowId, final DocumentId documentId)
 	{
 		staleRootDocument(windowId, documentId, false);
 	}
 
-	public void staleRootDocument(final WindowId windowId, final DocumentId documentId, final boolean markActiveTabStaled)
+	public void staleRootDocument(final WindowDocumentTypeId windowId, final DocumentId documentId, final boolean markActiveTabStaled)
 	{
 		final JSONDocumentChangedWebSocketEvent event = getCreateEvent(windowId, documentId);
 		event.markRootDocumentAsStaled();
@@ -96,19 +96,19 @@ final class JSONDocumentChangedWebSocketEventCollector
 		}
 	}
 
-	public void staleTabs(final WindowId windowId, final DocumentId documentId, final Set<DetailId> tabIds)
+	public void staleTabs(final WindowDocumentTypeId windowId, final DocumentId documentId, final Set<DetailId> tabIds)
 	{
 		final JSONDocumentChangedWebSocketEvent event = getCreateEvent(windowId, documentId);
 		event.staleTabs(tabIds);
 	}
 
-	public void staleIncludedDocuments(final WindowId windowId, final DocumentId documentId, final DetailId tabId, final DocumentIdsSelection rowIds)
+	public void staleIncludedDocuments(final WindowDocumentTypeId windowId, final DocumentId documentId, final DetailId tabId, final DocumentIdsSelection rowIds)
 	{
 		final JSONDocumentChangedWebSocketEvent event = getCreateEvent(windowId, documentId);
 		event.staleIncludedRows(tabId, rowIds);
 	}
 
-	public void mergeFrom(final WindowId windowId, final DocumentId documentId, final JSONIncludedTabInfo tabInfo)
+	public void mergeFrom(final WindowDocumentTypeId windowId, final DocumentId documentId, final JSONIncludedTabInfo tabInfo)
 	{
 		final JSONDocumentChangedWebSocketEvent event = getCreateEvent(windowId, documentId);
 		event.addIncludedTabInfo(tabInfo);

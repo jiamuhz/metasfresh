@@ -11,7 +11,7 @@ import de.metas.ui.web.websocket.WebsocketTopicNames;
 import de.metas.ui.web.window.WindowConstants;
 import de.metas.ui.web.window.datatypes.DocumentId;
 import de.metas.ui.web.window.datatypes.DocumentPath;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.Document;
 import de.metas.ui.web.window.model.DocumentChanges;
 import de.metas.ui.web.window.model.DocumentSaveStatus;
@@ -323,7 +323,7 @@ public final class JSONDocument extends JSONDocumentBase
 	}
 
 	@Nullable
-	private static String buildWebsocketEndpointOrNull(final WindowId windowId, final DocumentId documentId)
+	private static String buildWebsocketEndpointOrNull(final WindowDocumentTypeId windowId, final DocumentId documentId)
 	{
 		if (windowId != null && documentId != null)
 		{

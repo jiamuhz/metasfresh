@@ -16,7 +16,7 @@ import de.metas.purchasecandidate.purchaseordercreation.localorder.PurchaseCandi
 import de.metas.ui.web.order.sales.purchasePlanning.process.WEBUI_PurchaseCandidates_PurchaseView_Launcher;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.ViewFactory;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import lombok.NonNull;
 
@@ -46,7 +46,7 @@ import lombok.NonNull;
 public class PurchaseCandidates2PurchaseViewFactory extends PurchaseViewFactoryTemplate
 {
 	public static final String WINDOW_ID_STRING = "purchaseCandidates2po";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	// services
 	private final PurchaseCandidateRepository purchaseCandidatesRepo;

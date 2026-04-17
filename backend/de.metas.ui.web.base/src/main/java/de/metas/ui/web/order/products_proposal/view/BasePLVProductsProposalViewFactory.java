@@ -20,7 +20,7 @@ import de.metas.ui.web.view.ViewCloseAction;
 import de.metas.ui.web.view.ViewFactory;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONFilterViewRequest;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import lombok.NonNull;
 import org.adempiere.util.lang.impl.TableRecordReference;
@@ -36,7 +36,7 @@ public class BasePLVProductsProposalViewFactory extends ProductsProposalViewFact
 	private static final Logger logger = LogManager.getLogger(BasePLVProductsProposalViewFactory.class);
 
 	public static final String WINDOW_ID_STRING = "basePLVProductsProposal";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	private final BPartnerProductStatsService bpartnerProductStatsService;
 	private final OrderProductProposalsService orderProductProposalsService;

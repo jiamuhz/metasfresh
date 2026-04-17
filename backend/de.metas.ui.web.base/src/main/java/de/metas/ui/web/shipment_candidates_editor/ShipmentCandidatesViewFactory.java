@@ -11,7 +11,7 @@ import de.metas.ui.web.view.ViewId;
 import de.metas.ui.web.view.ViewProfileId;
 import de.metas.ui.web.view.descriptor.ViewLayout;
 import de.metas.ui.web.view.json.JSONViewDataType;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.model.lookup.LookupDataSourceFactory;
 import de.metas.util.Services;
 import lombok.NonNull;
@@ -23,7 +23,7 @@ import java.util.Set;
 public class ShipmentCandidatesViewFactory implements IViewFactory
 {
 	public static final String WINDOWID_String = "540674"; // FIXME: HARDCODED
-	public static final WindowId WINDOWID = WindowId.fromJson(WINDOWID_String);
+	public static final WindowDocumentTypeId WINDOWID = WindowDocumentTypeId.fromJson(WINDOWID_String);
 
 	private final IShipmentScheduleBL shipmentScheduleBL;
 
@@ -41,7 +41,7 @@ public class ShipmentCandidatesViewFactory implements IViewFactory
 	}
 
 	@Override
-	public ViewLayout getViewLayout(WindowId windowId, JSONViewDataType viewDataType, ViewProfileId profileId)
+	public ViewLayout getViewLayout(WindowDocumentTypeId windowId, JSONViewDataType viewDataType, ViewProfileId profileId)
 	{
 		return ViewLayout.builder()
 				.setWindowId(WINDOWID)

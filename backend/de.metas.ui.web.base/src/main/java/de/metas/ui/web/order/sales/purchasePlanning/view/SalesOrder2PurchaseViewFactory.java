@@ -33,7 +33,7 @@ import de.metas.ui.web.order.sales.purchasePlanning.process.WEBUI_SalesOrder_App
 import de.metas.ui.web.order.sales.purchasePlanning.process.WEBUI_SalesOrder_PurchaseView_Launcher;
 import de.metas.ui.web.view.CreateViewRequest;
 import de.metas.ui.web.view.ViewFactory;
-import de.metas.ui.web.window.datatypes.WindowId;
+import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.util.Check;
 import de.metas.util.GuavaCollectors;
 import de.metas.util.Services;
@@ -45,7 +45,7 @@ import lombok.NonNull;
 public class SalesOrder2PurchaseViewFactory extends PurchaseViewFactoryTemplate
 {
 	public static final String WINDOW_ID_STRING = "SO2PO";
-	public static final WindowId WINDOW_ID = WindowId.fromJson(WINDOW_ID_STRING);
+	public static final WindowDocumentTypeId WINDOW_ID = WindowDocumentTypeId.fromJson(WINDOW_ID_STRING);
 
 	// services
 	private final SalesOrderLineRepository salesOrderLineRepository;
