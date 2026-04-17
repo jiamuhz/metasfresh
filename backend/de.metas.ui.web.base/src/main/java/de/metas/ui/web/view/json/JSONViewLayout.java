@@ -125,7 +125,7 @@ public final class JSONViewLayout
 
 	private JSONViewLayout(final ViewLayout layout, final JSONDocumentLayoutOptions options)
 	{
-		windowId = layout.getWindowId();
+		windowId = layout.getWindowDocumentTypeId();
 		type = windowId;
 
 		profileId = layout.getProfileId();

@@ -63,7 +63,7 @@ public class ViewLayout implements ETagAware
 
 	private static final Logger logger = LogManager.getLogger(ViewLayout.class);
 
-	private final WindowDocumentTypeId windowId;
+	private final WindowDocumentTypeId windowDocumentTypeId;
 	private final DetailId detailId;
 	private final ViewProfileId profileId;
 
@@ -113,7 +113,7 @@ public class ViewLayout implements ETagAware
 
 	private ViewLayout(final Builder builder)
 	{
-		windowId = builder.windowId;
+		windowDocumentTypeId = builder.windowId;
 		detailId = builder.detailId;
 		profileId = ViewProfileId.NULL;
 		caption = TranslatableStrings.nullToEmpty(builder.caption);
@@ -154,7 +154,7 @@ public class ViewLayout implements ETagAware
 	 * copy and override constructor
 	 */
 	private ViewLayout(final ViewLayout from,
-					   final WindowDocumentTypeId windowId,
+					   final WindowDocumentTypeId windowDocumentTypeId,
 					   final ViewProfileId profileId,
 					   final ImmutableList<DocumentFilterDescriptor> filters,
 					   @NonNull final DocumentQueryOrderByList defaultOrderBys,
@@ -167,7 +167,7 @@ public class ViewLayout implements ETagAware
 	{
 		Check.assumeNotEmpty(elements, "elements is not empty");
 
-		this.windowId = windowId;
+		this.windowDocumentTypeId = windowDocumentTypeId;
 		detailId = from.detailId;
 		this.profileId = profileId;
 		caption = from.caption;
@@ -227,9 +227,9 @@ public class ViewLayout implements ETagAware
 		return new ChangeBuilder(this);
 	}
 
-	public WindowDocumentTypeId getWindowId()
+	public WindowDocumentTypeId getWindowDocumentTypeId()
 	{
-		return windowId;
+		return windowDocumentTypeId;
 	}
 
 	public DetailId getDetailId()
@@ -402,7 +402,7 @@ public class ViewLayout implements ETagAware
 			final DocumentQueryOrderByList defaultOrderBysEffective = DocumentQueryOrderByList.ofList(defaultOrderBys);
 
 			// If there will be no change then return this
-			if (Objects.equals(from.windowId, windowIdEffective)
+			if (Objects.equals(from.windowDocumentTypeId, windowIdEffective)
 					&& Objects.equals(from.profileId, profileIdEffective)
 					&& Objects.equals(from.filters, filtersEffective)
 					&& Objects.equals(from.allowNewCaption, allowNewCaptionEffective)
@@ -437,7 +437,7 @@ public class ViewLayout implements ETagAware
 
 		private WindowDocumentTypeId getWindowIdEffective()
 		{
-			return windowId != null ? windowId : from.windowId;
+			return windowId != null ? windowId : from.windowDocumentTypeId;
 		}
 
 		public ChangeBuilder profileId(final ViewProfileId profileId)
