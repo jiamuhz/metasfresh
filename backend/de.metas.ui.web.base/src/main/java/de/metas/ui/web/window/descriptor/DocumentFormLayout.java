@@ -28,7 +28,7 @@ public class DocumentFormLayout
 		return new Builder();
 	}
 
-	private final WindowDocumentTypeId windowId;
+	private final WindowDocumentTypeId windowDocumentTypeId;
 	private final ITranslatableString caption;
 	private final ITranslatableString description;
 
@@ -38,8 +38,8 @@ public class DocumentFormLayout
 
 	private DocumentFormLayout(final Builder builder)
 	{
-		windowId = builder.windowId;
-		Check.assumeNotNull(windowId, "Parameter windowId is not null");
+		windowDocumentTypeId = builder.windowId;
+		Check.assumeNotNull(windowDocumentTypeId, "Parameter windowId is not null");
 
 		caption = TranslatableStrings.nullToEmpty(builder.caption);
 		description = TranslatableStrings.nullToEmpty(builder.description);
@@ -56,9 +56,9 @@ public class DocumentFormLayout
 				.toString();
 	}
 
-	public WindowDocumentTypeId getWindowId()
+	public WindowDocumentTypeId getWindowDocumentTypeId()
 	{
-		return windowId;
+		return windowDocumentTypeId;
 	}
 
 	public String getCaption(final String adLanguage)
