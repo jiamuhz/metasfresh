@@ -66,7 +66,7 @@ import java.util.List;
 		final DocumentDescriptor.Builder documentBuilder = DocumentDescriptor.builder();
 
 		final DocumentLayoutDescriptor.Builder layoutBuilder = DocumentLayoutDescriptor.builder()
-				.setWindowId(WindowDocumentTypeId.of(gridWindowVO.getAdWindowId()))
+				.setWindowDocumentTypeId(WindowDocumentTypeId.of(gridWindowVO.getAdWindowId()))
 				.setStopwatch(stopwatch)
 				.putDebugProperty("generator-name", toString());
 

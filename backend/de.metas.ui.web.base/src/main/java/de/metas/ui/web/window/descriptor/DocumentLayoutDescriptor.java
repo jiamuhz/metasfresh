@@ -86,7 +86,7 @@ public final class DocumentLayoutDescriptor
 
 	private DocumentLayoutDescriptor(@NonNull final Builder builder)
 	{
-		windowDocumentTypeId = builder.windowId;
+		windowDocumentTypeId = builder.windowDocumentTypeId;
 		Check.assumeNotNull(windowDocumentTypeId, "builder.windowId may not be null; builder={}", builder);
 
 		caption = builder.caption;
@@ -185,7 +185,7 @@ public final class DocumentLayoutDescriptor
 	{
 		private static final Logger logger = LogManager.getLogger(DocumentLayoutDescriptor.Builder.class);
 
-		private WindowDocumentTypeId windowId;
+		private WindowDocumentTypeId windowDocumentTypeId;
 		private ITranslatableString caption = TranslatableStrings.empty();
 		@Nullable private DocumentLayoutElementDescriptor documentSummaryElement;
 		@Nullable private DocumentLayoutElementDescriptor docActionElement;
@@ -207,7 +207,7 @@ public final class DocumentLayoutDescriptor
 		public String toString()
 		{
 			return MoreObjects.toStringHelper(this)
-					.add("windowId", windowId)
+					.add("windowId", windowDocumentTypeId)
 					.toString();
 		}
 
@@ -265,9 +265,9 @@ public final class DocumentLayoutDescriptor
 			map.put(detail.getDetailId(), detail);
 		}
 
-		public Builder setWindowId(final WindowDocumentTypeId windowId)
+		public Builder setWindowDocumentTypeId(final WindowDocumentTypeId windowDocumentTypeId)
 		{
-			this.windowId = windowId;
+			this.windowDocumentTypeId = windowDocumentTypeId;
 			return this;
 		}
 

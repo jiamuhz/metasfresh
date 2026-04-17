@@ -97,7 +97,7 @@ class CommentsServiceTest
 			{
 				final DocumentDescriptor documentDescriptor = DocumentDescriptor.builder()
 						.setLayout(DocumentLayoutDescriptor.builder()
-								.setWindowId(WINDOW_ID)
+								.setWindowDocumentTypeId(WINDOW_ID)
 								.setSingleRowLayout(DocumentFormLayout.builder())
 								.setGridView(ViewLayout.builder())
 								.setSideListView(ViewLayout.builder().build())
