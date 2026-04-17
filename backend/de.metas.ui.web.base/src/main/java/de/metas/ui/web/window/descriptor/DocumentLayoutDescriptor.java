@@ -38,7 +38,7 @@ public final class DocumentLayoutDescriptor
 		return new Builder();
 	}
 
-	private final WindowDocumentTypeId windowId;
+	private final WindowDocumentTypeId windowDocumentTypeId;
 	private final ITranslatableString caption;
 
 	/**
@@ -86,8 +86,8 @@ public final class DocumentLayoutDescriptor
 
 	private DocumentLayoutDescriptor(@NonNull final Builder builder)
 	{
-		windowId = builder.windowId;
-		Check.assumeNotNull(windowId, "builder.windowId may not be null; builder={}", builder);
+		windowDocumentTypeId = builder.windowId;
+		Check.assumeNotNull(windowDocumentTypeId, "builder.windowId may not be null; builder={}", builder);
 
 		caption = builder.caption;
 
@@ -96,10 +96,10 @@ public final class DocumentLayoutDescriptor
 
 		Check.assumeNotNull(builder.getSingleRowLayout(), "builder.singleRowLayout may not be null; builder={}", builder);
 		formLayout = builder.getSingleRowLayout()
-				.setWindowId(windowId)
+				.setWindowId(windowDocumentTypeId)
 				.build();
 		gridViewLayout = builder.getGridView()
-				.setWindowId(windowId)
+				.setWindowId(windowDocumentTypeId)
 				.build();
 		details = ImmutableMap.copyOf(builder.buildDetails());
 		allDetails = ImmutableMap.copyOf(builder.buildAllDetails());
@@ -113,7 +113,7 @@ public final class DocumentLayoutDescriptor
 	{
 		return MoreObjects.toStringHelper(this)
 				.omitNullValues()
-				.add("windowId", windowId)
+				.add("windowId", windowDocumentTypeId)
 				.add("singleRowLayout", formLayout)
 				.add("gridView", gridViewLayout)
 				.add("details", details.isEmpty() ? null : details)
@@ -121,9 +121,9 @@ public final class DocumentLayoutDescriptor
 				.toString();
 	}
 
-	public WindowDocumentTypeId getWindowId()
+	public WindowDocumentTypeId getWindowDocumentTypeId()
 	{
-		return windowId;
+		return windowDocumentTypeId;
 	}
 
 	public String getCaption(final String adLanguage)

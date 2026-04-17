@@ -101,7 +101,7 @@ public final class JSONDocumentLayout
 			@NonNull final DocumentLayoutDescriptor layout,
 			@NonNull final JSONDocumentLayoutOptions options)
 	{
-		this.windowId = layout.getWindowId();
+		this.windowId = layout.getWindowDocumentTypeId();
 		type = windowId;
 
 		tabId = null;
