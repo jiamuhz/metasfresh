@@ -15,7 +15,7 @@ import de.metas.ui.web.window.datatypes.WindowDocumentTypeId;
 import de.metas.ui.web.window.descriptor.DetailId;
 import de.metas.ui.web.window.descriptor.WindowDocumentLayoutDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentLayoutDetailDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentFormLayout;
+import de.metas.ui.web.window.descriptor.WindowDocumentFormLayout;
 import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.NonNull;
 
@@ -114,7 +114,7 @@ public final class JSONDocumentLayout
 		documentSummaryElement = JSONDocumentLayoutElement.fromNullable(layout.getDocumentSummaryElementDescriptor(), options);
 		docActionElement = JSONDocumentLayoutElement.fromNullable(layout.getDocActionElementDescriptor(), options);
 
-		final DocumentFormLayout singleRowLayout = layout.getFormLayout();
+		final WindowDocumentFormLayout singleRowLayout = layout.getFormLayout();
 		sections = JSONDocumentLayoutSection.ofSectionsList(singleRowLayout.getSections(), options);
 		setAdvSearchWindows(this.sections, this.windowId, null, options);
 		//
@@ -176,7 +176,7 @@ public final class JSONDocumentLayout
 
 		internalName = detailLayout.getInternalName();
 
-		final DocumentFormLayout singleRowLayout = detailLayout.getSingleRowLayout();
+		final WindowDocumentFormLayout singleRowLayout = detailLayout.getSingleRowLayout();
 		caption = singleRowLayout.getCaption(jsonOpts.getAdLanguage());
 
 		documentSummaryElement = null;

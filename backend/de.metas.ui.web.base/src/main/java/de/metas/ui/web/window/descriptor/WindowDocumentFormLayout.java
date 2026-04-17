@@ -21,7 +21,7 @@ import lombok.NonNull;
  * 表单布局，用于 Header Tab  and  Advanced Edit Dialog
  * @作者  嘉木
  */
-public class DocumentFormLayout
+public class WindowDocumentFormLayout
 {
 	public static Builder builder()
 	{
@@ -36,7 +36,7 @@ public class DocumentFormLayout
 	// sections 压扁的内容
 	private transient List<DocumentLayoutElementDescriptor> _elements = null;
 
-	private DocumentFormLayout(final Builder builder)
+	private WindowDocumentFormLayout(final Builder builder)
 	{
 		windowDocumentTypeId = builder.windowId;
 		Check.assumeNotNull(windowDocumentTypeId, "Parameter windowId is not null");
@@ -110,9 +110,9 @@ public class DocumentFormLayout
 			super();
 		}
 
-		public DocumentFormLayout build()
+		public WindowDocumentFormLayout build()
 		{
-			return new DocumentFormLayout(this);
+			return new WindowDocumentFormLayout(this);
 		}
 
 		private List<DocumentLayoutUISectionDescriptor> buildSections()

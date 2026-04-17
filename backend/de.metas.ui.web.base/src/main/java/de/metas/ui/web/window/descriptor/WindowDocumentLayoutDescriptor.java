@@ -53,7 +53,7 @@ public final class WindowDocumentLayoutDescriptor
 	/**
 	 * 文档的 Header Tab Layout方案
 	 */
-	private final DocumentFormLayout formLayout;
+	private final WindowDocumentFormLayout formLayout;
 
 	/**
 	 * 文档的 文档列表 Layout方案
@@ -141,7 +141,7 @@ public final class WindowDocumentLayoutDescriptor
 		return docActionElementDescriptor;
 	}
 
-	public DocumentFormLayout getFormLayout()
+	public WindowDocumentFormLayout getFormLayout()
 	{
 		return formLayout;
 	}
@@ -190,7 +190,7 @@ public final class WindowDocumentLayoutDescriptor
 		@Nullable private DocumentLayoutElementDescriptor documentSummaryElement;
 		@Nullable private DocumentLayoutElementDescriptor docActionElement;
 
-		private DocumentFormLayout.Builder singleRowLayout;
+		private WindowDocumentFormLayout.Builder singleRowLayout;
 		private ViewLayout.Builder _gridView;
 		private ViewLayout _sideListView;
 
@@ -295,13 +295,13 @@ public final class WindowDocumentLayoutDescriptor
 			return this;
 		}
 
-		public Builder setSingleRowLayout(@NonNull final DocumentFormLayout.Builder singleRowLayout)
+		public Builder setSingleRowLayout(@NonNull final WindowDocumentFormLayout.Builder singleRowLayout)
 		{
 			this.singleRowLayout = singleRowLayout;
 			return this;
 		}
 
-		private DocumentFormLayout.Builder getSingleRowLayout()
+		private WindowDocumentFormLayout.Builder getSingleRowLayout()
 		{
 			return singleRowLayout;
 		}

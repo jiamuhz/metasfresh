@@ -26,7 +26,7 @@ import de.metas.ui.web.window.descriptor.DocumentDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentEntityDescriptor;
 import de.metas.ui.web.window.descriptor.DocumentFieldDescriptor;
 import de.metas.ui.web.window.descriptor.WindowDocumentLayoutDescriptor;
-import de.metas.ui.web.window.descriptor.DocumentFormLayout;
+import de.metas.ui.web.window.descriptor.WindowDocumentFormLayout;
 import de.metas.ui.web.window.descriptor.factory.DocumentDescriptorFactory;
 import de.metas.ui.web.window.exceptions.DocumentLayoutBuildException;
 import de.metas.user.UserId;
@@ -98,7 +98,7 @@ class CommentsServiceTest
 				final DocumentDescriptor documentDescriptor = DocumentDescriptor.builder()
 						.setLayout(WindowDocumentLayoutDescriptor.builder()
 								.setWindowDocumentTypeId(WINDOW_ID)
-								.setSingleRowLayout(DocumentFormLayout.builder())
+								.setSingleRowLayout(WindowDocumentFormLayout.builder())
 								.setGridView(ViewLayout.builder())
 								.setSideListView(ViewLayout.builder().build())
 								.build())
