@@ -34,17 +34,17 @@ public class DefaultDocumentDescriptorFactory implements DocumentDescriptorFacto
 	}
 
 	@Override
-	public void invalidateForWindow(@NonNull final WindowDocumentTypeId windowId)
+	public void invalidateForWindow(@NonNull final WindowDocumentTypeId windowDocumentTypeId)
 	{
-		documentDescriptorsByWindowId.remove(windowId);
+		documentDescriptorsByWindowId.remove(windowDocumentTypeId);
 	}
 
 	@Override
-	public DocumentDescriptor getDocumentDescriptor(@NonNull final WindowDocumentTypeId windowId)
+	public DocumentDescriptor getDocumentDescriptor(@NonNull final WindowDocumentTypeId windowDocumentTypeId)
 	{
 		try
 		{
-			return documentDescriptorsByWindowId.getOrLoad(windowId, () -> createDocumentDescriptorLoader(windowId).load());
+			return documentDescriptorsByWindowId.getOrLoad(windowDocumentTypeId, () -> createDocumentDescriptorLoader(windowDocumentTypeId).load());
 		}
 		catch (final Exception e)
 		{
@@ -52,10 +52,10 @@ public class DefaultDocumentDescriptorFactory implements DocumentDescriptorFacto
 		}
 	}
 
-	private DefaultDocumentDescriptorLoader createDocumentDescriptorLoader(@NonNull final WindowDocumentTypeId windowId)
+	private DefaultDocumentDescriptorLoader createDocumentDescriptorLoader(@NonNull final WindowDocumentTypeId windowDocumentTypeId)
 	{
 		return new DefaultDocumentDescriptorLoader(
-				windowId.toAdWindowId(),
+				windowDocumentTypeId.toAdWindowId(),
 				dataEntrySubTabBindingDescriptorBuilder);
 	}
 
@@ -66,9 +66,9 @@ public class DefaultDocumentDescriptorFactory implements DocumentDescriptorFacto
 	 *         or it was declared unsupported via {@link #addUnsupportedWindowId(WindowDocumentTypeId)}.
 	 */
 	@Override
-	public boolean isWindowIdSupported(@Nullable final WindowDocumentTypeId windowId)
+	public boolean isWindowIdSupported(@Nullable final WindowDocumentTypeId windowDocumentTypeId)
 	{
-		if (windowId == null || !windowId.isInt() || unsupportedWindowIds.contains(windowId))
+		if (windowDocumentTypeId == null || !windowDocumentTypeId.isInt() || unsupportedWindowIds.contains(windowDocumentTypeId))
 		{
 			return false;
 		}
@@ -78,8 +78,8 @@ public class DefaultDocumentDescriptorFactory implements DocumentDescriptorFacto
 	/**
 	 * Tell this instance that it shall not attempt to work with the given window ID.
 	 */
-	public void addUnsupportedWindowId(@NonNull final WindowDocumentTypeId windowId)
+	public void addUnsupportedWindowId(@NonNull final WindowDocumentTypeId windowDocumentTypeId)
 	{
-		unsupportedWindowIds.add(windowId);
+		unsupportedWindowIds.add(windowDocumentTypeId);
 	}
 }
