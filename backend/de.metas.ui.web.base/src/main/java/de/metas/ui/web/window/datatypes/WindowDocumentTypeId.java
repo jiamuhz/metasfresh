@@ -12,11 +12,12 @@ import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.OptionalInt;
 
-
-
 @EqualsAndHashCode
 public final class WindowDocumentTypeId
 {
+	private final String value;
+	private transient OptionalInt valueInt = null; // lazy
+
 	@JsonCreator
 	public static WindowDocumentTypeId fromJson(@NonNull final String json)
 	{
@@ -56,9 +57,6 @@ public final class WindowDocumentTypeId
 	{
 		return adWindowId != null ? new WindowDocumentTypeId(adWindowId.getRepoId()) : null;
 	}
-
-	private final String value;
-	private transient OptionalInt valueInt = null; // lazy
 
 	private WindowDocumentTypeId(final String value)
 	{
