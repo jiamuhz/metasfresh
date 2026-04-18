@@ -634,6 +634,7 @@ public class GridFieldVO implements Serializable
 	private Properties ctx;
 	/**
 	 * Window No
+	 * 普通意义上的窗口编号
 	 */
 	public final int WindowNo;
 	/**
