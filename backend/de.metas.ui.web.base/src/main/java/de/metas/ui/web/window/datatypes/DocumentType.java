@@ -11,12 +11,12 @@ import lombok.NonNull;
 
 public enum DocumentType
 {
-	Window("W"), //
-	Process("P"), //
-	ProductAttributes("ASI"), //
-	ViewRecordAttributes("VRA"), //
-	Address("ADDR"), //
-	QuickInput("QI") //
+	Window("W"), // WindowDocumentLayout
+	Process("P"), // ProcessLayout
+	ProductAttributes("ASI"), // ASILayout
+	ViewRecordAttributes("VRA"), // RowAttributesLayout
+	Address("ADDR"), // AddressLayout
+	QuickInput("QI") // QuickInputLayout
 	;
 
 	@Getter
