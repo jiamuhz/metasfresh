@@ -102,7 +102,7 @@ public final class Document
 	//
 	// Descriptors & paths
 	private final DocumentEntityDescriptor entityDescriptor;
-	private final int windowNo;
+	private final int windowNo;  /* 普通意义的窗口编号 */
 	private final DocumentPath documentPath;
 
 	//
