@@ -26,6 +26,7 @@ import Switch from './Switch';
 import Amount from './Amount';
 import Password from './Password';
 import CostPrice from './CostPrice';
+import CostPriceRange from './CostPriceRange';
 import PropTypes from 'prop-types';
 
 class WidgetRenderer extends PureComponent {
@@ -475,6 +476,19 @@ class WidgetRenderer extends PureComponent {
         );
       case 'Number':
       case 'CostPrice':
+        if (range) {
+          return (
+            <CostPriceRange
+              {...widgetProperties}
+              valueTo={widgetData[0].valueTo}
+              precision={widgetData[0].precision}
+              onChange={(value, valueTo) => {
+                onPatch(widgetField, value, null, valueTo);
+              }}
+            />
+          );
+        }
+
         return (
           <div className={classnames(this.getClassNames(), 'number-field')}>
             <CostPrice
