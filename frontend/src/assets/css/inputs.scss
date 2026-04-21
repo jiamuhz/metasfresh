@@ -1013,6 +1013,7 @@ table {
   flex-flow: row nowrap;
 
   .input-range-from {
+    border: 1px solid $brand-border-color;
     flex-grow: 1;
     flex-shrink: 1;
   }
@@ -1022,6 +1023,7 @@ table {
     padding: .3rem .50rem;
   }
   .input-range-to {
+    border: 1px solid $brand-border-color;
     flex-grow: 1;
     flex-shrink: 1;
   }
