@@ -57,11 +57,16 @@ class WidgetWrapper extends PureComponent {
     //console.log('WidgetWrapper.render', { props: this.props });
     const { renderMaster, widgetType } = this.props;
 
+    //内嵌表格（用于明细行）
     if (widgetType === 'InlineTab') {
       return <InlineTabWrapper {...this.props} />;
-    } else if (renderMaster) {
+    }
+    //完整表单（包含多个 RawWidget）
+    else if (renderMaster) {
       return <MasterWidget ref={this.childRef} {...this.props} />;
-    } else {
+    }
+    //单个输入控件（文本框、下拉框等）
+    else {
       return <RawWidget ref={this.childRef} {...this.props} />;
     }
   }
