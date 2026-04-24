@@ -234,6 +234,8 @@ const selectWidgetData = (data, layout) => {
  * @method getElementWidgetData
  * @summary cached selector for picking widget data for a desired element
  *
+ * 返回 Widget 当前的实际值（业务数据）。
+ *
  * @param {object} state - redux state
  * @param {boolean} isModal
  * @param {string} layoutPath - indexes of elements in the layout structure
@@ -253,6 +255,8 @@ export const getInlineTabWidgetFields = ({ state, inlineTabId }) => {
 /**
  * @method getElementWidgetFields
  * @summary cached selector for picking fields of a layout section
+ *
+ * 返回字段的配置信息和元数据（字段类型、属性定义等）
  *
  * @param {object} state - redux state
  * @param {boolean} isModal
