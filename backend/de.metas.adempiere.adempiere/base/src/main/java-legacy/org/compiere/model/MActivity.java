@@ -24,6 +24,8 @@ import de.metas.cache.CCache;
 
 /**
  *	Activity Model
+ *
+ * 实际是 成本中心
  *	
  *  @author Jorg Janke
  *  @version $Id: MActivity.java,v 1.2 2006/07/30 00:51:03 jjanke Exp $

@@ -34,13 +34,12 @@ import javax.annotation.Nullable;
 @AllArgsConstructor
 public enum ProductType implements ReferenceListAwareEnum
 {
-	Item(X_M_Product.PRODUCTTYPE_Item), // I
-	Service(X_M_Product.PRODUCTTYPE_Service), // S
-	Resource(X_M_Product.PRODUCTTYPE_Resource), // R
-	ExpenseType(X_M_Product.PRODUCTTYPE_ExpenseType), // E
-	Online(X_M_Product.PRODUCTTYPE_Online), // O
-	FreightCost(X_M_Product.PRODUCTTYPE_FreightCost), // F
-	Food(X_M_Product.PRODUCTTYPE_Nahrung)//N
+	Item(X_M_Product.PRODUCTTYPE_Item), // I 物料
+	Service(X_M_Product.PRODUCTTYPE_Service), // S 服务
+	Resource(X_M_Product.PRODUCTTYPE_Resource), // R 资源
+	ExpenseType(X_M_Product.PRODUCTTYPE_ExpenseType), // E 费用
+	Online(X_M_Product.PRODUCTTYPE_Online), // O 数字内容
+	FreightCost(X_M_Product.PRODUCTTYPE_FreightCost), // F 运费
 	;
 
 	private static final ReferenceListAwareEnums.ValuesIndex<ProductType> index = ReferenceListAwareEnums.index(values());

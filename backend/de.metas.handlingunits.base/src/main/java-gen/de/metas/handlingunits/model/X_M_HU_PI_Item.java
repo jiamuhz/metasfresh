@@ -94,11 +94,11 @@ public class X_M_HU_PI_Item extends org.compiere.model.PO implements I_M_HU_PI_I
 	 * Reference name: M_HU_PI_Item_ItemType
 	 */
 	public static final int ITEMTYPE_AD_Reference_ID=540395;
-	/** Material = MI */
+	/** Material = MI   物流 - 核心商品 */
 	public static final String ITEMTYPE_Material = "MI";
-	/** PackingMaterial = PM */
+	/** PackingMaterial = PM  包装材料 */
 	public static final String ITEMTYPE_PackingMaterial = "PM";
-	/** HandlingUnit = HU */
+	/** HandlingUnit = HU  子包装结构 */
 	public static final String ITEMTYPE_HandlingUnit = "HU";
 	@Override
 	public void setItemType (final java.lang.String ItemType)
