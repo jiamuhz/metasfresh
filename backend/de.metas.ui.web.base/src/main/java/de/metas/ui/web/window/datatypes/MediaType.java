@@ -43,6 +43,7 @@ import javax.annotation.Nullable;
 @JsonAutoDetect(fieldVisibility = Visibility.ANY, getterVisibility = Visibility.NONE, isGetterVisibility = Visibility.NONE, setterVisibility = Visibility.NONE)
 public enum MediaType
 {
+	/* PC，平板电脑，手机 */
 	SCREEN("screen"), TABLET("tablet"), PHONE("phone");
 
 	private final String json;

@@ -24,6 +24,7 @@ public @interface ViewColumn
 {
 	/**
 	 * Field name. If missing or empty, the {@link Field#getName()} of the annotated field will be used.
+	 * 翻译来自 AD_Element
 	 */
 	String fieldName() default "";
 
