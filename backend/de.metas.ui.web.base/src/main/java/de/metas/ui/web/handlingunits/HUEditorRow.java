@@ -89,106 +89,105 @@ public final class HUEditorRow implements IViewRow
 	private final LocatorId locatorId;
 
 	public static final String FIELDNAME_M_HU_ID = I_M_HU.COLUMNNAME_M_HU_ID;
-	@ViewColumn(fieldName = FIELDNAME_M_HU_ID, widgetType = DocumentFieldWidgetType.Integer)
+	@ViewColumn(fieldName = FIELDNAME_M_HU_ID, widgetType = DocumentFieldWidgetType.Integer,
+		layouts = {
+			@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 5),
+			@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 5)
+		}
+	)
 	private final HuId huId;
 
 	public static final String FIELDNAME_HUCode = I_M_HU.COLUMNNAME_Value;
-	@ViewColumn(fieldName = FIELDNAME_HUCode, captionKey = "HUCode",//
-			widgetSize = WidgetSize.Small,//
-			widgetType = DocumentFieldWidgetType.Text, //
+	@ViewColumn(fieldName = FIELDNAME_HUCode, captionKey = "HUCode", widgetSize = WidgetSize.Small, widgetType = DocumentFieldWidgetType.Text,
 			layouts = {
-					@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 10),
-					@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 10)
-			})
+					@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 10, displayed = Displayed.FALSE),
+					@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 10, displayed = Displayed.FALSE)
+			}
+	)
 	private final String code;
 
 	public static final String FIELDNAME_Locator = I_M_HU.COLUMNNAME_M_Locator_ID;
-	@ViewColumn(fieldName = FIELDNAME_Locator, //
-			captionKey = FIELDNAME_Locator, //
-			widgetType = DocumentFieldWidgetType.Text, //
-			layouts = { @ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 15, //
-					displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX)
-			})
+	@ViewColumn(fieldName = FIELDNAME_Locator, captionKey = FIELDNAME_Locator, widgetType = DocumentFieldWidgetType.Text,
+			layouts = { @ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 15, displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX)}
+	)
 	private final JSONLookupValue locator;
 
 	public static final String FIELDNAME_Product = I_M_HU.COLUMNNAME_M_Product_ID;
-	@ViewColumn(fieldName = FIELDNAME_Product, widgetType = DocumentFieldWidgetType.Lookup, sorting = false, layouts = {
-			@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 20),
-			@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 20)
-	})
+	@ViewColumn(fieldName = FIELDNAME_Product,	widgetType = DocumentFieldWidgetType.Lookup,
+		  sorting = false,
+		  layouts = {
+				@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 20),
+				@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 20)
+		  }
+	)
 	private final JSONLookupValue product;
 
 	public static final String FIELDNAME_SerialNo = "SerialNo";
-	@ViewColumn(fieldName = FIELDNAME_SerialNo, widgetType = DocumentFieldWidgetType.Text, sorting = false,
-			layouts = {
+	@ViewColumn(fieldName = FIELDNAME_SerialNo, widgetType = DocumentFieldWidgetType.Text,
+		sorting = false,
+		layouts = {
 					@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 23, displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX),
 					@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 23, displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX)
-			})
+		}
+	)
 	private final String serialNo;
 
 	public static final String FIELDNAME_ServiceContract = "ServiceContract";
-	@ViewColumn(fieldName = FIELDNAME_ServiceContract, widgetType = DocumentFieldWidgetType.Text, sorting = false,
-			layouts = {
+	@ViewColumn(fieldName = FIELDNAME_ServiceContract, widgetType = DocumentFieldWidgetType.Text,
+		sorting = false,
+		layouts = {
 					@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 23, displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX),
 					@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 23, displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX)
-			})
+		}
+	)
 	private final String serviceContract;
 
 	public static final String FIELDNAME_IsOwnPalette = I_M_HU.COLUMNNAME_HUPlanningReceiptOwnerPM;
-	@ViewColumn(fieldName = FIELDNAME_IsOwnPalette, widgetType = DocumentFieldWidgetType.YesNo, sorting = false, layouts = {
-			@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 25)
-	})
+	@ViewColumn(fieldName = FIELDNAME_IsOwnPalette, widgetType = DocumentFieldWidgetType.YesNo,
+		sorting = false,
+		layouts = {@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 25)}
+	)
 	private final Boolean isOwnPalette;
 
 	public static final String FIELDNAME_HU_UnitType = "HU_UnitType";
-	@ViewColumn(fieldName = FIELDNAME_HU_UnitType, //
-			widgetType = DocumentFieldWidgetType.Text, //
-
+	@ViewColumn(fieldName = FIELDNAME_HU_UnitType, widgetType = DocumentFieldWidgetType.Text, //
 			sorting = false, //
 			restrictToMediaTypes = { MediaType.SCREEN }, //
-			layouts = {
-					@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 30)
-			})
+			layouts = {@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 30)}
+	)
 	private final JSONLookupValue huUnitType;
 
 	public static final String FIELDNAME_PackingInfo = I_M_HU.COLUMNNAME_M_HU_PI_Item_Product_ID;
-	@ViewColumn(fieldName = FIELDNAME_PackingInfo, //
-			captionKey = FIELDNAME_PackingInfo, //
-			widgetType = DocumentFieldWidgetType.Text, //
-			layouts = { @ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 40, //
-					displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX)
-			})
+	@ViewColumn(fieldName = FIELDNAME_PackingInfo, captionKey = FIELDNAME_PackingInfo, widgetType = DocumentFieldWidgetType.Text,
+			layouts = { @ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 40, displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX)}
+	)
 	private final String packingInfo;
 
 	public static final String FIELDNAME_QtyCU = "QtyCU";
-	@ViewColumn(fieldName = FIELDNAME_QtyCU, //
-			widgetType = DocumentFieldWidgetType.Quantity,//
-			widgetSize = WidgetSize.Small, sorting = false,
+	@ViewColumn(fieldName = FIELDNAME_QtyCU, widgetType = DocumentFieldWidgetType.Quantity, widgetSize = WidgetSize.Small,
+			sorting = false,
 			layouts = {
 					@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 50),
 					@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 50)
-			})
+			}
+	)
 	private final BigDecimal qtyCU;
 
 	public static final String FIELDNAME_UOM = I_M_Product.COLUMNNAME_C_UOM_ID;
-	@ViewColumn(fieldName = FIELDNAME_UOM, //
-			captionKey = FIELDNAME_UOM, //
-			widgetType = DocumentFieldWidgetType.Text, //
-			widgetSize = WidgetSize.Small,
+	@ViewColumn(fieldName = FIELDNAME_UOM, captionKey = FIELDNAME_UOM, widgetType = DocumentFieldWidgetType.Text, widgetSize = WidgetSize.Small,
 			layouts = {
 					@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 60, displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX),
 					@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 60)
-			})
+			}
+	)
 	private final JSONLookupValue uom;
 
 
 	public static final String FIELDNAME_HUStatus = I_M_HU.COLUMNNAME_HUStatus;
-	@ViewColumn(fieldName = FIELDNAME_HUStatus,//
-			widgetType = DocumentFieldWidgetType.Lookup, //
-			widgetSize = WidgetSize.Small,//
-			sorting = false, layouts = {
-			@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 70),
-	})
+	@ViewColumn(fieldName = FIELDNAME_HUStatus, widgetType = DocumentFieldWidgetType.Lookup, widgetSize = WidgetSize.Small,
+			sorting = false,
+			layouts = {@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 70),}
+	)
 	private final JSONLookupValue huStatusDisplay;
 
 	public static final String FIELDNAME_IsReserved = I_M_HU.COLUMNNAME_IsReserved;
@@ -197,30 +196,36 @@ public final class HUEditorRow implements IViewRow
 	private final String huStatus;
 
 	public static final String FIELDNAME_BestBeforeDate = "BestBeforeDate";
-	@ViewColumn(fieldName = FIELDNAME_BestBeforeDate, widgetType = DocumentFieldWidgetType.LocalDate, layouts = {
-			@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 80, displayed = Displayed.FALSE),
-			@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 80, displayed = Displayed.FALSE)
-	})
+	@ViewColumn(fieldName = FIELDNAME_BestBeforeDate,	widgetType = DocumentFieldWidgetType.LocalDate,
+			layouts = {
+				@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 80, displayed = Displayed.FALSE),
+				@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 80, displayed = Displayed.FALSE)
+			}
+	)
 	private final LocalDate bestBeforeDate;
 
 	public static final String FIELDNAME_WeightGross = "WeightGross";
-	@ViewColumn(fieldName = FIELDNAME_WeightGross, widgetType = DocumentFieldWidgetType.Quantity, seqNo = 90, displayed = Displayed.FALSE)
+	@ViewColumn(fieldName = FIELDNAME_WeightGross, widgetType = DocumentFieldWidgetType.Quantity,
+		seqNo = 90,
+		displayed = Displayed.FALSE
+	)
 	private final BigDecimal weightGross;
 
 	public static final String FIELDNAME_ClearanceStatus = I_M_HU.COLUMNNAME_ClearanceStatus;
-	@ViewColumn(fieldName = FIELDNAME_ClearanceStatus, widgetType = DocumentFieldWidgetType.Text, sorting = false, layouts = {
-			@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 100, displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX) })
+	@ViewColumn(fieldName = FIELDNAME_ClearanceStatus, widgetType = DocumentFieldWidgetType.Text,
+		sorting = false,
+		layouts = {@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 100, displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX) }
+	)
 	private final JSONLookupValue clearanceStatus;
 
 
 	public static final String FIELDNAME_PROJECT = I_M_HU.COLUMNNAME_C_Project_ID;
-	@ViewColumn(fieldName = FIELDNAME_PROJECT, //
-			captionKey = FIELDNAME_PROJECT, //
-			widgetType = DocumentFieldWidgetType.Text, //
+	@ViewColumn(fieldName = FIELDNAME_PROJECT, captionKey = FIELDNAME_PROJECT, widgetType = DocumentFieldWidgetType.Text, //
 			layouts = {
 				@ViewColumnLayout(when = JSONViewDataType.grid, seqNo = 95, displayed = Displayed.SYSCONFIG, displayedSysConfigPrefix = SYSCFG_PREFIX),
 				@ViewColumnLayout(when = JSONViewDataType.includedView, seqNo = 95)
-			})
+			}
+	)
 	private final JSONLookupValue project;
 
 
