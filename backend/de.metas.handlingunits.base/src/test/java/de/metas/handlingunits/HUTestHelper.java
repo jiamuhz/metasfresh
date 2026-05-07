@@ -175,28 +175,6 @@ import static de.metas.business.BusinessTestHelper.createWarehouse;
 import static org.hamcrest.Matchers.is;
 import static org.junit.Assert.assertThat;
 
-/*
- * #%L
- * de.metas.handlingunits.base
- * %%
- * Copyright (C) 2015 metas GmbH
- * %%
- * This program is free software: you can redistribute it and/or modify
- * it under the terms of the GNU General Public License as
- * published by the Free Software Foundation, either version 2 of the
- * License, or (at your option) any later version.
- *
- * This program is distributed in the hope that it will be useful,
- * but WITHOUT ANY WARRANTY; without even the implied warranty of
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the
- * GNU General Public License for more details.
- *
- * You should have received a copy of the GNU General Public
- * License along with this program. If not, see
- * <http://www.gnu.org/licenses/gpl-2.0.html>.
- * #L%
- */
-
 /**
  * This class sets up basic master data like attributes and HU-items.
  * It also has methods like {@link #createHU_PI_Item_IncludedHU(I_M_HU_PI, I_M_HU_PI, BigDecimal)} that can be called from your tests, to set up complex packing instructions.
