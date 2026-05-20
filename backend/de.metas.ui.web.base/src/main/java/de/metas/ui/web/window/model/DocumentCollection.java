@@ -340,7 +340,7 @@ public class DocumentCollection
 		final LogicExpressionResult allow = allowExpr.evaluateToResult(userSession.toEvaluatee(), OnVariableNotFound.ReturnNoResult);
 		if (allow.isFalse())
 		{
-			throw new AdempiereException("Create not allowed");
+			throw new AdempiereException("@CreateNotAllowed@");  // CreateNotAllowed  from ad_message table
 		}
 	}
 
