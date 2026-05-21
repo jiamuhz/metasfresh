@@ -10,6 +10,11 @@ import org.compiere.model.X_AD_WF_Node;
 import javax.annotation.Nullable;
 import java.util.Optional;
 
+/**
+ * PP Routing : 生产工艺路线
+ * PP Routing Activity Type: 生产工艺路线的工序类型
+ */
+
 @AllArgsConstructor
 public enum PPRoutingActivityType implements ReferenceListAwareEnum
 {

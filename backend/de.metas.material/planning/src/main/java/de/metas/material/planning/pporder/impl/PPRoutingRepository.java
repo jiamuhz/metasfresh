@@ -63,7 +63,9 @@ import static org.adempiere.model.InterfaceWrapperHelper.load;
 import static org.adempiere.model.InterfaceWrapperHelper.loadOutOfTrx;
 import static org.adempiere.model.InterfaceWrapperHelper.save;
 
- 
+/**
+ * PP Routing : 生产工艺路线
+  */
 public class PPRoutingRepository implements IPPRoutingRepository
 {
 	private static final Logger logger = LogManager.getLogger(PPRoutingRepository.class);

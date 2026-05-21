@@ -16,7 +16,11 @@ import java.math.BigDecimal;
 import java.time.Duration;
 import java.time.Instant;
 
- 
+/**
+ * PP Routing : 生产工艺路线
+ * PP Routing Activity : 生产工艺路线的工序
+ */
+
 @Value
 @Builder(toBuilder = true)
 public class PPRoutingActivity
