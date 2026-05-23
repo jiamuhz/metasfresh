@@ -499,7 +499,7 @@ public class DocumentCollection
 		final LogicExpressionResult allow = allowExpr.evaluateToResult(evalCtx, OnVariableNotFound.ReturnNoResult);
 		if (allow.isFalse())
 		{
-			throw new AdempiereException("Delete not allowed");
+			throw new AdempiereException("@DeleteNotAllowed@");
 		}
 	}
 

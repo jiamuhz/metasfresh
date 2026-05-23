@@ -188,7 +188,7 @@ public class DocumentAttachmentsRestController
 
 		if (!isAllowDeletingAttachments())
 		{
-			throw new AdempiereException("Delete not allowed");
+			throw new AdempiereException("@DeleteNotAllowed@");
 		}
 		final DocumentId entryId = DocumentId.of(entryIdStr);
 		getDocumentAttachments(windowIdStr, documentId)

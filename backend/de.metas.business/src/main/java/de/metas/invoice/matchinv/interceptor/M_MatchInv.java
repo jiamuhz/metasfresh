@@ -17,7 +17,7 @@ public class M_MatchInv
 	{
 		if (InterfaceWrapperHelper.isUIAction(record))
 		{
-			throw new AdempiereException("Delete not allowed");
+			throw new AdempiereException("@DeleteNotAllowed@");
 		}
 	}
 }
