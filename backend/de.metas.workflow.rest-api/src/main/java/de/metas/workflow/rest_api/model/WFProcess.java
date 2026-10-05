@@ -40,6 +40,10 @@ import javax.annotation.Nullable;
 import java.util.Objects;
 import java.util.function.UnaryOperator;
 
+/**
+ * 工作流
+ */
+
 @ToString
 public final class WFProcess
 {

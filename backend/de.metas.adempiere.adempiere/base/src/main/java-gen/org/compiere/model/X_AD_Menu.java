@@ -37,6 +37,8 @@ public class X_AD_Menu extends org.compiere.model.PO implements I_AD_Menu, org.c
 	/** 
 	 * Action AD_Reference_ID=104
 	 * Reference name: AD_Menu Action
+	 * T(Task) / F(WorkFlow) / X(Form) / B(Workbench) 在 webui 里是死值
+	 *     —— 设了等于把这条菜单隐藏。这是从 Swing 客户端继承下来的遗留值。
 	 */
 	public static final int ACTION_AD_Reference_ID=104;
 	/** Window = W */
