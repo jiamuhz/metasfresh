@@ -36,6 +36,7 @@ import de.metas.handlingunits.model.I_M_HU_Assignment;
 import de.metas.handlingunits.model.I_M_HU_Item;
 import de.metas.handlingunits.model.I_M_InOut;
 import de.metas.handlingunits.model.I_M_InOutLine;
+import de.metas.handlingunits.model.X_M_HU;
 import de.metas.i18n.AdMessageKey;
 import de.metas.inout.event.ReturnInOutUserNotificationsProducer;
 import de.metas.util.GuavaCollectors;
@@ -114,9 +115,19 @@ public class MultiCustomerHUReturnsInOutProducer
 		// and create one vendor returns producer for each group.
 		final Map<ArrayKey, CustomerReturnsInOutProducer> customerReturnProducers = new HashMap<>();
 		final int inOutLineTableId = InterfaceWrapperHelper.getTableId(I_M_InOutLine.class); // The M_InOutLine's table id
+		final Set<Integer> huIdsAddedToReturns = new HashSet<>();
 
 		for (final I_M_HU hu : getHUsToReturn())
 		{
+			//
+			// Only HUs which were shipped to the customer can be returned by the customer.
+			// A HU which is still on our stock (active/picked etc.) must not be turned into a customer return.
+			// NOTE: when creating a manual customer return, the HUs are created on the fly and are active.
+			if (_manualCustomerReturn == null)
+			{
+				assertHUIsShipped(hu);
+			}
+
 			// activate hu's children
 			{
 				final Set<I_M_HU> childHUs = new HashSet<>();
@@ -198,7 +209,22 @@ public class MultiCustomerHUReturnsInOutProducer
 				final ArrayKey customerReturnProducerKey = ArrayKey.of(warehouseId, bpartnerId);
 				customerReturnProducers.computeIfAbsent(customerReturnProducerKey, k -> createCustomerReturnInOutProducer(bpartnerId, warehouseId, order))
 						.addHUToReturn(hu, originalShipmentInOutLineId);
+				huIdsAddedToReturns.add(hu.getM_HU_ID());
 			}
+		}
+
+		//
+		// Make sure that every selected HU was added to a customer return.
+		// Otherwise the HU would be silently ignored (e.g. because it has no assignment to a completed sales shipment).
+		final List<Integer> huIdsWithoutReturn = getHUsToReturn()
+				.stream()
+				.map(I_M_HU::getM_HU_ID)
+				.filter(huId -> !huIdsAddedToReturns.contains(huId))
+				.collect(GuavaCollectors.toImmutableList());
+		if (!huIdsWithoutReturn.isEmpty())
+		{
+			throw new AdempiereException("No completed sales shipment found for HUs: " + huIdsWithoutReturn)
+					.markAsUserValidationError();
 		}
 
 		//
@@ -208,25 +234,27 @@ public class MultiCustomerHUReturnsInOutProducer
 				.map(returnInOut -> InterfaceWrapperHelper.create(returnInOut, I_M_InOut.class)) // wrap it
 				.collect(GuavaCollectors.toImmutableList());
 
+		if (returnInOuts.isEmpty())
+		{
+			throw new AdempiereException("No customer return could be created for the selected HUs")
+					.markAsUserValidationError();
+		}
+
 		//
 		// Send notifications
-		if (!returnInOuts.isEmpty())
+		if (_manualCustomerReturn == null)
 		{
-			if (_manualCustomerReturn == null)
-			{
-				ReturnInOutUserNotificationsProducer.newInstance()
-						.notify(returnInOuts);
-			}
-
-			else
-			{
-				InterfaceWrapperHelper.refresh(_manualCustomerReturn);
-			}
-
-			// mark HUs as active and create movements to QualityReturnWarehouse for them
-			huInOutBL.moveHUsToQualityReturnWarehouse(getHUsToReturn());
-			huStatusBL.setHUStatusActive(_husToReturn);
+			ReturnInOutUserNotificationsProducer.newInstance()
+					.notify(returnInOuts);
 		}
+		else
+		{
+			InterfaceWrapperHelper.refresh(_manualCustomerReturn);
+		}
+
+		// mark HUs as active and create movements to QualityReturnWarehouse for them
+		huInOutBL.moveHUsToQualityReturnWarehouse(getHUsToReturn());
+		huStatusBL.setHUStatusActive(_husToReturn);
 
 		// return the created vendor returns
 		return returnInOuts;
@@ -290,6 +318,16 @@ public class MultiCustomerHUReturnsInOutProducer
 	{
 		_husToReturn.addAll(hus);
 		return this;
+	}
+
+	private void assertHUIsShipped(@NonNull final I_M_HU hu)
+	{
+		final String huStatus = hu.getHUStatus();
+		if (!X_M_HU.HUSTATUS_Shipped.equals(huStatus))
+		{
+			throw new AdempiereException("HU " + hu.getValue() + " (HUStatus=" + huStatus + ") is not shipped. Only shipped HUs can be returned by the customer.")
+					.markAsUserValidationError();
+		}
 	}
 
 	@NonNull

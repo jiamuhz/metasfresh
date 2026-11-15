@@ -83,9 +83,9 @@ public class ReturnsServiceFacade
 		return huInOutBL.isEmptiesReturn(inout);
 	}
 
-	public void createCustomerReturnInOutForHUs(final Collection<I_M_HU> hus)
+	public List<I_M_InOut> createCustomerReturnInOutForHUs(final Collection<I_M_HU> hus)
 	{
-		MultiCustomerHUReturnsInOutProducer.newInstance()
+		return MultiCustomerHUReturnsInOutProducer.newInstance()
 				.addHUsToReturn(hus)
 				.create();
 	}
