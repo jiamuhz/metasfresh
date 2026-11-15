@@ -511,8 +511,13 @@ public class HUReceiptScheduleBL implements IHUReceiptScheduleBL
 		for (final de.metas.inoutcandidate.model.I_M_ReceiptSchedule receiptSchedule : receiptSchedules)
 		{
 			Check.assumeNotNull(receiptSchedule, "receiptSchedule not null");
+
+			// 手工创建的收货计划没有采购订单行，此时既没有可继承的价格，也没有采购订单行可关联
 			final org.compiere.model.I_C_OrderLine orderLine = receiptSchedule.getC_OrderLine();
-			Check.assumeNotNull(orderLine, "orderLine not null");
+			if (orderLine == null || orderLine.getC_OrderLine_ID() <= 0)
+			{
+				continue;
+			}
 
 			final BigDecimal receiptSchedule_priceActual = orderLine.getPriceActual();
 
@@ -534,9 +539,6 @@ public class HUReceiptScheduleBL implements IHUReceiptScheduleBL
 			}
 		}
 
-		//
-		// Set PriceActual in HUContext
-		Check.assumeNotNull(priceActual, "priceActual not null");
 		final IHUContext huContext = request.getHuContext();
 		Map<AttributeId, Object> initialAttributeValueDefaults = huContext.getProperty(HUAttributeConstants.CTXATTR_DefaultAttributesValue);
 		if (initialAttributeValueDefaults == null)
@@ -545,8 +547,17 @@ public class HUReceiptScheduleBL implements IHUReceiptScheduleBL
 			huContext.setProperty(HUAttributeConstants.CTXATTR_DefaultAttributesValue, initialAttributeValueDefaults);
 		}
 		final IAttributeDAO attributesRepo = Services.get(IAttributeDAO.class);
-		final AttributeId attrId_CostPrice = attributesRepo.retrieveAttributeIdByValueOrNull(HUAttributeConstants.ATTR_CostPrice);
-		initialAttributeValueDefaults.put(attrId_CostPrice, priceActual);
+
+		//
+		// Set PriceActual in HUContext (only if we have an order line to take it from)
+		if (priceActual != null)
+		{
+			final AttributeId attrId_CostPrice = attributesRepo.retrieveAttributeIdByValueOrNull(HUAttributeConstants.ATTR_CostPrice);
+			if (attrId_CostPrice != null)
+			{
+				initialAttributeValueDefaults.put(attrId_CostPrice, priceActual);
+			}
+		}
 
 		//
 		// Set HU_PurchaseOrderLine_ID (task 09741)

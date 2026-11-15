@@ -161,6 +161,26 @@ public interface IReceiptScheduleBL extends ISingletonService
 	IAggregationKeyBuilder<I_M_ReceiptSchedule> getHeaderAggregationKeyBuilder();
 
 	/**
+	 * Sets {@link I_M_ReceiptSchedule#COLUMNNAME_AD_User_ID} to the default contact of the receipt schedule's bpartner.
+	 * <p>
+	 * A contact which already belongs to the receipt schedule's bpartner (e.g. the one inherited from the order) is preserved.
+	 * If the bpartner has no default contact, then {@link I_M_ReceiptSchedule#COLUMNNAME_AD_User_ID} is set to 0.
+	 * <p>
+	 * To be called when the bpartner (or its location) changed and a new record is created.
+	 */
+	void setDefaultBPartnerContact(I_M_ReceiptSchedule receiptSchedule);
+
+	/**
+	 * Makes sure that {@link I_M_ReceiptSchedule#COLUMNNAME_AD_User_ID} belongs to the receipt schedule's bpartner,
+	 * but does <b>not</b> fall back to the bpartner's default contact.
+	 * <p>
+	 * A valid contact (e.g. one the user just picked) is preserved; an invalid one is reset to 0.
+	 * This is used when only the contact itself was changed, so that an intentionally cleared contact
+	 * is not silently replaced by the default contact.
+	 */
+	void resetInvalidBPartnerContact(I_M_ReceiptSchedule receiptSchedule);
+
+	/**
 	 * Updates {@link I_M_ReceiptSchedule#COLUMNNAME_BPartnerAddress}
 	 */
 	void updateBPartnerAddress(I_M_ReceiptSchedule receiptSchedule);

@@ -97,6 +97,14 @@ public class M_ReceiptSchedule_PostMaterialEvent
 			@NonNull final I_M_ReceiptSchedule schedule,
 			@NonNull final ModelChangeType timing)
 	{
+		// 手工创建的收货计划可能既没有采购订单也没有订单行（例如直接录入的到货预报）。
+		// 这类记录无法构造出合法的 OrderLineDescriptor（其 validate() 要求 orderLineId/orderId > 0），
+		// 也没有对应的 material-dispo 供应候选，因此不下发物料事件。
+		if (schedule.getC_Order_ID() <= 0 && schedule.getC_OrderLine_ID() <= 0)
+		{
+			return;
+		}
+
 		final AbstractReceiptScheduleEvent event = createReceiptScheduleEvent(schedule, timing);
 
 		postMaterialEventService.enqueueEventAfterNextCommit(event);

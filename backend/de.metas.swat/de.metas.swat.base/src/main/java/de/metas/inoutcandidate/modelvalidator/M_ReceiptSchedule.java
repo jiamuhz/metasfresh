@@ -122,7 +122,26 @@ public class M_ReceiptSchedule
 	public void updateBPartnerAddress(final I_M_ReceiptSchedule sched)
 	{
 		final IReceiptScheduleBL receiptScheduleBL = Services.get(IReceiptScheduleBL.class);
+
+		// make sure we have a contact which belongs to the bpartner, before rendering the address (which includes the contact)
+		if (isNewOrBPartnerChanged(sched))
+		{
+			receiptScheduleBL.setDefaultBPartnerContact(sched);
+		}
+		else
+		{
+			// only the contact itself was changed => do not bring back the default contact if the user cleared it
+			receiptScheduleBL.resetInvalidBPartnerContact(sched);
+		}
+
 		receiptScheduleBL.updateBPartnerAddress(sched);
+	}
+
+	private static boolean isNewOrBPartnerChanged(@NonNull final I_M_ReceiptSchedule sched)
+	{
+		return InterfaceWrapperHelper.isNew(sched)
+				|| InterfaceWrapperHelper.isValueChanged(sched, I_M_ReceiptSchedule.COLUMNNAME_C_BPartner_ID)
+				|| InterfaceWrapperHelper.isValueChanged(sched, I_M_ReceiptSchedule.COLUMNNAME_C_BPartner_Location_ID);
 	}
 
 	@ModelChange(timings = {

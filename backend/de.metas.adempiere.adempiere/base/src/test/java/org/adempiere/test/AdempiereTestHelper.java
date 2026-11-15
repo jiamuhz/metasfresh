@@ -27,7 +27,7 @@ import org.adempiere.ad.dao.impl.POJOQuery;
 import org.adempiere.ad.persistence.cache.AbstractModelListCacheLocal;
 import org.adempiere.ad.wrapper.POJOLookupMap;
 import org.adempiere.ad.wrapper.POJOWrapper;
-import org.adempiere.context.SwingContextProvider;
+//import org.adempiere.context.SwingContextProvider;
 import org.adempiere.exceptions.AdempiereException;
 import org.adempiere.mm.attributes.AttributeSetInstanceId;
 import org.adempiere.model.InterfaceWrapperHelper;
@@ -185,7 +185,7 @@ public class AdempiereTestHelper
 
 	private static Properties setupContext()
 	{
-		Env.setContextProvider(new SwingContextProvider());
+		//Env.setContextProvider(new SwingContextProvider());
 
 		final Properties ctx = Env.getCtx();
 		ctx.clear();

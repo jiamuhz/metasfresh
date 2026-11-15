@@ -49,6 +49,7 @@ import de.metas.order.OrderId;
 import de.metas.process.PInstanceId;
 import de.metas.product.ProductId;
 import de.metas.quantity.StockQtyAndUOMQty;
+import de.metas.user.api.IUserDAO;
 import de.metas.util.Check;
 import de.metas.util.Loggables;
 import de.metas.util.Services;
@@ -69,6 +70,7 @@ import org.adempiere.warehouse.LocatorId;
 import org.adempiere.warehouse.WarehouseId;
 import org.adempiere.warehouse.api.IWarehouseBL;
 import org.compiere.SpringContextHolder;
+import org.compiere.model.I_AD_User;
 import org.compiere.model.I_C_BPartner_Location;
 import org.compiere.model.I_C_Order;
 import org.compiere.model.I_M_AttributeSetInstance;
@@ -104,6 +106,8 @@ public class ReceiptScheduleBL implements IReceiptScheduleBL
 	private final ISysConfigBL sysConfigBL = Services.get(ISysConfigBL.class);
 	private final IQueryBL queryBL = Services.get(IQueryBL.class);
 	private final IReceiptScheduleQtysBL receiptScheduleQtysBL = Services.get(IReceiptScheduleQtysBL.class);
+	private final IUserDAO userDAO = Services.get(IUserDAO.class);
+	private final IBPartnerDAO bpartnerDAO = Services.get(IBPartnerDAO.class);
 
 	@Override
 	public void addReceiptScheduleListener(IReceiptScheduleListener listener)
@@ -260,6 +264,56 @@ public class ReceiptScheduleBL implements IReceiptScheduleBL
 	private IDocumentLocationAdapter asDocumentLocationEffective(final I_M_ReceiptSchedule receiptSchedule)
 	{
 		return new ReceiptScheduleEffectiveDocumentLocation(receiptSchedule);
+	}
+
+	@Override
+	public void setDefaultBPartnerContact(@NonNull final I_M_ReceiptSchedule receiptSchedule)
+	{
+		setBPartnerContact(receiptSchedule, true);
+	}
+
+	@Override
+	public void resetInvalidBPartnerContact(@NonNull final I_M_ReceiptSchedule receiptSchedule)
+	{
+		setBPartnerContact(receiptSchedule, false);
+	}
+
+	private void setBPartnerContact(@NonNull final I_M_ReceiptSchedule receiptSchedule, final boolean useDefaultContactIfInvalid)
+	{
+		final BPartnerId bpartnerId = BPartnerId.ofRepoIdOrNull(receiptSchedule.getC_BPartner_ID());
+		if (bpartnerId == null)
+		{
+			receiptSchedule.setAD_User_ID(0);
+			return;
+		}
+
+		//
+		// Keep the current contact if it belongs to the receipt schedule's bpartner (e.g. the one inherited from the order
+		// or the one the user just picked)
+		if (isBPartnerContact(receiptSchedule.getAD_User_ID(), bpartnerId))
+		{
+			return;
+		}
+
+		//
+		// The current contact does not belong to the bpartner:
+		// * if the bpartner changed (or the record is new) => use the bpartner's default contact, if there is one
+		// * if the user cleared/changed the contact => keep it empty instead of silently bringing the default contact back
+		final I_AD_User defaultContact = useDefaultContactIfInvalid
+				? bpartnerDAO.retrieveDefaultContactOrNull(bpartnerDAO.getByIdInTrx(bpartnerId), I_AD_User.class)
+				: null;
+		receiptSchedule.setAD_User_ID(defaultContact != null ? defaultContact.getAD_User_ID() : 0);
+	}
+
+	private boolean isBPartnerContact(final int adUserId, @NonNull final BPartnerId bpartnerId)
+	{
+		if (adUserId <= 0)
+		{
+			return false;
+		}
+
+		final I_AD_User user = userDAO.retrieveUserOrNull(Env.getCtx(), adUserId);
+		return user != null && Objects.equals(bpartnerId, BPartnerId.ofRepoIdOrNull(user.getC_BPartner_ID()));
 	}
 
 	@Override
